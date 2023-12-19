@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Downloading notices using the Search API :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/noticedownloads/search-api.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/custom.css">
+    <link rel="stylesheet" href="../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.ted.europa.eu">
+                <img src="../_/img/ted-logo.svg" class="logo" />
+                <span class="navbar-title">TED Developer Documentation</span>
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="https://docs.ted.europa.eu">Home</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Products</a>
+  <div class="navbar-dropdown">
+      <a class="navbar-item" href="../eforms/latest/index.html">eForms SDK</a>
+      <a class="navbar-item" href="../EPO/latest/index.html">eProcurement Ontology</a>
+      <a class="navbar-item" href="../ESPD-EDM/latest/index.html">ESPD EDM</a>
+  </div>
+</div>
+
+
+<div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Resources</a>
+  <div class="navbar-dropdown">
+    <!-- <div class="navbar-item"><b>Publications Ofiice</b></div> -->
+    <a class="navbar-item" href="https://github.com/OP-TED/eForms-SDK">eForms SDK on Github</a>
+    <a class="navbar-item" href="https://simap.ted.europa.eu/web/simap/eforms">eForms on SIMAP</a>
+    <a class="navbar-item" href="https://github.com/eprocurementontology/eprocurementontology">eProcurement
+      Ontology</a>
+    <a class="navbar-item" href="https://github.com/espd/espd-edm">European Single Procurement Document</a>
+    <a class="navbar-item" href="https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables">eProcurement in
+      EU Vocabularies</a>
+    <hr class="navbar-divider">
+    <!-- <div class="navbar-item"><b>DG GROW</b></div>-->
+    <a class="navbar-item" href="https://ec.europa.eu/growth/single-market/public-procurement/digital/eforms_en">About
+      eForms</a>
+    <!-- <a class="navbar-item" href="https://github.com/eForms/eForms">eForms 2nd consultation</a> -->
+  </div>
+</div>
+
+<a class="navbar-item" href="https://simap.ted.europa.eu/contact">Helpdesk</a>
+
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="noticedownloads" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Downloading TED Notices</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Access Methods</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="download-xml.html">xml Downloads</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="download-direct.html">Direct downloads via html links</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="search-api.html">Downloads via Search API</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="search-api-demo.html">Search API Demo</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ftp.html">ftp Resources</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../eforms/latest/index.html">1.10.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.9/index.html">1.9.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.8/index.html">1.8.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.7/index.html">1.7.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.6/index.html">1.6.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.5/index.html">1.5.1</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.4/index.html">1.4.1</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../EPO/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../ESPD-EDM/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../ESPD-EDM/latest/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.1.0/index.html">2.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/1.0.2/index.html">1.0.2</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Downloading TED Notices</a></li>
+    <li><a href="search-api.html">Downloads via Search API</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="6">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Downloading notices using the Search API</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Two options are available using the Search API:</p>
+</div>
+<div class="paragraph">
+<p><strong>Swagger UI</strong> - <a href="https://api.gamma.tedv2.spikeseed.cloud/swagger-ui/index.html" class="bare">https://api.gamma.tedv2.spikeseed.cloud/swagger-ui/index.html</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/bulk5.png" alt="bulk5">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Request URL</strong> - <a href="https://api.gamma.tedv2.spikeseed.cloud/v3/notices/search" class="bare">https://api.gamma.tedv2.spikeseed.cloud/v3/notices/search</a></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/bulk6.png" alt="bulk6">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_two_search_modes_available"><a class="anchor" href="#_two_search_modes_available"></a>Two Search modes available</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Search API offers two search modes:</p>
+</div>
+<div class="sect2">
+<h3 id="_pagination_mode_which_allows_the_retrieval_of_up_to_15000_notices_for_a_given_query_using_pagination"><a class="anchor" href="#_pagination_mode_which_allows_the_retrieval_of_up_to_15000_notices_for_a_given_query_using_pagination"></a>Pagination mode, which allows the retrieval of up to 15000 notices for a given query, using pagination.</h3>
+<div class="sect3">
+<h4 id="_limits"><a class="anchor" href="#_limits"></a>Limits:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Maximum number of retrievable notices: 15k.</p>
+</li>
+<li>
+<p>Maximum number of notices per page: 250.</p>
+</li>
+<li>
+<p>Maximum number of fields per page: 10k.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If a limit is reached, the search API will return an error.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_iteration_scroll_mode"><a class="anchor" href="#_iteration_scroll_mode"></a>Iteration (scroll mode):</h3>
+<div class="paragraph">
+<p>Allows the retrieval of all notices for a given query, without limitations. With this mode, the user calls the search API to retrieve the first result page and a token. This token can then be included in the next query sent to the search API to retrieve the next result page.</p>
+</div>
+<div class="sect3">
+<h4 id="_limits_2"><a class="anchor" href="#_limits_2"></a>Limits:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Maximum number of notices per page: 250.</p>
+</li>
+<li>
+<p>Maximum number of fields per page: 10k.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If a limit is reached, the search API will return an error. There is no limit on the number of retrievable notices</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_request_body_of_the_notice_search_endpoint"><a class="anchor" href="#_request_body_of_the_notice_search_endpoint"></a>Request body of the notice search endpoint</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>query: Expert search query to filter and sort notices</p>
+</li>
+<li>
+<p>fields: Fields to return for each notice</p>
+</li>
+<li>
+<p>page: Result page number, used to paginate results</p>
+</li>
+<li>
+<p>limit: Maximum number of returned notices, used to paginate results.</p>
+</li>
+<li>
+<p>scope: Search scope</p>
+</li>
+<li>
+<p>checkQuerySyntax: To check the syntax of the query.</p>
+</li>
+<li>
+<p>paginationMode: PAGE_NUMBER or ITERATION</p>
+</li>
+<li>
+<p>iterationNextToken: token returned by the previous call to the search endpoint to retrieve the next result page.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_response_file"><a class="anchor" href="#_the_response_file"></a>The Response File</h3>
+<div class="paragraph">
+<p>The response file contains the total number of notices that match the search, and a list of the results.</p>
+</div>
+<div class="paragraph">
+<p>Each result contains data of the fields specified in the request.</p>
+</div>
+<div class="paragraph">
+<p>Each item contains the list of URLs for the various formats and languages in which the corresponding notice is available.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Any comments on the documentation?</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-bulkdownloads-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<footer class="footer">
+    <div class=columns>
+        <div>
+  <p>The projects documented in this Developer Documentation Portal are developed and managed by the TED & EU Public Procurement Unit of the Publications Office of the European Union
+  <br/>This page was built using a link:https://github.com/OP-TED/antora-eui[fork of the Antora default UI], which is licensed under the terms of the MPL-2.0 license.</p>
+</div>
+        <div>
+            <h3>This website is managed by<h3>
+                    <img src="../_/img/op-logo-with-name.svg" class="logo" />
+        </div>
+    </div>
+</footer>  </body>
+</html>
