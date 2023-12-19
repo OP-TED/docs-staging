@@ -1,5 +1,0 @@
-name: home
-title: Developer Docs
-version: ~
-nav:
-- modules/ROOT/nav.adoc
