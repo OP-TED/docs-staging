@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Filling in the ESPD online form :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/espd-bus/espd_form.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/custom.css">
+    <link rel="stylesheet" href="../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.ted.europa.eu">
+                <img src="../_/img/ted-logo.svg" class="logo" />
+                <span class="navbar-title">TED Developer Documentation</span>
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="https://docs.ted.europa.eu">Home</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Products</a>
+  <div class="navbar-dropdown">
+      <a class="navbar-item" href="../eforms/latest/index.html">eForms SDK</a>
+      <a class="navbar-item" href="../EPO/latest/index.html">eProcurement Ontology</a>
+      <a class="navbar-item" href="../espd/latest/index.html">ESPD EDM</a>
+  </div>
+</div>
+
+
+<div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Resources</a>
+  <div class="navbar-dropdown">
+    <!-- <div class="navbar-item"><b>Publications Ofiice</b></div> -->
+    <a class="navbar-item" href="https://github.com/OP-TED/eForms-SDK">eForms SDK on Github</a>
+    <a class="navbar-item" href="https://simap.ted.europa.eu/web/simap/eforms">eForms on SIMAP</a>
+    <a class="navbar-item" href="https://github.com/eprocurementontology/eprocurementontology">eProcurement
+      Ontology</a>
+    <a class="navbar-item" href="https://github.com/espd/espd-edm">European Single Procurement Document</a>
+    <a class="navbar-item" href="https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables">eProcurement in
+      EU Vocabularies</a>
+    <hr class="navbar-divider">
+    <!-- <div class="navbar-item"><b>DG GROW</b></div>-->
+    <a class="navbar-item" href="https://ec.europa.eu/growth/single-market/public-procurement/digital/eforms_en">About
+      eForms</a>
+    <!-- <a class="navbar-item" href="https://github.com/eForms/eForms">eForms 2nd consultation</a> -->
+  </div>
+</div>
+
+<a class="navbar-item" href="https://simap.ted.europa.eu/contact">Helpdesk</a>
+
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="espd-bus" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ESPD EDM</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd/latest/index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd/latest/release_notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Information for Business Users</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Business Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="service.html">The ESPD Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using.html">Using an ESPD Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-tech/index.html">Technical Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/history.html">History and Planned Developments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/external.html">External Resources</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/supporting.html">Supporting and related projects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/laws.html">Laws and Directives</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Open User Community Reports</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-wgm/monthly.html">Monthly Reports</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-wgm/annual.html">Annual Reports</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../eforms/latest/index.html">1.10.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.9/index.html">1.9.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.8/index.html">1.8.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.7/index.html">1.7.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.6/index.html">1.6.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.5/index.html">1.5.1</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.4/index.html">1.4.1</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../EPO/4.1/index.html">4.1.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../EPO/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../espd/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../espd/latest/index.html">3.3.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">ESPD EDM</a></li>
+    <li><a href="espd_form.html">Filling in the ESPD online form</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Filling in the ESPD online form</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ESPD form is divided into sections. For orientation in the form filling process, progress tracking is provided so the user always knows what parts are already completed and what parts are still missing:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of1.png" alt="of1">
+</div>
+</div>
+<div class="paragraph">
+<p>The ESPD form is divided into the following sections:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_1_information_concerning_the_procurement_procedure_and_the_contracting_authority_or_contracting_entity_which_contains"><a class="anchor" href="#_part_1_information_concerning_the_procurement_procedure_and_the_contracting_authority_or_contracting_entity_which_contains"></a>Part 1: Information concerning the procurement procedure and the contracting authority or contracting entity, which contains:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Information about publication</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of2.png" alt="of2">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identity of the procurer</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of3.png" alt="of3">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Information about the procurement procedure</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of4.png" alt="of4">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_2_information_concerning_the_economic_operator_which_contains"><a class="anchor" href="#_part_2_information_concerning_the_economic_operator_which_contains"></a>Part 2: Information concerning the economic operator, which contains:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Information about the economic operator, including whether it is a Micro, a Small or a Medium-Sized Enterprise, whether it is registered on an official list of approved economic operators or does it have an equivalent certificate, whether it is participating in the procurement procedure together with others, etc.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of5.png" alt="of5">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Information about representatives of the economic operator</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of6.png" alt="of6">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Information about reliance on the capacities of other entities in order to meet the selection criteria.</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of7.png" alt="of7">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Information concerning subcontractors on whose capacity the EO does not rely (this is, when the EO intends to subcontract any share of the contract to third parties but does not rely on the capacities of these third parties in order to meet the selection criteria)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of8.png" alt="of8">
+</div>
+</div>
+<div class="paragraph">
+<p>Part 2 applies only to the response document (ESPD Response) that the EO needs to fulfil.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_3_exclusion_grounds_which_contains"><a class="anchor" href="#_part_3_exclusion_grounds_which_contains"></a>Part 3: Exclusion grounds, which contains:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A: Grounds relating to criminal convictions (based on Article 57(1) of Directive 2014/24/EU)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: All options are ticked by default and the CA cannot remove the ticks, since they come from the Directive.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of9.png" alt="of9">
+</div>
+</div>
+<div class="paragraph">
+<p>EO view:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of10.png" alt="of10">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>B: Grounds relating to the payment of taxes or social security contributions (based on Article 57(2) of Directive 2014/24/EU)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: All options are ticked by default and the CA cannot remove the ticks, since they come from the Directive.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of11.png" alt="of11">
+</div>
+</div>
+<div class="paragraph">
+<p>EO view:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of12.png" alt="of12">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>C: Grounds relating to insolvency, conflicts of interests or professional misconduct (based on Article 57(4) of Directive 2014/24/EU)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: All options are ticked by default, but the CA can remove the ticks in case any of the options is not required for this specific procedure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of13.png" alt="of13">
+</div>
+</div>
+<div class="paragraph">
+<p>EO view:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of14.png" alt="of14">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>D: Purely national exclusion grounds, which depend on the regulation of each country.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: Where there are national exclusion grounds, the CA has to decide whether to include them or not in each procedure. By default, options related to purely national exclusion ground are not ticket, and the CA needs to manually select those that have to be included.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of15.png" alt="of15">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>EO view:</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of16.png" alt="of16">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_4_selection_criteria_which_contains"><a class="anchor" href="#_part_4_selection_criteria_which_contains"></a>Part 4: Selection criteria, which contains:</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A: Suitability (based on Article 58(2) of Directive 2014/24/EU)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: All options are ticked by default, but the CA can manually remove the ticks of the options not required for this specific procedure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of17.png" alt="of17">
+</div>
+</div>
+<div class="paragraph">
+<p>EO view:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of18.png" alt="of18">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>B: Economic and financial standing (based on Article 58(3) of Directive 2014/24/EU)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: All options are ticked by default, but the CA can manually remove the ticks of the options not required for this specific procedure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of19.png" alt="of19">
+</div>
+</div>
+<div class="paragraph">
+<p>EO view:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of20.png" alt="of20">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>C: Technical and professional ability (based on Article 58(4) of Directive 2014/24/EU)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: All options are ticked by default, but the CA can manually remove the ticks of the options not required for this specific procedure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of21.png" alt="of21">
+</div>
+</div>
+<div class="paragraph">
+<p>EO view:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of22.png" alt="of22">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>D: Quality assurance schemes and environmental management standards (based on Article 62(2) of Directive 2014/24/EU)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>CA view: All options are ticked by default, but the CA can manually remove the ticks of the options not required for this specific procedure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of23.png" alt="of23">
+</div>
+</div>
+<div class="paragraph">
+<p>EO view:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of24.png" alt="of24">
+</div>
+</div>
+<div class="paragraph">
+<p>Global indication for all selection criteria (instead of options A-D):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of25.png" alt="of25">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_5_reduction_of_the_number_of_qualified_candidates"><a class="anchor" href="#_part_5_reduction_of_the_number_of_qualified_candidates"></a>Part 5: Reduction of the number of qualified candidates.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Part V applies only for the response document (ESPD Response) that the EO needs to fulfil (except when the EO is an entity, the lead entity does not rely on in order to meet the selection criteria). Furthermore, the economic operator should only provide information where the contracting authority or contracting entity has specified the objective and non-discriminatory criteria or rules to be applied in order to limit the number of candidates that will be invited to tender or to conduct a dialogue.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of26.png" alt="of26">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_part_6_concluding_statements_which_contain_the_legal_statements_of_the_document"><a class="anchor" href="#_part_6_concluding_statements_which_contain_the_legal_statements_of_the_document"></a>Part 6: Concluding statements, which contain the legal statements of the document.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>CA and EO view: In the response document, the EO shall also provide the date, place and signature.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of27.png" alt="of27">
+</div>
+</div>
+<div class="paragraph">
+<p>Once the form is filled in, the user has several options:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of28.png" alt="of28">
+</div>
+</div>
+<div class="paragraph">
+<p>There is an “Overview” option available to both the CA when preparing the ESPD Request and the EO when preparing the ESPD Response, which allows the user to review from a single page all the information provided in the form. If everything is correct, the ESDP document can be downloaded:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of29.png" alt="of29">
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>Any comments on the documentation?</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<footer class="footer">
+    <div class=columns>
+        <div>
+  <p>The projects documented in this Developer Documentation Portal are developed and managed by the TED & EU Public Procurement Unit of the Publications Office of the European Union
+  <br/>This page was built using a link:https://github.com/OP-TED/antora-eui[fork of the Antora default UI], which is licensed under the terms of the MPL-2.0 license.</p>
+</div>
+        <div>
+            <h3>This website is managed by<h3>
+                    <img src="../_/img/op-logo-with-name.svg" class="logo" />
+        </div>
+    </div>
+</footer>  </body>
+</html>

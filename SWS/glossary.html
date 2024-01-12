@@ -43,7 +43,7 @@
   <div class="navbar-dropdown">
       <a class="navbar-item" href="../eforms/latest/index.html">eForms SDK</a>
       <a class="navbar-item" href="../EPO/latest/index.html">eProcurement Ontology</a>
-      <a class="navbar-item" href="../ESPD-EDM/latest/index.html">ESPD EDM</a>
+      <a class="navbar-item" href="../espd/latest/index.html">ESPD EDM</a>
   </div>
 </div>
 
@@ -210,31 +210,10 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../ESPD-EDM/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../espd/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../ESPD-EDM/latest/index.html">3.3.0</a>
-            </li>
-            <li class="version">
-              <a href="../ESPD-EDM/3.2.0/index.html">3.2.0</a>
-            </li>
-            <li class="version">
-              <a href="../ESPD-EDM/3.1.0/index.html">3.1.0</a>
-            </li>
-            <li class="version">
-              <a href="../ESPD-EDM/3.0.1/index.html">3.0.1</a>
-            </li>
-            <li class="version">
-              <a href="../ESPD-EDM/2.1.1/index.html">2.1.1</a>
-            </li>
-            <li class="version">
-              <a href="../ESPD-EDM/2.1.0/index.html">2.1.0</a>
-            </li>
-            <li class="version">
-              <a href="../ESPD-EDM/2.0.2/index.html">2.0.2</a>
-            </li>
-            <li class="version">
-              <a href="../ESPD-EDM/1.0.2/index.html">1.0.2</a>
+              <a href="../espd/latest/index.html">3.3.0</a>
             </li>
         </ul>
       </li>
@@ -275,15 +254,15 @@
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Conceptual Mapping</strong> (often abbreviated as CM)</p>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated the output RDF graph.  The conceptual model is in the form of an Excel file and is a valuable resource for the Procurement specialist that may not have an understanding of the technical files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An abstract level mapping of XPaths in the input data to those ePO classes and properties that need to be instantiated in the output RDF graph.  The conceptual model is in the form of an Excel file and is a valuable resource for procurement specialists who may not have an understanding of the technical files</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>eProcurement Ontology (ePO)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">An ontology that defines the concepts and relations that are needed to fully describe the eProcurement domain of the European Union. For more information see the <a href="https://docs.ted.europa.eu/EPO/latest/index.html">eProcurement Ontology Documentation</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An ontology that defines the concepts and relations that are needed for a full description of the eProcurement domain of the European Union. For more information see the <a href="https://docs.ted.europa.eu/EPO/latest/index.html">eProcurement Ontology Documentation</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>eForms</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">eForms is the notification standard used for publishing public procurement procedures notices in the European Union, which replaces the Standard Forms (see below).  eForms are used to publish public procurement notices according to Regulation (EU) 2019/1780. For more information on this, see the <a href="https://docs.ted.europa.eu/eforms/latest/index.html">eForms SDK documentation</a>.  The eForms conform to the TED SDK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eForms is the notification standard used for publishing public procurement procedure notices in the European Union, which replaces the Standard Forms (see below).  eForms are used to publish public procurement notices according to Regulation (EU) 2019/1780. For more information on this, see the <a href="https://docs.ted.europa.eu/eforms/latest/index.html">eForms SDK documentation</a>.  The eForms conform to the TED SDK</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -298,7 +277,7 @@
 <p><strong>Standard Forms</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The predecessor to eForms which is used to publish public procurement notices on the TED website according to Regulation (EU) 2015/1986.   The different forms  conform to a specific version the TED XML Schema.</p>
+<p>The predecessor to eForms which wass used to publish public procurement notices on the TED website according to Regulation (EU) 2015/1986.   The different forms  conform to a specific version the TED XML Schema.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -306,7 +285,7 @@
 <p><strong>Mapping suite package</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>a collection of files, organised in a folder hierarchy, that fully specify how the mapping of a certain category of notices (e.g. notices created according to specific XSD version of a specific Standard Form or eForm is being converted to RDF. This collection includes:</p>
+<p>A collection of files organised in a folder hierarchy that fully specify how the mapping of a certain category of notices e.g., notices created according to a specific XSD version of a specific Standard Form or eForm is converted to RDF. This collection includes:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -314,21 +293,24 @@
 <p>the conceptual mapping (CM),</p>
 </li>
 <li>
-<p>the technical mappings (realised as RML files) used for transforming the data</p>
+<p>the technical mappings (realised as RML files) used for transforming the data,</p>
 </li>
 <li>
 <p>additional resources that are needed to complement the mappings,</p>
 </li>
 <li>
-<p>test data (xml examples of notices)</p>
+<p>test data (xml examples of notices),</p>
 </li>
 <li>
-<p>the RDF format of the test data after transformation</p>
+<p>the RDF format of the test data after transformation,</p>
 </li>
 <li>
-<p>validation queries and validation reports on the  RDF output. For more details please see the Mapping Suite Structure.</p>
+<p>validation queries and validation reports on the  RDF output.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>For more details please see the Mapping Suite Structure.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -336,7 +318,7 @@
 <p><strong>Notice</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Short for public procurement notice, refers to a procurement notice published on TED. To explore some of these notices see: <a href="https://ted.europa.eu/TED/" class="bare">https://ted.europa.eu/TED/</a>.  Notices can be seen as eForms or Standard Forms containing the data of a specific procedure.</p>
+<p>Short for public procurement notice, refers to a procurement notice published on TED. To explore some of these notices see: <a href="https://ted.europa.eu/TED/" class="bare">https://ted.europa.eu/TED/</a>.  Notices are eForms or Standard Forms containing the data of a specific procedure.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -344,7 +326,7 @@
 <p><strong>RDF Mapping Language (RML)</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>a generic mapping language defined to express customised mapping rules from heterogeneous data structures and serializations to the RDF data model. RML is defined as a superset of the W3C-standardized mapping language [R2RML] and follows exactly the same syntax as R2RML; therefore, RML mappings are themselves RDF graphs. For more information on RML, see <a href="https://rml.io/specs/rml/" class="bare">https://rml.io/specs/rml/</a>.</p>
+<p>A generic mapping language defined to express customised mapping rules from heterogeneous data structures and serializations into the RDF data model. RML is defined as a superset of the W3C-standardized mapping language [R2RML] and follows exactly the same syntax as R2RML. Therefore, RML mappings are themselves RDF graphs. For more information on RML, see <a href="https://rml.io/specs/rml/" class="bare">https://rml.io/specs/rml/</a>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -352,7 +334,7 @@
 <p><strong>Technical Mapping &#8482;</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>a set of RML rules that can be used to transform an XML notice. The TM is split in multiple reusable modules that can be combined to represent a full RML.</p>
+<p>A set of RML rules that can be used to transform an XML notice. The TM is split in multiple reusable modules that can be combined to represent a full RML.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -360,7 +342,7 @@
 <p><strong>Tenders Electronic Daily (TED)</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>an online portal that publishes public procurement notice see: <a href="https://ted.europa.eu/TED/main/HomePage.do" class="bare">https://ted.europa.eu/TED/main/HomePage.do</a></p>
+<p>An online portal that publishes public procurement notices. See: <a href="https://ted.europa.eu/TED/main/HomePage.do" class="bare">https://ted.europa.eu/TED/main/HomePage.do</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -368,7 +350,7 @@
 <p><strong>Test data</strong></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>a carefully selected, representative sample of real notices published on TED, which, together, cover all the different XPaths that can appear in a specific Standard Form or eForm and conforms to a specific XSD version, published in a certain date range. For more detailed documentation, please check out the mapping_suite/preparing-test-data.adoc section</p>
+<p>A carefully selected, representative sample of real notices published on TED which, together, cover all the different XPaths that can appear in a specific Standard Form or eForm and which conforms to a specific XSD version, published in a certain date range. For more detailed documentation, please see the mapping_suite/preparing-test-data.adoc section</p>
 </div></div></td>
 </tr>
 <tr>

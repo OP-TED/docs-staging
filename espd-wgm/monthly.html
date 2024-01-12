@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Monthly Reports :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/espd-wgm/monthly.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/custom.css">
+    <link rel="stylesheet" href="../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.ted.europa.eu">
+                <img src="../_/img/ted-logo.svg" class="logo" />
+                <span class="navbar-title">TED Developer Documentation</span>
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="https://docs.ted.europa.eu">Home</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Products</a>
+  <div class="navbar-dropdown">
+      <a class="navbar-item" href="../eforms/latest/index.html">eForms SDK</a>
+      <a class="navbar-item" href="../EPO/latest/index.html">eProcurement Ontology</a>
+      <a class="navbar-item" href="../espd/latest/index.html">ESPD EDM</a>
+  </div>
+</div>
+
+
+<div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Resources</a>
+  <div class="navbar-dropdown">
+    <!-- <div class="navbar-item"><b>Publications Ofiice</b></div> -->
+    <a class="navbar-item" href="https://github.com/OP-TED/eForms-SDK">eForms SDK on Github</a>
+    <a class="navbar-item" href="https://simap.ted.europa.eu/web/simap/eforms">eForms on SIMAP</a>
+    <a class="navbar-item" href="https://github.com/eprocurementontology/eprocurementontology">eProcurement
+      Ontology</a>
+    <a class="navbar-item" href="https://github.com/espd/espd-edm">European Single Procurement Document</a>
+    <a class="navbar-item" href="https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables">eProcurement in
+      EU Vocabularies</a>
+    <hr class="navbar-divider">
+    <!-- <div class="navbar-item"><b>DG GROW</b></div>-->
+    <a class="navbar-item" href="https://ec.europa.eu/growth/single-market/public-procurement/digital/eforms_en">About
+      eForms</a>
+    <!-- <a class="navbar-item" href="https://github.com/eForms/eForms">eForms 2nd consultation</a> -->
+  </div>
+</div>
+
+<a class="navbar-item" href="https://simap.ted.europa.eu/contact">Helpdesk</a>
+
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="espd-wgm" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">ESPD EDM</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd/latest/index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd/latest/release_notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Information for Business Users</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-bus/index.html">Business Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-bus/service.html">The ESPD Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-bus/using.html">Using an ESPD Service</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-tech/index.html">Technical Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/history.html">History and Planned Developments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/external.html">External Resources</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/supporting.html">Supporting and related projects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../espd-home/laws.html">Laws and Directives</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Open User Community Reports</strong></span></span>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="monthly.html">Monthly Reports</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="annual.html">Annual Reports</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../eforms/latest/index.html">1.10.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.9/index.html">1.9.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.8/index.html">1.8.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.7/index.html">1.7.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.6/index.html">1.6.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.5/index.html">1.5.1</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.4/index.html">1.4.1</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../EPO/4.1/index.html">4.1.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../EPO/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../espd/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../espd/latest/index.html">3.3.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">ESPD EDM</a></li>
+    <li><a href="monthly.html">Monthly Reports</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Monthly Reports</h1>
+<div class="sect1">
+<h2 id="_2023"><a class="anchor" href="#_2023"></a>2023</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_2023_09_21"><a class="anchor" href="#_2023_09_21"></a>2023-09-21</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_Slides_20230921.pdf">31st OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20230921_OUC%20meeting%20report.html" class="xref page">31st OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2023_06_29"><a class="anchor" href="#_2023_06_29"></a>2023-06-29</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20230629.pdf">30th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20230629_OUC%20meeting%20report.html" class="xref page">30th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2023_04_27"><a class="anchor" href="#_2023_04_27"></a>2023-04-27</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20230427.pdf">29th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20230427_OUC%20meeting%20report.html" class="xref page">29th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2023_03_23"><a class="anchor" href="#_2023_03_23"></a>2023-03-23</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20230323.pdf">28th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20230323_OUC%20meeting%20report.html" class="xref page">28th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2023_02_23"><a class="anchor" href="#_2023_02_23"></a>2023-02-23</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20230223.pdf">27th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20230223_OUC%20meeting%20report.html" class="xref page">27th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2023_01_26"><a class="anchor" href="#_2023_01_26"></a>2023-01-26</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20230126.pdf">26th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20230126_OUC%20meeting%20report.html" class="xref page">26th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2022"><a class="anchor" href="#_2022"></a>2022</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_2022_10_27"><a class="anchor" href="#_2022_10_27"></a>2022-10-27</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20221027.pdf">25th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20221027_OUC%20meeting%20report.html" class="xref page">25th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2022_09_28"><a class="anchor" href="#_2022_09_28"></a>2022-09-28</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220928.pdf">24th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20220928_OUC%20meeting%20report.html" class="xref page">24th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2022_06_16"><a class="anchor" href="#_2022_06_16"></a>2022-06-16</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220616.pdf">23rd OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20220616_OUC%20meeting%20report.html" class="xref page">23rd OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2022_04_28"><a class="anchor" href="#_2022_04_28"></a>2022-04-28</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220428_corrected.pdf">22nd OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20220428_OUC%20meeting%20report.html" class="xref page">22nd OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2022_03_31"><a class="anchor" href="#_2022_03_31"></a>2022-03-31</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220331.pdf">21st OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="20220331_OUC%20meeting%20report.html" class="xref page">21st OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2022_02_24"><a class="anchor" href="#_2022_02_24"></a>2022-02-24</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220224.pdf">20th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_Report_OUC_Meetings_20220224.pdf">20th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2022_01_27"><a class="anchor" href="#_2022_01_27"></a>2022-01-27</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220127.pdf">19th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20220127.pdf">19th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2021"><a class="anchor" href="#_2021"></a>2021</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_2021_10_28"><a class="anchor" href="#_2021_10_28"></a>2021-10-28</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20211028_v1.0.pdf">18th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20211028_fv.pdf">18th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2021_10_07"><a class="anchor" href="#_2021_10_07"></a>2021-10-07</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20211007_v1.0.pdf">17th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20211007_v1.0.pdf">17th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2021_09_02"><a class="anchor" href="#_2021_09_02"></a>2021-09-02</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20210902_v1.0.pdf">16th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20210902_v1.0.pdf">16th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2021_06_30"><a class="anchor" href="#_2021_06_30"></a>2021-06-30</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20210630_v1.0.pdf">15th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20210630_v4.0.pdf">15th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2021_03_31"><a class="anchor" href="#_2021_03_31"></a>2021-03-31</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20210331_v1.0.pdf">14th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20210331_v1.0.pdf">14th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2021_03_03"><a class="anchor" href="#_2021_03_03"></a>2021-03-03</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20210303_v1.0.pdf">13th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20210303_v1.0.pdf">13th OUC Report</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESCO_ESPD_OUC_meeting_3-3-21.pptx">ESCO 13th WGM Presentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2021_02_03"><a class="anchor" href="#_2021_02_03"></a>2021-02-03</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20210203_v1.2.pdf">12th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20210203_v1.0.pdf">12th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2020"><a class="anchor" href="#_2020"></a>2020</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_2020_10_29"><a class="anchor" href="#_2020_10_29"></a>2020-10-29</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20201029_v1.0.pdf">11th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20201029_v1.0.pdf">11th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2020_10_01"><a class="anchor" href="#_2020_10_01"></a>2020-10-01</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20201001_v1.0.pdf">10th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20201001_v1.0.pdf">10th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2020_09_03"><a class="anchor" href="#_2020_09_03"></a>2020-09-03</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20200903_v1.0.pdf">9th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20200903_v1.1.pdf">9th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2020_07_09"><a class="anchor" href="#_2020_07_09"></a>2020-07-09</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20200709_v1.0.pdf">8th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20200709_v1.1.pdf">8th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2020_06_17"><a class="anchor" href="#_2020_06_17"></a>2020-06-17</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20200617_v1.0.1.pdf">7th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_OUC_Meetings_20200617_v1.0.pdf">7th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2020_05_19"><a class="anchor" href="#_2020_05_19"></a>2020-05-19</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/FwC10649_ESPD_MS_Meetings_20200519_v1.0.pdf">6th OUC Presentation</a></p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/ESPD_Minutes_MS_Meetings_20200519_v1.0.pdf">6th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_2019"><a class="anchor" href="#_2019"></a>2019</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_2019_11_28"><a class="anchor" href="#_2019_11_28"></a>2019-11-28</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/FwC10649_ESPD_MS_Meetings_20191128_v1.0.pdf">5th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2019_09_27"><a class="anchor" href="#_2019_09_27"></a>2019-09-27</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/FwC10649_ESPD_MS_Meetings_20190927_v1.0.pdf">4th OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2019_09_10"><a class="anchor" href="#_2019_09_10"></a>2019-09-10</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/FwC10649_ESPD_MS_Meetings_20190910_v1.0.pdf">3rd OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2019_09_05"><a class="anchor" href="#_2019_09_05"></a>2019-09-05</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/FwC10649_ESPD_MS_Meetings_20190905_v1.0.pdf">2nd OUC Report</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2019_07_01"><a class="anchor" href="#_2019_07_01"></a>2019-07-01</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/espd-docs/tree/wgm-reports/modules/ROOT/attachments/FwC10649_ESPD_MS_Meetings_20190701_v1.0.pdf">1st OUC Report</a></p>
+</li>
+</ul>
+</div>
+<hr>
+<div class="paragraph">
+<p>Any comments on the documentation?</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<footer class="footer">
+    <div class=columns>
+        <div>
+  <p>The projects documented in this Developer Documentation Portal are developed and managed by the TED & EU Public Procurement Unit of the Publications Office of the European Union
+  <br/>This page was built using a link:https://github.com/OP-TED/antora-eui[fork of the Antora default UI], which is licensed under the terms of the MPL-2.0 license.</p>
+</div>
+        <div>
+            <h3>This website is managed by<h3>
+                    <img src="../_/img/op-logo-with-name.svg" class="logo" />
+        </div>
+    </div>
+</footer>  </body>
+</html>
