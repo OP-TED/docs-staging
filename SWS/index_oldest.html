@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Audience :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/SWS/audience.html">
+    <title>TED-SWS End-User Documentation :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/SWS/index_oldest.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -92,7 +92,7 @@
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="audience.html">Target Audience</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -231,7 +231,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED Semantic Web Service</a></li>
-    <li><a href="audience.html">Target Audience</a></li>
+    <li><a href="index_oldest.html">TED-SWS End-User Documentation</a></li>
   </ul>
 </nav>
 </div>
@@ -240,29 +240,55 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Audience</h1>
+<h1 class="page">TED-SWS End-User Documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>This documentation is written for a wide audience, with different interests in the TED-SWS project, and different levels of expertise Semantic Web, EU e-Procurement and software infrastructure. More specifically this documentation can be of interest to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>End-Users</strong>, such as <strong>Semantic Web Practitioners</strong> or <strong>Experts in eProcurement Domain</strong>, who are interested in understanding how the RDF representation of the e-procurement notices look like, and how this representation conforms to the eProcurement Ontology (ePO).</p>
-</li>
-<li>
-<p><strong>Software Engineers</strong> interested in integrating mapping suite packages into processing pipelines;</p>
-</li>
-<li>
-<p><strong>Semantic Engineers</strong> interested in understanding and writing mappings from XML to RDF, in particular in the EU eProcurement domain.</p>
-</li>
-</ul>
-</div>
-<hr>
-<div class="paragraph">
-<p>Any comments on the documentation?</p>
+<p>TED Semantic Web Service (TED-SWS) is a pipeline system that continuously
+converts the public procurement notices (in XML format) available on the
+TED Website into RDF format based on the eProcurement Ontology, and publishes
+them into Cellar repository, hence making them available to the public
+through Cellar’s SPARQL endpoint.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+<p>The TED Semantic Web Service (TED-SWS) is plugging together
+the TED infrastructure for the collection and publication of public procurement
+notices with the infrastructure of <a href="http://data.europa.eu/">data.europa.eu</a>
+in order to make public procurement data accessible and reusable as
+Linked Open Data (LOD) by users and stakeholders (see <a href="genref.html" class="xref page">the detailed motivation</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contents"><a class="anchor" href="#_contents"></a>Contents</h2>
+<div class="sectionbody">
+<div class="openblock tile-container">
+<div class="content">
+<div class="sidebarblock tile">
+<div class="content">
+<div class="title">Mapping Suites</div>
+<div class="paragraph">
+<p>The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED Semantic Web Services, aka TED-SWS system) to convert TED notices available in XML format to RDF.</p>
+</div>
+<div class="paragraph">
+<p><a href="mapping_suite/index.html" class="xref page">Read the docs</a></p>
+</div>
+</div>
+</div>
+<div class="sidebarblock tile">
+<div class="content">
+<div class="title">Sample Applications</div>
+<div class="paragraph">
+<p>Sample application represents a set of examples that shows how to interact with TED RDF Data (available in Cellar) using tools like Python, R or Excel.</p>
+</div>
+<div class="paragraph">
+<p><a href="sample_app/index.html" class="xref page">Read the docs</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </article>
   </div>
