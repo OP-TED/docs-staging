@@ -271,9 +271,9 @@
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_query_1_notices_published_by_buyer_on_a_given_date"><a class="anchor" href="#_query_1_notices_published_by_buyer_on_a_given_date"></a>Query 1: Notices published by buyer on a given date</h3>
+<h3 id="_query_1_a_count_of_notices_per_buyer_published_on_a_given_date"><a class="anchor" href="#_query_1_a_count_of_notices_per_buyer_published_on_a_given_date"></a>Query 1: A count of notices per buyer published on a given date</h3>
 <div class="paragraph">
-<p>This query returns the  notices published by buyer  on a specified date. The data returned are the date, buyer country, buyer name, number of notices. The data is ordered by notice count, descending.</p>
+<p>This query returns a count of the notices published per buyer on a specified date, ordered by count descending. The data returned are the date, buyer country, buyer name, number of notices.</p>
 </div>
 </div>
 <div class="sect2">
@@ -329,24 +329,12 @@ ORDER BY DESC(?NumberOfNotices) ASC(?BuyerLegalName)</code></pre>
 <img src="../_images/sparql/Q1.png" alt="Q1">
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Some cleaning up of the data might be necessary to remove URL strings, (bind (replace(str statements, - to make the information returned more readable.
-</td>
-</tr>
-</table>
-</div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_query_2_contracts_awarded_on_a_specific_date"><a class="anchor" href="#_query_2_contracts_awarded_on_a_specific_date"></a>Query 2: Contracts awarded on a specific date</h3>
+<h3 id="_query_2_contracts_awarded_per_buyer_on_a_specific_date"><a class="anchor" href="#_query_2_contracts_awarded_per_buyer_on_a_specific_date"></a>Query 2: Contracts awarded per buyer on a specific date</h3>
 <div class="paragraph">
-<p>This query returns data on the contracts awarded on a specific day.</p>
+<p>This query returns data on the contracts awarded on a specific date ordered by contracts awarded, descending. Data returned are date, ojs number, the buyer country, the buyer name, and the count of contracts awarded.</p>
 </div>
 </div>
 <div class="sect2">
@@ -403,22 +391,10 @@ ORDER BY DESC(?BuyerLegalName)</code></pre>
 <img src="../_images/sparql/Q2.png" alt="Q2">
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The values shown are only those at the beginning of a much longer list in different currencies (in alphabetic order). The others e.g., euros, follow. To get comparable values, all currencies will need to be converted to euros (or the same currency) manually.
-</td>
-</tr>
-</table>
-</div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_query_3_the_highest_value_contract_award_published_for_a_specific_date_by_currency_full_data"><a class="anchor" href="#_query_3_the_highest_value_contract_award_published_for_a_specific_date_by_currency_full_data"></a>Query 3: The highest value contract award published for a specific date by currency (full data)</h3>
+<h3 id="_query_3_the_values_of_contract_award_notices_published_on_a_specific_date_by_currency_and_then_value"><a class="anchor" href="#_query_3_the_values_of_contract_award_notices_published_on_a_specific_date_by_currency_and_then_value"></a>Query 3: The values of contract award notices published on a specific date by currency and then value.</h3>
 <div class="paragraph">
 <p>This query returns the contracts awarded on a specific data in descending order of value per currency.</p>
 </div>
@@ -489,18 +465,6 @@ ORDER BY ASC(?LotAwardedValueCurrency) DESC(?LotAwardedValue)</code></pre>
 <img src="../_images/sparql/Q3.png" alt="Q3">
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The data contains all the currencies used in the EU arranged alphabetically (only the beginning of the list is shown here). For a true comparison, all currencies will need to be converted to the same one.
-</td>
-</tr>
-</table>
-</div>
 <hr>
 </div>
 <div class="sect2">
@@ -536,24 +500,12 @@ WHERE {
 <img src="../_images/sparql/Q4.png" alt="Q4">
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-NOTE: This data may not be complete or accurate as this information may change during provision.
-</td>
-</tr>
-</table>
-</div>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_query_5_notices_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"><a class="anchor" href="#_query_5_notices_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"></a>Query 5: Notices awarded on a specific date where the economic operator foresees subcontracting</h3>
+<h3 id="_query_5_contracts_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"><a class="anchor" href="#_query_5_contracts_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"></a>Query 5: Contracts awarded on a specific date where the economic operator foresees subcontracting</h3>
 <div class="paragraph">
-<p>This query returns a list of the winning economic operator where the operator foresees subcontracting to other organisations. The data is displayed in columns.</p>
+<p>This query returns a list of the winning economic operator where the operator foresees subcontracting to other organisations. The data returned is the date, the OJS number, the notice lot, and "forsees subcontracting". This last field is filters the notices for those foreseeing subcontracting only.</p>
 </div>
 </div>
 <div class="sect2">
@@ -596,24 +548,12 @@ ORDER BY ASC(?OJSNumber) ASC(?Lot)</code></pre>
 <img src="../_images/sparql/Q5.png" alt="Q5">
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-NOTE: This data may not be complete or accurate as this information may change during provision.
-</td>
-</tr>
-</table>
-</div>
 <hr>
 </div>
 <div class="sect2">
 <h3 id="_query_6_the_number_of_economic_operators_awarded_contracts_on_a_specific_date_that_are_smes"><a class="anchor" href="#_query_6_the_number_of_economic_operators_awarded_contracts_on_a_specific_date_that_are_smes"></a>Query 6: The number of economic operators awarded contracts on a specific date that are SMEs</h3>
 <div class="paragraph">
-<p>The data returned are the country and the count per country, displayed by count, descending.</p>
+<p>The data returned are the country codes, and the count of awarded contracts per country, displayed by count, descending.</p>
 </div>
 </div>
 <div class="sect2">
@@ -680,9 +620,9 @@ ORDER BY DESC (?NrOfSmeWinners)</code></pre>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="_query_7_the_list_of_economic_operators_awarded_contracts_on_a_specific_date_that_are_smes"><a class="anchor" href="#_query_7_the_list_of_economic_operators_awarded_contracts_on_a_specific_date_that_are_smes"></a>Query 7: The list of economic operators awarded contracts on a specific date that are SMEs</h3>
+<h3 id="_query_7_the_list_of_economic_operators_awarded_contracts_on_a_specific_date_showing_which_are_smes"><a class="anchor" href="#_query_7_the_list_of_economic_operators_awarded_contracts_on_a_specific_date_showing_which_are_smes"></a>Query 7: The list of economic operators awarded contracts on a specific date showing which are SMEs</h3>
 <div class="paragraph">
-<p>The data returned are data, ojs-number, operator name, operator country, and business size displayed in alphabetic order by country..</p>
+<p>The data returned are data, ojs-number, operator name, operator country, and business size displayed in alphabetic order by country.</p>
 </div>
 </div>
 <div class="sect2">
