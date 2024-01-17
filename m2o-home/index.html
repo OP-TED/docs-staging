@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Introduction to the model2owl Project :: TED Developer Documentation</title>
+    <title>The model2owl Project :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/m2o-home/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
@@ -90,6 +90,12 @@
     <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="business.html">Functional Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -105,22 +111,19 @@
     <span class="nav-text"><span class="separated"><strong>Transformation Rules</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="transformation/uml2owl-transformation.html">Introduction</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="transformation/transf-rules1.html">Classes and Attributes</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="transformation/transf-rules2.html">Connectors</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="transformation/transf-rules3.html">Data Types</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="transformation/transf-rules4.html">Descriptors</a>
-  </li>
-</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Checkers (Validation)</strong></span></span>
@@ -228,41 +231,107 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Introduction to the model2owl Project</h1>
-<div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<h1 class="page">The model2owl Project</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The creation of the  <a href="https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html">eProcurement Ontology</a> requires collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, is typically developed by semantic web specialists.</p>
+<p>The model2owl project is a tool for transforming human readable semantic models into machine-readable OWL (core and restriction) files and SHACL shapes. It takes the human-readable input in UML form, and applies sets of modelling conventions, transformation rules, and methods of verification to it.</p>
 </div>
 <div class="paragraph">
-<p>To maintain broader public interaction and discussion, and continue the development of these artifacts, the project opted for an intermediary representation, unified modeling language (UML). UML allows participation in the development process by both of the above groups as it holds widespread recognition and is also comprehensible to a broad audience. In addition, tools exist that facilitate the generation of diagrams on top of visual representations, facilitating discussion by all interested groups.</p>
-</div>
-<div class="paragraph">
-<p>The <strong>model2OWL</strong> tool adheres to <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">semantic conventions</a>, which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.</p>
-</div>
-<div class="paragraph">
-<p>To generate machine-readable OWL (core and restriction) files and SHACL shapes, the model2owl tool does the following:</p>
-</div>
-<div class="paragraph">
-<p>It takes the human-readable input in UML form, and in an automated conversion process, applies sets of modelling conventions, transformation rules, and methods of verification to it.</p>
-</div>
-<div class="paragraph">
-<p>The output artifacts are defined by the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification)">semic conventions</a> as a specification, the significance of which is its ability to ensure that all relevant stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows the <a href="https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1">Linked Data</a> principles.</p>
+<p>The following topics are included in this version of the model2owl documentation:</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_model2owl_in_an_eprocurement_context"><a class="anchor" href="#_model2owl_in_an_eprocurement_context"></a>model2owl in an eProcurement context</h2>
+<h2 id="_general_reference"><a class="anchor" href="#_general_reference"></a>General Reference</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>This documentation provides a working specification, guidelines, and conventions for the eProcurement conceptual model, and describes how the model qualifies as suitable input for the transformation scripts that generate the formal eProcurement ontology.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="intro.html" class="xref page">Introduction</a><br>
+An introduction to the model2owl project</p>
+</li>
+<li>
+<p><a href="business.html" class="xref page">Functional Overview</a><br>
+Project context and overview for business users</p>
+</li>
+<li>
+<p><a href="technical.html" class="xref page">Technical Overview</a><br>
+Overview for technical implementers</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived through a model transformation process. The model2owl transformation process automates the generation of the formal ontology in <a href="https://www.w3.org/TR/2014/REC-rdf-schema-20140225/">RDF format</a>, from the <a href="http://www.omg.org/spec/XMI/2.5.1">XMI (v.2.5.1) serialisation</a> of the data, provided that <a href="transformation/uml2owl-transformation.html" class="xref page">a set of clear transformation rules</a> is established, and <a href="uml/conceptual-model-conventions.html" class="xref page">a set of modelling conventions</a> is respected.</p>
 </div>
-<div class="paragraph">
-<p>This documentation also describes the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements. These elements are packages, classes, data types, enumerations, enumeration items, class attributes, association relations and dependency relations. More contextual information is provided in the subsections of the <a href="uml/conceptual-model-conventions.html" class="xref page">UML conventions specification</a>.</p>
+</div>
+<div class="sect1">
+<h2 id="_uml_conventions"><a class="anchor" href="#_uml_conventions"></a>UML Conventions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="uml/conceptual-model-conventions.html" class="xref page">The UML Model Conventions</a><br>
+A list and descriptions of the UML model conventions</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_transformation_rules"><a class="anchor" href="#_transformation_rules"></a>Transformation Rules</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="transformation/uml2owl-transformation.html" class="xref page">Introduction</a><br>
+An introduction to the transformation rules</p>
+</li>
+<li>
+<p><a href="transformation/transf-rules1.html" class="xref page">UML Classes and Attributes</a><br>
+Transformation of UML classes and attributes</p>
+</li>
+<li>
+<p><a href="transformation/transf-rules2.html" class="xref page">Connectors</a><br>
+Transformation of connectors</p>
+</li>
+<li>
+<p><a href="transformation/transf-rules3.html" class="xref page">Data Types</a><br>
+Transformation of UML Data Types</p>
+</li>
+<li>
+<p><a href="transformation/transf-rules4.html" class="xref page">Descriptors and Tags</a><br>
+Transformation of UML descriptors and tags</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_checkers_validation"><a class="anchor" href="#_checkers_validation"></a>Checkers (Validation)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="checkers/model2owl-checkers.html" class="xref page">UML Convention Checking Rules</a><br>
+The UML convention checking inventory</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_performing_transformations"><a class="anchor" href="#_performing_transformations"></a>Performing Transformations</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="local.html" class="xref page">Local machine</a><br>
+Performing Transformations on a Local Machine</p>
+</li>
+<li>
+<p><a href="boiler.html" class="xref page">The boilerplate utility</a><br>
+Performing transformations online using the boilerplate utility</p>
+</li>
+</ul>
 </div>
 <hr>
 <div class="paragraph">
