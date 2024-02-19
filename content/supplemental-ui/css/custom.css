@@ -1,5 +1,5 @@
 /*global screen max-width*/
-.body, .globan, .dd-header-container, .footer, .toolbar .sep-frame{
+.body, .globan, .dd-header-container, .footer, .toolbar, .sep-frame{
     max-width: 1480px;
     /*position: sticky;
     margin: 0 auto !important;*/
