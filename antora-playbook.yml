@@ -10,9 +10,9 @@ site:
        openapi-generator:
           config: config/openapi-generator/asciidoc.yaml
           templates: templates/openapi-generator/asciidoc
-      # - id: lunr-search
-      # require: ./lib/lunr/lunr-antora-extension
-      # enabled: false
+     - id: lunr-search
+       require: ./lib/lunr/lunr-antora-extension
+       enabled: false
 
 asciidoc:
   attributes:
@@ -55,7 +55,7 @@ content:
 
   ### model2owl OP
   - url: https://github.com/OP-TED/ted-model2owl-docs.git
-    start_path: / 
+    start_path: /
     branches: main
     # includes boilerplate  
   
@@ -72,7 +72,7 @@ content:
 
   ### TED Semantic Web Service
   - url: https://github.com/OP-TED/ted-rdf-docs
-    start_path: docs/antora 
+    start_path: docs/antora
     branches: sparql
 
   ### TED Data for Reusers
