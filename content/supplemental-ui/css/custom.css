@@ -1,22 +1,30 @@
-/*global screen max-width*/
+/*global screen max-width, centred*/
+
+.article {
+    max-width: 1480px;
+    position: sticky;
+    margin: 0 auto !important;
+    float: none !important;
+    }
+
 .body, .globan, .dd-header-container, .footer, .toolbar, .sep-frame{
     max-width: 1480px;
     /*position: sticky;
-    margin: 0 auto !important;*/
     float: none !important;
+    margin: 0 auto !important;*/
+    width: 100%
     }
 
 
 /*New TED dev docs header css Feb 2024 */
 .dd-header-container {
-    height: Hug 213px);
+    height: Hug 213px;
     gap: 16px;
     background: #FFFFFF;
     }
 
 /* Top line of header: EU logo and search*/
 .eu-part {
-    Property 1="xl";
     width: Fill 1575px;
     height: Hug 45px;
     padding: 0px, 24px, 0px, 24px;
@@ -27,7 +35,6 @@
 
 /*display EU flag at top inline-block so the search box can also be*/
 .eu-emblem {
-    Property 1="desktop";
     width: 161px;
     height: 45px;
     padding: 16px, 0px, 16px, 0px;
@@ -177,7 +184,7 @@
 
 /* formatting of "TED developer Docs" container*/
 .text-eu-subtext-box    {
-    Property 1="Default";
+    /*Property 1="Default";*/
     width: Fill 750px;
     height: Hug 29px;
     gap: 12px;
@@ -185,7 +192,7 @@
 
 /* formatting of "TED developer Docs" text*/
 .text-eu-subtext-text   {
-    Property 1="default";
+    /*Property 1="default";*/
     width: Hug 163px;
     height: Hug 29px;
     gap: 10px;
@@ -581,9 +588,9 @@ end of old navbar
 		padding: 8px 11px;
 	}
 }
-</style>
 
- <style>.has-edit-mode-menu .ted-search__wrapper .d-lg-none {
+
+.has-edit-mode-menu .ted-search__wrapper .d-lg-none {
     display: block!important;
 }
 
