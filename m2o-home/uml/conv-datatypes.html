@@ -232,8 +232,9 @@
 </aside>
 <article class="doc">
 <h1 class="page">Conventions on uml:DataType elements</h1>
-<div class="sect2">
-<h3 id="_conventional_recommendations_on_datatypes"><a class="anchor" href="#_conventional_recommendations_on_datatypes"></a>Conventional recommendations on datatypes</h3>
+<div class="sect1">
+<h2 id="_conventional_recommendations_on_datatypes"><a class="anchor" href="#_conventional_recommendations_on_datatypes"></a>Conventional recommendations on datatypes</h2>
+<div class="sectionbody">
 <table id="rule:datatypes-composite" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -258,8 +259,10 @@ Composite data types shall be represented as uml:Class elements. Primitive data 
 <p>This convention draws the distinction between primitive (or atomic) types (consisting of single literal value) and composite types (consisting of multiple attributes). See the <a href="https://ec.europa.eu/isa2/sites/default/files/e-government_core_vocabularies_handbook.pdf">Core Vocabularies Handbook</a>. In fact, the composite datatypes must be defined as classes and handled as such. For example: AmountType, Identifier, Quantity, and Measure are to be treated as classes even if conceptually they could be seen as composite data types.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sec:uml-datatype"><a class="anchor" href="#sec:uml-datatype"></a>Technical conventions on uml:DataType elements</h3>
+</div>
+<div class="sect1">
+<h2 id="sec:uml-datatype"><a class="anchor" href="#sec:uml-datatype"></a>Technical conventions on uml:DataType elements</h2>
+<div class="sectionbody">
 <table id="rule:datatypes-primitive" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -432,6 +435,7 @@ uml:DataType elements shall not connect to other elements. They can only be refe
 </div>
 <div class="paragraph">
 <p>There should be no outgoing connector from a uml:DataType element. uml:DataType elements should only be referred to, most commonly, by being used as the type of a uml:Attribute element. Declarations of uml:DataType elements that are not referred to should be avoided in order to keep the model lean and clean.</p>
+</div>
 </div>
 </div>
 <div id="footnotes">

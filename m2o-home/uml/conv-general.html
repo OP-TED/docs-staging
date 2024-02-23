@@ -239,8 +239,9 @@
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sec:general-model"><a class="anchor" href="#sec:general-model"></a>General conventions of the UML Model</h3>
+<div class="sect1">
+<h2 id="sec:general-model"><a class="anchor" href="#sec:general-model"></a>General conventions of the UML Model</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>To reduce the complexity of both the UML models, and the conversion of those UML models into derived artefacts i.e., OWL ontologies and SHACL shapes, a minimum set of UML model components and UML elements and connectors, were identified that express most of the ontological statements needed in practice. For this minimum set of UML model components, a <a href="../transformation/uml2owl-transformation.html" class="xref page">well-defined set of transformation rules</a> was agreed to ensure that the generation of derived artefacts is deterministic (not random) and complete. Other UML components were ignored.</p>
 </div>
@@ -312,8 +313,10 @@ All UML model elements and connectors must be declared with the visibility set t
 This convention also includes that the UML class attributes have their visibility (or "Scope") set to "Public", and that all named roles specified at either end of any of the connectors have their visibility (or "Access") set to "Public".</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sec:names"><a class="anchor" href="#sec:names"></a>Naming Conventions</h3>
+</div>
+<div class="sect1">
+<h2 id="sec:names"><a class="anchor" href="#sec:names"></a>Naming Conventions</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Defining naming and structural conventions for concepts in an ontology, and strictly adhering to them, not only makes the ontology easier to understand, it also helps avoid common modelling mistakes.</p>
 </div>
@@ -600,7 +603,6 @@ Attributes and connector names shall contain a verb. Apply certain, well establi
 <div class="paragraph">
 <p><strong>See also:</strong> SEMIC Style Guide Rule [<a href="https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r4">GC-R4</a>]</p>
 </div>
-</div>
 <div class="sect2">
 <h3 id="sec:descriptions"><a class="anchor" href="#sec:descriptions"></a>Notes, descriptions and comments</h3>
 <div class="paragraph">
@@ -700,8 +702,11 @@ All elements must have a definition providing a concise but complete description
 <p><strong>See also:</strong> SEMIC Style Guide Rule [<a href="https://semiceu.github.io/style-guide/1.0.0/gc-general-conventions.html#sec:gc-r5">GC-R5</a>], which provides more recommendations to be followed here.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sec:controlled-lists"><a class="anchor" href="#sec:controlled-lists"></a>Controlled lists</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sec:controlled-lists"><a class="anchor" href="#sec:controlled-lists"></a>Controlled lists</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A controlled list is a carefully selected list of words and phrases and commonly employed in modelling practices. The controlled list has a name, and a set of terms. For example, the list of grammatical genders can be named "Gender" and comprise the terms "masculine", "feminine", "neuter" and "utrum".</p>
 </div>
@@ -799,8 +804,10 @@ shall be represented as uml:Enumeration element.</p></td>
 <p>More specific requirements on the uml:Enumeration elements are provided in the Section [<a href="conv-enumerations.html#sec:enumeration" class="xref page">uml:Enumeration</a>].</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sec:namespaces"><a class="anchor" href="#sec:namespaces"></a>Namespaces</h3>
+</div>
+<div class="sect1">
+<h2 id="sec:namespaces"><a class="anchor" href="#sec:namespaces"></a>Namespaces</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In order to enable the reuse of names defined in other models and reuse of unique references for names that support easy identification, namespace management must be considered. We adopt an XML approach in defining and managing namespaces as it is inherent in both XMI and OWL2 standards. Hence, a <em>namespace</em> is a set of symbols that is used to organise objects of various kinds, so that these objects may be referred to by name and are uniquely identifiable.</p>
 </div>
@@ -834,8 +841,10 @@ shall be represented as uml:Enumeration element.</p></td>
 <p>is the namespace name and <code>Organization</code> is the local name.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sec:charset"><a class="anchor" href="#sec:charset"></a>Character encoding</h3>
+</div>
+<div class="sect1">
+<h2 id="sec:charset"><a class="anchor" href="#sec:charset"></a>Character encoding</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In the formal ontology, the URIs must conform to <a href="https://www.w3.org/TR/rdf11-mt/">RDF 1.1</a> and <a href="https://www.w3.org/TR/xml/">XML</a> format specifications. Both languages effectively require that terms begin with an upper or lower case letter from the ASCII character set, or an underscore (_). This tight restriction means that, for example, terms may not begin with a number, hyphen or accented character <a href="https://joinup.ec.europa.eu/sites/default/files/document/2012-03/D3.1-Process%20and%20Methodology%20for%20Core%20Vocabularies_v1.01.pdf">(Process and Methodology used for Core Vocabularies)</a>. Although underscores are permitted, they are discouraged as they may be, in some cases, misread as spaces. A formal definition of these restrictions is given in the XML specification document <a href="https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ">(Bray et al, 2008)</a>.</p>
 </div>
@@ -886,8 +895,10 @@ Element names shall use only ASCII characters to generate valid URIs. UTF-8, UTF
 <p>Encoded UTF-8 and UTF-16 names may be used <a href="https://www.researchgate.net/publication/319395252_Extensible_Markup_Language_XML_10_Fifth_Edition?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6Il9kaXJlY3QiLCJwYWdlIjoiX2RpcmVjdCJ9fQ">(Bray et al, 2008</a>, <a href="https://www.w3.org/TR/2014/PR-rdf11-concepts-20140109/diff-20131105.html">Bickly &amp; Guha, 2014)</a> but we recommend avoiding any character encodings in the element names. Encoded characters are mostly not readable and require a decoding to become human friendly. Also, unexpected results may occur when running the transformation script. This recommendation does not apply to content strings such as descriptions, notes and comments, which may use any encoding character.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="sec:stereotypes-tags"><a class="anchor" href="#sec:stereotypes-tags"></a>Stereotypes and Tags</h3>
+</div>
+<div class="sect1">
+<h2 id="sec:stereotypes-tags"><a class="anchor" href="#sec:stereotypes-tags"></a>Stereotypes and Tags</h2>
+<div class="sectionbody">
 <table id="rule:gen-stereotypes" class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 100%;">
@@ -949,6 +960,7 @@ UML tags shall be used to provide additional descriptions of the element in a co
 </div>
 <div class="paragraph">
 <p><strong>Note:</strong> Tags should not be used as the sole (or primary) source of concept identifier generation, i.e. every UML element that has tags attached, should, in the first place, have a proper name provided according to the conventions in the [<a href="#sec:names">Naming Conventions</a>] section.</p>
+</div>
 </div>
 </div>
 </article>
