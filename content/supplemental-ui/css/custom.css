@@ -193,10 +193,10 @@
 /* formatting of "TED developer Docs" text*/
 .text-eu-subtext-text   {
     /*Property 1="default";*/
-    /* width: Hug 163px; */
+    width: Hug 163px;
     height: Hug 29px;
     gap: 10px;
-    linear-gradient: (0deg, #F5F5F5, #F5F5F5);
+    /*linear-gradient:(0deg, #F5F5F5, #F5F5F5);*/
     border-left: 4px solid #339900;
     display:inline-block;
     margin-right:10px;
@@ -223,7 +223,7 @@
 
 /* formatting of "Documentation for TED developers and eSenders" text*/
 .text-eu-subtext-label {
-    /* width: 500px; */
+    width: 500px;
     height: 14px;
     font-family: Arial;
     font-size: 16px;
@@ -233,7 +233,6 @@
     text-align: left;
     color: #515560;
     margin-bottom:10px;
-    margin-right:10px;
     display:inline-block;
 }
 
@@ -425,7 +424,7 @@ end of old navbar
         text-decoration: none !important;
         text-underline-offset: 0.15em !important;
         font-size: 0.917rem;
-        font-family:Arial, sans-serif !important
+        font-family:Arial, sans-serif !important;
     }
 
     .li-footer {
@@ -437,11 +436,11 @@ end of old navbar
         font-size: 0.917rem;
         font-weight: 300;
         font-family:Arial, sans-serif !important;
-    }
+        }
 
     .ul-footer li-footer {
-    margin: 30px;
-    }
+        margin:30px;
+        }
 
     .byline-footer {
     line-height: 1.35 !important;
@@ -573,26 +572,7 @@ end of old navbar
     margin-left: 0;
 	}
 }
-#search-input {
-    position: relative;
-    flex: 1 1;
-    width: 30%;
-    height: 44px;
-    padding-left: 16px;
-    padding-right: 40px;
-    font-family: inherit;
-    font-size: 16px;
-    color: #515560;
-    text-overflow: ellipsis;
-    background-color: #fff;
-    border: 1px solid #d8dadf;
-    border-radius: 22px;
-    border-color:  #515560;
-    /* -webkit-appearance: none; */
-    /* -moz-appearance: none; */
-    /* appearance: none; */
-    margin-bottom:10px;
-  }
+
 
 @media (max-width: 768px) {
 	.ted-search__form-control {
@@ -605,7 +585,6 @@ end of old navbar
 	.ted-search__button-search {
 		padding: 8px 11px;
 	}
-    
 }
 
 
@@ -1025,5 +1004,25 @@ end of old navbar
         }
 
     }
-
+    #search-input {
+        position: relative;
+        flex: 1 1;
+        width: 30%;
+        height: 44px;
+        padding-left: 16px;
+        padding-right: 40px;
+        font-family: inherit;
+        font-size: 16px;
+        color: #515560;
+        text-overflow: ellipsis;
+        background-color: #fff;
+        border: 1px solid #d8dadf;
+        border-radius: 22px;
+        border-color:  #515560;
+        /* -webkit-appearance: none; */
+        /* -moz-appearance: none; */
+        /* appearance: none; */
+        margin-bottom:10px;
+      }
+    
 
