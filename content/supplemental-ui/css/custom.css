@@ -196,7 +196,7 @@
     width: Hug 163px;
     height: Hug 29px;
     gap: 10px;
-    linear-gradient(0deg, #F5F5F5, #F5F5F5);
+    /*linear-gradient:(0deg, #F5F5F5, #F5F5F5);*/
     border-left: 4px solid #339900;
     display:inline-block;
     margin-right:10px;
@@ -424,7 +424,7 @@ end of old navbar
         text-decoration: none !important;
         text-underline-offset: 0.15em !important;
         font-size: 0.917rem;
-        font-family:Arial, sans-serif !important
+        font-family:Arial, sans-serif !important;
     }
 
     .li-footer {
@@ -436,13 +436,11 @@ end of old navbar
         font-size: 0.917rem;
         font-weight: 300;
         font-family:Arial, sans-serif !important;
-        text
-
-    }
+        }
 
     .ul-footer li-footer {
-    margin: 30px;
-    }
+        margin:30px;
+        }
 
     .byline-footer {
     line-height: 1.35 !important;
@@ -845,7 +843,7 @@ end of old navbar
     #footer #extendedft {
         padding-bottom: unset;
         line-height: unset;
-        border: none;x
+        border: none;
         position: relative;
         background-color:var(--gs-base-color-eu-blue-5);
         height: 85%; /* Is this needed? */
