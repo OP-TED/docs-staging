@@ -34,10 +34,6 @@
                     <!--<div class="header-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="{{{uiRootPath}}}/img/ted-logo-footer2.png" height="48"/></a></div>-->
                     <div class="text-eu-subtext-text">TED Developer Docs</div>
                     <div class="text-eu-subtext-label">Documentation for TED developers and eSenders</div>
-                     {{!-- {{#if env.DOCSEARCH_ENABLED}} --}}
-
-                    <input id="search-input" type="text" placeholder="Search docs">
-                    {{!-- {{/if}} --}}
                 </div>
             </div>
         </div>
@@ -46,11 +42,16 @@
         <div class="sep-frame">
             <div class="rect-green"></div>
         </div>
+
+         <div class="sep-frame search-area">
+            {{!-- {{#if env.SEARCH_ENABLED}} --}}
+                    <input id="search-input" type="text" placeholder="Search TED for public tenders">
+                {{!-- {{/if}} --}}
+         </div>
     </div>
 
- {{#if env.DOCSEARCH_ENABLED}}
-                <div class="navbar-item search">
-                    <input id="search-input" type="text" placeholder="Search docs">
-                </div>
-                {{/if}}
+ {{!-- {{#if env.DOCSEARCH_ENABLED}} --}}
+
+                    {{!-- <input id="search-input" type="text" placeholder="Search docs"> --}}
+                    {{!-- {{/if}} --}}
 

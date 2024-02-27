@@ -223,7 +223,6 @@
 
 /* formatting of "Documentation for TED developers and eSenders" text*/
 .text-eu-subtext-label {
-    width: 500px;
     height: 14px;
     font-family: Arial;
     font-size: 16px;
@@ -233,6 +232,7 @@
     text-align: left;
     color: #515560;
     margin-bottom:10px;
+    margin-right: 10px;
     display:inline-block;
 }
 
@@ -1005,8 +1005,6 @@ end of old navbar
 
     }
     #search-input {
-        position: relative;
-        flex: 1 1;
         width: 30%;
         height: 44px;
         padding-left: 16px;
@@ -1017,7 +1015,7 @@ end of old navbar
         text-overflow: ellipsis;
         background-color: #fff;
         border: 1px solid #d8dadf;
-        border-radius: 22px;
+        /* border-radius: 15px; */
         border-color:  #515560;
         /* -webkit-appearance: none; */
         /* -moz-appearance: none; */
@@ -1026,3 +1024,13 @@ end of old navbar
       }
     
 
+      .search-area {
+        width: 100%; /* adjust as needed */
+        height: 100px; /* adjust as needed */
+        background-color: #eff1f5;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center; /* aligns items horizontally */
+        align-items: center; /* aligns items vertically */
+      }
