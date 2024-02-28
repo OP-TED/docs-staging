@@ -3,16 +3,16 @@ site:
   url: https://docs.ted.europa.eu
   start_page: home::index.adoc
 
-  antora:
-    extensions:
-     - id: render-apidocs
-       require: ./lib/apidoc/apidoc-antora-extension
-       openapi-generator:
-          config: config/openapi-generator/asciidoc.yaml
-          templates: templates/openapi-generator/asciidoc
-    #  - id: lunr-search
-    #    require: ./lib/lunr/lunr-antora-extension
-    #    enabled: false
+antora:
+  extensions:
+    - id: render-apidocs
+      require: ./lib/apidoc/apidoc-antora-extension
+      openapi-generator:
+        config: config/openapi-generator/asciidoc.yaml
+        templates: templates/openapi-generator/asciidoc
+    - id: lunr-search
+      require: ./lib/lunr/lunr-antora-extension
+      enabled: false
 
 asciidoc:
   attributes:
