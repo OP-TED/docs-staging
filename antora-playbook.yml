@@ -44,19 +44,19 @@ content:
     branches: HEAD
   
   ### eForms SDK
-  - url: https://github.com/OP-TED/eforms-docs.git
-    start_path: /
-    branches: 1.10.x, 1.10.x-generated, 1.9.x, 1.9.x-generated, 1.8.x, 1.8.x-generated, 1.7.x, 1.7.x-generated, 1.6.x, 1.6.x-generated, 1.5.x, 1.5.x-generated , 1.4.x, 1.4.x-generated, main # The "main" branch contains the eForms FAQ and RoadMap
+  # - url: https://github.com/OP-TED/eforms-docs.git
+  #  start_path: /
+  #  branches: 1.10.x, 1.10.x-generated, 1.9.x, 1.9.x-generated, 1.8.x, 1.8.x-generated, 1.7.x, 1.7.x-generated, 1.6.x, 1.6.x-generated, 1.5.x, 1.5.x-generated , 1.4.x, 1.4.x-generated, main # The "main" branch contains the eForms FAQ and RoadMap
 
   ### ePO Documentation
-  - url: https://github.com/OP-TED/epo-docs.git
-    start_path: /
-    branches: main, v*, wg-meetings
+  # - url: https://github.com/OP-TED/epo-docs.git
+  #  start_path: /
+  #  branches: main, v*, wg-meetings
 
   ### model2owl OP
-  - url: https://github.com/OP-TED/ted-model2owl-docs.git
-    start_path: / 
-    branches: main
+  # - url: https://github.com/OP-TED/ted-model2owl-docs.git
+  #  start_path: / 
+  #  branches: main
     # includes boilerplate  
   
   ###  ESPD
@@ -66,19 +66,19 @@ content:
     # branches: v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3.3.x, wgm-reports
 
   ### TED API
-  - url: https://github.com/OP-TED/tedapi-docs.git
-    start_path: /
-    branches: main # The "main" branch contains unversioned content.
+  # - url: https://github.com/OP-TED/tedapi-docs.git
+  #  start_path: /
+  #  branches: main # The "main" branch contains unversioned content.
 
   ### TED Semantic Web Service
-  - url: https://github.com/OP-TED/ted-rdf-docs
-    start_path: docs/antora 
-    branches: sparql
+  # - url: https://github.com/OP-TED/ted-rdf-docs
+  #  start_path: docs/antora 
+  #  branches: sparql
 
   ### TED Data for Reusers
-  - url: https://github.com/OP-TED/ted-bulkdownloads-docs.git
-    start_path: /
-    branches: main 
+  # - url: https://github.com/OP-TED/ted-bulkdownloads-docs.git
+  #  start_path: /
+  #  branches: main 
 
 
 urls:
