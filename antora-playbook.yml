@@ -27,7 +27,7 @@ asciidoc:
     # So, as a workaround, we store the latest version of each component in these site-wide asciidoc attributes.
     # The downside is that we have to update these attributes whenever we release a new version of a component.
     #
-    eforms_latest_version: '1.10.1'
+    eforms_latest_version: '1.10.0'
     epo_latest_version: '4.0.0'
     espd_latest_version: '3.3.0'
 
@@ -55,7 +55,7 @@ content:
 
   ### model2owl OP
   - url: https://github.com/OP-TED/ted-model2owl-docs.git
-    start_path: /
+    start_path: / 
     branches: main
     # includes boilerplate  
   
@@ -72,13 +72,13 @@ content:
 
   ### TED Semantic Web Service
   - url: https://github.com/OP-TED/ted-rdf-docs
-    start_path: docs/antora
+    start_path: docs/antora 
     branches: sparql
 
   ### TED Data for Reusers
   - url: https://github.com/OP-TED/ted-bulkdownloads-docs.git
     start_path: /
-    branches: new_main 
+    branches: main 
 
 
 urls:
@@ -92,5 +92,5 @@ ui:
     snapshot: true
   supplemental_files: ./content/supplemental-ui
 
-# git:
-  # fetch_concurrency: 1
+git:
+  fetch_concurrency: 1
