@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Working Locally :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/m2o-home/local.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/custom.css">
+    <link rel="stylesheet" href="../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://docs.ted.europa.eu">
+                <img src="../_/img/ted-logo.svg" class="logo" />
+                <span class="navbar-title">TED Developer Documentation</span>
+            </a>
+            <button class="navbar-burger" data-target="topbar-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="https://docs.ted.europa.eu">Home</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Products</a>
+  <div class="navbar-dropdown">
+      <a class="navbar-item" href="../eforms/latest/index.html">eForms SDK</a>
+      <a class="navbar-item" href="../EPO/latest/index.html">eProcurement Ontology</a>
+      <a class="navbar-item" href="../espd/latest/index.html">ESPD EDM</a>
+  </div>
+</div>
+
+
+<div class="navbar-item has-dropdown is-hoverable">
+  <a class="navbar-link" href="#">Resources</a>
+  <div class="navbar-dropdown">
+    <!-- <div class="navbar-item"><b>Publications Ofiice</b></div> -->
+    <a class="navbar-item" href="https://github.com/OP-TED/eForms-SDK">eForms SDK on Github</a>
+    <a class="navbar-item" href="https://simap.ted.europa.eu/web/simap/eforms">eForms on SIMAP</a>
+    <a class="navbar-item" href="https://github.com/eprocurementontology/eprocurementontology">eProcurement
+      Ontology</a>
+    <a class="navbar-item" href="https://github.com/espd/espd-edm">European Single Procurement Document</a>
+    <a class="navbar-item" href="https://op.europa.eu/en/web/eu-vocabularies/e-procurement/tables">eProcurement in
+      EU Vocabularies</a>
+    <hr class="navbar-divider">
+    <!-- <div class="navbar-item"><b>DG GROW</b></div>-->
+    <a class="navbar-item" href="https://ec.europa.eu/growth/single-market/public-procurement/digital/eforms_en">About
+      eForms</a>
+    <!-- <a class="navbar-item" href="https://github.com/eForms/eForms">eForms 2nd consultation</a> -->
+  </div>
+</div>
+
+<a class="navbar-item" href="https://simap.ted.europa.eu/contact">Helpdesk</a>
+
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="m2o-home" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">model2owl</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="business.html">Functional Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="technical.html">Technical Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>UML Conventions</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="uml/conceptual-model-conventions.html">UML Model Conventions</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Transformation Rules</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="transformation/uml2owl-transformation.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="transformation/transf-rules1.html">Classes and Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="transformation/transf-rules2.html">Connectors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="transformation/transf-rules3.html">Data Types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="transformation/transf-rules4.html">Descriptors</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Checkers (Validation)</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="checkers/model2owl-checkers.html">UML Convention Checking Rules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Performing Transformations</strong></span></span>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="local.html">On a local machine</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boiler.html">Using the boilerplate utility</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../eforms/latest/index.html">1.10.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.9/index.html">1.9.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.8/index.html">1.8.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.7/index.html">1.7.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.6/index.html">1.6.0</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.5/index.html">1.5.1</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.4/index.html">1.4.1</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../EPO/4.1/index.html">4.1.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../EPO/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../espd/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../espd/latest/index.html">3.3.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">model2owl</a></li>
+    <li><a href="local.html">On a local machine</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="6">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Working Locally</h1>
+<div class="sect1">
+<h2 id="_introducing_the_makefile_tool"><a class="anchor" href="#_introducing_the_makefile_tool"></a>Introducing the Makefile tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Makefile is a powerful tool that automates different commands for software projects. It provides a convenient way to define and execute various tasks, such as using source code, generating documentation, running tests, and more.</p>
+</div>
+<div class="paragraph">
+<p>All commands are executed using the Make build automation tool that needs to be installed if it is not already. Make targets sometimes require optional parameters (see example below). This project uses the default values for the parameters used in the different commands here.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># without parameters
+make install
+# with parameters
+make owl-core XMI_INPUT_FILE_PATH=/home/mypc/work/model2owl/file1.xml OUTPUT_FOLDER_PATH=./my-folder</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Set-up commands</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>get-saxon</strong> - installs saxon in a folder inside the project</p>
+</li>
+<li>
+<p><strong>get-rdflib</strong> - installs the rdflib library</p>
+</li>
+<li>
+<p><strong>get-widoco</strong> - installs saxon in a folder inside the project</p>
+</li>
+<li>
+<p><strong>install</strong> - automatically executes all the commands above</p>
+</li>
+<li>
+<p><strong>create-virtual-env</strong> - creates a virtual environment for the project</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Functional commands</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>generate-glossary</strong> - generates a glossary from the UML export (xml/xmi)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>XMI_INPUT_FILE_PATH - path to the xmi file</p>
+</li>
+<li>
+<p>OUTPUT_GLOSSARY_PATH - path to the folder that stores the output</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>generate-convention-report</strong> - generates the compliance report from the UML export (xml/xmi)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>XMI_INPUT_FILE_PATH - path to the xmi file</p>
+</li>
+<li>
+<p>OUTPUT_CONVENTION_REPORT_PATH - path to the folder that stores the output</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>owl-core</strong> - generates the lightweight ontology from the UML export (xml/xmi)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>XMI_INPUT_FILE_PATH - path to the xmi file</p>
+</li>
+<li>
+<p>OUTPUT_FOLDER_PATH - path to the folder that stores the output</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>owl-restrictions</strong> - generates the heavyweight ontology with additional axioms suitable for reasoning purposes from the UML export (xml/xmi)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>XMI_INPUT_FILE_PATH - path to the xmi file</p>
+</li>
+<li>
+<p>OUTPUT_FOLDER_PATH - path to the folder that stores the output</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>shacl</strong> - generates data shapes suitable for validation from the UML export (xml/xmi)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>XMI_INPUT_FILE_PATH - path to the xmi file</p>
+</li>
+<li>
+<p>OUTPUT_FOLDER_PATH - path to the folder that stores the output</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>generate-html-docs-from-rdf</strong> - generates html documentation using widoco from a rdf file</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WIDOCO_RDF_INPUT_FILE_PATH - path to the rdf file</p>
+</li>
+<li>
+<p>OUTPUT_FOLDER_PATH - path to the folder that stores the output</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>merge-xmi</strong> - merges xmis from specific folder</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>FIRST_XMI_TO_BE_MERGED_FILE_PATH - path to the first xmi to be merged. All xmi files need to be in the same folder as the first xmi to be merged.</p>
+</li>
+<li>
+<p>XMI_MERGED_OUTPUT_FOLDER_PATH - path to the folder that stores the output</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>convert-to-turtle</strong> - converts rdf file/files to turtle</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTOLOGY_FOLDER_PATH - path to the folder containing rdf file/files</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>convert-to-rdf</strong> - converts turtle file/files to rdf</p>
+<div class="ulist">
+<ul>
+<li>
+<p>parameters:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ONTOLOGY_FOLDER_PATH - path to the folder containing turtle file/files</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preparing_the_local_environment"><a class="anchor" href="#_preparing_the_local_environment"></a>Preparing the local environment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Prerequisites</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Make utility must be installed</p>
+</li>
+<li>
+<p>Python3 must be installed</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Steps</strong>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Clone the <a href="https://github.com/OP-TED/model2owl.git" class="bare">https://github.com/OP-TED/model2owl.git</a> repository</p>
+</li>
+<li>
+<p>Execute "make install" via terminal</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you don&#8217;t have a virtual environment set up, type "make create-virtual-env" to create a virtual environment, and then activate it by typing "source model2owl-venv/bin/activate"
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Configuration</strong>:</p>
+</div>
+<div class="paragraph">
+<p>The model2owl configuration is a collection of 4 files that should all be in the same folder:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>config-parameters.xsl</strong> - main config variables</p>
+</li>
+<li>
+<p><strong>namespaces.xml</strong> - add namespaces that are used in your UML model</p>
+</li>
+<li>
+<p><strong>umlToXsdDataTypes.xml</strong> - mapping between uml to xsd data types</p>
+</li>
+<li>
+<p><strong>xsdAndRdfDataTypes.xml</strong> - configure datatypes used</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Copy the default configuration files from the <a href="https://github.com/OP-TED/model2owl/blob/master/test/ePO-default-config">ePO-default-config folder</a> into your chosen local configuration folder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Changing configuration parameters</strong>:</p>
+</div>
+<div class="paragraph">
+<p>To change the configuration in the config-parameters.xsl,  simply change the value of the variable.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Do not change the values from the namespacePrefixes, umlDataTypesMapping, xsdAndRdfDataTypes variables as these will already work having one config folder with all config files.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When changing variables make sure you modify the element retaining the same datatype (boolean, string, list).
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>#exiting variables
+    &lt;xsl:variable name="acceptableTypesForObjectProperties"
+        select="('epo:Identifier', 'rdfs:Literal')"/&gt;
+    &lt;xsl:variable name="defaultNamespaceInterpretation" select="fn:true()"/&gt;
+#Don't change to different datatypes
+&lt;xsl:variable name="defaultNamespaceInterpretation" select="'new-value'"/&gt; ---&gt; incorrect</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the variable is a list, and you don&#8217;t need any values, just leave an empty list:
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;xsl:variable name="stereotypeValidOnAssociations" select="()"/&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Namespaces configuration</strong>:</p>
+</div>
+<div class="paragraph">
+<p>In the namespaces.xml file you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>add the namespaces that you use in UML model, and</p>
+</li>
+<li>
+<p>control which should be imported in the final output.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># to add prefix you need a name and the URI
+ &lt;prefix name="foaf" value="http://xmlns.com/foaf/0.1/"/&gt;
+# to have an import statement in the final output
+# add importURI attribute to the definition above
+ &lt;prefix name="dct" value="http://purl.org/dc/terms/" importURI="http://purl.org/dc/terms/"/&gt;
+
+#Output will have the following import statement
+&lt;owl:imports rdf:resource="http://purl.org/dc/terms/"/&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>XSD/RDF datatypes</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Use the xsdAndRdfDataTypes.xml file to define the datatypes used in the UML model.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    &lt;datatype namespace="xsd" qname="xsd:date"/&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>UML to XSD mappings</strong>:</p>
+</div>
+<div class="paragraph">
+<p>If the model uses UML datatypes, these should be mapped in the umlToXsdDataTypes.xml file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>    &lt;mapping&gt;
+        &lt;from  qname="epo:Date"/&gt;
+        &lt;to  qname="xsd:date"/&gt;
+    &lt;/mapping&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All configuration files (see above) should be in one folder. Once the folder with the desired configurations is created, the config-proxy.xsl file (found in the root directory of this project) should be changed to point to the location of the new configuration before executing any transformations.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># Change the path to the config-parameters.xsl inside the config-proxy.xsl
+# from
+ &lt;xsl:import href="test/ePO-default-config/config-parameters.xsl"/&gt;
+# to
+ &lt;xsl:import href="my-pc/user/my-config-folder/config-parameters.xsl"/&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_running_transformations"><a class="anchor" href="#_running_transformations"></a>Running transformations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After installing and creating your configuration folder, use the "make targets" command described above to transform/generate output from you XMI/XML export file. The command should be executed from the root folder of the project.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre># generate lightweight ontology from the UML export (xml/xmi)
+make owl-core XMI_INPUT_FILE_PATH=/home/mypc/work/model2owl/file1.xml OUTPUT_FOLDER_PATH=./my-folder</pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<footer class="footer">
+    <div class=columns>
+        <div>
+  <p>The projects documented in this Developer Documentation Portal are developed and managed by the TED & EU Public Procurement Unit of the Publications Office of the European Union
+  <br/>This page was built using a link:https://github.com/OP-TED/antora-eui[fork of the Antora default UI], which is licensed under the terms of the MPL-2.0 license.</p>
+</div>
+        <div>
+            <h3>This website is managed by<h3>
+                    <img src="../_/img/op-logo-with-name.svg" class="logo" />
+        </div>
+    </div>
+</footer>  </body>
+</html>
