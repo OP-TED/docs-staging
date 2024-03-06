@@ -166,9 +166,14 @@
    width: Fill 750px;
    height: Hug 33px;
    gap: 4px;
-  
 }
+.text-label-search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #515560;
 
+}
 .text-eu-tenders {
     font-family: Arial;
     font-size: 28px;
@@ -191,25 +196,30 @@
     gap: 12px;
 }
 
+.text-eu-subtext-text, .text-eu-subtext-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-family: Arial;
+    letter-spacing: 0em;
+    text-align: left;
+
+
+}
 /* formatting of "TED developer Docs" text*/
 .text-eu-subtext-text   {
     /*Property 1="default";*/
     width: Hug 163px;
     height: Hug 29px;
+
     gap: 10px;
+    margin-left:25px;
     /*linear-gradient:(0deg, #F5F5F5, #F5F5F5);*/
     border-left: 4px solid #339900;
-    display:inline-block;
-    margin-right:10px;
-    margin-bottom:10px;
-    font-family: Arial;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-left:25px;
+
     background: #F5F5F5;
     /*border-left: 6px solid #390;*/
     padding: 4px 12px;
-    color: #515560;
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
@@ -225,24 +235,22 @@
 /* formatting of "Documentation for TED developers and eSenders" text*/
 .text-eu-subtext-label {
     height: 14px;
-    font-family: Arial;
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #515560;
-    margin-bottom:10px;
-    margin-right: 10px;
     display:inline-block;
 }
-
+@media screen and (max-width: 960px) { /* adjust 960px to the point where the layout changes */
+    .text-eu-subtext-label {
+        margin-left: 25px;
+    }
+}
 /* "Documentation for TED developers and eSenders" hidden on small width screens*/
-  @media (max-width:768px) {
-            .text-eu-subtext-label {
-            display: none;
-            }
-        }
+@media (max-width:768px) {
+    .text-eu-subtext-label {
+        display: none;
+     }
+}
 
 /*green line below header*/
 .rect-green {
@@ -1016,7 +1024,6 @@ end of old navbar
         padding-right: 40px;
         font-family: inherit;
         font-size: 16px;
-        color: #515560;
         text-overflow: ellipsis;
         background-color: #fff;
         border: 1px solid #d8dadf;
@@ -1025,3 +1032,4 @@ end of old navbar
         margin-left:25px;
 
       }
+      
