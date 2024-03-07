@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/epo-wgm/notes/2020-10-13-wgm.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/custom.css">
+    <link rel="stylesheet" href="../../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../_/img/icons/favicon.ico">
+    <link rel="stylesheet" href="/styles/optional/custom.css" media="screen"/>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
+
+<!-- middle header section with EU flag and logo, full words for pc, "EU" for mobile, flexible-->
+    <div class="dd-header-container">
+       <div class="eu-part">
+            <div class="eu-emblem" style="display: inline-block;">
+                <!-- flag and logo-->
+                <div class="eu-emblem-std-en" ><a href="https://european-union.europa.eu/index_en"><span></span></a></div>
+            </div>
+            <!-- Algolia Search -->
+           <!-- icon: <img alt="" src="https://beta.tedv2.spikeseed.cloud/o/ted2-theme/images/magnifying-glass-icon.png"> -->
+           <!-- <div class="docs-search">
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search developer docs">
+                </div>
+           </div> -->
+        </div>
+
+        <!-- grey line between eu part and ted dev docs part-->
+        <div class="sep-frame">
+            <div class="rect-grey"></div>
+        </div>
+
+        <!-- ted dev docs title section under grey line-->
+        <div class="ted-dd-bar">
+            <div class="ted-dd-text-bar">
+                <div class="ted-dd-text-field"> 
+                    <div class="text-eu-tenders">EU tenders</div>
+                    <!--alternative 1: text-->
+                     <!--<div class="text-eu-subtext-text"><a href="https://docs.ted.europa.eu/home/index.html">TED Developer Docs</a></div>-->
+                    <!--alternative 2: logo-->
+                    <!--<div class="header-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png" height="48"/></a></div>-->
+                    <div class="text-label-search">
+                    <div>
+                    <div class="text-eu-subtext-text">TED Developer Docs</div>
+                    <div class="text-eu-subtext-label">Documentation for TED developers and eSenders</div>
+                    </div>
+                    <div class="navbar-item search">
+
+                    <input id="search-input" type="text" placeholder="Search the developer docs">
+
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- green line between header and body-->
+        <div class="sep-frame">
+            <div class="rect-green"></div>
+        </div>
+    </div>
+
+<div class="body">
+<div class="nav-container" data-component="epo-wgm" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">eProcurement Ontology</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>General Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/business.html">Business Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/conceptual.html">Conceptual Models</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/glossaries.html">Glossaries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/release-notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/references.html">Reference Documents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/history.html">History and Planned Developments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/versioning.html">ePO Versioning Rules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Working Group Documents</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../wider.html">Quarterly Meetings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cumulative.html">Cumulative Reports (by year)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../indiv.html">Individual Meeting Reports</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../eforms/latest/index.html">1.10.0</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.9/index.html">1.9.0</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.8/index.html">1.8.0</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.7/index.html">1.7.0</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.6/index.html">1.6.0</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.5/index.html">1.5.1</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.4/index.html">1.4.1</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../../EPO/4.1/index.html">4.1.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../../EPO/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../espd/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../espd/latest/index.html">3.3.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="_please_find_below_the_minutes_of_the_13th_of_october"><a class="anchor" href="#_please_find_below_the_minutes_of_the_13th_of_october"></a>Please find below the minutes of the 13th of October:</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Participants: Ana Aido, Paloma Arillo Aranda, Giorgia Lodi, Natalie Muric, Helder Santos, Juan Carlos Segura, Giampaolo Sellitto, and Enric Staromiejski.</p>
+</div>
+<div class="paragraph">
+<p><strong>Topic of discussion: Review of the minutes from the 6th and 8th October</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To add examples for the redundant properties between the classes representing roles</p>
+</li>
+<li>
+<p>To rephrase the WG also discussed the need for not to mix process and concept…</p>
+</li>
+<li>
+<p>Add the diagrams of the discussions.</p>
+</li>
+<li>
+<p>Add ContactPoint in the sentence agent7role behind the award decision…</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Topic of discussion: Roles and Subroles</strong></p>
+</div>
+<div class="paragraph">
+<p>The WG continued discussing the new approach on how to model the roles and subroles. From the last WG meeting, the group proposed to everis to create a diagram that clearly shows the Involvements:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ePO/tree/feature/frozen-2.0.2/implementation/test/doc/img/Award-Reification.jpg">Award Reification</a></p>
+</div>
+<div class="paragraph">
+<p>Also created a simplified version of the above diagram:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ePO/tree/feature/frozen-2.0.2/implementation/test/doc/img/awardecisioninvolvement_simplified.png">Award Decision Involvement Simplified</a></p>
+</div>
+<div class="paragraph">
+<p>The WG making use of the diagrams created, continue the discussion on the usage of the reification class. The following decisions raised from the discussion were:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The definition of AwardDecision was not correct, since it applied to the whole process instead of to particular lot or lots. The origin of this previous (misleading) definition was that we tend to see the AwarDecision as a Document. We agreed that the class "epo:AwardDecision" is to be seen as a class (data), and this class will be linked to an AwardDecisionDocument (in the future - we will add this to the mid-long-term action point list).
+The WG proposes to create 'labels' to identify issues related to 'award decision' and to 'mid-term action point' and 'long-term action point', so we do not forget addressing them timely. The minutes, too, should refer to issues particularly connected to, for example, 'award decision'. This would also allow the link, more effectively, to the diagrams and examples that contribute to explain and illustrate the issue and the decisions.</p>
+</li>
+<li>
+<p>The new definition of AwardDecision reads, thus, as follows: "Resolution of the buyer as to the result of a given Lot.". This decision has the following implications for the design and implementation of the ontology:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Recall that one procedure has always at least one Lot and may be divided into several Lots;</p>
+</li>
+<li>
+<p>One object (individual) of the class AwardDecision will have to be instantiated per winning Organisation, its Role ("Winner"), the Lots awarded to this Organisation, possibly a contact point inside the winning Organisation, and the date of the awarding;</p>
+</li>
+<li>
+<p>This AwardDecision class becomes, as a matter of fact, a 'reification' class that is based on the more generic pattern already proposed for the linking of different concepts participating in a procurement situation. The AwardDecision will be then designed as a subclass of that other generic reification class;</p>
+</li>
+<li>
+<p>The generic reification class connects, by default, the following concepts:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>One Agent (and only one)</p>
+</li>
+<li>
+<p>One Role (and only one)</p>
+</li>
+<li>
+<p>One Lot (and only one)</p>
+</li>
+<li>
+<p>Contact Point (optional)</p>
+</li>
+<li>
+<p>Period (optional)</p>
+</li>
+<li>
+<p>Activity (codelist) (optional)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>There is no need for involving the Procedure in the reification since this can be reached through the Lot.</p>
+</li>
+<li>
+<p>OP explained that the role of Buyer is currently being approached inside the Commission (DG GROW + OP) as two different 'activities', thus the relevance of connecting the generic reification class to 'Activity', too. These two activities would be 'the buyer for this particular procedure' and the 'buyer for subsequent procedures resulting from this particular procedure'; (this is still an ongoing work within COM). The role buyer will be connected to one of these two codes via the predicate "isResponsibleFor';</p>
+</li>
+<li>
+<p>This makes it necessary to connect back again the Buyer role to the AwardDecision reification since the link between Procedure and Buyer will be removed as a consequence of having the 'responsibilities' of the buyer codified inside the codelist.</p>
+</li>
+<li>
+<p>A pending task for the Working Group is to come up with a better name for the generic reification class: the term 'involvement' does not seem appropriate because not all agents are involved in a given reified situation (ASAP Action Point for the WG). This naming aspect affects also the predicates of the object properties linking the reification to its 'things'.</p>
+</li>
+<li>
+<p>Diagrams, examples, and queries to better understand the functioning of this approach can be found (here)[url] (through the issues workspace).</p>
+</li>
+<li>
+<p>Next steps related to the design and implementation of roles and subroles are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Finish reviewing the casuistry about Award Decision;</p>
+</li>
+<li>
+<p>Apply the reification pattern to other situations affecting the agent and its roles, whilst [re]considering, case per case, the naming of the reifications and their property predicates.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Action Points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To check the involves predicates in the reification about "involves" (WG)</p>
+</li>
+<li>
+<p>To discuss if the Organisation should be with "s" or "z" (WG)</p>
+</li>
+<li>
+<p>We need to create a document showing an AwardDecision (WG)</p>
+</li>
+<li>
+<p>To create a long discussion topics file on GitHub</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<style type="text/css">@import url('/documents/d/global/custom');</style>
+
+<div class="footer">
+<div class="three-columns">
+
+    <div class="col-md-12 col-lg-4">
+        <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png" height="48"/></a></div>
+        <p class="byline-footer">This website is managed by: <a class="ls-underline" href="https://op.europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">Publications Office of the European Union</span></a></p>
+
+    </div>
+
+
+    <div class="col-md-12 col-lg-4">
+
+        <h3 class="h3-footer">Need Help?</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+            <li class="li-footer"><a href="https://simap.ted.europa.eu/contact">Contact the TED Helpdesk</a></li>
+        </ul>
+
+        <h3 class="h3-footer">Follow us</h3>
+        <ul class="ul-footer">
+            <li>
+                <a href="https://twitter.com/eulawdatapubs"> <img src="../../_/img/twitter.svg" class="icon-footer"/><span>Twitter</span></a>
+                <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img src="../../_/img/youtube.svg" class="icon-footer-2nd"/><span>YouTube</span></a>
+            </li>
+        </ul>
+
+        <h3 class="h3-footer">Legal</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/legal-notices/accessibility-statement">Accessibility</a></li>
+        </ul>
+
+    </div>
+
+    <div class="col-md-12 col-lg-4">
+
+        <h3 class="h3-footer">About us</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/about-publication-office-of-the-european-union">Our mission, vision, and values</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/general-publications/">Newsletter</a></li>
+        </ul>
+
+        <h3 class="h3-footer">Other services</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+            <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+            <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+            <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="three-columns">
+    <div class="col-md-12 col-lg-4">
+        <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+
+        <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union" class="ls-op" /></a></div>
+        <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a></p>
+
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <h3 class="h3-footer">Contact the EU</h3>
+
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other Telephone options</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via our contact forms</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of the EU centres</a></li>
+
+        </ul>
+
+        <h3 class="h3-footer">Social Media</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+
+        </ul>
+
+        <h3 class="h3-footer">Legal</h3>
+
+        <ul class="ul-footer">
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy Policy</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
+        </ul>
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <h3 class="h3-footer">EU institutions</h3>
+
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
+            <li class="li-footer"><a href="https://www.consilium.europa.eu/en/european-council/">European Council</a></li>
+            <li class="li-footer"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a></li>
+            <li class="li-footer"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
+            <li class="li-footer"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the European Union (CJEU)</a></li>
+            <li class="li-footer"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank (ECB)</a></li>
+            <li class="li-footer"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
+            <li class="li-footer"><a href="https://www.eeas.europa.eu/_en">European External Action Services (EEAS)</a></li>
+            <li class="li-footer"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee (EESC)</a></li>
+            <li class="li-footer"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a></li>
+            <li class="li-footer"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
+            <li class="li-footer"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
+            <li class="li-footer"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor (EDPS)</a></li>
+            <li class="li-footer"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
+            <li class="li-footer"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/home">Publications Office of the European Union</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a></li>
+        </ul>
+    </div>
+
+    <script>
+      ECL.autoInit();
+    </script>
+</div>
+</div>  </body>
+</html>
