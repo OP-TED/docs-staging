@@ -15,6 +15,9 @@
     width: 100%
     }
 
+.body {
+    padding-top: none;
+}    
 
 /*New TED dev docs header css Feb 2024 */
 .dd-header-container {
