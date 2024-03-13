@@ -16,7 +16,9 @@
     }
 
 .body {
-    padding-top: none;
+    padding: 0;
+    margin: 0;
+
 }    
 
 /*New TED dev docs header css Feb 2024 */
