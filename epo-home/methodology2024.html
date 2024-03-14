@@ -243,7 +243,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>#Image</p>
+<p><em>Image Source: <a href="https://lot.linkeddata.es/" class="bare">https://lot.linkeddata.es/</a></em></p>
 </div>
 <div class="paragraph">
 <p>The above diagram demonstrates that the approach is cyclical and includes the following high-level activities:</p>
@@ -264,13 +264,10 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Each activity has a more detailed internal description.</p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_requirement_specifications"><a class="anchor" href="#_requirement_specifications"></a>Requirement Specifications</h2>
+<h2 id="_requirements_specification"><a class="anchor" href="#_requirements_specification"></a>Requirements Specification</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The Ontology Requirements Specification activity refers to the collection of the requirements the ontology should fulfil, such as:</p>
@@ -289,7 +286,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>In the Working Group, ontology developers, domain experts, and ontology users go through a process of requirement elecitation, requirement capture, and requirement documentation together, as illustrated in the detailed workflow below:</p>
+<p>Collectively in the Working Group, ontology developers, domain experts, and ontology users go through a process of requirement elecitation, requirement capture, and requirement documentation, as illustrated in the detailed workflow below:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -297,29 +294,30 @@
 </div>
 </div>
 <div class="paragraph">
+<p><em>Image Source: <a href="https://lot.linkeddata.es/" class="bare">https://lot.linkeddata.es/</a></em></p>
+</div>
+<div class="paragraph">
 <p>The outputs of the requirements specification step are:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Use case specifications that provide a view of the ontology&#8217;s potential use. They describe the desired situations to be reached with the data described by the vocabulary. Their objective is to guide the collecting of the requirements.</p>
+<p>Use case specifications that provide a view of the ontology&#8217;s potential use. They describe the desired situations to be reached with the data described by the vocabulary. Their objective is to guide the collecting of the requirements.<br>
+The specification of a use case consists of the narration of a scenario, in which one or several actors intervene, and the interactions necessary to obtain an expected result or benefit.</p>
+</li>
+<li>
+<p>Data documentation and examples that provide the ontology development team with the necessary documentation about the domain to be modelled. The documentation could include datasets, regulations, standards, data formats, APIs specifications, database schemas, etc.</p>
+</li>
+<li>
+<p>The Ontology purpose and scope specification document</p>
+</li>
+<li>
+<p>Functional ontology requirements that contain, among others, Competency questions (CQs) and Natural language statements, where each requirement unambiguously defines a need that must be included in the ontology.</p>
+</li>
+<li>
+<p>The Ontology Requirements Specification Document (ORSD), which is the final artifact produced. This contains all the functional and non-functional requirements identified in the process and the information associated to them. LOT provides a template for the ORSD.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>The specification of a use case consists of the narration of a scenario, in which one or several actors intervene, and the interactions necessary to obtain an expected result or benefit.</p>
-</div>
-<div class="paragraph">
-<p>●	Data documentation and examples that provide the ontology development team with the necessary documentation about the domain to be modelled. The documentation could include datasets, regulations, standards, data formats, APIs specifications, database schemas, etc.</p>
-</div>
-<div class="paragraph">
-<p>●	The Ontology purpose and scope specification document</p>
-</div>
-<div class="paragraph">
-<p>●	Functional ontology requirements that contain, among others, Competency questions (CQs) and Natural language statements, where each requirement unambiguously defines a need that must be included in the ontology.</p>
-</div>
-<div class="paragraph">
-<p>●	The Ontology Requirements Specification Document (ORSD), which is the final artifact produced. This contains all the functional and non-functional requirements identified in the process and the information associated to them. LOT provides a template for the ORSD.</p>
 </div>
 </div>
 </div>
@@ -327,10 +325,10 @@
 <h2 id="_ontology_implementation"><a class="anchor" href="#_ontology_implementation"></a>Ontology Implementation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ontology is implemented as a <a href="https://www.uml.org/">UML conceptual model</a>, which is automatically transformed into formal representations, namely <a href="https://www.w3.org/TR/owl2-overview/">OWL2</a> and <a href="https://www.w3.org/TR/shacl/">SHACL</a>. The rationale for this is explained in the ePO architecture specification  and in the SEMIC style guide.</p>
+<p>The ontology is implemented as a <a href="https://www.uml.org/">UML conceptual model</a>, which is automatically transformed into formal representations, namely <a href="https://www.w3.org/TR/owl2-overview/">OWL2</a> and <a href="https://www.w3.org/TR/shacl/">SHACL</a>. The rationale for this is explained in the <a href="ePO_Arch_Design.html" class="xref page">eProcurement ontology architecture and formalisation specifications</a> and in the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html" class="bare">https://semiceu.github.io/style-guide/1.0.0/index.html</a>[SEMIC style guid.</p>
 </div>
 <div class="paragraph">
-<p>The workflow of this stage, depicted below, different from the one provided in the LOT.</p>
+<p>The workflow of this stage, depicted below, is different from the one provided in the LOT.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -338,7 +336,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>_Image source:</p>
+<p><em>Image Source: <a href="https://lot.linkeddata.es/" class="bare">https://lot.linkeddata.es/</a></em></p>
 </div>
 <div class="paragraph">
 <p>Conceptual model proposal activity results in an (early stage) conceptual model expressed in UML that respects the ePO UML conventions . In this step, the ontology editors encode the requirements as UML class diagrams.</p>
@@ -358,14 +356,14 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Validation that addresses the</p>
+<p>Validation, that addresses the following:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Checking the conformance of the conceptual model to the UML conventions;</p>
+<p>Conformance of the conceptual model to the UML conventions;</p>
 </li>
 <li>
-<p>Formal correctness checks: is the OWL and SHACL code correct?</p>
+<p>Formal correctness: is the OWL and SHACL code correct?</p>
 </li>
 <li>
 <p>Glossary completeness: do we have all the definitions for classes and properties?</p>
@@ -374,7 +372,7 @@
 <p>Detection of bad practices or suboptimal modelling choices</p>
 </li>
 <li>
-<p>Logical consistency checking</p>
+<p>Logical consistency</p>
 </li>
 </ul>
 </div>
@@ -398,6 +396,9 @@
 </div>
 </div>
 <div class="paragraph">
+<p><em>Image Source: <a href="https://lot.linkeddata.es/" class="bare">https://lot.linkeddata.es/</a></em></p>
+</div>
+<div class="paragraph">
 <p>Publication starts with a proposed release candidate. Once the ontology developers have implemented and evaluated the ontology, the next task is to decide whether the current version will be published on the Web. A version considered worthy of publication is stable, verified, and complete with regard to the established release objectives and coverage. The <a href="versioning.html" class="xref page">ePO Versioning methodology and principles</a> are published elsewhere.</p>
 </div>
 <div class="paragraph">
@@ -407,7 +408,7 @@
 <p>The documentation is prepared in accordance with the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> (Findable, Accessible, Interoperable and Reusable).</p>
 </div>
 <div class="paragraph">
-<p>Once the documentation of the ontology has been generated, it is published online. The ontology is published on the Web following the <a href="https://www.bing.com/search?q=w3c+for+publishing+vocabularies+on+the+web&amp;gs_lcrp=EgZjaHJvbWUqBwgAEEUYwgMyBwgAEEUYwgMyBwgBEEUYwgMyBwgCEEUYwgMyBwgDEEUYwgMyBwgEEEUYwgMyBwgFEEUYwgMyBwgGEEUYwgMyBwgHEEUYwgPSAQkyMTM3M2owajSoAgiwAgE&amp;FORM=ANAB01&amp;PC=U531">practices provided by the W3C for publishing vocabularies on the Web</a>. It is accessible via its URI as a file in a formal language and as human-readable documentation using content negotiation.</p>
+<p>Once the documentation of the ontology has been generated, it is published online. The ontology is published on the Web following the <a href="https://www.w3.org/2013/dwbp/wiki/BP_Data_Vocabularies">practices provided by the W3C for publishing vocabularies on the Web</a>. It is accessible via its URI as a file in a formal language and as human-readable documentation using content negotiation.</p>
 </div>
 </div>
 </div>
@@ -423,6 +424,9 @@
 </div>
 </div>
 <div class="paragraph">
+<p><em>Image Source: <a href="https://lot.linkeddata.es/" class="bare">https://lot.linkeddata.es/</a></em></p>
+</div>
+<div class="paragraph">
 <p>Any ePO bugs detected are reported and documented via the <a href="https://github.com/OP-TED/epo-docs/issues">ePO GitHub Issues</a>.</p>
 </div>
 <div class="paragraph">
@@ -436,7 +440,7 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><em>Image Source: <a href="https://lot.linkeddata.es/" class="bare">https://lot.linkeddata.es/</a></em></p>
+<p><em>Images: <a href="https://lot.linkeddata.es/" class="bare">https://lot.linkeddata.es/</a></em></p>
 </li>
 <li>
 <p><em>Poveda-Villalón, M., Fernández-Izquierdo, A., Fernández-López, M., &amp; García-Castro, R. (2022). LOT: An industrial oriented ontology engineering framework. Engineering Applications of Artificial Intelligence, 111, 104755. <a href="https://doi.org/10.1016/j.engappai.2022.104755" class="bare">https://doi.org/10.1016/j.engappai.2022.104755</a></em></p>
