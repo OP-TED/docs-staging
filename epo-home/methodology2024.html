@@ -101,6 +101,18 @@
     <a class="nav-link" href="../EPO/latest/business.html">Business Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="stories.html">User Stories and Natural Language Statements</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stories_eAccess.html">eAccess (ESPD Request)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="stories_eSubmission.html">eSubmission (ESPD Response)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../EPO/latest/conceptual.html">Conceptual Models</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -119,19 +131,7 @@
     <a class="nav-link" href="history.html">History and Planned Developments</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="methodology2024.html">ePO Methodology</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="stories.html">User Stories and Natural Language Statements</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stories_eAccess.html">eAccess (ESPD Request)</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="stories_eSubmission.html">eSubmission (ESPD Response)</a>
-  </li>
-</ul>
+    <a class="nav-link" href="methodology2024.html">Methodology</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="versioning.html">ePO Versioning Rules</a>
@@ -230,7 +230,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">eProcurement Ontology</a></li>
-    <li><a href="methodology2024.html">ePO Methodology</a></li>
+    <li><a href="methodology2024.html">Methodology</a></li>
   </ul>
 </nav>
 </div>
@@ -397,7 +397,7 @@ The specification of a use case consists of the narration of a scenario, in whic
 <h2 id="_ontology_publication"><a class="anchor" href="#_ontology_publication"></a>Ontology Publication</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ontology publication stage is very similar to the one defined in the LOT methodology. The workflow is presented in the figure below. The main difference is that the documentation is maintained in <a href="https://docs.asciidoctor.org/asciidoc/latest/">AsciiDoc</a> (source) format and then transformed into HTML format.</p>
+<p>The ontology publication stage is very similar to the one defined in the LOT methodology. The workflow is presented in the figure below.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -414,10 +414,10 @@ The specification of a use case consists of the narration of a scenario, in whic
 <p>In the Ontology documentation step detailed in the LOT methodology, the ontology development team (together with the domain experts) generate the ontology documentation, using the ontology code and potentially other artefacts as input. These include glossaries, conceptual model diagram documentation, requirements specification, tests, and examples.</p>
 </div>
 <div class="paragraph">
-<p>The documentation is prepared in accordance with the <a href="https://www.go-fair.org/fair-principles/">FAIR principles</a> (Findable, Accessible, Interoperable and Reusable).</p>
+<p>The ontology is published on the Web following the <a href="https://www.w3.org/2013/dwbp/wiki/BP_Data_Vocabularies">practices provided by the W3C for publishing vocabularies on the Web</a>. It is accessible via its URI as a file in a formal language and as human-readable documentation using content negotiation.</p>
 </div>
 <div class="paragraph">
-<p>Once the documentation of the ontology has been generated, it is published online. The ontology is published on the Web following the <a href="https://www.w3.org/2013/dwbp/wiki/BP_Data_Vocabularies">practices provided by the W3C for publishing vocabularies on the Web</a>. It is accessible via its URI as a file in a formal language and as human-readable documentation using content negotiation.</p>
+<p>The documentation of the ontology is maintained in <a href="https://docs.asciidoctor.org/asciidoc/latest/">AsciiDoc</a> (source) format and then transformed into HTML format. Once it has been generated, it is published online.</p>
 </div>
 </div>
 </div>
