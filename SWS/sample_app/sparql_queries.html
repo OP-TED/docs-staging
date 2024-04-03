@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SPARQL Queries :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/SWS/sample_app/sparql_queries.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/custom.css">
+    <link rel="stylesheet" href="../../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../_/img/icons/favicon.ico">
+    <link rel="stylesheet" href="/styles/optional/custom.css" media="screen"/>
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
+
+<!-- middle header section with EU flag and logo, full words for pc, "EU" for mobile, flexible-->
+    <div class="dd-header-container">
+       <div class="eu-part">
+            <div class="eu-emblem" style="display: inline-block;">
+                <!-- flag and logo-->
+                <div class="eu-emblem-std-en" ><a href="https://european-union.europa.eu/index_en"><span></span></a></div>
+            </div>
+            <!-- Algolia Search -->
+           <!-- icon: <img alt="" src="https://beta.tedv2.spikeseed.cloud/o/ted2-theme/images/magnifying-glass-icon.png"> -->
+           <!-- <div class="docs-search">
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search developer docs">
+                </div>
+           </div> -->
+        </div>
+
+        <!-- grey line between eu part and ted dev docs part-->
+        <div class="sep-frame">
+            <div class="rect-grey"></div>
+        </div>
+
+        <!-- ted dev docs title section under grey line-->
+        <div class="ted-dd-bar">
+            <div class="ted-dd-text-bar">
+                <div class="ted-dd-text-field"> 
+                    <div class="text-eu-tenders">EU tenders</div>
+                    <!--alternative 1: text-->
+                     <!--<div class="text-eu-subtext-text"><a href="https://docs.ted.europa.eu/home/index.html">TED Developer Docs</a></div>-->
+                    <!--alternative 2: logo-->
+                    <!--<div class="header-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png" height="48"/></a></div>-->
+                    <div class="text-label-search">
+                    <div>
+                    <div class="text-eu-subtext-text">TED Developer Docs</div>
+                    <div class="text-eu-subtext-label">Documentation for TED developers and eSenders</div>
+                    </div>
+                    <div class="navbar-item search">
+
+                    <input id="search-input" type="text" placeholder="Search the developer docs">
+
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- green line between header and body-->
+        <div class="sep-frame">
+            <div class="rect-green"></div>
+        </div>
+    </div>
+
+<div class="body">
+<div class="nav-container" data-component="SWS" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">TED Semantic Web Service</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../audience.html">Target Audience</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Mapping suite contents</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../genref.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/methodology.html">Methodology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/repository-structure.html">Repository structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/index.html">Mapping suites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/mapping-suite-structure.html">Mapping suite package structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/code-list-resources.html">Code list mappings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/preparing-test-data.html">Data samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/toolchain.html">Toolchain</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reusing semantic web service artefacts</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sa_glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="sparql_queries.html">SPARQL Queries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ms_excel.html">MS Excel</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jupyter_notebook_r.html">Jupyter Notebook - R</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="jupyter_notebook_python.html">Jupyter Notebook - Python</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../eforms/latest/index.html">1.10</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.9/index.html">1.9</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.8/index.html">1.8</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.7/index.html">1.7</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.6/index.html">1.6</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.5/index.html">1.5</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.4/index.html">1.4</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../../EPO/4.1/index.html">4.1.0-rc.2</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../../EPO/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../espd/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../espd/latest/index.html">3.3.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">TED Semantic Web Service</a></li>
+    <li><a href="sparql_queries.html">SPARQL Queries</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="6">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">SPARQL Queries</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the context of the TED-SWS, SPARQL queries can be used to query  notices data published in RDF by the Publications Office.  These queries can be made on the
+<a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL end point</a> available on EU Vocabularies.</p>
+</div>
+<div class="paragraph">
+<p>SPARQL stands for "SPARQL Protocol and RDF Query Language". SPARQL queries retrieve and manipulate data stored in RDF (Resource Description Framework) format.  It allows users to write complex queries to retrieve specific information from RDF datasets.</p>
+</div>
+<div class="paragraph">
+<p>The data available covers Contract Award Notices published from the 28/08/2023 onwards. Data on eForm Result Notices are not yet available.</p>
+</div>
+<div class="paragraph">
+<p>A query is submitted to the <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL end point</a> by replacing the text highlighted below in blue in the Query Text box below with the desired query:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql.png" alt="SPARQL End Point">
+</div>
+<div class="title">Figure 1. End point user interface</div>
+</div>
+<div class="paragraph">
+<p>The format of the result can be changed using the drop-down box of the Results format.</p>
+</div>
+<div class="paragraph">
+<p>Once the query is in place, and the Results format chosen, the query can be run by pressing “Run Query”.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_query_1_a_count_of_notices_per_buyer_published_on_a_given_date"><a class="anchor" href="#_query_1_a_count_of_notices_per_buyer_published_on_a_given_date"></a>Query 1: A count of notices per buyer published on a given date</h3>
+<div class="paragraph">
+<p>This query returns a count of the notices published per buyer on a specified date, ordered by count descending. The data returned are the date, buyer country, buyer name, number of notices.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_code"><a class="anchor" href="#_query_code"></a>Query Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT DISTINCT
+?Date
+?BuyerCountry
+(COALESCE(?BuyerLegalName_en, ?BuyerLegalName_fr, ?BuyerLegalName) AS ?BuyerLegalName)
+(COUNT ( DISTINCT ?OJSNumber) as ?NumberOfNotices)
+
+WHERE {
+
+VALUES (?Date) {("20230905")}
+
+?Notice epo:hasPublicationDate ?Date .
+?Notice epo:hasID/epo:hasIdentifierValue ?OJSNumber.
+
+?Notice epo:announcesRole ?Agent .
+?Agent a epo:Buyer.
+?Agent epo:playedBy ?Organization .
+?Organization owl:sameAs ?SameAsOrganization.
+
+?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?BuyerCountryCode .
+bind (replace(str(?BuyerCountryCode),"(^.*[/])(.*)$","$2") as ?BuyerCountry)
+
+OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?BuyerLegalName_en.
+      FILTER(LANG(?BuyerLegalName_en) = 'en')
+    }
+OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?BuyerLegalName_fr.
+      FILTER(LANG(?BuyerLegalName_fr) = 'fr')
+ }
+OPTIONAL {
+       ?SameAsOrganization epo:hasLegalName ?BuyerLegalName.
+}
+
+}
+ORDER BY DESC(?NumberOfNotices) ASC(?BuyerLegalName)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_returned"><a class="anchor" href="#_data_returned"></a>Data  Returned</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql/Q1.png" alt="Q1">
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_query_2_contracts_awarded_per_buyer_on_a_specific_date"><a class="anchor" href="#_query_2_contracts_awarded_per_buyer_on_a_specific_date"></a>Query 2: Contracts awarded per buyer on a specific date</h3>
+<div class="paragraph">
+<p>This query returns data on the contracts awarded on a specific date ordered by contracts awarded, descending. Data returned are date, ojs number, the buyer country, the buyer name, and the count of contracts awarded.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_code_2"><a class="anchor" href="#_query_code_2"></a>Query Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT DISTINCT
+?Date
+?OJSNumber
+?BuyerCountry
+
+(COALESCE(?BuyerLegalName_en, ?BuyerLegalName_fr, ?BuyerLegalName) AS ?BuyerLegalName)
+
+WHERE {
+
+VALUES (?Date) {("20230905")}
+
+?Notice epo:hasPublicationDate ?Date .
+?Notice epo:hasID/epo:hasIdentifierValue ?OJSNumber.
+
+?Notice epo:announcesRole ?Agent .
+?Agent a epo:Buyer.
+?Agent epo:playedBy ?Organization .
+?Organization owl:sameAs ?SameAsOrganization.
+
+?SameAsOrganization epo:hasLegalName ?BuyerLegalName.
+?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?BuyerCountryCode .
+bind (replace(str(?BuyerCountryCode),"(^.*[/])(.*)$","$2") as ?BuyerCountry)
+
+OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?BuyerLegalName_en.
+      FILTER(LANG(?BuyerLegalName_en) = 'en')
+}
+OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?BuyerLegalName_fr.
+      FILTER(LANG(?BuyerLegalName_fr) = 'fr')
+}
+OPTIONAL {
+        ?SameAsOrganization epo:hasLegalName ?BuyerLegalName.
+}
+}
+ORDER BY DESC(?BuyerLegalName)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_returned_2"><a class="anchor" href="#_data_returned_2"></a>Data  Returned</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql/Q2.png" alt="Q2">
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_query_3_the_values_of_contract_award_notices_published_on_a_specific_date_by_currency_and_then_value"><a class="anchor" href="#_query_3_the_values_of_contract_award_notices_published_on_a_specific_date_by_currency_and_then_value"></a>Query 3: The values of contract award notices published on a specific date by currency and then value.</h3>
+<div class="paragraph">
+<p>This query returns the contracts awarded on a specific date in descending order of value per currency.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_code_3"><a class="anchor" href="#_query_code_3"></a>Query Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT DISTINCT
+?Date
+?OJSNumber
+?Lot
+?WinnerLegalName_en
+?WinnerLegalName_fr
+(COALESCE(?WinnerLegalName_en, ?WinnerLegalName_fr, ?WinnerLegalName) AS ?WinnerLegalName)
+?WinnerCountry
+?Lot_AwardedValue
+?Currency
+
+WHERE {
+
+ VALUES (?Date ) {("20230905")}
+
+?Notice epo:hasPublicationDate ?Date ;
+        epo:hasID/epo:hasIdentifierValue ?OJSNumber ;
+        epo:announcesContract/epo:includesLot ?Lot .
+
+?LotAwardOutcome epo:describesLot ?Lot ;
+                 epo:comprisesTenderAwardOutcome/epo:indicatesAwardOfLotToWinner ?Winner;
+                 epo:hasAwardedValue ?LotAwardedValueURI .
+
+?Winner epo:playedBy ?Organization .
+?Organization owl:sameAs ?SameAsOrganization.
+?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode .
+  bind (replace(str(?WinnerCountryCode),"(^.*[/])(.*)$","$2") as ?WinnerCountry)
+
+?SameAsOrganization epo:hasLegalName ?WinnerLegalName.
+OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?WinnerLegalName_en.
+      FILTER(LANG(?WinnerLegalName_en) = 'en')
+}
+OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?WinnerLegalName_fr.
+      FILTER(LANG(?WinnerLegalName_fr) = 'fr')
+}
+OPTIONAL {
+        ?SameAsOrganization epo:hasLegalName ?WinnerLegalName.
+}
+
+?LotAwardedValueURI epo:hasAmountValue ?LotAwardedValue ;
+                    epo:hasCurrency ?LotAwardedValueCurrency.
+bind( FLOOR(?LotAwardedValue) as ?Lot_AwardedValue).
+bind (replace(str(?LotAwardedValueCurrency),"(^.*[/])(.*)$","$2") as ?Currency)
+
+}
+ORDER BY ASC(?LotAwardedValueCurrency) DESC(?LotAwardedValue)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_returned_3"><a class="anchor" href="#_data_returned_3"></a>Data  Returned</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql/Q3.png" alt="Q3">
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_query_4_count_of_notices_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"><a class="anchor" href="#_query_4_count_of_notices_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"></a>Query 4: Count of notices awarded on a specific date where the economic operator foresees subcontracting</h3>
+<div class="paragraph">
+<p>This query returns the count of the winning economic operator where the operator foresees subcontracting to other organisations. The data is displayed as a simple count.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_code_4"><a class="anchor" href="#_query_code_4"></a>Query Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+
+SELECT COUNT(DISTINCT ?Tender) as ?NrOfTenders
+
+WHERE {
+
+   VALUES (?Date ) {("20230905")}
+
+   ?Notice epo:hasPublicationDate ?Date .
+   ?Notice epo:refersToLot ?Lot .
+   ?Tender epo:isSubmittedForLot ?Lot .
+   ?Tender epo:foreseesSubcontracting ?Subcontrating .
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_returned_4"><a class="anchor" href="#_data_returned_4"></a>Data  Returned</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql/Q4.png" alt="Q4">
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_query_5_contracts_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"><a class="anchor" href="#_query_5_contracts_awarded_on_a_specific_date_where_the_economic_operator_foresees_subcontracting"></a>Query 5: Contracts awarded on a specific date where the economic operator foresees subcontracting</h3>
+<div class="paragraph">
+<p>This query returns a list of the winning economic operators where the operator foresees subcontracting to other organisations. The data returned is the date, the OJS number, the notice lot, and "forsees subcontracting". This last field filters the notices for those foreseeing subcontracting only.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_code_5"><a class="anchor" href="#_query_code_5"></a>Query Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+
+SELECT DISTINCT
+?Date
+?OJSNumber
+?Notice_Lot
+?Forsees_subcontracting
+
+WHERE {
+
+   VALUES (?Date ) {("20230905")}
+
+   ?Notice epo:hasPublicationDate ?Date.
+   ?Notice  epo:hasID/epo:hasIdentifierValue ?OJSNumber.
+   ?Notice epo:refersToLot ?Lot .
+   ?Tender epo:isSubmittedForLot ?Lot .
+   OPTIONAL{?Tender epo:foreseesSubcontracting ?SC .}
+
+bind (replace(str(?Lot),"http://data.europa.eu/a4g/resource/id_","") as ?Notice_Lot)
+bind (replace(str(?SC),"http://data.europa.eu/a4g/resource/id_","") as ?Forsees_subcontracting)
+FILTER (?Forsees_subcontracting != "" )
+}
+ORDER BY ASC(?OJSNumber) ASC(?Lot)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_returned_5"><a class="anchor" href="#_data_returned_5"></a>Data  Returned</h3>
+<div class="paragraph">
+<p>(To enlarge the image, right-click on it and choose "Open image in new tab")</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql/Q5.png" alt="Q5">
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_query_6_the_number_of_economic_operators_awarded_contracts_on_a_specific_date_per_country_that_are_smes"><a class="anchor" href="#_query_6_the_number_of_economic_operators_awarded_contracts_on_a_specific_date_per_country_that_are_smes"></a>Query 6: The number of economic operators awarded contracts on a specific date per country that are SMEs</h3>
+<div class="paragraph">
+<p>The data returned are the country codes, and the count of awarded contracts per country displayed by count, descending.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_code_6"><a class="anchor" href="#_query_code_6"></a>Query Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT
+?WinnerCountry
+(COUNT( DISTINCT ?WinnerLegalName) as ?NrOfSmeWinners)
+
+WHERE {
+SELECT
+?WinnerCountry
+(COALESCE(?WinnerLegalName_en, ?WinnerLegalName_fr, ?WinnerLegalName) AS ?WinnerLegalName)
+
+    WHERE {
+
+    VALUES (?Date ?Business_Size) {
+    (
+    "20230905"
+    &lt;http://publications.europa.eu/resource/authority/economic-operator-size/sme&gt;
+    )
+    }
+
+    ?Notice epo:hasPublicationDate ?Date .
+
+    ?Notice epo:announcesRole ?Agent .
+    ?Agent a epo:Winner.
+    ?Agent epo:playedBy ?Organization .
+    ?Organization owl:sameAs ?SameAsOrganization.
+
+    ?SameAsOrganization epo:hasBusinessSize ?Business_Size .
+    ?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode .
+     bind (replace(str(?WinnerCountryCode),"(^.*[/])(.*)$","$2") as ?WinnerCountry)
+
+     OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?WinnerLegalName_en.
+      FILTER(LANG(?WinnerLegalName_en) = 'en')
+    }
+    OPTIONAL {
+      ?SameAsOrganization epo:hasLegalName ?WinnerLegalName_fr.
+      FILTER(LANG(?WinnerLegalName_fr) = 'fr')
+    }
+    OPTIONAL {
+       ?SameAsOrganization epo:hasLegalName ?WinnerLegalName.
+    }
+    }
+}
+ORDER BY DESC (?NrOfSmeWinners)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_returned_6"><a class="anchor" href="#_data_returned_6"></a>Data  Returned</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql/Q6.png" alt="Q6">
+</div>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_query_7_the_list_of_economic_operators_awarded_contracts_on_a_specific_date_showing_which_are_smes"><a class="anchor" href="#_query_7_the_list_of_economic_operators_awarded_contracts_on_a_specific_date_showing_which_are_smes"></a>Query 7: The list of economic operators awarded contracts on a specific date showing which are SMEs</h3>
+<div class="paragraph">
+<p>The data returned are data, ojs-number, operator name, operator country, and business size displayed in alphabetic order by country.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_query_code_7"><a class="anchor" href="#_query_code_7"></a>Query Code</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+
+SELECT DISTINCT
+?Date
+?OJSNumber
+?Organization
+?SameAsOrganization
+?WinnerLegalName_en
+?WinnerLegalName_fr
+(COALESCE(?WinnerLegalName_en, ?WinnerLegalName_fr, ?WinnerLegalName) AS ?WinnerLegalName)
+?WinnerCountry
+?BusinessSize
+
+WHERE {
+
+VALUES (?Date ) {("20230905")}
+
+?Notice epo:hasPublicationDate ?Date .
+?Notice epo:hasID/epo:hasIdentifierValue ?OJSNumber.
+
+?Notice epo:announcesRole ?Agent .
+?Agent a epo:Winner.
+?Agent epo:playedBy ?Organization .
+?Organization owl:sameAs ?SameAsOrganization.
+
+ ?SameAsOrganization cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode .
+ bind (replace(str(?WinnerCountryCode),"(^.*[/])(.*)$","$2") as ?WinnerCountry)
+
+OPTIONAL {
+?SameAsOrganization epo:hasLegalName ?WinnerLegalName_en.
+FILTER(LANG(?WinnerLegalName_en) = 'en')
+}
+OPTIONAL {
+?SameAsOrganization epo:hasLegalName ?WinnerLegalName_fr.
+FILTER(LANG(?WinnerLegalName_fr) = 'fr')
+}
+OPTIONAL {
+?SameAsOrganization epo:hasLegalName ?WinnerLegalName.
+}
+
+OPTIONAL {
+?SameAsOrganization epo:hasBusinessSize ?Business_Size .
+bind (replace(str(?Business_Size),"(^.*[/])(.*)$","$2") as ?BusinessSize)
+}
+
+}
+ORDER BY ASC (?WinnerCountry) DESC (?WinnerLegalName)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_returned_7"><a class="anchor" href="#_data_returned_7"></a>Data  Returned</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sparql/Q7.png" alt="Q7">
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>Any comments on the documentation?</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<style type="text/css">@import url('/documents/d/global/custom');</style>
+
+<div class="footer">
+<div class="three-columns">
+
+    <div class="col-md-12 col-lg-4">
+        <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png" height="48"/></a></div>
+        <p class="byline-footer">This website is managed by: <a class="ls-underline" href="https://op.europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">Publications Office of the European Union</span></a></p>
+
+    </div>
+
+
+    <div class="col-md-12 col-lg-4">
+
+        <h3 class="h3-footer">Need Help?</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+            <li class="li-footer"><a href="https://simap.ted.europa.eu/contact">Contact the TED Helpdesk</a></li>
+        </ul>
+
+        <h3 class="h3-footer">Follow us</h3>
+        <ul class="ul-footer">
+            <li>
+                <a href="https://twitter.com/eulawdatapubs"> <img src="../../_/img/twitter.svg" class="icon-footer"/><span>Twitter</span></a>
+                <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img src="../../_/img/youtube.svg" class="icon-footer-2nd"/><span>YouTube</span></a>
+            </li>
+        </ul>
+
+        <h3 class="h3-footer">Legal</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/legal-notices/accessibility-statement">Accessibility</a></li>
+        </ul>
+
+    </div>
+
+    <div class="col-md-12 col-lg-4">
+
+        <h3 class="h3-footer">About us</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/about-publication-office-of-the-european-union">Our mission, vision, and values</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/general-publications/">Newsletter</a></li>
+        </ul>
+
+        <h3 class="h3-footer">Other services</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+            <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+            <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+            <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="three-columns">
+    <div class="col-md-12 col-lg-4">
+        <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+
+        <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union" class="ls-op" /></a></div>
+        <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a></p>
+
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <h3 class="h3-footer">Contact the EU</h3>
+
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other Telephone options</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via our contact forms</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of the EU centres</a></li>
+
+        </ul>
+
+        <h3 class="h3-footer">Social Media</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+
+        </ul>
+
+        <h3 class="h3-footer">Legal</h3>
+
+        <ul class="ul-footer">
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy Policy</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
+        </ul>
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <h3 class="h3-footer">EU institutions</h3>
+
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
+            <li class="li-footer"><a href="https://www.consilium.europa.eu/en/european-council/">European Council</a></li>
+            <li class="li-footer"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a></li>
+            <li class="li-footer"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
+            <li class="li-footer"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the European Union (CJEU)</a></li>
+            <li class="li-footer"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank (ECB)</a></li>
+            <li class="li-footer"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
+            <li class="li-footer"><a href="https://www.eeas.europa.eu/_en">European External Action Services (EEAS)</a></li>
+            <li class="li-footer"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee (EESC)</a></li>
+            <li class="li-footer"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a></li>
+            <li class="li-footer"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
+            <li class="li-footer"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
+            <li class="li-footer"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor (EDPS)</a></li>
+            <li class="li-footer"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
+            <li class="li-footer"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/home">Publications Office of the European Union</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a></li>
+        </ul>
+    </div>
+
+    <script>
+      ECL.autoInit();
+    </script>
+</div>
+</div>  </body>
+</html>
