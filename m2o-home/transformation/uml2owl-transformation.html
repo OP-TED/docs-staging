@@ -221,10 +221,10 @@
 <h2 id="sec:introduction"><a class="anchor" href="#sec:introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Publications Office of the European Union began a project in 2015 to develop an eProcurement ontology, the motivation for which can be read in the <a href="../ePO_Arch_Design.html" class="xref page">eProcurement Ontology Architecture and Formalisation Specifications</a>. The ultimate objective of the project is to produce a commonly agreed ontology that will conceptualise, formally encode, and make available in an open, structured and machine-readable format, data about public procurement. The data will cover procurement end-to-end, i.e., from notification, through tendering to awarding, ordering, invoicing, and finally, payment.</p>
+<p>The Publications Office of the European Union began a project in 2015 to develop an eProcurement ontology, the motivation for which can be read in the <a href="../ePO_Arch_Design.html" class="xref page">eProcurement Ontology Architecture and Formalisation Specifications</a>. The ultimate objective of the project was to produce a commonly agreed ontology that will conceptualise, formally encode, and make available in an open, structured and machine-readable format, data about public procurement. The data will cover procurement end-to-end, i.e., from notification, through tendering to awarding, ordering, invoicing, and finally, payment.</p>
 </div>
 <div class="paragraph">
-<p>The process and the methodology adopted involve crafting the conceptual model in <a href="https://www.omg.org/spec/UML/2.5.1">Unified Modelling Language (UML)</a> and then, by abiding to a set of conventions and recommendations, transforming that model into a formal ontology expressed in <a href="https://www.w3.org/OWL/">Web Ontology Language (OWL)</a> .</p>
+<p>The process and the methodology adopted involve creating the conceptual model in <a href="https://www.omg.org/spec/UML/2.5.1">Unified Modelling Language (UML)</a> and then abiding by a set of conventions and recommendations to transforming the model into a formal ontology expressed in <a href="https://www.w3.org/OWL/">Web Ontology Language (OWL)</a> .</p>
 </div>
 <div class="paragraph">
 <p>This section provides a working definition of the transformation rules for converting the UML conceptual model into the formal ontology and validation data shapes. These rules are organised in accordance with the <a href="../ePO_Arch_Design.html" class="xref page">eProcurement Ontology Architecture and Formalisation Specification</a>.</p>
@@ -232,33 +232,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_current_knowledge"><a class="anchor" href="#_current_knowledge"></a>Current Knowledge</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Much has been written about <a href="https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/">transformations from UML to OWL and vice versa</a>.</p>
-</div>
-<div class="paragraph">
-<p>The <a href="https://www.sciencedirect.com/science/article/pii/S1045926X14001323">work by Khan and Porres</a> , transforms selected elements of UML models containing multiple UML class, object and state-chart diagrams into OWL to analyse consistency of the models. A similar approach is presented in <a href="https://www.researchgate.net/publication/258356125_Consistency_of_UML_Class_and_Statechart_Diagrams_with_State_Invariants">an earlier paper</a> by Khan et al, which focuses on detecting inconsistency in models containing UML class and state-chart diagrams.</p>
-</div>
-<div class="paragraph">
-<p>A 2016 paper by <a href="https://www.academia.edu/74360912/Mapping_Uml_to_Owl_2_Ontology">el Hajjamy et al</a>, and two by Zedlitz et al (<a href="https://www.researchgate.net/publication/264312253_Transforming_Between_UML_Conceptual_Models_and_OWL_2_Ontologies">2012</a>) and (<a href="https://www.academia.edu/31787859/Conceptual_Modelling_in_UML_and_OWL_2">2014</a>), investigate the differences and similarities between UML and OWL in order to present transformations of selected (and identified as useful) elements of UML class diagram. In the 2014 paper, the need for UML–OWL transformation is additionally motivated so as not to necessitate repeating the modelling independently in both languages.</p>
-</div>
-<div class="paragraph">
-<p>Kiko&#8217;s <a href="https://www.semanticscholar.org/paper/A-Detailed-Comparison-of-UML-and-OWL-Atkinson-Kiko/63ef762942f7e1d98f1397f88566d21f84c9b560">2005 paper</a> compares OWL abstract syntax elements to the equivalent UML features and appropriate OCL statements. The analysis is conducted in the direction of OWL to UML. For every OWL construct, its UML interpretation is proposed.</p>
-</div>
-<div class="paragraph">
-<p>Three further papers by Xu el al in <a href="https://link.springer.com/chapter/10.1007/978-3-642-10583-8_16">2009</a> and <a href="https://link.springer.com/article/10.1007/s11280-011-0147-z">2012</a>, and Na et al in <a href="https://www.researchgate.net/publication/221541983_A_Method_for_Building_Domain_Ontologies_based_on_the_Transformation_of_UML_Models">2006</a>, focus on extracting ontological knowledge from UML class diagrams, and describe some UML–OWL mappings with the aim of reusing the existing UML models and streamlining the building of OWL domain ontologies.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/">Sadowska, 2019</a>, presents a comprehensive review of  related work. It is used as a guideline for ensuring the necessary coverage of the transformation rules specified in this report. It is important to note that not all the UML elements are dealt with here, only the ones employed in the eProcurement conceptual model.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_how_to_read_this_documentation"><a class="anchor" href="#_how_to_read_this_documentation"></a>How to read this documentation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The remainder of this topic comprises four sections covering major UML topics. The section <a href="transf-rules1.html#sec:tran-rules" class="xref page">Classes and Attributes</a> treats classes and attributes. The second section deals with the   <a href="transf-rules2.html" class="xref page">associations, dependencies and generalisations</a>. The third section  describes the <a href="transf-rules3.html" class="xref page">transformation rules</a> i.e., how the data types and enumerations should be transformed and finally, the fourth and final section provides <a href="transf-rules4.html" class="xref page">transformation rules applicable to all UML elements</a>, concerning comments, labels and notes.</p>
+<p>The remainder of this topic comprises four sections covering major UML topics. The section <a href="transf-rules1.html#sec:tran-rules" class="xref page">Classes and Attributes</a> treats classes and attributes. The second section deals with the <a href="transf-rules2.html" class="xref page">associations, dependencies and generalisations</a>. The third section describes the <a href="transf-rules3.html" class="xref page">transformation rules</a> i.e., how the data types and enumerations should be transformed and finally, the fourth and final section provides <a href="transf-rules4.html" class="xref page">transformation rules applicable to all UML elements</a>, concerning comments, labels and notes.</p>
 </div>
 <div class="paragraph">
 <p>Each section provides a table with an overview of the transformation rule set presented within. The table has three columns, one for every layer of the ontology architecture comprising rules: (a) , (b) , and (c) .</p>
@@ -335,6 +312,29 @@
 </div>
 <div class="paragraph">
 <p>The transformation rules for UML classes and attributes, connectors, data types and descriptors can be accessed via the menu items on the left.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_further_reading"><a class="anchor" href="#_further_reading"></a>Further Reading</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Much has been written about <a href="https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/">transformations from UML to OWL and vice versa</a>.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://www.sciencedirect.com/science/article/pii/S1045926X14001323">work by Khan and Porres</a> , transforms selected elements of UML models containing multiple UML class, object and state-chart diagrams into OWL to analyse consistency of the models. A similar approach is presented in <a href="https://www.researchgate.net/publication/258356125_Consistency_of_UML_Class_and_Statechart_Diagrams_with_State_Invariants">an earlier paper</a> by Khan et al, which focuses on detecting inconsistency in models containing UML class and state-chart diagrams.</p>
+</div>
+<div class="paragraph">
+<p>A 2016 paper by <a href="https://www.academia.edu/74360912/Mapping_Uml_to_Owl_2_Ontology">el Hajjamy et al</a>, and two by Zedlitz et al (<a href="https://www.researchgate.net/publication/264312253_Transforming_Between_UML_Conceptual_Models_and_OWL_2_Ontologies">2012</a>) and (<a href="https://www.academia.edu/31787859/Conceptual_Modelling_in_UML_and_OWL_2">2014</a>), investigate the differences and similarities between UML and OWL in order to present transformations of selected (and identified as useful) elements of UML class diagram. In the 2014 paper, the need for UML–OWL transformation is additionally motivated so as not to necessitate repeating the modelling independently in both languages.</p>
+</div>
+<div class="paragraph">
+<p>Kiko&#8217;s <a href="https://www.semanticscholar.org/paper/A-Detailed-Comparison-of-UML-and-OWL-Atkinson-Kiko/63ef762942f7e1d98f1397f88566d21f84c9b560">2005 paper</a> compares OWL abstract syntax elements to the equivalent UML features and appropriate OCL statements. The analysis is conducted in the direction of OWL to UML. For every OWL construct, its UML interpretation is proposed.</p>
+</div>
+<div class="paragraph">
+<p>Three further papers by Xu el al in <a href="https://link.springer.com/chapter/10.1007/978-3-642-10583-8_16">2009</a> and <a href="https://link.springer.com/article/10.1007/s11280-011-0147-z">2012</a>, and Na et al in <a href="https://www.researchgate.net/publication/221541983_A_Method_for_Building_Domain_Ontologies_based_on_the_Transformation_of_UML_Models">2006</a>, focus on extracting ontological knowledge from UML class diagrams, and describe some UML–OWL mappings with the aim of reusing the existing UML models and streamlining the building of OWL domain ontologies.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.e-informatyka.pl/index.php/einformatica/volumes/volume-2019/issue-1/article-3/">Sadowska, 2019</a>, presents a comprehensive review of  related work. It is used as a guideline for ensuring the necessary coverage of the transformation rules specified in this report. It is important to note that not all the UML elements are dealt with here, only the ones employed in the eProcurement conceptual model.</p>
 </div>
 <hr>
 <div class="paragraph">
