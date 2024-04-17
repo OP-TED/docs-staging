@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Introduction to the model2owl Project :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/m2o-home/intro.html">
+    <title>Introduction :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/m2o-home/intro_overview.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -98,7 +98,7 @@
   </li>
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="intro_overview.html">Introduction and Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -222,7 +222,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">model2owl</a></li>
-    <li><a href="intro.html">Introduction to the model2owl Project</a></li>
+    <li><a href="intro_overview.html">Introduction and Overview</a></li>
   </ul>
 </nav>
 </div>
@@ -231,15 +231,156 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Introduction to the model2owl Project</h1>
+<h1 class="page">Introduction</h1>
 <div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<h2 id="_the_once_only_principle_toop"><a class="anchor" href="#_the_once_only_principle_toop"></a>The Once Only Principle (TOOP)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The creation of the  <a href="https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html">eProcurement Ontology</a> requires collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, iare typically developed by semantic web specialists.</p>
+<p>In the context of EU eGovernment digitalisation, the <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2013:175:0001:0008:EN:PDF#:~:text=This%20Directive%20respects%20the%20fundamental,to%20property%20(Article%2017)">"once only principle" in EU public administration</a> on the re-use of public sector information is one of the drivers of eProcurement, aimed at making public spending more transparent, evidence-oriented, optimised, streamlined and integrated with market conditions. Part of this is the development of an <a href="https://docs.ted.europa.eu/EPO/latest/index.html">eProcurement Ontology</a>.</p>
 </div>
 <div class="paragraph">
-<p>To maintain broader public interaction and discussion, and continue the development of these artifacts, the ePO model2owl working group opted for an intermediary representation, unified modeling language (UML). UML allows participation in the development process by technical and non-technical parties as it holds widespread recognition in the eProcurement domain, and is also comprehensible to a wider audience. In addition, tools exist that facilitate the generation of diagrams on top of visual representations, facilitating discussion by all interested groups.</p>
+<p><mark>explain importance of eproc (naming consistancy, translations, relationships etc)</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_model2owl_in_an_eprocurement_context"><a class="anchor" href="#_model2owl_in_an_eprocurement_context"></a>model2owl in an eProcurement context</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>add process</mark></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>How we already use this for eProcurement. Explain that we use this approach to produce the core vocabulary of eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment etc. (there are many more)</pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_eprocurement_conceptual_model_requirements"><a class="anchor" href="#_eprocurement_conceptual_model_requirements"></a>eProcurement conceptual model requirements</h3>
+<div class="paragraph">
+<p>The eProcurement conceptual model must fulfil four fundamental objectives:</p>
+</div>
+<div class="paragraph">
+<p>It must</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>facilitate understanding of the represented system.</p>
+</li>
+<li>
+<p>convey system details between team members and external stakeholders efficiently.</p>
+</li>
+<li>
+<p>provide a point of reference for system designers to gather system specifications and documentation.</p>
+</li>
+<li>
+<p>serve as input for the development of a formal model.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To support these objectives, a conceptual model should fulfil the following requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>be available to all team members for collaboration and iteration.</p>
+</li>
+<li>
+<p>be easily changeable to reflect up-to-date information.</p>
+</li>
+<li>
+<p>contain both visual and written forms of diagramming, to  explain the abstract concepts better.</p>
+</li>
+<li>
+<p>establish terms and concepts that will be used throughout the project.</p>
+</li>
+<li>
+<p>define said terms and concepts.</p>
+</li>
+<li>
+<p>provide a basic structure for the entities of the project.</p>
+</li>
+<li>
+<p>reduce ambiguity while maintaining simple and concise encoding.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Information on the eProcurement ontology architecture, UML conventions, transfer rules and checkers (validators) can be accessed from the links in the left-hand menu.
+In this section I would talk about how we already use this for eProcurement. Explain that we use this approach to produce the core vocabulary of eProcurement and the different modules that extend this core, like eCatalogue, eContract, eFulfilment etc. (there are many more)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_semantic_data_specifications_for_e_procurement"><a class="anchor" href="#_semantic_data_specifications_for_e_procurement"></a>Semantic data-specifications for e-procurement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/model2owl">model2owl</a> is a project. Here it is a specific implementation which, in terms of the ePO, honours the specifications published in these documents.</p>
+</div>
+<div class="paragraph">
+<p>In short, Model2Owl is used to generate a Semantic data specification from the ePO Conceptual model.</p>
+</div>
+<div class="paragraph">
+<p>The eProcurement ontology is represented in the human-readable form of a UML conceptual model. Working with the model in this form allows participation in, and discussion between, the following stakeholders, both technical and non-technical:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Contracting authorities and entities, i.e., buyers, such as public administrations in the EU Member States or EU institutions;</p>
+</li>
+<li>
+<p>Economic operators, i.e., suppliers of goods and services such as businesses, entrepreneurs and financial institutions;</p>
+</li>
+<li>
+<p>Academia and researchers;</p>
+</li>
+<li>
+<p>Media and journalists;</p>
+</li>
+<li>
+<p>Auditors and regulators;</p>
+</li>
+<li>
+<p>Members of parliaments at regional, national and EU level;</p>
+</li>
+<li>
+<p>Standardisation organisations;</p>
+</li>
+<li>
+<p>NGOs; and</p>
+</li>
+<li>
+<p>Citizens</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To facilitate the digitisation of eProcurement, a machine-readable form of the conceptual model must be produced: the model needs to be converted/ translated into machine-readable OWL files and SHACL shapes.
+The model2owl tool has been created to perform this function. It uses a number of <a href="technical.html" class="xref page">open standards and conventions</a> in a process that includes strict rules and validation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Firstly, the UML must follow certain <a href="uml/conceptual-model-conventions.html" class="xref page">conventions</a></p>
+</li>
+<li>
+<p>Secondly, <a href="transformation/uml2owl-transformation.html" class="xref page">transfer rules</a> must be applied.</p>
+</li>
+<li>
+<p>Thirdly, the resulting output files need to be <a href="checkers/model2owl-checkers.html" class="xref page">checked and validated</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To understand the technical process in more depth, see the <a href="technical.html" class="xref page">Technical Overview</a>.</p>
+</div>
+<div class="paragraph">
+<p>A more detailed description of the functional and technical overviews can be found in the <a href="ePO_Arch_Design.html" class="xref page">eProcurement Ontology Architecture and Formalisation Specifications</a>.</p>
+</div>
+<div class="paragraph">
+<p>To facilitate broader public interaction and discussion, and continue the development of these artifacts, the ePO model2owl working group opted for an intermediary representation, unified modeling language (UML). UML allows participation in the development process by technical and non-technical parties as it holds widespread recognition in the eProcurement domain, and is also comprehensible to a wider audience. In addition, tools exist that facilitate the generation of diagrams on top of visual representations, facilitating discussion by all interested groups.</p>
 </div>
 <div class="paragraph">
 <p><strong>model2OWL</strong> adheres to <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">semantic conventions</a>, which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, an OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.</p>
@@ -252,20 +393,6 @@
 </div>
 <div class="paragraph">
 <p>The output artifacts are defined by the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification">semic conventions</a> as a specification, the significance of which is that it ensures that all relevant stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows <a href="https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1">Linked Data</a> principles.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_model2owl_in_an_eprocurement_context"><a class="anchor" href="#_model2owl_in_an_eprocurement_context"></a>model2owl in an eProcurement context</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This documentation provides a working specification, guidelines, and conventions for the eProcurement conceptual model, and describes how the model qualifies as suitable input for the transformation scripts that generate the eProcurement ontology.</p>
-</div>
-<div class="paragraph">
-<p>The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived. The model2owl transformation process automates the generation of the formal ontology in <a href="https://www.w3.org/TR/2014/REC-rdf-schema-20140225/">RDF format</a>, from the <a href="http://www.omg.org/spec/XMI/2.5.1">XMI (v.2.5.1) serialisation</a> of the data, provided that <a href="transformation/uml2owl-transformation.html" class="xref page">a set of clear transformation rules</a> is established, and <a href="uml/conceptual-model-conventions.html" class="xref page">a set of modelling conventions</a> is respected.</p>
-</div>
-<div class="paragraph">
-<p>This documentation also describes the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements. These elements include packages, classes, data types, enumerations, enumeration items, class attributes, association relations and dependency relations. More contextual information is provided in the subsections of the <a href="uml/conceptual-model-conventions.html" class="xref page">UML conventions specification</a>.</p>
 </div>
 <hr>
 <div class="paragraph">

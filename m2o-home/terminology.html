@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Introduction to the model2owl Project :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/m2o-home/intro.html">
+    <title>Terminology :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/m2o-home/terminology.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -222,7 +222,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">model2owl</a></li>
-    <li><a href="intro.html">Introduction to the model2owl Project</a></li>
+    <li><a href="terminology.html">Terminology</a></li>
   </ul>
 </nav>
 </div>
@@ -231,48 +231,40 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Introduction to the model2owl Project</h1>
-<div class="sect1">
-<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
+<h1 class="page">Terminology</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The creation of the  <a href="https://docs.ted.europa.eu/epo-home/ePO_Arch_Design.html">eProcurement Ontology</a> requires collaborative discussions and consensus among various experts in the procurement domain to develop a conceptual model, while the tangible outcomes of the eProcurement Ontology, comprising an OWL-expressed ontology, a series of SHACL shapes, and a glossary, iare typically developed by semantic web specialists.</p>
-</div>
-<div class="paragraph">
-<p>To maintain broader public interaction and discussion, and continue the development of these artifacts, the ePO model2owl working group opted for an intermediary representation, unified modeling language (UML). UML allows participation in the development process by technical and non-technical parties as it holds widespread recognition in the eProcurement domain, and is also comprehensible to a wider audience. In addition, tools exist that facilitate the generation of diagrams on top of visual representations, facilitating discussion by all interested groups.</p>
-</div>
-<div class="paragraph">
-<p><strong>model2OWL</strong> adheres to <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">semantic conventions</a>, which enables operation within a unified UML model. This model serves as the single source of truth, and through automated processes, essential artifacts such as a glossary, an OWL ontology, and SHACL shapes can be generated. Embracing a single source of truth, and automating artifact generation, significantly reduces administrative overhead in each development cycle.</p>
-</div>
-<div class="paragraph">
-<p>To generate machine-readable OWL (core and restriction) files and SHACL shapes, the model2owl tool does the following:</p>
-</div>
-<div class="paragraph">
-<p>It takes the human-readable input in UML form, and in an automated conversion process, applies sets of modelling conventions, transformation rules, and methods of verification to it before generating the output.</p>
-</div>
-<div class="paragraph">
-<p>The output artifacts are defined by the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification">semic conventions</a> as a specification, the significance of which is that it ensures that all relevant stakeholders generate data that adheres to the agreed model. The data is structured in the form of a graph that follows <a href="https://semiceu.github.io/style-guide/1.0.0/style-guide-whole.html#sec:pc-r1">Linked Data</a> principles.</p>
+<p>Two key concepts from SEMIC Terminology are:</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_model2owl_in_an_eprocurement_context"><a class="anchor" href="#_model2owl_in_an_eprocurement_context"></a>model2owl in an eProcurement context</h2>
+<h2 id="_semantic_data_specification"><a class="anchor" href="#_semantic_data_specification"></a>Semantic data specification</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This documentation provides a working specification, guidelines, and conventions for the eProcurement conceptual model, and describes how the model qualifies as suitable input for the transformation scripts that generate the eProcurement ontology.</p>
+<p>In the model2owl project we require a semantic data specification to support the <a href="https://www.toop.eu/">once-only principle</a> as defined by the <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-semantic-data-specification">SEMIC definition</a>.</p>
 </div>
 <div class="paragraph">
-<p>The UML Conceptual Model of the eProcurement domain provides the source from which the formal eProcurement ontology is derived. The model2owl transformation process automates the generation of the formal ontology in <a href="https://www.w3.org/TR/2014/REC-rdf-schema-20140225/">RDF format</a>, from the <a href="http://www.omg.org/spec/XMI/2.5.1">XMI (v.2.5.1) serialisation</a> of the data, provided that <a href="transformation/uml2owl-transformation.html" class="xref page">a set of clear transformation rules</a> is established, and <a href="uml/conceptual-model-conventions.html" class="xref page">a set of modelling conventions</a> is respected.</p>
+<p>This data specification is composed of</p>
 </div>
-<div class="paragraph">
-<p>This documentation also describes the UML modelling constraints and a set of conventional and technical recommendations for naming and structuring the UML class diagram elements. These elements include packages, classes, data types, enumerations, enumeration items, class attributes, association relations and dependency relations. More contextual information is provided in the subsections of the <a href="uml/conceptual-model-conventions.html" class="xref page">UML conventions specification</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-cv-specification">A core vocabulary (Lightweight ontology)</a></p>
+</li>
+<li>
+<p><a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-data-shape-contraint">A Data-shape specification (SHACL)</a></p>
+</li>
+</ul>
 </div>
-<hr>
-<div class="paragraph">
-<p>Any comments on the documentation?</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_conceptual_model"><a class="anchor" href="#_conceptual_model"></a>Conceptual model</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><a href="https://github.com/OP-TED/ted-model2owl-docs/issues/new/choose">Click here to let us know</a></p>
+<p>We describe our <a href="https://semiceu.github.io/style-guide/1.0.0/terminological-clarifications.html#sec:what-is-a-conceptual-model">Conceptual model</a> using UML using a tool to do so, <a href="https://sparxsystems.com/">Enterprise Architect</a>.</p>
 </div>
 </div>
 </div>
