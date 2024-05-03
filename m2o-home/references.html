@@ -214,10 +214,10 @@
 </nav>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="6">
+    <aside class="toc sidebar" data-title="Contents" data-levels="6">
   <div class="toc-menu"></div>
 </aside>
-<article class="doc">
+    <article class="doc">
 <h1 class="page">References</h1>
 <div id="ref-ferreira2013" class="paragraph">
 <p>Almeida Ferreira, D, and A Silva. 2013. “UML to OWL Mapping Overview an Analysis of the Translation Process and Supporting Tools.” In <em>Conference: 7th Conference of Portuguese Association of Information Systems</em>.</p>
@@ -575,9 +575,30 @@ Tsarkov, Dmitry, and Ian Horrocks. 2006. “FaCT Description Logic Reasoner: Sys
 <p>Zhang, Chuanrong, Zhong-Ren Peng, Tian Zhao, and Weidong Li. 2008. “Transformation of Transportation Data Models from Unified Modeling Language to Web Ontology Language.” <em>Transportation Research Record</em> 2064 (1): 81–89.</p>
 </div>
 </article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+  </div>
+</article>
+    </div>
   </div>
 </main>
-</div>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
 <script src="../_/js/site.js"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
 <script src="../_/js/vendor/docsearch-2.6.3.js"></script>

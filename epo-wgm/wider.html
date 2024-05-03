@@ -217,10 +217,10 @@
 </nav>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
-<article class="doc">
+    <article class="doc">
 <h1 class="page">ePO Reports from the Wider Working Group Quarterly Meetings</h1>
 <div class="paragraph">
 <p><a href="ePO_Q2_2023_WGM.html" class="xref page">Report from the Q2 2023 Working Group General Meeting: 27 June 2023</a></p>
@@ -329,9 +329,30 @@
 <p><a href="https://github.com/OP-TED/epo-docs/issues/new/choose">Click here to let us know</a></p>
 </div>
 </article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+  </div>
+</article>
+    </div>
   </div>
 </main>
-</div>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
 <script src="../_/js/site.js"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
 <script src="../_/js/vendor/docsearch-2.6.3.js"></script>

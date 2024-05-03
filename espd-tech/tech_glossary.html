@@ -214,10 +214,10 @@
 </nav>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
-<article class="doc">
+    <article class="doc">
 <h1 class="page">Glossary</h1>
 <div id="abies" class="paragraph">
 <p><strong>Aggregate Business Information Entities (ABIEs).</strong> Root nodes and top-level structures of UBL documents. Children of document ABIEs may be <a href="#bbies">Basic Business Information Entities (BBIEs)</a> or <a href="#asbies">Association Business Information Entities (ASBIEs)</a>, never ABIEs. All UBL document ABIEs (and only UBL document ABIEs) are defined within individual namespaces specific to each document as both elements and types. (<a href="https://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html#S-BUSINESS-INFORMATION-ENTITIES" class="bare">https://docs.oasis-open.org/ubl/os-UBL-2.3/UBL-2.3.html#S-BUSINESS-INFORMATION-ENTITIES</a>)</p>
@@ -347,9 +347,30 @@ The <strong>ISA<sup>2</sup> Programme</strong>, now <a href="https://ec.europa.e
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
 </div>
 </article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+  </div>
+</article>
+    </div>
   </div>
 </main>
-</div>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
 <script src="../_/js/site.js"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
 <script src="../_/js/vendor/docsearch-2.6.3.js"></script>
