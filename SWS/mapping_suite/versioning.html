@@ -83,19 +83,13 @@
     <a class="nav-link" href="../index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../audience.html">Target Audience</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="versioning.html">Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Mapping suite contents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../genref.html">Introduction</a>
+    <a class="nav-link" href="../genref.html">General Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../glossary.html">Glossary</a>
@@ -139,6 +133,12 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../sample_app/jupyter_notebook_python.html">Jupyter Notebook - Python</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="versioning.html">Versioning</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -153,8 +153,11 @@
       <li class="component">
         <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
         <ul class="versions">
+            <li class="version">
+              <a href="../../eforms/1.12/index.html">1.12</a>
+            </li>
             <li class="version is-latest">
-              <a href="../../eforms/latest/index.html">1.11</a>
+              <a href="../../eforms/latest/index.html">1.11.0</a>
             </li>
             <li class="version">
               <a href="../../eforms/1.10/index.html">1.10</a>
@@ -206,10 +209,31 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../../espd/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../../ESPD-EDM/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../../espd/latest/index.html">3.3.0</a>
+              <a href="../../ESPD-EDM/latest/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.0/index.html">2.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
             </li>
         </ul>
       </li>
@@ -234,16 +258,14 @@
 </aside>
     <article class="doc">
 <h1 class="page">Mapping Suite Versioning Rules</h1>
-<div id="preamble">
+<div class="sect1">
+<h2 id="_mapping_suite_versioning_rules"><a class="anchor" href="#_mapping_suite_versioning_rules"></a>Mapping Suite Versioning Rules</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section presents the versioning rules for mapping suites which considers the mapping suite structure, the conceptual and technical mappings (which impact the structure of the output), and the metadata. These rules play a crucial role in maintaining compatibility and ensuring smooth transitions between different mapping suite versions, especially when considering the potential impact on SPARQL queries on the transformation output.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_semantic_versioning_in_a_nutshell"><a class="anchor" href="#_semantic_versioning_in_a_nutshell"></a>Semantic versioning in a nutshell</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_semantic_versioning_in_a_nutshell"><a class="anchor" href="#_semantic_versioning_in_a_nutshell"></a>Semantic versioning in a nutshell</h3>
 <div class="paragraph">
 <p>“Dependency hell” plagues software management and impacts models, architecture and documentation. As a project expands, the complexity of changes and dependencies increase, complicating the release of new work packages. Version lock and version promiscuity impede progress, making it difficult to move projects forward safely and efficiently.</p>
 </div>
@@ -295,18 +317,14 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_backwards_compatibility"><a class="anchor" href="#_backwards_compatibility"></a>Backwards compatibility</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_backwards_compatibility"><a class="anchor" href="#_backwards_compatibility"></a>Backwards compatibility</h3>
 <div class="paragraph">
 <p>A new version of the mapping suite is considered to be backwards compatible if it can be read directly by the same software that was able to read the previous version without requiring any modifications in its code.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_major_version_increment"><a class="anchor" href="#_major_version_increment"></a>Major version increment</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_major_version_increment"><a class="anchor" href="#_major_version_increment"></a>Major version increment</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -328,10 +346,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_minor_version_increment"><a class="anchor" href="#_minor_version_increment"></a>Minor version increment</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_minor_version_increment"><a class="anchor" href="#_minor_version_increment"></a>Minor version increment</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -372,10 +388,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_patch_version_increment"><a class="anchor" href="#_patch_version_increment"></a>Patch version increment</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_patch_version_increment"><a class="anchor" href="#_patch_version_increment"></a>Patch version increment</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -400,10 +414,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_release_labelling"><a class="anchor" href="#_release_labelling"></a>Release labelling</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_release_labelling"><a class="anchor" href="#_release_labelling"></a>Release labelling</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -425,10 +437,8 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h3>
 <div class="paragraph">
 <p>By adhering to the versioning rules outlined in this section, developers and maintainers can effectively manage versioning for mapping suites, ensuring compatibility and smooth transitions between different versions. These rules provide clear guidelines for when to increment major, minor and patch versions, considering the potential impact on SPARQL queries on the transformation output. Following these rules will help maintain consistency and compatibility across various systems that rely on the mapping suites.</p>
 </div>
@@ -438,6 +448,7 @@
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
 </div>
 </div>
 </div>

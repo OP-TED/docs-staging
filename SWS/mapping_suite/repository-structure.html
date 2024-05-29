@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Mapping Suite Repository structure :: TED Developer Documentation</title>
+    <title>Repository structure :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/SWS/mapping_suite/repository-structure.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -83,19 +83,13 @@
     <a class="nav-link" href="../index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../audience.html">Target Audience</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="versioning.html">Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Mapping suite contents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../genref.html">Introduction</a>
+    <a class="nav-link" href="../genref.html">General Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../glossary.html">Glossary</a>
@@ -139,6 +133,12 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../sample_app/jupyter_notebook_python.html">Jupyter Notebook - Python</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="versioning.html">Versioning</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -153,8 +153,11 @@
       <li class="component">
         <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
         <ul class="versions">
+            <li class="version">
+              <a href="../../eforms/1.12/index.html">1.12</a>
+            </li>
             <li class="version is-latest">
-              <a href="../../eforms/latest/index.html">1.11</a>
+              <a href="../../eforms/latest/index.html">1.11.0</a>
             </li>
             <li class="version">
               <a href="../../eforms/1.10/index.html">1.10</a>
@@ -206,10 +209,31 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../../espd/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../../ESPD-EDM/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../../espd/latest/index.html">3.3.0</a>
+              <a href="../../ESPD-EDM/latest/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.0/index.html">2.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
             </li>
         </ul>
       </li>
@@ -233,7 +257,7 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Mapping Suite Repository structure</h1>
+<h1 class="page">Repository structure</h1>
 <div class="paragraph">
 <p>Transformation rules and other artefacts for the TED Semantic Web Services (TED-SWS) are organised in the <a href="https://github.com/OP-TED/ted-rdf-mapping">ted-rdf-mapping</a> repository.</p>
 </div>
@@ -242,7 +266,10 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>/mappings
+<pre>/docs
+    /antora
+
+/mappings
     /package_F03
     /package_F06
     /package_F25
@@ -257,6 +284,9 @@
 Makefile
 requirements.txt</pre>
 </div>
+</div>
+<div class="paragraph">
+<p><code>/docs</code> folder contains this documentation. It is written in <a href="https://asciidoc.org/">AsciiDoc format</a> and compiled with the <a href="https://antora.org/">Antora engine</a>.</p>
 </div>
 <div class="paragraph">
 <p><code>/mappings</code> folder contains <a href="mapping-suite-structure.html" class="xref page">mapping suite packages</a> organised based on the standard forms numbers. Their name is formed based on the form number (e.g. <code>F03</code>, <code>F06</code>) prefixed with <code>package_</code> for readability. When the eForms will be mapped, then the corresponding appropriate organisation will be chosen.</p>

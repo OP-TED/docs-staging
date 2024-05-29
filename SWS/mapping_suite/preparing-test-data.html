@@ -83,19 +83,13 @@
     <a class="nav-link" href="../index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../audience.html">Target Audience</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="versioning.html">Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Mapping suite contents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../genref.html">Introduction</a>
+    <a class="nav-link" href="../genref.html">General Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../glossary.html">Glossary</a>
@@ -139,6 +133,12 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../sample_app/jupyter_notebook_python.html">Jupyter Notebook - Python</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="versioning.html">Versioning</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -153,8 +153,11 @@
       <li class="component">
         <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
         <ul class="versions">
+            <li class="version">
+              <a href="../../eforms/1.12/index.html">1.12</a>
+            </li>
             <li class="version is-latest">
-              <a href="../../eforms/latest/index.html">1.11</a>
+              <a href="../../eforms/latest/index.html">1.11.0</a>
             </li>
             <li class="version">
               <a href="../../eforms/1.10/index.html">1.10</a>
@@ -206,10 +209,31 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../../espd/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../../ESPD-EDM/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../../espd/latest/index.html">3.3.0</a>
+              <a href="../../ESPD-EDM/latest/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.0/index.html">2.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
             </li>
         </ul>
       </li>
@@ -238,12 +262,12 @@
 <h2 id="_representative_sample_data_selection"><a class="anchor" href="#_representative_sample_data_selection"></a>Representative sample data selection</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section describes TED notice data samples and methods used to generate them. At first a sampling is performed on notices from 2021, and then on a wider set.</p>
+<p>This section describes TED notice data samples and methods used to generate them. At first a sampling is performed on the notices from 2021, and then on a wider set.</p>
 </div>
 <div class="sect2">
 <h3 id="_sample_ted_notices_from_2021"><a class="anchor" href="#_sample_ted_notices_from_2021"></a>Sample TED notices from 2021</h3>
 <div class="paragraph">
-<p>This data sample (<code>test_data/sampling_2021</code>) contains carefully selected TED notices based on the following criteria: maximise representation, and minimise the number of selected documents. The selected notices are guaranteed to cover all possible XPath configurations available in the data. The sampling was performed automatically.</p>
+<p>This data sample (<code>test_data/sampling_2021</code>) contains carefully selected TED notices based on the following criteria: maximise representativeness, minimise the number of selected documents. The selected notices are guaranteed to cover all possible XPath configurations available in the data. The sampling was performed automatically.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -254,7 +278,7 @@
 <p>The data space was partitioned twice based on two criteria: the notice form number (e.g. <code>F03</code>, <code>F06</code>) and the eForms Subtype (e.g. <code>cn-standard</code>, <code>can-utilities</code>);</p>
 </li>
 <li>
-<p>The minimal set of the most representative notices were selected for each form_number and eforms_subtype .</p>
+<p>The minimal set of the most representative notices have been selected for each form_number and eforms_subtype .</p>
 </li>
 </ul>
 </div>
@@ -688,7 +712,7 @@
 <div class="sect2">
 <h3 id="_sampling_of_ted_notices_based_on_xsd_versions"><a class="anchor" href="#_sampling_of_ted_notices_based_on_xsd_versions"></a>Sampling of TED notices based on XSD versions</h3>
 <div class="paragraph">
-<p>A separate sampling on <strong>all the TED notices published between 2014 and 2022</strong> was also made. The samples were split up according to the various XSD versions upon which they were created. These samples can be found in the following folder structure:</p>
+<p>A separate sampling on <strong>all the TED notices published between 2014 and 2022</strong> was also made. The samples were split up based on the various XSD versions according to which they were created. These samples can be found in the following folder structure</p>
 </div>
 <div class="listingblock">
 <div class="content">

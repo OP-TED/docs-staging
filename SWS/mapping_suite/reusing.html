@@ -83,19 +83,13 @@
     <a class="nav-link" href="../index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../audience.html">Target Audience</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="versioning.html">Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Mapping suite contents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../genref.html">Introduction</a>
+    <a class="nav-link" href="../genref.html">General Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../glossary.html">Glossary</a>
@@ -139,6 +133,12 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../sample_app/jupyter_notebook_python.html">Jupyter Notebook - Python</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="versioning.html">Versioning</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -153,8 +153,11 @@
       <li class="component">
         <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
         <ul class="versions">
+            <li class="version">
+              <a href="../../eforms/1.12/index.html">1.12</a>
+            </li>
             <li class="version is-latest">
-              <a href="../../eforms/latest/index.html">1.11</a>
+              <a href="../../eforms/latest/index.html">1.11.0</a>
             </li>
             <li class="version">
               <a href="../../eforms/1.10/index.html">1.10</a>
@@ -206,10 +209,31 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../../espd/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../../ESPD-EDM/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../../espd/latest/index.html">3.3.0</a>
+              <a href="../../ESPD-EDM/latest/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.0/index.html">2.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
             </li>
         </ul>
       </li>
@@ -234,14 +258,13 @@
 </aside>
     <article class="doc">
 <h1 class="page">Reusing Mapping suite packages</h1>
-<div class="sect1">
-<h2 id="_reusing_mapping_suite_packages"><a class="anchor" href="#_reusing_mapping_suite_packages"></a>Reusing Mapping suite packages</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_reusing_mapping_suite_packages"><a class="anchor" href="#_reusing_mapping_suite_packages"></a>Reusing Mapping suite packages</h3>
 <div class="paragraph">
 <p>The structure of the package evolves during through the different phases of the mapping development process. Three phases of the mapping development are described in this section.</p>
 </div>
-<div class="sect2">
-<h3 id="_initial_phase"><a class="anchor" href="#_initial_phase"></a>Initial Phase</h3>
+<div class="sect3">
+<h4 id="_initial_phase"><a class="anchor" href="#_initial_phase"></a>Initial Phase</h4>
 <div class="paragraph">
 <p><strong>Audience</strong>: Semantic Engineers
 In the first, initial, phase, when the Semantic Engineers start working on a new mapping suite, they should set up a package folder structure similar to the one described below.</p>
@@ -288,10 +311,8 @@ technical_mappings.yarrrml.yaml (optional) manually created, and used in earlier
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_mapping_suite_package_description_for_the_software_engineers"><a class="anchor" href="#_mapping_suite_package_description_for_the_software_engineers"></a>Mapping suite package description for the Software Engineers</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mapping_suite_package_description_for_the_software_engineers"><a class="anchor" href="#_mapping_suite_package_description_for_the_software_engineers"></a>Mapping suite package description for the Software Engineers</h3>
 <div class="paragraph">
 <p>A package provided by the semantic engineers (SE) is enriched with additional artefacts that are generated automatically using the package expanding tools which take as input the artefacts provided by the SE. Here are some examples of these additional artefacts that are being generated:</p>
 </div>
@@ -349,10 +370,8 @@ technical_mappings.yarrrml.yaml (optional) manually created, and used in earlier
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_mapping_suite_package_description_for_the_semantic_engineers_after_the_expansion"><a class="anchor" href="#_mapping_suite_package_description_for_the_semantic_engineers_after_the_expansion"></a>Mapping suite package description for the Semantic Engineers after the expansion</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_mapping_suite_package_description_for_the_semantic_engineers_after_the_expansion"><a class="anchor" href="#_mapping_suite_package_description_for_the_semantic_engineers_after_the_expansion"></a>Mapping suite package description for the Semantic Engineers after the expansion</h3>
 <div class="paragraph">
 <p>After the “execution” of a mapping, the mapping package will be further enriched, and will contain additional files, as a result of running the mapping suite on the included test data.</p>
 </div>
@@ -413,7 +432,6 @@ technical_mappings.yarrrml.yaml (optional) manually created, and used in earlier
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
 </div>
 </div>
 </article>

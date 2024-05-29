@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>The TED Semantic Web Service :: TED Developer Documentation</title>
+    <title>The TED Semantic Web Service Documentation :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/SWS/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
@@ -83,19 +83,13 @@
     <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="audience.html">Target Audience</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mapping_suite/versioning.html">Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Mapping suite contents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="genref.html">Introduction</a>
+    <a class="nav-link" href="genref.html">General Reference</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="glossary.html">Glossary</a>
@@ -139,6 +133,12 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="sample_app/jupyter_notebook_python.html">Jupyter Notebook - Python</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="mapping_suite/versioning.html">Versioning</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -153,8 +153,11 @@
       <li class="component">
         <a class="title" href="../eforms/latest/index.html">eForms SDK</a>
         <ul class="versions">
+            <li class="version">
+              <a href="../eforms/1.12/index.html">1.12</a>
+            </li>
             <li class="version is-latest">
-              <a href="../eforms/latest/index.html">1.11</a>
+              <a href="../eforms/latest/index.html">1.11.0</a>
             </li>
             <li class="version">
               <a href="../eforms/1.10/index.html">1.10</a>
@@ -206,10 +209,31 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../espd/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../ESPD-EDM/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../espd/latest/index.html">3.3.0</a>
+              <a href="../ESPD-EDM/latest/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.1.0/index.html">2.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/1.0.2/index.html">1.0.2</a>
             </li>
         </ul>
       </li>
@@ -233,105 +257,45 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">The TED Semantic Web Service</h1>
-<div id="preamble">
+<h1 class="page">The TED Semantic Web Service Documentation</h1>
+<div class="sect1">
+<h2 id="_introduction_to_the_ted_semantic_web_service"><a class="anchor" href="#_introduction_to_the_ted_semantic_web_service"></a>Introduction to the TED Semantic Web Service</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format.  The RDF is stored in the Cellar repository, the semantic repository of the EU Publications Office. From there, the data can be queried from the <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL end point on EU Vocabularies</a>.</p>
+<p>The TED Semantic Web Service (TED-SWS) continuously converts Contract Award Notices from the xml standard form format available on the TED Website, into RDF format.  The RDF is stored in the Cellar repository, the semantic repository of the EU Publications Office. From there, the data can be queried from the <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL end point</a> on the EU Vocabularies. It should be noted that the Contract Award Notices should not be confused with the Result Notices issued from eForms.</p>
 </div>
 <div class="paragraph">
-<p>The following topics are included in this version of the Semantic Web Service documentation:</p>
+<p>This project falls clearly within the European data strategy which foresees a single market for data, allowing it to flow freely within the EU and across sectors for the benefit of businesses, researchers and public administrations.</p>
+</div>
+<div class="paragraph">
+<p>The following topics are included in this version of the Semantic Web Service Documentation:</p>
+</div>
+<div class="openblock tile-container">
+<div class="content">
+<div class="sidebarblock tile">
+<div class="content">
+<div class="title">Mapping Suites</div>
+<div class="paragraph">
+<p>The TED-RDF Mappings are the transformation rules needed by the TED-RDF Conversion Pipeline (both of which are part of the TED-SWS) to convert TED notices available in XML format to RDF.
+Mapping Suites and Mapping Suite Packages are explained in this section.</p>
+</div>
+<div class="paragraph">
+<p><a href="mapping_suite/index.html" class="xref page">Read the docs</a></p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_general_reference"><a class="anchor" href="#_general_reference"></a>General Reference</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="audience.html" class="xref page">Target Audience</a><br>
-The target audience for this documentation</p>
-</li>
-<li>
-<p><a href="mapping_suite/versioning.html" class="xref page">Versioning</a><br>
-The mapping Suite Versioning Rules</p>
-</li>
-</ul>
+<div class="sidebarblock tile">
+<div class="content">
+<div class="title">Reusing semantic web service artefacts</div>
+<div class="paragraph">
+<p>This section provides a set of examples that demonstrate how to extract TED RDF data from Cellar via the SPARQL Endpoint, or by using tools like Excel, Python, or R.</p>
+</div>
+<div class="paragraph">
+<p><a href="sample_app/index.html" class="xref page">Read the docs</a></p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_mapping_suite_contents"><a class="anchor" href="#_mapping_suite_contents"></a>Mapping Suite Contents</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="genref.html" class="xref page">Introduction</a><br>
-Introduction to the Mapping suites</p>
-</li>
-<li>
-<p><a href="glossary.html" class="xref page">Glossary</a><br>
-A glossary relating to the mapping suites</p>
-</li>
-<li>
-<p><a href="mapping_suite/methodology.html" class="xref page">Methodology</a><br>
-Describes the methodology for creating mapping rules</p>
-</li>
-<li>
-<p><a href="mapping_suite/repository-structure.html" class="xref page">Mapping Suite Repository Structure</a><br>
-Describes the repository structure for transformation rules and other artifacts</p>
-</li>
-<li>
-<p><a href="mapping_suite/index.html" class="xref page">Mapping suites</a><br>
-A description of the Mapping Suite contents</p>
-</li>
-<li>
-<p><a href="mapping_suite/mapping-suite-structure.html" class="xref page">Mapping suite Package Structure</a><br>
-A description of a mapping suite package structure</p>
-</li>
-<li>
-<p><a href="mapping_suite/code-list-resources.html" class="xref page">Code List Mappings</a><br>
-Resources used to map code lists in the XML files to URIs in the RDF representation</p>
-</li>
-<li>
-<p><a href="mapping_suite/preparing-test-data.html" class="xref page">Data samples</a><br>
-Describes TED notice data samples and methods used to generate them</p>
-</li>
-<li>
-<p><a href="mapping_suite/toolchain.html" class="xref page">Toolchain</a><br>
-Describes available CLI tools that can run on the mapping suites</p>
-</li>
-</ul>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_reusing_semantic_web_service_artifacts"><a class="anchor" href="#_reusing_semantic_web_service_artifacts"></a>Reusing semantic web service artifacts</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="sample_app/sa_glossary.html" class="xref page">Glossary</a><br>
-A glossary relating to reusing semantic web service artefacts</p>
-</li>
-<li>
-<p><a href="sample_app/sparql_queries.html" class="xref page">Sparql Queries</a><br>
-Example queries run on the <a href="https://publications.europa.eu/webapi/rdf/sparql">sparql endpoint</a></p>
-</li>
-<li>
-<p><a href="sample_app/ms_excel.html" class="xref page">MS Excel</a><br>
-Running queries using MS Excel macros</p>
-</li>
-<li>
-<p><a href="sample_app/jupyter_notebook_r.html" class="xref page">Jupyter Notebook - R</a><br>
-Running queries using Jupyter Notebook and R</p>
-</li>
-<li>
-<p><a href="sample_app/jupyter_notebook_python.html" class="xref page">Jupyter Notebook - Python</a><br>
-Running queries using Jupyter Notebook and Python</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
