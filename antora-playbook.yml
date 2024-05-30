@@ -58,7 +58,8 @@ content:
   ###  ESPD
   - url: https://github.com/OP-TED/espd-docs.git
     start_path: /
-    branches: v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3.3.x, wgm-reports
+    branches: bus, tech, new_main, new_v3, new wgm, new-v4.0.0-rc
+    # branches: v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3.3.x, wgm-reports
     tags:
     - 2.1.0
     
