@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="eforms" data-version="1.11">
+<div class="nav-container" data-component="eforms" data-version="1.5">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -95,7 +95,7 @@
     <a class="nav-link" href="../../../eforms-common/versioning/index.html">SDK Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.11</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.5</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -176,7 +176,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>SDK Contents</strong> <code>1.11</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>SDK Contents</strong> <code>1.5</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -200,12 +200,6 @@
     <a class="nav-link" href="../translations/index.html">Translations</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../schemas/index.html">XML Schemas</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../schematrons/index.html">Schematron</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../efx/index.html">EFX grammar</a>
 <ul class="nav-list">
@@ -221,7 +215,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Developer Guide</strong> <code>1.11</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>Developer Guide</strong> <code>1.5</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../guide/index.html">Start Here</a>
@@ -279,7 +273,7 @@
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">eForms SDK</span>
-          <span class="version">1.11.0</span>
+          <span class="version">1.5</span>
       </div>
   <ul class="components">
       <li class="component is-current">
@@ -289,25 +283,7 @@
               <a href="../../1.12/index.html">1.12</a>
             </li>
             <li class="version is-current is-latest">
-              <a href="../index.html">1.11.0</a>
-            </li>
-            <li class="version">
-              <a href="../../1.10/index.html">1.10</a>
-            </li>
-            <li class="version">
-              <a href="../../1.9/index.html">1.9</a>
-            </li>
-            <li class="version">
-              <a href="../../1.8/index.html">1.8</a>
-            </li>
-            <li class="version">
-              <a href="../../1.7/index.html">1.7</a>
-            </li>
-            <li class="version">
-              <a href="../../1.6/index.html">1.6</a>
-            </li>
-            <li class="version">
-              <a href="../../1.5/index.html">1.5</a>
+              <a href="../index.html">1.5</a>
             </li>
             <li class="version">
               <a href="../../1.4/index.html">1.4</a>
@@ -386,16 +362,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">1.11.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">1.5</button>
   <div class="version-menu">
     <a class="version" href="../../1.12/schema/notice-information.html">1.12</a>
-    <a class="version is-current" href="notice-information.html">1.11.0</a>
-    <a class="version" href="../../1.10/schema/notice-information.html">1.10</a>
-    <a class="version" href="../../1.9/schema/notice-information.html">1.9</a>
-    <a class="version" href="../../1.8/schema/notice-information.html">1.8</a>
-    <a class="version" href="../../1.7/schema/notice-information.html">1.7</a>
-    <a class="version" href="../../1.6/schema/notice-information.html">1.6</a>
-    <a class="version" href="../../1.5/schema/notice-information.html">1.5</a>
+    <a class="version is-current" href="notice-information.html">1.5</a>
     <a class="version" href="../../1.4/schema/notice-information.html">1.4</a>
   </div>
 </div>
@@ -566,6 +536,22 @@ Regulation Annex</a>.</p>
 </div>
 </div>
 <div class="sect1">
+<h2 id="dispatchDateEsender"><a class="anchor" href="#dispatchDateEsender"></a>Notice Dispatch Date eSender (BT-803)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Notice Dispatch Date eSender (BT-803) represents the date and time the notice was transmitted
+electronically by the eSender to the Publications Office of the European Union. It may be indicated
+in the extensions at Root by specifying its two components (date &amp; time):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;efbc:TransmissionDate&gt;2022-11-17+01:00&lt;/efbc:TransmissionDate&gt;
+    &lt;efbc:TransmissionTime&gt;08:30:03+01:00&lt;/efbc:TransmissionTime&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="pubInfoSection"><a class="anchor" href="#pubInfoSection"></a>Notice Publication information</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -678,36 +664,12 @@ sequence and content of notices will be carefully checked).</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="dispatchDateEsender"><a class="anchor" href="#dispatchDateEsender"></a>Notice Dispatch Date eSender (BT-803)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Notice Dispatch Date eSender (BT-803) represents the date and time the notice was transmitted
-electronically by the eSender to the Publications Office of the European Union. It may be indicated
-in the extensions at Root by specifying its two components (date &amp; time):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">    &lt;efbc:TransmissionDate&gt;2022-11-17+01:00&lt;/efbc:TransmissionDate&gt;
-    &lt;efbc:TransmissionTime&gt;08:30:03+01:00&lt;/efbc:TransmissionTime&gt;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>When it comes to validation and date controls, the Notice Dispatch Date eSender (BT-803), when specified,
-is used instead of the Notice Dispatch Date (BT-05), see below.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="dispatchDateSection"><a class="anchor" href="#dispatchDateSection"></a>Notice Dispatch Date</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <strong>date and time</strong> of the notice submission by the buyer. This date will be
+<p>The <strong>date and time</strong> of the notice receipt by OP. This date will be
 added before its submission to OP and its trustworthiness evaluated
 based on the actual receipt time and a range of acceptable variations<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.</p>
-</div>
-<div class="paragraph">
-<p>When the processing by the eSender introduces a significant delay after the submission by the buyer,
-to avoid falling outside of the acceptable range, the Notice Dispatch Date eSender (BT-803) can also be used.</p>
 </div>
 <div class="paragraph">
 <p>A notice sent on November 26<sup>th</sup>, 2019 at 1:38:54 PM CET (i.e. UTC +1)
@@ -900,7 +862,7 @@ description of their role in a joint procurement), or "service provider"
 <a href="#_footnoteref_1">1</a>. The first received notice within a given procedure shall either trigger the record of the corresponding procedure ID, or the generation of an error when this value is already used.
 </div>
 <div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. CVS checks the value against the current date. The rule is currently permissive, allowing for "Notice Dispatch Date (BT-05), or Notice Dispatch Date eSender (BT-803) if provided, to be 1 day before or after the current date." Rule will get tightened to 24 hours before the current date as of SDK 2.
+<a href="#_footnoteref_2">2</a>. To be defined by Business
 </div>
 <div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. There is no specific order here and the approach is purely technical. Identification of the first linguistic version (i.e. code for NoticeLanguageCode) is based on the original version (i.e. first encoded text linguistic version) or the author&#8217;s environment.
