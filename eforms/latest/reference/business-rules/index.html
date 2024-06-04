@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="eforms" data-version="1.5">
+<div class="nav-container" data-component="eforms" data-version="1.6">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -95,7 +95,7 @@
     <a class="nav-link" href="../../../../eforms-common/versioning/index.html">SDK Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.5</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.6</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -176,7 +176,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>SDK Contents</strong> <code>1.5</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>SDK Contents</strong> <code>1.6</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -200,6 +200,9 @@
     <a class="nav-link" href="../../translations/index.html">Translations</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../schematrons/index.html">Schematron</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../efx/index.html">EFX grammar</a>
 <ul class="nav-list">
@@ -215,7 +218,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Developer Guide</strong> <code>1.5</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>Developer Guide</strong> <code>1.6</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../guide/index.html">Start Here</a>
@@ -273,7 +276,7 @@
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">eForms SDK</span>
-          <span class="version">1.5</span>
+          <span class="version">1.6</span>
       </div>
   <ul class="components">
       <li class="component is-current">
@@ -283,7 +286,10 @@
               <a href="../../../1.12/index.html">1.12</a>
             </li>
             <li class="version is-current is-latest">
-              <a href="../../index.html">1.5</a>
+              <a href="../../index.html">1.6</a>
+            </li>
+            <li class="version">
+              <a href="../../../1.5/index.html">1.5</a>
             </li>
             <li class="version">
               <a href="../../../1.4/index.html">1.4</a>
@@ -361,10 +367,11 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">1.5</button>
+  <button class="version-menu-toggle" title="Show other versions of page">1.6</button>
   <div class="version-menu">
     <a class="version is-missing" href="../../../1.12/index.html">1.12</a>
-    <a class="version is-current" href="index.html">1.5</a>
+    <a class="version is-current" href="index.html">1.6</a>
+    <a class="version" href="../../../1.5/reference/business-rules/index.html">1.5</a>
     <a class="version" href="../../../1.4/reference/business-rules/index.html">1.4</a>
   </div>
 </div>
@@ -3015,22 +3022,6 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((BT-03-notice == 'change') and (BT-02-notice in (change))) or not(BT-03-notice == 'change')</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-02-notice</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
 <pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((BT-03-notice == 'competition') and (BT-02-notice in (competition))) or not(BT-03-notice == 'competition')</code></pre>
 </div>
 </div>
@@ -3112,22 +3103,6 @@
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(BT-05(a)-notice &lt; BT-738-notice) or not(BT-738-notice is present)</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-05(a)-notice</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((BT-03-notice == 'change') and ((BT-05(a)-notice &gt; BT-630(d)-Lot) or (BT-05(a)-notice &gt; BT-131(d)-Lot) or (BT-05(a)-notice &gt; BT-1311(d)-Lot)) and not(BT-140-notice in ('cancel','cancel-intent'))) or not((BT-03-notice == 'change') and ((BT-05(a)-notice &gt; BT-630(d)-Lot) or (BT-05(a)-notice &gt; BT-131(d)-Lot) or (BT-05(a)-notice &gt; BT-1311(d)-Lot)))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -3517,7 +3492,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(BT-1311(d)-Lot &gt; BT-130-Lot)</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(BT-1311(d)-Lot &lt; BT-130-Lot)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4315,23 +4290,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-09)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-09)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-09)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))  and ((BT-198(BT-09)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-09)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4347,39 +4306,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-105)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-105)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-105)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-105)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-105)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-105)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-105)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4395,39 +4322,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-106)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-106)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-106)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-106)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-106)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-106)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-106)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4443,23 +4338,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-1118)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-1118)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-1118)-NoticeResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-1118)-NoticeResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-1118)-NoticeResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4475,23 +4354,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-118)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-118)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-118)-NoticeResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-118)-NoticeResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-118)-NoticeResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4507,39 +4370,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-1252)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-1252)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-1252)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-1252)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-1252)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-1252)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-1252)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4555,39 +4386,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-135)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-135)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-135)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-135)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-135)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-135)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-135)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4603,39 +4402,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-1351)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-1351)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-1351)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-1351)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-1351)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-1351)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-1351)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4651,39 +4418,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-136)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-136)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-136)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-136)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-136)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-136)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-136)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4699,39 +4434,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-142)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-142)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-142)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-142)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-142)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-142)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-142)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4747,39 +4450,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-144)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-144)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-144)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-144)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-144)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-144)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-144)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4795,39 +4466,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-156)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-156)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-156)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-156)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-156)-NoticeResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-156)-NoticeResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-156)-NoticeResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4843,39 +4482,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-1561)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-1561)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-1561)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-1561)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-1561)-NoticeResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-1561)-NoticeResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-1561)-NoticeResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4891,39 +4498,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-160)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-160)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-160)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-160)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-160)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-160)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-160)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4939,39 +4514,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-161)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-161)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-161)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-161)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-161)-NoticeResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-161)-NoticeResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-161)-NoticeResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -4987,39 +4530,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-162)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-162)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-162)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-162)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-162)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-162)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-162)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5035,39 +4546,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-163)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-163)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-163)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-163)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-163)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-163)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-163)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5083,39 +4562,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-171)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-171)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-171)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-171)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-171)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-171)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-171)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5131,39 +4578,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-191)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-191)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-191)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-191)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-191)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-191)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-191)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5179,39 +4594,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-193)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-193)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-193)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-193)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-193)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-193)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-193)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5227,39 +4610,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-539)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-539)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-539)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-539)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-539)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-539)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-539)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5275,39 +4626,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-539)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-539)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-539)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-539)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-539)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-539)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-539)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5323,39 +4642,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-540)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-540)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-540)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-540)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-540)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-540)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-540)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5371,39 +4658,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-540)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-540)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-540)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-540)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-540)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-540)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-540)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5419,39 +4674,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-541)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-541)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-541)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-541)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-541)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-541)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-541)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5467,39 +4690,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-541)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-541)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-541)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-541)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-541)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-541)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-541)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5515,39 +4706,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5421)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5421)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5421)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5421)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-5421)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-5421)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-5421)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5563,39 +4722,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5421)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5421)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5421)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5421)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-5421)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-5421)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-5421)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5611,39 +4738,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5422)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5422)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5422)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5422)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-5422)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-5422)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-5422)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5659,39 +4754,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5422)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5422)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5422)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5422)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-5422)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-5422)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-5422)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5707,39 +4770,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5423)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5423)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5423)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5423)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-5423)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-5423)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-5423)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5755,39 +4786,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5423)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5423)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-5423)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-5423)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-5423)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-5423)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-5423)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5803,39 +4802,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-543)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-543)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-543)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-543)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-543)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-543)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-543)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5851,39 +4818,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-543)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-543)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-543)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-543)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-543)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-543)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-543)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5899,39 +4834,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-553)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-553)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-553)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-553)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-553)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-553)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-553)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5947,39 +4850,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-554)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-554)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-554)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-554)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-554)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-554)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-554)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -5995,39 +4866,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-555)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-555)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-555)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-555)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-555)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-555)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-555)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6043,39 +4882,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-556)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-556)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-556)-NoticeResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-556)-NoticeResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-556)-NoticeResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-556)-NoticeResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-556)-NoticeResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6091,39 +4898,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-709)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-709)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-709)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-709)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-709)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-709)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-709)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6139,39 +4914,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-710)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-710)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-710)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-710)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-710)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-710)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-710)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6187,39 +4930,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-711)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-711)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-711)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-711)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-711)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-711)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-711)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6235,39 +4946,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-712)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-712)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-712)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-712)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-712)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-712)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-712)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6283,39 +4962,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-720)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-720)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-720)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-720)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-720)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-720)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-720)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6331,39 +4978,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-730)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-730)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-730)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-730)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-730)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-730)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-730)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6379,39 +4994,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-731)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-731)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-731)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-731)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-731)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-731)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-731)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6427,39 +5010,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-733)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-733)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-733)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-733)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-733)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-733)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-733)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6475,39 +5026,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-733)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-733)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-733)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-733)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-733)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-733)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-733)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6523,39 +5042,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-734)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-734)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-734)-Lot - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-734)-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-734)-Lot - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-734)-Lot - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-734)-Lot - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6571,39 +5058,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-734)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-734)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-734)-LotsGroup - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-734)-LotsGroup</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-734)-LotsGroup - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-734)-LotsGroup - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-734)-LotsGroup - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6619,39 +5074,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-759)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-759)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-759)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-759)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-759)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-759)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-759)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6667,39 +5090,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-760)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-760)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-760)-LotResult - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-760)-LotResult</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-760)-LotResult - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-760)-LotResult - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-760)-LotResult - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6715,39 +5106,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-773)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-773)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-773)-Tender - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-773)-Tender</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-773)-Tender - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-773)-Tender - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-773)-Tender - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -6763,39 +5122,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-88)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-88)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081'))) and ((BT-198(BT-88)-Procedure - BT-05(a)-notice) &lt; P5Y)) or not((OPP-070-notice in ('25','26','28','29','30','32','E4','33','34','35')) or ((OPP-070-notice == 'E5') and (BT-01-notice != '32009L0081')))</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-198(BT-88)-Procedure</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">(((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081'))) and ((BT-198(BT-88)-Procedure - BT-05(a)-notice) &lt; P30Y)) or not((OPP-070-notice in ('27','31')) or ((OPP-070-notice == 'E5') and (BT-01-notice == '32009L0081')))</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5')) and ((BT-198(BT-88)-Procedure - BT-05(a)-notice) &lt; P10Y) and ((BT-198(BT-88)-Procedure - BT-05(a)-notice) &gt;= P2D)) or not(OPP-070-notice in ('25','26','27','28','29','30','31','32','E4','33','34','35','E5'))</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -7602,28 +5929,6 @@
 <td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
 </tr>
 <tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-539-Lot</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co_constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">BT-541-Lot[BT-5421-Lot == 'ord-imp'] is unique in /BT-541-Lot[BT-5421-Lot == 'ord-imp']</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Applies if</strong> Order of Importance (BT-541) is present.</p>
-</div>
-<div class="listingblock">
-<div class="title">Condition in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">BT-541-Lot[BT-5421-Lot == 'ord-imp'] is present</code></pre>
-</div>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
 <th class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-539-LotsGroup</code></p></th>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Co_constraint.</p>
@@ -8049,7 +6354,7 @@
 <div class="listingblock">
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((BT-738-notice - BT-05(a)-notice) &lt; P92D) and (BT-738-notice &gt; BT-05(a)-notice)</code></pre>
+<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((BT-738-notice - BT-05(a)-notice) &lt; P60D) and ((BT-738-notice - BT-05(a)-notice) &gt;= P2D)</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -8324,22 +6629,6 @@
 <div class="title">Co-constraint in EFX</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((BT-02-notice == 'cn-standard') and (OPP-070-notice in (cn-standard))) or not(BT-02-notice == 'cn-standard')</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>Always applies</strong> in every notice sub-type.</p>
-</div></div></td>
-<td class="tableblock halign-right valign-top"><p class="tableblock"><code>ERROR</code></p></td>
-</tr>
-<tr>
-<th class="tableblock halign-left valign-top"><p class="tableblock"><code>OPP-070-notice</code></p></th>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Co-constraint.</p>
-</div>
-<div class="listingblock">
-<div class="title">Co-constraint in EFX</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-EFX hljs" data-lang="EFX">((BT-02-notice == 'corr') and (OPP-070-notice in (corr))) or not(BT-02-notice == 'corr')</code></pre>
 </div>
 </div>
 <div class="paragraph">
