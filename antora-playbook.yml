@@ -89,7 +89,7 @@ urls:
 
 ui:
   bundle:
-    url: https://github.com/OP-TED/antora-eui/releases/download/ui-bundle/master/ui-bundle.zip
+    url: https://github.com/OP-TED/antora-eui/releases/download/ui-bundle/updateAlgolia-v3/ui-bundle.zip
     snapshot: true
   supplemental_files: ./content/supplemental-ui
 
