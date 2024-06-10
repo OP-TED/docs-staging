@@ -8,57 +8,81 @@
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../../_/css/site.css">
     <link rel="stylesheet" href="../../../../_/css/custom.css">
-    <link rel="stylesheet" href="../../../../_/css/vendor/docsearch-3.6.0.css">
+    <link rel="stylesheet" href="../../../../_/css/vendor/docsearch-2.6.3.css">
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../_/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../../../_/img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../../../_/img/icons/favicon-16x16.png">
     <link rel="manifest" href="../../../../_/img/icons/site.webmanifest">
     <link rel="mask-icon" href="../../../../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="../../../../_/img/icons/favicon.ico">
+    <link rel="stylesheet" href="/styles/optional/custom.css" media="screen"/>
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="../../../../_/img/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="/styles/optional/custom.css" media="screen"/>
     <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
     <script>var uiRootPath = '../../../../_'</script>
   </head>
   <body class="article">
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
 <script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
-<header class="header">
 
-        <div class="container">
-<div>
-    <nav class="navbar">
-
-        <div class="navbar-brand">
-
+<!-- middle header section with EU flag and logo, full words for pc, "EU" for mobile, flexible-->
+    <div class="dd-header-container">
+       <div class="eu-part">
             <div class="eu-emblem" style="display: inline-block;">
                 <!-- flag and logo-->
                 <div class="eu-emblem-std-en" ><a href="https://european-union.europa.eu/index_en"><span></span></a></div>
             </div>
-
+            <!-- Algolia Search -->
+           <!-- icon: <img alt="" src="https://beta.tedv2.spikeseed.cloud/o/ted2-theme/images/magnifying-glass-icon.png"> -->
+           <!-- <div class="docs-search">
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search developer docs">
+                </div>
+           </div> -->
         </div>
-         <div class="sep-frame">
+
+        <!-- grey line between eu part and ted dev docs part-->
+        <div class="sep-frame">
             <div class="rect-grey"></div>
         </div>
-        <div class="text-eu-tenders">EU tenders</div>
 
-        <div id="topbar-nav" class="navbar-menu">
+        <!-- ted dev docs title section under grey line-->
+        <div class="ted-dd-bar">
+            <div class="ted-dd-text-bar">
+                <div class="ted-dd-text-field"> 
+                    <div class="text-eu-tenders">EU tenders</div>
+                    <!--alternative 1: text-->
+                     <!--<div class="text-eu-subtext-text"><a href="https://docs.ted.europa.eu/home/index.html">TED Developer Docs</a></div>-->
+                    <!--alternative 2: logo-->
+                    <!--<div class="header-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../../../_/img/ted-logo-footer2.png" height="48"/></a></div>-->
+                    <div class="text-label-search">
+                    <div>
                     <div class="text-eu-subtext-text">TED Developer Docs</div>
                     <div class="text-eu-subtext-label">Documentation for TED developers and eSenders</div>
-            <div class="navbar-end">
-                    <div class="navbar-item search">
-                        <input id="search-input" type="text" placeholder="Search docs">
                     </div>
+                    <div class="navbar-item search">
+
+                    <input id="search-input" type="text" placeholder="Search the developer docs">
+
+
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-</div><div class="body">
+
+        <!-- green line between header and body-->
+        <div class="sep-frame">
+            <div class="rect-green"></div>
+        </div>
+    </div>
+
+<div class="body">
+<script src="../../../../_/js/07-scrollable-header-nav.js"></script>
 <div class="nav-container" data-component="eforms" data-version="1.6">
   <aside class="nav">
     <div class="panels">
@@ -271,9 +295,6 @@
       <li class="component is-current">
         <a class="title" href="../../../latest/index.html">eForms SDK</a>
         <ul class="versions">
-            <li class="version">
-              <a href="../../../1.12/index.html">1.12</a>
-            </li>
             <li class="version is-latest">
               <a href="../../../latest/index.html">1.11.0</a>
             </li>
@@ -291,12 +312,6 @@
             </li>
             <li class="version is-current">
               <a href="../../index.html">1.6</a>
-            </li>
-            <li class="version">
-              <a href="../../../1.5/index.html">1.5</a>
-            </li>
-            <li class="version">
-              <a href="../../../1.4/index.html">1.4</a>
             </li>
         </ul>
       </li>
@@ -327,31 +342,10 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../../../../ESPD-EDM/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../../../../espd/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../../../../ESPD-EDM/latest/index.html">3.3.0</a>
-            </li>
-            <li class="version">
-              <a href="../../../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
-            </li>
-            <li class="version">
-              <a href="../../../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
-            </li>
-            <li class="version">
-              <a href="../../../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
-            </li>
-            <li class="version">
-              <a href="../../../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
-            </li>
-            <li class="version">
-              <a href="../../../../ESPD-EDM/2.1.0/index.html">2.1.0</a>
-            </li>
-            <li class="version">
-              <a href="../../../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
-            </li>
-            <li class="version">
-              <a href="../../../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
+              <a href="../../../../espd/latest/index.html">3.3.0</a>
             </li>
         </ul>
       </li>
@@ -372,23 +366,20 @@
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">1.6</button>
   <div class="version-menu">
-    <a class="version is-missing" href="../../../1.12/index.html">1.12</a>
     <a class="version" href="../../../latest/reference/business-terms/BT-13722.html">1.11.0</a>
     <a class="version" href="../../../1.10/reference/business-terms/BT-13722.html">1.10</a>
     <a class="version" href="../../../1.9/reference/business-terms/BT-13722.html">1.9</a>
     <a class="version" href="../../../1.8/reference/business-terms/BT-13722.html">1.8</a>
     <a class="version" href="../../../1.7/reference/business-terms/BT-13722.html">1.7</a>
     <a class="version is-current" href="BT-13722.html">1.6</a>
-    <a class="version" href="../../../1.5/reference/business-terms/BT-13722.html">1.5</a>
-    <a class="version" href="../../../1.4/reference/business-terms/BT-13722.html">1.4</a>
   </div>
 </div>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
-<article class="doc">
+    <article class="doc">
 <h1 class="page"><code>BT-13722</code>: Buyer Review Lot Identifier</h1>
 <div class="hdlist">
 <table>
@@ -403,130 +394,151 @@ Type
 </table>
 </div>
 </article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+    <a href="https://ted.europa.eu/" target="_blank">TED Website</a>
+  </div>
+</article>
+    </div>
   </div>
 </main>
-</div>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('/home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
 <script src="../../../../_/js/site.js"></script>
 <script async src="../../../../_/js/vendor/highlight.js"></script>
-<script src="../../../../_/js/vendor/docsearch-3.6.0.js"></script>
+<script src="../../../../_/js/vendor/docsearch-2.6.3.js"></script>
 <script src="../../../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
 <style type="text/css">@import url('/documents/d/global/custom');</style>
 
 <div class="footer">
-  <div class="three-columns">
+<div class="three-columns">
 
-      <div class="col-md-12 col-lg-4">
-          <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../../../_/img/ted-logo-footer2.png" height="48"/></a></div>
-      </div>
+    <div class="col-md-12 col-lg-4">
+        <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../../../_/img/ted-logo-footer2.png" height="48"/></a></div>
+        <p class="byline-footer">This website is managed by: <a class="ls-underline" href="https://op.europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">Publications Office of the European Union</span></a></p>
 
-      <div class="col-md-12 col-lg-4">
+    </div>
 
-          <h3 class="h3-footer">Need Help?</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
-              <li class="li-footer"><a href="https://simap.ted.europa.eu/contact">Contact the TED Helpdesk</a></li>
-          </ul>
 
-          <h3 class="h3-footer">Follow us</h3>
-          <ul class="ul-footer">
-              <li>
-                  <a href="https://twitter.com/eulawdatapubs"> <img src="../../../../_/img/twitter.svg" class="icon-footer"/><span>Twitter</span></a>
-                  <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img src="../../../../_/img/youtube.svg" class="icon-footer-2nd"/><span>YouTube</span></a>
-              </li>
-          </ul>
+    <div class="col-md-12 col-lg-4">
 
-          <h3 class="h3-footer">Legal</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/legal-notices/accessibility-statement">Accessibility</a></li>
-          </ul>
+        <h3 class="h3-footer">Need Help?</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+            <li class="li-footer"><a href="https://simap.ted.europa.eu/contact">Contact the TED Helpdesk</a></li>
+        </ul>
 
-      </div>
+        <h3 class="h3-footer">Follow us</h3>
+        <ul class="ul-footer">
+            <li>
+                <a href="https://twitter.com/eulawdatapubs"> <img src="../../../../_/img/twitter.svg" class="icon-footer"/><span>Twitter</span></a>
+                <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img src="../../../../_/img/youtube.svg" class="icon-footer-2nd"/><span>YouTube</span></a>
+            </li>
+        </ul>
 
-      <div class="col-md-12 col-lg-4">
+        <h3 class="h3-footer">Legal</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/legal-notices/accessibility-statement">Accessibility</a></li>
+        </ul>
 
-          <h3 class="h3-footer">About us</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/about-publication-office-of-the-european-union">Our mission, vision, and values</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/general-publications/">Newsletter</a></li>
-          </ul>
+    </div>
 
-          <h3 class="h3-footer">Other services</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
-              <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
-              <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
-              <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
-          </ul>
-      </div>
-  </div>
+    <div class="col-md-12 col-lg-4">
 
-  <div class="three-columns">
-      <div class="col-md-12 col-lg-4">
-          <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+        <h3 class="h3-footer">About us</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/about-publication-office-of-the-european-union">Our mission, vision, and values</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/general-publications/">Newsletter</a></li>
+        </ul>
 
-          <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union" class="ls-op" /></a></div>
-          <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a></p>
-          <div style="margin-top: 20px" >
-            <h3>This website is managed by<h3>
-            <img src="../../../../_/img/op-logo-with-name.svg" class="logo" />
-          </div>
+        <h3 class="h3-footer">Other services</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+            <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+            <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+            <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
+        </ul>
+    </div>
+</div>
 
-      </div>
-      <div class="col-md-12 col-lg-4">
-          <h3 class="h3-footer">Contact the EU</h3>
+<div class="three-columns">
+    <div class="col-md-12 col-lg-4">
+        <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
 
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other Telephone options</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via our contact forms</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of the EU centres</a></li>
+        <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union" class="ls-op" /></a></div>
+        <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a></p>
 
-          </ul>
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <h3 class="h3-footer">Contact the EU</h3>
 
-          <h3 class="h3-footer">Social Media</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other Telephone options</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via our contact forms</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of the EU centres</a></li>
 
-          </ul>
+        </ul>
 
-          <h3 class="h3-footer">Legal</h3>
+        <h3 class="h3-footer">Social Media</h3>
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
 
-          <ul class="ul-footer">
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a></li>
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy Policy</a></li>
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
-          </ul>
-      </div>
-      <div class="col-md-12 col-lg-4">
-          <h3 class="h3-footer">EU institutions</h3>
+        </ul>
 
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
-              <li class="li-footer"><a href="https://www.consilium.europa.eu/en/european-council/">European Council</a></li>
-              <li class="li-footer"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a></li>
-              <li class="li-footer"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
-              <li class="li-footer"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the European Union (CJEU)</a></li>
-              <li class="li-footer"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank (ECB)</a></li>
-              <li class="li-footer"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
-              <li class="li-footer"><a href="https://www.eeas.europa.eu/_en">European External Action Services (EEAS)</a></li>
-              <li class="li-footer"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee (EESC)</a></li>
-              <li class="li-footer"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a></li>
-              <li class="li-footer"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
-              <li class="li-footer"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
-              <li class="li-footer"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor (EDPS)</a></li>
-              <li class="li-footer"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
-              <li class="li-footer"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/home">Publications Office of the European Union</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a></li>
-          </ul>
-      </div>
+        <h3 class="h3-footer">Legal</h3>
 
-      <script>
-        ECL.autoInit();
-      </script>
-  </div>
+        <ul class="ul-footer">
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy Policy</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
+            <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
+        </ul>
+    </div>
+    <div class="col-md-12 col-lg-4">
+        <h3 class="h3-footer">EU institutions</h3>
+
+        <ul class="ul-footer">
+            <li class="li-footer"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
+            <li class="li-footer"><a href="https://www.consilium.europa.eu/en/european-council/">European Council</a></li>
+            <li class="li-footer"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a></li>
+            <li class="li-footer"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
+            <li class="li-footer"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the European Union (CJEU)</a></li>
+            <li class="li-footer"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank (ECB)</a></li>
+            <li class="li-footer"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
+            <li class="li-footer"><a href="https://www.eeas.europa.eu/_en">European External Action Services (EEAS)</a></li>
+            <li class="li-footer"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee (EESC)</a></li>
+            <li class="li-footer"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a></li>
+            <li class="li-footer"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
+            <li class="li-footer"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
+            <li class="li-footer"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor (EDPS)</a></li>
+            <li class="li-footer"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
+            <li class="li-footer"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a></li>
+            <li class="li-footer"><a href="https://op.europa.eu/en/home">Publications Office of the European Union</a></li>
+            <li class="li-footer"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a></li>
+        </ul>
+    </div>
+
+    <script>
+      ECL.autoInit();
+    </script>
+</div>
 </div>  </body>
 </html>
