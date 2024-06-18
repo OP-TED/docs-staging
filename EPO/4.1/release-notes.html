@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>eProcurement Ontology v4.1.0-rc.2 :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/EPO/latest/release-notes.html">
-    <meta name="generator" content="Antora 3.1.2">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
-    <link rel="stylesheet" href="../../_/css/vendor/docsearch-3.6.0.css">
+    <link rel="stylesheet" href="../../_/css/vendor/docsearch-2.6.3.css">
         <link rel="apple-touch-icon" sizes="180x180" href="../../_/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../_/img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../_/img/icons/favicon-16x16.png">
@@ -26,39 +26,50 @@
     <script>var uiRootPath = '../../_'</script>
   </head>
   <body class="article">
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
 <script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
-<header class="header">
-
-        <div class="container">
-<div>
-    <nav class="navbar">
-
+<div class="eu-flag">
+    <nav class="navbar-scrollable">
         <div class="navbar-brand">
 
             <div class="eu-emblem" style="display: inline-block;">
                 <!-- flag and logo-->
-                <div class="eu-emblem-std-en" ><a href="https://european-union.europa.eu/index_en"><span></span></a></div>
-            </div>
+                <a href="https://european-union.europa.eu/index_en" target="_blank">
+                    <div class="eu-emblem-std-en"><span></span>
+                    </div>
+                </a>
 
+            </div>
         </div>
-         <div class="sep-frame">
+        <div class="sep-frame">
             <div class="rect-grey"></div>
         </div>
-        <div class="text-eu-tenders">EU tenders</div>
+    </nav>
 
+</div>
+
+<div class="eu-tenders">
+    <nav class="navbar">
+        <div class="text-eu-tenders">
+            <a href="https://ted.europa.eu/en/" target="_blank">EU tenders</a>
+        </div>
         <div id="topbar-nav" class="navbar-menu">
-                    <div class="text-eu-subtext-text">TED Developer Docs</div>
-                    <div class="text-eu-subtext-label">Documentation for TED developers and eSenders</div>
+
+            <div class="text-eu-subtext-text">
+                <a href="/">TED Developer Docs</a>
+            </div>
+ <div class="text-eu-subtext-label">
+                <a href="/">Documentation for TED developers and eSenders</a>
+            </div>
             <div class="navbar-end">
-                    <div class="navbar-item search">
-                        <input id="search-input" type="text" placeholder="Search docs">
-                    </div>
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
             </div>
         </div>
     </nav>
 </div><div class="body">
+<script src="../../_/js/07-scrollable-header-nav.js"></script>
 <div class="nav-container" data-component="EPO" data-version="4.1">
   <aside class="nav">
     <div class="panels">
@@ -251,10 +262,10 @@
 </div>
 </div>
   <div class="content">
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
-<article class="doc">
+    <article class="doc">
 <h1 class="page">eProcurement Ontology v4.1.0-rc.2</h1>
 <div id="preamble">
 <div class="sectionbody">
@@ -419,107 +430,47 @@
 <h3 id="_added_object_properties"><a class="anchor" href="#_added_object_properties"></a>Added Object Properties</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain, Range and cardinality</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:answersExclusionGround</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:answersQuestion</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:answersSelectionCriteria</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adms:identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:Evidence &#8594; adms:Identifier [1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:canProvideNonDiscriminatoryEvidence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">org:Organization &#8594; cccev:Evidence [0..*]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:canProvideTaxAndSocialSecuritiesEvidence</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:concernsOrganisation</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasAssociatedDocument</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasOversupplyQuantity</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasReceivedQuantity</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasRejectedQuantity</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasSellerOrderID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasShortQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">org:Organization &#8594; cccev:Evidence [0..*]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:includesNationalCriterion</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:isReinforcedBy</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:isSupportedBy</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:providesInformationOn</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:providesOrganisationEmployeeQuantity</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:providesOrganisationFinancialCapability</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:providesOrganisationPreQualificationListingIdentifier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:refersToApplicablePeriod</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:summarisesInformationAboutCertificate</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">eli:uri_schema</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:QualificationCriterion &#8594; epo:QualificationCriterion [0..*]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">cccev:hasConcept</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:Requirement &#8594; cccev:InformationConcept [0..*]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:hasEvidenceTypeList</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasConstraint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:InformationRequirement &#8594; cccev:Constraint [0..*]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:isDerivedFrom</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:providesValueFor</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:supportsValue</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:validityPeriodConstraint</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:conformsTo</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">dct:language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:includesNationalCriterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:QualificationCriterion &#8594; epo:QualificationCriterion [0..*]</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_deleted_subpropertyof"><a class="anchor" href="#_deleted_subpropertyof"></a>Deleted subPropertyOf</h3>
+<h3 id="_modified_object_properties"><a class="anchor" href="#_modified_object_properties"></a>Modified Object Properties</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -528,19 +479,24 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>instance</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>property</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>value</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>old Domain, Range and cardinality</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>New Domain, Range and cardinality</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasConstraint</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:subPropertyOf</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:hasRequirement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:attestedByLabel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:Certificate &#8594; epo:CertificationLabel [1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:Certificate &#8594; epo:CertificationLabel [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:isResponsibilityOfBuyer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">rdfs:subPropertyOf</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:involvesBuyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:confidentialityLevelType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:Evidence &#8594; at-voc:confidentiality-level [0..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:Evidence &#8594; at-voc:access-rights [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasPrimaryContactPoint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">org:Organization &#8594; cpov:ContactPoint [0..*]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">org:Organization &#8594; cpov:ContactPoint [0..1]</p></td>
 </tr>
 </tbody>
 </table>
@@ -549,14 +505,87 @@
 <h3 id="_added_datatype_properties"><a class="anchor" href="#_added_datatype_properties"></a>Added Datatype Properties</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Class</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>datatype/cardinality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasAdditionalInformation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:ProcurementCriterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:PlainLiteral [0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasSMEReceivedTendersExcludingSubcontractors</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:SubmissionStatisticalInformation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:integer [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dct:description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:Evidence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:PlainLiteral [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasURL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cccev:Evidence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:anyURI [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasAdditionalInformation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:ProcurementCriterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:PlainLiteral [0..1]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_deleted_datatype_properties"><a class="anchor" href="#_deleted_datatype_properties"></a>Deleted Datatype Properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Class</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>datatype/cardinality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasURL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:Certificate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xsd:anyURI [0..1]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_modified_datatype_properties"><a class="anchor" href="#_modified_datatype_properties"></a>Modified Datatype Properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Class</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>old datatype/cardinality</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>new datatype/cardinality</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasCertificationNumber</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:Certificate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:PlainLiteral [1..1]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rdf:PlainLiteral [0..1]</p></td>
 </tr>
 </tbody>
 </table>
@@ -674,32 +703,57 @@
 <h3 id="_added_object_properties_2"><a class="anchor" href="#_added_object_properties_2"></a>Added Object Properties</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain, Range and cardinality</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:comprisesCatalogueResponseLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponse &#8594; epo-cat:CatalogueResponseLine [0..*]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:foreseesPackage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:foreseesPackage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueLine &#8594; epo-ful:Package (external) [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasAcceptanceStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:isSpecificToCatalogueResponseLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponseInformation &#8594; epo-cat:CatalogueResponseLine [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:refersToCatalogue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponse &#8594; epo-cat:Catalogue [1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:refersToCatalogueLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponseLine &#8594; epo-cat:CatalogueLine [1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:specifiesCatalogueResponseInformation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponse &#8594; epo-cat:CatalogueResponseInformation [1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ord:hasAcceptanceStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponseInformation &#8594; at-voc-new:ResponseStatus (external) [1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasUUID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponseLine &#8594; adms:Identifier (external) [1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasValidityPeriod</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:Catalogue &#8594; epo:Period (external) [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:isSpecificToCatalogueResponseLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:specifiesCatalogueProvider</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponse &#8594; epo:CatalogueProvider (external) [1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:specifiesCatalogueResponseInformation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo:specifiesCatalogueReceiver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponse &#8594; epo:CatalogueReceiver (external) [1]</p></td>
 </tr>
 </tbody>
 </table>
@@ -708,14 +762,18 @@
 <h3 id="_deleted_object_properties"><a class="anchor" href="#_deleted_object_properties"></a>Deleted Object Properties</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain, Range and cardinality</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:hasAssociatedDocument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:hasAssociatedDocument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:DespatchAdvice (external) &#8594; epo-cat:PostAwardDocument [0..1]
+     epo-ful:DespatchLine (external) &#8594; epo-cat:PostAwardDocument [0..1]</p></td>
 </tr>
 </tbody>
 </table>
@@ -789,14 +847,29 @@
 <h3 id="_added_object_properties_3"><a class="anchor" href="#_added_object_properties_3"></a>Added Object Properties</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain, Range and cardinality</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo-ord:hasSellerOrderID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ord:Order &#8594; adms:Identifier (external) [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:specifiesConsignee</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice (external) &#8594; epo-ord:Consignee [1..*]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:specifiesSeller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice (external) &#8594; epo-ord:Seller [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ord:hasAcceptanceStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueResponseInformation (external) &#8594; at-voc-new:ResponseStatus [1]</p></td>
 </tr>
 </tbody>
 </table>
@@ -916,53 +989,81 @@
 <h3 id="_added_object_properties_4"><a class="anchor" href="#_added_object_properties_4"></a>Added Object Properties</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 50%;">
+<col style="width: 50%;">
 </colgroup>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Domain, Range and cardinality</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:RejectionAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:hasAssociatedDocument</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo:Document (external) [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:comprisesReceiptAdviceLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:RejectionAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; at-voc-new:action-code [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:foreseesPackage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:comprisesReceiptAdviceLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo-ful:ReceiptAdviceLine [0..*]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasOversupplyQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:foreseesPackage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-cat:CatalogueLine (external) &#8594; epo-ful:Package [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasReceivedQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:hasOversupplyQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; epo:Quantity (external) [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasRejectReason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:hasReceivedQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; epo:Quantity (external) [0..1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:hasRejectReason</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; at-voc-new:reject-reason [0..1]</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasRejectedQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; epo:Quantity (external) [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasShortQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:hasShortQuantity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; epo:Quantity (external) [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:hasShortageAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:hasShortageAction</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; at-voc-new:action-code [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:isSubmittedForDespatchAdvice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:isSubmittedForDespatchAdvice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo-ful:DespatchAdvice [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:isSubmittedForDespatchLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:isSubmittedForDespatchLine</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdviceLine &#8594; epo-ful:DespatchLine [1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:isSubmittedForShipment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:isSubmittedForShipment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo-ful:ShipmentInformation [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:specifiesBuyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:specifiesBuyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo:Buyer (external) [0..1]</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">epo:specifiesSeller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:specifiesConsignee</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo-ord:Consignee (external) [1..*]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:specifiesDespatcher</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo-ful:Despatcher [1]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:specifiesSeller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">epo-ful:ReceiptAdvice &#8594; epo-ord:Seller (external) [0..1]</p></td>
 </tr>
 </tbody>
 </table>
@@ -1107,130 +1208,201 @@
 </div>
 </div>
 </article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+    <a href="https://ted.europa.eu/" target="_blank">TED Website</a>
+  </div>
+</article>
+    </div>
   </div>
 </main>
-</div>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('/home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
 <script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
-<script src="../../_/js/vendor/docsearch-3.6.0.js"></script>
+<script src="../../_/js/vendor/docsearch-2.6.3.js"></script>
 <script src="../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
-<style type="text/css">@import url('/documents/d/global/custom');</style>
+<style type="text/css">
+    @import url('/documents/d/global/custom');
+</style>
 
 <div class="footer">
-  <div class="three-columns">
+    <div class="three-columns">
 
-      <div class="col-md-12 col-lg-4">
-          <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png" height="48"/></a></div>
-      </div>
+        <div class="col-md-12 col-lg-4">
+            <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img
+                        alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png"
+                        height="48" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+            <div class="ted-footer__rich-text">
+                <p>This website is managed by:
+                    <u>
+                        <a href="https://op.europa.eu/en/home" target="_blank">Publications Office of the European
+                            Union</a>
+                    </u>
+                </p>
 
-      <div class="col-md-12 col-lg-4">
+            </div>
+        </div>
 
-          <h3 class="h3-footer">Need Help?</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
-              <li class="li-footer"><a href="https://simap.ted.europa.eu/contact">Contact the TED Helpdesk</a></li>
-          </ul>
+        <div class="col-md-12 col-lg-4">
 
-          <h3 class="h3-footer">Follow us</h3>
-          <ul class="ul-footer">
-              <li>
-                  <a href="https://twitter.com/eulawdatapubs"> <img src="../../_/img/twitter.svg" class="icon-footer"/><span>Twitter</span></a>
-                  <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img src="../../_/img/youtube.svg" class="icon-footer-2nd"/><span>YouTube</span></a>
-              </li>
-          </ul>
+            <h3 class="ted-footer__title">Need Help?</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/contact">Contact the TED Helpdesk</a></li>
+            </ul>
 
-          <h3 class="h3-footer">Legal</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/legal-notices/accessibility-statement">Accessibility</a></li>
-          </ul>
+            <h3 class="ted-footer__title">Follow us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer">
+                    <a href="https://twitter.com/EUTenders"> <img src="../../_/img/twitter.svg"
+                            class="icon-footer" /><span>X/Twitter</span></a>
+                    <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img
+                            src="../../_/img/youtube.svg" class="icon-footer-2nd" /><span>YouTube</span></a>
+                </li>
+            </ul>
 
-      </div>
+            <h3 class="ted-footer__title">Legal</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/legal-notice" target="_blank">Legal Notice</a>
+                </li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/cookie-choice" target="_blank">Cookies</a>
+                </li>
+                <li class="li-footer"><a
+                        href="https://ted.europa.eu/en/accessibility"
+                        target="_blank">Accessibility</a>
+                </li>
+            </ul>
 
-      <div class="col-md-12 col-lg-4">
+        </div>
 
-          <h3 class="h3-footer">About us</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/about-publication-office-of-the-european-union">Our mission, vision, and values</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/general-publications/">Newsletter</a></li>
-          </ul>
+        <div class="col-md-12 col-lg-4">
 
-          <h3 class="h3-footer">Other services</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
-              <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
-              <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
-              <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
-          </ul>
-      </div>
-  </div>
+            <h3 class="ted-footer__title">About us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/">About TED</a></li>
+            </ul>
 
-  <div class="three-columns">
-      <div class="col-md-12 col-lg-4">
-          <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+            <h3 class="ted-footer__title">Other services</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+                <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+                <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+                <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
+            </ul>
+        </div>
+    </div>
 
-          <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union" class="ls-op" /></a></div>
-          <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a></p>
-          <div style="margin-top: 20px" >
-            <h3>This website is managed by<h3>
-            <img src="../../_/img/op-logo-with-name.svg" class="logo" />
-          </div>
+    <div class="three-columns">
+        <div class="col-md-12 col-lg-4">
+            <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
 
-      </div>
-      <div class="col-md-12 col-lg-4">
-          <h3 class="h3-footer">Contact the EU</h3>
+            <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union"
+                        class="ls-op" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+           
+            <div class="ted-footer__rich-text">
+                <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span
+                            style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a>
+                </p>
 
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other Telephone options</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via our contact forms</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of the EU centres</a></li>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <h3 class="ted-footer__title">Contact the EU</h3>
 
-          </ul>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other
+                        Telephone options</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via
+                        our contact forms</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of
+                        the EU centres</a></li>
 
-          <h3 class="h3-footer">Social Media</h3>
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+            </ul>
 
-          </ul>
+            <h3 class="ted-footer__title">Social Media</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a
+                        href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i
+                            aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
 
-          <h3 class="h3-footer">Legal</h3>
+            </ul>
 
-          <ul class="ul-footer">
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a></li>
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy Policy</a></li>
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
-              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
-          </ul>
-      </div>
-      <div class="col-md-12 col-lg-4">
-          <h3 class="h3-footer">EU institutions</h3>
+            <h3 class="ted-footer__title">Legal</h3>
 
-          <ul class="ul-footer">
-              <li class="li-footer"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
-              <li class="li-footer"><a href="https://www.consilium.europa.eu/en/european-council/">European Council</a></li>
-              <li class="li-footer"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a></li>
-              <li class="li-footer"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
-              <li class="li-footer"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the European Union (CJEU)</a></li>
-              <li class="li-footer"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank (ECB)</a></li>
-              <li class="li-footer"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
-              <li class="li-footer"><a href="https://www.eeas.europa.eu/_en">European External Action Services (EEAS)</a></li>
-              <li class="li-footer"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee (EESC)</a></li>
-              <li class="li-footer"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a></li>
-              <li class="li-footer"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
-              <li class="li-footer"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
-              <li class="li-footer"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor (EDPS)</a></li>
-              <li class="li-footer"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
-              <li class="li-footer"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a></li>
-              <li class="li-footer"><a href="https://op.europa.eu/en/home">Publications Office of the European Union</a></li>
-              <li class="li-footer"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a></li>
-          </ul>
-      </div>
+            <ul class="ul-footer">
+                <li class="li-footer"><a aria-labelledby="section-title-op"
+                        href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a>
+                </li>
+                <li class="li-footer"><a aria-labelledby="section-title-op"
+                        href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy
+                        Policy</a></li>
+                <li class="li-footer"><a aria-labelledby="section-title-op"
+                        href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
+                <li class="li-footer"><a aria-labelledby="section-title-op"
+                        href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
+            </ul>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <h3 class="ted-footer__title">EU institutions</h3>
 
-      <script>
-        ECL.autoInit();
-      </script>
-  </div>
+            <ul class="ul-footer">
+                <li class="li-footer institutions"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
+                <li class="li-footer institutions"><a href="https://www.consilium.europa.eu/en/european-council/">European
+                        Council</a></li>
+                <li class="li-footer institutions"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a>
+                </li>
+                <li class="li-footer institutions"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
+                <li class="li-footer institutions"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the
+                        European Union (CJEU)</a></li>
+                <li class="li-footer institutions"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank
+                        (ECB)</a></li>
+                <li class="li-footer institutions"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
+                <li class="li-footer institutions"><a href="https://www.eeas.europa.eu/_en">European External Action Services
+                        (EEAS)</a></li>
+                <li class="li-footer institutions"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee
+                        (EESC)</a></li>
+                <li class="li-footer institutions"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a>
+                </li>
+                <li class="li-footer institutions"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
+                <li class="li-footer institutions"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
+                <li class="li-footer institutions"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor
+                        (EDPS)</a></li>
+                <li class="li-footer institutions"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
+                <li class="li-footer institutions"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a>
+                </li>
+                <li class="li-footer institutions"><a href="https://op.europa.eu/en/home">Publications Office of the European
+                        Union</a></li>
+                <li class="li-footer institutions"><a
+                        href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a>
+                </li>
+                <li class="li-footer search-institutions"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">Search for EU institutions</a></li>
+            </ul>
+        </div>
+
+        <script>
+            ECL.autoInit();
+        </script>
+    </div>
 </div>  </body>
 </html>
