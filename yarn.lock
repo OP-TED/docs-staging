@@ -239,7 +239,7 @@ __metadata:
   version: 8.4.4
   resolution: "@nestjs/common@npm:8.4.4"
   dependencies:
-    axios: "npm:0.26.1"
+    axios: "npm:0.28.0"
     iterare: "npm:1.2.1"
     tslib: "npm:2.3.1"
     uuid: "npm:8.3.2"
@@ -262,7 +262,7 @@ __metadata:
 
 "@nestjs/core@npm:8.4.4":
   version: 8.4.4
-  resolution: "@nestjs/core@npm:8.4.4"
+  resolution: "@nestjs/core@npm:9.0.5"
   dependencies:
     "@nuxtjs/opencollective": "npm:0.3.2"
     fast-safe-stringify: "npm:2.1.1"
@@ -294,7 +294,7 @@ __metadata:
   resolution: "@npmcli/fs@npm:2.1.2"
   dependencies:
     "@gar/promisify": "npm:^1.1.3"
-    semver: "npm:^7.3.5"
+    semver: "npm:^7.5.2"
   checksum: 82bc61f832f45e2033ea3522f66a94de50e5561577b1f3af226576ad5467c240375eba948d4ea1ca146e7871740fb3005e7c4f3f1ab616e79a5a5cedd9fdb789
   languageName: node
   linkType: hard
@@ -691,11 +691,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:0.26.1":
-  version: 0.26.1
-  resolution: "axios@npm:0.26.1"
+"axios@npm:0.28.0":
+  version: 0.28.0
+  resolution: "axios@npm:0.28.0"
   dependencies:
-    follow-redirects: "npm:^1.14.8"
+    follow-redirects: "npm:^1.15.6"
   checksum: ac969975b2e196b6e6075353688eeeb540c5cf8447c2914f90323165dfc43cd26cc31e601ed36f5711f5cd7dc76654a7c1b0db142c669152d5d600c9d3516307
   languageName: node
   linkType: hard
@@ -825,9 +825,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"braces@npm:^2.3.1, braces@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "braces@npm:2.3.2"
+"braces@npm:^2.3.1, braces@npm:^2.3.2, braces@^3.0.3":
+  version: 3.0.3
+  resolution: "braces@npm:3.0.3"
   dependencies:
     arr-flatten: "npm:^1.1.0"
     array-unique: "npm:^0.3.2"
@@ -844,8 +844,8 @@ __metadata:
   linkType: hard
 
 "braces@npm:~3.0":
-  version: 3.0.2
-  resolution: "braces@npm:3.0.2"
+  version: 3.0.3
+  resolution: "braces@npm:3.0.3"
   dependencies:
     fill-range: "npm:^7.0.1"
   checksum: 1aa7f7f39e1dff23894196303515503dd945f36adcb78073ee067b421ecc595265556911183b24d1bc4e51011d3536d63d117cb4493e5123fcc7456596a93637
@@ -920,7 +920,7 @@ __metadata:
     promise-inflight: "npm:^1.0.1"
     rimraf: "npm:^3.0.2"
     ssri: "npm:^9.0.0"
-    tar: "npm:^6.1.11"
+    tar: "npm:^6.2.1"
     unique-filename: "npm:^2.0.0"
   checksum: 54f39565219c47ac624e0efeae123551b5391844f18ae69d0c344f51ce2b9ae4adec62316e5eae7e11cf83c3c21f726a0117d55400182779dce687887ce3f50e
   languageName: node
@@ -1021,9 +1021,9 @@ __metadata:
   dependencies:
     anymatch: "npm:^2.0.0"
     async-each: "npm:^1.0.1"
-    braces: "npm:^2.3.2"
+    braces: "npm:^3.0.3"
     fsevents: "npm:^1.2.7"
-    glob-parent: "npm:^3.1.0"
+    glob-parent: "npm:^^5.1.2"
     inherits: "npm:^2.0.3"
     is-binary-path: "npm:^1.0.0"
     is-glob: "npm:^4.0.0"
@@ -1330,8 +1330,8 @@ __metadata:
   linkType: hard
 
 "convict@npm:~6.2":
-  version: 6.2.3
-  resolution: "convict@npm:6.2.3"
+  version: 6.2.4
+  resolution: "convict@npm:6.2.4"
   dependencies:
     lodash.clonedeep: "npm:^4.5.0"
     yargs-parser: "npm:^20.2.7"
@@ -1419,7 +1419,7 @@ __metadata:
   version: 1.0.1
   resolution: "d@npm:1.0.1"
   dependencies:
-    es5-ext: "npm:^0.10.50"
+    es5-ext: "npm:^0.10.63"
     type: "npm:^1.0.1"
   checksum: 41085148f32d71ee2ea698db3bcc00115a83a44251ffc7180d66b3ff2b7fd9482a8374b048062cb0f1996df5f3449745894c87d2d449c711c5145db78c9559bf
   languageName: node
@@ -1476,8 +1476,8 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decode-uri-component@npm:^0.2.0":
-  version: 0.2.0
+"decode-uri-component@npm:^0.2.1":
+  version: 0.2.1
   resolution: "decode-uri-component@npm:0.2.0"
   checksum: 6944873192e84e58c4fd6483ce8846f2907b4ab1f0170a44bcc259fd976b7f6eecaad2016c9ada00a75155692b443f7970036c60a4d78853d0a0e2bec6f55ec8
   languageName: node
@@ -1773,9 +1773,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es5-ext@npm:^0.10.35, es5-ext@npm:^0.10.46, es5-ext@npm:^0.10.50":
-  version: 0.10.62
-  resolution: "es5-ext@npm:0.10.62"
+"es5-ext@npm:^0.10.35, es5-ext@npm:^0.10.46, es5-ext@npm:^0.10.50, es5-ext@npm:^0.10.63":
+  version: 0.10.63
+  resolution: "es5-ext@npm:0.10.63"
   dependencies:
     es6-iterator: "npm:^2.0.3"
     es6-symbol: "npm:^3.1.3"
@@ -1796,7 +1796,7 @@ __metadata:
   resolution: "es6-iterator@npm:2.0.3"
   dependencies:
     d: "npm:1"
-    es5-ext: "npm:^0.10.35"
+    es5-ext: "npm:^0.10.63"
     es6-symbol: "npm:^3.1.1"
   checksum: 20961c24246d7bfd7c10d182c370022a3cd4fb72162ac6194d45554b8b949e5997e03d98bc33219f65e9a9d707e75359f66e87476a14e0602efb6748cd9b5729
   languageName: node
@@ -1817,7 +1817,7 @@ __metadata:
   resolution: "es6-weak-map@npm:2.0.3"
   dependencies:
     d: "npm:1"
-    es5-ext: "npm:^0.10.46"
+    es5-ext: "npm:^0.10.63"
     es6-iterator: "npm:^2.0.3"
     es6-symbol: "npm:^3.1.1"
   checksum: 29ea0eb1a61a066a2124d6862b1ded5718d124fff127079eebc88bd35238c2d557319e2376f1b7604ce3e8aaac7a4f9be7a43dc7c63b3e066ed4236c7e45d919
@@ -2143,9 +2143,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.14.8":
+"follow-redirects@npm:^1.15.6":
   version: 1.15.2
-  resolution: "follow-redirects@npm:1.15.2"
+  resolution: "follow-redirects@npm:1.15.6"
   peerDependenciesMeta:
     debug:
       optional: true
@@ -2431,7 +2431,7 @@ __metadata:
     es6-error: "npm:^4.1.1"
     matcher: "npm:^3.0.0"
     roarr: "npm:^2.15.3"
-    semver: "npm:^7.3.2"
+    semver: "npm:^7.5.2"
     serialize-error: "npm:^7.0.1"
   checksum: 18aca98934ad7c428541820a2e696a8e4bdd5a1a2afe2efb784a1fa91fcdcd1dd58de235c3dfa5f91e2ad5822ec01a32f7206500201936cd322b25f5744cf980
   languageName: node
@@ -2717,9 +2717,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-cache-semantics@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "http-cache-semantics@npm:4.1.0"
+"http-cache-semantics@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "http-cache-semantics@npm:4.1.1"
   checksum: ccfe23dd2729bc564ab419330e0c4646a1247e8dd728a4a6b3ab427b5243d2e0afea0c6fe690ff9ead43d02bd84cc5240e996543c4c87866f272e26e40540acd
   languageName: node
   linkType: hard
@@ -2906,8 +2906,8 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ip@npm:^2.0.0":
-  version: 2.0.0
+"ip@npm:^2.0.1":
+  version: 2.0.1
   resolution: "ip@npm:2.0.0"
   checksum: 42a7cf251b844d98a4c3373d06997b991cd1a7f8a5d43bcf2b4f610517d39c5504f6eb3e73e77f5c1453ac766690e82dab28a8a05a49a6fd7d4a40fad93640e9
   languageName: node
@@ -3280,7 +3280,7 @@ __metadata:
 
 "json5@npm:~2.2":
   version: 2.2.1
-  resolution: "json5@npm:2.2.1"
+  resolution: "json5@npm:2.2.2"
   bin:
     json5: lib/cli.js
   checksum: 8bb433c397375ec5b9150e08d1a323acf5258d51126c55e11e838136f201c197e1589cba42559c97d39bac54ed1293de1e5caff17ce0dc624bfd845c10d9eaba
@@ -3465,7 +3465,7 @@ __metadata:
   dependencies:
     agentkeepalive: "npm:^4.2.1"
     cacache: "npm:^16.1.0"
-    http-cache-semantics: "npm:^4.1.0"
+    http-cache-semantics: "npm:^4.1.1"
     http-proxy-agent: "npm:^5.0.0"
     https-proxy-agent: "npm:^5.0.0"
     is-lambda: "npm:^1.0.1"
@@ -3542,7 +3542,7 @@ __metadata:
   dependencies:
     arr-diff: "npm:^4.0.0"
     array-unique: "npm:^0.3.2"
-    braces: "npm:^2.3.1"
+    braces: "npm:^3.0.3"
     define-property: "npm:^2.0.2"
     extend-shallow: "npm:^3.0.2"
     extglob: "npm:^2.0.4"
@@ -3846,8 +3846,8 @@ __metadata:
     nopt: "npm:^6.0.0"
     npmlog: "npm:^6.0.0"
     rimraf: "npm:^3.0.2"
-    semver: "npm:^7.3.5"
-    tar: "npm:^6.1.2"
+    semver: "npm:^7.5.2"
+    tar: "npm:^6.2.1"
     which: "npm:^2.0.2"
   bin:
     node-gyp: bin/node-gyp.js
@@ -5206,7 +5206,7 @@ __metadata:
   resolution: "source-map-resolve@npm:0.5.3"
   dependencies:
     atob: "npm:^2.1.2"
-    decode-uri-component: "npm:^0.2.0"
+    decode-uri-component: "npm:^0.2.1"
     resolve-url: "npm:^0.2.1"
     source-map-url: "npm:^0.4.0"
     urix: "npm:^0.1.0"
@@ -5497,9 +5497,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar@npm:^6.1.11, tar@npm:^6.1.2":
-  version: 6.1.12
-  resolution: "tar@npm:6.1.12"
+"tar@npm:^6.1.11, tar@npm:^6.2.1":
+  version: 6.2.1
+  resolution: "tar@npm:6.2.1"
   dependencies:
     chownr: "npm:^2.0.0"
     fs-minipass: "npm:^2.0.0"
