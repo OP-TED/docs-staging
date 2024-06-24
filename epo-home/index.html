@@ -83,10 +83,26 @@
     <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Documentation</strong></span></span>
+    <a class="nav-link" href="#EPO::guide.adoc">ePO Guide</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../EPO/latest/business.html">Business Overview</a>
+    <a class="nav-link" href="../EPO/latest/conceptual.html">Conceptual Models</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../EPO/latest/glossaries.html">Glossaries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../EPO/latest/release-notes.html">Release Notes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="methodology2024.html">Methodology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="versioning.html">ePO Versioning Rules</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -101,32 +117,15 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../EPO/latest/conceptual.html">Conceptual Models</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../EPO/latest/glossaries.html">Glossaries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../EPO/latest/release-notes.html">Release Notes</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Reference Documentation</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="references.html">Reference Documents</a>
+    <a class="nav-link" href="REFreferences.html">Other Reference Documents</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="history.html">History and Planned Developments</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="methodology2024.html">Methodology</a>
+</ul>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="versioning.html">ePO Versioning Rules</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Working Group Documents</strong></span></span>
-  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../epo-wgm/wider.html">Quarterly Meetings</a>
   </li>
@@ -237,7 +236,33 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The eProcurement Ontology (ePO) defines and develops the semantic ontology related to EU public procurement. It creates and maintains the ontology according to EU regulations and directives.</p>
+<p><span class="underline">What it is:</span>
+The eProcurement Ontology (ePO) is a semantic ontology related to EU public procurement.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">What it does:</span>
+ePO is a tool that conceptualizes, formally encodes and provides structured data about public procurement in both human and machine-readable formats according to EU regulations and directives.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">Scope:</span>
+ePO covers public Procurement from end to end, i.e. from notification, to tendering to awarding, ordering, invoicing and payment.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">How:</span>
+In order to build and maintain the ontology, OP engaged a Working Group (WG) of experts with the mission of building consensus on the analysis results and deliverables developed by the OP’s teams.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">Where to start from:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Introductory course on EPO</p>
+</li>
+<li>
+<p><a href="guide.html" class="xref page">User&#8217;s Guide to ePO</a></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The following topics are included in this version of the eProcurement Ontology documentation:</p>
@@ -250,12 +275,12 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="../EPO/latest/business.html" class="xref page">Business Overview</a><br>
-Business Overview of this release</p>
+<p><a href="guide.html" class="xref page">User&#8217;s Guide to ePO</a><br>
+A short user&#8217;s guide of the ePO project</p>
 </li>
 <li>
 <p><a href="../EPO/latest/conceptual.html" class="xref page">Conceptual Models</a><br>
-The release specific conceptual Model(s)</p>
+The release specific conceptual Model(s) of the ontology.</p>
 </li>
 <li>
 <p><a href="../EPO/latest/glossaries.html" class="xref page">Glossaries</a><br>
@@ -275,24 +300,36 @@ The release notes as on GitHub</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="references.html" class="xref page">Reference Documentation</a><br>
+<p><a href="methodology2024.html" class="xref page">Methodology</a><br>
+The ePO Methodology</p>
+</li>
+<li>
+<p><a href="versioning.html" class="xref page">ePO Versioning Rules</a><br>
+An overview of the versioning rules for releases</p>
+</li>
+<li>
+<p><a href="stories.html" class="xref page">User Stories and Natural Language Statements</a><br>
+Ontology Requirements Specification Documents (ORSD), containing user stories and natural language statements used when developing new modules.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="stories_eAccess.html" class="xref page">eAccess (ESPD Request)</a><br>
+ORSD for eAccess module</p>
+</li>
+<li>
+<p><a href="stories_eSubmission.html" class="xref page">eSubmission (ESPD Response)</a><br>
+ORSD for eSubmission module</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="REFreferences.html" class="xref page">Other Reference Documents</a><br>
 Useful reference documents in the development of the ePO</p>
 </li>
 <li>
 <p><a href="history.html" class="xref page">History and Planned Developments</a><br>
 Milestones in the project and future development plans</p>
-</li>
-<li>
-<p><a href="methodology2024.html" class="xref page">ePO Methodology</a><br>
-The ePO Methodology</p>
-</li>
-<li>
-<p><a href="stories.html" class="xref page">User Stories and Natural Language Statements</a><br>
-User Stories and Natural Language Statements used when developing new modules</p>
-</li>
-<li>
-<p><a href="versioning.html" class="xref page">ePO Versioning Rules</a><br>
-An overview of the versioning rules for releases</p>
 </li>
 </ul>
 </div>
