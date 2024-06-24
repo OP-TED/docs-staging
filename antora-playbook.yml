@@ -52,7 +52,7 @@ content:
   ### ePO Documentation
   - url: https://github.com/OP-TED/epo-docs.git
     start_path: /
-    branches: main, v*, wg-meetings
+    branches: feature/docUpdate, v*, wg-meetings
 
   ###  ESPD
   - url: https://github.com/OP-TED/espd-docs.git
@@ -64,6 +64,11 @@ content:
   - url: https://github.com/OP-TED/tedapi-docs.git
     start_path: /
     branches: main # The "main" branch contains unversioned content.
+
+  ### model2owl
+  - url: https://github.com/OP-TED/ted-model2owl-docs
+    start_path: /
+    branches: cristian_review 
 
   ### TED Semantic Web Service
   - url: https://github.com/OP-TED/ted-rdf-docs
