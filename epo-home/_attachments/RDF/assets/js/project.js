@@ -3,7 +3,7 @@ pref:{
 acc:1,
 rkt:1,
 hsr:0,
-atp:false
+atp:true
 },
 si528:{
 name:'Image_8',
@@ -55828,8 +55828,8 @@ visible:'1'
 si6201:{
 name:'List_28',
 type:1268,
-from:3970,
-to:4296,
+from:4297,
+to:4623,
 rp:0,
 rpa:0,
 mdi:'si6201c',
@@ -55995,8 +55995,8 @@ vb:[-1,-1,1,1]
 si6195:{
 name:'List_Group_28',
 type:1268,
-from:3970,
-to:4296,
+from:4297,
+to:4623,
 rp:0,
 rpa:0,
 mdi:'si6195c',
@@ -56020,7 +56020,7 @@ isOverridden:true
 }
 ]
 ,
-widgetProps:'{"visibilityInfo":{"slide-item-heading":false,"slide-item-subtitle":false,"slide-item-body":true,"slide-item-buttons":false,"card":false},"groupedItemsVisibility":{"slide-item-buttons":1},"padding":{"top":20,"bottom":20,"left":20,"right":20},"alignment":{"slide-item-heading":"LEFT","slide-item-subtitle":"LEFT","slide-item-body":"LEFT","slide-item-buttons":"LEFT"},"canBeCard":true,"appearanceProperties":{"cornerRadius":{"type":1,"value":{"topLeft":8,"bottomLeft":8,"bottomRight":8,"topRight":8}},"border":{"enabled":false,"color":"var(--c4)","size":8,"type":0},"shadow":{"shadowX":0,"shadowY":4,"shadowBlur":8,"enabled":true,"color":"var(--design-option-color3)"}},"designOptionStyles":{"all":{"display":"flex","flexDirection":"column"},"tablet":{},"mobile":{}}}',
+widgetProps:'{"visibilityInfo":{"slide-item-heading":false,"slide-item-subtitle":false,"slide-item-body":true,"slide-item-buttons":false,"card":true},"groupedItemsVisibility":{"slide-item-buttons":1},"padding":{"top":20,"bottom":20,"left":20,"right":20},"alignment":{"slide-item-heading":"LEFT","slide-item-subtitle":"LEFT","slide-item-body":"LEFT","slide-item-buttons":"LEFT"},"canBeCard":true,"appearanceProperties":{"cornerRadius":{"type":1,"value":{"topLeft":8,"bottomLeft":8,"bottomRight":8,"topRight":8}},"border":{"enabled":false,"color":"var(--c4)","size":8,"type":0},"shadow":{"shadowX":0,"shadowY":4,"shadowBlur":8,"enabled":true,"color":"var(--design-option-color3)"}},"designOptionStyles":{"all":{"display":"flex","flexDirection":"column"},"tablet":{},"mobile":{}}}',
 parentGroup:'si6201',
 retainState:false,
 immo:false,
@@ -56038,7 +56038,7 @@ t:1250
 ]
 ,
 containerType:'list-card',
-widgetProps:'{"visibilityInfo":{"slide-item-heading":false,"slide-item-subtitle":false,"slide-item-body":true,"slide-item-buttons":false,"card":false},"groupedItemsVisibility":{"slide-item-buttons":1},"padding":{"top":20,"bottom":20,"left":20,"right":20},"alignment":{"slide-item-heading":"LEFT","slide-item-subtitle":"LEFT","slide-item-body":"LEFT","slide-item-buttons":"LEFT"},"canBeCard":true,"appearanceProperties":{"cornerRadius":{"type":1,"value":{"topLeft":8,"bottomLeft":8,"bottomRight":8,"topRight":8}},"border":{"enabled":false,"color":"var(--c4)","size":8,"type":0},"shadow":{"shadowX":0,"shadowY":4,"shadowBlur":8,"enabled":true,"color":"var(--design-option-color3)"}},"designOptionStyles":{"all":{"display":"flex","flexDirection":"column"},"tablet":{},"mobile":{}}}',
+widgetProps:'{"visibilityInfo":{"slide-item-heading":false,"slide-item-subtitle":false,"slide-item-body":true,"slide-item-buttons":false,"card":true},"groupedItemsVisibility":{"slide-item-buttons":1},"padding":{"top":20,"bottom":20,"left":20,"right":20},"alignment":{"slide-item-heading":"LEFT","slide-item-subtitle":"LEFT","slide-item-body":"LEFT","slide-item-buttons":"LEFT"},"canBeCard":true,"appearanceProperties":{"cornerRadius":{"type":1,"value":{"topLeft":8,"bottomLeft":8,"bottomRight":8,"topRight":8}},"border":{"enabled":false,"color":"var(--c4)","size":8,"type":0},"shadow":{"shadowX":0,"shadowY":4,"shadowBlur":8,"enabled":true,"color":"var(--design-option-color3)"}},"designOptionStyles":{"all":{"display":"flex","flexDirection":"column"},"tablet":{},"mobile":{}}}',
 option:'',
 padding:{
 left:0,
@@ -57606,8 +57606,8 @@ vb:[-1,-1,2,2]
 Slide6487:{
 lb:'L2-3 End',
 id:6487,
-from:3970,
-to:4296,
+from:4297,
+to:4623,
 iols:0,
 i360qs:false,
 sdu:10.9,
@@ -57660,13 +57660,13 @@ bc:'#e5e5e5',
 fa:1,
 fe:true,
 imgf:{
-ip:'dr/06962.png',
+ip:'dr/0553.png',
 tiletype:1,
 imageFocus:0,
 extraImageProps:'{"bgImageOpacity":50,"bgImageBlur":0,"bgImageBrightness":0,"bgImageContrast":0}',
-id:6962,
-w:1366,
-h:768,
+id:553,
+w:1082,
+h:892,
 tsp:50
 }
 ,
@@ -57728,7 +57728,7 @@ passFailPassingScoreTypeInPrecent:true,
 passFailPassingScoreValue:80,
 showRetake:false,
 showReviewButtons:true,
-oid:'$$OBJECTIVE_ID',
+oid:'Quiz_2024625123546',
 quizVariableVsIdMap:{
 learnerId:'var346',
 learnerName:'var347',
@@ -58124,7 +58124,7 @@ slideVideos:['si2763','si2809','si2849'],
 questions:'',
 autoplay:false,
 preloader:true,
-preloaderFileName:'dr/loading.gif',
+preloaderFileName:'dr/0553.png',
 preloaderPercentage:100,
 pprtd:false,
 peon:false,
@@ -58536,7 +58536,7 @@ resources:['dr/0419.png']
 ,{
 slideID:5,
 ResourceList:{
-resources:['dr/01458.png','dr/01482.png','dr/01609.png','dr/01733.png','dr/01857.png','dr/01981.png','dr/02105.png']
+resources:['dr/01458.png','dr/01482.png','dr/01609.png','dr/01733.png','dr/01857.png','dr/01981.png','dr/02105.png','dr/02228.svg']
 }
 
 }
@@ -58550,14 +58550,21 @@ resources:['dr/02531.png']
 ,{
 slideID:8,
 ResourceList:{
-resources:['dr/03237.png','dr/03361.png','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png']
+resources:['dr/03202.svg','dr/03215.svg','dr/03237.png','dr/03361.png','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/03980.svg']
 }
 
 }
 ,{
 slideID:9,
 ResourceList:{
-resources:['dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/04405.png','dr/04530.png']
+resources:['dr/03202.svg','dr/03215.svg','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/03980.svg','dr/04405.png','dr/04530.png']
+}
+
+}
+,{
+slideID:11,
+ResourceList:{
+resources:['dr/0419.png']
 }
 
 }

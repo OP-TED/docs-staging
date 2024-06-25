@@ -27294,8 +27294,8 @@ vb:[-1,-1,2,2]
 Slide3845:{
 lb:'End',
 id:3845,
-from:91351,
-to:91656,
+from:91657,
+to:91962,
 iols:0,
 i360qs:false,
 sdu:10.2,
@@ -27347,6 +27347,17 @@ canvasData:{
 bc:'#e5e5e5',
 fa:1,
 fe:true,
+imgf:{
+ip:'dr/04098.png',
+tiletype:1,
+imageFocus:0,
+extraImageProps:'{"bgImageOpacity":100,"bgImageBlur":0,"bgImageBrightness":0,"bgImageContrast":0}',
+id:4098,
+w:1365,
+h:768,
+tsp:50
+}
+,
 iso:true,
 se:false
 }
@@ -28066,7 +28077,14 @@ resources:['dr/04098.png']
 ,{
 slideID:3,
 ResourceList:{
-resources:['dr/01017.png','dr/01041.png','dr/01168.png','dr/01292.png','dr/01416.png','dr/01540.png','dr/01664.png']
+resources:['dr/01017.png','dr/01041.png','dr/01168.png','dr/01292.png','dr/01416.png','dr/01540.png','dr/01664.png','dr/01787.svg']
+}
+
+}
+,{
+slideID:8,
+ResourceList:{
+resources:['dr/04098.png']
 }
 
 }
