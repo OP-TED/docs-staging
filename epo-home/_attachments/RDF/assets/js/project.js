@@ -3,7 +3,7 @@ pref:{
 acc:1,
 rkt:1,
 hsr:0,
-atp:true
+atp:false
 },
 si528:{
 name:'Image_8',
@@ -2107,11 +2107,11 @@ bc:'#e5e5e5',
 fa:1,
 fe:true,
 imgf:{
-ip:'dr/0671.png',
+ip:'dr/01197.png',
 tiletype:0,
 imageFocus:0,
 extraImageProps:'',
-id:671,
+id:1197,
 w:1365,
 h:768,
 tsp:50
@@ -3164,11 +3164,11 @@ bc:'#e5e5e5',
 fa:1,
 fe:true,
 imgf:{
-ip:'dr/0887.png',
+ip:'dr/01197.png',
 tiletype:0,
 imageFocus:0,
 extraImageProps:'{"bgImageOpacity":100,"bgImageBlur":0,"bgImageBrightness":0,"bgImageContrast":0}',
-id:887,
+id:1197,
 w:1365,
 h:768,
 tsp:50
@@ -6238,11 +6238,11 @@ bc:'#e5e5e5',
 fa:1,
 fe:true,
 imgf:{
-ip:'dr/0887.png',
+ip:'dr/01197.png',
 tiletype:0,
 imageFocus:0,
 extraImageProps:'{"bgImageOpacity":100,"bgImageBlur":0,"bgImageBrightness":0,"bgImageContrast":0}',
-id:887,
+id:1197,
 w:1365,
 h:768,
 tsp:50
@@ -20992,17 +20992,6 @@ canvasData:{
 bc:'#e5e5e5',
 fa:1,
 fe:true,
-imgf:{
-ip:'dr/02423.png',
-tiletype:1,
-imageFocus:0,
-extraImageProps:'{"bgImageOpacity":100,"bgImageBlur":0,"bgImageBrightness":0,"bgImageContrast":0,"viewBox":{"width":0.7145833333333333,"height":0.9990740740740741,"x":0.28541666666666665,"y":0}}',
-id:2423,
-w:1366,
-h:768,
-tsp:50
-}
-,
 iso:true,
 se:false
 }
@@ -21011,11 +21000,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-2352:{
+2374:{
 ts:''
 }
 ,
-2374:{
+2352:{
 ts:''
 }
 
@@ -40721,11 +40710,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-4064:{
+4086:{
 ts:''
 }
 ,
-4086:{
+4064:{
 ts:''
 }
 
@@ -55804,11 +55793,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-5255:{
+5233:{
 ts:''
 }
 ,
-5233:{
+5255:{
 ts:''
 }
 
@@ -55828,8 +55817,8 @@ visible:'1'
 si6201:{
 name:'List_28',
 type:1268,
-from:4297,
-to:4623,
+from:3970,
+to:4296,
 rp:0,
 rpa:0,
 mdi:'si6201c',
@@ -55995,8 +55984,8 @@ vb:[-1,-1,1,1]
 si6195:{
 name:'List_Group_28',
 type:1268,
-from:4297,
-to:4623,
+from:3970,
+to:4296,
 rp:0,
 rpa:0,
 mdi:'si6195c',
@@ -57606,8 +57595,8 @@ vb:[-1,-1,2,2]
 Slide6487:{
 lb:'L2-3 End',
 id:6487,
-from:4297,
-to:4623,
+from:3970,
+to:4296,
 iols:0,
 i360qs:false,
 sdu:10.9,
@@ -58319,15 +58308,6 @@ ipiv:{
 
 }
 ,{
-ip:'dr/02423.png',
-ipiv:{
-360:1,
-600:1,
-972:1
-}
-
-}
-,{
 ip:'dr/02531.png',
 ipiv:{
 360:1,
@@ -58490,34 +58470,7 @@ ipiv:{
 
 }
 ,{
-ip:'dr/0671.png',
-ipiv:{
-360:1,
-600:1,
-972:1
-}
-
-}
-,{
-ip:'dr/06962.png',
-ipiv:{
-360:1,
-600:1,
-972:1
-}
-
-}
-,{
 ip:'dr/0713.svg',
-ipiv:{
-360:1,
-600:1,
-972:1
-}
-
-}
-,{
-ip:'dr/0887.png',
 ipiv:{
 360:1,
 600:1,
@@ -58536,7 +58489,7 @@ resources:['dr/0419.png']
 ,{
 slideID:5,
 ResourceList:{
-resources:['dr/01458.png','dr/01482.png','dr/01609.png','dr/01733.png','dr/01857.png','dr/01981.png','dr/02105.png','dr/02228.svg']
+resources:['dr/01458.png','dr/01482.png','dr/01609.png','dr/01733.png','dr/01857.png','dr/01981.png','dr/02105.png']
 }
 
 }
@@ -58550,21 +58503,14 @@ resources:['dr/02531.png']
 ,{
 slideID:8,
 ResourceList:{
-resources:['dr/03202.svg','dr/03215.svg','dr/03237.png','dr/03361.png','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/03980.svg']
+resources:['dr/03237.png','dr/03361.png','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png']
 }
 
 }
 ,{
 slideID:9,
 ResourceList:{
-resources:['dr/03202.svg','dr/03215.svg','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/03980.svg','dr/04405.png','dr/04530.png']
-}
-
-}
-,{
-slideID:11,
-ResourceList:{
-resources:['dr/0419.png']
+resources:['dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/04405.png','dr/04530.png']
 }
 
 }
