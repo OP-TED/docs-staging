@@ -83,7 +83,10 @@
     <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#EPO::guide.adoc">ePO Guide</a>
+    <span class="nav-text"><span class="separated"><strong>General Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide.html">ePO Guide</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../EPO/latest/conceptual.html">Conceptual Models</a>
@@ -94,10 +97,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../EPO/latest/release-notes.html">Release Notes</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference Documents</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="methodology2024.html">Methodology</a>
   </li>
@@ -122,10 +124,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="history.html">History and Planned Developments</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Working Group Documents</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../epo-wgm/wider.html">Quarterly Meetings</a>
   </li>
@@ -266,7 +267,7 @@ and then find the winner of the tender award outcome.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Now we need to find an attribute to identify that buyer. Searching the ontology, we find the role hierarchy diagram (Fig.A2),
+<p>Now we need to find an attribute to identify that buyer. Searching the glossary for the attributes of epo:Buyer does not yeld a suitable attribute, so we need to look for another class that is a generalization of epo:Buyer.    Searching the ontology, we find the role hierarchy diagram (Fig.A2),
  and decide to use the dct:title attribute of class epo:AgentInRole which is a generalization of class epo:AcquiringParty
 which in turn is a generalization of epo:Buyer.</p>
 </li>

@@ -83,7 +83,10 @@
     <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#EPO::guide.adoc">ePO Guide</a>
+    <span class="nav-text"><span class="separated"><strong>General Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guide.html">ePO Guide</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../EPO/latest/conceptual.html">Conceptual Models</a>
@@ -94,10 +97,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../EPO/latest/release-notes.html">Release Notes</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference Documents</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="methodology2024.html">Methodology</a>
   </li>
@@ -122,10 +124,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="history.html">History and Planned Developments</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Working Group Documents</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../epo-wgm/wider.html">Quarterly Meetings</a>
   </li>
@@ -238,6 +239,9 @@
 <ul class="sectlevel2">
 <li><a href="#_introduction">1. Introduction</a></li>
 <li><a href="#_glossaries_overview">2. Glossaries overview</a></li>
+<li><a href="#_class_names_and_definitions">3. Class names and definitions</a></li>
+<li><a href="#_attributes_datatype_properties_names_and_definitions">4. Attributes (datatype properties) names and definitions</a></li>
+<li><a href="#_predicates_object_properties_and_definitions">5. Predicates (object properties) and definitions</a></li>
 </ul>
 </div>
 <div id="preamble">
@@ -248,13 +252,110 @@
 <div class="sect2">
 <h3 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h3>
 <div class="paragraph">
-<p>In this Guide, we describe the Glossaries of ePO.</p>
+<p>In this Guide, we describe <a href="../EPO/latest/glossaries.html" class="xref page">the Glossaries of ePO</a>. A glossary is an alphabetical list of terms in a particular domain of knowledge with the definitions for those terms. Specifically, the ePO glossaries contain all the Classes, predicates and Attributes of the Ontology along with their definitions.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_glossaries_overview"><a class="anchor" href="#_glossaries_overview"></a>2. Glossaries overview</h3>
 <div class="paragraph">
-<p>As seen in figure 1, there is one glossary per module.</p>
+<p>As seen in figure 1, there is one glossary per module for each specific ePO version. Each module is used to describe one specific procurement phase except for the ePO module that contains all the basic concepts that are common to all the other modules.
+There is also the <a href="_attachments/html_reports/glossary/ePO_combined_glossary.html">The ePO combined Glossary</a> that contains the concepts of all the modules combined.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="docUpdateImages/Glossary/Glossary1.png" alt="Glossary1">
+</div>
+</div>
+<div class="paragraph">
+<p><em> Figure 1: <a href="../EPO/latest/glossaries.html" class="xref page">Module Glossaries</a>. Note the 4.0.1-rc2 version field on the top right.
+</em></p>
+</div>
+<div class="paragraph">
+<p>Although all the glossaries are similar in structure, for the purposes of this guide we are going to concentrate on the <a href="_attachments/html_reports/glossary/ePO_combined_glossary.html">combined Glossary</a></p>
+</div>
+<div class="paragraph">
+<p>Each glossary contains three tables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Class names and definitions (Figure 2)</p>
+</li>
+<li>
+<p>Attributes (datatype properties) names and definitions
+(Figure 3)</p>
+</li>
+<li>
+<p>Predicates (object properties) and definitions (Figure 4)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_class_names_and_definitions"><a class="anchor" href="#_class_names_and_definitions"></a>3. Class names and definitions</h3>
+<div class="paragraph">
+<p>The first table lists all the Classes in the specific glossary and their definitions. The arrows on the right of the header of each column can be used to short the table alphabetically based on that column. On the right top of the table there is a search field that can be used in order to search for a specific string (character sequence) that is part of a Class or a Definition.</p>
+</div>
+<div class="paragraph">
+<p>On figure 2, we see the results for the String "certifi", That is the classes
+epo-sub:CertificateInformation, epo:Certificate, epo:CertificationLabel, epo:Certifier and epo-acc:ESPDRequest along with their definitions.</p>
+</div>
+<div class="paragraph">
+<p>Note that epo-acc:ESPDRequest appeared because the String "certifi" appears on its definition. Also note the different prefixes of the classes that denote their respective module. Whereas epo:Certificate, epo:CertificationLabel and epo:Certifier belong to the ePO core module, epo-sub:CertificateInformation belongs to the eSubmission module, and epo-acc:ESPDRequest to the eAccess module.</p>
+</div>
+<div class="paragraph">
+<p>The definition of each ePO concept is filled in or updated by the ePO Working Group (WG) on the date indicated in the end of the definition. The specific <a href="../epo-wgm/indiv.html" class="xref page">WG meeting minutes</a> for that meeting can be searched accessed <a href="../epo-wgm/indiv.html" class="xref page">here</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/docUpdateImages/Glossary/glossary2.png" alt="glossary2">
+</div>
+</div>
+<div class="paragraph">
+<p><em> Figure 2: Searching for a Class or Class description containing the string "certifi".
+</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_attributes_datatype_properties_names_and_definitions"><a class="anchor" href="#_attributes_datatype_properties_names_and_definitions"></a>4. Attributes (datatype properties) names and definitions</h3>
+<div class="paragraph">
+<p>The second table as seen of figure 3, contains information related to the attributes of the specific module. This includes the attribute name, the class that the attribute is part of, its definition and its cardinality.</p>
+</div>
+<div class="paragraph">
+<p>In this particular example, since the search field is empty, the table lists all the attributes of the glossary shorted alphabetically per Class name. Specifically, the first elements of the table are the attributes of the Class adms:Identifier taken from the <a href="https://www.w3.org/TR/vocab-adms/">ADMS vocabulary</a>. A class used to represent unique identifiers of instances of ePO concepts.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/docUpdateImages/Glossary/glossary3.png" alt="glossary3">
+</div>
+</div>
+<div class="paragraph">
+<p><em> Figure 3: The Attributes table
+</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_predicates_object_properties_and_definitions"><a class="anchor" href="#_predicates_object_properties_and_definitions"></a>5. Predicates (object properties) and definitions</h3>
+<div class="paragraph">
+<p>The third table as seen of figure 3, contains information related to the predicates of the specific module. This includes the predicate name, the definition, and the domain, range and cardinality of the predicate.</p>
+</div>
+<div class="paragraph">
+<p>By the term domain, we refer to the class that this predicate connects from, and by the term range we refer to the class or vocabulary that this predicate connects from.</p>
+</div>
+<div class="paragraph">
+<p>for example, in figure 4, predicate epo:hasVariantPermission has the class epo:SubmissionTerm as domain  and the at-voc:permission as range. The cardinality [0..1] dictates that an instance of epo:SubmissionTerm may or may not be connected with the  at-voc:permission vocabulary with the predicate epo:hasVariantPermission, and if it is, there will only be 1 connection at maximum.</p>
+</div>
+<div class="paragraph">
+<p>Also note that the predicate epo:hasValidityPeriod can be used by a number of classes, such as cccev:Evidence, epo:Technique and epo-cat:Catalogue in order to connect to class epo:Period.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/docUpdateImages/Glossary/glossary4.png" alt="glossary4">
+</div>
+</div>
+<div class="paragraph">
+<p><em> Figure 4: Searching the Predicates table for the string "hasVa".
+</em></p>
 </div>
 </div>
 </article>
