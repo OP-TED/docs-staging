@@ -8,7 +8,7 @@
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
-    <link rel="stylesheet" href="../_/css/vendor/docsearch-2.6.3.css">
+    <link rel="stylesheet" href="../_/css/vendor/docsearch-3.6.0.css">
         <link rel="apple-touch-icon" sizes="180x180" href="../_/img/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../_/img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../_/img/icons/favicon-16x16.png">
@@ -26,50 +26,39 @@
     <script>var uiRootPath = '../_'</script>
   </head>
   <body class="article">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
 <script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
-<div class="eu-flag">
-    <nav class="navbar-scrollable">
+<header class="header">
+
+        <div class="container">
+<div>
+    <nav class="navbar">
+
         <div class="navbar-brand">
 
             <div class="eu-emblem" style="display: inline-block;">
                 <!-- flag and logo-->
-                <a href="https://european-union.europa.eu/index_en" target="_blank">
-                    <div class="eu-emblem-std-en"><span></span>
-                    </div>
-                </a>
-
+                <div class="eu-emblem-std-en" ><a href="https://european-union.europa.eu/index_en"><span></span></a></div>
             </div>
+
         </div>
-        <div class="sep-frame">
+         <div class="sep-frame">
             <div class="rect-grey"></div>
         </div>
-    </nav>
+        <div class="text-eu-tenders">EU tenders</div>
 
-</div>
-
-<div class="eu-tenders">
-    <nav class="navbar">
-        <div class="text-eu-tenders">
-            <a href="https://ted.europa.eu/en/" target="_blank">EU tenders</a>
-        </div>
         <div id="topbar-nav" class="navbar-menu">
-
-            <div class="text-eu-subtext-text">
-                <a href="/">TED Developer Docs</a>
-            </div>
- <div class="text-eu-subtext-label">
-                <a href="/">Documentation for TED developers and eSenders</a>
-            </div>
+                    <div class="text-eu-subtext-text">TED Developer Docs</div>
+                    <div class="text-eu-subtext-label">Documentation for TED developers and eSenders</div>
             <div class="navbar-end">
-                <div class="navbar-item search">
-                    <input id="search-input" type="text" placeholder="Search docs">
-                </div>
+                    <div class="navbar-item search">
+                        <input id="search-input" type="text" placeholder="Search docs">
+                    </div>
             </div>
         </div>
     </nav>
 </div><div class="body">
-<script src="../_/js/07-scrollable-header-nav.js"></script>
 <div class="nav-container" data-component="epo-home" data-version="">
   <aside class="nav">
     <div class="panels">
@@ -86,25 +75,7 @@
     <span class="nav-text"><span class="separated"><strong>General Documentation</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="guide.html">ePO Guide</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../EPO/latest/conceptual.html">Conceptual Models</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../EPO/latest/glossaries.html">Glossaries</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../EPO/latest/release-notes.html">Release Notes</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Reference Documents</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="methodology2024.html">Methodology</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="versioning.html">ePO Versioning Rules</a>
+    <a class="nav-link" href="../EPO/latest/business.html">Business Overview</a>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -119,10 +90,28 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="REFreferences.html">Other Reference Documents</a>
+    <a class="nav-link" href="../EPO/latest/conceptual.html">Conceptual Models</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../EPO/latest/glossaries.html">Glossaries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../EPO/latest/release-notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="references.html">Reference Documents</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="history.html">History and Planned Developments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="methodology2024.html">Methodology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="versioning.html">ePO Versioning Rules</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Working Group Documents</strong></span></span>
@@ -206,10 +195,31 @@
         </ul>
       </li>
       <li class="component">
-        <a class="title" href="../espd/latest/index.html">ESPD EDM</a>
+        <a class="title" href="../ESPD-EDM/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../espd/latest/index.html">3.3.0</a>
+              <a href="../ESPD-EDM/latest/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.1.0/index.html">2.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/1.0.2/index.html">1.0.2</a>
             </li>
         </ul>
       </li>
@@ -229,60 +239,15 @@
 </nav>
 </div>
   <div class="content">
-    <aside class="toc sidebar" data-title="Contents" data-levels="2">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
-    <article class="doc">
+<article class="doc">
 <h1 class="page">eProcurement Ontology Documentation</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><span class="underline">What it is:</span>
-<a href="https://github.com/OP-TED/ePO">The eProcurement Ontology (ePO)</a> is a semantic ontology related to EU public procurement.</p>
-</div>
-<div class="paragraph">
-<p><span class="underline">What it does:</span>
-ePO is a tool that conceptualizes, formally encodes and provides structured data about public procurement in both human and machine-readable formats according to EU regulations and directives.</p>
-</div>
-<div class="paragraph">
-<p><span class="underline">Scope:</span>
-ePO covers public Procurement from end to end, i.e. from notification, to tendering to awarding, ordering, invoicing and payment.</p>
-</div>
-<div class="paragraph">
-<p><span class="underline">How:</span>
-In order to build and maintain the ontology, OP engaged a Working Group (WG) of experts with the mission of building consensus on the analysis results and deliverables developed by the OP’s teams.</p>
-</div>
-<div class="paragraph">
-<p><span class="underline">Where to start from:</span></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Motivation (under construction)</p>
-</li>
-<li>
-<p>Introductory course on EPO</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="_attachments/LOD/index.html" class="xref attachment">Linked Open Data</a><br>
-A short info session on Linked Open Data</p>
-</li>
-<li>
-<p><a href="_attachments/ePO/index.html" class="xref attachment">The ePO</a><br>
-A short info session on the ePO</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="guide.html" class="xref page">User&#8217;s Guide to ePO</a><br>
-A collection of pages describing how to use ePO and its features.</p>
-</li>
-<li>
-<p><a href="https://github.com/OP-TED/ePO">Github page</a></p>
-</li>
-</ul>
+<p>The eProcurement Ontology (ePO) defines and develops the semantic ontology related to EU public procurement. It creates and maintains the ontology according to EU regulations and directives.</p>
 </div>
 <div class="paragraph">
 <p>The following topics are included in this version of the eProcurement Ontology documentation:</p>
@@ -295,12 +260,12 @@ A collection of pages describing how to use ePO and its features.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="guide.html" class="xref page">User&#8217;s Guide to ePO</a><br>
-A short user&#8217;s guide of the ePO project</p>
+<p><a href="../EPO/latest/business.html" class="xref page">Business Overview</a><br>
+Business Overview of this release</p>
 </li>
 <li>
 <p><a href="../EPO/latest/conceptual.html" class="xref page">Conceptual Models</a><br>
-The release specific conceptual Model(s) of the ontology.</p>
+The release specific conceptual Model(s)</p>
 </li>
 <li>
 <p><a href="../EPO/latest/glossaries.html" class="xref page">Glossaries</a><br>
@@ -315,62 +280,29 @@ The release notes as on GitHub</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_info_sessions"><a class="anchor" href="#_info_sessions"></a>Info Sessions</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="_attachments/LOD/index.html" class="xref attachment">Linked Open Data</a><br>
-A short info session on Linked Open Data</p>
-</li>
-<li>
-<p><a href="_attachments/ePO/index.html" class="xref attachment">The ePO</a><br>
-A short info session on the ePO</p>
-</li>
-<li>
-<p><a href="_attachments/RDF/index.html" class="xref attachment">RDF and SPARQL</a><br>
-A short info session on RDF and SPARQL</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_reference_documentation"><a class="anchor" href="#_reference_documentation"></a>Reference Documentation</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="methodology2024.html" class="xref page">Methodology</a><br>
-The ePO Methodology</p>
-</li>
-<li>
-<p><a href="versioning.html" class="xref page">ePO Versioning Rules</a><br>
-An overview of the versioning rules for releases</p>
-</li>
-<li>
-<p><a href="stories.html" class="xref page">User Stories and Natural Language Statements</a><br>
-Ontology Requirements Specification Documents (ORSD), containing user stories and natural language statements used when developing new modules.</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="stories_eAccess.html" class="xref page">eAccess (ESPD Request)</a><br>
-ORSD for eAccess module</p>
-</li>
-<li>
-<p><a href="stories_eSubmission.html" class="xref page">eSubmission (ESPD Response)</a><br>
-ORSD for eSubmission module</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="REFreferences.html" class="xref page">Other Reference Documents</a><br>
+<p><a href="references.html" class="xref page">Reference Documentation</a><br>
 Useful reference documents in the development of the ePO</p>
 </li>
 <li>
 <p><a href="history.html" class="xref page">History and Planned Developments</a><br>
 Milestones in the project and future development plans</p>
+</li>
+<li>
+<p><a href="methodology2024.html" class="xref page">ePO Methodology</a><br>
+The ePO Methodology</p>
+</li>
+<li>
+<p><a href="stories.html" class="xref page">User Stories and Natural Language Statements</a><br>
+User Stories and Natural Language Statements used when developing new modules</p>
+</li>
+<li>
+<p><a href="versioning.html" class="xref page">ePO Versioning Rules</a><br>
+An overview of the versioning rules for releases</p>
 </li>
 </ul>
 </div>
@@ -398,201 +330,130 @@ All the weekly meeting minutes and documents saved individually</p>
 </div>
 </div>
 </article>
-    <div id="widgetContainer">
-      <article class="widget">
-<div class="widget-title">
-    <p>Access other sites in the TED family</p>
-  </div>
-  <div class="links">
-    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
-    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
-    <a href="https://ted.europa.eu/" target="_blank">TED Website</a>
-  </div>
-</article>
-    </div>
   </div>
 </main>
-
-<script>
-  // Get the current URL
-  var url = window.location.href;
-
-  // Check if the URL ends with 'home/index.html'
-  if (!url.endsWith('/home/index.html')) {
-    // If it doesn't, hide the widget
-    document.getElementById('widgetContainer').style.display = 'none';
-  }
-</script></div>
+</div>
 <script src="../_/js/site.js"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
-<script src="../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../_/js/vendor/docsearch-3.6.0.js"></script>
 <script src="../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
-<style type="text/css">
-    @import url('/documents/d/global/custom');
-</style>
+<style type="text/css">@import url('/documents/d/global/custom');</style>
 
 <div class="footer">
-    <div class="three-columns">
+  <div class="three-columns">
 
-        <div class="col-md-12 col-lg-4">
-            <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img
-                        alt="TED Developer Docs" class="ls-op" src="../_/img/ted-logo-footer2.png"
-                        height="48" /></a></div>
-            <span class="ted-footer__title ted-footer__title--main"></span>
-            <div class="ted-footer__rich-text">
-                <p>This website is managed by:
-                    <u>
-                        <a href="https://op.europa.eu/en/home" target="_blank">Publications Office of the European
-                            Union</a>
-                    </u>
-                </p>
+      <div class="col-md-12 col-lg-4">
+          <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img alt="TED Developer Docs" class="ls-op" src="../_/img/ted-logo-footer2.png" height="48"/></a></div>
+      </div>
 
-            </div>
-        </div>
+      <div class="col-md-12 col-lg-4">
 
-        <div class="col-md-12 col-lg-4">
+          <h3 class="h3-footer">Need Help?</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+              <li class="li-footer"><a href="https://simap.ted.europa.eu/contact">Contact the TED Helpdesk</a></li>
+          </ul>
 
-            <h3 class="ted-footer__title">Need Help?</h3>
-            <ul class="ul-footer">
-                <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
-                <li class="li-footer"><a href="https://ted.europa.eu/en/contact">Contact the TED Helpdesk</a></li>
-            </ul>
+          <h3 class="h3-footer">Follow us</h3>
+          <ul class="ul-footer">
+              <li>
+                  <a href="https://twitter.com/eulawdatapubs"> <img src="../_/img/twitter.svg" class="icon-footer"/><span>Twitter</span></a>
+                  <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img src="../_/img/youtube.svg" class="icon-footer-2nd"/><span>YouTube</span></a>
+              </li>
+          </ul>
 
-            <h3 class="ted-footer__title">Follow us</h3>
-            <ul class="ul-footer">
-                <li class="li-footer">
-                    <a href="https://twitter.com/EUTenders"> <img src="../_/img/twitter.svg"
-                            class="icon-footer" /><span>X/Twitter</span></a>
-                    <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img
-                            src="../_/img/youtube.svg" class="icon-footer-2nd" /><span>YouTube</span></a>
-                </li>
-            </ul>
+          <h3 class="h3-footer">Legal</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/legal-notices/accessibility-statement">Accessibility</a></li>
+          </ul>
 
-            <h3 class="ted-footer__title">Legal</h3>
-            <ul class="ul-footer">
-                <li class="li-footer"><a href="https://ted.europa.eu/en/legal-notice" target="_blank">Legal Notice</a>
-                </li>
-                <li class="li-footer"><a href="https://ted.europa.eu/en/cookie-choice" target="_blank">Cookies</a>
-                </li>
-                <li class="li-footer"><a
-                        href="https://ted.europa.eu/en/accessibility"
-                        target="_blank">Accessibility</a>
-                </li>
-            </ul>
+      </div>
 
-        </div>
+      <div class="col-md-12 col-lg-4">
 
-        <div class="col-md-12 col-lg-4">
+          <h3 class="h3-footer">About us</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a href="https://op.europa.eu/en/web/about-us/about-publication-office-of-the-european-union">Our mission, vision, and values</a></li>
+              <li class="li-footer"><a href="https://op.europa.eu/en/web/general-publications/">Newsletter</a></li>
+          </ul>
 
-            <h3 class="ted-footer__title">About us</h3>
-            <ul class="ul-footer">
-                <li class="li-footer"><a href="https://ted.europa.eu/">About TED</a></li>
-            </ul>
+          <h3 class="h3-footer">Other services</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+              <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+              <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+              <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+              <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+              <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
+          </ul>
+      </div>
+  </div>
 
-            <h3 class="ted-footer__title">Other services</h3>
-            <ul class="ul-footer">
-                <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
-                <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
-                <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
-                <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
-                <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
-                <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
-            </ul>
-        </div>
-    </div>
+  <div class="three-columns">
+      <div class="col-md-12 col-lg-4">
+          <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
 
-    <div class="three-columns">
-        <div class="col-md-12 col-lg-4">
-            <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+          <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union" class="ls-op" /></a></div>
+          <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a></p>
+          <div style="margin-top: 20px" >
+            <h3>This website is managed by<h3>
+            <img src="../_/img/op-logo-with-name.svg" class="logo" />
+          </div>
 
-            <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union"
-                        class="ls-op" /></a></div>
-            <span class="ted-footer__title ted-footer__title--main"></span>
-           
-            <div class="ted-footer__rich-text">
-                <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span
-                            style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a>
-                </p>
+      </div>
+      <div class="col-md-12 col-lg-4">
+          <h3 class="h3-footer">Contact the EU</h3>
 
-            </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-            <h3 class="ted-footer__title">Contact the EU</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other Telephone options</a></li>
+              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via our contact forms</a></li>
+              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of the EU centres</a></li>
 
-            <ul class="ul-footer">
-                <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
-                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other
-                        Telephone options</a></li>
-                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via
-                        our contact forms</a></li>
-                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of
-                        the EU centres</a></li>
+          </ul>
 
-            </ul>
+          <h3 class="h3-footer">Social Media</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
 
-            <h3 class="ted-footer__title">Social Media</h3>
-            <ul class="ul-footer">
-                <li class="li-footer"><a
-                        href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i
-                            aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+          </ul>
 
-            </ul>
+          <h3 class="h3-footer">Legal</h3>
 
-            <h3 class="ted-footer__title">Legal</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a></li>
+              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy Policy</a></li>
+              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
+              <li class="li-footer"><a aria-labelledby="section-title-op" href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
+          </ul>
+      </div>
+      <div class="col-md-12 col-lg-4">
+          <h3 class="h3-footer">EU institutions</h3>
 
-            <ul class="ul-footer">
-                <li class="li-footer"><a aria-labelledby="section-title-op"
-                        href="https://european-union.europa.eu/languages-our-websites_en">Languages on our website</a>
-                </li>
-                <li class="li-footer"><a aria-labelledby="section-title-op"
-                        href="https://european-union.europa.eu/privacy-policy-european-union-website_en">Privacy
-                        Policy</a></li>
-                <li class="li-footer"><a aria-labelledby="section-title-op"
-                        href="https://european-union.europa.eu/legal-notice_en">Legal notice</a></li>
-                <li class="li-footer"><a aria-labelledby="section-title-op"
-                        href="https://european-union.europa.eu/cookies_en">Cookies</a></li>
-            </ul>
-        </div>
-        <div class="col-md-12 col-lg-4">
-            <h3 class="ted-footer__title">EU institutions</h3>
+          <ul class="ul-footer">
+              <li class="li-footer"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
+              <li class="li-footer"><a href="https://www.consilium.europa.eu/en/european-council/">European Council</a></li>
+              <li class="li-footer"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a></li>
+              <li class="li-footer"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
+              <li class="li-footer"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the European Union (CJEU)</a></li>
+              <li class="li-footer"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank (ECB)</a></li>
+              <li class="li-footer"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
+              <li class="li-footer"><a href="https://www.eeas.europa.eu/_en">European External Action Services (EEAS)</a></li>
+              <li class="li-footer"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee (EESC)</a></li>
+              <li class="li-footer"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a></li>
+              <li class="li-footer"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
+              <li class="li-footer"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
+              <li class="li-footer"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor (EDPS)</a></li>
+              <li class="li-footer"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
+              <li class="li-footer"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a></li>
+              <li class="li-footer"><a href="https://op.europa.eu/en/home">Publications Office of the European Union</a></li>
+              <li class="li-footer"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a></li>
+          </ul>
+      </div>
 
-            <ul class="ul-footer">
-                <li class="li-footer institutions"><a href="https://www.europarl.europa.eu/portal/en">European Parliament</a></li>
-                <li class="li-footer institutions"><a href="https://www.consilium.europa.eu/en/european-council/">European
-                        Council</a></li>
-                <li class="li-footer institutions"><a href="https://www.consilium.europa.eu/en/">Council of the European Union</a>
-                </li>
-                <li class="li-footer institutions"><a href="https://commission.europa.eu/index_en">European Commission</a></li>
-                <li class="li-footer institutions"><a href="https://curia.europa.eu/jcms/jcms/j_6/en/">Court of Justice of the
-                        European Union (CJEU)</a></li>
-                <li class="li-footer institutions"><a href="https://www.ecb.europa.eu/home/html/index.en.html">European Central Bank
-                        (ECB)</a></li>
-                <li class="li-footer institutions"><a href="http://www.eca.europa.eu/en">European Court of Auditors (ECA)</a></li>
-                <li class="li-footer institutions"><a href="https://www.eeas.europa.eu/_en">European External Action Services
-                        (EEAS)</a></li>
-                <li class="li-footer institutions"><a href="https://www.eesc.europa.eu/en">European Economic and Social Committee
-                        (EESC)</a></li>
-                <li class="li-footer institutions"><a href="https://cor.europa.eu/en/">European Committee of the Regions (CoR)</a>
-                </li>
-                <li class="li-footer institutions"><a href="https://www.eib.org/en/index.htm">European Investment Bank (EIB)</a></li>
-                <li class="li-footer institutions"><a href="https://www.ombudsman.europa.eu/en/home">European Ombudsman</a></li>
-                <li class="li-footer institutions"><a href="https://edps.europa.eu/_en?lang=en">European Data Protection Supervisor
-                        (EDPS)</a></li>
-                <li class="li-footer institutions"><a href="https://edpb.europa.eu/edpb_en">European Data protection Board</a></li>
-                <li class="li-footer institutions"><a href="https://eu-careers.europa.eu/en">European Personnel Selection Office</a>
-                </li>
-                <li class="li-footer institutions"><a href="https://op.europa.eu/en/home">Publications Office of the European
-                        Union</a></li>
-                <li class="li-footer institutions"><a
-                        href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en?f%5B0%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_DEC&f%5B1%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/AGENCY_EXEC&f%5B2%5D=oe_organisation_eu_type%3Ahttp%3A//publications.europa.eu/resource/authority/corporate-body-classification/EU_JU">Agencies</a>
-                </li>
-                <li class="li-footer search-institutions"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">Search for EU institutions</a></li>
-            </ul>
-        </div>
-
-        <script>
-            ECL.autoInit();
-        </script>
-    </div>
+      <script>
+        ECL.autoInit();
+      </script>
+  </div>
 </div>  </body>
 </html>
