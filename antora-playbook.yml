@@ -70,10 +70,10 @@ content:
     start_path: /
     branches: cristian_review 
 
-  ### TED Semantic Web Service
+  ### TED Open Data Web Service
   - url: https://github.com/OP-TED/ted-rdf-docs
     start_path: docs/antora 
-    branches: main
+    branches: new_main
 
   ### TED Data for Reusers
   - url: https://github.com/OP-TED/ted-reuse-docs.git
