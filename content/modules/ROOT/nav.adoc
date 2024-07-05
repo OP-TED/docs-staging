@@ -12,7 +12,7 @@
 * xref:epo-wgm::index.adoc[Working Group Meetings]
 
 * [.separated]#**TED Semantic Web Service**#
-* xref:SWS::index.adoc[TED Semantic Web Service]
+* xref:ODS::index.adoc[TED Open Data Service]
 
 * [.separated]#**model2owl**#
 * xref:m2o-home::index.adoc[model2owl docs]
