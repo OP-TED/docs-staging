@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Mapping suite package structure :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/SWS/mapping_suite/mapping-suite-structure.html">
+    <title>The Toolchain used in the Mapping Development Process :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/mapping_suite/toolchain.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="SWS" data-version="">
+<div class="nav-container" data-component="ODS" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -103,7 +103,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Mapping suites</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="mapping-suite-structure.html">Mapping suite package structure</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -112,7 +112,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="preparing-test-data.html">Data samples</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="toolchain.html">Toolchain</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -227,7 +227,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="mapping-suite-structure.html">Mapping suite package structure</a></li>
+    <li><a href="toolchain.html">Toolchain</a></li>
   </ul>
 </nav>
 </div>
@@ -236,274 +236,149 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Mapping suite package structure</h1>
-<div class="sect1">
-<h2 id="_mapping_suite_package_structure"><a class="anchor" href="#_mapping_suite_package_structure"></a>Mapping suite package structure</h2>
+<h1 class="page">The Toolchain used in the Mapping Development Process</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section describes the structure of a mapping suite package in GitHub. A package contains everything that is needed for the development and testing of a mapping suite that is applicable to a certain set of notices. After the package is finalised, it can be used by a process to apply it to a larger number of notices stored in a database, and transform these into RDF data.</p>
+<p>The mapping artefacts, including the various mapping suite packages that developed in the process described in this document, are stored and maintained in the <a href="https://github.com/OP-TED/ted-rdf-mapping">OP-TED/ted-rdf-mapping</a> GitHub repository.</p>
 </div>
 <div class="paragraph">
-<p>A package is represented by a well-defined folder structure. This folder structure is duplicated for every mapping developed. The listing of these packages is by Form number.</p>
+<p>To assist the semantic engineers in the development of mapping suites, an internal toolchain has been developed, which consists of a number of command line tools (CLIs)
+that can be run on the mapping suites to produce various outputs.</p>
 </div>
 <div class="paragraph">
-<p>The table below shows the structure of the <a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03">F03 package</a>, where /output refers to ted-rdf-mapping/mappings/package_F03/output, where package_F03 can be replaced by the identifier of the other packages mapped (F06,13, F21, F22, F23). The es16 package can be ignored.</p>
+<p>The following CLIs are available (the name of the tools to be executed on the command line are specified in parentheses).</p>
 </div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 40%;">
-<col style="width: 40%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Folder</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Subfolder</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/output">/output</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">/Noticeid/test_suite_report, where the NoticeID is the ID of the notice published on TED  for example:</p>
-<p class="tableblock">000163-2021/test_suite_report</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the semantic map of the concepts of the given notice (in this case, the F03 package).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/output">/output</a>
-cont.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/rml_report.html">rml_report/html</a></p>
-<p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/shacl_validations.html">shacl_validations.html</a></p>
-<p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/output/shacl_validations.json">shacl_validations.json</a></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Each folder contains a subfolder for each of the rdf files produced from the sample data (see section on data sampling to understand the folder structure) which is named by the NoticeID of the sample concerned (eg 000163-2021)</p>
 </div>
-<div class="paragraph">
-<p>Each subfolder contains:</p>
 </div>
-<div class="paragraph">
-<p>The RDF output e.g., 000163-2021.ttl</p>
-</div>
-<div class="paragraph">
-<p>Another subfolder /test_suite report which in turn contains different files for validating the transformation (see validating transformsations)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data">/test_data</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021">/test_data/form_number_F03_2021</a></p>
-<p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S01">/test_data/form_number_F03_S01</a></p>
-<p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S02">/test_data/form_number_F03_S02</a></p>
-<p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S03">/test_data/form_number_F03_S03</a></p>
-<p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S04">/test_data/form_number_F03_S04</a></p>
-<p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S05">/test_data/form_number_F03_S05</a></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Each folder contains the xml file as published on the TED website of the Notices to be transformed</p>
-</div>
-<div class="paragraph">
-<p>Each xml notice is named by the NoticeID of the sample concerned (eg 000163-2021)</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation">/transformation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/mappings">/mappings</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the rml files used for the transformation.  There is one rml file per section of each notice.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation">/transformation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation/resources">/resources</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains files concerning the code list mappings</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/transformation">/transformation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/blob/main/mappings/package_F03/transformation/conceptual_mappings.xlsx">conceptual_mappings.xlsx</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the initial conceptual mapping which is used to write the rml.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation">/validation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/shacl">/shacl</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation">/validation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/cm_assertions">/sparql/assertions</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation">/validation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/validation/sparql/integration_tests">/sparql/integration_tests</a></p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
 <div class="sect2">
-<h3 id="_mapping_suite_package_description_for_semantic_engineers"><a class="anchor" href="#_mapping_suite_package_description_for_semantic_engineers"></a>Mapping suite package description for Semantic Engineers</h3>
+<h3 id="_resources_injector_resources_injector"><a class="anchor" href="#_resources_injector_resources_injector"></a>Resources Injector (resources_injector)</h3>
 <div class="paragraph">
-<p>When the Semantic Engineers start working on a new mapping suite, they first need to set up a package folder structure similar to the one described below. One package per form number is the accepted way to organise packages.</p>
+<p>This CLI injects the requested resources listed on the "Resources" spreadsheet of the Conceptual Mappings into the MappingSuite. Each Form has a resources list that represents the controlled value that are needed in the mapping process.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rml_modules_injector_rml_modules_injector"><a class="anchor" href="#_rml_modules_injector_rml_modules_injector"></a>RML Modules Injector (rml_modules_injector)</h3>
+<div class="paragraph">
+<p>This CLI injects the technical mappings modules
+into the mapping suite. Each form has a module list that is needed in order to run the mapping_runner.
+The modules names are listed on the "RML_Modules" spreadsheet of the Conceptual Mappings.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sparql_test_generator_sparql_generator"><a class="anchor" href="#_sparql_test_generator_sparql_generator"></a>SPARQL Test Generator (sparql_generator)</h3>
+<div class="paragraph">
+<p>This CLI generates a set of SPARQL queries from the conceptual mapping that will be executed by the <code>sparql_runner</code> CLI (described in the next section). Each generated query can be used to test if the related conceptual mapping is correctly generating RDF data or not.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sparql_queries_runner_sparql_runner"><a class="anchor" href="#_sparql_queries_runner_sparql_runner"></a>SPARQL Queries Runner (sparql_runner)</h3>
+<div class="paragraph">
+<p>This CLI  executes  all the sparql queries generated by sparql_generator into a separate RDF result file. The result file is a report per RDF file that contains the queries and their associated success indicators (Valid, Invalid, Unverifiable, Warning or Error).</p>
 </div>
 <div class="paragraph">
-<p><strong>Challenge:</strong> Are there better ways to deal with certain sections (sub-sections) that repeat across multiple forms? Consider Section I, for example, which in case of forms F03, F06, F25 contains “almost” the same information, therefore only one mapping should be written for it and RE-used in “final” form-mapping-packages. The problem is also discussed in a dedicated section below.</p>
-</div>
-<div class="paragraph">
-<p>The structure of an example mapping package folder structure is presented below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/package_Fxx
-	/transformation
-		conceptual_mappings.xlsx
-		/mappings
-			*.rml.ttl
-		/resources
-			*.json, *.xml, *.csv
-	/test_data
-		*.xml</pre>
-</div>
+<p>Each indicator below helps semantic engineers and reviewers understand the result:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>/package_Fxx</code> root folder of the mapping suite</p>
+<p><strong>Valid</strong>: The XPATH to which the query is associated was found in the XML notice, and in the SPARQL query returned "True".</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is the ideal case.</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><code>/transformation/conceptual_mappings.xlsx</code> manually created</p>
+<p><strong>Invalid</strong>: The XPATH to which the query is associated was found in the XML notice, and the SPARQL query returned "False".</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This can occur for various reasons. It could be an error in the mapping rule (which needs to be fixed in the technical mapping), or in the generated SPARQL query (which should be fixed by updating the conceptual mapping).</p>
+</div>
+<div class="paragraph">
+<p>This indicator could also be a false negative where the validation and reporting tool is not able to generate a more complex SPARQL query that captures special cases e.g., if there is an XPATH condition, or if the query is executed in situations where it is not necessary.</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><code>/transformation/resources</code>  additional resources possibly needed by the transformation rules;<br>
-The content of this folder should be automatically generated by the mapping package processor, based on the "Resources" sheet of the <code>conceptual_mappings.xlsx</code>, from the "source of truth" <code>ted-rdf-conversion-pipeline/TED-ODS/resources</code>.</p>
+<p><strong>Unverifiable</strong>: The XPATH to which the query is associated was NOT found in the XML notice, and the SPARQL query returned "False".</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is not an error, it is an expected False result. In this situation, the  SPARQL query can&#8217;t verify the validity of the mapping on the current input data as it is not applicable to it.</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><code>/transformation/mappings/*.rml.ttl</code> the relevant RML transformation rules, organized in module files, which are copied from the "source" mappings folder, according to the information specified in the "RML Modules" sheet of the <code>conceptual_mappings.xlsx</code>. <strong>IMPORTANT!!!</strong> In these rules the source XML is always referring to <code>data/source.xml</code>, which corresponds to the <code>../../data/source.xml</code> file that will be copied (and renamed) from the <code>test_data</code> folder at the time of the execution of the mapping.</p>
+<p><strong>Warning</strong>: The XPATH to which the query is associated was NOT found in the XML notice, but the SPARQL query returned "True".</p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This might be due to an error in the mapping or the query, but in most cases it indicates that the SPARQL query is "incomplete" i.e., too localized, and does not capture the full context of when a specific graph patterned should be matched. However, it matches some valid property paths in the output that were created from other XPATHs which have a similar ending.</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><code>/test_data</code>  manually and carefully selected test data possibly grouped in suborders, e.g. <code>/test_data/batch-D1/*.xml</code></p>
-</li>
-<li>
-<p><code>technical_mappings.yarrrml.yaml</code> (optional) manually created, and used in earlier days of the mapping development, but currently not used</p>
+<p><strong>Error</strong>: The SPARQL query is incorrect. That means that the conceptual mapping has to be amended.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mapping_suite_package_description_for_the_software_engineers"><a class="anchor" href="#_mapping_suite_package_description_for_the_software_engineers"></a>Mapping suite package description for the Software Engineers</h3>
+<h3 id="_mapping_test_runner_mapping_runner"><a class="anchor" href="#_mapping_test_runner_mapping_runner"></a>Mapping Test Runner (mapping_runner)</h3>
 <div class="paragraph">
-<p>A package provided by semantic engineers (SE) is enriched with additional artefacts that are generated automatically using the package expanding tools which take as input the artefacts provided by the SE. Here are some examples of additional artefacts generated:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Metadata</strong> describing the parameters for selecting the notices that the mappings can be applied to, various version information, etc.</p>
-</li>
-<li>
-<p><strong>SPARQL queries</strong> that can be used to validate and/or test the generated outputs</p>
-</li>
-<li>
-<p><strong>SHACL shapes</strong> that can be used to validate and the structure of the generated outputs</p>
-</li>
-<li>
-<p>New ones may be added at the time of writing this document</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>After the package processing/expansion, the structure of the example mapping package presented in the previous subsection would look like this:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/package_Fxx
-	metadata.json
-	/transformation
-		conceptual_mappings.xlsx
-		/mappings
-			*.rml.ttl
-		/resources
-			*.json, *.xml, *.csv
-	/data
-		source.xml
-	/output
-		*.rdf
-	/validation
-		/sparql
-			/cm_assertions
-				*.rq
-		/shacl # this is a constant, when a SHACL is known (currently unknown)
-			*.shacl.ttl # data shape file(s)
-	/test_data # manually and carefully selected test data
-		*.xml</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>metadata.json</code> automatically generated from Metadata sheet of <code>conceptual_mapping.xlsx</code></p>
-</li>
-<li>
-<p><code>/data</code> # this is a placeholder created at runtime to process the inputs. It serves only when the mapping suite is being tested, or executed by some script.</p>
-</li>
-<li>
-<p><code>source.xml</code> this file is generated during runtime by copying a given test data file</p>
-</li>
-<li>
-<p><code>/output</code> this is a placeholder created at runtime to store outputs. It serves only when the mapping suite is being tested, or executed by some script.</p>
-</li>
-<li>
-<p><code>/validation/sparql/cm_assertions</code> SPARQL queries automatically generated from the conceptual mapping</p>
-</li>
-</ul>
+<p>This CLI applies the mapping on a certain test notice file, a batch of notice files (organised in a folder), or on all available test notices, and generates output files representing the corresponding RDF graph for each notice (see  <a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/output">RDF output examples</a>).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mapping_suite_package_description_for_the_semantic_engineers_after_execution"><a class="anchor" href="#_mapping_suite_package_description_for_the_semantic_engineers_after_execution"></a>Mapping suite package description for the Semantic Engineers after execution</h3>
+<h3 id="_metadata_generator_metadata_generator"><a class="anchor" href="#_metadata_generator_metadata_generator"></a>Metadata generator (metadata_generator)</h3>
 <div class="paragraph">
-<p>After the execution of a mapping, the mapping package will be further enriched, and will contain additional files, as a result of running the mapping suite on the included test data.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/package_Fxx
-	metadata.json
-	/transformation
-		conceptual_mappings.xlsx
-		/mappings
-			*.rml.ttl
-		/resources
-			*.json, *.xml, *.csv
-	/data
-		source.xml
-	/output
-		/&lt;notice_file1&gt;
-			&lt;notice_file1&gt;.ttl
-			/test_suite_report
-				*.ttl, *.html, *.json # e.g. sparql_cm_assertions.html, shacl_epo.html, xml_coverage.html
-		/&lt;notice_file2&gt;
-			...
-		/&lt;notice_file3&gt;
-			...
-	/validation
-		/sparql
-			/cm_assertions
-				*.rq
-		/shacl
-			/epo
-				ePO_shacl_shapes.rdf
-			shacl_result_query.rq
-	/test_data
-		&lt;notice_file1&gt;.xml
-		&lt;notice_file2&gt;.xml
-		&lt;notice_file3&gt;.xml
-		*.xml</pre>
+<p>This tool extracts the relevant metadata from the conceptual mapping file (by default: <code>conceptual_mappings.xlsx</code>) and stores it in a JSON file (by default: <code>metadata.json</code>). This metadata file will be used by various other processes (both CLIs and DAGs), mainly to inform them about the applicability of this mapping to various notices.</p>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>/output/&lt;notice_file1&gt;</code> for each example file a folder is created that contains all the generated artefacts for that sample file</p>
-</li>
-<li>
-<p><code>/output/test_suite_report</code>  validation reports summarising all individual reports</p>
-</li>
-<li>
-<p><code>/output/&lt;notice_file1&gt;/&lt;notice_file1&gt;.ttl</code> the output of the transformation</p>
-</li>
-</ul>
+<div class="sect2">
+<h3 id="_yarrrml_to_rml_converter_yarrrml2rml_converter"><a class="anchor" href="#_yarrrml_to_rml_converter_yarrrml2rml_converter"></a>YARRRML to RML Converter (yarrrml2rml_converter)</h3>
+<div class="paragraph">
+<p>This command line tool allows the conversion of a mapping expressed in the more user-friendly YARRRML syntax to RML. This is a very useful tool, especially at initial phases of the mapping development, or for newcomers, as it is easier and faster to write YARRRML rules than RML rules. This tool is not used anymore in the current development process as, due to technical reasons, the mappings are developed directly in RML, not in YARRRML.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_xpath_coverage_runner_xpath_coverage_runner"><a class="anchor" href="#_xpath_coverage_runner_xpath_coverage_runner"></a>XPATH Coverage Runner (xpath_coverage_runner)</h3>
+<div class="paragraph">
+<p>Generates reports describing XPATH coverage of the notices.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_shacl_validation_runner_shacl_runner"><a class="anchor" href="#_shacl_validation_runner_shacl_runner"></a>SHACL Validation Runner (shacl_runner)</h3>
+<div class="paragraph">
+<p>Generates SHACL Validation Reports for RDF files.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mapping_suite_processor_mapping_suite_processor"><a class="anchor" href="#_mapping_suite_processor_mapping_suite_processor"></a>Mapping Suite Processor (mapping_suite_processor)</h3>
+<div class="paragraph">
+<p>This CLI runs all the necessary CLIs mentioned above in a logical order, to fully process a mapping suite, starting with the generation of metadata and finishing with running the mapping on all the (specified) tests data, and generating all the possible associated validation artefacts. It can be run for a certain package, (set of) notice(s), or groups of commands.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other_relevant_tools_and_libraries"><a class="anchor" href="#_other_relevant_tools_and_libraries"></a>Other relevant tools and libraries</h3>
+<div class="paragraph">
+<p>Other relevant tools that are used in the mapping process that worth mentioning, are:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://rml.io/yarrrml/matey/#">Matey</a>: a browser-based application that helps writing YARRRML rules, and converting them to RML rules that can be also executed online. Matey uses the yarrrml-parser (described next) in the backend.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://github.com/rmlio/yarrrml-parser">RMLio/yarrrml-parser</a> library, available on GitHub, allows the conversion of YARRRML rules to RML or R2RML rules.  Since this is a library, besides using it to power Matey, it can be also used independently, or as an integrated part of our CLI tools.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://github.com/RMLio/rmlmapper-java">RMLio/rmlmapper-java</a> library, available on GitHub, allows the execution of a set of RML mappings on a set of data sources, to generate high quality RDF data.</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -511,8 +386,6 @@ The content of this folder should be automatically generated by the mapping pack
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
-</div>
 </div>
 </div>
 </article>

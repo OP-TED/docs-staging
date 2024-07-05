@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>MS Excel :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/SWS/sample_app/ms_excel.html">
+    <title>Jupyter Notebook - Python :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/sample_app/jupyter_notebook_python.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="SWS" data-version="">
+<div class="nav-container" data-component="ODS" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -124,13 +124,13 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="sparql_queries.html">SPARQL Queries</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="ms_excel.html">MS Excel</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="jupyter_notebook_r.html">Jupyter Notebook - R</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="jupyter_notebook_python.html">Jupyter Notebook - Python</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -227,7 +227,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="ms_excel.html">MS Excel</a></li>
+    <li><a href="jupyter_notebook_python.html">Jupyter Notebook - Python</a></li>
   </ul>
 </nav>
 </div>
@@ -236,66 +236,77 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">MS Excel</h1>
+<h1 class="page">Jupyter Notebook - Python</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This page explains how to use procurement data accessed from <strong>Cellar</strong> with Microsoft Excel. A sample Excel file is provided for download that contains macros that connect to the endpoint, run the query, and return the results from within the file.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_using_the_microsoft_excel_sample_file"><a class="anchor" href="#_using_the_microsoft_excel_sample_file"></a>Using the Microsoft Excel sample file</h2>
-<div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>The spreadsheet can be downloaded from https://github.com/OP-TED/ted-rdf-docs/blob/main/spreadsheets/sample_application.xlsm[here].</pre>
-</div>
+<p>This page demonstrates a query example using Jupyter Notebook in Python.
+Jupyter Notebook is an application for creating and sharing
+computational documents. Python is a programming language for
+writing computational documents. To work with Jupyter Notebook and Python, it is
+necessary to install some tools and applications to run Python code that will
+perform a query to the CELLAR database and display the results in tabular
+format.</p>
 </div>
 <div class="paragraph">
-<p>In the file are the following sheets:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Query - sheet for entering the SPARQL query</p>
-</li>
-<li>
-<p>Result Query - sheet containing result table after querying</p>
-</li>
-<li>
-<p>Sample analysis -  analysis of results (charts, ect) using data from Result Query sheet</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The following steps shows how to insert or update data using the sample app:</p>
+<p>To run the sample application using Python language follow the steps below:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>When opening the downloaded spreadsheet, and depending on the version of MS Excel used, a pop-up box might appear asking you to choose a privacy level. Set it to ignore privacy level checks: tick the checkbox to ignore Privacy Levels and then click "Save".</p>
+<p><a href="https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb">Download Jupyter Notebook </a></p>
 </li>
 </ol>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/user_manual/ms_excell/image11.png" alt="image" width="507" height="466">
-</div>
-<div class="title">Figure 1. Change privacy levels</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
-<p>In the opened Excel spreadsheet, paste the SPARQL query into the "Query" sheet.</p>
+<p>Download &amp; Install Python 3.8</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Windows 64bit:
+<a href="https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe"><span class="underline">download</span></a></p>
+</li>
+<li>
+<p>Windows 86bit:
+<a href="https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe"><span class="underline">download</span></a></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Open the Jupyter Notebook file with the code editor</p>
+</li>
+<li>
+<p>In the code editor, select the Python interpreter that was installed in the previous step</p>
 </li>
 </ol>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/user_manual/ms_excell/image8.png" alt="image" width="507" height="466">
+<img src="../_images/user_manual/jupyter_notebook/image1.png" alt="image" width="817" height="204">
 </div>
-<div class="title">Figure 2. Example SPARQL Query</div>
+<div class="title">Figure 1. Interpreter selection</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="5">
+<li>
+<p>Install dependencies</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use OS command line and run the following command</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">pip3 install sparqlwrapper pandas Jinja2 matplotlib</code></pre>
+</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -304,44 +315,232 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-After updating the query cell, the macros script will automatically trigger data updates. If the SPARQL query returns an empty result, MS Excel will create an error such as below
+After installation, restart the kernel from Jupyter Notebook to update it with new dependencies. This can be done by clicking on the "Restart" button in your code editor.
 </td>
 </tr>
 </table>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/user_manual/ms_excell/image12.png" alt="image" width="507" height="466">
-</div>
-</div>
 <div class="olist arabic">
-<ol class="arabic" start="3">
+<ol class="arabic" start="6">
 <li>
-<p>After data is updated, in the "Response Query" sheet you will find the updated table.</p>
+<p>Run all Jupyter Notebook Cells</p>
 </li>
 </ol>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/user_manual/ms_excell/image9.png" alt="image" width="907" height="466">
+<img src="../_images/user_manual/jupyter_notebook/image2.png" alt="image" width="501" height="84">
 </div>
-<div class="title">Figure 3. Query result table</div>
+<div class="title">Figure 2. Button that runs all cells</div>
 </div>
 <div class="olist arabic">
-<ol class="arabic" start="4">
+<ol class="arabic" start="7">
 <li>
-<p>In the "Sample analysis" sheet you can find an example of analysis of the query result. Press "Update tables" button to update the Pivot tables and plots.</p>
+<p>After running all the cells in the Jupyter Notebook successfully, the results table can be viewed</p>
 </li>
 </ol>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/user_manual/ms_excell/image10.png" alt="image" width="807" height="166">
+<img src="../_images/user_manual/jupyter_notebook/image3.png" alt="image" width="987" height="420">
 </div>
-<div class="title">Figure 4. Sample analysis</div>
+<div class="title">Figure 3. Results table</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_explaining_the_query"><a class="anchor" href="#_explaining_the_query"></a>Explaining the query</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Question: Who are the winners for a given date?</strong></p>
 </div>
 <div class="paragraph">
-<p>&#160;</p>
+<p>This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.</p>
+</div>
+<div class="paragraph">
+<p>This query is composed of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Prefix section is used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).</p>
+<div class="literalblock">
+<div class="content">
+<pre>PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX org: &lt;http://www.w3.org/ns/org#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>The Select section is responsible for specifying which variables or values are to be retrieved from the dataset.</p>
+<div class="literalblock">
+<div class="content">
+<pre>SELECT DISTINCT
+?Lot
+?WinnerLegalName
+?WinnerCountryCode
+?AwardedValue
+?AwardedValueCurrency</pre>
+</div>
+</div>
+</li>
+<li>
+<p>The Where section is used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Specifying specific filters for output</p>
+<div class="literalblock">
+<div class="content">
+<pre>VALUES ?NoticePublicationDate {
+    "20230921"
+}
+FILTER(LANG(?WinnerLegalName) = 'en')</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Defining notice according to EPO ontology</p>
+<div class="literalblock">
+<div class="content">
+<pre>?NoticeId a epo:ResultNotice;
+          epo:hasPublicationDate ?NoticePublicationDate;
+          epo:refersToLot ?Lot.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Defining lot and lot award outcome according to EPO ontology</p>
+<div class="literalblock">
+<div class="content">
+<pre>?Lot a epo:Lot.
+?LotAwardOutcome epo:describesLot ?Lot;
+                 a epo:LotAwardOutcome;
+                 epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+?TenderAwardOutcome a epo:TenderAwardOutcome;
+                    epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Defining the winner according to EPO ontology</p>
+<div class="literalblock">
+<div class="content">
+<pre>?Winner a org:Organization;
+        epo:hasLegalName ?WinnerLegalName .
+OPTIONAL {
+    ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+}</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Defining award value and currency according to EPO ontology</p>
+<div class="literalblock">
+<div class="content">
+<pre>?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
+?LotAwardedValue a epo:MonetaryValue;
+                 epo:hasAmountValue ?AwardedValue;
+                 epo:hasCurrency ?AwardedValueCurrency.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The query retrieves:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lot URI</p>
+</li>
+<li>
+<p>The legal name of the winner</p>
+</li>
+<li>
+<p>The winners country code as URI</p>
+</li>
+<li>
+<p>The value awarded to winner</p>
+</li>
+<li>
+<p>The currency of the awarded value</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VALUES ?NoticePublicationDate {
+    "20230921"
+}
+FILTER(LANG(?WinnerLegalName) = 'en')</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Existing value for publication date in example above:</p>
+<div class="literalblock">
+<div class="content">
+<pre>"20230921"</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Existing value for winner legal name language in example above:</p>
+<div class="literalblock">
+<div class="content">
+<pre>'en'</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_query_text"><a class="anchor" href="#_query_text"></a>Query text:</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX org: &lt;http://www.w3.org/ns/org#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+SELECT
+?Lot
+?WinnerLegalName
+?WinnerCountryCode
+?AwardedValue
+?AwardedValueCurrency
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230905"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
+}
+ORDER BY DESC(?AwardedValue)
+LIMIT 1</code></pre>
+</div>
 </div>
 <hr>
 <div class="paragraph">
@@ -349,6 +548,7 @@ After updating the query cell, the macros script will automatically trigger data
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
 </div>
 </div>
 </div>

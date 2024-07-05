@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/SWS/mapping_suite/ted-sws-introduction.html">
+    <title>Repository structure :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/mapping_suite/repository-structure.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="SWS" data-version="">
+<div class="nav-container" data-component="ODS" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -97,7 +97,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="methodology.html">Methodology</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="repository-structure.html">Repository structure</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -225,6 +225,10 @@
 <button class="nav-toggle"></button>
   <a href="../../home/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">TED Open Data Service</a></li>
+    <li><a href="repository-structure.html">Repository structure</a></li>
+  </ul>
 </nav>
 </div>
   <div class="content">
@@ -232,50 +236,39 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<div class="sect1">
-<h2 id="_introduction_the_old_introduction_of_the_mapping_suite_section"><a class="anchor" href="#_introduction_the_old_introduction_of_the_mapping_suite_section"></a>Introduction - the old introduction of the mapping suite section</h2>
-<div class="sectionbody">
+<h1 class="page">Repository structure</h1>
 <div class="paragraph">
-<p>Although TED notice data is already available to the general public
-through the search API provided by the TED website, the current offering
-has many limitations that impede access to and reuse of the data. One
-such important impediment is for example the current format of the data.</p>
+<p>Transformation rules and other artefacts for the TED Open Data Services (TED-ODS) are organised in the <a href="https://github.com/OP-TED/ted-rdf-mapping">ted-rdf-mapping</a> repository.</p>
 </div>
 <div class="paragraph">
-<p>Historical TED data come in various XML formats that evolved together
-with the standard TED XML schema. The imminent introduction of eForms
-will also introduce further diversity in the XML data formats available
-through TED&#8217;s search API. This makes it practically impossible for users
-to consume and process data that span across several years, as
-their information systems must be able to process several different
-flavours of the available XML schemas as well as to keep up with the
-schema&#8217;s continuous evolution. Their search capabilities are therefore
-confined to a very limited set of metadata.</p>
+<p>The repository structure and folder descriptions are shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>/mappings
+    /package_F03
+    /package_F06
+    /package_F25
+    ...
+/src
+    /mappings
+        *.rml.ttl
+/test_data
+    /sampling_2014_2022
+    /sampling_2021
+    /sampling_manual
+Makefile
+requirements.txt</pre>
+</div>
 </div>
 <div class="paragraph">
-<p>The TED Open Data Service will remove these barriers by providing one
-common format for accessing and reusing all TED data. Coupled with the
-eProcurement Ontology, the TED data will also have semantics attached to
-them allowing users to directly link them with other datasets.
-Moreover, users will now be able to perform much more elaborate
-queries directly on the data source (through the SPARQL endpoint). This
-will reduce their need for data warehousing in order to perform complex
-queries.</p>
+<p><code>/mappings</code> folder contains <a href="mapping-suite-structure.html" class="xref page">mapping suite packages</a> organised based on the standard forms numbers. Their name is formed based on the form number (e.g. <code>F03</code>, <code>F06</code>) prefixed with <code>package_</code> for readability. When the eForms will be mapped, then the corresponding appropriate organisation will be chosen.</p>
 </div>
 <div class="paragraph">
-<p>These developments, by lowering the barriers, will give rise to a vast
-number of new use-cases that will enable stakeholders and end-users to
-benefit from increased availability of analytics. The ability to perform
-complex queries on public procurement data will be equally open to large
-information systems as well as to simple desktop users with a copy of
-Excel and an internet connection.</p>
+<p><code>/src/mappings</code> folder represents the "single source of truth" for the mapping rules across various mapping suite packages. This is necessary because of the modularisation and reuse method adopted in this project. The basic idea is that the mapping rules are organised in modules and all are stored in the source folder. Each mapping suite provides in the conceptual mapping workbook the list of modules that be used to compose the complete set of transformation rules of the mapped form number.</p>
 </div>
 <div class="paragraph">
-<p>To summarize, the TED Open Data Service (TED SWS) is a pipeline
-system that continuously converts the public procurement notices (in XML
-format) available on the TED Website into RDF format, publishes them
-into CELLAR and makes them available to the public through CELLAR’s
-SPARQL endpoint.</p>
+<p><code>/test_data</code> folder contains sample <a href="https://ted.europa.eu/TED/browse/browseByMap.do">TED notices</a> generated by different selection methods. Some manually selected notices are available in the <code>/sampling_manual</code> subfolder. The automatically generated notice samples that are in the <code>/sampling_2021</code> subfolder are described <a href="preparing-test-data.html" class="xref page">here</a>. In the <code>sampling_2014_2022</code> subfolder there are samples, generated from all available notices in the 2014-2022 period that cover the various changes in the XML Schema over the years. More automatically generated samples will follow.</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -283,8 +276,6 @@ SPARQL endpoint.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
-</div>
 </div>
 </article>
     <div id="widgetContainer">

@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Repository structure :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/SWS/mapping_suite/repository-structure.html">
+    <title>Glossary: Reusing Open Data Service artefacts :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/sample_app/sa_glossary.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="SWS" data-version="">
+<div class="nav-container" data-component="ODS" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -95,49 +95,49 @@
     <a class="nav-link" href="../glossary.html">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="methodology.html">Methodology</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="repository-structure.html">Repository structure</a>
+    <a class="nav-link" href="../mapping_suite/methodology.html">Methodology</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Mapping suites</a>
+    <a class="nav-link" href="../mapping_suite/repository-structure.html">Repository structure</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="mapping-suite-structure.html">Mapping suite package structure</a>
+    <a class="nav-link" href="../mapping_suite/index.html">Mapping suites</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="code-list-resources.html">Code list mappings</a>
+    <a class="nav-link" href="../mapping_suite/mapping-suite-structure.html">Mapping suite package structure</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="preparing-test-data.html">Data samples</a>
+    <a class="nav-link" href="../mapping_suite/code-list-resources.html">Code list mappings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="toolchain.html">Toolchain</a>
+    <a class="nav-link" href="../mapping_suite/preparing-test-data.html">Data samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../mapping_suite/toolchain.html">Toolchain</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Reusing Open Data Service artefacts</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/sa_glossary.html">Glossary</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="sa_glossary.html">Glossary</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/sparql_queries.html">SPARQL Queries</a>
+    <a class="nav-link" href="sparql_queries.html">SPARQL Queries</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/ms_excel.html">MS Excel</a>
+    <a class="nav-link" href="ms_excel.html">MS Excel</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/jupyter_notebook_r.html">Jupyter Notebook - R</a>
+    <a class="nav-link" href="jupyter_notebook_r.html">Jupyter Notebook - R</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/jupyter_notebook_python.html">Jupyter Notebook - Python</a>
+    <a class="nav-link" href="jupyter_notebook_python.html">Jupyter Notebook - Python</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="versioning.html">Versioning</a>
+    <a class="nav-link" href="../mapping_suite/versioning.html">Versioning</a>
   </li>
 </ul>
   </li>
@@ -227,7 +227,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="repository-structure.html">Repository structure</a></li>
+    <li><a href="sa_glossary.html">Glossary</a></li>
   </ul>
 </nav>
 </div>
@@ -236,40 +236,57 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Repository structure</h1>
-<div class="paragraph">
-<p>Transformation rules and other artefacts for the TED Open Data Services (TED-ODS) are organised in the <a href="https://github.com/OP-TED/ted-rdf-mapping">ted-rdf-mapping</a> repository.</p>
-</div>
-<div class="paragraph">
-<p>The repository structure and folder descriptions are shown below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>/mappings
-    /package_F03
-    /package_F06
-    /package_F25
-    ...
-/src
-    /mappings
-        *.rml.ttl
-/test_data
-    /sampling_2014_2022
-    /sampling_2021
-    /sampling_manual
-Makefile
-requirements.txt</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><code>/mappings</code> folder contains <a href="mapping-suite-structure.html" class="xref page">mapping suite packages</a> organised based on the standard forms numbers. Their name is formed based on the form number (e.g. <code>F03</code>, <code>F06</code>) prefixed with <code>package_</code> for readability. When the eForms will be mapped, then the corresponding appropriate organisation will be chosen.</p>
-</div>
-<div class="paragraph">
-<p><code>/src/mappings</code> folder represents the "single source of truth" for the mapping rules across various mapping suite packages. This is necessary because of the modularisation and reuse method adopted in this project. The basic idea is that the mapping rules are organised in modules and all are stored in the source folder. Each mapping suite provides in the conceptual mapping workbook the list of modules that be used to compose the complete set of transformation rules of the mapped form number.</p>
-</div>
-<div class="paragraph">
-<p><code>/test_data</code> folder contains sample <a href="https://ted.europa.eu/TED/browse/browseByMap.do">TED notices</a> generated by different selection methods. Some manually selected notices are available in the <code>/sampling_manual</code> subfolder. The automatically generated notice samples that are in the <code>/sampling_2021</code> subfolder are described <a href="preparing-test-data.html" class="xref page">here</a>. In the <code>sampling_2014_2022</code> subfolder there are samples, generated from all available notices in the 2014-2022 period that cover the various changes in the XML Schema over the years. More automatically generated samples will follow.</p>
-</div>
+<h1 class="page">Glossary: Reusing Open Data Service artefacts</h1>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Term</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Explanation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>RDF</strong></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stands for Resource Description Framework. RDF is a standardized data model used to represent information on the web. RDF plays a crucial role in <a href="../index.html" class="xref page">TED-ODS</a> because it provides a standardized and structured format for representing the procurement data made available through the service. This allows for efficient querying, processing, and integration of the data into various applications and systems.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SPARQL Query</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents query language used to retrieve and manipulate data stored in RDF format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Jupyter Notebook</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An interactive computing environment that allows users to create and share documents containing live code, equations, visualizations, and explanatory text. It&#8217;s particularly useful for working with data and performing data analysis, making it a valuable tool for <a href="../mapping_suite/index.html" class="xref page">accessing and processing</a> data from TED-ODS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Python</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A widely used programming language that can be employed to retrieve data and <a href="jupyter_notebook_python.html" class="xref page">perform operations</a> on the RDF data provided by TED-ODS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>R language</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refers to a popular programming language and environment specifically relevant for statistical computing, <a href="jupyter_notebook_r.html" class="xref page">data analysis</a>, and graphical representation that is used to retrieve and perform operations on the RDF data provided by TED-ODS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MS Excel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refers to Microsoft Excel, which is a widely used spreadsheet program developed by Microsoft used as a versatile tool for <a href="ms_excel.html" class="xref page">handling and analysing</a> data obtained from TED-ODS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code Editor</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">refers to a software tool or environment where users can write, edit, and execute code. It allows to easily create scripts or programs to retrieve data from TED-ODS and perform operations on the RDF data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Jupyter Notebook Kernel</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Refers to the computational engine that executes the code within a Jupyter Notebook. It determines which programming language is used to run the code in the notebook. For example, if you&#8217;re working with TED-ODS in a Jupyter Notebook, you might choose to use a Python kernel, which means that you&#8217;ll be writing and executing Python code.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business Questions</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(BQ) refer to specific inquiries or information needs that pertain to business operations, procurement activities, or related aspects. These questions are typically posed by organizations, researchers, or individuals seeking to gain insights, make informed decisions, or conduct analyses based on the data provided by TED-ODS.</p></td>
+</tr>
+</tbody>
+</table>
 <hr>
 <div class="paragraph">
 <p>Any comments on the documentation?</p>

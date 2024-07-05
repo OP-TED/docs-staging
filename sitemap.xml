@@ -43,9 +43,9 @@
 <loc>https://docs.ted.europa.eu/sitemap-m2o-home.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.ted.europa.eu/sitemap-reuse.xml</loc>
+<loc>https://docs.ted.europa.eu/sitemap-ODS.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.ted.europa.eu/sitemap-SWS.xml</loc>
+<loc>https://docs.ted.europa.eu/sitemap-reuse.xml</loc>
 </sitemap>
 </sitemapindex>
