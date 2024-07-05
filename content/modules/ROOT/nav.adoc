@@ -11,7 +11,7 @@
 * xref:epo-home::index.adoc[ePO Docs `{epo_latest_version}`]
 * xref:epo-wgm::index.adoc[Working Group Meetings]
 
-* [.separated]#**TED Semantic Web Service**#
+* [.separated]#**TED Open Data Service**#
 * xref:ODS::index.adoc[TED Open Data Service]
 
 * [.separated]#**model2owl**#
