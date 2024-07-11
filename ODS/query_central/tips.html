@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Starting Querying the eProcurement data using SPARQL :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/query_central/starting.html">
+    <title>Tips when querying eProcurement data using SPARQL :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/query_central/tips.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -139,7 +139,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Query Central</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="starting.html">Starting out with SPARQL Queries</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -242,7 +242,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="starting.html">Starting out with SPARQL Queries</a></li>
+    <li><a href="tips.html">Tips when querying eProcurement data using SPARQL</a></li>
   </ul>
 </nav>
 </div>
@@ -251,96 +251,31 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Starting Querying the eProcurement data using SPARQL</h1>
-<div class="sect1">
-<h2 id="_topics"><a class="anchor" href="#_topics"></a>Topics</h2>
-<div class="sectionbody">
+<h1 class="page">Tips when querying eProcurement data using SPARQL</h1>
 <div class="sect2">
-<h3 id="_an_overview_of_procurement_data"><a class="anchor" href="#_an_overview_of_procurement_data"></a>An overview of Procurement Data</h3>
+<h3 id="_note"><a class="anchor" href="#_note"></a>Note</h3>
+<div class="sect3">
+<h4 id="_what_data_is_available_from_which_notices_and_over_what_time_period"><a class="anchor" href="#_what_data_is_available_from_which_notices_and_over_what_time_period"></a>What data is available (from which notices and over what time period)?</h4>
 <div class="paragraph">
-<p>Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site.</p>
+<p>Currently, the data available in CELLAR is restricted to Contract Award Notices published between 1 September 2023 and 31 December 2023. <mark>check datas</mark></p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_lots"><a class="anchor" href="#_lots"></a>Lots</h4>
 <div class="paragraph">
-<p>Alternatively, you can use this short info session on Notice data: <mark>&lt;insert link&gt;</mark> to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
-This will give you an overview of what concepts can be found in a notice.</p>
+<p>All purchases are organised in into lots. Lots are effectively supply packages that enable supply to e.g., different locations, proportions of goods over time, etc. Even if only one delivery is stipulated, there is still a single lot. When querying, this can be confusing because it could look like data with the same notice number is duplicated in the results table, when actually it is showing the lots rather than the whole order.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_converting_notice_data_into_rdf_format"><a class="anchor" href="#_converting_notice_data_into_rdf_format"></a>Converting Notice Data into rdf format</h3>
+<div class="sect3">
+<h4 id="_duplicate_data_in_results"><a class="anchor" href="#_duplicate_data_in_results"></a>Duplicate data in results</h4>
 <div class="paragraph">
-<p>On the ted.europa.eu website you will soon realise that while servicing buyers and sellers well who wish to buy or supply a package of goods or services, searching for combined data on many notices, or mass notices historically, is not what the site is designed for.</p>
+<p>Apart from the phenomenon of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter this in the query, the same notice mihgt be listed several times. <mark>check accuracy and other reasons</mark></p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_availability_of_classes_for_querying"><a class="anchor" href="#_availability_of_classes_for_querying"></a>Availability of classes for querying.</h4>
 <div class="paragraph">
-<p>As part of the European Commission&#8217;s strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service, described in technical detail in this documentation.</p>
-</div>
-<div class="paragraph">
-<p>The data, stored in the "CELLAR", the RDF database maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using CELLAR&#8217;s <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL EndPoint</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_how_rdf_data_is_queried"><a class="anchor" href="#_how_rdf_data_is_queried"></a>How RDF Data is queried</h3>
-<div class="paragraph">
-<p>RDF Data is queried using SPARQL, a query language specifically for RDF data. A guide for querying RDF data and constructing a query can be found <mark>here</mark> (update once the ePO guides are live). Once a query is ready, it is pasted into the SPARQL EndPoint&#8217;s input field and executed.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_links_to_good_training_resources_for_learning_sparql"><a class="anchor" href="#_links_to_good_training_resources_for_learning_sparql"></a>Links to good training resources for learning sparql:</h3>
-<div class="literalblock">
-<div class="content">
-<pre>There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The guides on the ePO page <mark>(rdf &amp; sparql/ ePO lesson/ etc n)</mark></p>
-</li>
-<li>
-<p><a href="https://www.w3.org/TR/sparql11-query/">W3C</a></p>
-</li>
-<li>
-<p>YouTube lectures:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.youtube.com/watch?v=zkr_2HR4Pcs&amp;list=PLakGkiOE3_q8Fq46-TSE-Te1cvx8yLLUF">LINKED Data and SPARQL</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/playlist?list=PLoOmvuyo5UAfY6jb46jCpMoqb-dbVewxg">Linked data Engineering</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Videos:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.youtube.com/watch?v=FvGndkpa4K0">SPARQL in 11 Minutes</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=zteyEk9LADs&amp;t=338s">RDF and OWL</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Other web-based training courses on training sites like Udemy</p>
-</li>
-<li>
-<p>Books from publishers such as O&#8217;Reilly, The Dummies Guide to, Morgan Kaufmann, etc.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_links_to_achilless_guides_once_live_change_name"><a class="anchor" href="#_links_to_achilless_guides_once_live_change_name"></a>Links to Achilles&#8217;s guides once live <mark>change name</mark></h3>
-<div class="paragraph">
-<p>Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found <mark>here</mark>. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.</p>
-</div>
-<div class="paragraph">
-<p>Some tips regarding queries can be found <a href="tips.html" class="xref page">here</a>.</p>
-</div>
+<p>The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices will not have been collected against classes that only came into existance in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and going forward, possibly use more than one class in your query to cover all time periods.</p>
 </div>
 </div>
 </div>
