@@ -2992,7 +2992,7 @@ efph:{
 eflh:[],
 iflbx:false,
 ipflbx:true,
-text:'{"blocks":[{"key":"2cb05","text":"In the last lesson, you learnt about Linked Open Data. ","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":55,"style":"textTransform:none"},{"offset":0,"length":55,"style":"textShadowOpacity:none"},{"offset":0,"length":55,"style":"textDecoration:none"},{"offset":0,"length":55,"style":"lineHeight:130%"},{"offset":0,"length":55,"style":"borderBottomStyle:none"},{"offset":0,"length":55,"style":"desktop-fontSize:22"},{"offset":0,"length":55,"style":"textShadowEnable:false"},{"offset":0,"length":55,"style":"hlnk:"},{"offset":0,"length":55,"style":"fontWeight:normal"},{"offset":0,"length":55,"style":"textShadowBlur:8px"},{"offset":0,"length":55,"style":"fontFamily:Arial"},{"offset":0,"length":55,"style":"overridden:false"},{"offset":0,"length":55,"style":"backgroundColor:unset"},{"offset":0,"length":55,"style":"WebkitTextStrokeWidth:1px"},{"offset":0,"length":55,"style":"hlnkt:wp"},{"offset":0,"length":55,"style":"fontStyle:normal"},{"offset":0,"length":55,"style":"tablet-fontSize:20"},{"offset":0,"length":55,"style":"defaultTextStrokeWidth:1px"},{"offset":0,"length":55,"style":"WebkitTextStrokeColor:#F1EEE6"},{"offset":0,"length":55,"style":"textOutlineEnable:false"},{"offset":0,"length":55,"style":"opacity:1"},{"offset":0,"length":55,"style":"defaultTextStrokeColor:#F1EEE6"},{"offset":0,"length":55,"style":"hlnke:true"},{"offset":0,"length":55,"style":"defaultTextShadow:none"},{"offset":0,"length":55,"style":"textShadow:none"},{"offset":0,"length":55,"style":"mobile-fontSize:18"},{"offset":0,"length":55,"style":"textShadowX:0px"},{"offset":0,"length":55,"style":"fontStretch:normal"},{"offset":0,"length":55,"style":"fontType:regular"},{"offset":0,"length":55,"style":"color:#666666"},{"offset":0,"length":55,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":55,"style":"textShadowY:4px"},{"offset":0,"length":55,"style":"letterSpacing:3%"},{"offset":0,"length":55,"style":"textShadowColor:#F1EEE61F"},{"offset":0,"length":55,"style":"textHighlightEnable:false"}],"entityRanges":[],"data":{"presetId":"text-body-2","listDepth":"0","listType":"S_Bullets08","listIndent":"100%","listSize":"100%","listColor":"#666666","overridden":"false"}},{"key":"dkjco","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"2lp8e","text":"In this lesson you will learn about the format that eProcurement (and linked) data is stored in, RDF,  and the language used to query it, SPARQL.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":145,"style":"hlnk:"},{"offset":0,"length":145,"style":"hlnkt:wp"},{"offset":0,"length":145,"style":"textOutlineEnable:false"},{"offset":0,"length":145,"style":"opacity:1"},{"offset":0,"length":145,"style":"hlnke:true"},{"offset":0,"length":145,"style":"backgroundColor:unset"},{"offset":0,"length":145,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":145,"style":"textHighlightEnable:false"},{"offset":0,"length":145,"style":"textShadowEnable:false"},{"offset":0,"length":145,"style":"overridden:false"}],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"cuqec","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"cfott","text":"This lesson pulls all the knowledge from the earlier ones on notice data, ePO resources like ontologies, including vocabularies, glossaries, etc, and introduces sparql queries based on ePO data.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":194,"style":"textHighlightEnable:false"},{"offset":0,"length":194,"style":"textShadowEnable:false"},{"offset":0,"length":194,"style":"overridden:false"},{"offset":0,"length":194,"style":"hlnk:"},{"offset":0,"length":194,"style":"hlnkt:wp"},{"offset":0,"length":194,"style":"textOutlineEnable:false"},{"offset":0,"length":194,"style":"opacity:1"},{"offset":0,"length":194,"style":"hlnke:true"},{"offset":0,"length":194,"style":"backgroundColor:unset"},{"offset":0,"length":194,"style":"defaultBackgroundColor:#E8D01B"}],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"65m99","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"a50hv","text":"This lesson does not provide in in-depth training on the SPARQL query language itself; for this there are many good training resources online. Here we give an overview of a SPARQL query and how to use it in the eProcurement context.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":173,"style":"textShadowBlur:8px"},{"offset":179,"length":53,"style":"textShadowBlur:8px"},{"offset":0,"length":173,"style":"fontFamily:Arial"},{"offset":179,"length":53,"style":"fontFamily:Arial"},{"offset":0,"length":232,"style":"overridden:false"},{"offset":0,"length":232,"style":"backgroundColor:unset"},{"offset":0,"length":173,"style":"WebkitTextStrokeWidth:1px"},{"offset":179,"length":53,"style":"WebkitTextStrokeWidth:1px"},{"offset":0,"length":232,"style":"hlnkt:wp"},{"offset":0,"length":173,"style":"fontStyle:normal"},{"offset":179,"length":53,"style":"fontStyle:normal"},{"offset":0,"length":173,"style":"tablet-fontSize:20"},{"offset":179,"length":53,"style":"tablet-fontSize:20"},{"offset":0,"length":173,"style":"defaultTextStrokeWidth:1px"},{"offset":179,"length":53,"style":"defaultTextStrokeWidth:1px"},{"offset":0,"length":173,"style":"WebkitTextStrokeColor:#F1EEE6"},{"offset":179,"length":53,"style":"WebkitTextStrokeColor:#F1EEE6"},{"offset":0,"length":232,"style":"textOutlineEnable:false"},{"offset":0,"length":232,"style":"opacity:1"},{"offset":0,"length":173,"style":"defaultTextStrokeColor:#F1EEE6"},{"offset":179,"length":53,"style":"defaultTextStrokeColor:#F1EEE6"},{"offset":0,"length":232,"style":"hlnke:true"},{"offset":0,"length":173,"style":"defaultTextShadow:none"},{"offset":179,"length":53,"style":"defaultTextShadow:none"},{"offset":0,"length":173,"style":"textShadow:none"},{"offset":179,"length":53,"style":"textShadow:none"},{"offset":0,"length":173,"style":"mobile-fontSize:18"},{"offset":179,"length":53,"style":"mobile-fontSize:18"},{"offset":0,"length":173,"style":"textShadowX:0px"},{"offset":179,"length":53,"style":"textShadowX:0px"},{"offset":0,"length":173,"style":"fontStretch:normal"},{"offset":179,"length":53,"style":"fontStretch:normal"},{"offset":0,"length":173,"style":"fontType:regular"},{"offset":179,"length":53,"style":"fontType:regular"},{"offset":0,"length":173,"style":"color:#666666"},{"offset":179,"length":53,"style":"color:#666666"},{"offset":0,"length":232,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":173,"style":"textShadowY:4px"},{"offset":179,"length":53,"style":"textShadowY:4px"},{"offset":0,"length":173,"style":"letterSpacing:3%"},{"offset":179,"length":53,"style":"letterSpacing:3%"},{"offset":0,"length":173,"style":"textShadowColor:#F1EEE61F"},{"offset":179,"length":53,"style":"textShadowColor:#F1EEE61F"},{"offset":0,"length":232,"style":"textHighlightEnable:false"},{"offset":0,"length":173,"style":"textTransform:none"},{"offset":179,"length":53,"style":"textTransform:none"},{"offset":0,"length":173,"style":"textShadowOpacity:none"},{"offset":179,"length":53,"style":"textShadowOpacity:none"},{"offset":0,"length":173,"style":"textDecoration:none"},{"offset":179,"length":53,"style":"textDecoration:none"},{"offset":0,"length":173,"style":"lineHeight:130%"},{"offset":179,"length":53,"style":"lineHeight:130%"},{"offset":0,"length":173,"style":"borderBottomStyle:none"},{"offset":179,"length":53,"style":"borderBottomStyle:none"},{"offset":0,"length":173,"style":"desktop-fontSize:22"},{"offset":179,"length":53,"style":"desktop-fontSize:22"},{"offset":0,"length":232,"style":"textShadowEnable:false"},{"offset":0,"length":232,"style":"hlnk:"},{"offset":0,"length":173,"style":"fontWeight:normal"},{"offset":179,"length":53,"style":"fontWeight:normal"}],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"db52v","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"d29bn","text":"Some links to more resources on RDF and SPARQL can be found on the last slide of this lesson.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":93,"style":"hlnk:"},{"offset":0,"length":93,"style":"hlnkt:wp"},{"offset":0,"length":93,"style":"textOutlineEnable:false"},{"offset":0,"length":93,"style":"opacity:1"},{"offset":0,"length":93,"style":"hlnke:true"},{"offset":0,"length":93,"style":"backgroundColor:unset"},{"offset":0,"length":93,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":93,"style":"textHighlightEnable:false"},{"offset":0,"length":93,"style":"textShadowEnable:false"},{"offset":0,"length":93,"style":"overridden:false"}],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}}],"entityMap":{}}',
+text:'{"blocks":[{"key":"2cb05","text":"In this session you will learn about the format that eProcurement (and linked) data is stored in, RDF,  and the language used to query it, SPARQL.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":146,"style":"hlnkt:wp"},{"offset":0,"length":146,"style":"textOutlineEnable:false"},{"offset":0,"length":146,"style":"opacity:1"},{"offset":0,"length":146,"style":"hlnke:true"},{"offset":0,"length":146,"style":"backgroundColor:unset"},{"offset":0,"length":146,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":146,"style":"textHighlightEnable:false"},{"offset":0,"length":146,"style":"textShadowEnable:false"},{"offset":0,"length":146,"style":"overridden:false"},{"offset":0,"length":146,"style":"hlnk:"}],"entityRanges":[],"data":{"presetId":"text-body-2","listDepth":"0","listType":"S_Bullets08","listIndent":"100%","listSize":"100%","listColor":"#666666","overridden":"false"}},{"key":"cuqec","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"cfott","text":"This session pulls all the knowledge from the earlier ones on notice data, ePO resources like ontologies, including vocabularies, glossaries, etc, and introduces sparql queries based on ePO data.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":195,"style":"hlnk:"},{"offset":0,"length":195,"style":"hlnkt:wp"},{"offset":0,"length":195,"style":"textOutlineEnable:false"},{"offset":0,"length":195,"style":"opacity:1"},{"offset":0,"length":195,"style":"hlnke:true"},{"offset":0,"length":195,"style":"backgroundColor:unset"},{"offset":0,"length":195,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":195,"style":"textHighlightEnable:false"},{"offset":0,"length":195,"style":"textShadowEnable:false"},{"offset":0,"length":195,"style":"overridden:false"}],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"65m99","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"a50hv","text":"This session does not provide in in-depth training on the SPARQL query language itself; for this there are many good training resources online. Here we give an overview of a SPARQL query and how to use it in the eProcurement context.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":174,"style":"fontType:regular"},{"offset":180,"length":53,"style":"fontType:regular"},{"offset":0,"length":174,"style":"color:#666666"},{"offset":180,"length":53,"style":"color:#666666"},{"offset":0,"length":233,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":174,"style":"textShadowY:4px"},{"offset":180,"length":53,"style":"textShadowY:4px"},{"offset":0,"length":174,"style":"letterSpacing:3%"},{"offset":180,"length":53,"style":"letterSpacing:3%"},{"offset":0,"length":174,"style":"textShadowColor:#F1EEE61F"},{"offset":180,"length":53,"style":"textShadowColor:#F1EEE61F"},{"offset":0,"length":233,"style":"textHighlightEnable:false"},{"offset":0,"length":174,"style":"textTransform:none"},{"offset":180,"length":53,"style":"textTransform:none"},{"offset":0,"length":174,"style":"textShadowOpacity:none"},{"offset":180,"length":53,"style":"textShadowOpacity:none"},{"offset":0,"length":174,"style":"textDecoration:none"},{"offset":180,"length":53,"style":"textDecoration:none"},{"offset":0,"length":174,"style":"lineHeight:130%"},{"offset":180,"length":53,"style":"lineHeight:130%"},{"offset":0,"length":174,"style":"borderBottomStyle:none"},{"offset":180,"length":53,"style":"borderBottomStyle:none"},{"offset":0,"length":174,"style":"desktop-fontSize:22"},{"offset":180,"length":53,"style":"desktop-fontSize:22"},{"offset":0,"length":233,"style":"textShadowEnable:false"},{"offset":0,"length":233,"style":"hlnk:"},{"offset":0,"length":174,"style":"fontWeight:normal"},{"offset":180,"length":53,"style":"fontWeight:normal"},{"offset":0,"length":174,"style":"textShadowBlur:8px"},{"offset":180,"length":53,"style":"textShadowBlur:8px"},{"offset":0,"length":174,"style":"fontFamily:Arial"},{"offset":180,"length":53,"style":"fontFamily:Arial"},{"offset":0,"length":233,"style":"overridden:false"},{"offset":0,"length":233,"style":"backgroundColor:unset"},{"offset":0,"length":174,"style":"WebkitTextStrokeWidth:1px"},{"offset":180,"length":53,"style":"WebkitTextStrokeWidth:1px"},{"offset":0,"length":233,"style":"hlnkt:wp"},{"offset":0,"length":174,"style":"fontStyle:normal"},{"offset":180,"length":53,"style":"fontStyle:normal"},{"offset":0,"length":174,"style":"tablet-fontSize:20"},{"offset":180,"length":53,"style":"tablet-fontSize:20"},{"offset":0,"length":174,"style":"defaultTextStrokeWidth:1px"},{"offset":180,"length":53,"style":"defaultTextStrokeWidth:1px"},{"offset":0,"length":174,"style":"WebkitTextStrokeColor:#F1EEE6"},{"offset":180,"length":53,"style":"WebkitTextStrokeColor:#F1EEE6"},{"offset":0,"length":233,"style":"textOutlineEnable:false"},{"offset":0,"length":233,"style":"opacity:1"},{"offset":0,"length":174,"style":"defaultTextStrokeColor:#F1EEE6"},{"offset":180,"length":53,"style":"defaultTextStrokeColor:#F1EEE6"},{"offset":0,"length":233,"style":"hlnke:true"},{"offset":0,"length":174,"style":"defaultTextShadow:none"},{"offset":180,"length":53,"style":"defaultTextShadow:none"},{"offset":0,"length":174,"style":"textShadow:none"},{"offset":180,"length":53,"style":"textShadow:none"},{"offset":0,"length":174,"style":"mobile-fontSize:18"},{"offset":180,"length":53,"style":"mobile-fontSize:18"},{"offset":0,"length":174,"style":"textShadowX:0px"},{"offset":180,"length":53,"style":"textShadowX:0px"},{"offset":0,"length":174,"style":"fontStretch:normal"},{"offset":180,"length":53,"style":"fontStretch:normal"}],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"db52v","text":"","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}},{"key":"d29bn","text":"Some links to more resources on RDF and SPARQL can be found on the last slide of this session.","type":"unstyled","depth":0,"inlineStyleRanges":[{"offset":0,"length":94,"style":"hlnk:"},{"offset":0,"length":94,"style":"hlnkt:wp"},{"offset":0,"length":94,"style":"textOutlineEnable:false"},{"offset":0,"length":94,"style":"opacity:1"},{"offset":0,"length":94,"style":"hlnke:true"},{"offset":0,"length":94,"style":"backgroundColor:unset"},{"offset":0,"length":94,"style":"defaultBackgroundColor:#E8D01B"},{"offset":0,"length":94,"style":"textHighlightEnable:false"},{"offset":0,"length":94,"style":"textShadowEnable:false"},{"offset":0,"length":94,"style":"overridden:false"}],"entityRanges":[],"data":{"listType":"S_Bullets08","listColor":"#666666","listIndent":"100%","listSize":"100%","listDepth":"0","overridden":"false","presetId":"text-body-2"}}],"entityMap":{}}',
 autoGrow:false,
 tbqt:0,
 trin:0,
@@ -26628,8 +26628,8 @@ vb:[-1,-1,2,2]
 si4116:{
 name:'Carousel_Widget_4',
 type:1268,
-from:4297,
-to:4386,
+from:3790,
+to:3879,
 rp:0,
 rpa:0,
 mdi:'si4116c',
@@ -40649,8 +40649,8 @@ vb:[-2,-2,-1,-1]
 Slide4138:{
 lb:'Query 1',
 id:4138,
-from:4297,
-to:4386,
+from:3790,
+to:3879,
 iols:0,
 i360qs:false,
 sdu:3,
@@ -40710,11 +40710,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-4064:{
+4086:{
 ts:''
 }
 ,
-4086:{
+4064:{
 ts:''
 }
 
@@ -41710,8 +41710,8 @@ vb:[-1,-1,2,2]
 si5285:{
 name:'Carousel_Widget_5',
 type:1268,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 rp:0,
 rpa:0,
 mdi:'si5285c',
@@ -41735,7 +41735,7 @@ isOverridden:true
 }
 ]
 ,
-widgetProps:'{"visibilityInfo":{"slide-item-body":true,"container-slider-buttons":true,"slide-item-heading":true,"slide-item-widget-body":false,"slide-item-next-button":false,"slide-item-prev-button":false,"slide-item-widget-instructions":true,"card":false,"title":true,"slide-item-image":true,"container-navigator-buttons":true},"alignment":{"container-slider-buttons":"MIDDLE","slide-item-heading":"LEFT","slide-item-widget-body":"LEFT","slide-item-widget-instructions":"LEFT","title":"LEFT","slide-item-body":"LEFT"},"canBeCard":false,"isForcedNavigationEnabled":true,"contentSpacing":2,"widgetLayout":{"value":"F"},"padding":{"top":40,"bottom":40,"left":4,"right":4},"widgetFlow":{"value":"RL"},"activeImage":{"value":1},"designOptionStyles":{"all":{"flexDirection":"column"},"tablet":{},"mobile":{}},"appearanceProperties":{},"isAutoLoadingEnabled":{"value":false,"timeInterval":2}}',
+widgetProps:'{"visibilityInfo":{"slide-item-body":true,"container-slider-buttons":true,"slide-item-heading":true,"slide-item-widget-body":false,"slide-item-next-button":false,"slide-item-prev-button":false,"slide-item-widget-instructions":true,"card":false,"title":true,"slide-item-image":true,"container-navigator-buttons":true},"alignment":{"container-slider-buttons":"MIDDLE","slide-item-heading":"LEFT","slide-item-widget-body":"LEFT","slide-item-widget-instructions":"LEFT","title":"LEFT","slide-item-body":"LEFT"},"canBeCard":false,"isForcedNavigationEnabled":true,"contentSpacing":2,"widgetLayout":{"value":"F"},"padding":{"top":40,"bottom":40,"left":4,"right":4},"widgetFlow":{"value":"RL"},"activeImage":{"value":0},"designOptionStyles":{"all":{"flexDirection":"column"},"tablet":{},"mobile":{}},"appearanceProperties":{},"isAutoLoadingEnabled":{"value":false,"timeInterval":2}}',
 retainState:false,
 immo:false,
 apsn:'Slide5307',
@@ -41768,7 +41768,7 @@ t:1268
 ]
 ,
 containerType:'slider-widget',
-widgetProps:'{"visibilityInfo":{"slide-item-body":true,"container-slider-buttons":true,"slide-item-heading":true,"slide-item-widget-body":false,"slide-item-next-button":false,"slide-item-prev-button":false,"slide-item-widget-instructions":true,"card":false,"title":true,"slide-item-image":true,"container-navigator-buttons":true},"alignment":{"container-slider-buttons":"MIDDLE","slide-item-heading":"LEFT","slide-item-widget-body":"LEFT","slide-item-widget-instructions":"LEFT","title":"LEFT","slide-item-body":"LEFT"},"canBeCard":false,"isForcedNavigationEnabled":true,"contentSpacing":2,"widgetLayout":{"value":"F"},"padding":{"top":40,"bottom":40,"left":4,"right":4},"widgetFlow":{"value":"RL"},"activeImage":{"value":1},"designOptionStyles":{"all":{"flexDirection":"column"},"tablet":{},"mobile":{}},"appearanceProperties":{},"isAutoLoadingEnabled":{"value":false,"timeInterval":2}}',
+widgetProps:'{"visibilityInfo":{"slide-item-body":true,"container-slider-buttons":true,"slide-item-heading":true,"slide-item-widget-body":false,"slide-item-next-button":false,"slide-item-prev-button":false,"slide-item-widget-instructions":true,"card":false,"title":true,"slide-item-image":true,"container-navigator-buttons":true},"alignment":{"container-slider-buttons":"MIDDLE","slide-item-heading":"LEFT","slide-item-widget-body":"LEFT","slide-item-widget-instructions":"LEFT","title":"LEFT","slide-item-body":"LEFT"},"canBeCard":false,"isForcedNavigationEnabled":true,"contentSpacing":2,"widgetLayout":{"value":"F"},"padding":{"top":40,"bottom":40,"left":4,"right":4},"widgetFlow":{"value":"RL"},"activeImage":{"value":0},"designOptionStyles":{"all":{"flexDirection":"column"},"tablet":{},"mobile":{}},"appearanceProperties":{},"isAutoLoadingEnabled":{"value":false,"timeInterval":2}}',
 option:'DEFAULT_SLIDER_WIDGET_OPTION',
 padding:{
 left:0,
@@ -42346,8 +42346,8 @@ vb:[-2,-2,150,30]
 si5227:{
 name:'Slider_Content_5',
 type:1268,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 rp:0,
 rpa:0,
 mdi:'si5227c',
@@ -42513,8 +42513,8 @@ vb:[-1,-1,1,1]
 si5221:{
 name:'Slider_Card_5',
 type:1268,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 rp:0,
 rpa:0,
 mdi:'si5221c',
@@ -45045,8 +45045,8 @@ vb:[-2,-2,-1,-1]
 si4648:{
 name:'Carousel_26',
 type:1268,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 rp:0,
 rpa:0,
 mdi:'si4648c',
@@ -45570,8 +45570,8 @@ vb:[-1,-1,1566,858]
 si4642:{
 name:'Paragraph_137',
 type:1268,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 rp:0,
 rpa:0,
 mdi:'si4642c',
@@ -45738,8 +45738,8 @@ vb:[-1,-1,1,1]
 si4636:{
 name:'Paragraph_Card_86',
 type:1268,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 rp:0,
 rpa:0,
 mdi:'si4636c',
@@ -46229,8 +46229,8 @@ vb:[-2,-2,150,30]
 si4582:{
 name:'Text_896',
 type:1250,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 rp:0,
 rpa:0,
 mdi:'si4582c',
@@ -55732,8 +55732,8 @@ vb:[-2,-2,-1,-1]
 Slide5307:{
 lb:'Query 2',
 id:5307,
-from:4387,
-to:4476,
+from:3880,
+to:3969,
 iols:0,
 i360qs:false,
 sdu:3,
@@ -55793,11 +55793,11 @@ bookmarks:[]
 ,
 qs:'',
 iph:{
-5233:{
+5255:{
 ts:''
 }
 ,
-5255:{
+5233:{
 ts:''
 }
 
@@ -58489,7 +58489,7 @@ resources:['dr/0419.png']
 ,{
 slideID:5,
 ResourceList:{
-resources:['dr/01458.png','dr/01482.png','dr/01609.png','dr/01733.png','dr/01857.png','dr/01981.png','dr/02105.png','dr/02228.svg']
+resources:['dr/01458.png','dr/01482.png','dr/01609.png','dr/01733.png','dr/01857.png','dr/01981.png','dr/02105.png']
 }
 
 }
@@ -58503,21 +58503,14 @@ resources:['dr/02531.png']
 ,{
 slideID:8,
 ResourceList:{
-resources:['dr/03202.svg','dr/03215.svg','dr/03237.png','dr/03361.png','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/03980.svg']
+resources:['dr/03237.png','dr/03361.png','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png']
 }
 
 }
 ,{
 slideID:9,
 ResourceList:{
-resources:['dr/03202.svg','dr/03215.svg','dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/03980.svg','dr/04405.png','dr/04530.png']
-}
-
-}
-,{
-slideID:11,
-ResourceList:{
-resources:['dr/0419.png']
+resources:['dr/03485.png','dr/03609.png','dr/03733.png','dr/03857.png','dr/04405.png','dr/04530.png']
 }
 
 }
