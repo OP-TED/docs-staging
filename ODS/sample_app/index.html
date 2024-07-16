@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Query Central :: TED Developer Documentation</title>
+    <title>Querying TED Open Data :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/sample_app/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -243,11 +243,11 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Query Central</h1>
+<h1 class="page">Querying TED Open Data</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you are new to eProcurement and SPARQL Queries, you might want to read the <a href="#starting.adoc" class="xref unresolved">Starting out with SPARQL Queries</a> page first.</p>
+<p>If you are new to eProcurement and SPARQL Queries, you might want to read the <a href="#../../../query_central/pages/starting.adoc" class="xref unresolved">Starting out with SPARQL Queries</a> page first.</p>
 </div>
 <div class="paragraph">
 <p>In most cases you will start the new query process by having a specific scenario or context in which a question about EU public procurement is asked. The following steps then followed:</p>
@@ -340,7 +340,7 @@
 <p>Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found using one of the several ways of searching for notices available on the site, the advanced, expert, or browse categories methods of searching.</p>
 </div>
 <div class="paragraph">
-<p>As an aid, you can use these short info session on <a href="#attachment$Notice_Data/index.html" class="xref unresolved">Notice Data</a> and <a href="#attachment$Searching_Notices/index.html" class="xref unresolved">Searching Notices</a> to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
+<p>As an aid, you can use these short info session on <a href="#../../../query_central/attachment$Notice_Data/index.html" class="xref unresolved">Notice Data</a> and <a href="#../../../query_central/attachment$Searching_Notices/index.html" class="xref unresolved">Searching Notices</a> to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.
 This wshould give you an overview of what information can be found in a notice.</p>
 </div>
 </div>
@@ -425,16 +425,19 @@ This wshould give you an overview of what information can be found in a notice.<
 <div class="paragraph">
 <p>Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found <mark>here</mark>. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.</p>
 </div>
-<div class="sect2">
-<h3 id="_note"><a class="anchor" href="#_note"></a>Note</h3>
-<div class="sect3">
-<h4 id="_what_data_is_available_from_which_notices_and_over_what_time_period"><a class="anchor" href="#_what_data_is_available_from_which_notices_and_over_what_time_period"></a>What data is available (from which notices and over what time period)?</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_data_is_available_from_which_notices_and_over_what_time_period"><a class="anchor" href="#_what_data_is_available_from_which_notices_and_over_what_time_period"></a>What data is available (from which notices and over what time period)?</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Currently, the data available in Cellar is restricted to Contract Award Notices published between 1 September 2023 and 31 December 2023. <mark>check dates</mark></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_lots"><a class="anchor" href="#_lots"></a>Lots</h4>
+</div>
+<div class="sect1">
+<h2 id="_lots"><a class="anchor" href="#_lots"></a>Lots</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>All purchases are organised in into lots. Lots are effectively supply packages that enable supply to e.g., different locations, a subset of goods over time, etc. Even if only one delivery is stipulated, there is still a single lot. When querying, this can be confusing because it can look like data with the same notice number is duplicated in the results table, when actually it is showing rows of lots rather than the whole order in one row.</p>
 </div>
@@ -442,14 +445,18 @@ This wshould give you an overview of what information can be found in a notice.<
 <p>To clarify, you might want to add a column for lot number in your query.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_duplicate_data_in_results"><a class="anchor" href="#_duplicate_data_in_results"></a>Duplicate data in results</h4>
+</div>
+<div class="sect1">
+<h2 id="_duplicate_data_in_results"><a class="anchor" href="#_duplicate_data_in_results"></a>Duplicate data in results</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Apart from the appearance of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter this in the query, the same notice might be listed several times in different languages. <mark>check accuracy and other reasons</mark></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_availability_of_classes_for_querying"><a class="anchor" href="#_availability_of_classes_for_querying"></a>Availability of classes for querying</h4>
+</div>
+<div class="sect1">
+<h2 id="_availability_of_epo_classes_for_querying"><a class="anchor" href="#_availability_of_epo_classes_for_querying"></a>Availability of ePO classes for querying</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices will not have been collected against classes that only came into existance in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and going forward, possibly use more than one class in your query to cover all time periods.</p>
 </div>
@@ -459,8 +466,6 @@ This wshould give you an overview of what information can be found in a notice.<
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
-</div>
 </div>
 </div>
 </div>
