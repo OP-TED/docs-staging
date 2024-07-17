@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Start Querying procurement data using SPARQL :: TED Developer Documentation</title>
+    <title>Start querying procurement data using SPARQL :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/sample_app/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -246,12 +246,12 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Start Querying procurement data using SPARQL</h1>
+<h1 class="page">Start querying procurement data using SPARQL</h1>
 <div class="sect1">
-<h2 id="_how_rdf_data_is_queried"><a class="anchor" href="#_how_rdf_data_is_queried"></a>How RDF Data is queried</h2>
+<h2 id="_how_rdf_data_is_queried"><a class="anchor" href="#_how_rdf_data_is_queried"></a>How RDF data is queried</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>RDF Data is queried using SPARQL, a query language specifically for querying RDF data. A guide for querying RDF data and constructing a query can be found <mark>here</mark> (update once the ePO guides are live). Once a query is ready, it is pasted into the SPARQL EndPoint&#8217;s input field and executed.</p>
+<p>RDF data is queried using SPARQL, a query language specifically for querying RDF data. A guide for querying RDF data and constructing a query can be found <a href="https://docs.ted.europa.eu/docs-staging/epo-home/guide.html">here</a>. Once a query is ready, it is pasted into the SPARQL EndPoint&#8217;s input field and executed.</p>
 </div>
 </div>
 </div>
@@ -259,12 +259,12 @@
 <h2 id="_links_to_online_training_resources_for_learning_sparql"><a class="anchor" href="#_links_to_online_training_resources_for_learning_sparql"></a>Links to online training resources for learning SPARQL</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are many good resources on SPARQL and constructing SPARQL queries that you can use to familiarise yourself with:</p>
+<p>There are many good online resources on SPARQL and constructing SPARQL queries:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The guides on the ePO page <mark>(rdf &amp; sparql/ ePO lesson/ etc)</mark></p>
+<p>The guides on the ePO page for learning about RDF and SPARQL can be found in the ePO Docs <a href="https://docs.ted.europa.eu/docs-staging/epo-home/guide.html">here</a></p>
 </li>
 <li>
 <p><a href="https://www.w3.org/TR/sparql11-query/">W3C</a></p>
@@ -296,7 +296,7 @@
 </div>
 </li>
 <li>
-<p>Other web-based training courses on training sites like Udemy</p>
+<p>Other web-based training courses on training sites like Udemy.</p>
 </li>
 <li>
 <p>Books from publishers such as O&#8217;Reilly, The Dummies Guide to, Morgan Kaufmann, etc.</p>
@@ -306,10 +306,10 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_links_to_achilless_guides_once_live_change_name"><a class="anchor" href="#_links_to_achilless_guides_once_live_change_name"></a>Links to Achilles&#8217;s guides once live <mark>change name</mark></h2>
+<h2 id="_guides_for_using_epo_resources_when_designing_queries"><a class="anchor" href="#_guides_for_using_epo_resources_when_designing_queries"></a>Guides for using ePO resources when designing queries</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found <mark>here</mark>. These are specific to EU public procurement and will help find the term names or classes you will use in your queries.</p>
+<p>Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found <a href="https://docs.ted.europa.eu/docs-staging/epo-home/guide.html">here</a>. These are specific to EU public procurement and will help find the concepts or classes you will use in your queries.</p>
 </div>
 </div>
 </div>
@@ -426,7 +426,7 @@
 <p>The next method is submitting a query directly into the SPARQL EndPoint. Here you can choose the desired returned data format from the options, and deal with the formating of the results as you wish.</p>
 </div>
 <div class="paragraph">
-<p>The last two query options are using Jupiter Notebook with either R and Python.</p>
+<p>The last two query options are using Jupyter Notebook with either R and Python.</p>
 </div>
 <div class="paragraph">
 <p>Read through the example applications and try them out in your own time. You will soon get an idea of which method suits you best.</p>
@@ -434,16 +434,19 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_data_is_available_from_which_notices_and_over_what_time_period"><a class="anchor" href="#_what_data_is_available_from_which_notices_and_over_what_time_period"></a>What data is available (from which notices and over what time period)?</h2>
+<h2 id="_tips_and_useful_information"><a class="anchor" href="#_tips_and_useful_information"></a>Tips and useful information</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_what_data_is_available_from_which_notices_and_over_what_time_period"><a class="anchor" href="#_what_data_is_available_from_which_notices_and_over_what_time_period"></a>What data is available (from which notices and over what time period)?</h3>
 <div class="paragraph">
 <p>Currently, the data available in Cellar is restricted to Contract Award Notices published between 1 September 2023 and 31 December 2023. <mark>check dates</mark></p>
 </div>
+<div class="paragraph">
+<p>Contract Award Notices cover eForm Result Notices, Direct Award Pre-notifications (DAPs), and Contract Modification Notices. <mark>check accuracy</mark></p>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_lots"><a class="anchor" href="#_lots"></a>Lots</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_lots"><a class="anchor" href="#_lots"></a>Lots</h3>
 <div class="paragraph">
 <p>All purchases are organised in into lots. Lots are effectively supply packages that enable supply to e.g., different locations, a subset of goods over time, etc. Even if only one delivery is stipulated, there is still a single lot. When querying, this can be confusing because it can look like data with the same notice number is duplicated in the results table, when actually it is showing rows of lots rather than the whole order in one row.</p>
 </div>
@@ -451,20 +454,19 @@
 <p>To clarify, you might want to add a column for lot number in your query.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_duplicate_data_in_results"><a class="anchor" href="#_duplicate_data_in_results"></a>Duplicate data in results</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_duplicate_data_in_results"><a class="anchor" href="#_duplicate_data_in_results"></a>Duplicate data in results</h3>
 <div class="paragraph">
 <p>Apart from the appearance of duplication caused by lots, there are other reasons why there might be a duplication in the results. Notices could be published more than one language, so unless you filter this in the query, the same notice might be listed several times in different languages. <mark>check accuracy and other reasons</mark></p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_availability_of_epo_classes_for_querying"><a class="anchor" href="#_availability_of_epo_classes_for_querying"></a>Availability of ePO classes for querying</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_availability_of_epo_classes_for_querying"><a class="anchor" href="#_availability_of_epo_classes_for_querying"></a>Availability of ePO classes for querying</h3>
 <div class="paragraph">
-<p>The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices will not have been collected against classes that only came into existance in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and going forward, possibly use more than one class in your query to cover all time periods.</p>
+<p>(<mark>check if correct/ relevant</mark>)</p>
+</div>
+<div class="paragraph">
+<p>The project to develop the eProcurement Ontology is quite advanced, however it is not yet complete. There are still some modules that are in development. Therefore, data from earlier notices might have been associated with an ePO class that might be different in a later version of the ontology. It is important to bear this in mind when choosing classes for a query. You will need to check the relevant version of the ontology and, going forward, possibly use more than one class in your query to cover all time periods.</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -472,6 +474,7 @@
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
 </div>
 </div>
 </div>
