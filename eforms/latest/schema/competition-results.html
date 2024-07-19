@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="eforms" data-version="1.11">
+<div class="nav-container" data-component="eforms" data-version="1.12">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -95,7 +95,7 @@
     <a class="nav-link" href="../../../eforms-common/versioning/index.html">SDK Versioning</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.11</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.12</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -161,22 +161,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../reference/index.html">Metadata Reference</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../reference/business-terms/index.html">Business Terms</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../reference/business-rules/index.html">Business Rules</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../reference/code-lists/index.html">Codelists</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>SDK Contents</strong> <code>1.11</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>SDK Contents</strong> <code>1.12</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -221,7 +206,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Developer Guide</strong> <code>1.11</code></span></span>
+    <span class="nav-text"><span class="separated"><strong>Developer Guide</strong> <code>1.12</code></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../guide/index.html">Start Here</a>
@@ -279,17 +264,17 @@
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">eForms SDK</span>
-          <span class="version">1.11.0</span>
+          <span class="version">1.12</span>
       </div>
   <ul class="components">
       <li class="component is-current">
         <a class="title" href="../index.html">eForms SDK</a>
         <ul class="versions">
-            <li class="version">
-              <a href="../../1.12/index.html">1.12</a>
-            </li>
             <li class="version is-current is-latest">
-              <a href="../index.html">1.11.0</a>
+              <a href="../index.html">1.12</a>
+            </li>
+            <li class="version">
+              <a href="../../1.11/index.html">1.11.0</a>
             </li>
             <li class="version">
               <a href="../../1.10/index.html">1.10</a>
@@ -365,10 +350,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">1.11.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">1.12</button>
   <div class="version-menu">
-    <a class="version" href="../../1.12/schema/competition-results.html">1.12</a>
-    <a class="version is-current" href="competition-results.html">1.11.0</a>
+    <a class="version is-current" href="competition-results.html">1.12</a>
+    <a class="version" href="../../1.11/schema/competition-results.html">1.11.0</a>
     <a class="version" href="../../1.10/schema/competition-results.html">1.10</a>
     <a class="version" href="../../1.9/schema/competition-results.html">1.9</a>
     <a class="version" href="../../1.8/schema/competition-results.html">1.8</a>
@@ -1252,6 +1237,9 @@ into fragments, each corresponding to a lot or group of lots.</p>
 <p>The Tender Rank,</p>
 </li>
 <li>
+<p>Conclusion on the application of Foreign Subsidies Measure,</p>
+</li>
+<li>
 <p>The Public transportation cumulated distance (for T02 form
 only),</p>
 </li>
@@ -1342,6 +1330,16 @@ innovation partnership.</p></td>
 <td class="tableblock halign-left valign-middle"><div class="content"><div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xpath hljs" data-lang="xpath">cbc:RankCode</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>Foreign Subsidies Measures (BT-682)</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Measures applied under the Foreign Subsidies Regulation (EU) 2022/2560.</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock"><strong>?</strong></p></td>
+<td class="tableblock halign-left valign-middle"><div class="content"><div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xpath hljs" data-lang="xpath">efbc:ForeignSubsidiesMeasuresCode</code></pre>
 </div>
 </div></div></td>
 </tr>
@@ -1700,6 +1698,7 @@ information in the tender section refers to this tender.</p></td>
     &lt;efac:LotTender&gt;
         &lt;cbc:ID schemeName="tender"&gt;TEN-0001&lt;/cbc:ID&gt;
         &lt;cbc:RankCode&gt;1&lt;/cbc:RankCode&gt;
+        &lt;efbc:ForeignSubsidiesMeasuresCode listName="foreign-subsidy-measure-conclusion"&gt;fsr-adm-clos&lt;/efbc:ForeignSubsidiesMeasuresCode &gt;
         &lt;efbc:TenderRankedIndicator&gt;true&lt;/efbc:TenderRankedIndicator&gt;
         &lt;efbc:TenderVariantIndicator&gt;true&lt;/efbc:TenderVariantIndicator&gt;
         &lt;cac:LegalMonetaryTotal&gt;
