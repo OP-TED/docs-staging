@@ -254,43 +254,43 @@
 <ul class="sectlevel2">
 <li><a href="#_description_2">4.1. Description</a></li>
 <li><a href="#_conceptual_model_2">4.2. Conceptual Model</a></li>
-<li><a href="#_imports">4.3. Imports</a></li>
+<li><a href="#_prefixes_and_imports_2">4.3. Prefixes and Imports</a></li>
 </ul>
 </li>
 <li><a href="#_eordering">5. eOrdering</a>
 <ul class="sectlevel2">
 <li><a href="#_description_3">5.1. Description</a></li>
-<li><a href="#_imports_2">5.2. Imports</a></li>
+<li><a href="#_imports">5.2. Imports</a></li>
 </ul>
 </li>
 <li><a href="#_efulfilment">6. eFulfilment</a>
 <ul class="sectlevel2">
 <li><a href="#_description_4">6.1. Description</a></li>
-<li><a href="#_imports_3">6.2. Imports</a></li>
+<li><a href="#_imports_2">6.2. Imports</a></li>
 </ul>
 </li>
 <li><a href="#_econtract">7. eContract</a>
 <ul class="sectlevel2">
 <li><a href="#_description_5">7.1. Description</a></li>
-<li><a href="#_imports_4">7.2. Imports</a></li>
+<li><a href="#_imports_3">7.2. Imports</a></li>
 </ul>
 </li>
 <li><a href="#_eaccess">8. eAccess</a>
 <ul class="sectlevel2">
 <li><a href="#_description_6">8.1. Description</a></li>
-<li><a href="#_imports_5">8.2. Imports</a></li>
+<li><a href="#_imports_4">8.2. Imports</a></li>
 </ul>
 </li>
 <li><a href="#_esubmission">9. eSubmission</a>
 <ul class="sectlevel2">
 <li><a href="#_description_7">9.1. Description</a></li>
-<li><a href="#_imports_6">9.2. Imports</a></li>
+<li><a href="#_imports_5">9.2. Imports</a></li>
 </ul>
 </li>
 <li><a href="#_enotice">10. eNotice</a>
 <ul class="sectlevel2">
 <li><a href="#_description_8">10.1. Description</a></li>
-<li><a href="#_imports_7">10.2. Imports</a></li>
+<li><a href="#_imports_6">10.2. Imports</a></li>
 </ul>
 </li>
 </ul>
@@ -323,7 +323,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>Reuse of other ontologies and vocabularies. add more&#8230;&#8203; Link.. to systems using the ontology.</p>
+<p>ePO also reuses concepts from other ontologies and vocabularies, using their own prefix. For example, all the ePO modules use the class adms:Identifier (along with specific attributes and properties) from the <a href="https://www.w3.org/TR/vocab-adms/">Asset Description Metadata Schema (ADMS)</a> in order to represent the identification of different ePO concepts. Another example is the reuse of a number of concepts from the <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence Vocabulary (CCCEV)</a> In order for the ePO modules to use these concepts, they have to be imported to each of the  <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.rdf">XML/RDF</a> files that represent each module.</p>
 </div>
 <div class="paragraph">
 <p>The Modularization of the Ontology per domain/procurement phase offers the following advantages as opposed to just having one Ontology file:</p>
@@ -334,7 +334,7 @@
 <p>Accessibility for Business. For example, if someone wants to use the Ontology for querying information on eForms, they should only use the eNotice module. If someone wants to query information about the ESPD request, they should use the eAccess module,etc.</p>
 </li>
 <li>
-<p>Maintenance: Splitting the Ontology into Modules  reduces the complexity of the Ontology and consequently, makes the individual modules easier to maintain and manage. <a href="https://docs.ted.europa.eu/epo-wgm/notes/2021-01-07-wgm.html">WG meeting 7/1/21</a>, <a href="https://docs.ted.europa.eu/epo-wgm/notes/2021-12-14-wgm.html">WG meeting 14/12/21</a></p>
+<p>Maintenance: Splitting the Ontology into Modules  reduces the complexity of the Ontology and consequently, makes the individual modules easier to maintain and manage( <a href="https://docs.ted.europa.eu/epo-wgm/notes/2021-01-07-wgm.html">WG meeting 7/1/21</a>, <a href="https://docs.ted.europa.eu/epo-wgm/notes/2021-12-14-wgm.html">WG meeting 14/12/21</a>).</p>
 </li>
 <li>
 <p>Reusability</p>
@@ -354,7 +354,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_epo_core"><a class="anchor" href="#_epo_core"></a>3. ePO core</h2>
+<h2 id="_epo_core"><a class="anchor" href="#_epo_core"></a>3. ePO core<a id="core"></a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_description"><a class="anchor" href="#_description"></a>3.1. Description</h3>
@@ -365,51 +365,72 @@
 <div class="sect2">
 <h3 id="_conceptual_model"><a class="anchor" href="#_conceptual_model"></a>3.2. Conceptual Model</h3>
 <div class="paragraph">
-<p>This is the main diagram. To be able to understand the different parts of this diagram and how to read it please refer to the <a href="conceptualModelGuide.html#arrows" class="xref page">guide to the ePO Conceptual Model</a></p>
+<p>The Μain objects over time diagram (fig. 1) depicts the most important Classes of each procurement phase and their relations. The agent hierarchy diagram (fig. 2) depicts the different agents represented in ePO.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/docUpdateGuideImages/UML/conceptualModelDiagrams/mainObjects.png" alt="mainObjects">
+</div>
+</div>
+<div class="paragraph">
+<p><em> Figure 1: The Μain objects over time diagram.
+</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/docUpdateGuideImages/Modules/agentHierarchy.png" alt="agentHierarchy">
+</div>
+</div>
+<div class="paragraph">
+<p><em> Figure 2: The agent hierarchy diagram.
+</em></p>
+</div>
+<div class="paragraph">
+<p>In order to be able to understand the different parts of these diagrams and how to read them please refer to the <a href="conceptualModelGuide.html#arrows" class="xref page">guide to the ePO Conceptual Model</a>. The ePO core conceptual model can be found <a href="https://xxx">here</a>, and the ePO core glossary <a href="https://docs.ted.europa.eu/EPO/4.1/_attachments/html_reports/glossary/ePO_core_glossary.html">here</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_prefixes_and_imports"><a class="anchor" href="#_prefixes_and_imports"></a>3.3. Prefixes and Imports</h3>
 <div class="paragraph">
-<p>All concepts that were created for the Ontology use the <strong>epo</strong> prefix.
+<p>All concepts that were created for the core module use the <strong>epo</strong> prefix.
 The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>adms:</p>
+<p><a href="https://www.w3.org/TR/vocab-adms/">adms</a>: Used for Identifiers</p>
 </li>
 <li>
-<p>cccev:</p>
+<p><a href="https://github.com/SEMICeu/CCCEV">cccev</a>: Used for classes such as cccev:Criterion, cccev:InformationConcept, cccev:Requirement, and others, with associated predicates and attributes.</p>
 </li>
 <li>
-<p>dcterms:</p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">dcterms</a>: Used for the dct:Location class, attributes dct:description, dct:title, and other concepts.</p>
 </li>
 <li>
-<p>foaf:</p>
+<p><a href="http://xmlns.com/foaf/spec/">foaf</a>: Used to represent individuals such as foaf:Agent and foaf:Person.</p>
 </li>
 <li>
-<p>org:</p>
+<p><a href="http://www.w3.org/ns/org">org</a>: Used for the org:Organization class.</p>
 </li>
 <li>
-<p>rdf</p>
+<p><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf</a>: Used for rdf:PlainLiteral datatype, and to define all the concepts of the Ontology in the <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.rdf">XML/RDF</a> files.</p>
 </li>
 <li>
-<p>rdfs</p>
+<p><a href="http://www.w3.org/2000/01/rdf-schema">rdfs</a>: Used to define all the concepts of the Ontology in the <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.rdf">XML/RDF</a> files.</p>
 </li>
 <li>
-<p>skos:</p>
+<p><a href="https://www.w3.org/2004/02/skos/">skos</a>: Used for the skos:notation attribute for class adms:Identifier, and the skos:prefLabel attribute for classes cccev:InformationConcept and cccev:Requirement.</p>
 </li>
 <li>
-<p>vann:</p>
+<p><a href="https://vocab.org/vann/">vann</a>: Used for annotating descriptions in the <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.rdf">XML/RDF</a> files.</p>
 </li>
 <li>
-<p>xsd:</p>
+<p><a href="http://www.w3.org/2001/XMLSchema">xsd</a>: Used to define the datatypes of the attributes in ePO. ( for information on datatypes see <a href="conceptualModelGuide.html#datatypes" class="xref page">this</a> section of the Conceptual model guide)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The prefixes and <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/ePO_core/owl_ontology/ePO_core.ttl#L3520C4-L3529C16">imports</a> of the core module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
+<p>The <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/ePO_core/owl_ontology/ePO_core.ttl#L1">prefixes</a> and <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/ePO_core/owl_ontology/ePO_core.ttl#L3520C4-L3529C16">imports</a> of the core module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -456,7 +477,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 <div class="sect2">
 <h3 id="_conceptual_model_2"><a class="anchor" href="#_conceptual_model_2"></a>4.2. Conceptual Model</h3>
 <div class="paragraph">
-<p>this is the main diagram. To be able to understand the different parts  of this diagram and how to read it please refer to the <a href="conceptualModelGuide.html#arrows" class="xref page">Guide to the ePO Conceptual Model</a></p>
+<p>Figure 3. depicts the main eCatalogue diagram depicting the most important classes of the eCatalogue module such as epo-cat:Catalogue, epo-cat:CatalogueLine, and epo-cat:Item. To be able to understand the different parts  of this diagram and how to read it please refer to the <a href="conceptualModelGuide.html" class="xref page">Guide to the ePO Conceptual Model</a></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -464,14 +485,76 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="paragraph">
-<p><em> Figure X .
+<p><em> Figure 3: The main eCatalogue class diagram.
 </em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_imports"><a class="anchor" href="#_imports"></a>4.3. Imports</h3>
+<h3 id="_prefixes_and_imports_2"><a class="anchor" href="#_prefixes_and_imports_2"></a>4.3. Prefixes and Imports</h3>
 <div class="paragraph">
-<p>The <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/eCatalogue/owl_ontology/eCatalogue.ttl#L556C4-L568C15">imports</a> of the eCatalogue module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
+<p>All concepts that were created for the eCatalogue module use the <strong>epo-cat</strong> prefix.
+The concepts imported by other ontologies use the following prefixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.w3.org/TR/vocab-adms/">adms</a>: Used for Identifiers</p>
+</li>
+<li>
+<p><a href="https://github.com/SEMICeu/CCCEV">cccev</a>: Used for classes such as cccev:Criterion,
+  cccev:InformationConcept, cccev:Requirement, and others, with associated predicates and attributes.
+<a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">dcterms</a>: Used for the dct:Location class, attributes dct:description, dct:title, and other concepts.</p>
+</li>
+<li>
+<p><a href="#core">epo</a>: Required concepts taken from the ePO core module.</p>
+</li>
+<li>
+<p><a href="http://xmlns.com/foaf/spec/">foaf</a>: Used to represent individuals such as foaf:Agent and foaf:Person.</p>
+</li>
+<li>
+<p><a href="#ful">ful</a>: Required concepts taken from the ePO eFulfilment module.</p>
+</li>
+<li>
+<p><a href="#ord">ord</a>: Required concepts taken from the ePO Ordering module.</p>
+</li>
+<li>
+<p><a href="http://www.w3.org/ns/org">org</a>: Used for the org:Organization class.</p>
+</li>
+<li>
+<p><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#">rdf</a>: Used for rdf:PlainLiteral datatype, and to define all the concepts of the Ontology in the <a href="https://github.com/OP-TED/ePO/blob/master/implementation/eCatalogue/owl_ontology/eCatalogue.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/eCatalogue/owl_ontology/eCatalogue.rdf">XML/RDF</a> files.</p>
+</li>
+<li>
+<p><a href="http://www.w3.org/2000/01/rdf-schema">rdfs</a>: Used to define all the concepts of the Ontology in the <a href="https://github.com/OP-TED/ePO/blob/master/implementation/eCatalogue/owl_ontology/eCatalogue.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/eCatalogue/owl_ontology/eCatalogue.rdf">XML/RDF</a> files.</p>
+</li>
+<li>
+<p><a href="https://www.w3.org/2004/02/skos/">skos</a>: Used for the skos:notation attribute for class adms:Identifier, and the skos:prefLabel attribute for classes cccev:InformationConcept and cccev:Requirement.</p>
+</li>
+<li>
+<p><a href="https://vocab.org/vann/">vann</a>: Used for annotating descriptions in the <a href="https://github.com/OP-TED/ePO/blob/master/implementation/eCatalogue/owl_ontology/eCatalogue.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/eCatalogue/owl_ontology/eCatalogue.rdf">XML/RDF</a> files.</p>
+</li>
+<li>
+<p><a href="http://www.w3.org/2001/XMLSchema">xsd</a>: Used to define the datatypes of the attributes in ePO. ( for information on datatypes see <a href="conceptualModelGuide.html#datatypes" class="xref page">this</a> section of the Conceptual model guide)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/eCatalogue/owl_ontology/eCatalogue.ttl#L1">prefixes</a> and  <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/eCatalogue/owl_ontology/eCatalogue.ttl#L556C4-L568C15">imports</a> of the eCatalogue module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>@prefix : &lt;http://data.europa.eu/a4g/ontology#&gt; .
+@prefix adms: &lt;http://www.w3.org/ns/adms#&gt; .
+@prefix cccev: &lt;http://data.europa.eu/m8g/&gt; .
+@prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix org: &lt;http://www.w3.org/ns/org#&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix vann: &lt;http://purl.org/vocab/vann/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .</pre>
+</div>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -494,7 +577,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_eordering"><a class="anchor" href="#_eordering"></a>5. eOrdering</h2>
+<h2 id="_eordering"><a class="anchor" href="#_eordering"></a>5. eOrdering<a id="ord"></a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_description_3"><a class="anchor" href="#_description_3"></a>5.1. Description</h3>
@@ -503,7 +586,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_imports_2"><a class="anchor" href="#_imports_2"></a>5.2. Imports</h3>
+<h3 id="_imports"><a class="anchor" href="#_imports"></a>5.2. Imports</h3>
 <div class="paragraph">
 <p>The <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/eOrdering/owl_ontology/eOrdering.ttl#L400C4-L412C15">imports</a> of the eOrdering module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
 </div>
@@ -528,7 +611,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_efulfilment"><a class="anchor" href="#_efulfilment"></a>6. eFulfilment</h2>
+<h2 id="_efulfilment"><a class="anchor" href="#_efulfilment"></a>6. eFulfilment<a id="ful"></a></h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_description_4"><a class="anchor" href="#_description_4"></a>6.1. Description</h3>
@@ -537,7 +620,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_imports_3"><a class="anchor" href="#_imports_3"></a>6.2. Imports</h3>
+<h3 id="_imports_2"><a class="anchor" href="#_imports_2"></a>6.2. Imports</h3>
 <div class="paragraph">
 <p>The <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/eFulfilment/owl_ontology/eFulfilment.ttl#L506C4-L518C15">imports</a> of the eFulfilment module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
 </div>
@@ -571,7 +654,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_imports_4"><a class="anchor" href="#_imports_4"></a>7.2. Imports</h3>
+<h3 id="_imports_3"><a class="anchor" href="#_imports_3"></a>7.2. Imports</h3>
 <div class="paragraph">
 <p>The <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/eContract/owl_ontology/eContract.ttl#L113C4-L125C15">imports</a> of the eContract module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
 </div>
@@ -605,7 +688,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_imports_5"><a class="anchor" href="#_imports_5"></a>8.2. Imports</h3>
+<h3 id="_imports_4"><a class="anchor" href="#_imports_4"></a>8.2. Imports</h3>
 <div class="paragraph">
 <p>The The <a href="https://github.com/OP-TED/ePO/blob/a541adfa077c6def2f8237d89a91a6f2abeb48b7/implementation/eAccess/owl_ontology/eAccess.ttl#L170C5-L182C16">imports</a> of the eAccess module (<a href="https://github.com/OP-TED/ePO/tree/4.1.0-rc.2">ePO 4.1.0-rc.2</a>) are listed below:</p>
 </div>
@@ -639,7 +722,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_imports_6"><a class="anchor" href="#_imports_6"></a>9.2. Imports</h3>
+<h3 id="_imports_5"><a class="anchor" href="#_imports_5"></a>9.2. Imports</h3>
 <div class="paragraph">
 <p>The <a href="https://github.com/OP-TED/ePO/blob/c13a09847736b992cb4fa190305610a5279fce5a/implementation/eSubmission/owl_ontology/eSubmission.ttl#L211C4-L224C15">imports</a> of the eSubmission module (<a href="https://github.com/OP-TED/ePO/tree/4.1.0-rc.2">ePO 4.1.0-rc.2</a>) are listed below:</p>
 </div>
@@ -674,7 +757,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_imports_7"><a class="anchor" href="#_imports_7"></a>10.2. Imports</h3>
+<h3 id="_imports_6"><a class="anchor" href="#_imports_6"></a>10.2. Imports</h3>
 <div class="paragraph">
 <p>The <a href="https://github.com/OP-TED/ePO/blob/ff440967f15132e53f823a502897f17e1ceefa54/implementation/eNotice/owl_ontology/eNotice.ttl#L747">imports</a> of the eNotice module (<a href="https://github.com/OP-TED/ePO/tree/master">ePO 4.0.2</a>) are listed below:</p>
 </div>
