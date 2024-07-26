@@ -98,7 +98,7 @@
     <a class="nav-link" href="../../EPO/latest/release-notes.html">Release Notes</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#epo-showcase::showcase/index.adoc">How the eProcurement Ontology is used by other projects and tools</a>
+    <a class="nav-link" href="../showcase/index.html">The ePO in other projects</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Reference Documents</strong></span></span>
@@ -323,7 +323,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>ePO also reuses concepts from other ontologies and vocabularies, using their own prefix. For example, all the ePO modules use the class adms:Identifier (along with specific attributes and properties) from the <a href="https://www.w3.org/TR/vocab-adms/">Asset Description Metadata Schema (ADMS)</a> in order to represent the identification of different ePO concepts. Another example is the reuse of a number of concepts from the <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence Vocabulary (CCCEV)</a> In order for the ePO modules to use these concepts, they have to be imported to each of the  <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.rdf">XML/RDF</a> files that represent each module.</p>
+<p>ePO also reuses concepts from other ontologies and vocabularies, using their own prefix. For example, all the ePO modules use the class adms:Identifier (along with specific attributes and properties) from the <a href="https://www.w3.org/TR/vocab-adms/">Asset Description Metadata Schema (ADMS)</a> in order to represent the identification of different ePO concepts. Another example is the reuse of a number of concepts from the <a href="https://github.com/SEMICeu/CCCEV">Core Criterion and Core Evidence Vocabulary (CCCEV)</a>. In order for the ePO modules to use these concepts, they have to be imported to each of the  <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.ttl">turtle</a> and <a href="https://github.com/OP-TED/ePO/blob/master/implementation/ePO_core/owl_ontology/ePO_core.rdf">XML/RDF</a> files that represent each module. <a href="#change links to turtle and rdf/xml sites">[change links to turtle and rdf/xml sites]</a></p>
 </div>
 <div class="paragraph">
 <p>The Modularization of the Ontology per domain/procurement phase offers the following advantages as opposed to just having one Ontology file:</p>
@@ -365,7 +365,7 @@
 <div class="sect2">
 <h3 id="_conceptual_model"><a class="anchor" href="#_conceptual_model"></a>3.2. Conceptual Model</h3>
 <div class="paragraph">
-<p>The Μain objects over time diagram (fig. 1) depicts the most important Classes of each procurement phase and their relations. The agent hierarchy diagram (fig. 2) depicts the different agents represented in ePO.</p>
+<p>The Μain objects over time diagram (Fig. 1) depicts the most important Classes of each procurement phase and their relations. The agent hierarchy diagram (fig. 2) depicts the different agents represented in ePO.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -386,7 +386,7 @@
 </em></p>
 </div>
 <div class="paragraph">
-<p>In order to be able to understand the different parts of these diagrams and how to read them please refer to the <a href="conceptualModelGuide.html#arrows" class="xref page">guide to the ePO Conceptual Model</a>. The ePO core conceptual model can be found <a href="https://xxx">here</a>, and the ePO core glossary <a href="https://docs.ted.europa.eu/EPO/4.1/_attachments/html_reports/glossary/ePO_core_glossary.html">here</a>.</p>
+<p>In order to be able to understand the different parts of these diagrams and how to read them please refer to the <a href="conceptualModelGuide.html#arrows" class="xref page">guide to the ePO Conceptual Model</a>. The ePO core conceptual model itself can be found <a href="https://xxx">here</a>, and the ePO core glossary <a href="https://docs.ted.europa.eu/EPO/4.1/_attachments/html_reports/glossary/ePO_core_glossary.html">here</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -401,7 +401,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 <p><a href="https://www.w3.org/TR/vocab-adms/">adms</a>: Used for Identifiers</p>
 </li>
 <li>
-<p><a href="https://github.com/SEMICeu/CCCEV">cccev</a>: Used for classes such as cccev:Criterion, cccev:InformationConcept, cccev:Requirement, and others, with associated predicates and attributes.</p>
+<p><a href="https://github.com/SEMICeu/CCCEV">cccev</a>: Used for classes such as cccev:Criterion, cccev:InformationConcept, cccev:Requirement, with associated predicates and attributes.</p>
 </li>
 <li>
 <p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">dcterms</a>: Used for the dct:Location class, attributes dct:description, dct:title, and other concepts.</p>
@@ -492,8 +492,26 @@ The concepts imported by other ontologies use the following prefixes:</p>
 <div class="sect2">
 <h3 id="_prefixes_and_imports_2"><a class="anchor" href="#_prefixes_and_imports_2"></a>4.3. Prefixes and Imports</h3>
 <div class="paragraph">
-<p>All concepts that were created for the eCatalogue module use the <strong>epo-cat</strong> prefix.
-The concepts imported by other ontologies use the following prefixes:</p>
+<p>All concepts that were created for the eCatalogue module use the <strong>epo-cat</strong> prefix.</p>
+</div>
+<div class="paragraph">
+<p>The eCatalogue module also makes use of the following ePO modules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#core">epo</a>: Required concepts taken from the ePO core module.</p>
+</li>
+<li>
+<p><a href="#ful">ful</a>: Required concepts taken from the ePO eFulfilment module.</p>
+</li>
+<li>
+<p><a href="#ord">ord</a>: Required concepts taken from the ePO Ordering module.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The concepts imported by other ontologies use the following prefixes:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -506,16 +524,7 @@ The concepts imported by other ontologies use the following prefixes:</p>
 <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">dcterms</a>: Used for the dct:Location class, attributes dct:description, dct:title, and other concepts.</p>
 </li>
 <li>
-<p><a href="#core">epo</a>: Required concepts taken from the ePO core module.</p>
-</li>
-<li>
 <p><a href="http://xmlns.com/foaf/spec/">foaf</a>: Used to represent individuals such as foaf:Agent and foaf:Person.</p>
-</li>
-<li>
-<p><a href="#ful">ful</a>: Required concepts taken from the ePO eFulfilment module.</p>
-</li>
-<li>
-<p><a href="#ord">ord</a>: Required concepts taken from the ePO Ordering module.</p>
 </li>
 <li>
 <p><a href="http://www.w3.org/ns/org">org</a>: Used for the org:Organization class.</p>
