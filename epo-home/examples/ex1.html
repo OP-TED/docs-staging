@@ -247,20 +247,19 @@
 <p>Before reading this example, please visit the <a href="../guides/conceptualModelGuide.html" class="xref page">Conceptual Model</a> and <a href="../guides/glossaryGuide.html" class="xref page">Glossary</a> guides.</p>
 </div>
 <div class="paragraph">
-<p>This is a very generic question, so we need to make it more specific.</p>
+<p>Lets translate that question to a query that aims to connect the buyer with the lot, and the winner of the tender award
+outcome, that was awarded that lot.</p>
 </div>
 <div class="paragraph">
-<p>Lets translate that question to a query that aims to connect the buyer with the lot and the winner of the tender award
-outcome, who was awarded that lot.</p>
+<p>The question we are addressing is quite general, so  we need to make it more specific.</p>
 </div>
 <div class="paragraph">
-<p>Specifically, in order to find this query we need to connect the name of the buyer with the  Lot,
-and then find the winner of the tender award outcome.</p>
+<p>To build this query we need to connect the name of the buyer with the Lot, and then find the winner of the tender award outcome.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>First we need to locate the Buyer class in epo core conceptual model (Fig.A1).</p>
+<p>First we need to locate the Buyer class in the ePO core conceptual model (Fig.A1):</p>
 </li>
 </ul>
 </div>
@@ -270,17 +269,19 @@ and then find the winner of the tender award outcome.</p>
 </div>
 </div>
 <div class="paragraph">
-<p><em> Figure A1: epo:Buyer in epo core.
+<p><em> Figure A1: epo:Buyer in ePO core.
 </em></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Now we need to find an attribute to identify that buyer. Searching the glossary for the attributes of epo:Buyer does not yeld a suitable attribute, so we need to look for another class that is a generalization of epo:Buyer.    Searching the ontology, we find the role hierarchy diagram (Fig.A2),
- and decide to use the dct:title attribute of class epo:AgentInRole which is a generalization of class epo:AcquiringParty
-which in turn is a generalization of epo:Buyer.</p>
+<p>Now we need to find an attribute to identify that buyer. Searching the glossary for the attributes of epo:Buyer does not yield a suitable attribute, so we need to look for another class that is a generalisation of epo:Buyer.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Searching the ontology, we find the role hierarchy diagram (Fig.A2),
+  and decide to use the dct:title attribute of class epo:AgentInRole, which is a generalisation of class epo:AcquiringParty, which in turn is a generalisation of epo:Buyer.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -288,7 +289,7 @@ which in turn is a generalization of epo:Buyer.</p>
 </div>
 </div>
 <div class="paragraph">
-<p><em> Figure A2: epo:Buyer can use the dct:title attribute of epo:AgentInRole as it is connected to it using generalization relations.
+<p><em> Figure A2: epo:Buyer can use the dct:title attribute of epo:AgentInRole as it is connected to it using generalisation relations.
 </em></p>
 </div>
 <div class="ulist">
