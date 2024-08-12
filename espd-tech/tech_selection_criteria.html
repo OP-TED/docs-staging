@@ -255,7 +255,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>This chapter on selection criteria provides details on how to implement the formal requirements set in the <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">eSens ESPD BIS 41 - Single European Document</a> (Version 2.0.0) document. See specifically these global requirements related to selection criteria: <strong><em>br41-002</em></strong>, <strong><em>tbr070-010</em></strong>, <strong><em>tbr070-013</em></strong>, <strong><em>tbr070-018</em></strong>.</p>
 </div>
 <div class="paragraph">
-<p>As for the exclusion criteria (and following requirement <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#tbr070-013"><em>tbr070-013</em></a>) we have grouped the selection criteria under different categories. The figure below is intended to identify and list these categories for the selection criteria (branches in text boxes), and specific subgroups within each category.</p>
+<p>As with the exclusion criteria (and following requirement <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#tbr070-013"><em>tbr070-013</em></a>), we have grouped the selection criteria under different categories. The figure below is intended to identify and list these categories for the selection criteria (branches in text boxes), and specific subgroups within each category.</p>
 </div>
 <div class="paragraph">
 <p>Each branch in this 'criteria classification' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs and ElementType column of the spreadsheets containing <a href="{url-tree}/codelists/ESPD-criterion.xlsx">ESPD-criterion data structures</a>).</p>
@@ -272,10 +272,10 @@ The links to the business code explanations are provided by <a href="https://dig
 <h2 id="_lot_management_approach_for_selection_criteria"><a class="anchor" href="#_lot_management_approach_for_selection_criteria"></a>Lot Management approach for Selection Criteria</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>As already explained in previous sections (see ESPD Request chapter) the Lot Management logic has been adapted to be ensure the alignment with eForms.</p>
+<p>As already explained in previous sections (see ESPD Request chapter), the Lot Management logic has been adapted to be ensure the alignment with eForms.</p>
 </div>
 <div class="paragraph">
-<p>The buyer may specify the Lots that each selection criteria apply by using the element cac:TenderingCriterion that includes cac:ProcurementProjectLotReference. The image below shows the UBL-2.3 schema for TenderingCriterion:</p>
+<p>The buyer may specify the Lots that apply for each selection criterion by using the element cac:TenderingCriterion that includes cac:ProcurementProjectLotReference. The image below shows the UBL-2.3 schema for TenderingCriterion:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/TenderingCriterion_cacProcurementProjectLotReference.jpg" alt="cac:TenderingCriterion/cac:ProcurementProjectLotReference" width="448" height="490"></span></p>
@@ -294,7 +294,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_data_structure"><a class="anchor" href="#_data_structure"></a>Data structure</h3>
 <div class="paragraph">
-<p>The following image shows an example of how it represented in the spread-sheets (see ESPD-Criterion)</p>
+<p>The following image shows an example of how it is represented in the spreadsheets (see ESPD-Criterion)</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Initial_Question_data_structure.jpg" alt="Does the EO fulfil the criteria by itself? Data structure" width="566" height="369"></span></p>
@@ -343,10 +343,10 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>It allows the definition of multiple national sub-criteria (to be retrieved from e-Certis): cardinality "0..n" of the SUBCRITERION group;</p>
 </li>
 <li>
-<p>It also allows the buyer to speciy multiple groups of REQUIREMENT(s) (in this case to specify which registers the economic operator should be registered in).</p>
+<p>It also allows the buyer to specfiy multiple groups of REQUIREMENT(s) (in this case to specify which registers the economic operator should be registered in).</p>
 </li>
 <li>
-<p>Regarding the groups of questions, notice that the main question is addressed to get the confirmation from the economic operator that it fulfills the criterion (if "Yes" the economic operator is registered). In case of answering "No" a sub-group of one QUESTION must be shown (the one asking the economic operator to provide the reason why it is not registered in the register specified by the buyer).</p>
+<p>Regarding the groups of questions, notice that the purpose of the main question is to get the confirmation from the economic operator that it fulfills the criterion (if "Yes" the economic operator is registered). In case of answering "No" a sub-group of one QUESTION must be shown (the one asking the economic operator to provide the reason why it is not registered in the register specified by the buyer).</p>
 </li>
 </ol>
 </div>
@@ -393,7 +393,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;b6ab1c8b-08d5-43f9-b34b-5031ea517514&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -574,7 +574,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;73570c2d-8e88-41ae-9750-ed72076aaaf0&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -726,10 +726,10 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>A CAPTION, software applications can use it to document the GUI.</p>
+<p>A CAPTION software applications can use to document the GUI.</p>
 </li>
 <li>
-<p>As a CAPTION no value is expected to be provided by the buyer (thus the absence of a cbc:Expected&#8230;&#8203; element) nor by the Economic Operator (thus the value NONE`for the element `cac:ValueDataTypeCode)</p>
+<p>As a CAPTION of "no value" is expected to be provided by the buyer (thus the absence of a cbc:Expected&#8230;&#8203; element) not by the Economic Operator (thus the value NONE`for the element `cac:ValueDataTypeCode)</p>
 </li>
 <li>
 <p>The name of the organisation issuing the authorisation: the Spanish food safety agency.</p>
@@ -765,7 +765,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>General turnover refers to the general turnover of the economic operator in a period of years and regardless of the nature of the contract, normally the last three or five years (as required in the contract documents or the ESPD).</p>
+<p>General turnover refers to the general turnover of the economic operator in a period of years, regardless of the nature of the contract, normally the last three or five years (as required in the contract documents or the ESPD).</p>
 </li>
 <li>
 <p>Specific turnovers refer to the turnover of the economic operator resulting from the activity of the economic operator in the business area covered by the contract;</p>
@@ -867,7 +867,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_data_structure_3"><a class="anchor" href="#_data_structure_3"></a>Data Structure</h3>
 <div class="paragraph">
-<p>In this figure what it is being shown is that the buyer required three general yearly turnovers, for which it defined minimum amounts in one REQUIREMENT(s) group. Next, three groups of QUESTION(s) are provided, each one of them corresponding to the past three years. Remember that the spreadsheet used in this guide to represent the criteria data structure is also used to generate sample XML instances. So by including three groups of QUESTION(s) in the spread-sheet, the tool generating sample XML instances will automatically generate three sub-groups of properties each one with distinct UUIDs.</p>
+<p>In this figure it is being shown that the buyer required three general yearly turnovers, for which it defined minimum amounts in one REQUIREMENT(s) group. Next, three groups of QUESTION(s) are provided, each one of them corresponding to the past three years. Remember that the spreadsheet used in this guide to represent the criteria data structure is also used to generate sample XML instances. So by including three groups of QUESTION(s) in the spread-sheet, the tool generating sample XML instances will automatically generate three sub-groups of properties each one with distinct UUIDs.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/General_Yearly_Turnovers_criterion_data_structure.jpg" alt="General Yearly Turnovers" width="566" height="448"></span></p>
@@ -905,7 +905,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;ed2a13ed-cf3d-478e-888d-cb9b89f55020&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -1141,7 +1141,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;be471b6b-4093-4ed1-a3a6-16fab9e86ed1&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -1295,7 +1295,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_specific_yearly_turnover"><a class="anchor" href="#_specific_yearly_turnover"></a>Specific yearly turnover</h3>
 <div class="paragraph">
-<p>One characteristic of the "specific" turnovers is that the buyer requires to know which is the economic operator&#8217;s turnover for a concrete business domain. The only way of responding that requirement is either by describing the domain in a free-text field (DESCRIPTION ResponseDataType) in Data structures.</p>
+<p>One characteristic of the "specific" turnovers is that the buyer needs to know which the economic operator&#8217;s turnover is for a concrete business domain. The only way of responding that requirement is either by describing the domain in a free-text field (DESCRIPTION ResponseDataType) in Data structures.</p>
 </div>
 <div class="paragraph">
 <p>Notice that in the Mock-ups and the Data Structures, below, both options are available to the economic operator.</p>
@@ -1304,7 +1304,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_mock_up_buyer_perspective_3"><a class="anchor" href="#_mock_up_buyer_perspective_3"></a>Mock-up - buyer perspective</h3>
 <div class="paragraph">
-<p>For <strong>specific yearly turnover</strong> criterion the following fields can be required by the buyer (CA):</p>
+<p>For <strong>specific yearly turnover</strong> criterion the following fields may be required by the buyer (CA):</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1415,7 +1415,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1ab48993-53aa-4782-88f9-7025477a4df6&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -1640,7 +1640,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;8b592e5b-628c-4d4c-898e-331caaf91807&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -2080,7 +2080,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="ulist">
 <ul>
 <li>
-<p>indem-ins</p>
+<p>indem-insu</p>
 </li>
 </ul>
 </div>
@@ -2091,7 +2091,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>The buyer has selected the option <strong>professional risk indemnity insurance</strong> for its inclusion in the ESPD Request. Additionally the buyer can specify REQUIREMENT(s) specific to the procurement procedure. There are two situations that need to be distinguished here, when the procurement procedure is divided into Lots and when it is not.</p>
 </div>
 <div class="paragraph">
-<p>For both situations (Lots and Lot): The buyer can require data from the economic operator in relation to up to four types of insurances. Software applications should control that: no more groups of amount an currency data are presented to the economic operator; and that there are not two amounts referring to the same type of insurance;</p>
+<p>For both situations (Lots and Lot): The buyer can require data from the economic operator in relation to up to four types of insurances. Software applications should control that: no more groups of amount and currency data are presented to the economic operator; and that there are not two amounts referring to the same type of insurance;</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Risk_indemnity_insurance_CA_requirements_edition_oneLot.jpg" alt="Risk indemnity insurance" width="544" height="237"></span></p>
@@ -2121,7 +2121,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><em>Figure 142. 'Economic operator indemnity insurance' EO mock-up</em></p>
 </div>
 <div class="paragraph">
-<p>Note that the EO should provide an answer (ESPD Response) for every Lot that tenders. Meaning that if the Selection Criteria applies to different Lots (as can be read in the mockup), the EO should sumbit the data for the number of lots that apply.</p>
+<p>Note that the EO should provide an answer (ESPD Response) for every Lot that tenders. Meaning that if the Selection Criteria applies to different Lots (as can be read in the mockup), the EO should submit the data for the number of lots that apply.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2192,7 +2192,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;7c7c04a7-6975-4de2-872c-90b303745eaa&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -2365,7 +2365,7 @@ The links to the business code explanations are provided by <a href="https://dig
 </ol>
 </div>
 <div class="paragraph">
-<p>Notice that in the mock-up below the first requirement is about an <strong>economic of financial requirement</strong> whilst the second requirement is about a <strong>rating requirement</strong>. See data structure and XML example for more details on this distiction.</p>
+<p>Notice that in the mock-up below the first requirement is about an <strong>economic of financial requirement</strong> whilst the second requirement is about a <strong>rating requirement</strong>. See data structure and XML example for more details on this distinction.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2380,7 +2380,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><em>Figure 148. 'Other economic or financial requirements' EO mock-up</em></p>
 </div>
 <div class="paragraph">
-<p>Note that the EO should provide an answer (ESPD Response) for every Lot that tenders. Meaning that if the Selection Criteria applies to different Lots (as can be read in the mockup), the EO should sumbit the data for the number of lots that apply.</p>
+<p>Note that the EO should provide an answer (ESPD Response) for every Lot that tenders. Meaning that if the Selection Criteria applies to different Lots (as can be read in the mockup), the EO should submit the data for the number of lots that apply.</p>
 </div>
 </div>
 <div class="sect2">
@@ -2454,7 +2454,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;183ffa32-4222-4aee-8d56-f94a4e88c09b&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -2634,7 +2634,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><em>Difference between 'total amount' and 'specific amount' in a reference</em></p>
 </div>
 <div class="paragraph">
-<p>The total amount refers to the amount of the contract, the specific refers to the amount of the contract a concrete reference is linked to. Two examples could be:</p>
+<p>The total amount refers to the amount of the contract, the specific amount refers to the amount of the contract a concrete reference is linked to. Two examples could be:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2684,7 +2684,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>In this view for the economic operator (EO) can see the lots and requirements specified by the buyer (CA), lower left side of the mock-up.</p>
 </li>
 <li>
-<p>The EO can also list those Lots it tenders to that apply to the particular reference it is providing. Software applications should validate that the Lots supplied by the EO for a reference are in the range of those specified by the buyer.</p>
+<p>The EO can also list those Lots it tenders for that apply to the particular reference it is providing. Software applications should validate that the Lots supplied by the EO for a reference are in the range of those specified by the buyer.</p>
 </li>
 <li>
 <p>The EO can provide a description for the reference, the total amount of the contract in which the reference was included, the amount for the specific works referenced, the period of execution and one or more groups of data about the recipients (name/description, contact person name and contact e-mail).</p>
@@ -2779,7 +2779,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;b2a38518-42cb-48a3-a4b8-3cae396fbb24&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -2967,7 +2967,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>The activity of this economic operator in this work.</p>
 </li>
 <li>
-<p>The amount specific to the contribution of this EO in this Reference. Notice that the specific and the total amounts are identical. The EO proabably executed the work alone, as a sole contractor.</p>
+<p>The amount specific to the contribution of this EO in this Reference. Notice that the specific and the total amounts are identical. The EO probably executed the work alone, as a sole contractor.</p>
 </li>
 <li>
 <p>Duration of the execution of the work.</p>
@@ -3051,7 +3051,7 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 <div class="paragraph">
 <p><strong>And one more data structure to define the allowance of checks:
-*</strong> Special requierements check (spec-req-check)</p>
+*</strong> Special requirements check (spec-req-check)</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3149,7 +3149,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;5b38f9d4-d1b5-4f36-b63b-833de7099cc0&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -3177,7 +3177,7 @@ The links to the business code explanations are provided by <a href="https://dig
                         &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                         &lt;cac:TenderingCriterionProperty&gt;
                                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;b2c35259-1991-43df-99e4-71f3517e66a8&lt;/cbc:ID&gt;
-                                &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                 &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                 &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                         &lt;/cac:TenderingCriterionProperty&gt;
@@ -3407,7 +3407,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;0710de58-4a89-4101-a178-912e44b075c5&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -3435,7 +3435,7 @@ The links to the business code explanations are provided by <a href="https://dig
                         &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                         &lt;cac:TenderingCriterionProperty&gt;
                                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;dde661c3-007f-4931-b830-541a3086f864&lt;/cbc:ID&gt;
-                                &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                 &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                 &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                         &lt;/cac:TenderingCriterionProperty&gt;
@@ -3555,7 +3555,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>ESCO is a multilingual classification that identifies and categorises skills, competences, qualifications and occupations relevant for the EU labour market and education. It is being developed (maintained) by the European Commission since 2010. The taxonomy can be downloaded from this <a href="https://ec.europa.eu/esco/portal">link</a>.</p>
 </div>
 <div class="paragraph">
-<p>The reason why the expected type of data is a URL is because in ESCO taxonomy each concept is identified with a URI (A Uniform Resource Identifier, and URI can be used as locators, i.e. URL are URIs).</p>
+<p>The reason why the expected type of data is a URL is because in ESCO taxonomy each concept is identified with a URI (A Uniform Resource Identifier, and URI can be used as locators, i.e. URLs are URIs).</p>
 </div>
 <div class="paragraph">
 <p>ESCO is legally supported by the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv%3AOJ.L_.2016.107.01.0001.01.ENG">REGULATION (EU) 2016/589</a> of 13 April 2016 (the EURES Regulation) and two Implementing Decisions:</p>
@@ -3607,7 +3607,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;de86ae93-3693-4271-bb7f-903b68785dba&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -3635,7 +3635,7 @@ The links to the business code explanations are provided by <a href="https://dig
                         &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                         &lt;cac:TenderingCriterionProperty&gt;
                                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;bce9cda1-9041-4d7d-91ca-3ebe907583bd&lt;/cbc:ID&gt;
-                                &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                 &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                 &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                         &lt;/cac:TenderingCriterionProperty&gt;
@@ -3787,16 +3787,16 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_mock_ups_buyer_perspective_5"><a class="anchor" href="#_mock_ups_buyer_perspective_5"></a>Mock-ups - buyer perspective</h3>
 <div class="paragraph">
-<p>The buyer has selected the 'allowance of checks' (in <a href="{url-tree}/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> will be shown as "Special requierements check", spec-req-check) option in a ESPD Request builder software application GUI. This software application will create a criterion of this in the ESPD Request XML instance with zero, one or more REQUIREMENT(s) by the EO.</p>
+<p>The buyer has selected the 'allowance of checks' (in <a href="{url-tree}/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> will be shown as "Special requirements check", spec-req-check) option in a ESPD Request builder software application GUI. This software application will create a criterion of this in the ESPD Request XML instance with zero, one or more REQUIREMENT(s) by the EO.</p>
 </div>
 <div class="paragraph">
 <p>The buyer (CA) can specify none, one or several REQUIREMENT(s). In this case a REQUIREMENT is a descriptive text provided by the buyer where the criterion is better explained or where certain conditions relating to the criterion. In this example the buyer is specifying which type of premises it wants to check and for which reasons.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/Special_requierements_check_CA_mock-up.jpg" alt="Checks" width="524" height="213"></span></p>
+<p><span class="image unresolved"><img src="Special_requirements_check_CA_mock-up.jpg" alt="Checks" width="524" height="213"></span></p>
 </div>
 <div class="paragraph">
-<p><em>Figure 172.  Special requierements check buyer REQUIREMENT edition mock-up</em></p>
+<p><em>Figure 172.  Special requirements check buyer REQUIREMENT edition mock-up</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -3805,10 +3805,10 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>The EO should see as many boxes (groups) of REQUIREMENT + QUESTION as REQUIREMENT(s) specified by the CA. In this case the economic operator (EO) sees one REQUIREMENT associated to one QUESTION. The expected answer is <strong>Yes</strong> or <strong>No</strong>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/Special_requierements_check'%20EO_mock-up.jpg" alt="Special requierements check' EO mock-up" width="636" height="122"></span></p>
+<p><span class="image unresolved"><img src="Special_requirements_check' EO_mock-up.jpg" alt="Special requirements check' EO mock-up" width="636" height="122"></span></p>
 </div>
 <div class="paragraph">
-<p><em>Figure 173. 'Special requierements check' EO mock-up</em></p>
+<p><em>Figure 173. 'Special requirements check' EO mock-up</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -3848,17 +3848,17 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_xml_example_13"><a class="anchor" href="#_xml_example_13"></a>XML Example</h3>
 <div class="paragraph">
-<p><em>Allowance of checks criterion /Special requierements check</em></p>
+<p><em>Allowance of checks criterion /Special requirements check</em></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- header elements removed for brevity --&gt;
 
-&lt;!-- Criterion:Special requierements check --&gt;
+&lt;!-- Criterion:Special equirements check --&gt;
         &lt;cac:TenderingCriterion&gt;
                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;c8809aa1-29b6-4f27-ae2f-27e612e394db&lt;/cbc:ID&gt;
                 &lt;cbc:CriterionTypeCode listID="http://publications.europa.eu/resource/authority/criterion" listAgencyID="OP" listVersionID="20230315-0"&gt;spec-req-check&lt;/cbc:CriterionTypeCode&gt;
-                &lt;cbc:Name&gt;Special requierements check&lt;/cbc:Name&gt;
+                &lt;cbc:Name&gt;Special equirements check&lt;/cbc:Name&gt;
                 &lt;cbc:Description&gt;For complex products or services to be supplied or, exceptionally, for products or services which are required for a special purpose: The economic operator will allow checks to be conducted on the production capacities or the technical capacity of the economic operator and, where necessary, on the means of study and research which are available to it and on the quality control measures? The check is to be performed by the contracting authority or, in case the latter consents to this, on its behalf by a competent official body of the country in which the supplier or service provider is established.&lt;/cbc:Description&gt;
                 &lt;cac:ProcurementProjectLotReference&gt;
                         &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;LOT-00000&lt;/cbc:ID&gt;
@@ -3875,7 +3875,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;008b9830-d292-46e4-8af2-284aa5c7f5ff&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -4032,7 +4032,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;259b2cb7-b98b-4305-baae-1f6c521f0994&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -4240,7 +4240,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;4843ec84-031c-4abd-a78c-671c4dad4400&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -4425,7 +4425,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;e615882b-5327-40a5-9e95-46f8bc47d593&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
@@ -4534,7 +4534,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_mock_ups_buyer_perspective_8"><a class="anchor" href="#_mock_ups_buyer_perspective_8"></a>Mock-ups - buyer perspective</h3>
 <div class="paragraph">
-<p>In ESPD the buyer can specify a REQUIREMENT. In this example it provides the name of the ISO it expects the economic operator to be conformant to.</p>
+<p>In ESPD the buyer can specify a REQUIREMENT. In this example it provides the name of the ISO it expects the economic operator to be compliant with.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Quality_Assurance%20schemes_environmental_management_stand_CA.jpg" alt="Quality Assurance schemes and environmental management standards" width="468" height="273"></span></p>
@@ -4546,10 +4546,10 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_mock_ups_economic_operator_perspective_6"><a class="anchor" href="#_mock_ups_economic_operator_perspective_6"></a>Mock-ups - economic operator perspective</h3>
 <div class="paragraph">
-<p>Notice that, as for the ESPD the economic operator (EO) has to answer <strong>Yes</strong> or <strong>No</strong>. In the case the EO answers <strong>No</strong> the box with the text "If not, please explain why and specify which other means &#8230;&#8203;" is shown. This box is not shown for the <strong>Yes</strong> answer. This behaviour can be controlled with the ONFALSE code of the sub-group of QUESTION(s) (see data structure and XML example below, too).</p>
+<p>Notice that, as for the ESPD, the economic operator (EO) has to answer <strong>Yes</strong> or <strong>No</strong>. Where the EO answers <strong>No</strong>, the box with the text "If not, please explain why and specify which other means &#8230;&#8203;" is shown. This box is not shown for the <strong>Yes</strong> answer. This behaviour can be controlled with the ONFALSE code of the sub-group of QUESTION(s) (see data structure and XML example below, too).</p>
 </div>
 <div class="paragraph">
-<p>When the EO answers <strong>Yes</strong> it will be asked whether online evidences are available online or not. This is controlled by the code ONTRUE assigned to the sub-group of QUESTION(s) about the evidence (see data structure and XML example).</p>
+<p>When the EO answers <strong>Yes</strong> it will be asked whether online evidence is available online or not. This is controlled by the code ONTRUE assigned to the sub-group of QUESTION(s) about the evidence (see data structure and XML example).</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Quality_Assurance%20schemes_environmental_management_stand.jpg" alt="Quality Assurance schemes and environmental management standards' EO mock-up" width="500" height="293"></span></p>
@@ -4572,7 +4572,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>The ONFALSE code for the sub-group containing the sentence thats starts with 'If not, please explain why&#8230;&#8203;' means: if the answer to the previous question was <strong>No</strong> then this sub-group must be shown/processed.</p>
 </li>
 <li>
-<p>If ONTRUE (answer to previous QUESTION = <strong>Yes</strong>) then the question about the online evidences is shown/processed.</p>
+<p>If ONTRUE (answer to previous QUESTION = <strong>Yes</strong>) then the question about the online evidence is shown/processed.</p>
 </li>
 </ol>
 </div>
@@ -4616,7 +4616,7 @@ The links to the business code explanations are provided by <a href="https://dig
                                 &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                                 &lt;cac:TenderingCriterionProperty&gt;
                                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;d1b09540-bd2a-4962-bbcd-bb3e33c64694&lt;/cbc:ID&gt;
-                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+                                        &lt;cbc:Description&gt;[Additional information; e.g. no evidence online]&lt;/cbc:Description&gt;
                                         &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
                                         &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                                 &lt;/cac:TenderingCriterionProperty&gt;
