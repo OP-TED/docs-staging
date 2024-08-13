@@ -19,10 +19,10 @@
 <loc>https://docs.ted.europa.eu/sitemap-epo-wgm.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.ted.europa.eu/sitemap-espd.xml</loc>
+<loc>https://docs.ted.europa.eu/sitemap-espd-bus.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.ted.europa.eu/sitemap-espd-bus.xml</loc>
+<loc>https://docs.ted.europa.eu/sitemap-ESPD-EDM.xml</loc>
 </sitemap>
 <sitemap>
 <loc>https://docs.ted.europa.eu/sitemap-espd-home.xml</loc>

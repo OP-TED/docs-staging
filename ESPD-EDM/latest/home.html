@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ESPD Exchange Data Model (ESPD-EDM) :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/espd/latest/index.html">
+    <title>ESPD Version 3.3.x :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/home.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="espd" data-version="3.3.0">
+<div class="nav-container" data-component="ESPD-EDM" data-version="3.3.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -86,7 +86,7 @@
     <span class="nav-text"><span class="separated"><strong>Release Documentation</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="release_notes.html">Release Notes</a>
+    <a class="nav-link" href="#espd::release_notes.adoc">Release Notes</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
@@ -224,7 +224,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">ESPD EDM</a></li>
-    <li><a href="index.html">ESPD Exchange Data Model (ESPD-EDM)</a></li>
+    <li><a href="home.html">ESPD Version 3.3.x</a></li>
   </ul>
 </nav>
 </div>
@@ -233,41 +233,71 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">ESPD Exchange Data Model (ESPD-EDM)</h1>
-<div class="openblock tile-container">
-<div class="content">
-<div class="sidebarblock tile">
-<div class="content">
-<div class="title">ESPD 3.3.0: Latest Release</div>
+<h1 class="page">ESPD Version 3.3.x</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>ESPD-EDM version 3.3.0 corrected minor errors in the data structure and code lists, as requested by Member States and other stakeholders.</p>
+<p>Article 59 of the new <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0024">Public Procurement Directive 2014/24/EC</a> introduced a new concept, the <strong>European Single Procurement Document</strong> (ESPD) which is a self-declaration document intended for preliminary evidence in a public procurement procedure. By mapping out equivalent certificates between Member States, the ESPD replaces certificates issued by public authorities or a third party involved in a procedure. It is thus a valuable facilitator for cross-border participation of a greater number of potential operators in public procurement procedures and a valuable tool for integrating the European Single Market.</p>
 </div>
 <div class="paragraph">
-<p><a href="release_notes.html" class="xref page">Click here to read the version 3.3.0 details</a></p>
+<p>The European Commission (EC) has developed a data model and 'semantic assets' for the exchange of the ESPD between any Procurement stakeholder’s system. This Wiki aims to be a first landing point for organisations interested in using the model and assets in compliance with the Directive.</p>
 </div>
 </div>
 </div>
-<div class="sidebarblock tile">
-<div class="content">
-<div class="title">ESPD Release Timelines</div>
+<div class="sect1">
+<h2 id="_road_map"><a class="anchor" href="#_road_map"></a>Road Map</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Information on past releases and planned future releases can be found via the link below. The information includes a brief description of each release and links to the full release documentation.</p>
+<p><span class="image"><img src="_images/home_roadmap.png" alt="Roadmap"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_v3_3_0_release_july_2023"><a class="anchor" href="#_v3_3_0_release_july_2023"></a>v3.3.0 Release (July 2023)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This new version of the ESPD-EDM is a minor release which focuses on:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>updating the data structure</p>
+</li>
+<li>
+<p>updating the codelists files</p>
+</li>
+<li>
+<p>updating the xml examples files</p>
+</li>
+<li>
+<p>updating the schematron files for codelists validation</p>
+</li>
+<li>
+<p>updating the online documentation</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><a href="../../espd-home/history.html" class="xref page">Information on releases can be found here.</a></p>
+<p>For more information regarding the release, please refer to the <a href="release_notes.html" class="xref page">release notes</a>.</p>
 </div>
 </div>
 </div>
-<div class="sidebarblock tile">
-<div class="content">
-<div class="title">Open User Community Documents</div>
+<div class="sect1">
+<h2 id="_the_directive"><a class="anchor" href="#_the_directive"></a>The Directive</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>This section contains minutes and reports of the annual and monthly Open User Community activities and meetings.</p>
+<p>The model, named ESPD-EDM (standing for European Single Procurement Document - Exchange Data Model) is regulated by the above-mentioned <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32014L0024">Public Procurement Directive 2014/24/EC</a> and the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">Commission Implementing Regulation (EU) 2016/7</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="../../espd-wgm/index.html" class="xref page">Click here to read the OUC rdocuments</a></p>
+<p>This Wiki is intended to facilitate the understanding of the model underlying the implementation of the ESPD Request and ESPD Response XML documents. For that purpose, examples and rules relating to how the content of ESPD XML document should look like and be processed are provided.</p>
 </div>
+<hr>
+<div class="paragraph">
+<p>Any comments on the documentation?</p>
 </div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
 </div>
 </div>
 </div>
