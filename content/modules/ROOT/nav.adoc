@@ -19,7 +19,7 @@
 * xref:m2o-home::index.adoc[model2owl docs]
 
 * [.separated]#**ESPD**#
-* xref:espd::index.adoc[ESPD-EDM Docs `{espd_latest_version}`]
+* xref:ESPD-EDM::index.adoc[ESPD-EDM Docs `{espd_latest_version}`]
 * xref:espd-ouc::index.adoc[Open User Community Meetings]
 
 * [.separated]#**Reusing TED Data**#
