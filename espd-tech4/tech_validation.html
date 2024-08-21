@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Open User Community Draft Meeting Report :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/espd-wgm/20220331_OUC%20meeting%20report.html">
+    <title>Validation :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/espd-tech4/tech_validation.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="espd-wgm" data-version="">
+<div class="nav-container" data-component="espd-tech4" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -92,23 +92,30 @@
     <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Information for Business Users</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#espd-bus::index.adoc">Business Information</a>
+    <a class="nav-link" href="../espd-bus4/index.html">Business Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#espd-bus::service.adoc">What is an ESPD Service?</a>
+    <a class="nav-link" href="../espd-bus4/service.html">What is an ESPD Service?</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#espd-bus::using.adoc">The Structure of an ESPD Service</a>
+    <a class="nav-link" href="#espd-bus4::using.adoc">The Structure of an ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#espd-tech::index.adoc">Technical Information</a>
+    <a class="nav-link" href="index.html">Technical Information</a>
   </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
   </li>
@@ -128,10 +135,10 @@
     <span class="nav-text"><span class="separated"><strong>Open User Community Documents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="monthly.html">Regular Meetings</a>
+    <a class="nav-link" href="../espd-wgm/monthly.html">Regular Meetings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="annual.html">Annual Seminars</a>
+    <a class="nav-link" href="../espd-wgm/annual.html">Annual Seminars</a>
   </li>
 </ul>
   </li>
@@ -224,7 +231,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">ESPD EDM</a></li>
-    <li><a href="20220331_OUC%20meeting%20report.html">Open User Community Draft Meeting Report</a></li>
+    <li><a href="tech_validation.html">Validation</a></li>
   </ul>
 </nav>
 </div>
@@ -233,22 +240,389 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Open User Community Draft Meeting Report</h1>
+<h1 class="page">Validation</h1>
 <div class="sect1">
-<h2 id="_publications_office_espd_edm"><a class="anchor" href="#_publications_office_espd_edm"></a>Publications Office – ESPD EDM</h2>
+<h2 id="_iso_schematron"><a class="anchor" href="#_iso_schematron"></a>ISO Schematron</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Meeting Date/Time:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2022-03-031, 10.00 - 11.30</p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>Schematron is a rule-based validation language that specifies validation processes against XML documents. ISO Schematron is an ISO (ISO/IEC 19757-3:2006) and open standard. Please visit the <a href="http://www.schematron.com/">ISO Schematron</a> web-site for the technical specification and details.</p>
+</div>
+<div class="sect2">
+<h3 id="_espd_business_rules"><a class="anchor" href="#_espd_business_rules"></a>ESPD Business Rules</h3>
+<div class="paragraph">
+<p>The ESPD-EDM uses Schematron to validate business rules, the business requirements taken as input for these rules are specified in the <a href="http://wiki.ds.unipi.gr/display/ESPDInt">ESPDint Business Document</a>.</p>
+</div>
+<div class="paragraph">
+<p>These business rules can be typified as:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Semantic validations</strong>: e.g. The "cac:TenderingCriterionResponse" in a Response document MUST match one, and only one, of the "cac:TenderingCriterionProperty" elements in the XML instance of the corresponding ESPD-Request;</p>
+</li>
+<li>
+<p><strong>Assertions</strong> about the presence or absence of patterns in XML documents: e.g. all business rules that apply to identifier nodes: mandatory attributes, structure of the identifier, etc.;</p>
+</li>
+<li>
+<p><strong>Code lists</strong> validations: e.g. values and attributes for each code list element;</p>
+</li>
+<li>
+<p><strong>Other validations</strong> that an XSD cannot do: e.g. Validates that one of the nodes has at least 1 child.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following image shows different examples of validations:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Non-codelist_business_rules.jpg" alt="Non-code list business rules" width="591" height="329"></span></p>
+</div>
+<div class="paragraph">
+<p>The validation of code lists is explained in sections below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_schematron_architecture"><a class="anchor" href="#_schematron_architecture"></a>Schematron Architecture</h3>
+<div class="paragraph">
+<p>ISO Schematron executes the validations in two stages:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Design and implementation of the SCH files</strong>. SCH stands for Schematron Schema and contains the set of rules to be validated within the XML document.</p>
+</li>
+<li>
+<p><strong>Execution of the implemented validations</strong> in the SCH files:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Transformation of SCH files into XSLT files in order to be able to execute the validations against the XML.</p>
+</li>
+<li>
+<p>Execution of the validations using the XSLT files to get the final report.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Architecture_non-codelist_validation.jpg" alt="Architecture for non-code list validation" width="567" height="284"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_does_the_sch_file_contain"><a class="anchor" href="#_what_does_the_sch_file_contain"></a>What does the SCH file contain?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Set of rules</strong> specifying the context (the element(s) and/or attribute(s) which the assertions affect);</p>
+</li>
+<li>
+<p>Each rule have a <strong>set of assertions</strong> with the tests that must be evaluated in the context.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/SCH_file_example.jpg" alt="SCH file example" width="617" height="194"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execution"><a class="anchor" href="#_execution"></a>Execution</h3>
+<div class="paragraph">
+<p>As a basis of the implementation, it has been taken into account:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Schematron "skeleton" implementation in <a href="https://github.com/SCHEMATRON">XSLT</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Execution_files.jpg" alt="Execution files" width="568" height="140"></span></p>
+</div>
+<div class="paragraph">
+<p>This example describes the execution of the validation process using the <a href="http://saxon.sourceforge.net/">Saxon library</a> to execute XSLT files and the XSLT provided as a basis:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Execution_validation_process.jpg" alt="Execution of the validation process" width="528" height="284"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_code_list_validation_architecture"><a class="anchor" href="#_code_list_validation_architecture"></a>Code list validation Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Business rules related to code list validates:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Codelist_business_rules.jpg" alt="Code list business rules" width="600" height="325"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_architecture_for_code_list_validation"><a class="anchor" href="#_architecture_for_code_list_validation"></a>Architecture for Code List validation</h3>
+<div class="paragraph">
+<p>The validation of the code lists needs an extra step on the process before executing the Schematron process. This is because it needs <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=codelist">Genericode</a> (GC) as input files.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The first step is the <strong>generation of Genericode (GC) files</strong>. These files contains information about the values and identifiers of each code list.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>GC files are found in the <a href="{url-tree}/codelists/gc/">/codelists/gc folder</a>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Design and implementation of the CVA files</strong>. <a href="http://docs.oasis-open.org/codelist/ns/ContextValueAssociation/1.0/">CVA</a> stands for Context and Value Association:</p>
+</li>
+<li>
+<p><strong>Execution of the implemented validations</strong> in the CVA files:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Transformation of CVA files into SCH files.</p>
+</li>
+<li>
+<p>Continue with the Schematron execution process: (1) transformation of SCH files into XSLT and execution of the validations using the XSLT files to get the final report.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Architecture_codelist_validation.jpg" alt="Architecture for code list validation" width="750" height="350"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_does_the_sch_file_contain_2"><a class="anchor" href="#_what_does_the_sch_file_contain_2"></a>What does the SCH file contain?</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Association between one or more elements of the XML and one or more code list (specified in the Genericodes).</p>
+</li>
+<li>
+<p>The declaration of which attributes of the XML identify information of the Genericode.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The implementation of the CVA file has the following structure:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/CVA_example.jpg" alt="CVA example" width="600" height="258"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_execution_2"><a class="anchor" href="#_execution_2"></a>Execution</h3>
+<div class="paragraph">
+<p>As a basis of the implementation, it has been taken into account:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Schematron implementation of CVA files for validation from <a href="https://cranesoftwrights.github.io/resources/ubl/index.htm#cva2sch">CRANE SOFTWRIGHTS LTD</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/CodeList_Validation_Execution_files.jpg" alt="Code List Validation Execution files" width="600" height="210"></span></p>
+</div>
+<div class="paragraph">
+<p>This example describes the execution of the validation process using the <a href="http://saxon.sourceforge.net/">Saxon library</a> to execute XSLT files and the XSLT provided as a basis:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Execution%20_validation%20process_codelists.jpg" alt="Execution of the validation process in code lists" width="600" height="279"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_espd_validation_architecture"><a class="anchor" href="#_espd_validation_architecture"></a>ESPD Validation Architecture</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The validation of a ESPD XML has the following life-cycle:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/ESPD_Schematorn_lyfe-cycle.jpg" alt="ESPD Schematorn lyfe-cycle" width="370" height="436"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The validation of the XML starts by ensuring that the input XML follows the <strong>structure defined by the XSD</strong>: QualificationApplicationRequest.xsd XSD Schema or QualificationApplicationResponse.xsd XSD Schema. These schemas can be found under the folder ubl-2.3/xsdrt/maindoc (or the equivalent documented xsd folder).</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>If the validation of the structure is not successful, the process stops and sends the report with the list of errors.</p>
+</li>
+<li>
+<p>If the validation of the structure is successful, the process continues with the code list validations and business rules. All errors found (if any) are listed in the report.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Depending on the type of application (ESPD Request or ESPD Response), different types of validations are executed:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="_images/Validation_Process.jpg" alt="Validation Process" width="600" height="416"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_espd_request"><a class="anchor" href="#_espd_request"></a>ESPD Request</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>XSD Validation</strong> against QualificationApplicationRequest-2.3.xsd</p>
+</li>
+<li>
+<p><strong>Code list validations</strong>. These are common for both, Request and Response:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Validation of the code list values: 01 ESPD-codelist-values.cva</p>
+</li>
+<li>
+<p>Validation of the identification of the code list: 01 ESPD Common CL Attributes.sch</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Business rules related to the <strong>cardinality</strong> of the schema, that cannot be controlled using the XSD: 02 ESPD Req Cardinality BR.sch</p>
+</li>
+<li>
+<p>Business rules used to validate the <strong>criteria data structure</strong>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Validations common for Request and Response: 03 ESPD Common Criterion BR.sch</p>
+</li>
+<li>
+<p>Validations specific for Request applications: 03 ESPD Req Criterion BR.sch</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Other</strong> business rules:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Other validations which are common to Request and Response applications, such as the mandatory use of the attribute schemeAgencyID for identifiers: 04 ESPD Common Other BR.sch</p>
+</li>
+<li>
+<p>Specific business rules for Request applications, in this case, the validation of the correct value for cbc:CutomisationID element: 04 ESPD Req Other BR.sch</p>
+</li>
+<li>
+<p>Business rules related to the procurer: 05 ESPD Req Procurer BR.sch</p>
+</li>
+<li>
+<p>Specific business rules: 05 ESPD Req Specific BR.sch</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_espd_response"><a class="anchor" href="#_espd_response"></a>ESPD Response</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>XSD Validation</strong> against UBL-QualificationApplicationResponse-2.3.xsd</p>
+</li>
+<li>
+<p><strong>Code list validations</strong>. These are common for both, Request and Response:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Validation of the code list values: 01 ESPD-codelist-values.cva</p>
+</li>
+<li>
+<p>Validation of the identification of the code list: 01 ESPD Common CL Attributes.sch</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Business rules related to the <strong>cardinality</strong> of the schema, that cannot be controlled using the XSD: 02 ESPD Resp Cardinality BR.sch.sch</p>
+</li>
+<li>
+<p>Business rules used to validate the <strong>criteria data structure</strong>:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Validations common for Request and Response: 03 ESPD Common Criterion BR.sch</p>
+</li>
+<li>
+<p>Validations specific for Response applications: 03 ESPD Resp Criterion BR.sch</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Other</strong> business rules:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Other validations which are common to Request and Response applications, such as the mandatory use of the attribute schemeAgencyID for identifiers: 04 ESPD Common Other BR.sch</p>
+</li>
+<li>
+<p>Specific business rules for Response applications, in this case, the validation of the correct value for cbc:CutomisationID element: 04 ESPD Resp Other BR.sch</p>
+</li>
+<li>
+<p>Business rules related to the economic operator: 05 ESPD Resp EO BR.sch</p>
+</li>
+<li>
+<p>Response Specific business rules: 05 ESPD Resp Specific BR.sch</p>
+</li>
+<li>
+<p>Specific business rules for economic operators registered in a pre-qualification system: 05 ESPD Resp Qualification BR.sch</p>
+</li>
+<li>
+<p>Specific business rules depending on the role: 05 ESPD Resp Role BR.sch</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uuid_criterion_validation"><a class="anchor" href="#_uuid_criterion_validation"></a>UUID Criterion Validation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each Criterion is defined in e-Certis and must use the <strong>Universally Unique Identifier (UUID)</strong> supplied by e-Certis:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>These UUIDs are 'constant', meaning that they are maintained by DG GROW and need to be used compulsory as they were issued by DG GROW.</p>
+</li>
+<li>
+<p>The value of each UUID are defined in the spreadsheets:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><a href="{url-tree}/codelists/ESPD-criterion.xlsx">ESPD-criterion</a></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>ESPD validates that the UUID defined in the ESPDRequest XML or ESPDResponse XML are the ones supplied by e-Certis:</p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -256,323 +630,98 @@
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>Attendee Name</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Organisation / Country</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Spreadsheet row</strong></th>
+<th class="tableblock halign-left valign-top"><strong>XSD Path</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Paloma ARILLO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\{CRITERION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:TenderingCriterion/cbc:ID</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Natalie MURIC</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\{QUESTION_GROUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:TenderingCriterion/cac:TenderingCriterionPropertyGroup/cbc:ID</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Marc Christopher SCHMIDT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Andreea ANGHEL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Romania</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Beata BALOGOVA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Slovakia</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Jerry DIMITRIOU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Greece</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Stefano FALÀ</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Anna FRANTZEN</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norway</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Linda HANNISDAL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norway</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Paul HUMANN</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Austria</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Delia IONICA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Romania</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Uroš IZLAKAR</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ukraine</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Arunas JANKAUSKAS</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Juris KALEJS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Latvia</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hilde KJØLSET</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Norway</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ajda KOSTANJSEK</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Slovenia</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Marika LACCARINI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Italy</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ferdinand Junior MADDELA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Italy</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Jil MOSAR</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Luxembourg</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Marc NOSBUSCH</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Luxembourg</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pietro PALERMO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Italy</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Nuno PERALTA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Portugal</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Michele PIZZICONI</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ANAC</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Andriana PRENTZA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Greece</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Laima PUJATE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Latvia</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Konstantinos RAPTIS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Greece</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Viviana SANFRANCESCO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Italy</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Andreas SCHMITZ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Germany</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maria SIAPERA</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UPRC</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Giampaolo SELLITTO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Italy</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Akós ZÁMBÓ</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Hungary</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Alba COLOMER</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTT Data</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pedro SOTO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTT Data</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Juan Carlos DELGADO</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTT Data</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pascaline Laure TCHIENEHOM</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NTT Data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\{QUESTION_SUBGROUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cac:SubsidiaryTenderingCriterionPropertyGroup/cbc:ID</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Every QUESTION_GROUP and QUESTION_SUBGROUP that has the same structure (meaning, QUESTION or QUESTION_SUBGROUP), share the same UUID, as they are the same.</p>
 </div>
+<div class="paragraph">
+<p>Tendering Criterion</p>
 </div>
-<div class="sect1">
-<h2 id="_meeting_agenda"><a class="anchor" href="#_meeting_agenda"></a>1. Meeting Agenda</h2>
-<div class="sectionbody">
+<div class="paragraph">
+<p>The validation of each criterion (cac:TenderingCriterion element) has the aim to check:</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Problem statement</p>
+<p>cbc:ID, cbc:CriterionTypeCode, cbc:Name and cbc:Description are mandatory;</p>
 </li>
 <li>
-<p>Business requirements</p>
+<p>cbc:ID and cbc:CriterionTypeCode values match with the ones supplied by e-Certis;</p>
 </li>
 <li>
-<p>Example of the current situation</p>
+<p>cac:TenderingCriterionPropertyGroup structure matches with the QUESTION_GROUP supplied by e-Certis (see Tendering Criterion Property Group and Subgroup section).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Tendering Criterion Property Group and Subgroup</p>
+</div>
+<div class="paragraph">
+<p>The same validations are executed for the first level group of properties and sub-groups of properties. The rules applied are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The cbc:ID and cbc:PropertyGroupTypeCode are mandatory elements and their values are the ones supplied by e-Certis in the corresponding cbc:TenderingCriterion;</p>
 </li>
 <li>
-<p>Proposed solution</p>
+<p>cac:TenderingCriterionProperty structure matches with QUESTION supplied by e-Certis (see Tendering Crtierion Property section);</p>
 </li>
 <li>
-<p>Topics to be discussed</p>
+<p>cac:SubsidiaryTenderingCriterionPropertyGroup matches with QUESTION_SUBGROUP supplied by e-Certis (for each property group, the same validations are applied).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Tendering Criterion Property</p>
+</div>
+<div class="paragraph">
+<p>The validation of Tendering Criterion Property (cac:TenderingCriterionProperty element) is checked as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>cbc:TypeCode and cbc:ValueDataTypeCode are mandatory elements and match with the ones supplied by e-Certis;</p>
 </li>
 <li>
-<p>Next meetings</p>
+<p>cbc:ID and cbc:Description elements are mandatory, although their values are not validated;</p>
 </li>
 <li>
-<p>Any other business</p>
+<p>If cbc:TypeCode value is "CAPTION" or "REQUIREMENT", cbc:ValueDataTypeCode value must be "NONE".</p>
 </li>
 </ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_problem_statement"><a class="anchor" href="#_problem_statement"></a>2. Problem statement</h2>
+<h2 id="_interoperability_testbed"><a class="anchor" href="#_interoperability_testbed"></a>Interoperability testbed</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Currently, Universally Unique Identifiers (UUIDs) are dynamically generated for questions within criteria for each new ESPD document and therefore cannot be reused in other procurement procedures.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_business_requirements"><a class="anchor" href="#_business_requirements"></a>3. Business requirements</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Ensure that each criterion in the ESPD Request matches the same criterion in the ESPD Response.</p>
-</li>
-<li>
-<p>Ensure reusability of criteria across procurement procedures.</p>
-</li>
-<li>
-<p>Ensure traceability and respect the Once-Only Principle (OOP).</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_example_of_the_current_situation"><a class="anchor" href="#_example_of_the_current_situation"></a>4. Example of the current situation</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>A brief summary of the current UUID is provided in slide 4 of the presentation available <a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220331.pdf">here</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_proposed_solution"><a class="anchor" href="#_proposed_solution"></a>5. Proposed solution</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>A summary of the alternative approach proposed by INTERPROC to the use of the UUID was provided in the OUC meeting of January and is available <a href="https://github.com/OP-TED/espd-docs/blob/wgm-reports/modules/ROOT/attachments/ESPD_OUC_Meetings_20220127.pdf">here</a>  (slides 11-29).</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_topics_discussed"><a class="anchor" href="#_topics_discussed"></a>6. Topics discussed</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>UUIDs already available in the excel file will be kept. The new solution proposes new identifiers only for those cases that are currently being dynamically created in the ESPD.</p>
-</li>
-<li>
-<p>A question is raised regarding whether the concept of the UUID is changed with the proposed solution, since the first part of the new proposed code is an identifier such as <em>crime-org</em>. It is explained that Question Group UUID is preserved, however a solution for providing identifiers for the different parts of the criteria currently created as dynamic UUIDs is provided.</p>
-</li>
-<li>
-<p>Concatenation of parts 1, 2 and 3 of the proposed identifier provide the criteria structure and ensure traceability: with the proposed solution, a certain identifier points always to a certain position in the Question Group structure:</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/New_identifier_parts.png" alt="New identifier parts">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Suffixes are used for the identification of answers (part 3 of the proposed new identifier).</p>
-</li>
-<li>
-<p>A question is raised regarding the repetition of the same identifier for different Question Groups. It is explained that each question is identified with the full path that includes all Subquestion Groups:</p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/New_identifier_example.png" alt="New identifier example">
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A question is raised regarding how the proposed solution provides coverage to purely national exclusion grounds. It is explained that  the proposed solution works also for purely national exclusion grounds, since national exclusion grounds have their own UUID which is also part of eCertis.</p>
-</li>
-<li>
-<p>Currently, eCertis allows only one criterion per country under purely national exclusion grounds. It is also mentioned that this is not correct and will have to be reviewed in eCertis.</p>
-</li>
-<li>
-<p>A question is raised regarding how changes in questions are dealt with (for example, if a question is removed from a Question Group, are all remaining questions reordered?). It is explained that  with the proposed solution, if a question is added or removed from a Question Group, or if there is any change in the criteria structure, the identifier is no longer valid.</p>
-</li>
-<li>
-<p>An alternative approach is proposed which minimises the impact related to changes in the criteria structure by using identifiers that are not so strongly linked to the criteria structure (for example, in case of adding a new criterion between Q1 and Q2, providing this new criterion a code such as Q1A would keep the validity of the previous codes and a change of the previous codes would not be necessary; in the case of removing a criterion, the corresponding code could be deprecated without updating the numbering of the codes of all other criteria). An update methodology which ensures usability would be necessary.</p>
-</li>
-<li>
-<p>An approach based on eForms Business Terms is also suggested, where business groups are defined with Business Terms so they can be reused. It is agreed that using the same codes than eForms would be helpful.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The European Commission (EC) <a href="https://ec.europa.eu/isa2/awards_en">ISA2 Programme</a> provides an <a href="https://joinup.ec.europa.eu/asset/itb/description">Interoperability Testbed</a> where Stakeholders can freely test these validation artefacts.</p>
 </div>
 <div class="paragraph">
-<p>OP will take the above points into consideration and discuss any findings with INTERPROC before coming to the OUC with a solution.</p>
+<p>All the ESPD-EDM artefacts necessary to perform the validation are set up in the testbed. Thus developers and integrators can test the validity of the ESPD-Request and ESDP-Response XML instances by uploading the instances in the testbed and launching the validation.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_next_meetings"><a class="anchor" href="#_next_meetings"></a>7. Next meetings</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>April 28th, 10.00 – 11.30.</p>
-</li>
-<li>
-<p>June 16th, 10.00 – 11.30.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_any_other_business"><a class="anchor" href="#_any_other_business"></a>8. Any other business</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>The OP comments that a new excel file with the data structure for criteria will be provided with the new ESPD release, which will not be before the end of the year.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Use this URL to upload and execute the validations: <a href="https://www.itb.ec.europa.eu/espd/upload">Upload</a>.</p>
 </div>
 <hr>
 <div class="paragraph">

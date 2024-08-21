@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/espd-tech/bus_codelist.html">
+    <title>Conceptual Model :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/espd-tech4/conceptual.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -70,7 +70,7 @@
     </nav>
 </div><div class="body">
 <script src="../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="espd-tech" data-version="">
+<div class="nav-container" data-component="espd-tech4" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -98,13 +98,13 @@
     <span class="nav-text"><span class="separated"><strong>Information for Business Users</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#espd-bus::index.adoc">Business Information</a>
+    <a class="nav-link" href="../espd-bus4/index.html">Business Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#espd-bus::service.adoc">What is an ESPD Service?</a>
+    <a class="nav-link" href="../espd-bus4/service.html">What is an ESPD Service?</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#espd-bus::using.adoc">The Structure of an ESPD Service</a>
+    <a class="nav-link" href="#espd-bus4::using.adoc">The Structure of an ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
@@ -229,6 +229,10 @@
 <button class="nav-toggle"></button>
   <a href="../home/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">ESPD EDM</a></li>
+    <li><a href="conceptual.html">Conceptual Model</a></li>
+  </ul>
 </nav>
 </div>
   <div class="content">
@@ -236,158 +240,9 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<div class="sect1">
-<h2 id="_annex_i_code_list_used_in_espd"><a class="anchor" href="#_annex_i_code_list_used_in_espd"></a>Annex I. Code list used in ESPD</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Some code lists used in ESPD were modified to align with those of the eForms.
-</td>
-</tr>
-</table>
-</div>
+<h1 class="page">Conceptual Model</h1>
 <div class="paragraph">
-<p>In some cases, code lists were removed from ESPD since the information will be retrieved from eForms.</p>
-</div>
-<div class="paragraph">
-<p>For more details on the code list removed, consult the <mark>Release Notes</mark>.</p>
-</div>
-<div class="paragraph">
-<p>In ESPD documents, codes can be used in different contexts e.g.,:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Outside the criteria, in UBL components of type "Code Type";</p>
-</li>
-<li>
-<p>Inside the definition of a Criterion, in the ESPD Request, for the element Expected Code (cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:ExpectedCode, it is in this element that the ESPD Request defines which code list to use); and</p>
-</li>
-<li>
-<p>Inside the Response Value (cac:TenderingCriterionResponse/&#8203;cac:ResponseValue/&#8203;cbc:ResponseCode), where the Economic Operator has to supply a valid code picked from the list specified in the ESPD Request, in the element cbc:ExpectedCode.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Additional information about the code lists can be found in:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <a href="#code-list-catalogue">[code-list-catalogue]</a> in this documentation;</p>
-</li>
-<li>
-<p>The multilingual <a href="{url-tree}/codelists/gc/">Genericode</a> *.gc files automatically produced based on these spread-sheets; <mark>and</mark>?</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The table below lists the code lists used in the ESPD documents and the locations where they are used.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top"><strong>Code List</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Issuer Agency</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Used In</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">AccessRight</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See element 'cac:Evidence/&#8203;cbc:ConfidentialityLevelCode` of the UBL-2.3 XSD Schemas for QualificationApplicationResponse</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Country</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See element 'cac:PostalAddress/&#8203;cac:Country/&#8203;cbc:IdentificationCode` of the UBL-2.3 XSD Schemas, e.g. the postal address of an economic operator party)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CriteriaType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission, defined in e-Certis)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See each Criterion taxonomy code in the <a href="{url-tree}/__ESPDTeam__/ESPD-CodeLists.xlsx">Criteria Data</a> Structures. See also the <a href="{url-tree}/codelists/ESPD-criterion.xlsx">Genericode file</a>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CriterionElementType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:TypeCode of the UBL-2.3 XSD QualificationApplicationRequest Schema</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Currency</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All UBL-2.3 elements of type cbc:Amount in its attribute @currencyID</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DocRefContentType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UBL-2.3 element cac:AdditionalDocumentReference/&#8203;cbc:DocumentTypeCode. See XML example in section <strong>2.5 EU and notice publications</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EOIDType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute cac:PartyIdentification/cbc:ID@SchemeID. See 'Requirement" boxes in section <strong>6.6 Economic Operator</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EconomicOperatorSize</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used in the UBL-2.3 element cac:EconomicOperatorParty/&#8203;cac:QualifyingParty/&#8203;cbc:IndustryClassificationCode to specify the size of the economic operator.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EoRoleType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:EconomicOperatorRole/&#8203;cbc:RoleCode.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">FinancialRatioType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BACH Banque de France</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Used in the REQUIREMENT "Ratio Type" of the Criterion  <strong>finan-rat</strong>. See data structure for this criterion in the ESPD Request <a href="{url-tree}/codelists/ESPD-criterion.xlsx">ESPD-criterion</a>.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Language</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">e.g. in cac:Legislation/&#8203;cac:Language/&#8203;cbc:LocaleCode. See for instance XML example in section <strong>4. 7 Early termination</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ProfileExecutionID</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element cbc:ProfileExecutionID used at the root of the UBL-2.3 QualificationApplicationRequest and QualificationApplicationResponse documents. See table of expected elements in section <strong>2.4 Root elements</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">PropertyGroupType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cbc:PropertyGroupTypeCode.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ResponseDataType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:ValueDataTypeCode.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Occupation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:ExpectedCode</p></td>
-</tr>
-</tbody>
-</table>
-<hr>
-<div class="paragraph">
-<p>Any comments on the documentation?</p>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
-</div>
+<p><a href="_attachments/ESPD_CM_html/index.html">The Conceptual Model can be accessed via this link</a></p>
 </div>
 </article>
     <div id="widgetContainer">
