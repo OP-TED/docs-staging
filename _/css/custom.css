@@ -22,6 +22,26 @@
     box-shadow: 2px 2px 2px #e1e1e1;
 }
 
+.tile2 {
+    width: 32%;
+    margin: 1%;
+    background-color: transparent !important;
+    border: 1px solid #ccc;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    box-shadow: 2px 2px 2px #e1e1e1;
+}
+
+.tile3 {
+    width: 19%;
+    margin: 1%;
+    background-color: transparent !important;
+    border: 1px solid #ccc;
+    border-radius: 12px !important;
+    padding: 1rem !important;
+    box-shadow: 2px 2px 2px #e1e1e1;
+}
+
 .tile .content .title {
     font-size: 1.3em !important;
     text-align: left !important;
