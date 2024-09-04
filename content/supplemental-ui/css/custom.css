@@ -6,7 +6,7 @@
     display: none;
 }
 
-.tile-container>.content {
+.tile-container .content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
