@@ -275,33 +275,33 @@
 <h2 id="_v4_0_0_october_2024"><a class="anchor" href="#_v4_0_0_october_2024"></a>1. v4.0.0 (October 2024)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The main change in ESPD-EDM version 4.0.0  is the replacement of dynamic UUIDs with XML Path like IDs. Some other minor errors were fixed in the data structure and the codelists.</p>
+<p>The main change in ESPD-EDM version 4.0.0 is the replacement of dynamic UUIDs with XML Path like IDs. Some other minor errors were fixed in the data structure and the codelists.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>XML Path like IDs for replacing UUIDs in ESPD data structure elements</p>
+<p>XML Path like IDs for replacing UUIDs in ESPD data structure elements;</p>
 </li>
 <li>
-<p>Extension of the lot management to different requirements (applicable to set of lots)</p>
+<p>Extension of the lot management to different requirements (applicable to set of lots);</p>
 </li>
 <li>
-<p>Misplacement of evidence group</p>
+<p>Evidence group misplacement fixed;</p>
 </li>
 <li>
-<p>General data structure updates : Descriptive requirement added to Part IV (Selection criteria), Other economic or financial requirements Part B(6),  Possibility to exclude Pre-qualification system section where it does not apply.</p>
+<p>General data structure updates: Descriptive requirement added to Part IV (Selection criteria), Other economic or financial requirements Part B(6),  Possibility to exclude Pre-qualification system section where it does not apply;</p>
 </li>
 <li>
-<p>General codelists updates</p>
+<p>Code Lists general updates;</p>
 </li>
 <li>
-<p>Validation and Schematron Rules updates</p>
+<p>Validation and Schematron Rules updates;</p>
 </li>
 <li>
-<p>Conceptual model updates</p>
+<p>Conceptual model updates;</p>
 </li>
 <li>
-<p>Github folders updates</p>
+<p>Github folders updates;</p>
 </li>
 </ul>
 </div>
@@ -310,32 +310,32 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>JIRA issue TEDSPD-668 - Updating ESPD-EDM Github folders</strong></p>
+<p><strong>Updating ESPD-EDM Github folders</strong><sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>criterion</strong> folder created. It contains the data structure of the ESPD taxonomy criterion files for the Request and the Response. It contains Excel files with an example of  ESPD Request and ESPD Response criterion files that do illustrate multiple occurrences.</p>
+<p><strong>codelists</strong> folder updated. This contains the data structure of the codelists used in ESPD and the related genericode files;</p>
 </li>
 <li>
-<p><strong>xml-samples</strong> folder updated. It contains UBL XML samples for the ESPD Request and ESPD Response that correspond to the criterion files provided.</p>
+<p><strong>ESPDTeam</strong> folder contents merge into "codelists" folder and removed;</p>
 </li>
 <li>
-<p><strong>codelists</strong> folder updated. It contains the data structure of the codelists used in ESPD and the related genericode files.</p>
+<p><strong>criterion</strong> folder created. This contains the data structure of the ESPD taxonomy criterion Excel files for the Request and the Response. It also contains two examples in Excel format illustrating multiple occurrences: one for the ESPD Request and one for ESPD Response;</p>
 </li>
 <li>
-<p><strong>ESPDTeam</strong> folder merge in "codelists" folder and removed.</p>
+<p><strong>conceptual-model</strong> folder updated. This contains the UML conceptual model of the ESPD in .eap, .xmi and .dtd format;</p>
 </li>
 <li>
-<p><strong>java-library</strong> folder removed.</p>
+<p><strong>java-library</strong> folder removed;</p>
 </li>
 <li>
-<p><strong>ubl-2.3</strong> folder. It contains the UBL v2.3 distribution files that are currently used in the ESPD.</p>
+<p><strong>ubl-2.3</strong> folder. This contains the UBL v2.3 distribution files that are currently used in the ESPD;</p>
 </li>
 <li>
-<p><strong>conceptual-model</strong> folder updated. It contains the UML conceptual model of the ESPD in .eap, .xmi and dtd format.</p>
+<p><strong>validation</strong> folder updated. This contains the resulting files of the validation process based on Schematron Rules and generated using ITB (Interoperability Testbed). A script <code>espd-validation.bat</code> is provided for validation of ESPD Request and ESPD Response files;</p>
 </li>
 <li>
-<p><strong>validation</strong> folder updated. It contains the resulting files of the validation process based on Schematron rules and generated using ITB (Interoperability Testbed). A script <code>espd-validation.bat</code> is provided for validation of ESPD Request and ESPD Response files.</p>
+<p><strong>xml-samples</strong> folder updated. This contains UBL XML samples for the ESPD Request and ESPD Response that correspond to the criterion files provided.</p>
 </li>
 </ul>
 </div>
@@ -357,9 +357,12 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_esdp_demo_site"><a class="anchor" href="#_esdp_demo_site"></a>1.2. ESDP Demo site</h3>
+<h3 id="_espd_demo_site"><a class="anchor" href="#_espd_demo_site"></a>1.2. ESPD Demo site</h3>
 <div class="paragraph">
-<p>Creation of <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo</a> site to allow User Community to test and validate latest versions of ESPD before implementing the ESPD Service. This site offers the possibility for our User Community to give feedback on ESPD-EDM. The site is provided as Open Source code and is available on GitHub <a href="https://github.com/OP-TED/espd-demo">GitHub ESPD Demo repository</a>, more details can be found in <a href="https://github.com/OP-TED/espd-demo/blob/main/README.md">README file</a> and in the documentation: <a href="demo.html" class="xref page">Introduction to the ESPD Demo</a>.</p>
+<p>Creation of <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo</a> site to allow User Community to test and validate latest versions of ESPD before implementing the ESPD Service. This site offers the possibility for our User Community to give feedback on ESPD-EDM. The site is provided as Open Source code and is available on GitHub <a href="https://github.com/OP-TED/espd-demo">GitHub ESPD Demo repository</a>, more details can be found in <a href="https://github.com/OP-TED/espd-demo/blob/main/README.md">README file</a>.</p>
+</div>
+<div class="paragraph">
+<p>The full documentation for v4.0.0 can be found on the <a href="https://docs.ted.europa.eu/ESPD-EDM/4.0.0/index.html">TED Documentation/ ESPD V4.0.0 site</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -370,7 +373,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>JIRA issue TEDSPD-378 - Added cbc:MinimumAmount to cac::TenderingCriterionProperty</strong></p>
+<p><strong>Added cbc:MinimumAmount to cac::TenderingCriterionProperty</strong><sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p>
 <div class="ulist">
 <ul>
 <li>
@@ -415,15 +418,13 @@
 <div class="sect2">
 <h3 id="_espd_edm_criterion_file_data_structure"><a class="anchor" href="#_espd_edm_criterion_file_data_structure"></a>1.4. ESPD-EDM Criterion file - Data Structure</h3>
 <div class="paragraph">
-<p>We introduced two ESPD-EDM example files together with the ESPD-EDM criterion file that can be found in <strong>criterion</strong> folder.</p>
-</div>
-<div class="paragraph">
-<p>Several issues have been resolved related to the data structure of the ESPD-EDM Criterion (taxonomy) file.</p>
+<p>Introduction of ESPD-EDM example files in Excel format together with the ESPD-EDM criterion file that can be found in the <strong>criterion</strong> folder.<br>
+Several issues have been resolved related to the data structure of the ESPD-EDM Criterion (taxonomy) file.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>JIRA TEDSPD-400, TEDSPD-454 - Replacement of dynamic UUID by XML Path like ID</strong></p>
+<p><strong>Replacement of dynamic UUID by XML Path like ID</strong><sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup></p>
 <div class="ulist">
 <ul>
 <li>
@@ -436,7 +437,7 @@
 </div>
 </li>
 <li>
-<p><strong>Fix JIRA issue TEDSPD-653, TEDSPD-369 - Evidence Group or Subgroup misplacement</strong></p>
+<p><strong>Evidence Group or Subgroup misplacement</strong><sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup></p>
 <div class="ulist">
 <ul>
 <li>
@@ -446,7 +447,7 @@
 </div>
 </li>
 <li>
-<p><strong>Fix JIRA issue TEDSPD-488 - Update criterion files with codes of EU Vocabularies for v4.0.0</strong></p>
+<p><strong>Update criterion files with codes of EU Vocabularies for v4.0.0</strong><sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
 <div class="ulist">
 <ul>
 <li>
@@ -489,17 +490,17 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Added new section that allows the Economic Operator to choose the option in case the Country of the Contracting Authority does not have a national (pre)qualification system.</p>
+<p>Added new section that allows the Economic Operator to choose the option in the case where the Country of the Contracting Authority does not have a national (pre)qualification system.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>JIRA issue TEDSPD-695 - ADDITIONAL_DESCRIPTION_LINE is included in ESPD XML examples</strong></p>
+<p><strong>ADDITIONAL_DESCRIPTION_LINE is included in ESPD XML examples</strong><sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Multiple <strong>ADDITIONAL_DESCRIPTION_LINE</strong> are rendered in the ESPD XML example documents</p>
+<p>Multiple <strong>ADDITIONAL_DESCRIPTION_LINE</strong> (s) are rendered in the ESPD XML example documents</p>
 </li>
 </ul>
 </div>
@@ -553,7 +554,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>JIRA TEDSPD-689: LOT_IDENTIFIER data type added to ResponseDataType codelist</strong></p>
+<p><strong>LOT_IDENTIFIER data type added to ResponseDataType codelist</strong><sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup></p>
 <div class="ulist">
 <ul>
 <li>
@@ -565,13 +566,13 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>The corresponding genericode files have been generated.</p>
+<p>The corresponding genericode files were generated.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_validation_interoperability_testbed"><a class="anchor" href="#_validation_interoperability_testbed"></a>1.7. Validation - Interoperability Testbed</h3>
 <div class="paragraph">
-<p>The ESPD Team provides a new repository to generate Schematron Business Rules and XSL files necessary for validation process: <a href="https://github.com/OP-TED/espd-validation-schematron">ESPD Schematron Validation</a>. This repository allows the processing, transformation, and validation of ESPD XML examples, UBL 2.3 XSD files, genericode codelists, and Schematron business rules files. The resulting XSL files are used for Interoperability Testbed.</p>
+<p>The ESPD Team provides a new repository to generate Schematron Business Rules and XSL files necessary for validation process: <a href="https://github.com/OP-TED/espd-validation-schematron">ESPD Schematron Validation</a>. This repository allows the processing, transformation, and validation of ESPD XML examples, UBL 2.3 XSD files, genericode codelists, and Schematron business rules files. The resulting XSL files are used for the Interoperability Testbed.</p>
 </div>
 <div class="paragraph">
 <p>Update of Interoperability Testbed <a href="https://www.itb.ec.europa.eu/espd/upload">ESPD validator</a></p>
@@ -637,6 +638,30 @@
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
 </div>
 </div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. JIRA TEDSPD-668
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. JIRA TEDSPD-378
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. JIRA TEDSPD-400, TEDSPD-454
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. JIRA TEDSPD-653, TEDSPD-369
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. JIRA TEDSPD-488
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. JIRA TEDSPD-695
+</div>
+<div class="footnote" id="_footnotedef_7">
+<a href="#_footnoteref_7">7</a>. JIRA TEDSPD-689
 </div>
 </div>
 </article>
