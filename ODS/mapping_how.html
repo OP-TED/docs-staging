@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Welcome to the TED Open Data Service :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/index_new.html">
+    <title>Overview Mapping :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/mapping_how.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -82,7 +82,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Home</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index_new.html">New home</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -258,7 +258,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED Open Data Service</a></li>
-    <li><a href="index_new.html">New home</a></li>
+    <li><a href="mapping_how.html">Overview Mapping</a></li>
   </ul>
 </nav>
 </div>
@@ -267,231 +267,108 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Welcome to the TED Open Data Service</h1>
-<div id="preamble">
+<h1 class="page">Overview Mapping</h1>
+<div class="sect1">
+<h2 id="_mapping-lifecycle-chapter"><a class="anchor" href="#_mapping-lifecycle-chapter"></a>Mapping development lifecycle</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
+<div class="paragraph">
+<p>The creation of a mapping is done in a sequence of phases and each phase has a main activity that must be completed before the next phase can occur.</p>
+</div>
+<div class="paragraph">
+<p>Below is a high-level overview of the stage of the mapping development lifecycle that prepares the mapping suites for use for transformations in production settings.</p>
+</div>
+<div class="paragraph">
+<p>The diagram in <a href="#mapping-lifecycle">Figure 1</a> describes the complete mapping development lifecycle.</p>
+</div>
+<div id="mapping-lifecycle" class="imageblock text-center unresolved">
 <div class="content">
-<div class="paragraph">
-<p>Learn how to query public procurement RDF data, and create mappings to transform XML into RDF</p>
+<img src="mapping_development_lifecycle.png" alt="mapping development lifecycle">
 </div>
-</div>
-</div>
-<div class="openblock tile-container">
-<div class="content">
-<div class="sidebarblock tile2">
-<div class="content">
-<div class="title">Query RDF Data</div>
-<div class="paragraph">
-<p>Learn how to query Public Procurement data using SPARQL</p>
+<div class="title">Figure 1. Mapping development lifecycle</div>
 </div>
 <div class="paragraph">
-<p><a href="RDF_how.html" class="xref page">How RDF data is queried</a></p>
+<p>The phases are as follows:</p>
 </div>
-</div>
-</div>
-<div class="sidebarblock tile2">
-<div class="content">
-<div class="title">Create Mappings</div>
-<div class="paragraph">
-<p>Learn how to create mappings for your own XML to RDF conversion project</p>
-</div>
-<div class="paragraph">
-<p><a href="mapping_how.html" class="xref page">How Mappings are created</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile2">
-<div class="content">
-<div class="title">Get Started</div>
-<div class="paragraph">
-<p>Information and help to get you started</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Decide which notice type to map</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p><a href="#_querying_ted_open_data">Start creating RDF Queries</a></p>
+<p>The process starts with the decision as to <strong>which notice type to map</strong>. The notice classification schemes currently targeted are the <a href="https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement">"standard forms"</a>, and the <a href="https://simap.ted.europa.eu/web/simap/eforms">"eForms"</a>. New classification schemes will follow in the future.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Select a set of representative data to use for testing</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p><a href="#_mapping_suites">Start creating Mapping Suites</a></p>
+<p>Once the target form is chosen, <strong>a set of representative data is selected</strong> which serves as the test set for the mapping.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Analyse the data and produce a conceptual mapping</p>
+</li>
+</ol>
 </div>
+<div class="paragraph">
+<p>The notice classification scheme is usually subject to regulations and described in multiple forms, such as PDF documents and/ or XSD schemes, amongst other document types. All possible documentation and modelling artefacts are <strong>analysed and used to produce a conceptual mapping</strong> (described in the <a href="#_conceptual-mapping-structure">Conceptual mapping structure</a> section). This artefact, stored as a workbook, establishes the correspondence of the TED notice fields to XPath expressions and EPO structures.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Implement a corresponding technical mapping</p>
+</li>
+</ol>
 </div>
+<div class="paragraph">
+<p>Once the conceptual mapping is established between the XPath expressions and ontology structures, <strong>a corresponding technical mapping is implemented</strong>. This technical mapping consists of a set of mapping rules expressed in <a href="https://rml.io/specs/rml/">RDF Mapping Language (RML)</a>, and represents a translation of the conceptual mapping into a formal language which can be executed automatically by a transformation engine such as <a href="https://github.com/RMLio/rmlmapper-java">RMLMapper</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_is_the_ted_open_data_service"><a class="anchor" href="#_what_is_the_ted_open_data_service"></a>What is the TED Open Data Service?</h2>
+<h2 id="_other_artifacts"><a class="anchor" href="#_other_artifacts"></a>Other Artifacts</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website into RDF format. The RDF data is stored in the Publications Office&#8217;s (OP) RDF <a href="https://en.wikipedia.org/wiki/Triplestore">triple store</a> named the "Cellar", and is publicly available (open). Making this data open for querying is part of the <a href="https://digital-strategy.ec.europa.eu/en/policies/strategy-data">European Data Strategy</a> which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.</p>
+<p>In the process, other useful artifacts are produced:</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_querying_ted_open_data"><a class="anchor" href="#_querying_ted_open_data"></a>Querying TED Open Data</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement. Queries can be submitted via Cellar&#8217;s <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL endpoint</a>, for which there is a link on the <a href="https://op.europa.eu/en/web/eu-vocabularies">EU Vocabularies page</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A HTML report on the RML files which is easier to read</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>This section on querying (reusing) public procurement data introduces the resources and guides available to help those interested improve their querying knowledge and skills.</p>
+<p>Reading RML for revision or debugging purposes can be difficult. To simplify this process, the <strong>RML files can be turned into a more human-friendly HTML report</strong>. This detailed document facilitates e.g., parsing sets of conceptual and technical mapping rules to <strong>check their completeness and/or consistency</strong>. This check is a manual step but not the only quality assurance mechanism foreseen in the lifecycle process.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_learn_how_to_query_ted_rdf_data"><a class="anchor" href="#_learn_how_to_query_ted_rdf_data"></a>Learn how to query TED RDF data</h3>
-<div class="openblock tile-container">
-<div class="content">
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Tutorials</div>
-<div class="paragraph">
-<p><a href="sample_app/tutorials.html" class="xref page">Tutorials on RDF, Linked Open data, and SPARQL</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Guidance</div>
-<div class="paragraph">
-<p><a href="sample_app/guidance.html" class="xref page">Guidance and good practices</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Snippets</div>
-<div class="paragraph">
-<p><a href="sample_app/snippets.html" class="xref page">Reusable code snippets</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Scenarios</div>
-<div class="paragraph">
-<p><a href="sample_app/scenarios.html" class="xref page">Turn your question into a Query</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Examples</div>
-<div class="paragraph">
-<p><a href="sample_app/examples.html" class="xref page">Full query examples</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_try_submitting_a_query_in_the_sparql_endpoint"><a class="anchor" href="#_try_submitting_a_query_in_the_sparql_endpoint"></a>Try submitting a query in the SPARQL EndPoint</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Choose a query below, copy it, and paste it into the SPARQL EndPoint to see the results!</div>
-<div class="paragraph text-center">
-<p><a href="sample_app/examples.html" class="xref page">Query examples</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>A set of SPARQL assertion queries</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL EndPoint</a></p>
+<p>The setup and conventions of the conceptual mapping file permits the generation of several additional artefacts, specifically, <strong>a set of SPARQL assertion queries</strong>. These queries are used to assess whether fields mapped in the conceptual mapping are in the same form in the RDF file generated from an XML notice.</p>
 </div>
-</div>
-</div>
-<hr>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_mapping_suites"><a class="anchor" href="#_mapping_suites"></a>Mapping Suites</h2>
-<div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>The Mapping Suites section is for those who wish to use a service that converts XML data into RDF, and deals with the creation of mappings or mapping suites for this purpose. This section is aimed at technical users wishing to create rules for data conversion from XML to RDF. Mappings and mapping suites are part of the the "behind the scenes" process that precedes RDF data being placed in the OP&#8217;s Cellar triple store for querying. Here the process converts TED Notice data, in XML format, into RDF triples that are stored in Cellar.</p>
+<p>To put the SPARQL assertions into practice, <strong>sample data is transformed into RDF</strong> automatically using the RML mapping rules. The <strong>SPARQL queries are then applied</strong> to each output producing validation reports that indicate whether the individual queries generated a positive or negative result. The reports are then analysed for errors in the RML transformation rules or the conceptual mapping.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>A report which reconstructs the data shape instantiated in a particular notice</p>
+</li>
+</ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_resources_for_creating_mappings"><a class="anchor" href="#_resources_for_creating_mappings"></a>Resources for creating Mappings</h3>
-<div class="openblock tile-container">
-<div class="content">
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Methodology</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/methodology.html"><img src="_images/methodology.png" alt="methodology" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Mappings</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/index.html"><img src="_images/mapping.png" alt="mapping" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Mapping Suites</div>
-<div class="imageblock xref-unresolved">
-<div class="content">
-<a class="image" href="#mapping_suite/mapping_suite_structure.adoc"><img src="_images/mapping_suites.png" alt="mapping suites" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Repository Structure</div>
-<div class="imageblock xref-unresolved">
-<div class="content">
-<a class="image" href="#mapping_suite/repository_structure.adoc"><img src="_images/repository.png" alt="repository" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Toolchain</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/toolchain.html"><img src="_images/toolchain.png" alt="toolchain" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Preparing Test Data</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/preparing-test-data.html"><img src="_images/testdata.png" alt="testdata" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_code_examples"><a class="anchor" href="#_code_examples"></a>Code Examples</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>(add examples)</p>
-</div>
-</div>
-</div>
+<p>The final step is the assessment of the generated data, the <strong>fingerprinting</strong>. This procedure generates a report which <strong>reconstructs the data shape instantiated in a particular notice</strong>. This assists in identifying errors related to the EPO ontology.</p>
 </div>
 </div>
 </div>

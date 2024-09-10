@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Welcome to the TED Open Data Service :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/index_new.html">
+    <title>Overview RDF Queries :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/RDF_how.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -82,7 +82,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Home</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index_new.html">New home</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -258,7 +258,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED Open Data Service</a></li>
-    <li><a href="index_new.html">New home</a></li>
+    <li><a href="RDF_how.html">Overview RDF Queries</a></li>
   </ul>
 </nav>
 </div>
@@ -267,231 +267,80 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Welcome to the TED Open Data Service</h1>
-<div id="preamble">
+<h1 class="page">Overview RDF Queries</h1>
+<div class="sect1">
+<h2 id="_how_rdf_data_is_queried"><a class="anchor" href="#_how_rdf_data_is_queried"></a>How RDF Data is Queried</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>Learn how to query public procurement RDF data, and create mappings to transform XML into RDF</p>
-</div>
-</div>
-</div>
-<div class="openblock tile-container">
-<div class="content">
-<div class="sidebarblock tile2">
-<div class="content">
-<div class="title">Query RDF Data</div>
-<div class="paragraph">
-<p>Learn how to query Public Procurement data using SPARQL</p>
+<p>RDF Data is queried using a query language called SPARQL, or &#8230;&#8203;. SPARQL Query Language. RDF data is stored in what is called triples, e.g., if the database had a list of people and their phone numbers, the triples would look like this:</p>
 </div>
 <div class="paragraph">
-<p><a href="RDF_how.html" class="xref page">How RDF data is queried</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile2">
-<div class="content">
-<div class="title">Create Mappings</div>
-<div class="paragraph">
-<p>Learn how to create mappings for your own XML to RDF conversion project</p>
+<p>John - HasNumber - 555-123456
+Janet - HasNumber - 555-345678</p>
 </div>
 <div class="paragraph">
-<p><a href="mapping_how.html" class="xref page">How Mappings are created</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile2">
-<div class="content">
-<div class="title">Get Started</div>
-<div class="paragraph">
-<p>Information and help to get you started</p>
+<p>and so on. The data looks a little like a sentence with a subject (Name), predicate (HasNumber) and object (Number).</p>
 </div>
 <div class="paragraph">
-<p><a href="#_querying_ted_open_data">Start creating RDF Queries</a></p>
+<p>There are many triples stored in such a database, for Name, there would be the usual personal details categories as well as information specific to that database. Many objects would be associated with John or Janet via different predicates.</p>
 </div>
 <div class="paragraph">
-<p><a href="#_mapping_suites">Start creating Mapping Suites</a></p>
+<p>A SPARQL query has a specific structure that is set out in several sections:</p>
+</div>
+<div class="paragraph">
+<p><mark>insert image</mark></p>
+</div>
+<div class="sect2">
+<h3 id="_prefixes"><a class="anchor" href="#_prefixes"></a>Prefixes</h3>
+<div class="paragraph">
+<p>The first part, often called the "prefixes", contains the vocabularies used in the query. Vocabularies are a key feature of RDF data and SPARQL and work as follows:</p>
+</div>
+<div class="paragraph">
+<p>RDF data is built on common or standard definitions of concepts that are organised into vocabularies on a specific category, such as business organisations, personal relationship information, location, finance, and in our case, public procurement. Once a particular vocabulary is published, other entities who find the concept definitions appropriate adopt the use of the vocabulary. If they do so, they name them in the prefixes section of the query so everyone knows which definitions/ vocabulary are being used.</p>
+</div>
+<div class="paragraph">
+<p>When constructing a query, the person creating it needs to declare that a certain vocabulary&#8217;s terms and definitions are being referred to. This is important for all users of the database and query constructors know what the definitions are.</p>
+</div>
+<div class="paragraph">
+<p>Not only do they need to list the vocabularies, but they give each one a short abbreviation or "prefix" which means that from then on in the query, the prefix can be used instead of typing  a long line of text each time you refer to a vocabulary.</p>
+</div>
+<div class="paragraph">
+<p><mark>e.g.s from pp</mark></p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_data_fields_returned"><a class="anchor" href="#_data_fields_returned"></a>Data fields returned</h3>
+<div class="paragraph">
+<p>The second section lists all the fields (terms/ concepts) that the query should return. Each field here becomes a column containing the data returned. These can be the contents of a field, or the contents of a variable that is defined in the next section.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_specifying_the_data"><a class="anchor" href="#_specifying_the_data"></a>Specifying the data</h3>
+<div class="paragraph">
+<p>The third section is used to specify data based on the semantic connections between the fields specified above, and any filters or criteria the query constructor wants to apply to them. Going back to names and numbers above, it could be to find names that don&#8217;t have a number, so that the person querying can find the missing data and enter it, or it could be to find the names and numbers in a specific location, or of a particular age group.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_is_the_ted_open_data_service"><a class="anchor" href="#_what_is_the_ted_open_data_service"></a>What is the TED Open Data Service?</h2>
+<h2 id="_running_a_query"><a class="anchor" href="#_running_a_query"></a>Running a query</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>The TED Open Data Service continuously converts notices from the xml standard form format available on the TED Website into RDF format. The RDF data is stored in the Publications Office&#8217;s (OP) RDF <a href="https://en.wikipedia.org/wiki/Triplestore">triple store</a> named the "Cellar", and is publicly available (open). Making this data open for querying is part of the <a href="https://digital-strategy.ec.europa.eu/en/policies/strategy-data">European Data Strategy</a> which is working towards connecting EU data across sectors for the benefit of citizens, businesses, researchers, and public administrations, to name a few.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_querying_ted_open_data"><a class="anchor" href="#_querying_ted_open_data"></a>Querying TED Open Data</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement. Queries can be submitted via Cellar&#8217;s <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL endpoint</a>, for which there is a link on the <a href="https://op.europa.eu/en/web/eu-vocabularies">EU Vocabularies page</a>.</p>
-</div>
-<div class="paragraph">
-<p>This section on querying (reusing) public procurement data introduces the resources and guides available to help those interested improve their querying knowledge and skills.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_learn_how_to_query_ted_rdf_data"><a class="anchor" href="#_learn_how_to_query_ted_rdf_data"></a>Learn how to query TED RDF data</h3>
-<div class="openblock tile-container">
-<div class="content">
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Tutorials</div>
-<div class="paragraph">
-<p><a href="sample_app/tutorials.html" class="xref page">Tutorials on RDF, Linked Open data, and SPARQL</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Guidance</div>
-<div class="paragraph">
-<p><a href="sample_app/guidance.html" class="xref page">Guidance and good practices</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Snippets</div>
-<div class="paragraph">
-<p><a href="sample_app/snippets.html" class="xref page">Reusable code snippets</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Scenarios</div>
-<div class="paragraph">
-<p><a href="sample_app/scenarios.html" class="xref page">Turn your question into a Query</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile3">
-<div class="content">
-<div class="title">Examples</div>
-<div class="paragraph">
-<p><a href="sample_app/examples.html" class="xref page">Full query examples</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_try_submitting_a_query_in_the_sparql_endpoint"><a class="anchor" href="#_try_submitting_a_query_in_the_sparql_endpoint"></a>Try submitting a query in the SPARQL EndPoint</h3>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Choose a query below, copy it, and paste it into the SPARQL EndPoint to see the results!</div>
-<div class="paragraph text-center">
-<p><a href="sample_app/examples.html" class="xref page">Query examples</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL EndPoint</a></p>
-</div>
-</div>
-</div>
-<hr>
+<p>RDF databases or triple stores provide a URI into which a querier can submit a query, and receive their results. It looks a little like a web address for searching, except that it queries the specific triplestore to which it is attached. There are a few EndPoint interface applications that RDF triplestore managers can adopt and Cellar uses the Virtuoso EndPoint application.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mapping_suites"><a class="anchor" href="#_mapping_suites"></a>Mapping Suites</h2>
+<h2 id="_getting_familiar_with_the_data"><a class="anchor" href="#_getting_familiar_with_the_data"></a>Getting familiar with the Data</h2>
 <div class="sectionbody">
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>The Mapping Suites section is for those who wish to use a service that converts XML data into RDF, and deals with the creation of mappings or mapping suites for this purpose. This section is aimed at technical users wishing to create rules for data conversion from XML to RDF. Mappings and mapping suites are part of the the "behind the scenes" process that precedes RDF data being placed in the OP&#8217;s Cellar triple store for querying. Here the process converts TED Notice data, in XML format, into RDF triples that are stored in Cellar.</p>
+<p>You can use the TED website, where public buyers submit their calls for tenders, to familiarise yourself with the kind of fields or concepts, and format of the data contained in the Cellar triplestore. There is a search facility on the site offering a few different ways of searching. The date returned here is notice-based, and on current activity in calling for tenders, and not historical data on all activities. but it will give you a good idea about the fields available to query. This is the xml data before its conversion into RDF.</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_resources_for_creating_mappings"><a class="anchor" href="#_resources_for_creating_mappings"></a>Resources for creating Mappings</h3>
-<div class="openblock tile-container">
-<div class="content">
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Methodology</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/methodology.html"><img src="_images/methodology.png" alt="methodology" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Mappings</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/index.html"><img src="_images/mapping.png" alt="mapping" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Mapping Suites</div>
-<div class="imageblock xref-unresolved">
-<div class="content">
-<a class="image" href="#mapping_suite/mapping_suite_structure.adoc"><img src="_images/mapping_suites.png" alt="mapping suites" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Repository Structure</div>
-<div class="imageblock xref-unresolved">
-<div class="content">
-<a class="image" href="#mapping_suite/repository_structure.adoc"><img src="_images/repository.png" alt="repository" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Toolchain</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/toolchain.html"><img src="_images/toolchain.png" alt="toolchain" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile6">
-<div class="content">
-<div class="title">Preparing Test Data</div>
-<div class="imageblock xref-page">
-<div class="content">
-<a class="image" href="mapping_suite/preparing-test-data.html"><img src="_images/testdata.png" alt="testdata" width="51" height="51"></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_code_examples"><a class="anchor" href="#_code_examples"></a>Code Examples</h3>
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>(add examples)</p>
+<p>Back to the triple store data, bear in mind that the OP is working on converting more types of current notice data into RDF, and adding historical data, so the data available now may not be complete.</p>
 </div>
-</div>
-</div>
+<div class="paragraph">
+<p>There are also tutorials, examples and other information and resources to help you get started.</p>
 </div>
 </div>
 </div>

@@ -287,37 +287,100 @@ the notice transformation workflow for <strong>all</strong> <a href="https://ted
 <h2 id="_mapping-lifecycle-chapter"><a class="anchor" href="#_mapping-lifecycle-chapter"></a>Mapping development lifecycle</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section provides a high-level overview of the stage of the mapping development lifecycle that occurs just before the mapping suites are ready for use for transformations in production settings.</p>
+<p>The creation of a mapping is done in a sequence of phases and each phase has a main activity that must be completed before the next phase can occur.</p>
+</div>
+<div class="paragraph">
+<p>Below is a high-level overview of the stage of the mapping development lifecycle that prepares the mapping suites for use for transformations in production settings.</p>
 </div>
 <div class="paragraph">
 <p>The diagram in <a href="#mapping-lifecycle">Figure 1</a> describes the complete mapping development lifecycle.</p>
 </div>
-<div id="mapping-lifecycle" class="imageblock text-center">
+<div id="mapping-lifecycle" class="imageblock text-center unresolved">
 <div class="content">
-<img src="../_images/maping_development_lifecycle.png" alt="maping development lifecycle">
+<img src="mapping_development_lifecycle.png" alt="mapping development lifecycle">
 </div>
 <div class="title">Figure 1. Mapping development lifecycle</div>
 </div>
 <div class="paragraph">
+<p>The phases are as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Decide which notice type to map</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
 <p>The process starts with the decision as to <strong>which notice type to map</strong>. The notice classification schemes currently targeted are the <a href="https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement">"standard forms"</a>, and the <a href="https://simap.ted.europa.eu/web/simap/eforms">"eForms"</a>. New classification schemes will follow in the future.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Select a set of representative data to use for testing</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>Once the target form is chosen, <strong>a set of representative data is selected</strong> which serves as the test set for the mapping.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Analyse the data and produce a conceptual mapping</p>
+</li>
+</ol>
+</div>
 <div class="paragraph">
-<p>The notice classification scheme is usually subject to regulations and described in multiple forms such as PDF documents, XSD schemes, and other document types. All possible documentation and modelling artefacts are <strong>analysed and used to produce a conceptual mapping</strong> (described in the <a href="#_conceptual-mapping-structure">Conceptual mapping structure</a> section). This artefact, stored as a workbook, establishes the correspondence of the TED notice fields to XPath expressions and EPO structures.</p>
+<p>The notice classification scheme is usually subject to regulations and described in multiple forms, such as PDF documents and/ or XSD schemes, amongst other document types. All possible documentation and modelling artefacts are <strong>analysed and used to produce a conceptual mapping</strong> (described in the <a href="#_conceptual-mapping-structure">Conceptual mapping structure</a> section). This artefact, stored as a workbook, establishes the correspondence of the TED notice fields to XPath expressions and EPO structures.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p>Implement a corresponding technical mapping</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>Once the conceptual mapping is established between the XPath expressions and ontology structures, <strong>a corresponding technical mapping is implemented</strong>. This technical mapping consists of a set of mapping rules expressed in <a href="https://rml.io/specs/rml/">RDF Mapping Language (RML)</a>, and represents a translation of the conceptual mapping into a formal language which can be executed automatically by a transformation engine such as <a href="https://github.com/RMLio/rmlmapper-java">RMLMapper</a>.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_other_artifacts"><a class="anchor" href="#_other_artifacts"></a>Other Artifacts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the process, other useful artifacts are produced:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A HTML report on the RML files which is easier to read</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>Reading RML for revision or debugging purposes can be difficult. To simplify this process, the <strong>RML files can be turned into a more human-friendly HTML report</strong>. This detailed document facilitates e.g., parsing sets of conceptual and technical mapping rules to <strong>check their completeness and/or consistency</strong>. This check is a manual step but not the only quality assurance mechanism foreseen in the lifecycle process.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A set of SPARQL assertion queries</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The setup and conventions of the conceptual mapping file permits the generation of several additional artefacts, specifically, <strong>a set of SPARQL assertion queries</strong>. These queries are used to assess whether fields mapped in the conceptual mapping are in the same form in the RDF file generated from an XML notice.</p>
 </div>
 <div class="paragraph">
 <p>To put the SPARQL assertions into practice, <strong>sample data is transformed into RDF</strong> automatically using the RML mapping rules. The <strong>SPARQL queries are then applied</strong> to each output producing validation reports that indicate whether the individual queries generated a positive or negative result. The reports are then analysed for errors in the RML transformation rules or the conceptual mapping.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A report which reconstructs the data shape instantiated in a particular notice</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The final step is the assessment of the generated data, the <strong>fingerprinting</strong>. This procedure generates a report which <strong>reconstructs the data shape instantiated in a particular notice</strong>. This assists in identifying errors related to the EPO ontology.</p>
