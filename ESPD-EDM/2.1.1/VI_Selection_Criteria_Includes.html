@@ -297,13 +297,340 @@ http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-+ESPD+V2.1.0#tbr070-018"><em>tbr0
 <p>As for the exclusion criteria (and following requirement <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#tbr070-013"><em>tbr070-013</em></a>) we have grouped the selection criteria under different categories. The figure below is intended to identify and list these categories for the selection criteria (branches in text boxes), and specific subgroups within each category (leaves in text without boxes).</p>
 </div>
 <div class="paragraph">
-<p>Each branch in this 'criteria taxonomy' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs of the spreadsheets containing the <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">Basic</a> and <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">Extended</a> taxonomies).</p>
+<p>Each branch in this 'criteria taxonomy' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs of the spreadsheets containing the <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">Basic</a> and <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">Extended</a> taxonomies).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/SelectionCriteriaTaxonomy.png" alt="Selection criteria taxonomy" width="900">
 </div>
 <div class="title">Figure 1. Selection criteria taxonomy</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vi_selection_criteria_2"><a class="anchor" href="#_vi_selection_criteria_2"></a>VI. Selection criteria</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>'<em>The contracting body shall provide the exclusion grounds and selection criteria for its tendering process as structured information – via ESPD template or structured list of criteria set out in a call for tender.</em>"</p>
+</div>
+<div class="paragraph">
+<p>This chapter on selection criteria provides details on how to implement the formal requirements set in the <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">eSens ESPD BIS 41 - Single European Document</a> (Version 2.0.0) document. See specifically these global requirements related to selection criteria: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-ESPD+V2.1.0#br41-002[_br41-002_],
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-010[_tbr070-010_],  http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-013[_tbr070-013_],
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-016[_tbr070-016_], and
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-+ESPD+V2.1.0#tbr070-018"><em>tbr070-018</em></a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Differences between Basic and Extended exclusion criteria</div>
+<div class="paragraph">
+<p>The ESPD-EDM V2.1.0 introduced important changes regarding the selection criteria that are shared by 2.1.1 version. It provides the contracting authority with much more flexibility to define requirements specific to the procurement procedure. These features affect specifically the following aspects:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Suitability, including enrolment in a relevant professional register, enrolment in a trade register, authorisation and membership of particular organisation needed for service contracts;</p>
+</li>
+<li>
+<p>Turnovers (general and specific);</p>
+</li>
+<li>
+<p>References to similar works and services, including confidentiality about the references;</p>
+</li>
+<li>
+<p>Quality assurance schemes and environmental management standards;</p>
+</li>
+<li>
+<p>Professional ris indemnity insurance;</p>
+</li>
+<li>
+<p>Other economic or financial requirements;</p>
+</li>
+<li>
+<p>Technicians or technical bodies;</p>
+</li>
+<li>
+<p>Supply chain management;</p>
+</li>
+<li>
+<p>Allowance of checks;</p>
+</li>
+<li>
+<p>Educational and professional qualifications and Environmental management measures;</p>
+</li>
+<li>
+<p>Tools, plant or technical equipment;</p>
+</li>
+<li>
+<p>Criteria for a particular type of contract;</p>
+</li>
+<li>
+<p>Technical, study, research, and development facilities resources;</p>
+</li>
+<li>
+<p>Financial ratios;</p>
+</li>
+<li>
+<p>Other: Lots management, weighting, EO Roles.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This section  covers exhaustively each of these aspects and provides examples of XML implementation for each one of them. They will examined criterion by criterion, taking as a starting the point the requirement expressed in <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">'<em>BIS 41 - European Single Procurement Document (Version 2.0.0)</em>'</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>ABOUT the compatibility between Basic and Extended ESPDs</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Not all the selection criteria have modified their structures between versions 1.0.2 and 2.1.1.</p>
+</li>
+<li>
+<p>The changes introduced by the Extended ESPD are basically 'additions'.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Therefore the compatibility from a Basic ESPD <strong>towards</strong> a Extended ESPD should be possible to a large extent.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As for the exclusion criteria (and following requirement <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#tbr070-013"><em>tbr070-013</em></a>) we have grouped the selection criteria under different categories. The figure below is intended to identify and list these categories for the selection criteria (branches in text boxes), and specific subgroups within each category (leaves in text without boxes).</p>
+</div>
+<div class="paragraph">
+<p>Each branch in this 'criteria taxonomy' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs of the spreadsheets containing the <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">Basic</a> and <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">Extended</a> taxonomies).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/SelectionCriteriaTaxonomy.png" alt="Selection criteria taxonomy" width="900">
+</div>
+<div class="title">Figure 2. Selection criteria taxonomy</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vi_selection_criteria_3"><a class="anchor" href="#_vi_selection_criteria_3"></a>VI. Selection criteria</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>'<em>The contracting body shall provide the exclusion grounds and selection criteria for its tendering process as structured information – via ESPD template or structured list of criteria set out in a call for tender.</em>"</p>
+</div>
+<div class="paragraph">
+<p>This chapter on selection criteria provides details on how to implement the formal requirements set in the <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">eSens ESPD BIS 41 - Single European Document</a> (Version 2.0.0) document. See specifically these global requirements related to selection criteria: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-ESPD+V2.1.0#br41-002[_br41-002_],
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-010[_tbr070-010_],  http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-013[_tbr070-013_],
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-016[_tbr070-016_], and
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-+ESPD+V2.1.0#tbr070-018"><em>tbr070-018</em></a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Differences between Basic and Extended exclusion criteria</div>
+<div class="paragraph">
+<p>The ESPD-EDM V2.1.0 introduced important changes regarding the selection criteria that are shared by 2.1.1 version. It provides the contracting authority with much more flexibility to define requirements specific to the procurement procedure. These features affect specifically the following aspects:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Suitability, including enrolment in a relevant professional register, enrolment in a trade register, authorisation and membership of particular organisation needed for service contracts;</p>
+</li>
+<li>
+<p>Turnovers (general and specific);</p>
+</li>
+<li>
+<p>References to similar works and services, including confidentiality about the references;</p>
+</li>
+<li>
+<p>Quality assurance schemes and environmental management standards;</p>
+</li>
+<li>
+<p>Professional ris indemnity insurance;</p>
+</li>
+<li>
+<p>Other economic or financial requirements;</p>
+</li>
+<li>
+<p>Technicians or technical bodies;</p>
+</li>
+<li>
+<p>Supply chain management;</p>
+</li>
+<li>
+<p>Allowance of checks;</p>
+</li>
+<li>
+<p>Educational and professional qualifications and Environmental management measures;</p>
+</li>
+<li>
+<p>Tools, plant or technical equipment;</p>
+</li>
+<li>
+<p>Criteria for a particular type of contract;</p>
+</li>
+<li>
+<p>Technical, study, research, and development facilities resources;</p>
+</li>
+<li>
+<p>Financial ratios;</p>
+</li>
+<li>
+<p>Other: Lots management, weighting, EO Roles.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This section  covers exhaustively each of these aspects and provides examples of XML implementation for each one of them. They will examined criterion by criterion, taking as a starting the point the requirement expressed in <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">'<em>BIS 41 - European Single Procurement Document (Version 2.0.0)</em>'</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>ABOUT the compatibility between Basic and Extended ESPDs</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Not all the selection criteria have modified their structures between versions 1.0.2 and 2.1.1.</p>
+</li>
+<li>
+<p>The changes introduced by the Extended ESPD are basically 'additions'.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Therefore the compatibility from a Basic ESPD <strong>towards</strong> a Extended ESPD should be possible to a large extent.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As for the exclusion criteria (and following requirement <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#tbr070-013"><em>tbr070-013</em></a>) we have grouped the selection criteria under different categories. The figure below is intended to identify and list these categories for the selection criteria (branches in text boxes), and specific subgroups within each category (leaves in text without boxes).</p>
+</div>
+<div class="paragraph">
+<p>Each branch in this 'criteria taxonomy' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs of the spreadsheets containing the <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">Basic</a> and <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">Extended</a> taxonomies).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/SelectionCriteriaTaxonomy.png" alt="Selection criteria taxonomy" width="900">
+</div>
+<div class="title">Figure 3. Selection criteria taxonomy</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_vi_selection_criteria_4"><a class="anchor" href="#_vi_selection_criteria_4"></a>VI. Selection criteria</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>'<em>The contracting body shall provide the exclusion grounds and selection criteria for its tendering process as structured information – via ESPD template or structured list of criteria set out in a call for tender.</em>"</p>
+</div>
+<div class="paragraph">
+<p>This chapter on selection criteria provides details on how to implement the formal requirements set in the <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">eSens ESPD BIS 41 - Single European Document</a> (Version 2.0.0) document. See specifically these global requirements related to selection criteria: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-ESPD+V2.1.0#br41-002[_br41-002_],
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-010[_tbr070-010_],  http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-013[_tbr070-013_],
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.1.0#tbr070-016[_tbr070-016_], and
+http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-+ESPD+V2.1.0#tbr070-018"><em>tbr070-018</em></a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Differences between Basic and Extended exclusion criteria</div>
+<div class="paragraph">
+<p>The ESPD-EDM V2.1.0 introduced important changes regarding the selection criteria that are shared by 2.1.1 version. It provides the contracting authority with much more flexibility to define requirements specific to the procurement procedure. These features affect specifically the following aspects:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Suitability, including enrolment in a relevant professional register, enrolment in a trade register, authorisation and membership of particular organisation needed for service contracts;</p>
+</li>
+<li>
+<p>Turnovers (general and specific);</p>
+</li>
+<li>
+<p>References to similar works and services, including confidentiality about the references;</p>
+</li>
+<li>
+<p>Quality assurance schemes and environmental management standards;</p>
+</li>
+<li>
+<p>Professional ris indemnity insurance;</p>
+</li>
+<li>
+<p>Other economic or financial requirements;</p>
+</li>
+<li>
+<p>Technicians or technical bodies;</p>
+</li>
+<li>
+<p>Supply chain management;</p>
+</li>
+<li>
+<p>Allowance of checks;</p>
+</li>
+<li>
+<p>Educational and professional qualifications and Environmental management measures;</p>
+</li>
+<li>
+<p>Tools, plant or technical equipment;</p>
+</li>
+<li>
+<p>Criteria for a particular type of contract;</p>
+</li>
+<li>
+<p>Technical, study, research, and development facilities resources;</p>
+</li>
+<li>
+<p>Financial ratios;</p>
+</li>
+<li>
+<p>Other: Lots management, weighting, EO Roles.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This section  covers exhaustively each of these aspects and provides examples of XML implementation for each one of them. They will examined criterion by criterion, taking as a starting the point the requirement expressed in <a href="http://wiki.ds.unipi.gr/pages/viewpage.action?pageId=44367916">'<em>BIS 41 - European Single Procurement Document (Version 2.0.0)</em>'</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>ABOUT the compatibility between Basic and Extended ESPDs</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Not all the selection criteria have modified their structures between versions 1.0.2 and 2.1.1.</p>
+</li>
+<li>
+<p>The changes introduced by the Extended ESPD are basically 'additions'.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Therefore the compatibility from a Basic ESPD <strong>towards</strong> a Extended ESPD should be possible to a large extent.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As for the exclusion criteria (and following requirement <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#tbr070-013"><em>tbr070-013</em></a>) we have grouped the selection criteria under different categories. The figure below is intended to identify and list these categories for the selection criteria (branches in text boxes), and specific subgroups within each category (leaves in text without boxes).</p>
+</div>
+<div class="paragraph">
+<p>Each branch in this 'criteria taxonomy' corresponds to one data structure that is identical for all the leaves under that branch (e.g. compare the names of the boxes with the tabs of the spreadsheets containing the <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">Basic</a> and <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">Extended</a> taxonomies).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/SelectionCriteriaTaxonomy.png" alt="Selection criteria taxonomy" width="900">
+</div>
+<div class="title">Figure 4. Selection criteria taxonomy</div>
 </div>
 <div class="sect2">
 <h3 id="_vi_1_alpha_criterion"><a class="anchor" href="#_vi_1_alpha_criterion"></a>VI.1 Alpha criterion</h3>
@@ -374,26 +701,26 @@ Economic Operator (EO).</p>
 <div class="content">
 <img src="_images/AlphaCriterion_EO_mockup.PNG" alt="Alpha Criterion selected (EO perspective)" width="(EO perspective)">
 </div>
-<div class="title">Figure 2. The Alpha Criterion <strong>selected</strong> (EO perspective)'</div>
+<div class="title">Figure 5. The Alpha Criterion <strong>selected</strong> (EO perspective)'</div>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/AlphaCriterion_EO_mockup_unselected.PNG" alt="Alpha Criterion unselected (EO perspective)" width="(EO perspective)">
 </div>
-<div class="title">Figure 3. The Alpha Criterion <strong>unselected</strong> (EO perspective)'</div>
+<div class="title">Figure 6. The Alpha Criterion <strong>unselected</strong> (EO perspective)'</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_data_structure_only_basic_espd"><a class="anchor" href="#_data_structure_only_basic_espd"></a>Data Structure (ONLY Basic-ESPD)</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab "ALPHA-CRITERION of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.ods">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Basic_ALPHA_CRITERION_Data_Structure.png" alt="'Alpha Criterion data structure">
 </div>
-<div class="title">Figure 4. The Alpha Criterion in the Basic ESPD</div>
+<div class="title">Figure 7. The Alpha Criterion in the Basic ESPD</div>
 </div>
 </div>
 <div class="sect3">
@@ -529,7 +856,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Suitability_CA_mockup.png" alt="Basic 'Suitability' criterion (CA perspective)">
 </div>
-<div class="title">Figure 5. Basic 'Suitability' criterion (CA perspective)'</div>
+<div class="title">Figure 8. Basic 'Suitability' criterion (CA perspective)'</div>
 </div>
 </div>
 <div class="sect3">
@@ -541,20 +868,20 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Suitability_EO_mockup.png" alt="Basic 'Suitability' criterion (EO perspective)" width="800">
 </div>
-<div class="title">Figure 6. Basic 'Suitability' criterion (EO perspective)'</div>
+<div class="title">Figure 9. Basic 'Suitability' criterion (EO perspective)'</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_data_structure_enrolments_basic"><a class="anchor" href="#_data_structure_enrolments_basic"></a>Data Structure (Enrolments)- Basic</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab "Suitability-I of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Basic_Suitability_Enrolments_Data_Structure.png" alt="Basic 'Suitability' criterion data structure">
 </div>
-<div class="title">Figure 7. Basic 'Suitability' criterion data structure (for ''enrolments'')</div>
+<div class="title">Figure 10. Basic 'Suitability' criterion data structure (for ''enrolments'')</div>
 </div>
 </div>
 <div class="sect3">
@@ -625,7 +952,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Suitability_NOLOTS_CA_mockup.png" alt="Extended 'Suitability' criterion (CA perspective)">
 </div>
-<div class="title">Figure 8. Extended 'Suitability' criterion without Lots (CA perspective)'</div>
+<div class="title">Figure 11. Extended 'Suitability' criterion without Lots (CA perspective)'</div>
 </div>
 <div class="paragraph">
 <p>This other mock-up represents the same situation when the procurement procedure is <strong>divided into lots</strong>.</p>
@@ -637,7 +964,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Suitability_LOTS_CA_mockup.png" alt="Extended 'Suitability' criterion (CA perspective)">
 </div>
-<div class="title">Figure 9. Extended 'Suitability' criterion with Lots (CA perspective)'</div>
+<div class="title">Figure 12. Extended 'Suitability' criterion with Lots (CA perspective)'</div>
 </div>
 </div>
 <div class="sect3">
@@ -662,7 +989,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Suitability_LOTS_EO_mockup.png" alt="Extended 'Suitability' criterion (EO perspective)" width="800">
 </div>
-<div class="title">Figure 10. Extended 'Suitability' criterion (EO perspective)'</div>
+<div class="title">Figure 13. Extended 'Suitability' criterion (EO perspective)'</div>
 </div>
 </div>
 <div class="sect3">
@@ -688,13 +1015,13 @@ to in the notice.</td>
 </div>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab "Suitability-I of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Extended_Suitability_Enrolments_Data_Structure.png" alt="Extended 'Suitability' criterion data structure">
 </div>
-<div class="title">Figure 11. Extended 'Suitability' criterion data structure  (enrolments)</div>
+<div class="title">Figure 14. Extended 'Suitability' criterion data structure  (enrolments)</div>
 </div>
 </div>
 <div class="sect3">
@@ -829,13 +1156,13 @@ to in the notice.</td>
 <h4 id="_data_structure_service_contracts_basic"><a class="anchor" href="#_data_structure_service_contracts_basic"></a>Data Structure (Service Contracts)- Basic</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab "Suitability-II of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-BASIC-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Basic_Suitability_ServiceContract_Data_Structure.png" alt="Basic 'Suitability' criterion data structure">
 </div>
-<div class="title">Figure 12. Basic 'Suitability' criterion data structure (for ''service contracts'')</div>
+<div class="title">Figure 15. Basic 'Suitability' criterion data structure (for ''service contracts'')</div>
 </div>
 </div>
 <div class="sect3">
@@ -905,13 +1232,13 @@ to in the notice.</td>
 <h4 id="_data_structure_service_contracts_extended"><a class="anchor" href="#_data_structure_service_contracts_extended"></a>Data Structure (service contracts) - Extended</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab "Suitability-II of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Extended_Suitability_ServiceContracts_Data_Structure.png" alt="Extended 'Suitability' criterion data structure">
 </div>
-<div class="title">Figure 13. Extended 'Suitability' criterion data structure (service contracts)</div>
+<div class="title">Figure 16. Extended 'Suitability' criterion data structure (service contracts)</div>
 </div>
 </div>
 <div class="sect3">
@@ -1172,7 +1499,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Yearly_Turnover_CA_mock-up.png" alt="Basic 'yearly turnover' CA mock-up">
 </div>
-<div class="title">Figure 14. Basic 'general yearly turnover' CA mock-up</div>
+<div class="title">Figure 17. Basic 'general yearly turnover' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1184,7 +1511,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Yearly_Turnover_EO_mock-up.png" alt="Basic 'yearly turnover' EO mock-up">
 </div>
-<div class="title">Figure 15. Basic 'general yearly turnover' EO mock-up</div>
+<div class="title">Figure 18. Basic 'general yearly turnover' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1193,7 +1520,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_General_Yearly_Turnover_Data_Structure.png" alt="Basic 'yearly turnover' criterion data structure">
 </div>
-<div class="title">Figure 16. Basic 'general yearly turnover' criterion data structure</div>
+<div class="title">Figure 19. Basic 'general yearly turnover' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -1331,7 +1658,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Yearly_Turnovers_CA_mockup.png" alt="Extended 'General and Specific Yearly Turnovers' CA mock-up">
 </div>
-<div class="title">Figure 17. Extended 'General Yearly Turnovers' CA mock-up</div>
+<div class="title">Figure 20. Extended 'General Yearly Turnovers' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1340,7 +1667,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Yearly_Turnovers_EO_mock-up.png" alt="Extended 'General and Specific Yearly Turnovers' EO mock-up_EO">
 </div>
-<div class="title">Figure 18. Extended 'General Yearly Turnovers' EO mock-up</div>
+<div class="title">Figure 21. Extended 'General Yearly Turnovers' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1352,7 +1679,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Yearly_Turnovers_Data_Structure.png" alt="Extended 'General Yearly Turnovers' criterion data structure">
 </div>
-<div class="title">Figure 19. Extended 'General Yearly Turnovers' criterion data structure</div>
+<div class="title">Figure 22. Extended 'General Yearly Turnovers' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -1529,7 +1856,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Average_Yearly_Turnover_CA_mock-up.png" alt="Basic 'average yearly turnover' CA mock-up">
 </div>
-<div class="title">Figure 20. Basic 'average yearly turnover' CA mock-up</div>
+<div class="title">Figure 23. Basic 'average yearly turnover' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1541,7 +1868,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Average_Yearly_Turnover_EO_mock-up.png" alt="Basic 'average yearly turnover' EO mock-up">
 </div>
-<div class="title">Figure 21. Basic 'average yearly turnover' EO mock-up</div>
+<div class="title">Figure 24. Basic 'average yearly turnover' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1550,7 +1877,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Average_Yearly_Turnover_Data_Structure.png" alt="Basic 'yearly turnover' criterion data structure">
 </div>
-<div class="title">Figure 22. Basic 'average yearly turnover' criterion data structure</div>
+<div class="title">Figure 25. Basic 'average yearly turnover' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -1651,7 +1978,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Average_Yearly_Turnover_CA_mock-up.png" alt="Extended 'average yearly turnover' CA mock-up">
 </div>
-<div class="title">Figure 23. Extended 'average yearly turnover' CA mock-up</div>
+<div class="title">Figure 26. Extended 'average yearly turnover' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1673,7 +2000,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Average_Yearly_Turnovers_EO_mock-up.png" alt="Extended 'average yearly turnover' EO mock-up_EO">
 </div>
-<div class="title">Figure 24. Extended 'average yearly turnover' EO mock-up</div>
+<div class="title">Figure 27. Extended 'average yearly turnover' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1682,7 +2009,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Average_Yearly_Turnover_Data_Structure.png" alt="Extended 'average yearly turnover' criterion data structure">
 </div>
-<div class="title">Figure 25. Extended 'average yearly turnover' criterion data structure</div>
+<div class="title">Figure 28. Extended 'average yearly turnover' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -1799,7 +2126,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Specific_Yearly_Turnover_CA_mock-up.png" alt="Basic 'specific yearly turnover' CA mock-up">
 </div>
-<div class="title">Figure 26. Basic 'specific yearly turnover' CA mock-up</div>
+<div class="title">Figure 29. Basic 'specific yearly turnover' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1811,7 +2138,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Specific_Yearly_Turnover_EO_mock-up.png" alt="Basic 'specific yearly turnover' EO mock-up">
 </div>
-<div class="title">Figure 27. Basic 'specific yearly turnover' EO mock-up</div>
+<div class="title">Figure 30. Basic 'specific yearly turnover' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -1823,7 +2150,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Specific_Yearly_Turnover_Data_Structure.png" alt="Basic 'specific yearly ' criterion data structure">
 </div>
-<div class="title">Figure 28. Basic 'specific yearly turnover' criterion data structure</div>
+<div class="title">Figure 31. Basic 'specific yearly turnover' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -1983,7 +2310,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Specific_Yearly_Turnover_CA_mock-up.png" alt="Extended 'specific yearly turnover' CA mock-up">
 </div>
-<div class="title">Figure 29. Extended 'specific yearly turnover' CA mock-up</div>
+<div class="title">Figure 32. Extended 'specific yearly turnover' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2014,7 +2341,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Specific_Yearly_Turnovers_EO_mock-up.png" alt="Extended 'specific yearly turnover' EO mock-up_EO">
 </div>
-<div class="title">Figure 30. Extended 'specific yearly turnover' EO mock-up</div>
+<div class="title">Figure 33. Extended 'specific yearly turnover' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2048,7 +2375,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Specific_Yearly_Turnover_Data_Structure.png" alt="Extended 'specific yearly turnover' criterion data structure">
 </div>
-<div class="title">Figure 31. Extended 'specific yearly turnover' criterion data structure</div>
+<div class="title">Figure 34. Extended 'specific yearly turnover' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -2188,7 +2515,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Specific_Average_Turnover_CA_mock-up.png" alt="Basic 'specific average turnover' CA mock-up">
 </div>
-<div class="title">Figure 32. Basic 'specific average turnover' CA mock-up</div>
+<div class="title">Figure 35. Basic 'specific average turnover' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2200,7 +2527,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Specific_Average_Turnover_EO_mock-up.png" alt="Basic 'specific average turnover' EO mock-up">
 </div>
-<div class="title">Figure 33. Basic 'specific average turnover' EO mock-up</div>
+<div class="title">Figure 36. Basic 'specific average turnover' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2209,7 +2536,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Specific_Average_Turnover_Data_Structure.png" alt="Basic 'specific average turnover' criterion data structure">
 </div>
-<div class="title">Figure 34. Basic 'specific average turnover' criterion data structure</div>
+<div class="title">Figure 37. Basic 'specific average turnover' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -2344,7 +2671,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Specific_Average_Turnovers_CA_mock-up.png" alt="Extended 'specific average turnover' CA mock-up_EO">
 </div>
-<div class="title">Figure 35. Extended 'specific average turnover' CA mock-up</div>
+<div class="title">Figure 38. Extended 'specific average turnover' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2353,7 +2680,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Specific_Average_Turnovers_EO_mock-up.png" alt="Extended 'specific average turnover' EO mock-up_EO">
 </div>
-<div class="title">Figure 36. Extended 'specific average turnover' EO mock-up</div>
+<div class="title">Figure 39. Extended 'specific average turnover' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2365,7 +2692,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Specific_Average_Turnover_Data_Structure.png" alt="Extended 'specific average turnover' criterion data structure">
 </div>
-<div class="title">Figure 37. Extended 'specific average turnover' criterion data structure</div>
+<div class="title">Figure 40. Extended 'specific average turnover' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -2503,7 +2830,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/EO_Setup_CA_mock-up.png" alt="'Economic operator setup&#8217;CA mock-up" width="CA mock-up">
 </div>
-<div class="title">Figure 38. 'Economic operator setup&#8217;CA mock-up</div>
+<div class="title">Figure 41. 'Economic operator setup&#8217;CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2515,7 +2842,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/EO_Setup_EO_mock-up.png" alt="'Economic operator setup' EO mock-up" width="EO mock-up">
 </div>
-<div class="title">Figure 39. 'Economic operator setup&#8217;EO mock-up</div>
+<div class="title">Figure 42. 'Economic operator setup&#8217;EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2524,7 +2851,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_EO_Setup_Data_Structure.png" alt="'Economic operator setup' criterion data structure" width="criterion data structure">
 </div>
-<div class="title">Figure 40. 'Economic operator setup' criterion (<strong>Basic</strong>) data structure</div>
+<div class="title">Figure 43. 'Economic operator setup' criterion (<strong>Basic</strong>) data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -2536,7 +2863,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_EO_Setup_Data_Structure.png" alt="'Economic operator setup' criterion data structure" width="criterion data structure">
 </div>
-<div class="title">Figure 41. 'Economic operator setup' criterion (<strong>Extended</strong>) data structure</div>
+<div class="title">Figure 44. 'Economic operator setup' criterion (<strong>Extended</strong>) data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -2633,7 +2960,7 @@ to in the notice.</td>
 <p>To specify the number of the past recent years for which it will require Ratios;</p>
 </li>
 <li>
-<p>To specify one of the codes defined by BACH to specify the type of the ratio (see <a href="https://www.bach.banque-france.fr/">BACH Banque France</a>, and <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">FinancialRatioType</a>);</p>
+<p>To specify one of the codes defined by BACH to specify the type of the ratio (see <a href="https://www.bach.banque-france.fr/">BACH Banque France</a>, and <a href="{url-blob-211}/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">FinancialRatioType</a>);</p>
 </li>
 <li>
 <p>May specify a minimum requirement (the economic operator must provide a ratio above this minimum requirement).</p>
@@ -2672,7 +2999,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Financial_ratio_CA_mockup.png" alt="Basic 'financial ratio' CA mock-up">
 </div>
-<div class="title">Figure 42. Basic 'financial ratio' CA mock-up</div>
+<div class="title">Figure 45. Basic 'financial ratio' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2684,7 +3011,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Financial_Ratio_EO_mockup.png" alt="Basic 'financial ratio' CA mock-up">
 </div>
-<div class="title">Figure 43. Basic 'financial ratio' EO mock-up</div>
+<div class="title">Figure 46. Basic 'financial ratio' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2693,7 +3020,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Financial_Ratio_Data_Structure.png" alt="Basic 'financial ratio' criterion data structure">
 </div>
-<div class="title">Figure 44. Basic 'financial ratio' criterion data structure</div>
+<div class="title">Figure 47. Basic 'financial ratio' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -2774,7 +3101,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Financial_ratio_CA_REQUIREMENTS_mockup.png" alt="Extended 'financial ratio' CA REQUIREMENT(s) mock-up">
 </div>
-<div class="title">Figure 45. Extended 'financial ratio' CA mock-up REQUIREMENT(s) edition</div>
+<div class="title">Figure 48. Extended 'financial ratio' CA mock-up REQUIREMENT(s) edition</div>
 </div>
 </div>
 <div class="sect3">
@@ -2786,7 +3113,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Financial_Ratio_EO_mockup.png" alt="Extended 'financial ratio' EO mock-up">
 </div>
-<div class="title">Figure 46. Extended 'financial ratio' EO mock-up</div>
+<div class="title">Figure 49. Extended 'financial ratio' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -2806,13 +3133,13 @@ to in the notice.</td>
 </table>
 </div>
 <div class="paragraph">
-<p>Notice how the spreadsheet has been used to specify the three different financial ratios of the above mock-up example: the XML example below was produced using a XSL-T transformation <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/xslt/ODS%20Data%20Structures%20to%20ESPD%20XML/EXTENDED-ESPDRequest-Annotated-v2.1.1.xslt">style-sheet</a> that takes the <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">spreadsheet</a> (file <code>content.xml</code> <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>) and produced the <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/xml/EXTENDED-ESPDRequest-2.1.1.xml">XML instance</a>.</p>
+<p>Notice how the spreadsheet has been used to specify the three different financial ratios of the above mock-up example: the XML example below was produced using a XSL-T transformation <a href="{url-blob-211}/dist/xslt/ODS%20Data%20Structures%20to%20ESPD%20XML/EXTENDED-ESPDRequest-Annotated-v2.1.1.xslt">style-sheet</a> that takes the <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">spreadsheet</a> (file <code>content.xml</code> <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>) and produced the <a href="{url-blob-211}/dist/xml/EXTENDED-ESPDRequest-2.1.1.xml">XML instance</a>.</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Extended_Financial_Ratio_Data_Structure.png" alt="Extended 'financial ratio' criterion data structure">
 </div>
-<div class="title">Figure 47. Extended 'financial ratio' criterion data structure</div>
+<div class="title">Figure 50. Extended 'financial ratio' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -3017,7 +3344,7 @@ to in the notice.</td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Compulsory use of the code list <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods"><code>InsuranceType</code></a> for the Extended ESPD of the ESPD.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compulsory use of the code list <a href="{url-blob-211}/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods"><code>InsuranceType</code></a> for the Extended ESPD of the ESPD.</p></td>
 </tr>
 </tbody>
 </table>
@@ -3030,7 +3357,7 @@ to in the notice.</td>
 <p>In the <strong>Basic</strong> ESPD it is the economic operator who provides data about one risk indemnity insurance;</p>
 </li>
 <li>
-<p>In the <strong>Extended</strong> ESPD the contracting authority can require one minimum amount for multiple insurances, each one of a different type (see the code list <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods"><code>InsuranceType</code></a>);</p>
+<p>In the <strong>Extended</strong> ESPD the contracting authority can require one minimum amount for multiple insurances, each one of a different type (see the code list <a href="{url-blob-211}/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods"><code>InsuranceType</code></a>);</p>
 </li>
 <li>
 <p>In the <strong>Extended</strong> ESPD when the amount specified by the economic operator (EO) is lower than the minimum required, the EO will be able to indicate that the EO commits to obtain the minimum amount required (though it doesn&#8217;t have it now).</p>
@@ -3066,7 +3393,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Risk_Indemnity_Insurance_CA_mock-up.png" alt="Basic 'risk indemnity insurance' CA mock-up">
 </div>
-<div class="title">Figure 48. 'Basic risk indemnity insurance&#8217;CA mock-up</div>
+<div class="title">Figure 51. 'Basic risk indemnity insurance&#8217;CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3078,7 +3405,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Risk_Indemnity_Insurance_EO_mock-up.png" alt="'Basic 'risk indemnity insurance' EO mock-up" width="risk indemnity insurance' EO mock-up">
 </div>
-<div class="title">Figure 49. Basic 'risk indemnity insurance' criterion data structure</div>
+<div class="title">Figure 52. Basic 'risk indemnity insurance' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -3087,7 +3414,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Risk_Indemnity_Insurance_Data_Structure.png" alt="Basic 'risk indemnity insurance' criterion data structure">
 </div>
-<div class="title">Figure 50. Basic 'risk indemnity insurance' criterion data structure</div>
+<div class="title">Figure 53. Basic 'risk indemnity insurance' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -3167,7 +3494,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Risk_Indemnity_Insurance_CA_NOLOTS_mock-up.png" alt="Extended 'risk indemnity insurance' CA mock-up">
 </div>
-<div class="title">Figure 51. 'Extended risk indemnity insurance' CA REQUIREMENT(s) edition (Procedure without Lots)</div>
+<div class="title">Figure 54. 'Extended risk indemnity insurance' CA REQUIREMENT(s) edition (Procedure without Lots)</div>
 </div>
 <div class="paragraph">
 <p>When the procedure is divided into Lots: The contracting authority can specify the Lots one particular insurance applies to.</p>
@@ -3176,7 +3503,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Risk_Indemnity_Insurance_CA_LOTS_mock-up.png" alt="Extended 'risk indemnity insurance' CA mock-up">
 </div>
-<div class="title">Figure 52. 'Extended risk indemnity insurance' CA REQUIREMENT(s) edition (Procedure divided into Lots).</div>
+<div class="title">Figure 55. 'Extended risk indemnity insurance' CA REQUIREMENT(s) edition (Procedure divided into Lots).</div>
 </div>
 </div>
 <div class="sect3">
@@ -3188,7 +3515,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Risk_Indemnity_Insurance_EO_mock-up.png" alt="'Extended 'risk indemnity insurance' EO mock-up" width="risk indemnity insurance' EO mock-up">
 </div>
-<div class="title">Figure 53. 'Economic operator setup&#8217;EO mock-up</div>
+<div class="title">Figure 56. 'Economic operator setup&#8217;EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3229,7 +3556,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Extended_Risk_Indemnity_Insurance_Data_Structure.png" alt="Extended 'risk indemnity insurance' criterion data structure">
 </div>
-<div class="title">Figure 54. Extended 'risk indemnity insurance' criterion data structure</div>
+<div class="title">Figure 57. Extended 'risk indemnity insurance' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -3418,6 +3745,11 @@ to in the notice.</td>
 <ul>
 <li>
 <p>CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENT(s)</p>
+<div class="literalblock">
+<div class="content">
+<pre>=== VI.7.1 Basic other economic or financial requirements</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
@@ -3425,9 +3757,6 @@ to in the notice.</td>
 </ol>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_vi_7_1_basic_other_economic_or_financial_requirements"><a class="anchor" href="#_vi_7_1_basic_other_economic_or_financial_requirements"></a>VI.7.1 Basic other economic or financial requirements</h3>
 <div class="sect3">
 <h4 id="_mock_up_contracting_authority_perspective_12"><a class="anchor" href="#_mock_up_contracting_authority_perspective_12"></a>Mock-up - contracting authority perspective</h4>
 <div class="paragraph">
@@ -3437,7 +3766,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Other_Ec_Fin_Reqs_CA_mockup.png" alt="Basic 'other economic or financial requirements' CA mock-up">
 </div>
-<div class="title">Figure 55. Basic 'other economic or financial requirements' CA mock-up</div>
+<div class="title">Figure 58. Basic 'other economic or financial requirements' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3449,7 +3778,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Basic_Other_Ec_Fin_Reqs_EO_mockup.png" alt="Basic 'other economic or financial requirements' EO mock-up">
 </div>
-<div class="title">Figure 56. Basic 'other economic or financial requirements' EO mock-up</div>
+<div class="title">Figure 59. Basic 'other economic or financial requirements' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3461,7 +3790,7 @@ to in the notice.</td>
 <div class="content">
 <img src="_images/Other_Ec_Fin_Reqs_Data_Structure.png" alt="Basic 'other economic or financial requirements' data structure">
 </div>
-<div class="title">Figure 57. Basic 'other economic or financial requirements' data structure</div>
+<div class="title">Figure 60. Basic 'other economic or financial requirements' data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -3540,7 +3869,7 @@ There are two situations that need to be distinguished here, when the procuremen
 <div class="content">
 <img src="_images/Extended_Other_EC_FIN_CA_LOTS_mock-up.png" alt="Extended 'other economic or financial requirements' CA mock-up">
 </div>
-<div class="title">Figure 58. Extended 'other economic or financial requirements' CA REQUIREMENT(s) edition (Procedure divided into Lots).</div>
+<div class="title">Figure 61. Extended 'other economic or financial requirements' CA REQUIREMENT(s) edition (Procedure divided into Lots).</div>
 </div>
 </div>
 <div class="sect3">
@@ -3554,7 +3883,7 @@ See XML example below to identify where these data are placed in the XML instanc
 <div class="content">
 <img src="_images/Extended_Other_EC_FIN_EO_mock-up.png" alt="'Extended 'other economic or financial requirements' EO mock-up" width="other economic or financial requirements' EO mock-up">
 </div>
-<div class="title">Figure 59. Extended 'other economic or financial requirements' EO mock-up</div>
+<div class="title">Figure 62. Extended 'other economic or financial requirements' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3598,7 +3927,7 @@ See XML example below to identify where these data are placed in the XML instanc
 <div class="content">
 <img src="_images/Extended_Other_EC_FIN_Data_Structure.png" alt="Extended 'other economic or financial requirements' criterion data structure">
 </div>
-<div class="title">Figure 60. Extended 'other economic or financial requirements' criterion data structure</div>
+<div class="title">Figure 63. Extended 'other economic or financial requirements' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -3844,7 +4173,7 @@ See XML example below to identify where these data are placed in the XML instanc
 <div class="content">
 <img src="_images/Basic_References_CA_mockup.png" alt="Basic 'References' CA mock-up" width="800">
 </div>
-<div class="title">Figure 61. Basic 'References' CA mock-up</div>
+<div class="title">Figure 64. Basic 'References' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3856,7 +4185,7 @@ See XML example below to identify where these data are placed in the XML instanc
 <div class="content">
 <img src="_images/Basic_References_EO_mockup.png" alt="Basic 'References' CA mock-up' EO mock-up">
 </div>
-<div class="title">Figure 62. Basic 'References' CA mock-up' EO mock-up</div>
+<div class="title">Figure 65. Basic 'References' CA mock-up' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3868,7 +4197,7 @@ See XML example below to identify where these data are placed in the XML instanc
 <div class="content">
 <img src="_images/Basic_References_Data_Structure.png" alt="Basic 'References' criterion data structure">
 </div>
-<div class="title">Figure 63. Basic 'References' criterion data structure</div>
+<div class="title">Figure 66. Basic 'References' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -3997,7 +4326,7 @@ See XML example below to identify where these data are placed in the XML instanc
 <div class="content">
 <img src="_images/Extended_References_CA_REQUIREMENTS_mockup.png" alt="Extended 'References' CA REQUIREMENT(s) edition mock-up">
 </div>
-<div class="title">Figure 64. Extended 'References' CA REQUIREMENT(s) edition mock-up</div>
+<div class="title">Figure 67. Extended 'References' CA REQUIREMENT(s) edition mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -4022,7 +4351,7 @@ See XML example below to identify where these data are placed in the XML instanc
 <div class="content">
 <img src="_images/Extended_References_EO_mockup.png" alt="Extended 'References' EO mock-up">
 </div>
-<div class="title">Figure 65. Extended 'References' EO mock-up</div>
+<div class="title">Figure 68. Extended 'References' EO mock-up</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4070,7 +4399,7 @@ textual value.</em></strong></p>
 <div class="content">
 <img src="_images/Extended_References_Data_Structure.png" alt="Extended 'References' criterion data structure">
 </div>
-<div class="title">Figure 66. Extended 'References' criterion data structure</div>
+<div class="title">Figure 69. Extended 'References' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -4874,7 +5203,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Basic_Abilities_I_CA_mockup.png" alt="Basic 'Abilities (I)' CA mock-up">
 </div>
-<div class="title">Figure 67. Basic 'Abilities (I)' CA mock-up</div>
+<div class="title">Figure 70. Basic 'Abilities (I)' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -4883,7 +5212,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Basic_Abilities_I_EO_mockup.png" alt="Basic 'Abilities (I)' EO mock-up">
 </div>
-<div class="title">Figure 68. Basic 'Abilities (I)' EO mock-up</div>
+<div class="title">Figure 71. Basic 'Abilities (I)' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -4892,7 +5221,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="Basic_Abilities_I_Data_Structure.png" alt="Basic 'Abilities (I)' criterion data structure">
 </div>
-<div class="title">Figure 69. Basic 'Abilities (I)' criterion data structure</div>
+<div class="title">Figure 72. Basic 'Abilities (I)' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -4984,7 +5313,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Basic_Checks_CA_mockup.png" alt="Basic 'checks' CA mock-up">
 </div>
-<div class="title">Figure 70. Basic 'checks' CA mock-up</div>
+<div class="title">Figure 73. Basic 'checks' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -4996,7 +5325,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Basic_Checks_EO_mockup.png" alt="Basic 'checks' EO mock-up">
 </div>
-<div class="title">Figure 71. Basic 'checks' EO mock-up</div>
+<div class="title">Figure 74. Basic 'checks' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -5011,7 +5340,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Basic_Checks_Data_Structure.png" alt="Basic 'checks' criterion data structure criterion data structure">
 </div>
-<div class="title">Figure 72. Basic 'checks' criterion data structure</div>
+<div class="title">Figure 75. Basic 'checks' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -5056,27 +5385,109 @@ an ESPD-Response document specifies responses and links them to each particular 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_vi_9_3_basic_abilities_iii_staff"><a class="anchor" href="#_vi_9_3_basic_abilities_iii_staff"></a>VI.9.3 Basic abilities (III) (Staff)</h3>
+<h3 id="_vi_9_2_basic_abilities_ii_checks_2"><a class="anchor" href="#_vi_9_2_basic_abilities_ii_checks_2"></a>VI.9.2 Basic Abilities (II) - Checks</h3>
 <div class="sect3">
 <h4 id="_mock_ups_contracting_authority_perspective_9"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_9"></a>Mock-ups - contracting authority perspective</h4>
+<div class="paragraph">
+<p>The contracting authority has selected the 'allowance of checks' option in a ESPD Request builder software application GUI. This criterion will be included in the ESDP Request XML instance.</p>
+</div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="_images/Basic_Abilities_3_CA_mockup.png" alt="Basic 'Abilities (III)' CA mock-up">
+<img src="_images/Basic_Checks_CA_mockup.png" alt="Basic 'checks' CA mock-up">
 </div>
-<div class="title">Figure 73. Basic 'Abilities (III)' CA mock-up</div>
+<div class="title">Figure 76. Basic 'checks' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_mock_ups_economic_operator_perspective_7"><a class="anchor" href="#_mock_ups_economic_operator_perspective_7"></a>Mock-ups - economic operator perspective</h4>
+<div class="paragraph">
+<p>The economic operator has only to answer <strong>Yes</strong> or <strong>No</strong> in response.</p>
+</div>
 <div class="imageblock text-center">
 <div class="content">
-<img src="_images/Basic_Abilities_3_EO_mockup.png" alt="Basic 'Abilities (III)' CA mock-up">
+<img src="_images/Basic_Checks_EO_mockup.png" alt="Basic 'checks' EO mock-up">
 </div>
-<div class="title">Figure 74. Basic 'Abilities (III)' EO mock-up</div>
+<div class="title">Figure 77. Basic 'checks' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_data_structure_basic_12"><a class="anchor" href="#_data_structure_basic_12"></a>Data Structure - Basic</h4>
+<div class="paragraph">
+<p>The data structure for this criterion is quite straightforward, it only contains a group of one QUESTION which has to be answered with <strong>Yes</strong> or <strong>No</strong>, thus the expected property data type <code>INDICATOR</code>.</p>
+</div>
+<div class="paragraph">
+<p>(Some columns have been hidden to enhance the readability of the image).</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Basic_Checks_Data_Structure.png" alt="Basic 'checks' criterion data structure criterion data structure">
+</div>
+<div class="title">Figure 78. Basic 'checks' criterion data structure</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_xml_example_basic_11"><a class="anchor" href="#_xml_example_basic_11"></a>XML Example - Basic</h4>
+<div class="listingblock">
+<div class="title">Basic 'checks' XML example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- header elements removed for brevity --&gt;
+
+&lt;!-- Criterion:Allowance of checks --&gt;
+&lt;cac:TenderingCriterion&gt;
+	&lt;cbc:ID schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1"&gt;c8809aa1-29b6-4f27-ae2f-27e612e394db&lt;/cbc:ID&gt;
+	&lt;cbc:CriterionTypeCode listID="CriteriaTypeCode" listAgencyID="EU-COM-GROW" listVersionID="2.1.1"&gt;CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.TECHNICAL.CHECKS.ALLOWANCE_OF_CHECKS&lt;/cbc:CriterionTypeCode&gt;
+	&lt;cbc:Name&gt;Allowance of checks&lt;/cbc:Name&gt;
+	&lt;cbc:Description&gt;For complex products or services to be supplied or, exceptionally, for products or services which are required for a special purpose: The economic operator will allow checks to be conducted on the production capacities or the technical capacity of the economic operator and, where necessary, on the means of study and research which are available to it and on the quality control measures? The check is to be performed by the contracting authority or, in case the latter consents to this, on its behalf by a competent official body of the country in which the supplier or service provider is established.&lt;/cbc:Description&gt;
+	&lt;cac:Legislation&gt;
+		&lt;cbc:ID schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1"&gt;3905a69e-4893-4d52-9650-c144d405ecba&lt;/cbc:ID&gt;
+		&lt;cbc:Title&gt;[Legislation title]&lt;/cbc:Title&gt;
+		&lt;cbc:Description&gt;[Legislation description]&lt;/cbc:Description&gt;
+		&lt;cbc:JurisdictionLevel&gt;EU&lt;/cbc:JurisdictionLevel&gt;
+		&lt;cbc:Article&gt;[Article, e.g. Article 2.I.a]&lt;/cbc:Article&gt;
+		&lt;cbc:URI&gt;http://eur-lex.europa.eu/&lt;/cbc:URI&gt;
+		&lt;cac:Language&gt;
+			&lt;cbc:LocaleCode listID="LanguageCodeEU" listAgencyName="EU-COM-GROW" listVersionID="2.1.1"&gt;EN&lt;/cbc:LocaleCode&gt;
+		&lt;/cac:Language&gt;
+	&lt;/cac:Legislation&gt;
+	&lt;cac:TenderingCriterionPropertyGroup&gt;
+		&lt;cbc:ID schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1"&gt;d7721546-9106-43a7-8d31-2fe08a862b00&lt;/cbc:ID&gt;
+		&lt;cbc:PropertyGroupTypeCode listID="PropertyGroupType" listAgencyID="EU-COM-GROW" listVersionID="2.1.1"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
+		&lt;cac:TenderingCriterionProperty&gt;
+			&lt;cbc:ID schemeID="CriteriaTaxonomy" schemeAgencyID="EU-COM-GROW" schemeVersionID="2.1.1"&gt;6250e2c6-9309-42ea-a969-d2599c0159be&lt;/cbc:ID&gt;
+			&lt;cbc:Description&gt;Do you allow checks?&lt;/cbc:Description&gt;
+			&lt;cbc:TypeCode listID="CriterionElementType" listAgencyID="EU-COM-GROW" listVersionID="2.1.1"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+			&lt;cbc:ValueDataTypeCode listID="ResponseDataType" listAgencyID="EU-COM-GROW" listVersionID="2.1.1"&gt;INDICATOR&lt;/cbc:ValueDataTypeCode&gt;
+		&lt;/cac:TenderingCriterionProperty&gt;
+	&lt;/cac:TenderingCriterionPropertyGroup&gt;
+&lt;/cac:TenderingCriterion&gt;
+
+&lt;!-- rest of elements removed for brevity --&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vi_9_3_basic_abilities_iii_staff"><a class="anchor" href="#_vi_9_3_basic_abilities_iii_staff"></a>VI.9.3 Basic abilities (III) (Staff)</h3>
+<div class="sect3">
+<h4 id="_mock_ups_contracting_authority_perspective_10"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_10"></a>Mock-ups - contracting authority perspective</h4>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Basic_Abilities_3_CA_mockup.png" alt="Basic 'Abilities (III)' CA mock-up">
+</div>
+<div class="title">Figure 79. Basic 'Abilities (III)' CA mock-up</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mock_ups_economic_operator_perspective_8"><a class="anchor" href="#_mock_ups_economic_operator_perspective_8"></a>Mock-ups - economic operator perspective</h4>
+<div class="imageblock text-center">
+<div class="content">
+<img src="_images/Basic_Abilities_3_EO_mockup.png" alt="Basic 'Abilities (III)' CA mock-up">
+</div>
+<div class="title">Figure 80. Basic 'Abilities (III)' EO mock-up</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_structure_basic_13"><a class="anchor" href="#_data_structure_basic_13"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>(Some columns have been hidden to enhance the readability of the image).</p>
 </div>
@@ -5084,11 +5495,11 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Basic_Abilities_3_Data_Structure.png" alt="Basic 'Abilities (III)' criterion data structure">
 </div>
-<div class="title">Figure 75. Basic 'Abilities (III)' criterion data structure</div>
+<div class="title">Figure 81. Basic 'Abilities (III)' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_xml_example_basic_11"><a class="anchor" href="#_xml_example_basic_11"></a>XML Example - Basic</h4>
+<h4 id="_xml_example_basic_12"><a class="anchor" href="#_xml_example_basic_12"></a>XML Example - Basic</h4>
 <div class="listingblock">
 <div class="title">Basic 'number of managerial staff' (Abilities III) criterion</div>
 <div class="content">
@@ -5176,7 +5587,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Extended_Abilities_1_CA_REQUIREMENT_Edition_mockup.png" alt="Extended 'Abilities (I)' CA REQUIREMENT mock-up">
 </div>
-<div class="title">Figure 76. Extended 'Abilities (I)' CA REQUIREMENT edition mock-up</div>
+<div class="title">Figure 82. Extended 'Abilities (I)' CA REQUIREMENT edition mock-up</div>
 </div>
 </div>
 <div class="sect2">
@@ -5188,7 +5599,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Extended_Abilities_1_EO_mockup.png" alt="Extended 'Abilities (I)' EO mock-up">
 </div>
-<div class="title">Figure 77. Extended 'Abilities (I)' EO mock-up</div>
+<div class="title">Figure 83. Extended 'Abilities (I)' EO mock-up</div>
 </div>
 </div>
 <div class="sect2">
@@ -5200,7 +5611,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Extended_Abilities_WEIGHTED_CA_REQ_mockup.png" alt="Extended 'Abilities (I)' WEIGHTED CA REQUIREMENT edition mock-up">
 </div>
-<div class="title">Figure 78. Extended 'Abilities (I)' WEIGHTED CA REQUIREMENT edition mock-up</div>
+<div class="title">Figure 84. Extended 'Abilities (I)' WEIGHTED CA REQUIREMENT edition mock-up</div>
 </div>
 </div>
 <div class="sect2">
@@ -5209,16 +5620,16 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Extended_Abilities_WEIGHTED_EO_mockup.png" alt="Extended 'Abilities (I)' WEIGHTED EO mock-up">
 </div>
-<div class="title">Figure 79. Extended 'Abilities (I)' WEIGHTED EO mock-up</div>
+<div class="title">Figure 85. Extended 'Abilities (I)' WEIGHTED EO mock-up</div>
 </div>
 <div class="sect3">
 <h4 id="_data_structure_extended_10"><a class="anchor" href="#_data_structure_extended_10"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC-Abilities_1 (Persons)'' of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="paragraph">
-<p>In this data structure the first REQUIREMENT set by the contracting authority is whether the criterion is to be WEIGHTED or not (the opposito to WEIGHTED is PASS/FAIL, see the Code List <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">EvaluationMethodType</a>).</p>
+<p>In this data structure the first REQUIREMENT set by the contracting authority is whether the criterion is to be WEIGHTED or not (the opposito to WEIGHTED is PASS/FAIL, see the Code List <a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">EvaluationMethodType</a>).</p>
 </div>
 <div class="paragraph">
 <p>Either if it is weighted or not one important aspect here is that the sub-groups of QUESTION(s), the one for the technicians and the one for the technical bodies, can be repeated several times, one time per each technician or body the economic operator decides to add (thus the cardinalities 0..n for both sub-groups).</p>
@@ -5227,7 +5638,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <div class="content">
 <img src="_images/Extended_Abilities_1_Data_Structure.png" alt="Extended 'Abilities (I)' ">
 </div>
-<div class="title">Figure 80. EXTENDED 'Abilities (I)(Persons)' criterion data structure</div>
+<div class="title">Figure 86. EXTENDED 'Abilities (I)(Persons)' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -5247,7 +5658,7 @@ an ESPD-Response document specifies responses and links them to each particular 
 <p>The criterion itself; see circled numbers and comments beneath the XML code;</p>
 </li>
 <li>
-<p>The data structure (see the EXTENDED spread-sheet tab <a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">SC-Abilities_1</a>).</p>
+<p>The data structure (see the EXTENDED spread-sheet tab <a href="{url-blob-211}/dist/cl/ods/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.ods">SC-Abilities_1</a>).</p>
 </li>
 </ol>
 </div>
@@ -5524,13 +5935,13 @@ an ESPD-Response document specifies responses and links them to each particular 
 <h4 id="_data_structure_extended_11"><a class="anchor" href="#_data_structure_extended_11"></a>Data Structure - Extended</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC_Abilities_2 (Facilities,&#8230;&#8203;)'' of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Extended_Abilities_2_Data_Structure.png" alt="Extended 'Abilities (II)' " width="...)' criterion data structure">
 </div>
-<div class="title">Figure 81. Extended 'Abilities (II) (Facilities, &#8230;&#8203;.)' criterion data structure</div>
+<div class="title">Figure 87. Extended 'Abilities (II) (Facilities, &#8230;&#8203;.)' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -5740,13 +6151,13 @@ to the element <code>cbc:WeightNumeric</code>(5% in this example). Additionally,
 <h4 id="_data_structure_extended_education"><a class="anchor" href="#_data_structure_extended_education"></a>Data Structure - Extended (Education)</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC_Abilities_3 (Education)'' of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Extended_Abilities_3_Data_Structure.png" alt="Extended 'Abilities (III)' ">
 </div>
-<div class="title">Figure 82. Extended 'Abilities (III) (Education)' criterion data structure</div>
+<div class="title">Figure 88. Extended 'Abilities (III) (Education)' criterion data structure</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -5959,7 +6370,7 @@ classification.</p>
 <div class="sect2">
 <h3 id="_vi_9_7_extended_abilities_iv_checks"><a class="anchor" href="#_vi_9_7_extended_abilities_iv_checks"></a>VI.9.7 Extended Abilities (IV) - Checks</h3>
 <div class="sect3">
-<h4 id="_mock_ups_contracting_authority_perspective_10"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_10"></a>Mock-ups - contracting authority perspective</h4>
+<h4 id="_mock_ups_contracting_authority_perspective_11"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_11"></a>Mock-ups - contracting authority perspective</h4>
 <div class="paragraph">
 <p>The contracting authority has selected the 'allowance of checks' option in a ESPD Request builder software application GUI. This software application will create a criterion of this in the ESPD Request XML instance with zero, one or more REQUIREMENT(s) by the EO.</p>
 </div>
@@ -5970,11 +6381,11 @@ classification.</p>
 <div class="content">
 <img src="_images/Extended_Checks_CA_REQUIREMENT_mockup.png" alt="Extended 'Checks' CA REQUIREMENT mock-up">
 </div>
-<div class="title">Figure 83. Extended 'allowance of checks' CA REQUIREMENT edition mock-up</div>
+<div class="title">Figure 89. Extended 'allowance of checks' CA REQUIREMENT edition mock-up</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mock_ups_economic_operator_perspective_8"><a class="anchor" href="#_mock_ups_economic_operator_perspective_8"></a>Mock-ups - economic operator perspective</h4>
+<h4 id="_mock_ups_economic_operator_perspective_9"><a class="anchor" href="#_mock_ups_economic_operator_perspective_9"></a>Mock-ups - economic operator perspective</h4>
 <div class="paragraph">
 <p>The EO should see as many boxes (groups) of REQUIREMENT + QUESTION as REQUIREMENT(s) specified by the CA. In this case the economic operator (EO) sees one REQUIREMENT associated to one QUESTION. The expected answer is <strong>Yes</strong> or <strong>No</strong>.</p>
 </div>
@@ -5982,7 +6393,7 @@ classification.</p>
 <div class="content">
 <img src="_images/Extended_Checks_EO_mockup.png" alt="Extended 'Checks' CA mock-up">
 </div>
-<div class="title">Figure 84. Extended 'allowance of checks' EO mock-up</div>
+<div class="title">Figure 90. Extended 'allowance of checks' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -6011,13 +6422,13 @@ classification.</p>
 </div>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC_Abilities_4 (Checks)'' of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Extended_Abilities_4_Data_Structure.png" alt="Extended 'Abilities (IV)' ">
 </div>
-<div class="title">Figure 85. Extended 'Abilities (IV) (Checks)' criterion data structure</div>
+<div class="title">Figure 91. Extended 'Abilities (IV) (Checks)' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -6092,13 +6503,13 @@ classification.</p>
 <h4 id="_data_structure_extended_staff"><a class="anchor" href="#_data_structure_extended_staff"></a>Data Structure - Extended (Staff)</h4>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC_Abilities_5 (Staff)'' of the
-<a href="https://github.com/OP-TED/ESPD-EDM/blob/v2.1.1/docs/src/main/asciidoc/modules/ROOT/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
+<a href="{url-blob-211}/dist/cl/xlsx/ESPD-CriteriaTaxonomy-EXTENDED-V2.1.1.xlsx">ESPD-CriteriaTaxonomy</a> spread-sheet).</p>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Extended_Abilities_5_Data_Structure.png" alt="Extended 'Abilities (V)' ">
 </div>
-<div class="title">Figure 86. Extended 'Abilities (V) (Staff)' criterion data structure</div>
+<div class="title">Figure 92. Extended 'Abilities (V) (Staff)' criterion data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -6308,7 +6719,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Subcontracting_CA_mockup.png" alt="'Subcontracting proportion' CA mock-up" width="CA mock-up">
 </div>
-<div class="title">Figure 87. 'Subcontracting proportion' CA mock-up (Basic and Extended)</div>
+<div class="title">Figure 93. 'Subcontracting proportion' CA mock-up (Basic and Extended)</div>
 </div>
 </div>
 <div class="sect3">
@@ -6320,11 +6731,11 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Subcontracting_EO_mockup.png" alt="'Subcontracting proportion' EO mock-up" width="EO mock-up">
 </div>
-<div class="title">Figure 88. 'Subcontracting proportion' EO mock-up (<strong>Basic</strong> and <strong>Extended</strong>)</div>
+<div class="title">Figure 94. 'Subcontracting proportion' EO mock-up (<strong>Basic</strong> and <strong>Extended</strong>)</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_structure_basic_13"><a class="anchor" href="#_data_structure_basic_13"></a>Data Structure - Basic</h4>
+<h4 id="_data_structure_basic_14"><a class="anchor" href="#_data_structure_basic_14"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>The data structure is very simple, it only defines a group with one QUESTION:</p>
 </div>
@@ -6335,7 +6746,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Basic_Subcontracting_Data_Structure.png" alt="Basic 'Subcontracting proportion' criterion data structure">
 </div>
-<div class="title">Figure 89. 'Subcontracting proportion' criterion data structure (<strong>Basic</strong>)</div>
+<div class="title">Figure 95. 'Subcontracting proportion' criterion data structure (<strong>Basic</strong>)</div>
 </div>
 </div>
 <div class="sect3">
@@ -6350,7 +6761,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Extended_Subcontracting_Data_Structure.png" alt="Extended 'Subcontracting proportion' criterion data structure">
 </div>
-<div class="title">Figure 90. 'Subcontracting proportion' criterion data structure (<strong>Extended</strong>)</div>
+<div class="title">Figure 96. 'Subcontracting proportion' criterion data structure (<strong>Extended</strong>)</div>
 </div>
 </div>
 <div class="sect3">
@@ -6426,7 +6837,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/SamplesCertificates_CA_mockup.png" alt="'Samples and certificates' CA mock-up" width="CA mock-up">
 </div>
-<div class="title">Figure 91. 'Samples and certificates' CA mock-up (Basic and Extended)</div>
+<div class="title">Figure 97. 'Samples and certificates' CA mock-up (Basic and Extended)</div>
 </div>
 </div>
 <div class="sect3">
@@ -6438,11 +6849,11 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/SamplesCertificates_EO_mockup.png" alt="'Samples and certificates' EO mock-up" width="EO mock-up">
 </div>
-<div class="title">Figure 92. 'Samples and certificates' EO mock-up (<strong>Basic</strong> and <strong>Extended</strong>)</div>
+<div class="title">Figure 98. 'Samples and certificates' EO mock-up (<strong>Basic</strong> and <strong>Extended</strong>)</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_structure_basic_14"><a class="anchor" href="#_data_structure_basic_14"></a>Data Structure - Basic</h4>
+<h4 id="_data_structure_basic_15"><a class="anchor" href="#_data_structure_basic_15"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>(Some columns have been hidden to enhance the readability of the image).</p>
 </div>
@@ -6450,7 +6861,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Basic_SamplesCertificates_Data_Structure.png" alt="Basic 'Samples and certificates' criteria data structure">
 </div>
-<div class="title">Figure 93. 'Samples and certificates' criteria data structure (<strong>Basic</strong>)</div>
+<div class="title">Figure 99. 'Samples and certificates' criteria data structure (<strong>Basic</strong>)</div>
 </div>
 </div>
 <div class="sect3">
@@ -6465,7 +6876,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Extended_SamplesCertificates_Data_Structure.png" alt="Extended 'Samples and certificates' criterion data structure">
 </div>
-<div class="title">Figure 94. 'Samples and certificates' criteria data structure (<strong>Extended</strong>)</div>
+<div class="title">Figure 100. 'Samples and certificates' criteria data structure (<strong>Extended</strong>)</div>
 </div>
 </div>
 <div class="sect3">
@@ -6577,16 +6988,16 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="sect2">
 <h3 id="_vi_12_1_basic_quality_assurance_schemes_and_environmental_management_standards"><a class="anchor" href="#_vi_12_1_basic_quality_assurance_schemes_and_environmental_management_standards"></a>VI.12.1 Basic Quality Assurance schemes and environmental management standards</h3>
 <div class="sect3">
-<h4 id="_mock_ups_contracting_authority_perspective_11"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_11"></a>Mock-ups - contracting authority perspective</h4>
+<h4 id="_mock_ups_contracting_authority_perspective_12"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_12"></a>Mock-ups - contracting authority perspective</h4>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Basic_QA_CA_mockup.png" alt="Basic 'Quality Assurance schemes and environmental management standards' CA mock-up">
 </div>
-<div class="title">Figure 95. Basic 'Quality Assurance schemes and environmental management standards' CA mock-up</div>
+<div class="title">Figure 101. Basic 'Quality Assurance schemes and environmental management standards' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mock_ups_economic_operator_perspective_9"><a class="anchor" href="#_mock_ups_economic_operator_perspective_9"></a>Mock-ups - economic operator perspective</h4>
+<h4 id="_mock_ups_economic_operator_perspective_10"><a class="anchor" href="#_mock_ups_economic_operator_perspective_10"></a>Mock-ups - economic operator perspective</h4>
 <div class="paragraph">
 <p>Notice that in the case where the economic operator answers <strong>No</strong> the box with the text "If not, please explain why and specify which other means &#8230;&#8203;" is shown. This box is not shown for the <strong>Yes</strong> answer. This behaviour can be controlled with the <code>ONFALSE</code> code of the sub-group of QUESTION(s) (see data structure and XML example below, too).</p>
 </div>
@@ -6597,11 +7008,11 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Basic_QA_EO_mockup.png" alt="Basic 'Quality Assurance schemes and environmental management standards' CA mock-up">
 </div>
-<div class="title">Figure 96. Basic 'Quality Assurance schemes and environmental management standards' EO mock-up</div>
+<div class="title">Figure 102. Basic 'Quality Assurance schemes and environmental management standards' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_data_structure_basic_15"><a class="anchor" href="#_data_structure_basic_15"></a>Data Structure - Basic</h4>
+<h4 id="_data_structure_basic_16"><a class="anchor" href="#_data_structure_basic_16"></a>Data Structure - Basic</h4>
 <div class="paragraph">
 <p>Notice the <code>ONFALSE</code> code for the sub-group containing the sentence thats starts with 'If not, please explain why&#8230;&#8203;'. The code means: if the answer to the previous question was <strong>No</strong> then this sub-group must be shown/processed.</p>
 </div>
@@ -6612,11 +7023,11 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Basic_QA_Data_Structure.png" alt="Basic 'Quality Assurance schemes and environmental management standards' criteria data structure">
 </div>
-<div class="title">Figure 97. Basic 'Quality Assurance schemes and environmental management standards' criteria data structure</div>
+<div class="title">Figure 103. Basic 'Quality Assurance schemes and environmental management standards' criteria data structure</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_xml_example_basic_12"><a class="anchor" href="#_xml_example_basic_12"></a>XML Example - Basic</h4>
+<h4 id="_xml_example_basic_13"><a class="anchor" href="#_xml_example_basic_13"></a>XML Example - Basic</h4>
 <div class="listingblock">
 <div class="title">Basic 'certificates by independent bodies about quality assurance standards' criterion</div>
 <div class="content">
@@ -6688,7 +7099,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="sect2">
 <h3 id="_vi_12_2_extended_quality_assurance_schemes_and_environmental_management_standards"><a class="anchor" href="#_vi_12_2_extended_quality_assurance_schemes_and_environmental_management_standards"></a>VI.12.2 Extended Quality Assurance schemes and environmental management standards</h3>
 <div class="sect3">
-<h4 id="_mock_ups_contracting_authority_perspective_12"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_12"></a>Mock-ups - contracting authority perspective</h4>
+<h4 id="_mock_ups_contracting_authority_perspective_13"><a class="anchor" href="#_mock_ups_contracting_authority_perspective_13"></a>Mock-ups - contracting authority perspective</h4>
 <div class="paragraph">
 <p>In the <strong>Extended</strong> ESPD the contracting authority can specify a REQUIREMENT. In this example it provides the name of the ISO it expects the economic operator to be conformant to.</p>
 </div>
@@ -6696,11 +7107,11 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Extended_QA_CA_mockup.png" alt="Extended 'Quality Assurance schemes and environmental management standards' CA mock-up">
 </div>
-<div class="title">Figure 98. Extended 'Quality Assurance schemes and environmental management standards' CA mock-up</div>
+<div class="title">Figure 104. Extended 'Quality Assurance schemes and environmental management standards' CA mock-up</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mock_ups_economic_operator_perspective_10"><a class="anchor" href="#_mock_ups_economic_operator_perspective_10"></a>Mock-ups - economic operator perspective</h4>
+<h4 id="_mock_ups_economic_operator_perspective_11"><a class="anchor" href="#_mock_ups_economic_operator_perspective_11"></a>Mock-ups - economic operator perspective</h4>
 <div class="paragraph">
 <p>Notice that, as for the <strong>Basic</strong> ESPD the economic operator (EO) has to answer <strong>Yes</strong> or <strong>No</strong>. In  the case the EO answers <strong>No</strong> the box with the text "If not, please explain why and specify which other means &#8230;&#8203;" is shown. This box is not shown for the <strong>Yes</strong> answer. This behaviour can be controlled with the <code>ONFALSE</code> code of the sub-group of QUESTION(s) (see data structure and XML example below, too).</p>
 </div>
@@ -6711,7 +7122,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Extended_QA_EO_mockup.png" alt="Extended 'Quality Assurance schemes and environmental management standards' CA mock-up">
 </div>
-<div class="title">Figure 99. Extended 'Quality Assurance schemes and environmental management standards' EO mock-up</div>
+<div class="title">Figure 105. Extended 'Quality Assurance schemes and environmental management standards' EO mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -6739,7 +7150,7 @@ This criterion illustrates how to prepare a selection criterion about ''abilitie
 <div class="content">
 <img src="_images/Extended_QA_Data_Structure.png" alt="Extended  'Quality Assurance schemes and environmental management standards' criteria data structure">
 </div>
-<div class="title">Figure 100. Extended 'Quality Assurance schemes and environmental management standards' criteria data structure</div>
+<div class="title">Figure 106. Extended 'Quality Assurance schemes and environmental management standards' criteria data structure</div>
 </div>
 </div>
 <div class="sect3">
