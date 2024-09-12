@@ -267,48 +267,6 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="title">Figure 2. Legend: QualificationApplicationResponse XSD Schema, possible cardinalities of the Schema elements</div>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_viii_2_espd_response_xsd_schema_2"><a class="anchor" href="#_viii_2_espd_response_xsd_schema_2"></a>VIII.2 ESPD Response XSD Schema</h3>
-<div class="paragraph">
-<p>For the ESPD Response, the ESPD-EDM V2.1.1 uses the UBL-2.2 document named <code>QualificationApplicationResponse.xsd</code> XSD Schema. This schema can be found under the folder <a href="{url-tree}/dist/xsdrt/maindoc">dist/xsdrt/maindoc</a> (or the equivalent documented <code>xsd</code> folder).</p>
-</div>
-<div class="paragraph">
-<p>The figure below shows the XSD Schema defined by UBL-2.2 for this document, which replaces the Schema for the “ESPD Response” document used in the previous versions of the ESPD-EDM.
-The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the first level components of the schema are shown. The inner sub-elements and sub-classes are covered in  detail in the following sub-sections of this document. The ESPD Response share many elements with the ESPD Request. For those elements that have already been described in the ESPD Request please see the sections above in this document where those elements were explained.</p>
-</div>
-<div class="paragraph">
-<p>Notice that, in  the UBL-2.2 Schema there are only four mandatory elements: <code>cbc:IssueDate</code>, <code>ContractFolderID</code>, <code>cac:ContractingParty</code> (the contracting authority) and <code>cac:EconomicOperatorParty</code> (the economic operator).</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>This section about the ESPD Response does not cover those information elements that were already described in the ESPD Request, unless a characteristic related to the ESPD Response needs to be clarified. Thus for details about elements like <code>cac:ContractingAuthorityParty</code>, <code>ProcurementProject</code>, <code>ProcurementProjectLot</code> and <code>AdditionalDocumentReference</code> refer to the section <strong>III. The ESPD Request document</strong>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="_images/QualificationApplicationResponse-XSD-Global-View.png" alt="QualificationApplicationResponse XSD Schema" width="600" height="400">
-</div>
-<div class="title">Figure 3. QualificationApplicationResponse XSD Schema, global view</div>
-</div>
-<div class="paragraph">
-<p><strong>LEGEND</strong>: The figure below enumerates the four different types of optionality and cardinality for the elements of the UBL-2.2 Schema:</p>
-</div>
-<div class="imageblock text-center">
-<div class="content">
-<img src="_images/XSD-Schema-elements-Legend.png" alt="Legend: cardinalities" width="400">
-</div>
-<div class="title">Figure 4. Legend: QualificationApplicationResponse XSD Schema, possible cardinalities of the Schema elements</div>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_viii_3_espd_response_cardinalities"><a class="anchor" href="#_viii_3_espd_response_cardinalities"></a>VIII.3 ESPD Response cardinalities</h3>
 <div class="paragraph">
@@ -321,7 +279,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/ESPDResponse-UML-1stLevel.png" alt="QualificationApplicationResponse-UML" width="600">
 </div>
-<div class="title">Figure 5. ESPD-EDM 'QualificationApplicationResponse', UML diagram</div>
+<div class="title">Figure 3. ESPD-EDM 'QualificationApplicationResponse', UML diagram</div>
 </div>
 <div class="paragraph">
 <p>If you compare both figures you will observe that:</p>
@@ -626,7 +584,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/ESPDResponseXMLinstance_Global_View.png" alt="ESPD Response XML instance">
 </div>
-<div class="title">Figure 6. An ESPD Response XML instance (global view)</div>
+<div class="title">Figure 4. An ESPD Response XML instance (global view)</div>
 </div>
 <div class="sect3">
 <h4 id="_xml_example"><a class="anchor" href="#_xml_example"></a>XML example</h4>
@@ -812,7 +770,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Economic_Operator_Mock-up_1_Simple_case.png" alt="Economic operator-simplest case">
 </div>
-<div class="title">Figure 7. Data about the economic operator, mock-up (sole contractor, no sub-contractors and no lots)</div>
+<div class="title">Figure 5. Data about the economic operator, mock-up (sole contractor, no sub-contractors and no lots)</div>
 </div>
 <div class="paragraph">
 <p><strong>Notice the following</strong>:</p>
@@ -856,7 +814,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Economic_Operator_Mock-up_Registered.png" alt="EO registered in a PQS">
 </div>
-<div class="title">Figure 8. EO registered in PQS, mock-up</div>
+<div class="title">Figure 6. EO registered in PQS, mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -868,7 +826,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Lots-Extended.png" alt="Lots-Extended ESPD">
 </div>
-<div class="title">Figure 9. Selection of Lots by the CA, mock-up</div>
+<div class="title">Figure 7. Selection of Lots by the CA, mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -880,7 +838,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Economic_Operator_Mock-up_1_Lots.png" alt="Lots-Extended ESPD">
 </div>
-<div class="title">Figure 10. Selection of Lots by the EO, mock-up</div>
+<div class="title">Figure 8. Selection of Lots by the EO, mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -905,7 +863,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Economic_Operator_Mock-up_1_Roles_Complete.png" alt="EO Roles">
 </div>
-<div class="title">Figure 11. EO Roles, mock-up</div>
+<div class="title">Figure 9. EO Roles, mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -917,7 +875,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Subcontractor_relied_on_mockup.png" alt="EO Roles-entities relied on" width="600">
 </div>
-<div class="title">Figure 12. EO Roles-entities relied on, mock-up</div>
+<div class="title">Figure 10. EO Roles-entities relied on, mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -929,7 +887,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Subcontractor_not_relied_on_mockup.png" alt="EO Roles-entities not relied on" width="600">
 </div>
-<div class="title">Figure 13. EO Roles-entities not relied on, mock-up</div>
+<div class="title">Figure 11. EO Roles-entities not relied on, mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -960,7 +918,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Economic_Operator_XSD.png" alt="cac:EconomicOperatorParty XSD, global view" width="global view">
 </div>
-<div class="title">Figure 14. cac:EconomicOperatorParty XSD, global view</div>
+<div class="title">Figure 12. cac:EconomicOperatorParty XSD, global view</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1013,7 +971,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/QualifyinParty_XSD.png" alt="cac:QualifyingParty element-XSD">
 </div>
-<div class="title">Figure 15. cac:QualifyingParty element, XSD</div>
+<div class="title">Figure 13. cac:QualifyingParty element, XSD</div>
 </div>
 <div class="paragraph">
 <p>For the identification of the economic operator with the registration number assigned by the (pre)qualification system the <code>cac:/EconomicOperatorParty/cac:Party/PartyIdentifier</code> is used. Notice that this element has multiple cardinality, which is very convenient to identify parties with identifiers issued by different authorities. Each Identification element specifies which is the Agency -the (pre)qualification system, in this case- that issued the identifier (see XML example below to grasp how this is implemented).</p>
@@ -1022,7 +980,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/PartyIdentification.png" alt="PartyIdentifier element with multiple cardinality">
 </div>
-<div class="title">Figure 16. cac:PartyIdentification element, XSD</div>
+<div class="title">Figure 14. cac:PartyIdentification element, XSD</div>
 </div>
 <div class="paragraph">
 <p>The QUESTION(s) relating to the rest of information on the PQS are structured in the criterion <code>CRITERION.OTHER.EO_DATA.REGISTERED_IN_OFFICIAL_LIST</code>:</p>
@@ -1031,7 +989,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/OTHER_EO_PQS_DS.png" alt="PQS data structure">
 </div>
-<div class="title">Figure 17. Data structure for the data about the (pre)qualification system</div>
+<div class="title">Figure 15. Data structure for the data about the (pre)qualification system</div>
 </div>
 </div>
 <div class="sect3">
@@ -1043,7 +1001,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/EO_Role_XSD.png" alt="EO Role">
 </div>
-<div class="title">Figure 18. Role of the economic operator</div>
+<div class="title">Figure 16. Role of the economic operator</div>
 </div>
 </div>
 <div class="sect3">
@@ -1055,7 +1013,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/EconomicOperatorPartyParty.png" alt="EO Party">
 </div>
-<div class="title">Figure 19. The Party of the economic party</div>
+<div class="title">Figure 17. The Party of the economic party</div>
 </div>
 </div>
 <div class="sect3 text-left">
@@ -1502,14 +1460,12 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </ol>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_xsd_schemas"><a class="anchor" href="#_xsd_schemas"></a>XSD Schemas</h4>
+
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_xsd_schemas"><a class="anchor" href="#_xsd_schemas"></a>XSD Schemas</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_caceconomicoperatorparty"><a class="anchor" href="#_caceconomicoperatorparty"></a>cac:EconomicOperatorParty</h3>
+<div class="sect3">
+<h4 id="_caceconomicoperatorparty"><a class="anchor" href="#_caceconomicoperatorparty"></a>cac:EconomicOperatorParty</h4>
 <div class="paragraph">
 <p>The UBL-2.2 <code>cac:EconomicOperatorParty</code> has three common aggregate components, the XSD Schema looks like this:</p>
 </div>
@@ -1517,7 +1473,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Economic_Operator_XSD.png" alt="cac:EconomicOperatorParty XSD, global view" width="global view">
 </div>
-<div class="title">Figure 20. cac:EconomicOperatorParty XSD, global view</div>
+<div class="title">Figure 18. cac:EconomicOperatorParty XSD, global view</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1533,8 +1489,8 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 </ol>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_cacqualifyingparty_2"><a class="anchor" href="#_cacqualifyingparty_2"></a>cac:QualifyingParty</h3>
+<div class="sect3">
+<h4 id="_cacqualifyingparty_2"><a class="anchor" href="#_cacqualifyingparty_2"></a>cac:QualifyingParty</h4>
 <div class="paragraph">
 <p>The diagram below shows the XSD element that will hold the data required by the ESPD (see mock-up 1/7, too). Beware that:</p>
 </div>
@@ -1591,11 +1547,11 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/QualifyinParty_XSD.png" alt="cac:QualifyingParty element-XSD">
 </div>
-<div class="title">Figure 21. cac:QualifyingParty element, XSD</div>
+<div class="title">Figure 19. cac:QualifyingParty element, XSD</div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_caceconomicoperatorrole_2"><a class="anchor" href="#_caceconomicoperatorrole_2"></a>cac:EconomicOperatorRole</h3>
+<div class="sect3">
+<h4 id="_caceconomicoperatorrole_2"><a class="anchor" href="#_caceconomicoperatorrole_2"></a>cac:EconomicOperatorRole</h4>
 <div class="paragraph">
 <p>The UBL-2.2 element for the role of the economic operator is quite straightforward and typical in UBL: it provides a pair <strong>code + description</strong> (see Code List <a href="{url-blob-211}/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">EORoleType</a> for the codes and descriptions; see also the XML example below).</p>
 </div>
@@ -1603,11 +1559,11 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/EO_Role_XSD.png" alt="EO Role">
 </div>
-<div class="title">Figure 22. Role of the economic operator</div>
+<div class="title">Figure 20. Role of the economic operator</div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_cacparty_2"><a class="anchor" href="#_cacparty_2"></a>cac:Party</h3>
+<div class="sect3">
+<h4 id="_cacparty_2"><a class="anchor" href="#_cacparty_2"></a>cac:Party</h4>
 <div class="paragraph">
 <p>The XSD diagram below shows (in blue) the elements for which data are expected in the ESPD Response for the cac:Party element of the economic operator.</p>
 </div>
@@ -1615,7 +1571,7 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/EconomicOperatorPartyParty.png" alt="EO Party">
 </div>
-<div class="title">Figure 23. The Party of the economic party</div>
+<div class="title">Figure 21. The Party of the economic party</div>
 </div>
 <div class="paragraph">
 <p>The figures below show the <code>cac:QualifyingParty</code> sub-components <code>cac:BusinessClassificationScheme`and `FinancialCapability</code>, and <code>cac:CompletedTask</code> in a bit more of detail. At present, the ESPD-EDM only uses one field, <code>cbc:Description</code> for the references and classifications and `cbc:Amount`for the Turnover.</p>
@@ -1624,19 +1580,19 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/Business_Classification_Scheme.png" alt="Classification Scheme">
 </div>
-<div class="title">Figure 24. The rich structure of a UBL-2.2 'Classification Scheme' for the representation of taxonomies</div>
+<div class="title">Figure 22. The rich structure of a UBL-2.2 'Classification Scheme' for the representation of taxonomies</div>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/FinancialCapabililty.png" alt="Capabilities">
 </div>
-<div class="title">Figure 25. The structure of UBL-2.2 'Capability'</div>
+<div class="title">Figure 23. The structure of UBL-2.2 'Capability'</div>
 </div>
 <div class="imageblock text-center">
 <div class="content">
 <img src="_images/Completed_Task.png" alt="Completed task (reference)">
 </div>
-<div class="title">Figure 26. The structure of the UBL-2.2 Completed Task (used for references)</div>
+<div class="title">Figure 24. The structure of the UBL-2.2 Completed Task (used for references)</div>
 </div>
 <div class="paragraph">
 <p>UBL-2.2 provides a component to hold very specifically the data to identify the economic operator as it officially registered in a Business Register. This XSD diagram below shows the elements of this component <code>cac:LegalEntityParty</code>. This ESPD-EDM specification recommends to use it as an alternative (or supplementary) way to identify the economic party.</p>
@@ -1645,7 +1601,8 @@ The figure below shows a diagram representing the UBL-2.2 XSD Schema. Only the f
 <div class="content">
 <img src="_images/LegalEntityParty.png" alt="Legal Entity Party">
 </div>
-<div class="title">Figure 27. The UBL-2.2 Legal Entity Party</div>
+<div class="title">Figure 25. The UBL-2.2 Legal Entity Party</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_expected_elements_2"><a class="anchor" href="#_expected_elements_2"></a>Expected elements</h4>
@@ -2293,9 +2250,10 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </tbody>
 </table>
 </div>
+<div class="sect3">
+<h4 id="_viii_6_1_basic_economic_operator_party"><a class="anchor" href="#_viii_6_1_basic_economic_operator_party"></a>VIII.6.1 Basic economic operator party</h4>
+
 </div>
-<div class="sect2">
-<h3 id="_viii_6_1_basic_economic_operator_party"><a class="anchor" href="#_viii_6_1_basic_economic_operator_party"></a>VIII.6.1 Basic economic operator party</h3>
 <div class="sect3">
 <h4 id="_mock_ups_and_data_structures"><a class="anchor" href="#_mock_ups_and_data_structures"></a>Mock-ups and data structures</h4>
 <div class="paragraph">
@@ -2308,7 +2266,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_Economic_Operator_Mock-ups.png" alt="Basic economic operator - mock-up">
 </div>
-<div class="title">Figure 28. Basic economic operator, mock-up</div>
+<div class="title">Figure 26. Basic economic operator, mock-up</div>
 </div>
 <div class="paragraph">
 <p>The following figures below show the data aimed at other purposes (namely statistical), that is structured using the UBL-2.2 <code>cac:TenderingCriterion</code>. See the XML example below to check how both, the <code>cac:EconomicOperatorParty</code> and these data structures are used.</p>
@@ -2320,7 +2278,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_EO_Sheltered_mock-up.png" alt="Sheltered workshop - mock-up">
 </div>
-<div class="title">Figure 29. Sheltered workshop or social business - mock-up</div>
+<div class="title">Figure 27. Sheltered workshop or social business - mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for a sheltered workshop or social business in case of reserved procurement</strong>:</p>
@@ -2329,7 +2287,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_OTHER-EO-SHELTERED_DS.png" alt="Sheltered workshop - data structure">
 </div>
-<div class="title">Figure 30. Sheltered workshop or social business - data structure</div>
+<div class="title">Figure 28. Sheltered workshop or social business - data structure</div>
 </div>
 <div class="paragraph">
 <p><strong>Mockup (3/8): Registration on an official list, tenderer register or (pre)qualification system</strong>:</p>
@@ -2338,7 +2296,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_Economic_Operator_Registered_Mock-ups.png" alt="EO registration on a (pre)qualified system - mock-up">
 </div>
-<div class="title">Figure 31. EO registration on a (pre)qualified system, mock-up</div>
+<div class="title">Figure 29. EO registration on a (pre)qualified system, mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the (pre)qualification of the economic operator by an official list or similar</strong>:</p>
@@ -2347,7 +2305,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_OTHER-EO-PQS_DS.png" alt="(Pre)qualification-related data structure">
 </div>
-<div class="title">Figure 32. Prequalification-related data structure</div>
+<div class="title">Figure 30. Prequalification-related data structure</div>
 </div>
 <div class="paragraph">
 <p><strong>Mock-up (4/8): Role and other members of the group</strong>:</p>
@@ -2356,7 +2314,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_EO_Group_Members_Mock-ups.png" alt="Role and other members of the group">
 </div>
-<div class="title">Figure 33. Role and other members of the group, mock-up</div>
+<div class="title">Figure 31. Role and other members of the group, mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the role and members of the group (when bidding as a Consortium, Joint Venture, etc.)</strong> Beware that the name of the group has its own placeholder in the UBL-2.2 data model: <code>/QualificationApplicationResponse/cbc:EconomicOperatorGroupName</code></p>
@@ -2365,7 +2323,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_OTHER-EO-GROUPS_DS.png" alt="EO Role and group-related data">
 </div>
-<div class="title">Figure 34. EO Role and group-related data</div>
+<div class="title">Figure 32. EO Role and group-related data</div>
 </div>
 <div class="paragraph">
 <p><strong>Mock-up: (5/8): Lots to which the economic operator tenders</strong>:</p>
@@ -2374,7 +2332,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_EO_LotsTendered_mock-up.png" alt="Lots to which the EO tenders, mock-up" width="mock-up">
 </div>
-<div class="title">Figure 35. Lots to which the EO tenders, mock-up</div>
+<div class="title">Figure 33. Lots to which the EO tenders, mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the Lots to which the economic operator tenders to</strong>:</p>
@@ -2383,7 +2341,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_OTHER-EO-Lots_DS.png" alt="Lots tendered">
 </div>
-<div class="title">Figure 36. Lots tendered, data structure</div>
+<div class="title">Figure 34. Lots tendered, data structure</div>
 </div>
 <div class="paragraph">
 <p><strong>Mock-up(6/8): Certificates about contributions to the Tax Agency and/or Social Security</strong>:</p>
@@ -2392,7 +2350,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_EO_Contributions_Certificates-mockup.png" alt="Contributions certificates - mock-up">
 </div>
-<div class="title">Figure 37. Contributions certificates</div>
+<div class="title">Figure 35. Contributions certificates</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the certificates about contributions to the Tax Agency and/or Social Security</strong>:</p>
@@ -2401,7 +2359,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_OTHER-EO-Contributions_DS.png" alt="Contributions certificates - data structure">
 </div>
-<div class="title">Figure 38. Contributions certificates</div>
+<div class="title">Figure 36. Contributions certificates</div>
 </div>
 <div class="paragraph">
 <p><strong>Mock-up (7/8): Entities on which the economic operator relies on to meet the selection criteria. Notice only a *Yes</strong> or <strong>No</strong> answer is expected:</p>
@@ -2410,7 +2368,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_EO_Relied_On_entities.png" alt="Entities upon which the EO relies on, mock-up" width="mock-up">
 </div>
-<div class="title">Figure 39. Entities upon which the EO relies on, mock-up</div>
+<div class="title">Figure 37. Entities upon which the EO relies on, mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the entities the EO relies on</strong>:</p>
@@ -2419,7 +2377,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_OTHER-EO-RELIED_ON-ENTITIES_DS.png" alt="Entities relied on - data structure">
 </div>
-<div class="title">Figure 40. Entities relied on - data structure</div>
+<div class="title">Figure 38. Entities relied on - data structure</div>
 </div>
 <div class="paragraph">
 <p><strong>Mock-up: (8/8): Entities on which the economic operator does not rely on to meet the selection criteria. Notice only a *Yes</strong> or <strong>No</strong> answer is expected, plus a sequence of entity names as a text:</p>
@@ -2428,7 +2386,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_EO_NOT_Relied_On_entities.png" alt="Entities upon which the EO does not rely on - mock-up">
 </div>
-<div class="title">Figure 41. Entities upon which the EO does not rely on, mock-up</div>
+<div class="title">Figure 39. Entities upon which the EO does not rely on, mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the subcontractor upon which the EO does not relied to meet the selection criteria</strong>:</p>
@@ -2437,7 +2395,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_OTHER-EO-NOT_RELIED_ON-ENTITIES_DS.png" alt="Entities not relied on - data structure">
 </div>
-<div class="title">Figure 42. Entities not relied on - data structure</div>
+<div class="title">Figure 40. Entities not relied on - data structure</div>
 </div>
 </div>
 <div class="sect3">
@@ -2455,7 +2413,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Basic_EO_XML_Collapsed.png" alt="EO data - collapsed view">
 </div>
-<div class="title">Figure 43. Vision of the data about the EO in a 'collapsed' Basic ESPD</div>
+<div class="title">Figure 41. Vision of the data about the EO in a 'collapsed' Basic ESPD</div>
 </div>
 <div class="paragraph">
 <p>This fragment of XML <strong>does not include the responses to the QUESTION(s)</strong> in the data structures, yet. This is because the Responses have to be associated to a criterion property. The fragment below shows how these criterion properties are prepared and a 'dynamic' UUID is associated to each criterion property.  Later on the response values will use these UUID to link the actual response to each QUESTION (i.e. with each <code>cac:TenderingCriterionProperty</code> element). Therefore the example does not include the data about the the EO yet. To see how the EO provides these data please see the sections below about the Response. There you will see that each element <code>cac:ResponseValue</code> is associated to a the UUID of the corresponding <code>cac:TenderingCriterionProperty</code>. For an example of a complete <strong>BASIC</strong> ESPD Response XML document you can also see the file <a href="{url-blob-211}/dist/xml/BASIC-ESPDResponse-2.1.1.xml">BASIC-ESPDResponse-2.1.1.xml</a>.</p>
@@ -2713,15 +2671,15 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </div>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_viii_6_2_extended_economic_operator_party"><a class="anchor" href="#_viii_6_2_extended_economic_operator_party"></a>VIII.6.2 Extended economic operator party</h3>
+<div class="sect3">
+<h4 id="_viii_6_2_extended_economic_operator_party"><a class="anchor" href="#_viii_6_2_extended_economic_operator_party"></a>VIII.6.2 Extended economic operator party</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>The value expected for the EO identifier is of type <code>Identifier</code>. For the identifier of the EO it is also required to specify the type of identifier, and a closed list of possible types is proposed. EOs must use one of the available values, but the preferred one is the VAT number. Beware that the data structure does not keep the type of the identifier. This is because the this type code is placed in the attribute <code>@schemeID</code> of the <code>cac:ResponseValue/cbc:ResponseID</code> element (and the <code>@schemeAgencyID</code> attribute must be set to the default <code>EU-COM-GROW</code>). See the information requirement about the identifiers of the economic operators at the beginning of the section. See also next sections about the responses, XSD schemas and XML example.</p>
 </li>
 </ol>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_mock_up_extended_economic_operator"><a class="anchor" href="#_mock_up_extended_economic_operator"></a>Mock-up (EXTENDED economic operator)</h4>
@@ -2732,7 +2690,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_Economic_Operator_Mock-up.png" alt="Economic operator - mock-up">
 </div>
-<div class="title">Figure 44. Economic operator - mock-up (EXTENDED)</div>
+<div class="title">Figure 42. Economic operator - mock-up (EXTENDED)</div>
 </div>
 <div class="paragraph">
 <p>As you will see next, the information required about the economic operators varies depending on several factors:</p>
@@ -2884,7 +2842,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_OTHER-EO-SHELTERED_DS.png" alt="Sheltered workshop - data structure">
 </div>
-<div class="title">Figure 45. Sheltered workshop or social business - data structure</div>
+<div class="title">Figure 43. Sheltered workshop or social business - data structure</div>
 </div>
 </div>
 <div class="sect4">
@@ -2921,7 +2879,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_OTHER-EO-PQS_DS.png" alt="(Pre)qualification-related data structure">
 </div>
-<div class="title">Figure 46. Pre-qualification-related data structure</div>
+<div class="title">Figure 44. Pre-qualification-related data structure</div>
 </div>
 </div>
 <div class="sect4">
@@ -2933,7 +2891,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Lots-Extended.png" alt="Lots-Extended ESPD">
 </div>
-<div class="title">Figure 47. Selection of Lots by the CA, mock-up</div>
+<div class="title">Figure 45. Selection of Lots by the CA, mock-up</div>
 </div>
 </div>
 <div class="sect4">
@@ -2951,7 +2909,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_OTHER-EO-Lots_DS.png" alt="Lots tendered">
 </div>
-<div class="title">Figure 48. Lots tendered, data structure</div>
+<div class="title">Figure 46. Lots tendered, data structure</div>
 </div>
 </div>
 <div class="sect4">
@@ -2998,7 +2956,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_OTHER-EO-GROUPS_DS.png" alt="Lots tendered">
 </div>
-<div class="title">Figure 49. Lots tendered, data structure</div>
+<div class="title">Figure 47. Lots tendered, data structure</div>
 </div>
 </div>
 <div class="sect4">
@@ -3013,7 +2971,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_OTHER-EO-Contributions_DS.png" alt="Contributions certificates - data structure">
 </div>
-<div class="title">Figure 50. Contributions certificates</div>
+<div class="title">Figure 48. Contributions certificates</div>
 </div>
 </div>
 <div class="sect4">
@@ -3025,7 +2983,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Subcontractor_relied_on_mockup.png" alt="EO Roles-entities relied on" width="600">
 </div>
-<div class="title">Figure 51. EO Roles-entities relied on, mock-up</div>
+<div class="title">Figure 49. EO Roles-entities relied on, mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the entities upon which the EO relies on</strong>:</p>
@@ -3034,7 +2992,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_OTHER-EO-RELIED_ON-ENTITIES_DS.png" alt="Relied on entities - data structure">
 </div>
-<div class="title">Figure 52. Relied on entities - data structure</div>
+<div class="title">Figure 50. Relied on entities - data structure</div>
 </div>
 </div>
 <div class="sect4">
@@ -3046,7 +3004,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Subcontractor_not_relied_on_mockup.png" alt="EO Roles-entities not relied on" width="600">
 </div>
-<div class="title">Figure 53. EO Roles-entities not relied on, mock-up</div>
+<div class="title">Figure 51. EO Roles-entities not relied on, mock-up</div>
 </div>
 <div class="paragraph">
 <p><strong>Data structure for the entities upon which the EO does not relies on</strong>:</p>
@@ -3055,7 +3013,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_OTHER-EO-NOT_RELIED_ON-ENTITIES_DS.png" alt="Not relied on entities - data structure">
 </div>
-<div class="title">Figure 54. Not relied on entities - data structure</div>
+<div class="title">Figure 52. Not relied on entities - data structure</div>
 </div>
 </div>
 </div>
@@ -3074,7 +3032,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/Extended_EO_XML_Collapsed.png" alt="EO data - collapsed view">
 </div>
-<div class="title">Figure 55. Vision of the data about the EO in a 'collapsed' Extended ESPD</div>
+<div class="title">Figure 53. Vision of the data about the EO in a 'collapsed' Extended ESPD</div>
 </div>
 <div class="paragraph">
 <p>This fragment of XML <strong>does not include the responses to the QUESTION(s)</strong> in the data structures, yet. This is because the Responses have to be associated to a criterion property. The fragment below shows how these criterion properties are prepared and a 'dynamic' UUID is associated to each criterion property.  Later on the response values will use these UUID to link the actual response to each QUESTION (i.e. with each <code>cac:TenderingCriterionProperty</code> element). Therefore the example does not include the data about the the EO yet. To see how the EO provides these data please see the sections below about the Response. There you will see that each element <code>cac:ResponseValue</code> is associated to the UUID of the corresponding <code>cac:TenderingCriterionProperty</code> via the element <code>cbc:ValidatedCriterionPropertyID</code>. For an example of a complete <strong>EXTENDED</strong> ESPD Response XML document you can also see the file <a href="{url-blob-211}/dist/xml/EXTENDED-ESPDResponse-2.1.1.xml">EXTENDED-ESPDResponse-2.1.1.xml</a>.</p>
@@ -3538,9 +3496,10 @@ should be used to indicate the type of identifier used as a value of the <code>s
 </table>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_viii_6_3_economic_operator_representatives"><a class="anchor" href="#_viii_6_3_economic_operator_representatives"></a>VIII.6.3 Economic operator representatives</h4>
+
 </div>
-<div class="sect2">
-<h3 id="_viii_6_3_economic_operator_representatives"><a class="anchor" href="#_viii_6_3_economic_operator_representatives"></a>VIII.6.3 Economic operator representatives</h3>
 <div class="sect3">
 <h4 id="_related_information_requirements_3"><a class="anchor" href="#_related_information_requirements_3"></a>Related information requirements</h4>
 <div class="paragraph">
@@ -3566,7 +3525,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/EO_Representatives.png" alt="EO representatives - mock-up, mock-up">
 </div>
-<div class="title">Figure 56. EO representatives, mock-up</div>
+<div class="title">Figure 54. EO representatives, mock-up</div>
 </div>
 </div>
 <div class="sect3">
@@ -3591,7 +3550,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/EO_Representatives_XSD.png" alt="EO representatives - XSD Schema">
 </div>
-<div class="title">Figure 57. EO representatives, XSD Schema</div>
+<div class="title">Figure 55. EO representatives, XSD Schema</div>
 </div>
 <div class="paragraph">
 <p>Notice that the largest part of the data is held in the component <code>cac:EconomicOperatorParty/cac:Party/cac:PowerOfAttorney/cac:AgentParty/cac:Person</code>. The figure below shows (in blue) the expected elements. See the table "Expecte Elements" and the XML example below for the details (e.g. how to use the <code>cac:Person/cac:Contact</code> element to contact the representative.</p>
@@ -3600,7 +3559,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/EO_PowerOfAttorneyPartyPerson.png" alt="EO representatives - element Person - XSD Schema">
 </div>
-<div class="title">Figure 58. EO representatives - element Person, XSD Schema</div>
+<div class="title">Figure 56. EO representatives - element Person, XSD Schema</div>
 </div>
 <div class="paragraph">
 <p>Contact elements, such as telephone and e-mail are in the <code>cac:Contact</code> associated to the the <code>cac:Person</code> information element:</p>
@@ -3609,7 +3568,7 @@ should be used to indicate the type of identifier used as a value of the <code>s
 <div class="content">
 <img src="_images/PartyPersonContact.png" alt="EO representatives - Contac - XSD Schema">
 </div>
-<div class="title">Figure 59. EO representatives - element Contact, inside Person, XSD Schema</div>
+<div class="title">Figure 57. EO representatives - element Contact, inside Person, XSD Schema</div>
 </div>
 <div class="sect4">
 <h5 id="_expected_elements_basic_and_extended"><a class="anchor" href="#_expected_elements_basic_and_extended"></a>Expected Elements (Basic and Extended)</h5>
@@ -4022,7 +3981,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 <div class="content">
 <img src="_images/TenderingCriterionResponse_XSD.png" alt="cac:TenderingCriterionResponse element">
 </div>
-<div class="title">Figure 60. cac:TenderingCriterionResponse XSD element</div>
+<div class="title">Figure 58. cac:TenderingCriterionResponse XSD element</div>
 </div>
 <div class="paragraph">
 <p>To answer one QUESTION one of the different possible types of values from the <code>cac:ResponseValue</code> element (inside the <code>cac:TenderingCriterionResponse</code>) must be selected. In other words, the types of elements inside the <code>cac:ResponseValue</code> are all <strong>disjoint</strong> amongst themselves.</p>
@@ -4034,7 +3993,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 <div class="content">
 <img src="_images/ResponseValue_XSD.png" alt="cac:ResponseValue XSD element">
 </div>
-<div class="title">Figure 61. cac:ResponseValue XSD element</div>
+<div class="title">Figure 59. cac:ResponseValue XSD element</div>
 </div>
 <div class="paragraph">
 <p>The <code>cac:ApplicablePeriod</code> is used to hold the start date and the end-date provided by the economic operator to a QUESTION for which the expected data is of type 'PERIOD'. (See expected types in the Code List <a href="{url-blob-211}/dist/cl/ods/ESPD-CodeLists-V2.1.1.ods">ResponseDataType</a>).</p>
@@ -4058,7 +4017,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 <div class="content">
 <img src="_images/Period_XSD.png" alt="cac:ApplicablePeriod XSD element">
 </div>
-<div class="title">Figure 62. cac:ApplicablePeriod XSD element</div>
+<div class="title">Figure 60. cac:ApplicablePeriod XSD element</div>
 </div>
 <div class="paragraph">
 <p>One answer to one QUESTION may be linked to multiple evidences. The XSD diagram below shows that to make this link possible the element <code>cac:TenderingCriterionResponse</code> element associates a class <code>cac:EvidenceSupplied</code>. This class contains only one basic information element, a <code>cbc:ID</code>. In UBL, except for <code>cbc:Description</code>, basic information elements (typically prefixed as <code>cbc:</code>) cannot be of multiple cardinality, but associated classes can. Thus the need to place the <code>cbc:ID</code> inside a class. This ID points at an instance of <code>cac:Evidence</code> present in the XML.</p>
@@ -4070,7 +4029,7 @@ cac:Person/cac:Contact/cbc:Telephone</strong></p></td>
 <div class="content">
 <img src="_images/Evidence_Supplied_XSD.png" alt="cac:EvidenceSupplied XSD element">
 </div>
-<div class="title">Figure 63. cac:EvidenceSupplied XSD element</div>
+<div class="title">Figure 61. cac:EvidenceSupplied XSD element</div>
 </div>
 </div>
 <div class="sect3">
@@ -4712,7 +4671,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_viii_8_evidences"><a class="anchor" href="#_viii_8_evidences"></a>VIII.8 Evidences</h3>
+<h3 id="_viii_8_evidence"><a class="anchor" href="#_viii_8_evidence"></a>VIII.8 Evidence</h3>
 <div class="sect3">
 <h4 id="_related_information_requirements_4"><a class="anchor" href="#_related_information_requirements_4"></a>Related information requirements</h4>
 <div class="paragraph">
@@ -4737,7 +4696,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 <div class="content">
 <img src="_images/Evidence_XSD.png" alt="cac:Evidence XSD diagram">
 </div>
-<div class="title">Figure 64. cac:Evidence XSD diagram</div>
+<div class="title">Figure 62. cac:Evidence XSD diagram</div>
 </div>
 <div class="paragraph">
 <p>The UBL-2.2 element <code>cac:Evidence</code> is a specialisation of <code>cac:DocumentReference</code>. This other XSD diagram shows this association and, in blue, highlights the elements expected in the ESPD-EDM V2.1.1:</p>
@@ -4746,7 +4705,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 <div class="content">
 <img src="_images/Evidence_DocumentReference.png" alt="cac:DocumentReference in Evidence">
 </div>
-<div class="title">Figure 65. cac:DocumentReference inside cac:Evidence XSD diagram</div>
+<div class="title">Figure 63. cac:DocumentReference inside cac:Evidence XSD diagram</div>
 </div>
 </div>
 <div class="sect3">
@@ -4761,7 +4720,7 @@ block related to evidences is omitted for the sake of clarity and brevity):</p>
 <div class="content">
 <img src="_images/Convictions__EO_mock-up.png" alt="Conviction EO mock-up">
 </div>
-<div class="title">Figure 66. Conviction 'Participation in criminal organisation', mock-up (EO perspective)</div>
+<div class="title">Figure 64. Conviction 'Participation in criminal organisation', mock-up (EO perspective)</div>
 </div>
 <div class="admonitionblock important">
 <table>
