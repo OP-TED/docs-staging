@@ -204,12 +204,10 @@
 <hr>
 <div class="sect2 text-center">
 <h3 id="_i_introduction"><a class="anchor" href="#_i_introduction"></a>I. Introduction</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_context"><a class="anchor" href="#_context"></a>Context</h3>
 <div class="sect3">
-<h4 id="_the_directive_201424eu_and_the_espd"><a class="anchor" href="#_the_directive_201424eu_and_the_espd"></a>The Directive 2014/24/EU and the ESPD</h4>
+<h4 id="_context"><a class="anchor" href="#_context"></a>Context</h4>
+<div class="sect4">
+<h5 id="_the_directive_201424eu_and_the_espd"><a class="anchor" href="#_the_directive_201424eu_and_the_espd"></a>The Directive 2014/24/EU and the ESPD</h5>
 <div class="paragraph">
 <p>Article 59 of the new Public Procurement Directive 2014/24/EC (henceforth ''the Directive'') introduced a new concept,
 the European Single Procurement Document (ESPD) which is a self-declaration document intended for preliminary evidence
@@ -218,8 +216,8 @@ by public authorities or a third party involved in a procedure. It is thus a val
 of a greater number of potential operators in public procurement procedures and a valuable tool for integrating the European Single Market.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_the_espd_service"><a class="anchor" href="#_the_espd_service"></a>The ESPD Service</h4>
+<div class="sect4">
+<h5 id="_the_espd_service"><a class="anchor" href="#_the_espd_service"></a>The ESPD Service</h5>
 <div class="paragraph">
 <p>In order to make full use of the ESPD concept, the European Commission has established an on-line service available for both suppliers and buyers.
 The main objective of the ESPD is to reduce the administrative burden and lead to considerable simplification of participation in public
@@ -231,8 +229,8 @@ especially SMEs.</p>
 <p>The ESPD Service is currently in version 1.0 and can be accessed at this URL: <a href="https://ec.europa.eu/growth/tools-databases/espd/" class="bare">https://ec.europa.eu/growth/tools-databases/espd/</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_the_electronic_and_structured_espd_xml_documents"><a class="anchor" href="#_the_electronic_and_structured_espd_xml_documents"></a>The electronic and structured ESPD XML documents</h4>
+<div class="sect4">
+<h5 id="_the_electronic_and_structured_espd_xml_documents"><a class="anchor" href="#_the_electronic_and_structured_espd_xml_documents"></a>The electronic and structured ESPD XML documents</h5>
 <div class="paragraph">
 <p>The ESPD Service was designed to provide the ESPD in a machine-readable structured format that will help solutions all over Europe to be interoperable. Aiming at this objective, DG GROW has developed a data model and artefacts.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> for the exchange of the ESPD between any Procurement
 stakeholder&#8217;s system. This document illustrates in detail how to use these artefacts in compliance with the Directive.</p>
@@ -262,8 +260,8 @@ in the ESPDRequest, and providing the sources where evidences can be obtained to
 </div>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_objectives_and_target_audience"><a class="anchor" href="#_objectives_and_target_audience"></a>Objectives and target audience</h3>
+<div class="sect3 text-left">
+<h4 id="_objectives_and_target_audience"><a class="anchor" href="#_objectives_and_target_audience"></a>Objectives and target audience</h4>
 <div class="paragraph text-left">
 <p>The European Commission (COM) has defined a Data Model and XML vocabularies to express the ESPD documents that the ESPD Service exports and imports. However, these Data Models and XML Vocabularies are also intended to be used by any other systems that will use and/or exchange ESPD documents with other systems or in need to render its content into other formats or process them otherwise.
 This document explains and illustrates how to implement XML documents based on the Data Model and XSD Schema. We name this model "ESPD Exchange Data Model" (ESPD-EDM). The model is quite flexible and should cater for future different situations. That the model is flexible is to be considered good news, as it may be easily used for unforeseen needs. However the development of software applications and the interoperability
@@ -276,10 +274,10 @@ between systems require concrete explicit directives and rules that guide the ac
 <p>The content of this document is mainly addressed to the development teams from the Member States, Economic Operators, Information Providers or any other party interested in understanding how the ESPD Exchange Data Model works and how to use it to produce XML instances of the ESPD Request document.</p>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_scope_of_this_document"><a class="anchor" href="#_scope_of_this_document"></a>Scope of this document</h3>
-<div class="sect3">
-<h4 id="_contracts_above_the_threshold_and_below_the_threshold"><a class="anchor" href="#_contracts_above_the_threshold_and_below_the_threshold"></a>Contracts above the threshold and below the threshold</h4>
+<div class="sect3 text-left">
+<h4 id="_scope_of_this_document"><a class="anchor" href="#_scope_of_this_document"></a>Scope of this document</h4>
+<div class="sect4">
+<h5 id="_contracts_above_the_threshold_and_below_the_threshold"><a class="anchor" href="#_contracts_above_the_threshold_and_below_the_threshold"></a>Contracts above the threshold and below the threshold</h5>
 <div class="paragraph">
 <p>The Directive (namely Article 4) regulates in detail those  public procurement procedures which values of contract exceed certain amounts. These amounts, also known as
 ''thresholds'', vary depending on the type of the contract and of the administration level of the contracting authority.</p>
@@ -292,8 +290,8 @@ between systems require concrete explicit directives and rules that guide the ac
 how to create ESPD electronic documents for contracts above the threshold.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_in_scope"><a class="anchor" href="#_in_scope"></a>In-Scope</h4>
+<div class="sect4">
+<h5 id="_in_scope"><a class="anchor" href="#_in_scope"></a>In-Scope</h5>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -305,19 +303,18 @@ how to create ESPD electronic documents for contracts above the threshold.</p>
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_out_of_scope"><a class="anchor" href="#_out_of_scope"></a>Out-of-Scope</h4>
+<div class="sect4">
+<h5 id="_out_of_scope"><a class="anchor" href="#_out_of_scope"></a>Out-of-Scope</h5>
 <div class="paragraph">
 <p>Many of the requirements and recommendations expressed in this document MAY NOT be valid for contracts below the threshold. However, from a purely technical point of view, the examples commented MAY be used to understand how the ESPD-EDM works and to create, in a normalized way, XML instances containing criteria for contracts below the threshold.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect2 text-center">
 <h3 id="_ii_the_espd_exchange_data_model"><a class="anchor" href="#_ii_the_espd_exchange_data_model"></a>II. The ESPD Exchange Data Model</h3>
-
-</div>
-<div class="sect2 text-left">
-<h3 id="_design_approach"><a class="anchor" href="#_design_approach"></a>Design approach</h3>
+<div class="sect3 text-left">
+<h4 id="_design_approach"><a class="anchor" href="#_design_approach"></a>Design approach</h4>
 <div class="paragraph">
 <p>The ESPD Exchange Data Model (ESPD-EDM) was designed to implement the data requirements expressed in
 the Annex 2 of the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">COMMISSION IMPLEMENTING REGULATION (EU) 2016/7</a> of 5 January 2016 (from now
@@ -337,8 +334,8 @@ and domains, both in e-Procurement and beyond e-Procurement.</p>
 for e-Procurement; (3) Methodology and tools are available for the development of new documents, the extension of the existing UBL libraries, the semantic validation of
 XML instances, etc.</p>
 </div>
-<div class="sect3 text-left">
-<h4 id="_data_architecture_overview"><a class="anchor" href="#_data_architecture_overview"></a>Data architecture overview</h4>
+<div class="sect4 text-left">
+<h5 id="_data_architecture_overview"><a class="anchor" href="#_data_architecture_overview"></a>Data architecture overview</h5>
 <div class="paragraph">
 <p>The ESPD Exchange Data Model re-uses three other models, that were defined in parallel to the ESPD, the Core Criterion Data Model, the Core Evidence Data Model, and the OASIS UBL-2.1 common information components.</p>
 </div>
@@ -356,53 +353,6 @@ XML instances, etc.</p>
 <img src="_images/data_architecture.png" alt="data_architecture" width="600" height="400">
 </div>
 <div class="title">Figure 3. High-level view of the ESPD-EDM data architecture</div>
-</div>
-<div class="paragraph text-left">
-<p>The blocks represented in the figure above represents either a document (e.g. ESPDRequest and ESPDResponse) or a library (the rest of the blocks). Per each document or library one XSD Schema has been implemented.
-Each Schema has been assigned its own namespace and a specific prefix representing the namespace.</p>
-</div>
-</div>
-</div>
-<div class="sect2 text-left">
-<h3 id="_design_approach_2"><a class="anchor" href="#_design_approach_2"></a>Design approach</h3>
-<div class="paragraph">
-<p>The ESPD Exchange Data Model (ESPD-EDM) was designed to implement the data requirements expressed in
-the Annex 2 of the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0007">COMMISSION IMPLEMENTING REGULATION (EU) 2016/7</a> of 5 January 2016 (from now
-on "<strong>the Annex to the Regulation 2016/7</strong>"), establishing the standard form for the European Single Document. Additionally to these requirements, the model took also into account the Information
-Requirements Model specified by the CEN/BII-Workshops.<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> (namely Workshop 3), and the latest developments relating to the Virtual Company
-Dossier (VCD) in e-Sens.<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>.</p>
-</div>
-<div class="paragraph">
-<p>One premise that has ruled the design and implementation life-cycle of the ESPD-EDM has been ''not to reinvent the wheel''. Thus some very early key decisions were: (1)
-select a mature business language for the naming, design and implementation of the ESPD-EDM; (2) reuse as much as possible existing information components and libraries
-''as-they-are''; (3) for those entities that are not defined in any standard specification, design new components in such a way that they can be reused in other situations
-and domains, both in e-Procurement and beyond e-Procurement.</p>
-</div>
-<div class="paragraph">
-<p><a href="http://docs.oasis-open.org/ubl/UBL-2.1.html">OASIS UBL-2.1</a> standard was chosen as the best candidate to base the ESPD-EDM upon. The main reasons for this decisions were: (1) The European Commission is already using
-(and recommending) UBL-2.1 for e-Documents.<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> ; (2) Most of the concepts and components necessary for the ESPD documents were already defined by UBL specifically
-for e-Procurement; (3) Methodology and tools are available for the development of new documents, the extension of the existing UBL libraries, the semantic validation of
-XML instances, etc.</p>
-</div>
-<div class="sect3 text-left">
-<h4 id="_data_architecture_overview_2"><a class="anchor" href="#_data_architecture_overview_2"></a>Data architecture overview</h4>
-<div class="paragraph">
-<p>The ESPD Exchange Data Model re-uses three other models, that were defined in parallel to the ESPD, the Core Criterion Data Model, the Core Evidence Data Model, and the OASIS UBL-2.1 common information components.</p>
-</div>
-<div id="ESPD-EDM" class="imageblock text-center">
-<div class="content">
-<img src="_images/ESPD-EDM.png" alt="ESPD-EDM" width="300" height="200">
-</div>
-<div class="title">Figure 4. The ESPD-EDM contains elements defined in three other data models</div>
-</div>
-<div class="paragraph text-left">
-<p>This approach ended up in the development of a ''data architecture''; i.e. different layers of data components. The figure below presents a high-level view of this data architecture for the entire ESPD-EDM. The blocks coloured in green represent libraries of components defined by the UBL-2.1 Technical Committee (TC), whilst the rest have been defined from scratch by COM&#8217;s ESPD development team.</p>
-</div>
-<div id="data_architecture" class="imageblock text-center">
-<div class="content">
-<img src="_images/data_architecture.png" alt="data_architecture" width="600" height="400">
-</div>
-<div class="title">Figure 5. High-level view of the ESPD-EDM data architecture</div>
 </div>
 <div class="paragraph text-left">
 <p>The blocks represented in the figure above represents either a document (e.g. ESPDRequest and ESPDResponse) or a library (the rest of the blocks). Per each document or library one XSD Schema has been implemented.
@@ -604,10 +554,11 @@ xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponent
 </div>
 </div>
 </div>
+</div>
 <div class="sect2 text-left">
 <h3 id="_the_core_criterion_and_core_evidence_data_models_and_vocabularies"><a class="anchor" href="#_the_core_criterion_and_core_evidence_data_models_and_vocabularies"></a>The Core Criterion and Core Evidence Data Models and Vocabularies</h3>
 <div class="paragraph">
-<p>When creating a new ESPD Request XML document, the Contracting Authority (CA) <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup> specifies the series of exclusion and selection ''criteria'' that the Economic Operator (EO) has
+<p>When creating a new ESPD Request XML document, the Contracting Authority (CA) <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> specifies the series of exclusion and selection ''criteria'' that the Economic Operator (EO) has
 to satisfy for a specific Procurement Project. In the ESPD Response, the EO MAY provide where to get evidences that prove it satisfies the criteria required by the CA.</p>
 </div>
 <div class="paragraph">
@@ -619,7 +570,7 @@ simplified overview of these two data models and how they interrelate.</p>
 <div class="content">
 <img src="_images/2_RESP_ESPD-EDM_Overview.png" alt="core_criterion" width="600" height="400">
 </div>
-<div class="title">Figure 6. Core Criterion and Evidence data models (simplified overview)</div>
+<div class="title">Figure 4. Core Criterion and Evidence data models (simplified overview)</div>
 </div>
 <div class="paragraph text-left">
 <p>The Core Criterion and Core Evidence Data Models were designed to be reused in cross-border and cross-sector interoperability. In other words, they are ''business agnostic''.
@@ -639,7 +590,7 @@ the XML Core Evidence Vocabulary. Thus, for the <strong>ESPDRequest</strong>, th
 <div class="content">
 <img src="_images/2_REQ_Criterion_Conceptual_Overview.png" alt="core_criterion_vocabulary" width="600" height="400">
 </div>
-<div class="title">Figure 7. Elements of the Core Criterion Vocabulary used in the ESPD Request</div>
+<div class="title">Figure 5. Elements of the Core Criterion Vocabulary used in the ESPD Request</div>
 </div>
 <div class="literalblock text-left">
 <div class="content">
@@ -649,21 +600,19 @@ the XML Core Evidence Vocabulary. Thus, for the <strong>ESPDRequest</strong>, th
 </div>
 <div class="sect2 text-center">
 <h3 id="_iii_the_espdresponse_xml_document"><a class="anchor" href="#_iii_the_espdresponse_xml_document"></a>III. The ESPDResponse XML document</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_data_model_overview"><a class="anchor" href="#_data_model_overview"></a>Data Model overview</h3>
+<div class="sect3">
+<h4 id="_data_model_overview"><a class="anchor" href="#_data_model_overview"></a>Data Model overview</h4>
 <div class="paragraph">
 <div class="title">text-left]</div>
 <p>The UML Diagram below provides a simplified view of the ESPDResponse document. Notice that the classes herein represented belong to different data-packages.
 Hence each class name is preceded by different prefixes representing their corresponding namespaces: "espd::", "ccv::", "cev::", "cac::" (see ''
-Table 1. Schemas, namespaces and prefixes used by the ESPDResponse''). <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup></p>
+Table 1. Schemas, namespaces and prefixes used by the ESPDResponse''). <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup></p>
 </div>
 <div id="RESP_ESPDResponse_UML" class="imageblock text-center">
 <div class="content">
 <img src="_images/3_RESP_ESPDResponse_UML.png" alt="ESPDResponse UML diagram">
 </div>
-<div class="title">Figure 8. espd::ESPDRequest UML class diagram</div>
+<div class="title">Figure 6. espd::ESPDRequest UML class diagram</div>
 </div>
 <div class="paragraph text-left">
 <p>As you can see in the diagram more than 50% of the classes were already defined in UBL-2.1 (cac-prefixed classes). Moreover, many of the "root" elements in the espd:ESPDRequest class reuse
@@ -678,7 +627,7 @@ components that are commonly used in the ESPD documents are herein sufficiently 
 <div class="content">
 <img src="_images/3_RESP_ESPDResponse_XSD_diagram.png" alt="ESPDRequest XSD diagram">
 </div>
-<div class="title">Figure 9. espd::ESPDResponse XSD diagram</div>
+<div class="title">Figure 7. espd::ESPDResponse XSD diagram</div>
 </div>
 <div class="paragraph text-left">
 <p>According to the UML Diagram an ESPDResponse XML document is represented by the class <code>espd:ESPDResponse</code>.
@@ -703,7 +652,7 @@ this class to specify whether the Procurement Project has lots or not and to ide
 current version of the ESPDService, however, still does not fully uses this feature and permits only to describe them.</p>
 </li>
 <li>
-<p>The <code>ccv:Criterion</code> class belongs to the Core Criterion Vocabulary data-package, thus the ccv: prefix.<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup> . It is a compulsory element of multiple cardinality allowing for the
+<p>The <code>ccv:Criterion</code> class belongs to the Core Criterion Vocabulary data-package, thus the ccv: prefix.<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> . It is a compulsory element of multiple cardinality allowing for the
 specification of both the exclusion and selection criteria in an ESPD Request.</p>
 </li>
 <li>
@@ -754,8 +703,8 @@ of externalised codes. If you need the Genericode files you can download them al
 </table>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_root_properties"><a class="anchor" href="#_root_properties"></a>Root properties</h3>
+<div class="sect3 text-left">
+<h4 id="_root_properties"><a class="anchor" href="#_root_properties"></a>Root properties</h4>
 <div class="paragraph">
 <p>The ESPDResponse main class represents the entire ESPDResponse documents. All the data (root properties) of the document "hang" directly from the class or are other classes associated to it.</p>
 </div>
@@ -1073,8 +1022,8 @@ normalizedString
 </tbody>
 </table>
 </div>
-<div class="sect2 text-left">
-<h3 id="_ublextensions_element"><a class="anchor" href="#_ublextensions_element"></a>UBLExtensions element</h3>
+<div class="sect3 text-left">
+<h4 id="_ublextensions_element"><a class="anchor" href="#_ublextensions_element"></a>UBLExtensions element</h4>
 <div class="paragraph">
 <p>The UBL 2 Naming and Design Rules (NDR) establish that the first element of a
 UBL-conformant XML document should be <code>ext:UBLExtensions</code> element. If used the
@@ -1107,6 +1056,7 @@ document type and still have their documents be validated by the standard UBL sc
 </ol>
 </div>
 </div>
+</div>
 <div class="sect2 text-left">
 <h3 id="_contracting_party"><a class="anchor" href="#_contracting_party"></a>Contracting Party</h3>
 <div class="paragraph">
@@ -1121,7 +1071,7 @@ the details about the <code>cac:Party</code> Common Aggregate Component.</p>
 <div class="content">
 <img src="_images/CMM_ContractingParty.png" alt="EO details, XSD" width="600" height="500">
 </div>
-<div class="title">Figure 10. ContractingParty XSD diagram details</div>
+<div class="title">Figure 8. ContractingParty XSD diagram details</div>
 </div>
 <div class="sect3 text-left">
 <h4 id="_class_caccontractingparty"><a class="anchor" href="#_class_caccontractingparty"></a>Class cac:ContractingParty</h4>
@@ -1142,7 +1092,7 @@ to the ESPD Service.</p>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock">"<em>A class representing the contracting authority or contracting entity who is buying supplies,
 services or public works using a tendering procedure as described in the applicable directive
-(Directives 2014/24/EU, 2014/25/EU)</em>" <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p></td>
+(Directives 2014/24/EU, 2014/25/EU)</em>" <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Elements</strong></p></td>
@@ -1255,7 +1205,7 @@ to the epsd::EconomicOperatorParty class is restricted to 1. This element is the
 <div class="content">
 <img src="_images/EO_UML_Details.png" alt="EO details, UML" width="1000" height="900">
 </div>
-<div class="title">Figure 11. Class EconomicOperatorParty UML diagram details</div>
+<div class="title">Figure 9. Class EconomicOperatorParty UML diagram details</div>
 </div>
 <div class="paragraph text-left">
 <p>This other figure below shows the equivalent (abbreviated) XSD schema:</p>
@@ -1264,7 +1214,7 @@ to the epsd::EconomicOperatorParty class is restricted to 1. This element is the
 <div class="content">
 <img src="_images/EO_XSD_Details.png" alt="EO details, XSD" width="600">
 </div>
-<div class="title">Figure 12. Class EconomicOperatorParty UML diagram details</div>
+<div class="title">Figure 10. Class EconomicOperatorParty UML diagram details</div>
 </div>
 <div class="sect3 text-left">
 <h4 id="_economicoperatorparty"><a class="anchor" href="#_economicoperatorparty"></a>EconomicOperatorParty</h4>
@@ -1288,7 +1238,7 @@ only uses a reduced subset of the component <code>cac:Party</code>.</p>
 <td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock">"<em>A class representing any natural or legal person or public entity or group of such persons
 and/or entities, including any temporary association of undertakings, which offers the
 execution of works and/or a work, the supply of products or the provision of services on the
-market in the context for which the tender where the ESPDResponse is submitted</em>"<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup></p></td>
+market in the context for which the tender where the ESPDResponse is submitted</em>"<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property</strong></p></td>
@@ -1393,7 +1343,7 @@ country where this person is registered (i.e. in a civil base register).</p>
 <div class="content">
 <img src="_images/Representative_XSD_Details.png" alt="EO details, UML" width="1000" height="900">
 </div>
-<div class="title">Figure 13. Class RepresentativeNaturalPerson details</div>
+<div class="title">Figure 11. Class RepresentativeNaturalPerson details</div>
 </div>
 <table class="tableblock frame-all grid-all stretch text-left">
 <caption class="title">Table 6. Class espd:RepresentativeNaturalPerson</caption>
@@ -1505,7 +1455,7 @@ representative, as shown in this example:</p>
 <div class="content">
 <img src="_images/EO_Party_XSD.png" alt="EO details, XSD" width="1000" height="900">
 </div>
-<div class="title">Figure 14. EO&#8217;s cac:Party sub-component</div>
+<div class="title">Figure 12. EO&#8217;s cac:Party sub-component</div>
 </div>
 <div class="paragraph">
 <p>The ESPD Service uses the class <code>cac:Party</code> to identify the Economic Operator. Although this UBL-2.1 class defines
@@ -1669,7 +1619,7 @@ definition provided by UBL in the table below).</p>
 <div class="content">
 <img src="_images/CMM_ProcurementProjectLot.png" alt="EO details, XSD" width="600" height="500">
 </div>
-<div class="title">Figure 15. cac:ProcurementProjectLot XSD diagram details</div>
+<div class="title">Figure 13. cac:ProcurementProjectLot XSD diagram details</div>
 </div>
 <table class="tableblock frame-all grid-all stretch text-left">
 <caption class="title">Table 8. Class CMM_ProcurementProjectLot, elements expected by the ESPD Service</caption>
@@ -1683,7 +1633,7 @@ definition provided by UBL in the table below).</p>
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="5"><p class="tableblock">"<em>One of the parts of a procurement project that is being subdivided to allow the contracting party
-to award different lots to different economic operators under different contracts</em>"<sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup></p></td>
+to award different lots to different economic operators under different contracts</em>"<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Elements</strong></p></td>
@@ -1744,7 +1694,7 @@ Evidence Data Models used in the ESPDResponse XML document.</p>
 <div class="content">
 <img src="_images/CCEV_UML.png" alt="UML_representation" width="1000" height="900">
 </div>
-<div class="title">Figure 16. UML diagram for the CC and CE Data Models used in the ESPDResponse XML documents</div>
+<div class="title">Figure 14. UML diagram for the CC and CE Data Models used in the ESPDResponse XML documents</div>
 </div>
 <div class="paragraph">
 <p>As far as the ESPD Service is concerned the above UML diagram SHOULD be interpreted as follows:</p>
@@ -1816,7 +1766,7 @@ However <strong>this does not mean that an ESPD conformant Service will accept t
 certain data are not provided (or all of them for that matter)</strong>. The compulsoriness of the ESPD Service documents
 elements is not controlled solely by the XSD Schema. Instead the cardinality of the elements is also validated based on ''rules''.
 These rules are assertions about the restrictions that affect an element,  an attribute or the
-relationship between classes.<sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.
+relationship between classes.<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>.
 In the tables below, describing each class, the optionality or compulsoriness is indicated in respect of the ESPD Service needs, and
 regardless of the XSD cardinality.
 </td>
@@ -1830,7 +1780,7 @@ regardless of the XSD cardinality.
 <div class="content">
 <img src="_images/CCEV_XSD.png" alt="UML_representation" width="600" height="500">
 </div>
-<div class="title">Figure 17. XSD diagram for the CCV and CEV used in the ESPDResponse XML documents</div>
+<div class="title">Figure 15. XSD diagram for the CCV and CEV used in the ESPDResponse XML documents</div>
 </div>
 <div class="paragraph">
 <p>The tables below list and describe each class of the Core Criterion Vocabulary and Core Evidence
@@ -1993,7 +1943,7 @@ than the ones defined in the
 <div class="content">
 <img src="_images/LegislationReference.png" alt="UML_representation" width="1200" height="1000">
 </div>
-<div class="title">Figure 18. LegislationReference XSD Diagram</div>
+<div class="title">Figure 16. LegislationReference XSD Diagram</div>
 </div>
 <table class="tableblock frame-all grid-all stretch text-left">
 <caption class="title">Table 10. Class ccv:LegislationReference</caption>
@@ -2116,7 +2066,7 @@ EUR-LEX web-page; e.g. <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?u
 <div class="content">
 <img src="_images/RequirementGroup.png" alt="UML_representation" width="1000" height="600">
 </div>
-<div class="title">Figure 19. XSD Diagram of the RequirementGroup class</div>
+<div class="title">Figure 17. XSD Diagram of the RequirementGroup class</div>
 </div>
 <table class="tableblock frame-all grid-all stretch text-left">
 <caption class="title">Table 11. Class ccv:RequirementGroup</caption>
@@ -2224,7 +2174,7 @@ complex decision structures and capture faithfully the data represented in highl
 <div class="content">
 <img src="_images/Requirement_XSD.png" alt="EO details, UML" width="1000" height="900">
 </div>
-<div class="title">Figure 20. XSD Diagram of the class Requirement</div>
+<div class="title">Figure 18. XSD Diagram of the class Requirement</div>
 </div>
 <table class="tableblock frame-all grid-all stretch text-left">
 <caption class="title">Table 12. Class ccv:Requirement</caption>
@@ -2304,7 +2254,7 @@ current version of the ESPD Service'').</p>
 <div class="content">
 <img src="_images/Response_XSD.png" alt="EO details, UML" width="600" height="500">
 </div>
-<div class="title">Figure 21. XSD Diagram of the class Response</div>
+<div class="title">Figure 19. XSD Diagram of the class Response</div>
 </div>
 <table class="tableblock frame-all grid-all stretch text-left">
 <caption class="title">Table 13. Class ccv:Response</caption>
@@ -2577,7 +2527,7 @@ shown in the XSD diagram below:</p>
 <div class="content">
 <img src="_images/Evidence_XSD.png" alt="UML_representation" width="1000" height="900">
 </div>
-<div class="title">Figure 22. XSD diagram for class cev:Evidence</div>
+<div class="title">Figure 20. XSD diagram for class cev:Evidence</div>
 </div>
 <table class="tableblock frame-all grid-all stretch text-left">
 <caption class="title">Table 14. Class ccv:Evidence</caption>
@@ -2849,13 +2799,13 @@ is set to 'No' (set to false). See examples amongst the Selection criteria.</p>
 <div class="content">
 <img src="_images/DS_CRITERION.EXCLUSION.CONVICTIONS.png" alt="data_flow_design" width="900">
 </div>
-<div class="title">Figure 23. General data-structure design rule for criteria and requirements with a ''yes'' or ''no'' answer"</div>
+<div class="title">Figure 21. General data-structure design rule for criteria and requirements with a ''yes'' or ''no'' answer"</div>
 </div>
 <div id="data_struct_design_legend" class="imageblock text-center">
 <div class="content">
 <img src="_images/DS_CRITERION.EXCLUSION.CONVICTIONS_legend.png" alt="data_flow_design" width="900">
 </div>
-<div class="title">Figure 24. Legend</div>
+<div class="title">Figure 22. Legend</div>
 </div>
 <div class="paragraph text-left">
 <p>The interpretation of this diagram could be as follows:</p>
@@ -2869,7 +2819,7 @@ is set to 'No' (set to false). See examples amongst the Selection criteria.</p>
 <p>The first group of requirements has one requirement and one sub-group or requirements;</p>
 </li>
 <li>
-<p>If the response to the requirement is "Yes" (ON TRUE <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>)
+<p>If the response to the requirement is "Yes" (ON TRUE <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>)
 then the ESPD Service application will show four data fields and a new subgroup with an additional question. Thus (on True) the EO will have to provide the date of the conviction,
 the reason, who was convicted and for how long.  If the response is "No", then the EO will proceed providing data about whether there&#8217;s online evidence or not
 regarding to the absence of conviction (if that is possible).</p>
@@ -2904,9 +2854,8 @@ ESPD Service is currently being addressed in order to overcome these limitations
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2 text-left">
-<h3 id="_1_exclusion_criteria"><a class="anchor" href="#_1_exclusion_criteria"></a>1. <strong>EXCLUSION CRITERIA</strong></h3>
+<div class="sect3 text-left">
+<h4 id="_1_exclusion_criteria"><a class="anchor" href="#_1_exclusion_criteria"></a>1. <strong>EXCLUSION CRITERIA</strong></h4>
 <div class="paragraph">
 <p>For Procurement Projects where the value of the contract is above the threshold, all
 ESPDRespone XML documents MUST specify all the exclusion criteria defined in the Directive. Thus the following general rule:</p>
@@ -2937,7 +2886,7 @@ within each category (leaves in text without boxes):</p>
 <div class="content">
 <img src="_images/exclusion_criteria_taxonomy.png" alt="exclusion_criteria" width="800" height="1200">
 </div>
-<div class="title">Figure 25. Exclusion criteria taxonomy</div>
+<div class="title">Figure 23. Exclusion criteria taxonomy</div>
 </div>
 <div class="paragraph text-left">
 <p>Each of these categories has its own particular data structure, which can be represented as
@@ -2989,12 +2938,11 @@ and the <a href="https://github.com/OP-TED/ESPD-EDM/blob/v1.0.2/docs/src/main/as
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2 text-left">
-<h3 id="_convictions"><a class="anchor" href="#_convictions"></a>Convictions</h3>
+<div class="sect4 text-left">
+<h5 id="_convictions"><a class="anchor" href="#_convictions"></a>Convictions</h5>
 <div class="paragraph">
 <p>The label ''Convictions'' groups all the criteria related to the offences for which an
-Economic Operator may have been convicted <sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup>:</p>
+Economic Operator may have been convicted <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3011,7 +2959,7 @@ is organised. This other figure represents practically the same idea, but from a
 <div class="content">
 <img src="_images/DF_CRITERION.EXCLUSION.CONVICTIONS.png" alt="exclusion_convictions_data_structure" width="900">
 </div>
-<div class="title">Figure 26. Data-structure representation for convictions (CRITERION.EXCLUSION.CONVICTIONS.*)</div>
+<div class="title">Figure 24. Data-structure representation for convictions (CRITERION.EXCLUSION.CONVICTIONS.*)</div>
 </div>
 <div class="listingblock">
 <div class="title">XML example of a conviction exclusion criterion</div>
@@ -3185,7 +3133,7 @@ The answer to this Requirement will be considered the answer to the Criterion an
 <div class="title">General rule 5: Compulsory use of the UUIDs defined by COM</div>
 <div class="paragraph">
 <p>ESPD XML documents intended to be conformant to the ESPD Service MUST use the Universally Unique Identifiers provided by COM for Criterion, RequirementGroup and Requirement.
-These UUIDs are the same as the ones used in e-Certis.<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup>.</p>
+These UUIDs are the same as the ones used in e-Certis.<sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.</p>
 </div>
 </td>
 </tr>
@@ -3206,7 +3154,7 @@ by the ESPD. This would enhance the cross-border and cross-sector semantic and t
 <div class="paragraph">
 <p>Thus, in the case of Convictions, a new requirement could be introduced in G1 (see figures above) asking for the ECRIS Code corresponding to the offence that will be specified in
 the Response in case the Economic Operator answered ''yes'' to the first Requirement. The ECRIS Codes can be consulted in the Annex to the COUNCIL DECISION 2009/316/JHA of 6 April
-2009 on the establishment of the European Criminal Records Information System (ECRIS) in application of Article 11 of Framework Decision 2009/315/JHA.<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup>.</p>
+2009 on the establishment of the European Criminal Records Information System (ECRIS) in application of Article 11 of Framework Decision 2009/315/JHA.<sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>.</p>
 </div>
 </td>
 </tr>
@@ -3228,8 +3176,8 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_contributions"><a class="anchor" href="#_contributions"></a>Contributions</h3>
+<div class="sect4 text-left">
+<h5 id="_contributions"><a class="anchor" href="#_contributions"></a>Contributions</h5>
 <div class="paragraph text-left">
 <p>The category ''Contributions'' encompasses two criteria:</p>
 </div>
@@ -3247,7 +3195,7 @@ related to this criterion;</p>
 <div class="content">
 <img src="_images/14_exclusion_contributions_data_struct.png" alt="exclusion_contributions_data_structure" width="900">
 </div>
-<div class="title">Figure 27. Data-structure representation for contributions (EXCLUSION.CONTRIBUTIONS.*)</div>
+<div class="title">Figure 25. Data-structure representation for contributions (EXCLUSION.CONTRIBUTIONS.*)</div>
 </div>
 <div class="paragraph text-left">
 <p>The fragment of XML below shows the implementation of both in the ESPD Service:</p>
@@ -3451,8 +3399,8 @@ specified in each requirement of the ESPDRequest.xml.</p>
 </table>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_social"><a class="anchor" href="#_social"></a>Social</h3>
+<div class="sect4 text-left">
+<h5 id="_social"><a class="anchor" href="#_social"></a>Social</h5>
 <div class="paragraph">
 <p>The ''Social'' group of criteria refers to breaching of social obligations like the ones
 related to social laws:</p>
@@ -3476,7 +3424,7 @@ and ''breaching of obligations in the fields of labour law''.</p>
 <div class="content">
 <img src="_images/15_exclusion_social__data_struct.png" alt="exclusion_social__data_structure" width="600">
 </div>
-<div class="title">Figure 28. Data-structure representation for social-related criteria (EXCLUSION.SOCIAL.*)</div>
+<div class="title">Figure 26. Data-structure representation for social-related criteria (EXCLUSION.SOCIAL.*)</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3607,8 +3555,8 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_business"><a class="anchor" href="#_business"></a>Business</h3>
+<div class="sect4 text-left">
+<h5 id="_business"><a class="anchor" href="#_business"></a>Business</h5>
 <div class="paragraph">
 <p>The category ''Business'' encompasses the following group of criteria:</p>
 </div>
@@ -3626,7 +3574,7 @@ related to this criterion;</p>
 <div class="content">
 <img src="_images/16_exclusion_business_data_struct.png" alt="exclusion_business_data_structure" width="600">
 </div>
-<div class="title">Figure 29. Data-structure representation for all the business-related criteria (EXCLUSION.BUSINESS.*)</div>
+<div class="title">Figure 27. Data-structure representation for all the business-related criteria (EXCLUSION.BUSINESS.*)</div>
 </div>
 <div class="paragraph text-left">
 <p>The piece of XML below is a fragment of an ESPD Request XML document.
@@ -3742,7 +3690,7 @@ related to this criterion;</p>
 <div class="literalblock">
 <div class="content">
 <pre>    [.text-left]
-== Misconduct</pre>
+==== Misconduct</pre>
 </div>
 </div>
 </li>
@@ -3750,7 +3698,7 @@ related to this criterion;</p>
 </div>
 <div class="paragraph">
 <p>The category ''Misconduct'' encompasses two criteria that share the same structure as the one used for the ''social'' group of criteria (see sub-section
-''How to specify ''social'' related criteria, above).<sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
+''How to specify ''social'' related criteria, above).<sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup></p>
 </div>
 <div class="ulist">
 <ul>
@@ -3766,7 +3714,7 @@ related to this criterion;</p>
 <div class="content">
 <img src="_images/17_exclusion_misconduct_data_struct.png" alt="exclusion_misconduct_data_structure" width="600">
 </div>
-<div class="title">Figure 30. Data-structure representation for the misconduct-related criteria (EXCLUSION.MISCONDUCT.*)</div>
+<div class="title">Figure 28. Data-structure representation for the misconduct-related criteria (EXCLUSION.MISCONDUCT.*)</div>
 </div>
 <div class="paragraph text-left">
 <p>The piece of XML below is a fragment of an ESPD Response XML document.
@@ -3851,8 +3799,8 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_conflict_of_interest"><a class="anchor" href="#_conflict_of_interest"></a>Conflict of interest</h3>
+<div class="sect4 text-left">
+<h5 id="_conflict_of_interest"><a class="anchor" href="#_conflict_of_interest"></a>Conflict of interest</h5>
 <div class="paragraph">
 <p>The category ''Conflicts of Interest'' encompasses different exclusion criteria which are
 more heterogeneous than the ones described until now. Three different data structures are
@@ -3892,7 +3840,7 @@ comparable sanctions'' is the same as the ones used for the exclusion criteria g
 <div class="content">
 <img src="_images/18_early_termination_data_struct.png" alt="exclusion_misconduct_data_structure" width="600">
 </div>
-<div class="title">Figure 31. Data-structure representation for the CONFLICT_OF_INTEREST.EARLY_TERMINATION criterion</div>
+<div class="title">Figure 29. Data-structure representation for the CONFLICT_OF_INTEREST.EARLY_TERMINATION criterion</div>
 </div>
 <div class="paragraph">
 <p>The piece of XML below is a fragment of an ESPD Response XML document.
@@ -3977,8 +3925,8 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_procedure_preparation"><a class="anchor" href="#_procedure_preparation"></a>Procedure preparation</h3>
+<div class="sect4 text-left">
+<h5 id="_procedure_preparation"><a class="anchor" href="#_procedure_preparation"></a>Procedure preparation</h5>
 <div class="paragraph">
 <p>The data structures for the criterion ''Direct or indirect involvement in the
 preparation of this procurement procedure'' are the simplest ones:</p>
@@ -3987,7 +3935,7 @@ preparation of this procurement procedure'' are the simplest ones:</p>
 <div class="content">
 <img src="_images/19_interest_preparation_data_struct.png" alt="interest_preparation_data_struct" width="600">
 </div>
-<div class="title">Figure 32. Data-structure representation for the &#8230;&#8203;.CONFLICT_OF_INTEREST.PREPARATION criterion</div>
+<div class="title">Figure 30. Data-structure representation for the &#8230;&#8203;.CONFLICT_OF_INTEREST.PREPARATION criterion</div>
 </div>
 <div class="paragraph text-left">
 <p>The piece of XML below corresponds to the implementation of the criterion
@@ -4049,8 +3997,8 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_procedure_participation"><a class="anchor" href="#_procedure_participation"></a>Procedure participation</h3>
+<div class="sect4 text-left">
+<h5 id="_procedure_participation"><a class="anchor" href="#_procedure_participation"></a>Procedure participation</h5>
 <div class="paragraph">
 <p>Data structure for the criterion ''Conflict of interest due to its participation
 in the procurement procedure'':</p>
@@ -4059,7 +4007,7 @@ in the procurement procedure'':</p>
 <div class="content">
 <img src="_images/20_participation_criterion_data_struct.png" alt="participation_criterion_data_structure" width="600">
 </div>
-<div class="title">Figure 33. Data-structure representation for the &#8230;&#8203;CONFLICT_OF_INTEREST.PARTICIPATION criterion</div>
+<div class="title">Figure 31. Data-structure representation for the &#8230;&#8203;CONFLICT_OF_INTEREST.PARTICIPATION criterion</div>
 </div>
 <div class="paragraph">
 <p>The piece of XML below is a fragment of an ESPD Response XML document. This fragment shows the implementation of the conflict of interest criterion ''Conflict of
@@ -4109,8 +4057,8 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_misinterpretation"><a class="anchor" href="#_misinterpretation"></a>Misinterpretation</h3>
+<div class="sect4 text-left">
+<h5 id="_misinterpretation"><a class="anchor" href="#_misinterpretation"></a>Misinterpretation</h5>
 <div class="paragraph">
 <p>Data structure for the criterion
 ''Guilty of misinterpretation, withheld information, able to provide required documents
@@ -4120,7 +4068,7 @@ and obtained confidential information of this procedure'':</p>
 <div class="content">
 <img src="_images/21_misinterpretation_criterion_data_struct.png" alt="participation_criterion_data_structure" width="600">
 </div>
-<div class="title">Figure 34. Data-structure representation for the CONFLICT_OF_INTEREST.MISINTERPRETATION criterion</div>
+<div class="title">Figure 32. Data-structure representation for the CONFLICT_OF_INTEREST.MISINTERPRETATION criterion</div>
 </div>
 <div class="paragraph">
 <p>This fragment of XMl code shows the implementation of the conflict of interest
@@ -4171,8 +4119,8 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_other_national"><a class="anchor" href="#_other_national"></a>Other national</h3>
+<div class="sect4 text-left">
+<h5 id="_other_national"><a class="anchor" href="#_other_national"></a>Other national</h5>
 <div class="paragraph">
 <p>Additionally to the exclusion criteria indicated in the Directive the Contracting Authorities MAY
 add other exclusion criteria that are specific to their Member State at a national or subnational
@@ -4193,7 +4141,7 @@ which data structure is as simple as the one illustrated below:</p>
 <div class="content">
 <img src="_images/21_misinterpretation_criterion_data_struct.png" alt="participation_criterion_data_structure" width="600">
 </div>
-<div class="title">Figure 35. Data-structure representation for the CRITERION.EXCLUSION.NATIONAL.OTHER criterion</div>
+<div class="title">Figure 33. Data-structure representation for the CRITERION.EXCLUSION.NATIONAL.OTHER criterion</div>
 </div>
 <div class="paragraph text-left">
 <p>The piece of XML below shows the implementation of the Criterion ''Purely national exclusion grounds'':</p>
@@ -4290,8 +4238,9 @@ related to this criterion;</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_2_selection_criteria"><a class="anchor" href="#_2_selection_criteria"></a>2. <strong>SELECTION CRITERIA</strong></h3>
+</div>
+<div class="sect3">
+<h4 id="_2_selection_criteria"><a class="anchor" href="#_2_selection_criteria"></a>2. <strong>SELECTION CRITERIA</strong></h4>
 <div class="paragraph">
 <p>The range of criteria related to the selection of Economic Operators is larger and more
 heterogeneous than the one related to the exclusion criteria. The figure below is intended to
@@ -4302,7 +4251,7 @@ identify and list all the categories (branches in text boxes) and criteria
 <div class="content">
 <img src="_images/SelectionCriteriaTaxonomy.png" alt="selection_criteria_taxonomy" width="1000">
 </div>
-<div class="title">Figure 36. Selection criteria taxonomy</div>
+<div class="title">Figure 34. Selection criteria taxonomy</div>
 </div>
 <div class="paragraph text-left">
 <p>Some groups or sub-groups of selection criteria share the same structure, while other have their
@@ -4326,9 +4275,8 @@ This is clearly illustrated for the selection suitability criteria in the next s
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2 text-left">
-<h3 id="_suitability"><a class="anchor" href="#_suitability"></a>Suitability</h3>
+<div class="sect4 text-left">
+<h5 id="_suitability"><a class="anchor" href="#_suitability"></a>Suitability</h5>
 <div class="paragraph">
 <p>The criteria under the category ''Suitability'' use two groups of simple data structures:</p>
 </div>
@@ -4359,7 +4307,7 @@ This is clearly illustrated for the selection suitability criteria in the next s
 <div class="content">
 <img src="_images/25_selection_suitability_enrolment_data_struct.png" alt="selection_suitability_enrolment_data_structure" width="600">
 </div>
-<div class="title">Figure 37. Detailed data-structure representation for suitability (CRITERION.SELECTION.SUITABILITY.ENROLMENT.*)</div>
+<div class="title">Figure 35. Detailed data-structure representation for suitability (CRITERION.SELECTION.SUITABILITY.ENROLMENT.*)</div>
 </div>
 <div class="admonitionblock note text-left">
 <table>
@@ -4370,7 +4318,7 @@ This is clearly illustrated for the selection suitability criteria in the next s
 <td class="content">
 <div class="paragraph">
 <p>For the requirement R 1.1, both answers ''Yes'' or ''No'' redirect the flow of the data to the next requirement.
-However, the application controlling this flow (e.g. the ESPD Service) will persist and use.<sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup> the answer before deciding skipping to the next requirement.</p>
+However, the application controlling this flow (e.g. the ESPD Service) will persist and use.<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup> the answer before deciding skipping to the next requirement.</p>
 </div>
 </td>
 </tr>
@@ -4478,8 +4426,8 @@ However, the application controlling this flow (e.g. the ESPD Service) will pers
 </table>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_authorisation_or_membership"><a class="anchor" href="#_authorisation_or_membership"></a>Authorisation or membership</h3>
+<div class="sect4 text-left">
+<h5 id="_authorisation_or_membership"><a class="anchor" href="#_authorisation_or_membership"></a>Authorisation or membership</h5>
 <div class="paragraph">
 <p>The only difference between this group of suitability criteria and the enrolment one, above,
 is that it adds a requirement asking for a description. See the <a href="https://github.com/OP-TED/ESPD-EDM/blob/v1.0.2/docs/src/main/asciidoc/modules/ROOT/code_lists/xls/CriteriaTaxonomy.xlsx">Selection Criteria Table</a>,
@@ -4489,7 +4437,7 @@ data-structure and example below).</p>
 <div class="content">
 <img src="_images/27_selection_suitability_authorisation_data_struct.png" alt="selection_suitability_authorisation" width="600">
 </div>
-<div class="title">Figure 38. Detailed data-structure representation for suitability (CRITERION.SELECTION.SUITABILITY.AUTHORISATION_MEMBERSHIP.*)",</div>
+<div class="title">Figure 36. Detailed data-structure representation for suitability (CRITERION.SELECTION.SUITABILITY.AUTHORISATION_MEMBERSHIP.*)",</div>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of the criterion
@@ -4593,8 +4541,8 @@ Prepare to accommodate individuals with a physical disability before Church meet
 </table>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_economic_and_financial_standing"><a class="anchor" href="#_economic_and_financial_standing"></a>Economic and financial standing</h3>
+<div class="sect4 text-left">
+<h5 id="_economic_and_financial_standing"><a class="anchor" href="#_economic_and_financial_standing"></a>Economic and financial standing</h5>
 <div class="paragraph">
 <p>The ''Economic Financial Standing'' category encompasses one group of subcategories and four criteria
 with specific data structures:</p>
@@ -4622,13 +4570,13 @@ with specific data structures:</p>
 <p>The following subsections show the data structures and examples for these three groups of criteria related to economic and financial standing criteria.</p>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_turnovers"><a class="anchor" href="#_turnovers"></a>Turnovers</h3>
+<div class="sect4 text-left">
+<h5 id="_turnovers"><a class="anchor" href="#_turnovers"></a>Turnovers</h5>
 <div class="paragraph">
 <p>The group of criteria relating to turnovers is somehow special in the sense that it introduces a kind of
 ''iterative structure'' that the criteria studied so far do not implement. As illustrated in the
 figures and example below, this iterative structure for turnovers allows repeating a specific tuple
-<sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> of amount and year as many
+<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup> of amount and year as many
 times as required in the specific call for tender (normally values for the past three years).</p>
 </div>
 <div class="paragraph text-left">
@@ -4639,7 +4587,7 @@ The corresponding data-structure diagram would be this one. Notice that each tup
 <div class="content">
 <img src="_images/29_selection_economic_financial_standing_turnover_representation_struct.png" alt="selection_economic_financial_standing_turnover_representation" width="600">
 </div>
-<div class="title">Figure 39. Detailed data-structure representation for turnovers (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.*)</div>
+<div class="title">Figure 37. Detailed data-structure representation for turnovers (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.*)</div>
 </div>
 <div class="paragraph text-left">
 <p>The fragment of XML below shows the implementation of the
@@ -4866,8 +4814,8 @@ This will be improved in the future.</p>
 </table>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_ratio"><a class="anchor" href="#_ratio"></a>Ratio</h3>
+<div class="sect4 text-left">
+<h5 id="_ratio"><a class="anchor" href="#_ratio"></a>Ratio</h5>
 <div class="paragraph">
 <p>For the time being the only  type of ratio referred to in the ESPD is ''Financial Ratio''
 (thus its inclusion under the Economic and Financial category of criteria).
@@ -4884,7 +4832,7 @@ lies in the tuple of values required, (Description, Ratio) instead of (Year, Amo
 <div class="content">
 <img src="_images/Ratio_struct.png" alt="selection_economic_financial_turnovers" width="600">
 </div>
-<div class="title">Figure 40. Detailed data-structure representation for turnovers (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.*)</div>
+<div class="title">Figure 38. Detailed data-structure representation for turnovers (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.*)</div>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of criterion ''Financial Ratio'' in the ESPD Service:</p>
@@ -5019,6 +4967,8 @@ provides an attribute named	''unitCode''. In the case of the Ratio Criterion a v
 </table>
 </div>
 </div>
+</div>
+</div>
 <div class="sect2 text-left">
 <h3 id="_risk_indemnity_insurance"><a class="anchor" href="#_risk_indemnity_insurance"></a>Risk indemnity insurance</h3>
 <div class="paragraph">
@@ -5028,7 +4978,7 @@ provides an attribute named	''unitCode''. In the case of the Ratio Criterion a v
 <div class="content">
 <img src="_images/33_selection_economic_financial_risk_data_struct.png" alt="selection_economic_financial_risk_data_structure" width="600">
 </div>
-<div class="title">Figure 41. Data-structure representation for a risk indemnity insurance criterion (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE)</div>
+<div class="title">Figure 39. Data-structure representation for a risk indemnity insurance criterion (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.RISK_INDEMNITY_INSURANCE)</div>
 </div>
 </div>
 <div class="sect2 text-left">
@@ -5042,7 +4992,7 @@ the Economic Operator states the date on which it was set up or started trading.
 <div class="content">
 <img src="_images/35_selection_economic_financial_data_struct.png" alt="selection_economic_financial_data_structure" width="600">
 </div>
-<div class="title">Figure 42. Data-structure representation for the criterion Setup of the economic operator (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP)</div>
+<div class="title">Figure 40. Data-structure representation for the criterion Setup of the economic operator (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.TURNOVER.SET_UP)</div>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of this criterion ''Set up of economic operator'' in the ESPD Service:</p>
@@ -5115,7 +5065,7 @@ In this case a simple description is requested, plus additional information if a
 <div class="content">
 <img src="_images/37_selection_economic_financial_other_struct.png" alt="selection_economic_financial_other" width="600">
 </div>
-<div class="title">Figure 43. Data-structure representation for a ''Other economic or financial'' criterion (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENTS)</div>
+<div class="title">Figure 41. Data-structure representation for a ''Other economic or financial'' criterion (CRITERION.SELECTION.ECONOMIC_FINANCIAL_STANDING.OTHER_REQUIREMENTS)</div>
 </div>
 </div>
 <div class="sect2 text-left">
@@ -5141,7 +5091,7 @@ and ''For supply contracts: samples, descriptions or photographs <strong>without
 <div class="content">
 <img src="_images/Management_Artefacts_struct.png" alt="" width="600">
 </div>
-<div class="title">Figure 44. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.*</div>
+<div class="title">Figure 42. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.MANAGEMENT.ARTEFACTS.*</div>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of this criterion in the ESPD Service:</p>
@@ -5253,7 +5203,7 @@ certificates (in the Criteria Taxonomy) has been split in three different certif
 <div class="literalblock">
 <div class="content">
 <pre>    [.text-left]
-== Quality Assurance Institutes</pre>
+==== Quality Assurance Institutes</pre>
 </div>
 </div>
 </li>
@@ -5266,7 +5216,7 @@ certificates (in the Criteria Taxonomy) has been split in three different certif
 <div class="content">
 <img src="_images/Certificates_QA_struct.png" alt="" width="900">
 </div>
-<div class="title">Figure 45. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE</div>
+<div class="title">Figure 43. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INSTITUTES_CERTIFICATE</div>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of this criterion in the ESPD Service:</p>
@@ -5355,9 +5305,8 @@ certificates (in the Criteria Taxonomy) has been split in three different certif
 </tr>
 </table>
 </div>
-</div>
-<div class="sect2 text-left">
-<h3 id="_quality_assurance_independent"><a class="anchor" href="#_quality_assurance_independent"></a>Quality Assurance Independent</h3>
+<div class="sect4 text-left">
+<h5 id="_quality_assurance_independent"><a class="anchor" href="#_quality_assurance_independent"></a>Quality Assurance Independent</h5>
 <div class="paragraph">
 <p>This category refers to a quality control certificate drawn up by independent bodies attesting that the economic operator complies with the required quality assurance standards:</p>
 </div>
@@ -5365,7 +5314,7 @@ certificates (in the Criteria Taxonomy) has been split in three different certif
 <div class="content">
 <img src="_images/Certificates_QA_independent_struct.png" alt="" width="900">
 </div>
-<div class="title">Figure 46. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE.*</div>
+<div class="title">Figure 44. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.QA_INDEPENDENT_CERTIFICATE.*</div>
 </div>
 <div class="paragraph">
 <p>The fragment of XML below shows the implementation of this criterion in the ESPD Service:</p>
@@ -5455,8 +5404,8 @@ certificates (in the Criteria Taxonomy) has been split in three different certif
 </table>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_environmental_management"><a class="anchor" href="#_environmental_management"></a>Environmental Management</h3>
+<div class="sect4 text-left">
+<h5 id="_environmental_management"><a class="anchor" href="#_environmental_management"></a>Environmental Management</h5>
 <div class="paragraph">
 <p>For the time being, this general category refers to only the criterion ''Certificates by independent bodies about
 environmental management systems or standards''. The data-structure for this criterion in the ESPD Service is the one below (notice
@@ -5466,7 +5415,7 @@ that this structure is possibly on of the most frequent in the ESPD Service as i
 <div class="content">
 <img src="_images/Certificates_Environmental_struct.png" alt="" width="900">
 </div>
-<div class="title">Figure 47. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.*</div>
+<div class="title">Figure 45. Data-structure representation for the criteria of type CRITERION.SELECTION.TECHNICAL_PROFESSIONAL_ABILITY.CERTIFICATES.QUALITY_ASSURANCE.*</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -5568,8 +5517,8 @@ The data-structure is identical to the certificate about quality assurance indep
 </table>
 </div>
 </div>
-<div class="sect2 text-left">
-<h3 id="_3_other_criteria"><a class="anchor" href="#_3_other_criteria"></a>3. <strong>OTHER CRITERIA</strong></h3>
+<div class="sect3 text-left">
+<h4 id="_3_other_criteria"><a class="anchor" href="#_3_other_criteria"></a>3. <strong>OTHER CRITERIA</strong></h4>
 <div class="paragraph">
 <p>For the time being, the ESPD Service use this group to cover the criteria related to the Economic Operator that are used to enhance
 its selection (and could even be used to make a decision about its awarding).</p>
@@ -5614,7 +5563,7 @@ They are mostly presented as plain lists of data that the EO has to provide in c
 <div class="content">
 <img src="_images/OtherCriteria_EO_Data_struct.png" alt="" width="600">
 </div>
-<div class="title">Figure 48. Data-structure representation for the criteria of type CRITERION.OTHER.EO_DATA.*</div>
+<div class="title">Figure 46. Data-structure representation for the criteria of type CRITERION.OTHER.EO_DATA.*</div>
 </div>
 <div class="paragraph text-left">
 <p>The following example, below, illustrates how this criterion is implemented.</p>
@@ -5689,6 +5638,7 @@ generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
 <h3 id="_release_notes"><a class="anchor" href="#_release_notes"></a>Release Notes</h3>
 <div class="sect3">
@@ -5759,55 +5709,46 @@ generated by the <a href="https://webgate.ec.europa.eu/espd/filter?lang=en">ESPD
 <a href="#_footnoteref_5">5</a>. E.g. the Commission&#8217;s e-Procurement platform, e.Prior, is using UBL-2.1; The ISA Program (namely Action 1.1, about semantics) is recommending UBL and implementing the Core Vocabularies defined in ISA based on UBL-2.1; Pilots and developments, both trans-European and national,  are using UBL-2.1 libraries and/or Naming and Design Rules (e.g. The large Scale Pilot PEPPOL and Open PEPPOL; BRIS, the Business Registers Interconnection System; OIOUBL, in Denmark and Northern Europe, for the e-Invoice; CODICE, the Spanish specification for e-Procurement; etc.).
 </div>
 <div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. <a href="http://www.cenbii.eu/" class="bare">http://www.cenbii.eu/</a>
+<a href="#_footnoteref_6">6</a>. In the ESPD-EDM, the Contracting Authority is represented by "Contracting Party", the generic term representing a Contracting Body, Authority or Entity.
 </div>
 <div class="footnote" id="_footnotedef_7">
-<a href="#_footnoteref_7">7</a>. <a href="http://www.esens.eu/" class="bare">http://www.esens.eu/</a>
+<a href="#_footnoteref_7">7</a>. this UML was produced using the MS-Visio tool, thus the double semicolon "::" after the prefix. The XML syntax only uses one semicolon ":".
 </div>
 <div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. E.g. the Commission&#8217;s e-Procurement platform, e.Prior, is using UBL-2.1; The ISA Program (namely Action 1.1, about semantics) is recommending UBL and implementing the Core Vocabularies defined in ISA based on UBL-2.1; Pilots and developments, both trans-European and national,  are using UBL-2.1 libraries and/or Naming and Design Rules (e.g. The large Scale Pilot PEPPOL and Open PEPPOL; BRIS, the Business Registers Interconnection System; OIOUBL, in Denmark and Northern Europe, for the e-Invoice; CODICE, the Spanish specification for e-Procurement; etc.).
+<a href="#_footnoteref_8">8</a>. see the CCV-CommonAggregateComponents-1.0.xsd library for its XML definition
 </div>
 <div class="footnote" id="_footnotedef_9">
-<a href="#_footnoteref_9">9</a>. In the ESPD-EDM, the Contracting Authority is represented by "Contracting Party", the generic term representing a Contracting Body, Authority or Entity.
+<a href="#_footnoteref_9">9</a>. Source: <a href="http://www.cenbii.eu/deliverables/cen-wsbii-3/">CEN/BII-WS3</a>
 </div>
 <div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. this UML was produced using the MS-Visio tool, thus the double semicolon "::" after the prefix. The XML syntax only uses one semicolon ":".
+<a href="#_footnoteref_10">10</a>. Source: <a href="http://www.cenbii.eu/deliverables/cen-wsbii-3/">CEN/BII-WS3</a>
 </div>
 <div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. see the CCV-CommonAggregateComponents-1.0.xsd library for its XML definition
+<a href="#_footnoteref_11">11</a>. Source: <a href="http://docs.oasis-open.org/ubl/UBL-2.1.html">UBL</a> (look into the Common Aggregate Component library of the <code>xsd</code> folder inside the UBL-2.1 distribution package)
 </div>
 <div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. Source: <a href="http://www.cenbii.eu/deliverables/cen-wsbii-3/">CEN/BII-WS3</a>
+<a href="#_footnoteref_12">12</a>. The ESPD Service confirms the presence of an element that in the schema is optional using the ISO Schematron validation method. The reason why the cardinality of the XSD schema is kept optional for most of the elements is to provide a model that is flexible enough so as to be used in other contexts different to the ESPD Service, e.g. for procurement projects at national or subnational levels where the value of the contracts are below the threshold; or for its use in systems where the ID of the instantiated objects is considered enough to identify a Criterion or a Requirement. For details about Schematron see <a href="http://www.schematron.com/spec.html" class="bare">http://www.schematron.com/spec.html</a>.
 </div>
 <div class="footnote" id="_footnotedef_13">
-<a href="#_footnoteref_13">13</a>. Source: <a href="http://www.cenbii.eu/deliverables/cen-wsbii-3/">CEN/BII-WS3</a>
+<a href="#_footnoteref_13">13</a>. In the XML this is the attribute <code>GROUP_FULFILLED.ON_TRUE</code> of the element <code>RequirementGroup</code>
 </div>
 <div class="footnote" id="_footnotedef_14">
-<a href="#_footnoteref_14">14</a>. Source: <a href="http://docs.oasis-open.org/ubl/UBL-2.1.html">UBL</a> (look into the Common Aggregate Component library of the <code>xsd</code> folder inside the UBL-2.1 distribution package)
+<a href="#_footnoteref_14">14</a>. This notation <em>CRITERION.EXCLUSION.CONVICTION.*</em> is to be read as ''it applies to all the selection criteria, which are part of the exclusion criteria group''. See the <a href="https://github.com/OP-TED/ESPD-EDM/blob/v1.0.2/docs/src/main/asciidoc/modules/ROOT/code_lists/xls/CriteriaTaxonomy.xlsx">criteria tables</a> for the complete taxonomy of criteria and each criterion code label.
 </div>
 <div class="footnote" id="_footnotedef_15">
-<a href="#_footnoteref_15">15</a>. The ESPD Service confirms the presence of an element that in the schema is optional using the ISO Schematron validation method. The reason why the cardinality of the XSD schema is kept optional for most of the elements is to provide a model that is flexible enough so as to be used in other contexts different to the ESPD Service, e.g. for procurement projects at national or subnational levels where the value of the contracts are below the threshold; or for its use in systems where the ID of the instantiated objects is considered enough to identify a Criterion or a Requirement. For details about Schematron see <a href="http://www.schematron.com/spec.html" class="bare">http://www.schematron.com/spec.html</a>.
+<a href="#_footnoteref_15">15</a>. For the time being e-Certis only contains Criteria.
 </div>
 <div class="footnote" id="_footnotedef_16">
-<a href="#_footnoteref_16">16</a>. In the XML this is the attribute <code>GROUP_FULFILLED.ON_TRUE</code> of the element <code>RequirementGroup</code>
+<a href="#_footnoteref_16">16</a>. <a href="http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32009D0316" class="bare">http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32009D0316</a>
 </div>
 <div class="footnote" id="_footnotedef_17">
-<a href="#_footnoteref_17">17</a>. This notation <em>CRITERION.EXCLUSION.CONVICTION.*</em> is to be read as ''it applies to all the selection criteria, which are part of the exclusion criteria group''. See the <a href="https://github.com/OP-TED/ESPD-EDM/blob/v1.0.2/docs/src/main/asciidoc/modules/ROOT/code_lists/xls/CriteriaTaxonomy.xlsx">criteria tables</a> for the complete taxonomy of criteria and each criterion code label.
+<a href="#_footnoteref_17">17</a>. See &#91;DOC-REF-8&#93; for the complete taxonomy of criteria and each criterion code label.
 </div>
 <div class="footnote" id="_footnotedef_18">
-<a href="#_footnoteref_18">18</a>. For the time being e-Certis only contains Criteria.
+<a href="#_footnoteref_18">18</a>. Thus, the ESPD Service will use the answer to show it in the User Interface and to include it in an XML instance.
 </div>
 <div class="footnote" id="_footnotedef_19">
-<a href="#_footnoteref_19">19</a>. <a href="http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32009D0316" class="bare">http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32009D0316</a>
-</div>
-<div class="footnote" id="_footnotedef_20">
-<a href="#_footnoteref_20">20</a>. See &#91;DOC-REF-8&#93; for the complete taxonomy of criteria and each criterion code label.
-</div>
-<div class="footnote" id="_footnotedef_21">
-<a href="#_footnoteref_21">21</a>. Thus, the ESPD Service will use the answer to show it in the User Interface and to include it in an XML instance.
-</div>
-<div class="footnote" id="_footnotedef_22">
-<a href="#_footnoteref_22">22</a>. i.e. a couple of values corresponding to amount and year.
+<a href="#_footnoteref_19">19</a>. i.e. a couple of values corresponding to amount and year.
 </div>
 </div>
 </article>
