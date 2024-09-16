@@ -30,7 +30,7 @@ asciidoc:
     #
     eforms_latest_version: '1.11'
     epo_latest_version: '4.1.0'
-    espd_latest_version: '3.3.0'
+    espd_latest_version: '4.0.0'
 
   extensions:
   - ./lib/apidoc/apidoc-asciidoc-extension
