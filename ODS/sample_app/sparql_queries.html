@@ -86,40 +86,37 @@
     <a class="nav-link" href="../index_new.html">New home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Querying public procurement notice data</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Querying public procurement RDF data</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Introduction</a>
+    <a class="nav-link" href="tutorials.html">Tutorials: RDF, ePO, LOD</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><strong>Query Methods</strong></span>
+    <a class="nav-link" href="guidance.html">Guidance: Notice Data; Data Familiarisation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="ms_excel.html">Querying using the supplied MS Excel template</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="sparql_queries.html">Querying directly via the SPARQL EndPoint</a>
+    <a class="nav-link" href="snippets.html">Reusable Query Snippets</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="jupyter_notebook_python.html">Querying using Jupyter Notebook and Python</a>
+    <a class="nav-link" href="scenarios.html">From Question to Query</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="sa_glossary.html">Glossary</a>
+    <a class="nav-link" href="examples.html">Featured Query Examples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="ms_excel.html">Introducing the Excel Query Tool</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://publications.europa.eu/webapi/rdf/sparql">Submit a query in the Cellar SPARQL EndPoint</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://github.com/OP-TED/ted-rdf-docs">Ask the Community for query help</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Create XML to RDF mappings</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../genref.html">General Reference</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../glossary.html">Glossary</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../mapping_suite/methodology.html">Methodology</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../mapping_suite/repository-structure.html">Repository structure</a>
+    <a class="nav-link" href="../mapping_suite/methodology.html">Mapping Methodology</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../mapping_suite/index.html">Mapping suites</a>
@@ -128,23 +125,16 @@
     <a class="nav-link" href="../mapping_suite/mapping-suite-structure.html">Mapping suite package structure</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../mapping_suite/code-list-resources.html">Code list mappings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../mapping_suite/preparing-test-data.html">Data samples</a>
+    <a class="nav-link" href="../mapping_suite/repository-structure.html">Repository structure</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../mapping_suite/toolchain.html">Toolchain</a>
   </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
+    <a class="nav-link" href="../mapping_suite/code-list-resources.html">Code list mappings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../mapping_suite/versioning.html">Versioning</a>
+    <a class="nav-link" href="../mapping_suite/preparing-test-data.html">Test Data samples</a>
   </li>
 </ul>
   </li>
@@ -255,7 +245,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="sparql_queries.html">Querying directly via the SPARQL EndPoint</a></li>
+    <li><a href="sparql_queries.html">SPARQL Queries using the SPARQL EndPoint</a></li>
   </ul>
 </nav>
 </div>
@@ -288,10 +278,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_query_how_many_contract_awards_count_published_on_a_chosen_date_were_awarded_to_suppliers_who_are_smes_of_a_particular_country"><a class="anchor" href="#_query_how_many_contract_awards_count_published_on_a_chosen_date_were_awarded_to_suppliers_who_are_smes_of_a_particular_country"></a>Query: How many contract awards (count), published on a chosen date, were awarded to suppliers who are SMEs of a particular country?</h2>
+<h2 id="_query_how_many_contract_awards_count_published_on_the_5_september_2023_were_to_german_smes_suppliers"><a class="anchor" href="#_query_how_many_contract_awards_count_published_on_the_5_september_2023_were_to_german_smes_suppliers"></a>Query: How many contract awards (count), published on the 5 September 2023, were to German SMEs (suppliers)?</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>&#160;</p>
+</div>
+<div class="paragraph">
+<p>(date and country chosen randomly)</p>
 </div>
 <div class="paragraph">
 <p>This SPARQL query counts the number of distinct procurement notices that meet specific criteria related to publication date, country code (Germany), and business size (SME).</p>
@@ -375,10 +368,13 @@ WHERE {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_query_which_notices_were_published_by_buyers_from_a_particular_country_on_a_given_date"><a class="anchor" href="#_query_which_notices_were_published_by_buyers_from_a_particular_country_on_a_given_date"></a>Query:  Which notices were published by Buyers from a particular country on a given date ?</h2>
+<h2 id="_query_which_notices_were_published_by_buyers_from_germany_on_5_september_2023"><a class="anchor" href="#_query_which_notices_were_published_by_buyers_from_germany_on_5_september_2023"></a>Query:  Which notices were published by buyers from Germany on 5 September 2023?</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>&#160;</p>
+</div>
+<div class="paragraph">
+<p>(date and country chosen randomly)</p>
 </div>
 <div class="paragraph">
 <p>This SPARQL query retrieves the contract award notices published on TED on 05-09-2023 by German buyers.</p>
@@ -459,7 +455,7 @@ WHERE {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_query_list_all_winners_published_on_a_specified_date"><a class="anchor" href="#_query_list_all_winners_published_on_a_specified_date"></a>Query: List all winners published on a specified date</h2>
+<h2 id="_query_list_all_contract_winners_published_on_the_31_august_2023"><a class="anchor" href="#_query_list_all_contract_winners_published_on_the_31_august_2023"></a>Query: List all contract winners published on the 31 August 2023</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>&#160;</p>
@@ -590,10 +586,11 @@ WHERE {
 </div>
 </div>
 <div class="sect1">
-<h2 id="_query_list_the_contract_values_for_contract_awards_published_on_a_particular_date_order_the_results_by_value_descending_and_limit_the_results_to_one_row_which_is_the_highest_value_contract_due_to_the_order"><a class="anchor" href="#_query_list_the_contract_values_for_contract_awards_published_on_a_particular_date_order_the_results_by_value_descending_and_limit_the_results_to_one_row_which_is_the_highest_value_contract_due_to_the_order"></a>Query: List the contract values for contract awards published on a particular date. Order the results by value descending and limit the results to one row (which is the highest value contract due to the order).</h2>
+<h2 id="_query_return_the_highest_value_contract_awarded_on_the_23_september_2023"><a class="anchor" href="#_query_return_the_highest_value_contract_awarded_on_the_23_september_2023"></a>Query: Return the highest value contract awarded on the 23 September 2023.</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>&#160;</p>
+<p>This query lists the contract values for contract awards published on this date, orders the results by value descending, and limit the results to one row (which is the highest value contract due to the order).
+&#160;</p>
 </div>
 <div class="paragraph">
 <p>This SPARQL query returns the procurement notice, its publication date, the corresponding lot, and the highest awarded amount along with the currency code for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the date and then querying the RDF data based on that value. The query returns the information in descending order of the awarded amount, limiting the results to one row, with the effect that only the highest value is displayed.</p>

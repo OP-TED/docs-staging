@@ -86,40 +86,37 @@
     <a class="nav-link" href="../index_new.html">New home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Querying public procurement notice data</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Querying public procurement RDF data</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/index.html">Introduction</a>
+    <a class="nav-link" href="../sample_app/tutorials.html">Tutorials: RDF, ePO, LOD</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><strong>Query Methods</strong></span>
+    <a class="nav-link" href="../sample_app/guidance.html">Guidance: Notice Data; Data Familiarisation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/ms_excel.html">Querying using the supplied MS Excel template</a>
+    <a class="nav-link" href="../sample_app/snippets.html">Reusable Query Snippets</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/sparql_queries.html">Querying directly via the SPARQL EndPoint</a>
+    <a class="nav-link" href="../sample_app/scenarios.html">From Question to Query</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/jupyter_notebook_python.html">Querying using Jupyter Notebook and Python</a>
+    <a class="nav-link" href="../sample_app/examples.html">Featured Query Examples</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../sample_app/sa_glossary.html">Glossary</a>
+    <a class="nav-link" href="../sample_app/ms_excel.html">Introducing the Excel Query Tool</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://publications.europa.eu/webapi/rdf/sparql">Submit a query in the Cellar SPARQL EndPoint</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://github.com/OP-TED/ted-rdf-docs">Ask the Community for query help</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Create XML to RDF mappings</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../genref.html">General Reference</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../glossary.html">Glossary</a>
-  </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="methodology.html">Methodology</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="repository-structure.html">Repository structure</a>
+    <a class="nav-link" href="methodology.html">Mapping Methodology</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Mapping suites</a>
@@ -128,23 +125,16 @@
     <a class="nav-link" href="mapping-suite-structure.html">Mapping suite package structure</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="code-list-resources.html">Code list mappings</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="preparing-test-data.html">Data samples</a>
+    <a class="nav-link" href="repository-structure.html">Repository structure</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="toolchain.html">Toolchain</a>
   </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="0">
-<ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Reference</strong></span></span>
+    <a class="nav-link" href="code-list-resources.html">Code list mappings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="versioning.html">Versioning</a>
+    <a class="nav-link" href="preparing-test-data.html">Test Data samples</a>
   </li>
 </ul>
   </li>
@@ -255,7 +245,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="methodology.html">Methodology</a></li>
+    <li><a href="methodology.html">Mapping Methodology</a></li>
   </ul>
 </nav>
 </div>
@@ -301,45 +291,29 @@ the notice transformation workflow for <strong>all</strong> <a href="https://ted
 <div class="paragraph">
 <p>The phases are as follows:</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Decide which notice type to map</p>
-</li>
-</ol>
-</div>
+<div class="sect2">
+<h3 id="_decide_which_notice_type_to_map"><a class="anchor" href="#_decide_which_notice_type_to_map"></a>Decide which notice type to map</h3>
 <div class="paragraph">
 <p>The process starts with the decision as to <strong>which notice type to map</strong>. The notice classification schemes currently targeted are the <a href="https://simap.ted.europa.eu/web/simap/standard-forms-for-public-procurement">"standard forms"</a>, and the <a href="https://simap.ted.europa.eu/web/simap/eforms">"eForms"</a>. New classification schemes will follow in the future.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>Select a set of representative data to use for testing</p>
-</li>
-</ol>
 </div>
+<div class="sect2">
+<h3 id="_select_a_set_of_representative_data_to_use_for_testing"><a class="anchor" href="#_select_a_set_of_representative_data_to_use_for_testing"></a>Select a set of representative data to use for testing</h3>
 <div class="paragraph">
 <p>Once the target form is chosen, <strong>a set of representative data is selected</strong> which serves as the test set for the mapping.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="3">
-<li>
-<p>Analyse the data and produce a conceptual mapping</p>
-</li>
-</ol>
 </div>
+<div class="sect2">
+<h3 id="_analyse_the_data_and_produce_a_conceptual_mapping"><a class="anchor" href="#_analyse_the_data_and_produce_a_conceptual_mapping"></a>Analyse the data and produce a conceptual mapping</h3>
 <div class="paragraph">
 <p>The notice classification scheme is usually subject to regulations and described in multiple forms, such as PDF documents and/ or XSD schemes, amongst other document types. All possible documentation and modelling artefacts are <strong>analysed and used to produce a conceptual mapping</strong> (described in the <a href="#_conceptual-mapping-structure">Conceptual mapping structure</a> section). This artefact, stored as a workbook, establishes the correspondence of the TED notice fields to XPath expressions and EPO structures.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p>Implement a corresponding technical mapping</p>
-</li>
-</ol>
 </div>
+<div class="sect2">
+<h3 id="_implement_a_corresponding_technical_mapping"><a class="anchor" href="#_implement_a_corresponding_technical_mapping"></a>Implement a corresponding technical mapping</h3>
 <div class="paragraph">
 <p>Once the conceptual mapping is established between the XPath expressions and ontology structures, <strong>a corresponding technical mapping is implemented</strong>. This technical mapping consists of a set of mapping rules expressed in <a href="https://rml.io/specs/rml/">RDF Mapping Language (RML)</a>, and represents a translation of the conceptual mapping into a formal language which can be executed automatically by a transformation engine such as <a href="https://github.com/RMLio/rmlmapper-java">RMLMapper</a>.</p>
+</div>
 </div>
 </div>
 </div>
