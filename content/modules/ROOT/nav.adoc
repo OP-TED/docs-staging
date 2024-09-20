@@ -8,6 +8,9 @@
 * xref:eforms:active-versions/index.adoc[Active SDK Versions]
 * link:https://docs.ted.europa.eu/eforms-sdk-explorer[SDK Explorer, window=_blank]
 
+* [.separated]#**TED API**#
+* xref:api-home:ROOT:index.adoc[TED API]
+
 * [.separated]#**eProcurement Ontology**#
 * xref:epo-home::index.adoc[ePO Docs `{epo_latest_version}`]
 * xref:epo-wgm::index.adoc[Working Group Meetings]
