@@ -62,7 +62,7 @@ content:
   ### TED API
   - url: https://github.com/OP-TED/tedapi-docs.git
     start_path: /
-    branches: main # The "main" branch contains unversioned content.
+    branches: new_main, v2, v3 # The "main" branch contains unversioned content.
 
   ### model2owl
   - url: https://github.com/OP-TED/ted-model2owl-docs
