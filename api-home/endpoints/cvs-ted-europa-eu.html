@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>SDK version lifespan :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/eforms-common/active-versions/index.html">
+    <title>Validation API :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/api-home/endpoints/cvs-ted-europa-eu.html">
+    <meta name="keywords" content="openapi, rest, Validation API">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -70,122 +71,32 @@
     </nav>
 </div><div class="body">
 <script src="../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="eforms-common" data-version="">
+<div class="nav-container" data-component="api-home" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">eForms SDK</a></h3>
+    <h3 class="title"><a href="../index.html">TED API</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../FAQ/index.html">Frequently Asked Questions</a>
+    <a class="nav-link" href="../index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../preview/index.html">Preview Environment</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../roadmap/index.html">SDK Roadmap</a>
+    <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="index.html">Active SDK Versions</a>
+    <a class="nav-link" href="cvs-ted-europa-eu.html">Validation API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../versioning/index.html">SDK Versioning</a>
+    <a class="nav-link" href="enotices2-ted-europa-eu-esenders.html">Publication API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.11</code></span></span>
+    <a class="nav-link" href="viewer-ted-europa-eu.html">Visualisation API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/schema/index.html">eForms Specification</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#eforms:reference:index.adoc">Metadata Reference</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>SDK Contents</strong> <code>1.11</code></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/fields/index.html">Field Metadata</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/codelists/index.html">Codelists</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/notice-types/index.html">Notice Types</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/viewer-templates/index.html">View Templates</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/translations/index.html">Translations</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/schemas/index.html">Schemas</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/schematrons/index.html">Schematron</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/efx/index.html">EFX Grammar</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Developer Guide</strong> <code>1.11</code></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/guide/index.html">Start Here</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/guide/understanding-the-sdk.html">Understanding the SDK</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/guide/sdk-glossary.html">SDK glossary</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text">Working with the SDK</span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../eforms/latest/guide/notice-forms.html">Create the forms</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../eforms/latest/guide/xml-generation.html">Generate XML</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../eforms/latest/guide/visualisation.html">Visualise notices</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../eforms/latest/guide/validation.html">Validate notices</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../eforms/latest/guide/implementing-eforms-without-the-sdk.html">Working without the SDK</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>SDK Explorer</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><a href="https://docs.ted.europa.eu/eforms-sdk-explorer" target="_blank" rel="noopener">Launch SDK Explorer</a></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Java Libraries</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../efx-toolkit/index.html">EFX Toolkit</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../eforms-core/index.html">eForms Core</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Sample Applications</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../notice-viewer/index.html">Notice Viewer (Java)</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../notice-editor/index.html">Notice Editor (Java)</a>
+    <a class="nav-link" href="ted-europa-eu.html">Search API</a>
   </li>
 </ul>
   </li>
@@ -298,8 +209,8 @@
   <a href="../../home/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">eForms SDK</a></li>
-    <li><a href="index.html">Active SDK Versions</a></li>
+    <li><a href="../index.html">TED API</a></li>
+    <li><a href="cvs-ted-europa-eu.html">Validation API</a></li>
   </ul>
 </nav>
 </div>
@@ -308,259 +219,375 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">SDK version lifespan</h1>
+<h1 class="page">Validation API</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>The eForms SDK encodes the eForms specification in a machine-readable format. As the business domain of public procurement evolves over time, the eForms specification is also updated to incorporate the necessary changes. This evolution is reflected in the SDK versions, which permit us to bundle together all the artifacts necessary to interpret notices that have been created in different points in time (and thus under a possibly different regulatory framework).</p>
-</div>
-<div class="paragraph">
-<p>When your application creates an XML notice, it includes a <code>cbc:CustomizationID</code> element that indicates the version of the SDK that was used to create the notice. This permits other applications to interpret the notice correctly, by using the corresponding version of the SDK.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>SDK Versioning in a nutshell</strong></p>
-</div>
-<div class="paragraph">
-<p>SDK versions are indicated using three numbers: <em>major.minor.patch</em>.
-The <strong>major</strong> version number is incremented only when the new SDK introduces fundamental changes. The <strong>minor</strong> is incremented when the updated SDK has an impact on notice validation. Finally, the <strong>patch</strong> indicates an incremental update that does not affect notice validation. When we refer to an SDK version without specifying the patch number, the latest patch of that version is implied.
-For details see the <a href="../versioning/index.html" class="xref page">SDK Versioning</a> page.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>New versions of the SDK are released periodically, not only to accommodate regulatory changes, but also to correct and enrich the existing metadata. To maintain an overall consistency of the data collected through eForms notices, in terms of completeness and quality, it is in the general interest of the public procurement community to ensure that outdated versions of the eForms specification are withdrawn from active use for applications that create eForms notices.</p>
-</div>
-<div class="paragraph">
-<p>To encourage the timely adoption of the most recent version of the eForms specification, the Publications Office has established the following policy for the withdrawal of outdated versions of the SDK.</p>
-</div>
-<div class="paragraph">
-<p>The policy is based on the notion that every SDK version has a predefined lifespan which starts when the TED Central Validation Service (TEDCVS) starts accepting notices created using the new version (right after its release), and ends after a predefined period of activity has elapsed (at which point, TEDCVS will automatically stop accepting any further notices created using that version of the SDK). An SDK version is said to be "active" during the period that TEDCVS accepts notices based on it.</p>
+<div class="quoteblock abstract">
+<div class="title">Abstract</div>
+<blockquote>
+This API provides operation to validate a notice and get the validation report
+</blockquote>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_terminology"><a class="anchor" href="#_terminology"></a>Terminology</h2>
+<h2 id="_endpoints"><a class="anchor" href="#_endpoints"></a>Endpoints</h2>
 <div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">SDK release date</dt>
-<dd>
-<p>The date when a new version of the SDK is released.</p>
-</dd>
-<dt class="hdlist1">SDK expiry date</dt>
-<dd>
-<p>The date beyond which an SDK version is no longer accepted by the TED Central Validation Service.
-This date is initially set for every SDK version to twelve (12) months after its release date.
-The expiry date of an SDK version may be extended beyond the standard lifespan of twelve (12) months (see "SDK extended lifespan" below).</p>
-</dd>
-<dt class="hdlist1">Active SDK</dt>
-<dd>
-<p>A version of the SDK is said to be "active" during the period that TEDCVS accepts notices based on it. This period is defined by the SDK release date and the SDK expiry date.</p>
-</dd>
-<dt class="hdlist1">SDK standard lifespan</dt>
-<dd>
-<p>The standard lifespan of an SDK version is the first twelve (12) months after its release date.</p>
-</dd>
-<dt class="hdlist1">SDK extended lifespan</dt>
-<dd>
-<p>To accommodate the needs of eSenders, the Publications Office may decide to extend the lifespan of an SDK version beyond its standard length. If the lifespan of an SDK version is extended beyond the standard lifespan of twelve (12) months, the version is said to be in its "extended lifespan".</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_support_and_updates_for_active_sdk_versions"><a class="anchor" href="#_support_and_updates_for_active_sdk_versions"></a>Support and updates for active SDK versions</h2>
-<div class="sectionbody">
+<div class="sect2 Validation">
+<h3 id="_validation"><a class="anchor" href="#_validation"></a>Validation</h3>
+<div class="sect3 validate">
+<h4 id="_validate"><a class="anchor" href="#_validate"></a>validate</h4>
 <div class="paragraph">
-<p>The Publications Office provides support only for <strong>active</strong> SDK versions through its Helpdesk and GitHub discussions. Priority is given to SDK versions that are in their <strong>standard lifespan</strong>.</p>
+<p><code>POST /v1/notices/validation</code></p>
 </div>
 <div class="paragraph">
-<p>The Publications Office also updates active SDK versions by releasing patches that correct and improve the provided metadata as needed. However, to conserve resources, patches are provided only during the <strong>standard lifespan</strong> of active SDK versions. SDK versions that are in their <strong>extended lifespan</strong> will only be patched under exceptional circumstances to address critical issues.</p>
+<p>Validate a notice</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_list_of_active_sdk_versions"><a class="anchor" href="#_list_of_active_sdk_versions"></a>List of active SDK versions</h2>
-<div class="sectionbody">
+<div class="sect4">
+<h5 id="_description"><a class="anchor" href="#_description"></a>Description</h5>
 <div class="paragraph">
-<p>The table below indicates the end of the standard and extended lifespan for the SDK versions that are currently active.</p>
+<p>Validate a notice sent in the request body. This operation returns a schematron validation report which describes all the tests performed.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-To accommodate the needs of eSenders during the current transitional period, the Publications Office has decided to extend the lifespan of the SDK versions expiring in 2024. This is an exceptional measure in view of the efforts of eSenders to stabilise their processes for incorporating updates to the eForms specification into their applications.
-</td>
-</tr>
-</table>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-The table below is updated manually and may not be always accurate. The information provided by the TED API should always be consulted as the single source of truth. For more details see  <a href="#version-range">Getting  active SDK versions through TED API</a> below.
-</td>
-</tr>
-</table>
-</div>
+<div class="sect4">
+<h5 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_body_parameter"><a class="anchor" href="#_body_parameter"></a>Body Parameter</h6>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Active versions of the eForms SDK</caption>
 <colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">SDK Version</th>
-<th class="tableblock halign-left valign-top">End of standard lifespan</th>
-<th class="tableblock halign-left valign-top">End of extended lifespan</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">6 March 2024</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">30 September 2024</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.7</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">11 May 2024</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">28 February 2025</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">26 July 2024</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">28 February 2025</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.9</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9 October 2024</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">28 February 2025</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1 December 2024</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">28 February 2025</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">22 April 2025</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">22 April 2025</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18 July 2025</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18 July 2025</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InputNoticeValidation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#InputNoticeValidation"><em>InputNoticeValidation</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
-<div class="admonitionblock note">
-<table>
+</div>
+<div class="sect5">
+<h6 id="_header_parameters"><a class="anchor" href="#_header_parameters"></a>Header Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-New SDK versions may become available earlier in the Preview environment. Please consult the TED API.
-</td>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X-API-Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TED API key identifying the author of the request</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
 </table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type"><a class="anchor" href="#_return_type"></a>Return Type</h5>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type"><a class="anchor" href="#_content_type"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>application/xml</p>
+</li>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses"><a class="anchor" href="#_responses"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The report is returned.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The &#39;language&#39; parameter is not valid. - The &#39;validationMode&#39; parameter is not valid. The &#39;validationMode&#39; parameter is not valid. - The rules are missing for the following version.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ErrorResponse"><em>ErrorResponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing key in header: X-API-Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ErrorResponse"><em>ErrorResponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Invalid key in header: X-API-Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ErrorResponse"><em>ErrorResponse</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h5>
+
+</div>
+</div>
+</div>
+<div class="sect2 VersionRange">
+<h3 id="_versionrange"><a class="anchor" href="#_versionrange"></a>VersionRange</h3>
+<div class="sect3 versionRange">
+<h4 id="_versionrange_2"><a class="anchor" href="#_versionrange_2"></a>versionRange</h4>
+<div class="paragraph">
+<p><code>GET /v1/version-range</code></p>
+</div>
+<div class="paragraph">
+<p>Return information on the SDK versions accepted for publication</p>
+</div>
+<div class="sect4">
+<h5 id="_description_2"><a class="anchor" href="#_description_2"></a>Description</h5>
+<div class="paragraph">
+<p>Return information on the versions of the eForms SDK currently accepted for publication, as a JSON response. This indicates the earliest and latest SDK versions accepted for publication, and any versions in between that are excluded.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_header_parameters_2"><a class="anchor" href="#_header_parameters_2"></a>Header Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X-API-Key</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_2"><a class="anchor" href="#_return_type_2"></a>Return Type</h5>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type_2"><a class="anchor" href="#_content_type_2"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_2"><a class="anchor" href="#_responses_2"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Information on accepted SDK versions is returned.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing key in header: X-API-Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ErrorResponse"><em>ErrorResponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Invalid key in header: X-API-Key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ErrorResponse"><em>ErrorResponse</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_2"><a class="anchor" href="#_samples_2"></a>Samples</h5>
+
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="version-range"><a class="anchor" href="#version-range"></a>Getting  active SDK versions through TED API</h2>
+<h2 id="models"><a class="anchor" href="#models"></a>Models</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="ErrorResponse"><a class="anchor" href="#ErrorResponse"></a><em>ErrorResponse</em></h3>
 <div class="paragraph">
-<p>TED API provides information on the set of active SDK versions in JSON format through the <a href="#api:ROOT:endpoints/cvs-ted-europa-eu.adoc#_versionrange" class="xref unresolved">version-range</a> operation of the Validation API.</p>
+<p>Error response</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "updatedOn": "2022-07-20T15:16:00", <i class="conum" data-value="1"></i><b>(1)</b>
-  "activeVersionRange": {
-    "earliest": { <i class="conum" data-value="2"></i><b>(2)</b>
-      "before": "1.0", <i class="conum" data-value="3"></i><b>(3)</b>
-      "after": "1.1", <i class="conum" data-value="4"></i><b>(4)</b>
-      "switchDate": "2022-10-31T01:00:00+02:00" <i class="conum" data-value="5"></i><b>(5)</b>
-    },
-    "latest": { <i class="conum" data-value="6"></i><b>(6)</b>
-      "before": "1.5",
-      "after": "1.6",
-      "switchDate": "2023-03-08T01:00:00+02:00"
-    },
-    "excluded": { <i class="conum" data-value="7"></i><b>(7)</b>
-      "before": [ "1.2" ],
-      "after": [ "1.2", "1.3" ],
-      "switchDate": "2023-01-10T01:00:00+02:00"
-    }
-  }
-}</code></pre>
-</div>
-</div>
-<div class="colist arabic">
-<table>
+<table class="tableblock frame-all grid-all stretch fields-ErrorResponse">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
 <tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Date and time when the information in this file was last updated.</td>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">errorCode</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP error code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
 </tr>
 <tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Information on lowest active version.</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error description</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>Lowest active version before the switch date.</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timestamp</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error timestamp in RFC 3339 format</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
-<tr>
-<td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>Lowest active version after the switch date.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="5"></i><b>5</b></td>
-<td>Date and time when the effective value goes from what&#8217;s indicated in <code>before</code> to what&#8217;s indicated in <code>after</code>.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>Information on highest active version.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="7"></i><b>7</b></td>
-<td>List of versions excluded from the set of active versions.</td>
-</tr>
+</tbody>
 </table>
 </div>
+<div class="sect2">
+<h3 id="InputNoticeValidation"><a class="anchor" href="#InputNoticeValidation"></a><em>InputNoticeValidation</em></h3>
 <div class="paragraph">
-<p>For the earliest, latest and excluded versions, changes can be planned: if the current date and time is before "switchDate", then the value in "before" must be used, otherwise the value in "after" must be used.</p>
+<p>Request parameters for validation</p>
 </div>
-<div class="paragraph">
-<p>So for the example above:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>on 2022-10-30, the active versions are: 1.0, 1.1, 1.3, 1.4, 1.5 (1.0 to 1.5; version 1.2 is excluded)</p>
-</li>
-<li>
-<p>on 2022-11-01, the active versions are: 1.1, 1.3, 1.4, 1.5 (1.1 to 1.5; version 1.2 is excluded)</p>
-</li>
-<li>
-<p>on 2023-01-11, the active versions are: 1.1, 1.4, 1.5 (1.1 to 1.5; versions 1.2 and 1.3 are excluded)</p>
-</li>
-<li>
-<p>on 2023-03-09, the active versions are: 1.1, 1.4, 1.5, 1.6 (1.1 to 1.6; versions 1.2 and 1.3 are excluded)</p>
-</li>
-</ul>
+<table class="tableblock frame-all grid-all stretch fields-InputNoticeValidation">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">notice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byte[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payload in base64 for the XML document</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byte</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Language to generate the SVRL report. Enum: [bg, cs, da, de, el, en, es, et, fi, fr, ga, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sl, sv, hr]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">validationMode</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the validation mode that will be applied, selecting the corresponding set of rules from the eForms SDK that will be applied.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Enum:</em> dynamic, static,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eFormsSdkVersion</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the eForms SDK version to use for validating the notice. This parameter should be omitted unless you want to override the version indicated in the cbc:CustomizationID element in the notice.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
