@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>TED Search API :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/api/latest/endpoints/ted-europa-eu.html">
-    <meta name="keywords" content="openapi, rest, TED Search API">
+    <title>Public API Documentation :: TED Developer Documentation</title>
+    <meta name="keywords" content="openapi, rest, Public API Documentation">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -86,7 +85,7 @@
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="api.html">New API (rename as appropriate)</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -98,7 +97,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="viewer-ted-europa-eu.html">Visualisation API</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="ted-europa-eu.html">Search API</a>
   </li>
 </ul>
@@ -224,14 +223,14 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED API</a></li>
-    <li><a href="ted-europa-eu.html">Search API</a></li>
+    <li><a href="api.html">New API (rename as appropriate)</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">3.0-rc.1</button>
   <div class="version-menu">
-    <a class="version is-current" href="ted-europa-eu.html">3.0-rc.1</a>
-    <a class="version" href="../../latest/endpoints/ted-europa-eu.html">2.0</a>
+    <a class="version is-current" href="api.html">3.0-rc.1</a>
+    <a class="version is-missing" href="../../latest/index.html">2.0</a>
   </div>
 </div>
 </div>
@@ -240,22 +239,600 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">TED Search API</h1>
+<h1 class="page">Public API Documentation</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="quoteblock abstract">
 <div class="title">Abstract</div>
 <blockquote>
-&lt;h1&gt;Introduction&lt;/h1&gt;  This API provides multiple read-only operations on the TED website data. The endpoint 'Notice Search API' can be used to search notices both TED schema notices and eForms notices. More information is available on the help pages of the TED website: &lt;ul&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu\"&gt;TED - Website&lt;/a&gt;&lt;/li&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/search/expert-search\"&gt;Expert Search&lt;/a&gt;&lt;/li&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/contact\"&gt;Contact&lt;/a&gt;&lt;/li&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/legal-notice\"&gt;Legal notice&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  The API is accessible to the general public and can be utilized by anyone in accordance with the &lt;a href=\"#terms-of-usage\"&gt;term of usage&lt;/a&gt;.  &lt;h1 id=\"change-log\"&gt;Change logs&lt;/h1&gt;  &lt;table style=\"border: 1px solid;\"&gt;     &lt;thead&gt;         &lt;tr&gt;             &lt;th style=\"border: 1px solid;\"&gt;Version&lt;/th&gt;             &lt;th style=\"border: 1px solid;\"&gt;Date&lt;/th&gt;             &lt;th style=\"border: 1px solid;\"&gt;Changes&lt;/th&gt;         &lt;/tr&gt;     &lt;/thead&gt;     &lt;tr&gt;         &lt;td style=\"border: 1px solid;\"&gt;N/A&lt;/td&gt;         &lt;td style=\"border: 1px solid;\"&gt;N/A&lt;/td&gt;         &lt;td style=\"border: 1px solid;\"&gt;N/A&lt;/td&gt;     &lt;/tr&gt; &lt;/table&gt;   &lt;h1&gt;Public API search modes&lt;/h1&gt;  This section describes the different search modes provided by the public search API. Each parameter of the search API is detailed in the OpenAPI documentation of the API.  &lt;h2&gt;Pagination mode&lt;/h2&gt; The pagination mode is the default mode of the public search API. This mode is stateless: the user can retrieve any result page, and not necessary in order. It also means that there is no mechanism to ensure consistency between two retrieved pages: if the user retrieves multiple pages and an OJS is released between two retrieved pages, then the user might miss some notices or have duplicated notices. Also, due to how Elasticsearch works internally, a limit on the number of retrievable notices for a given query has been put in place. This limit is described in the &lt;i&gt;Definition of limits&lt;/i&gt; section.  The user must provide the following parameters to the API to paginate results: &lt;ul&gt;     &lt;li&gt;limit: the number of notices returned per page. For example, limit=10 means that 10 notices will be returned.     &lt;/li&gt;     &lt;li&gt;page: the page number to retrieve. For example, page=1 means that the first result page will be retrieved.&lt;/li&gt; &lt;/ul&gt;  &lt;h2&gt;Scroll mode&lt;/h2&gt; The scroll mode allows user to retrieve all notices for a given query, without limitations defined in section &lt;i&gt;Definition of limits&lt;/i&gt;. With this mode, the user calls the search API to retrieve the first result page and a token. This token can then be included in the next query sent to the search API to retrieve the next result page. The user knows all notices have been retrieved once there is no more notice returned. The Elasticsearch point in time feature is used to ensure a consistency between all returned pages, which means that the user cannot miss notices or have duplicated notices. An Elasticsearch point in time is a freeze of the Elasticsearch instance at a specific time. If notices are added or removed during the lifetime of a point in time, the notices registered in the point in time don’t change. The point in time has an expiration time. This expiration time is defined as the date of the next OJS release plus 24 hours. It means that the user has always at least 24 hours to retrieve all the notices for a given query.  The user must provide the following parameters to the API to retrieve results in scroll mode: &lt;ul&gt;     &lt;li&gt;paginationMode should be set to “ITERATION”.&lt;/li&gt;     &lt;li&gt;limit: the number of notices to return for the next page.&lt;/li&gt;     &lt;li&gt;iterationNextToken: the token returned by the previous call to the search API. If this is the first call (i.e.,         to retrieve the first page), this parameter shouldn’t be provided.     &lt;/li&gt; &lt;/ul&gt;  &lt;h1&gt;Definition of limits&lt;/h1&gt; Here is a definition of the different limits defined for the SEM (Search Engine Module) endpoints in the next sections: &lt;ul&gt;     &lt;li&gt;Maximum number of retrievable notices: this corresponds to the number of notices that can be retrieved once the         user has queried all pages. For example, if the user retrieves all notices for a given query with page size 250,         and the limit of retrievable notices is 10k, it means the SEM will return no more notice after page 10k / 250 =         40, even if the query matches more than 10k notices.     &lt;/li&gt;     &lt;li&gt;Maximum number of notices per page: if this limit is X, then it means the user can retrieve X or less notices         per page, but not more than X notices per page.     &lt;/li&gt;     &lt;li&gt;Maximum number of fields per page: the number of fields per page is defined as the number of notices per page         multiplied by the number of fields retrieved for each notice. For example, with a limit of 250, the user is         allowed to retrieve 50 notices per page and 4 fields per notice (50 * 4 &lt; 250). However, they are not allowed to         retrieve 100 notices per page and 4 fields per notice (100 * 4 &gt; 250).     &lt;/li&gt; &lt;/ul&gt;  &lt;h2&gt;Search using pagination mode of public API&lt;/h2&gt;  The pagination mode of the public search API has the following limits: &lt;ul&gt;     &lt;li&gt;Maximum number of retrievable notices: 15k.&lt;/li&gt;     &lt;li&gt;Maximum number of notices per page: 250.&lt;/li&gt;     &lt;li&gt;Maximum number of fields per page: 10k.&lt;/li&gt; &lt;/ul&gt; In case a limit is reached, the search API will return an error to the user.  &lt;h2&gt;Search using scroll mode of public API&lt;/h2&gt;  The scroll mode of the public search API has the following limits: &lt;ul&gt;     &lt;li&gt;Maximum number of notices per page: 250.&lt;/li&gt;     &lt;li&gt;Maximum number of fields per page: 10k.&lt;/li&gt; &lt;/ul&gt; In case a limit is reached, the search API will return an error to the user. There is no limit on the number of retrievable notices.  &lt;h1&gt;Versioning&lt;/h1&gt;  The versioning of the TED Public API is managed by including the major version in the URL (eg. v1). An upgrade of the major version will denote a breaking changes of the API whereas minor and maintenance will be transparent to the client. The &lt;a href=\"#change-log\"&gt;change logs&lt;/a&gt; will contain the details of any modifications made to the API, serving as a means to notify clients about newly added features or bug fixes. The list of &lt;i&gt;fields&lt;/i&gt; by their variable nature are excluded from the versioning, addition, removal or update of a fields will not change the versioning.   &lt;h1&gt;Frequently Asked Questions&lt;/h1&gt;  &lt;h3&gt;How can I create, test or validate an expert query?&lt;/h3&gt; &lt;h3&gt;The API returns an error regarding an invalid field, format or value, how can I debug?&lt;/h3&gt;  The &lt;a href=\"https://ted.europa.eu/en/search/expert-search\"&gt;TED Expert Search&lt;/a&gt; page can be used for that purpose. It includes the capabilities to write a query, check the syntax, list all the fields and execute the query. The query once tailored can be reused in the query field parameter.   &lt;h1 id=\"terms-of-usage\"&gt;Terms of Usage&lt;/h1&gt;  &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/legal-notice\"&gt;Legal notice&lt;/a&gt;&lt;/li&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt; Public API documentation aims to describe the Public API endpoints.  &lt;h1 id=\"terms-of-usage\"&gt;Terms of Usage&lt;/h1&gt;  &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/legal-notice\"&gt;Legal notice&lt;/a&gt;&lt;/li&gt;
 </blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_access"><a class="anchor" href="#_access"></a>Access</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Bearer</strong> Authentication</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_endpoints"><a class="anchor" href="#_endpoints"></a>Endpoints</h2>
 <div class="sectionbody">
-<div class="sect2 NoticeSearchV3">
-<h3 id="_noticesearchv3"><a class="anchor" href="#_noticesearchv3"></a>NoticeSearchV3</h3>
+<div class="sect2 Endpoints">
+<h3 id="_endpoints_2"><a class="anchor" href="#_endpoints_2"></a>Endpoints</h3>
+<div class="sect3 convertNotice">
+<h4 id="_convertnotice"><a class="anchor" href="#_convertnotice"></a>convertNotice</h4>
+<div class="paragraph">
+<p><code>POST /v3/notices/convert</code></p>
+</div>
+<div class="paragraph">
+<p>Convert an XML notice</p>
+</div>
+<div class="sect4">
+<h5 id="_description"><a class="anchor" href="#_description"></a>Description</h5>
+<div class="paragraph">
+<p>Convert an XML notice in the old TED XML format to an eForms notice.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_body_parameter"><a class="anchor" href="#_body_parameter"></a>Body Parameter</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ByteArray</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ByteArray">[ByteArray]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type"><a class="anchor" href="#_return_type"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#List">[List]</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type"><a class="anchor" href="#_content_type"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>application/xml</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses"><a class="anchor" href="#_responses"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notice was successfully converted.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List[<a href="#ByteArray">[ByteArray]</a>]</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing Authorization header in request - The request body is incomplete or invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The provided TED API key doesn&#39;t exist or it is invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key cannot be currently validated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h5>
+
+</div>
+</div>
+<div class="sect3 getNotices">
+<h4 id="_getnotices"><a class="anchor" href="#_getnotices"></a>getNotices</h4>
+<div class="paragraph">
+<p><code>GET /v3/notices</code></p>
+</div>
+<div class="paragraph">
+<p>Search procedures</p>
+</div>
+<div class="sect4">
+<h5 id="_description_2"><a class="anchor" href="#_description_2"></a>Description</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_query_parameters"><a class="anchor" href="#_query_parameters"></a>Query Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the page number of the paginated result list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the size of the paginated result list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sortProperty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The property to use to sort the results</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sortDirection</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The sort direction, ascending (ASC) or descending (DESC)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">searchNotices</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_2"><a class="anchor" href="#_return_type_2"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#NoticeSearchResponse"><em>NoticeSearchResponse</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type_2"><a class="anchor" href="#_content_type_2"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_2"><a class="anchor" href="#_responses_2"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All notices based on filters. Even if 0 results.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#NoticeSearchResponse"><em>NoticeSearchResponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Missing Authorization header in request</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The provided TED API key doesn&#39;t exist or it is invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No Enotices2 account found for the EU login account identified by provided TED API key.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key cannot be currently validated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_2"><a class="anchor" href="#_samples_2"></a>Samples</h5>
+
+</div>
+</div>
+<div class="sect3 getValidationReport">
+<h4 id="_getvalidationreport"><a class="anchor" href="#_getvalidationreport"></a>getValidationReport</h4>
+<div class="paragraph">
+<p><code>GET /v3/notices/{businessId}/validation-report</code></p>
+</div>
+<div class="paragraph">
+<p>Retrieve the notice validation report</p>
+</div>
+<div class="sect4">
+<h5 id="_description_3"><a class="anchor" href="#_description_3"></a>Description</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameters_3"><a class="anchor" href="#_parameters_3"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_path_parameters"><a class="anchor" href="#_path_parameters"></a>Path Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">businessId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notice business identifier (notice identifier - version)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_3"><a class="anchor" href="#_return_type_3"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#File">[File]</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type_3"><a class="anchor" href="#_content_type_3"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>/</strong></p>
+</li>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_3"><a class="anchor" href="#_responses_3"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the notice validation report in SVRL (Schematron Validation Report Language) format.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#File">[File]</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing Authorization header in request - Invalid business id.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The provided TED API key doesn&#39;t exist or it is invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No Enotices2 account found for the EU login account identified by provided TED API key.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notice or notice report was not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key cannot be currently validated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_3"><a class="anchor" href="#_samples_3"></a>Samples</h5>
+
+</div>
+</div>
+<div class="sect3 render">
+<h4 id="_render"><a class="anchor" href="#_render"></a>render</h4>
+<div class="paragraph">
+<p><code>POST /v3/notices/render</code></p>
+</div>
+<div class="paragraph">
+<p>Get HTML or PDF rendering of a notice sent in the request body.</p>
+</div>
+<div class="sect4">
+<h5 id="_description_4"><a class="anchor" href="#_description_4"></a>Description</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameters_4"><a class="anchor" href="#_parameters_4"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_body_parameter_2"><a class="anchor" href="#_body_parameter_2"></a>Body Parameter</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NoticeRenderRequest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#NoticeRenderRequest"><em>NoticeRenderRequest</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_4"><a class="anchor" href="#_return_type_4"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#String">[String]</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type_4"><a class="anchor" href="#_content_type_4"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>text/html</p>
+</li>
+<li>
+<p>application/pdf</p>
+</li>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_4"><a class="anchor" href="#_responses_4"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OK</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#String">[String]</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - &#39;file&#39;, &#39;format&#39; or &#39;language&#39; is missing - The language is not valid - Notice cannot be created (parsing errors)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#TedAppsErrorReponse"><em>TedAppsErrorReponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key doesn&#39;t exist or it is invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#TedAppsErrorReponse"><em>TedAppsErrorReponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key cannot be currently validated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#TedAppsErrorReponse"><em>TedAppsErrorReponse</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_4"><a class="anchor" href="#_samples_4"></a>Samples</h5>
+
+</div>
+</div>
+<div class="sect3 renewApiKey">
+<h4 id="_renewapikey"><a class="anchor" href="#_renewapikey"></a>renewApiKey</h4>
+<div class="paragraph">
+<p><code>POST /v3/api-keys/{token}/renew</code></p>
+</div>
+<div class="paragraph">
+<p>Renew the user API Key</p>
+</div>
+<div class="sect4">
+<h5 id="_description_5"><a class="anchor" href="#_description_5"></a>Description</h5>
+<div class="paragraph">
+<p>Extends the validity of an active API Key. If the API Key is already inactive, a new one must be created. This endpoint is designed to be accessed indirectly, through the link provided in the email notification sent as the key approaches its expiration date.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameters_5"><a class="anchor" href="#_parameters_5"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_path_parameters_2"><a class="anchor" href="#_path_parameters_2"></a>Path Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">token</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The token received in the notification email</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_5"><a class="anchor" href="#_return_type_5"></a>Return Type</h5>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_5"><a class="anchor" href="#_responses_5"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 5. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The API Key validity has been extended</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The token provided is invalid - The token provided is not active anymore - The API Key has expired or has been revoked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_5"><a class="anchor" href="#_samples_5"></a>Samples</h5>
+
+</div>
+</div>
 <div class="sect3 search">
 <h4 id="_search"><a class="anchor" href="#_search"></a>search</h4>
 <div class="paragraph">
@@ -265,15 +842,15 @@
 <p>Search for notices using expert search query</p>
 </div>
 <div class="sect4">
-<h5 id="_description"><a class="anchor" href="#_description"></a>Description</h5>
+<h5 id="_description_6"><a class="anchor" href="#_description_6"></a>Description</h5>
 <div class="paragraph">
-<p>Search for notices using expert search query. More information about the query format and field names can be found on [this page](<a href="https://ted.europa.eu/en/search/expert-search)" class="bare">https://ted.europa.eu/en/search/expert-search)</a>)</p>
+<p>This API provides multiple read-only operations on the TED website data. The endpoint 'Notice Search API' can be used to search notices both TED schema notices and eForms notices. More information is available on the help pages of the TED website: &lt;ul&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu\"&gt;TED - Website&lt;/a&gt;&lt;/li&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/search/expert-search\"&gt;Expert Search&lt;/a&gt;&lt;/li&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/contact\"&gt;Contact&lt;/a&gt;&lt;/li&gt;     &lt;li&gt;&lt;a href=\"https://ted.europa.eu/en/legal-notice\"&gt;Legal notice&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt;  The API is accessible to the general public and can be utilized by anyone in accordance with the &lt;a href=\"#terms-of-usage\"&gt;term of usage&lt;/a&gt;.  &lt;h1&gt;Public API search modes&lt;/h1&gt;  This section describes the different search modes provided by the public search API. Each parameter of the search API is detailed in the OpenAPI documentation of the API.  &lt;h2&gt;Pagination mode&lt;/h2&gt; The pagination mode is the default mode of the public search API. This mode is stateless: the user can retrieve any result page, and not necessary in order. It also means that there is no mechanism to ensure consistency between two retrieved pages: if the user retrieves multiple pages and an OJS is released between two retrieved pages, then the user might miss some notices or have duplicated notices. Also, due to how Elasticsearch works internally, a limit on the number of retrievable notices for a given query has been put in place. This limit is described in the &lt;i&gt;Definition of limits&lt;/i&gt; section.  The user must provide the following parameters to the API to paginate results: &lt;ul&gt;     &lt;li&gt;limit: the number of notices returned per page. For example, limit=10 means that 10 notices will be returned.     &lt;/li&gt;     &lt;li&gt;page: the page number to retrieve. For example, page=1 means that the first result page will be retrieved.&lt;/li&gt; &lt;/ul&gt;  &lt;h2&gt;Scroll mode&lt;/h2&gt; The scroll mode allows user to retrieve all notices for a given query, without limitations defined in section &lt;i&gt;Definition of limits&lt;/i&gt;. With this mode, the user calls the search API to retrieve the first result page and a token. This token can then be included in the next query sent to the search API to retrieve the next result page. The user knows all notices have been retrieved once there is no more notice returned. The Elasticsearch point in time feature is used to ensure a consistency between all returned pages, which means that the user cannot miss notices or have duplicated notices. An Elasticsearch point in time is a freeze of the Elasticsearch instance at a specific time. If notices are added or removed during the lifetime of a point in time, the notices registered in the point in time don’t change. The point in time has an expiration time. This expiration time is defined as the date of the next OJS release plus 24 hours. It means that the user has always at least 24 hours to retrieve all the notices for a given query.  The user must provide the following parameters to the API to retrieve results in scroll mode: &lt;ul&gt;     &lt;li&gt;paginationMode should be set to “ITERATION”.&lt;/li&gt;     &lt;li&gt;limit: the number of notices to return for the next page.&lt;/li&gt;     &lt;li&gt;iterationNextToken: the token returned by the previous call to the search API. If this is the first call (i.e.,         to retrieve the first page), this parameter shouldn’t be provided.     &lt;/li&gt; &lt;/ul&gt;  &lt;h1&gt;Definition of limits&lt;/h1&gt; Here is a definition of the different limits defined for the SEM (Search Engine Module) endpoints in the next sections: &lt;ul&gt;     &lt;li&gt;Maximum number of retrievable notices: this corresponds to the number of notices that can be retrieved once the         user has queried all pages. For example, if the user retrieves all notices for a given query with page size 250,         and the limit of retrievable notices is 10k, it means the SEM will return no more notice after page 10k / 250 =         40, even if the query matches more than 10k notices.     &lt;/li&gt;     &lt;li&gt;Maximum number of notices per page: if this limit is X, then it means the user can retrieve X or less notices         per page, but not more than X notices per page.     &lt;/li&gt;     &lt;li&gt;Maximum number of fields per page: the number of fields per page is defined as the number of notices per page         multiplied by the number of fields retrieved for each notice. For example, with a limit of 250, the user is         allowed to retrieve 50 notices per page and 4 fields per notice (50 * 4 &lt; 250). However, they are not allowed to         retrieve 100 notices per page and 4 fields per notice (100 * 4 &gt; 250).     &lt;/li&gt; &lt;/ul&gt;  &lt;h2&gt;Search using pagination mode of public API&lt;/h2&gt;  The pagination mode of the public search API has the following limits: &lt;ul&gt;     &lt;li&gt;Maximum number of retrievable notices: 15k.&lt;/li&gt;     &lt;li&gt;Maximum number of notices per page: 250.&lt;/li&gt;     &lt;li&gt;Maximum number of fields per page: 10k.&lt;/li&gt; &lt;/ul&gt; In case a limit is reached, the search API will return an error to the user.  &lt;h2&gt;Search using scroll mode of public API&lt;/h2&gt;  The scroll mode of the public search API has the following limits: &lt;ul&gt;     &lt;li&gt;Maximum number of notices per page: 250.&lt;/li&gt;     &lt;li&gt;Maximum number of fields per page: 10k.&lt;/li&gt; &lt;/ul&gt; In case a limit is reached, the search API will return an error to the user. There is no limit on the number of retrievable notices.  &lt;h1&gt;Versioning&lt;/h1&gt;  The versioning of the TED Public API is managed by including the major version in the URL (eg. v1). An upgrade of the major version will denote a breaking changes of the API whereas minor and maintenance will be transparent to the client. The &lt;a href=\"#change-log\"&gt;change logs&lt;/a&gt; will contain the details of any modifications made to the API, serving as a means to notify clients about newly added features or bug fixes. The list of &lt;i&gt;fields&lt;/i&gt; by their variable nature are excluded from the versioning, addition, removal or update of a fields will not change the versioning.  &lt;h1&gt;Frequently Asked Questions&lt;/h1&gt;  &lt;h3&gt;How can I create, test or validate an expert query?&lt;/h3&gt; &lt;h3&gt;The API returns an error regarding an invalid field, format or value, how can I debug?&lt;/h3&gt;  The &lt;a href=\"https://ted.europa.eu/en/search/expert-search\"&gt;TED Expert Search&lt;/a&gt; page can be used for that purpose. It includes the capabilities to write a query, check the syntax, list all the fields and execute the query. The query once tailored can be reused in the query field parameter.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h5>
+<h5 id="_parameters_6"><a class="anchor" href="#_parameters_6"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="_body_parameter"><a class="anchor" href="#_body_parameter"></a>Body Parameter</h6>
+<h6 id="_body_parameter_3"><a class="anchor" href="#_body_parameter_3"></a>Body Parameter</h6>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -304,13 +881,13 @@
 </div>
 </div>
 <div class="sect4">
-<h5 id="_return_type"><a class="anchor" href="#_return_type"></a>Return Type</h5>
+<h5 id="_return_type_6"><a class="anchor" href="#_return_type_6"></a>Return Type</h5>
 <div class="paragraph">
 <p><a href="#search_200_response">[search_200_response]</a></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_content_type"><a class="anchor" href="#_content_type"></a>Content Type</h5>
+<h5 id="_content_type_5"><a class="anchor" href="#_content_type_5"></a>Content Type</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -320,9 +897,9 @@
 </div>
 </div>
 <div class="sect4">
-<h5 id="_responses"><a class="anchor" href="#_responses"></a>Responses</h5>
+<h5 id="_responses_6"><a class="anchor" href="#_responses_6"></a>Responses</h5>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. http response codes</caption>
+<caption class="title">Table 6. http response codes</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 50%;">
@@ -355,7 +932,367 @@
 </table>
 </div>
 <div class="sect4">
-<h5 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h5>
+<h5 id="_samples_6"><a class="anchor" href="#_samples_6"></a>Samples</h5>
+
+</div>
+</div>
+<div class="sect3 stopPublication">
+<h4 id="_stoppublication"><a class="anchor" href="#_stoppublication"></a>stopPublication</h4>
+<div class="paragraph">
+<p><code>POST /v3/notices/{businessId}/stop-publication</code></p>
+</div>
+<div class="paragraph">
+<p>Stop the notice publication</p>
+</div>
+<div class="sect4">
+<h5 id="_description_7"><a class="anchor" href="#_description_7"></a>Description</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameters_7"><a class="anchor" href="#_parameters_7"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_path_parameters_3"><a class="anchor" href="#_path_parameters_3"></a>Path Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">businessId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notice business identifier (notice identifier - version)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_7"><a class="anchor" href="#_return_type_7"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#NoticeResponse"><em>NoticeResponse</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type_6"><a class="anchor" href="#_content_type_6"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_7"><a class="anchor" href="#_responses_7"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 7. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The publication of the notice has been stopped.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#NoticeResponse"><em>NoticeResponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing Authorization header in request - Invalid business id.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The provided TED API key doesn&#39;t exist or it is invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Notice publication cannot be stopped because it is not in SUBMITTED status. - No Enotices2 account found for the EU login account identified by provided TED API key.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Notice was not found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">423</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cannot acquire lock because notice is already locked.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key cannot be currently validated. - Internal error while updating notice status.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_7"><a class="anchor" href="#_samples_7"></a>Samples</h5>
+
+</div>
+</div>
+<div class="sect3 submitNotice">
+<h4 id="_submitnotice"><a class="anchor" href="#_submitnotice"></a>submitNotice</h4>
+<div class="paragraph">
+<p><code>POST /v3/notices/submit</code></p>
+</div>
+<div class="paragraph">
+<p>Submit XML notice</p>
+</div>
+<div class="sect4">
+<h5 id="_description_8"><a class="anchor" href="#_description_8"></a>Description</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameters_8"><a class="anchor" href="#_parameters_8"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_form_parameters"><a class="anchor" href="#_form_parameters"></a>Form Parameters</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">metadata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Metadata">[Metadata]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">notice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notice XML content. <a href="#file">[file]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_8"><a class="anchor" href="#_return_type_8"></a>Return Type</h5>
+<div class="paragraph">
+<p><a href="#NoticeSubmitResponse"><em>NoticeSubmitResponse</em></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type_7"><a class="anchor" href="#_content_type_7"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_8"><a class="anchor" href="#_responses_8"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 8. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">201</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notice is created. If CVS validation succeeds, the notice is submitted for publication. Otherwise, is not submitted for publication and report validation can be retrieved from &#39;validationReportUrl&#39; response property.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#NoticeSubmitResponse"><em>NoticeSubmitResponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing Authorization header in request - Missing metadata  - Missing notice  - Missing noticeAuthorEmail - Missing noticeAuthorLocale - Notice with the same noticeId and versionId already exists. - noticeAuthorEmaill is not valid. - Notice parameter cannot be empty. - Notice cannot be parsed, it is not valid. - Could not find given procedure and cannot create new one for this type of notice. - Missing procedure id in the notice.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The provided TED API key doesn&#39;t exist or it is invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No Enotices2 account found for the EU login account identified by provided TED API key.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">404</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - No compatible SDK version found</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">409</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues:  - Multiple objects are created/updated at the same time.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key cannot be currently validated. - The CVS service is not available to validate the notice. - The CVS could not execute the validation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#ExceptionBody"><em>ExceptionBody</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_8"><a class="anchor" href="#_samples_8"></a>Samples</h5>
+
+</div>
+</div>
+<div class="sect3 validate">
+<h4 id="_validate"><a class="anchor" href="#_validate"></a>validate</h4>
+<div class="paragraph">
+<p><code>POST /v3/notices/validate</code></p>
+</div>
+<div class="paragraph">
+<p>Validate a notice</p>
+</div>
+<div class="sect4">
+<h5 id="_description_9"><a class="anchor" href="#_description_9"></a>Description</h5>
+<div class="paragraph">
+<p>Validate a notice sent in the request body. This operation returns a schematron validation report which describes all the tests performed.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameters_9"><a class="anchor" href="#_parameters_9"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_body_parameter_4"><a class="anchor" href="#_body_parameter_4"></a>Body Parameter</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Default</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NoticeValidationRequest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#NoticeValidationRequest"><em>NoticeValidationRequest</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_return_type_9"><a class="anchor" href="#_return_type_9"></a>Return Type</h5>
+<div class="paragraph">
+<p>-</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_content_type_8"><a class="anchor" href="#_content_type_8"></a>Content Type</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>application/xml</p>
+</li>
+<li>
+<p>application/json</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_responses_9"><a class="anchor" href="#_responses_9"></a>Responses</h5>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 9. http response codes</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Message</th>
+<th class="tableblock halign-left valign-top">Datatype</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The report is returned.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The &#39;language&#39; parameter is not valid. - The &#39;validationMode&#39; parameter is not valid. The &#39;validationMode&#39; parameter is not valid. - The rules are missing for the following version.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#TedAppsErrorReponse"><em>TedAppsErrorReponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key doesn&#39;t exist or it is invalid.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#TedAppsErrorReponse"><em>TedAppsErrorReponse</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The provided TED API key cannot be currently validated.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#TedAppsErrorReponse"><em>TedAppsErrorReponse</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_samples_9"><a class="anchor" href="#_samples_9"></a>Samples</h5>
 
 </div>
 </div>
@@ -440,6 +1377,43 @@
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Object</p></td>
 <td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="ExceptionBody"><a class="anchor" href="#ExceptionBody"></a><em>ExceptionBody</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-ExceptionBody">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The exception code.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The exception message.</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
@@ -554,6 +1528,181 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Code to identify the error type</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><em>Enum:</em> INVALID_ITERATION_TOKEN,</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="Notice"><a class="anchor" href="#Notice"></a><em>Notice</em></h3>
+<table class="tableblock frame-all grid-all stretch fields-Notice">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UUID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice identifier (without the version).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uuid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">versionId</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the version identifier.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">procedureId</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UUID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the procedure identifier.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uuid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">status</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NoticeStatus</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">updatedAt</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The exact moment of the latest update of the notice by either user or system.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">submittedAt</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notice submission date/time.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">publicationId</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice publication identifier.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">publicationDate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice publication date.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noticeType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice notice type.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">legalBasis</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice legal basis code.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">languages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List  of <a href="#string">[string]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice languages.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noticeAuthor</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The email is used to identify the person responsible for the notice, i.e. the Contracting Authority.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expectedPublicationDate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The notice expected publication date.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="NoticeRenderRequest"><a class="anchor" href="#NoticeRenderRequest"></a><em>NoticeRenderRequest</em></h3>
+<div class="paragraph">
+<p>eForms Notice Render Request</p>
+</div>
+<table class="tableblock frame-all grid-all stretch fields-NoticeRenderRequest">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML notice encoded in base 64</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Language used to render the notice  * Notice labels are displayed in the specified language   *  The content of the notice is displayed in the specified language when it exists in the XML notice, otherwise the content is displayed with the first official language of the notice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Enum:</em> bg, cs, da, de, el, en, es, et, fi, fr, ga, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sl, sv, hr,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output format</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Enum:</em> PDF, HTML,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">textToHighlight</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Highlight specific text in the notice rendering. This is used in TED with the search feature</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">summary</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Render notice by displaying only the specific elements</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
 </table>
@@ -11414,6 +12563,246 @@
 </table>
 </div>
 <div class="sect2">
+<h3 id="NoticeSearchRequest"><a class="anchor" href="#NoticeSearchRequest"></a><em>NoticeSearchRequest</em></h3>
+<div class="paragraph">
+<p>The information used in a notice search.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch fields-NoticeSearchRequest">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UUID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice identifier (without the version).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uuid</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">versionId</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the version identifier.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">submittedAfter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the minimum date/time value used to find notices submitted after this point.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">submittedBefore</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the maximum date/time value used to find notices submitted before this point.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">publishedAfter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the minimum date/time value used to find notices published after this point.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">publishedBefore</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the maximum date/time value used to find notices published before this point.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date-time</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">statuses</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List  of <a href="#string">[string]</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The list of status to include in the search:   * DRAFT - The notice is being drafted.   * SUBMITTED - The notice is successfully received, validated and sent to OP (received by TED-Monitor-2022).   * STOPPED - Publication of the notice was stopped by the buyer/ eSender before publication and the request was accepted.   * PUBLISHED - The notice is published online on TED.   * PUBLISHING - Publication process in progress, i.e. the notice has been added to the daily export for TED.   * DELETED - The notice has been deleted by front-end user.   * NOT_PUBLISHED - The notice was received but not published on TED.   * ARCHIVED - The notice has been archived by front-end user.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Enum:</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noticeAuthor</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the notice author</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="NoticeSearchResponse"><a class="anchor" href="#NoticeSearchResponse"></a><em>NoticeSearchResponse</em></h3>
+<div class="paragraph">
+<p>The information returned after a notice search.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch fields-NoticeSearchResponse">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">totalSize</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Long</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the total size of entities found.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int64</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List  of <a href="#NoticeResponse"><em>NoticeResponse</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the content of entities found.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="NoticeStatus"><a class="anchor" href="#NoticeStatus"></a><em>NoticeStatus</em></h3>
+<div class="paragraph">
+<p>the notice status.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch fields-NoticeStatus">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+</table>
+</div>
+<div class="sect2">
+<h3 id="NoticeSubmitResponse"><a class="anchor" href="#NoticeSubmitResponse"></a><em>NoticeSubmitResponse</em></h3>
+<div class="paragraph">
+<p>The CVS report details after the notice xml submission.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch fields-NoticeSubmitResponse">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">validationReportUrl</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the url to use to retrieve the CVS validation report</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">success</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the status of the submission. True if success, otherwise false.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="NoticeValidationRequest"><a class="anchor" href="#NoticeValidationRequest"></a><em>NoticeValidationRequest</em></h3>
+<div class="paragraph">
+<p>Request parameters for validation</p>
+</div>
+<table class="tableblock frame-all grid-all stretch fields-NoticeValidationRequest">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">notice</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byte[]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Payload in base64 for the XML document</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">byte</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Language to generate the SVRL report. Enum: [bg, cs, da, de, el, en, es, et, fi, fr, ga, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sl, sv, hr]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">validationMode</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the validation mode that will be applied, selecting the corresponding set of rules from the eForms SDK that will be applied.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Enum:</em> dynamic, static,</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eFormsSdkVersion</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the eForms SDK version to use for validating the notice. This parameter should be omitted unless you want to override the version indicated in the cbc:CustomizationID element in the notice.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
 <h3 id="PublicExpertSearchRequestV1"><a class="anchor" href="#PublicExpertSearchRequestV1"></a><em>PublicExpertSearchRequestV1</em> PublicExpertSearchRequest</h3>
 <div class="paragraph">
 <p>Request body of the notice search endpoint</p>
@@ -11951,6 +13340,53 @@
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="TedAppsErrorReponse"><a class="anchor" href="#TedAppsErrorReponse"></a><em>TedAppsErrorReponse</em></h3>
+<div class="paragraph">
+<p>Error response</p>
+</div>
+<table class="tableblock frame-all grid-all stretch fields-TedAppsErrorReponse">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field Name</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">errorCode</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP error code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error description</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timestamp</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error timestamp in RFC 3339 format</p></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 </tbody>
