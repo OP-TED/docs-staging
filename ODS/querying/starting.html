@@ -86,22 +86,22 @@
     <span class="nav-text"><span class="separated"><strong>Query TED RDF data</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">How to create Query TED RDF data</a>
+    <a class="nav-link" href="index.html">How to query TED RDF data</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="tutorials.html">Tutorials: RDF, ePO, LOD</a>
+    <a class="nav-link" href="#querying:tutorials.adoc">Tutorials: RDF, ePO, LOD</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="guidance.html">Guidance: Notice Data; Data Familiarisation</a>
+    <a class="nav-link" href="#querying:guidance.adoc">Guidance: notice data, data familiarisation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="snippets.html">Reusable Query Snippets</a>
+    <a class="nav-link" href="snippets.html">Reusable query snippets</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="scenarios.html">From Question to Query</a>
+    <a class="nav-link" href="scenarios.html">From question to query</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../samples/examples.html">Featured Query Examples</a>
+    <a class="nav-link" href="../samples/examples.html">Featured query examples</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Connecting to TED RDF Data</strong></span></span>
@@ -325,16 +325,41 @@
 <h2 id="_how_rdf_data_is_queried"><a class="anchor" href="#_how_rdf_data_is_queried"></a>How RDF data is queried</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>RDF data is queried using SPARQL, a query language specifically for querying RDF data. A short info session on querying RDF data and constructing a query can be found below in the RDF Data section below.</p>
+<p>RDF data is queried using SPARQL, a query language specifically for querying RDF data.</p>
 </div>
 <div class="paragraph">
 <p>Once a query is ready, it is pasted into the SPARQL EndPoint&#8217;s input field and executed.</p>
 </div>
 <div class="paragraph">
-<p>Before you get to the point where you construct a query, there are a few topics worth reading through and getting familiar with. There are links below to more information or training resources.</p>
+<p>Before you get to the point where you construct a query, there are a few topics worth reading through and getting familiar with such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>RDF Data</p>
+</li>
+<li>
+<p>Writing SPARQL Queries</p>
+</li>
+<li>
+<p>Understanding the data</p>
+</li>
+<li>
+<p>Where the data is stored</p>
+</li>
+<li>
+<p>How to get started</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>There are also some example queries that can be accessed via the menu on the left, which walk you through a few methods of running SPARQL queries. The example queries can be copied and pasted, as is, into any of the different query methods.</p>
+<p>There are links below to online information or training resources.</p>
+</div>
+<div class="paragraph">
+<p>There are also some sample queries that can be accessed via the menu on the left, which walk you through a few ways of running SPARQL queries. The example queries can be copied and pasted, as is, into any of the different query methods.</p>
+</div>
+<div class="paragraph">
+<p>A short info session on querying RDF data and constructing a query can be found below in the RDF Data section below.</p>
 </div>
 </div>
 </div>
@@ -342,7 +367,7 @@
 <h2 id="_rdf_data"><a class="anchor" href="#_rdf_data"></a>RDF Data</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>RDF data has a specific format made up of a "semantic triple", explained in more detail in the info session on RDF linked in the online training resources section below. An info session is also available on Linked Open Data <a href="https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/LOD/index.html">here</a>, which is linked RDF data that is licenced as open (for reuse).</p>
+<p>RDF data has a specific format made up of a "semantic triple", explained in more detail in the info session on RDF linked in the online training resources section below. An info session on <a href="https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/LOD/index.html">Linked Open Data</a> is also available. (linked open data is RDF data that is licenced as open i.e., for reuse).</p>
 </div>
 </div>
 </div>
@@ -355,7 +380,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>The info sessions on the ePO page for learning about RDF and SPARQL can be found in the ePO Docs <a href="https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/RDF/index.html">here</a></p>
+<p>The  <a href="https://docs.ted.europa.eu/docs-staging/epo-home/_attachments/RDF/index.html">info sessions on the eProcurement Ontology for learning about RDF and SPARQL can be found in the ePO Docs.</a></p>
 </li>
 <li>
 <p><a href="https://www.w3.org/TR/sparql11-query/">W3C</a></p>
@@ -400,7 +425,16 @@
 <h2 id="_guides_for_using_epo_resources_when_designing_queries"><a class="anchor" href="#_guides_for_using_epo_resources_when_designing_queries"></a>Guides for using ePO resources when designing queries</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Guides to using resources provided by the eProcurement Ontology to assist in constructing queries can be found <a href="https://docs.ted.europa.eu/docs-staging/epo-home/guide.html">here</a>. These are specific to EU public procurement and will help find the concepts or classes you will use in your queries.</p>
+<p>The <a href="https://docs.ted.europa.eu/epo-home/index.html" class="bare">https://docs.ted.europa.eu/epo-home/index.html</a>[eProcurement Ontology} contains the names and definitions of all the concepts used in EU public procurement and provides very useful information for query builders in the form of glossaries (definitions) and conceptual models (concepts and their relationships to one another).</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.ted.europa.eu/docs-staging/epo-home/guide.html">Guides to using resources provided by the eProcurement Ontology to assist in constructing queries</a> are available. These are specific to EU public procurement and will explain how to find the exact concepts or classes you might want to use in your queries.</p>
+</div>
+<div class="paragraph">
+<p><a href="snippets.html" class="xref page">Code snippets</a> are provided for frequently used concepts such as "buyer", "country","value", amongst others which you can copy and paste into your own queries to save time.</p>
+</div>
+<div class="paragraph">
+<p>Finally, some scenarios are introduced which demonstrate the process of going from a general idea for a query and honing it into a query using the resources available.</p>
 </div>
 </div>
 </div>
@@ -411,7 +445,7 @@
 <p>Public procurement data available for query comes from notice data. For a short introduction of what data can be found in notices, you can go to the ted.europa.eu website and examine a notice. Any notice can be found by opening the latest issue of the Official Journal Supplement, or by using one of the several ways of searching for notices available on the site: advanced, expert, or browse by subject.</p>
 </div>
 <div class="paragraph">
-<p>As an aid, you can use these short info sessions on <a href="../_attachments/notice_data/index.html" class="xref attachment">Notice Data</a> and <a href="#attachment$searching_notices/index.html" class="xref unresolved">Searching Notices</a> to familiarise yourself with notices and how to use the ted.europa.eu search possibilities.</p>
+<p>As an aid, you can use these short info sessions on <a href="../_attachments/notice_data/index.html" class="xref attachment">Notice Data</a> and <a href="../_attachments/searching_notices/index.html" class="xref attachment">Searching Notices</a> to familiarise yourself with notices and how to use the ted.europa.eu search options.</p>
 </div>
 <div class="paragraph">
 <p>This should give you a good idea of the information that can be found in a notice.</p>
@@ -428,7 +462,7 @@
 <p>As part of the European Commission&#8217;s strategy for data reuse and transparency, notice data is converted into RDF format using an automated "pipeline" service.</p>
 </div>
 <div class="paragraph">
-<p>The data, stored in the "Cellar", the RDF triplestore (database) maintained by the Publications Office, enables anyone to query notice data as Linked Open Data using Cellar&#8217;s <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL EndPoint</a>.</p>
+<p>The data, stored in the "Cellar", the RDF triple store (database) maintained by the Publications Office, is open to anyone wishes to query notice data as Linked Open Data using the query methods found in the menu on the left under "Connecting to RDF data".</p>
 </div>
 </div>
 </div>
