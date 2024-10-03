@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Query1: xyz :: TED Developer Documentation</title>
+    <title>Who are the winners for a given date? :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/samples/query8.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -317,7 +317,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="query8.html">Query1: xyz</a></li>
+    <li><a href="query8.html">Who are the winners for a given date?</a></li>
   </ul>
 </nav>
 </div>
@@ -326,7 +326,7 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Query1: xyz</h1>
+<h1 class="page">Who are the winners for a given date?</h1>
 <div class="sect1">
 <h2 id="_the_scenario"><a class="anchor" href="#_the_scenario"></a>The Scenario</h2>
 <div class="sectionbody">
@@ -366,6 +366,55 @@
 <div class="sect1">
 <h2 id="_the_query"><a class="anchor" href="#_the_query"></a>The Query</h2>
 <div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX org: &lt;http://www.w3.org/ns/org#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+SELECT DISTINCT
+?NoticeID
+?NoticePublicationDate
+?ProcedureNr
+?LotNr
+?WinnerLegalName
+?WinnerCountryCode
+?LotAwardedValue
+?LotAwardedValueCurrency
+?LotURI
+?NoticeURI
+WHERE {
+    VALUES ?NoticePublicationDate {
+        "20230831"
+    }
+    FILTER(LANG(?WinnerLegalName) = 'en')
+    ?NoticeURI a epo:ResultNotice;
+               epo:hasPublicationDate ?NoticePublicationDate;
+               epo:hasID / epo:hasIdentifierValue ?NoticeID ;
+                           epo:refersToLot ?LotURI.
+    ?LotURI a epo:Lot.
+    ?LotAwardOutcome epo:describesLot ?LotURI;
+                     a epo:LotAwardOutcome;
+                     epo:hasAwardedValue ?LotAwardedValueURI ;
+                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
+    ?TenderAwardOutcome a epo:TenderAwardOutcome;
+                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
+    ?Winner a org:Organization;
+            epo:hasLegalName ?WinnerLegalName .
+    OPTIONAL {
+        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
+    }
+    ?LotAwardedValueURI a epo:MonetaryValue;
+                        epo:hasAmountValue ?LotAwardedValue;
+                        epo:hasCurrency ?LotAwardedValueCurrency.
+    OPTIONAL {
+        ?LotURI epo:hasID / epo:hasIdentifierValue ?LotNr .
+    }
+    ?ProcedureURI epo:hasProcurementScopeDividedIntoLot ?LotURI;
+                  a epo:Procedure ;
+                  epo:hasID / epo:hasIdentifierValue ?ProcedureNr .
+}</pre>
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>

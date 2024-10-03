@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Query1: xyz :: TED Developer Documentation</title>
+    <title>How many Public Procurement METS packages have been published lately? :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/samples/query2.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -317,7 +317,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="query2.html">Query1: xyz</a></li>
+    <li><a href="query2.html">How many Public Procurement METS packages have been published lately?</a></li>
   </ul>
 </nav>
 </div>
@@ -326,7 +326,7 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Query1: xyz</h1>
+<h1 class="page">How many Public Procurement METS packages have been published lately?</h1>
 <div class="sect1">
 <h2 id="_the_scenario"><a class="anchor" href="#_the_scenario"></a>The Scenario</h2>
 <div class="sectionbody">
@@ -366,6 +366,27 @@
 <div class="sect1">
 <h2 id="_the_query"><a class="anchor" href="#_the_query"></a>The Query</h2>
 <div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">PREFIX cdm: &lt;http://publications.europa.eu/ontology/cdm#&gt;
+PREFIX cmr: &lt;http://publications.europa.eu/ontology/cdm/cmr#&gt;
+PREFIX purl: &lt;http://purl.org/dc/elements/1.1/&gt;
+
+SELECT COUNT(*) as ?notices_published_in_2023 WHERE {
+    ?work a &lt;http://publications.europa.eu/ontology/cdm#procurement_public&gt; .
+    ?work cdm:work_date_document ?dd.
+    ?work owl:sameAs ?psi.
+    ?work cmr:creationDate ?creation.
+    ?work cmr:lastModificationDate ?lastmodif .
+    ?expr cdm:expression_belongs_to_work ?work .
+    ?expr cdm:expression_uses_language ?lang .
+    ?manif cdm:manifestation_manifests_expression ?expr .
+    ?manif cdm:manifestation_type ?format.
+    ?item cdm:item_belongs_to_manifestation ?manif.
+    FILTER (str(?lastmodif) &gt; '2023-08-09' &amp;&amp; str(?lastmodif) &lt; '2023-12-31')
+}</code></pre>
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>

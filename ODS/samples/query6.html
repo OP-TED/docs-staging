@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Query1: xyz :: TED Developer Documentation</title>
+    <title>How many tenders foresee subcontracting for a given date? :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/samples/query6.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -317,7 +317,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="query6.html">Query1: xyz</a></li>
+    <li><a href="query6.html">How many tenders foresee subcontracting for a given date?</a></li>
   </ul>
 </nav>
 </div>
@@ -326,7 +326,7 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Query1: xyz</h1>
+<h1 class="page">How many tenders foresee subcontracting for a given date?</h1>
 <div class="sect1">
 <h2 id="_the_scenario"><a class="anchor" href="#_the_scenario"></a>The Scenario</h2>
 <div class="sectionbody">
@@ -366,6 +366,25 @@
 <div class="sect1">
 <h2 id="_the_query"><a class="anchor" href="#_the_query"></a>The Query</h2>
 <div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+
+SELECT COUNT DISTINCT(?Notice) WHERE {
+
+     VALUES ?NoticePublicationDate  {
+        "20230905"
+    }
+
+    ?Notice epo:hasPublicationDate ?NoticePublicationDate .
+
+    ?Notice epo:refersToLot ?Lot .
+    ?Tender epo:isSubmittedForLot ?Lot .
+    ?Tender epo:foreseesSubcontracting ?Subcontrating .
+
+}</pre>
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
