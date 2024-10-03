@@ -132,13 +132,28 @@
     <a class="nav-link" href="index.html">Browse the sample queries</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="query1.html">Query 1:</a>
+    <a class="nav-link" href="query1.html">Query 1: Highest Value Contract</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="query1.html">Query 2:</a>
+    <a class="nav-link" href="query2.html">Query 2: METS packages published</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="query1.html">Query 3:</a>
+    <a class="nav-link" href="query3.html">Query 3: Query notice by id</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="query4.html">Query 4: Notices published</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="query5.html">Query 5: Contracts won by SMEs</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="query6.html">Query 6: Contractors using Subcontractors</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="query7.html">Query 7: Contract Values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="query8.html">Query 8: Winners on a Date</a>
   </li>
 </ul>
   </li>
@@ -317,7 +332,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><a href="query6.html">How many tenders foresee subcontracting for a given date?</a></li>
+    <li><a href="index.html">Browse the sample queries</a></li>
+    <li><a href="query6.html">Query 6: Contractors using Subcontractors</a></li>
   </ul>
 </nav>
 </div>
@@ -368,7 +384,7 @@
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre>PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+<pre class="highlightjs highlight"><code class="language-none hljs">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
 
 SELECT COUNT DISTINCT(?Notice) WHERE {
 
@@ -382,7 +398,7 @@ SELECT COUNT DISTINCT(?Notice) WHERE {
     ?Tender epo:isSubmittedForLot ?Lot .
     ?Tender epo:foreseesSubcontracting ?Subcontrating .
 
-}</pre>
+}</code></pre>
 </div>
 </div>
 <div class="ulist">
