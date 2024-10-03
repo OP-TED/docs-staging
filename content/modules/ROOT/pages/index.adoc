@@ -37,9 +37,9 @@ The European Single Procurement Document enables accelerated processing of preli
 ****
 
 [.tile]
-.TED Semantic Web Service
+.TED Open Data Service
 ****
-The TED Semantic Web Service allows machine-to-machine interaction with public procurement data. It enables uniform access to current and historical TED data through RDF downloads or direct queries to our SPARQL endpoint.
+The TED Open Data Service allows machine-to-machine interaction with public procurement data. It enables open access to current and historical TED data through direct queries to our SPARQL endpoint.
 
 [.button]
 <<ODS:ROOT:index.adoc#, Read the docs>>
