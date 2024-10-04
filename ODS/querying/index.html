@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Querying EU public procurement Data :: TED Developer Documentation</title>
+    <title>Querying EU Public Procurement Data :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/querying/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -83,17 +83,17 @@
     <a class="nav-link" href="../index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
     <span class="nav-text"><span class="separated"><strong>Querying TED Open data</strong></span></span>
-<ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="index.html">TED Open Data</a>
   </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">TED Open Data</a>
+<ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="starting.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="RDF_how.html">How to query TED RDF data</a>
+    <a class="nav-link" href="RDF_how.html">How to query TED Open data</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="structure.html">SPARQL Query Structure</a>
@@ -119,12 +119,12 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <span class="nav-text"><span class="separated"><strong>Connecting to TED Open Data</strong></span></span>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../connecting/index.html">Connecting to TED RDF data</a>
+    <span class="nav-text"><span class="separated"><strong>Connecting to TED Open data</strong></span></span>
   </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connecting/index.html">Connection Methods</a>
+<ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../connecting/sparql.html">Paste your query directly into the SPARQL Endpoint</a>
   </li>
@@ -174,7 +174,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../mapping/index.html">Overview of mapping XML to RDF</a>
+    <a class="nav-link" href="../mapping/index.html">Mappings and Mapping Suites</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../mapping/mapping_how.html">How to create mappings</a>
@@ -193,9 +193,6 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../mapping/repository-structure.html">Repository structure</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../mapping/toolchain.html">Toolchain</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../mapping/code-list-resources.html">Code list mappings</a>
@@ -340,7 +337,6 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data Service</a></li>
-    <li><span class="separated"><strong>Querying TED Open data</strong></span></li>
     <li><a href="index.html">TED Open Data</a></li>
   </ul>
 </nav>
@@ -350,48 +346,44 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Querying EU public procurement Data</h1>
+<h1 class="page">Querying EU Public Procurement Data</h1>
 <div class="paragraph">
 <p>Anyone, with a little know-how, and with help from the resources provided, can learn to create their own queries, and benefit from data on EU public procurement.</p>
 </div>
 <div class="paragraph">
-<p>This section on querying public procurement data introduces the resources and guides available to help those interested improve their querying knowledge and skills.</p>
+<p>This section on querying public procurement data introduces the resources and guides available to help those interested improve their public procurement knowledge and querying skills.</p>
 </div>
 <div class="paragraph">
-<p>**<a href="starting.html" class="xref page">Getting Started</a><br>
+<p><a href="starting.html" class="xref page">Getting Started</a><br>
 An Overview of how to query RDF data</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
+<div class="paragraph">
 <p><a href="RDF_how.html" class="xref page">How to query TED RDF data</a><br>
 An Overview of how to query RDF data</p>
-</li>
-<li>
-<p><a href="#querying:tutorials.adoc" class="xref unresolved">Online training resources</a><br>
-Online resources for learning RRDF, SPARQL</p>
-</li>
-<li>
+</div>
+<div class="paragraph">
+<p><a href="online_training.html" class="xref page">Online training resources</a><br>
+Online resources for learning RRDF and SPARQL</p>
+</div>
+<div class="paragraph">
 <p><a href="notice_data.html" class="xref page">Notice data</a><br>
 The Information and fields in Notice data</p>
-</li>
-<li>
+</div>
+<div class="paragraph">
 <p><a href="epo.html" class="xref page">eProcurement Ontology resources</a><br>
 The eProcurement Ontology Resources</p>
-</li>
-<li>
+</div>
+<div class="paragraph">
 <p><a href="snippets.html" class="xref page">Reusable query snippets</a><br>
 Reusable SPARQL snippets for frequently used classes</p>
-</li>
-<li>
+</div>
+<div class="paragraph">
 <p><a href="scenarios.html" class="xref page">Scenarios: question to query</a><br>
-Query Scenarios: from question to query</p>
-</li>
-<li>
+Query Scenarios: from Question to Query</p>
+</div>
+<div class="paragraph">
 <p><a href="../samples/index.html" class="xref page">Browse the sample queries</a><br>
 Sample Queries to get you started</p>
-</li>
-</ul>
 </div>
 <div class="paragraph">
 <p>Queries can be submitted via Cellar&#8217;s <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL endpoint</a>, for which there is a link on the <a href="https://op.europa.eu/en/web/eu-vocabularies">EU Vocabularies page</a>.</p>
