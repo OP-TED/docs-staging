@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: TED Developer Documentation</title>
+    <title>Query Structure :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/querying/structure.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -347,9 +347,9 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<div class="paragraph">
-<p>query structure</p>
-</div>
+<h1 class="page">Query Structure</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
 <p>A SPARQL query has a specific structure that is set out in several sections:</p>
 </div>
@@ -358,8 +358,11 @@
 <img src="_images/sparql_query.png" alt="sparql query">
 </div>
 </div>
-<div class="sect2">
-<h3 id="_prefixes"><a class="anchor" href="#_prefixes"></a>Prefixes</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prefixes"><a class="anchor" href="#_prefixes"></a>Prefixes</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The first part, often called the "prefixes", contains the vocabularies used in the query. Vocabularies are a key feature of RDF data and SPARQL and work as follows:</p>
 </div>
@@ -382,16 +385,24 @@
 <p>The prefix before the = sign is the abbreviation of the URI after the = sign.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_data_fields_returned"><a class="anchor" href="#_data_fields_returned"></a>Data fields returned</h3>
+</div>
+<div class="sect1">
+<h2 id="_data_fields_required"><a class="anchor" href="#_data_fields_required"></a>Data fields required</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The second section lists all the fields (terms/ concepts) that the query should return. Each field here becomes a column containing the data returned. These can be the contents of a field, or the contents of a variable that is defined in the next section.</p>
+<p>The second section lists all the fields (terms/ concepts) that you wish the query should return. Each field here becomes a column in the results. These could be the contents of a field, or the contents of a variable that is defined in the next section.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_specifying_the_data"><a class="anchor" href="#_specifying_the_data"></a>Specifying the data</h3>
+</div>
+<div class="sect1">
+<h2 id="_specifying_the_data"><a class="anchor" href="#_specifying_the_data"></a>Specifying the data</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The third section is used to specify data based on the semantic connections between the fields specified above, and any filters or criteria the query constructor wants to apply to them. Going back to names and numbers above, it could be to find names that don&#8217;t have a number, so that the person querying can find the missing data and enter it, or it could be to find the names and numbers in a specific location, or of a particular age group.</p>
+<p>The third section is used to specify data based on semantic connections between the fields specified above and any other concepts used to arrive at the exact field desired, plus any filters or criteria the query constructor wants to apply to them.</p>
+</div>
+<div class="paragraph">
+<p>Going back to names and numbers used as the example in the how to query page, filters or criteria could be to find names that don&#8217;t have a number, so that the person querying can find the missing data and add it, or it could be to find the names and numbers in a specific location, or of a particular age group.</p>
+</div>
 </div>
 </div>
 </article>
