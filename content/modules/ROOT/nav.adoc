@@ -12,7 +12,7 @@
 * xref:epo-home::index.adoc[ePO Docs `{epo_latest_version}`]
 * xref:epo-wgm::index.adoc[Working Group Meetings]
 
-* [.separated]#**ESPD**#
+* [.separated]#**ESPD-EDM**#
 * xref:ESPD-EDM::index.adoc[ESPD-EDM Docs `{espd_latest_version}`]
 * xref:espd-ouc::index.adoc[Open User Community Meetings]
 
