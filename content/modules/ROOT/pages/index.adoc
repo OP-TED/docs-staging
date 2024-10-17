@@ -29,9 +29,9 @@ The European Single Procurement Document enables accelerated processing of preli
 ****
 
 [.tile]
-.TED Open Data
+.TED Data
 ****
-The TED Open Data Service allows machine-to-machine interaction with public procurement data. It provides open access to current and historical TED data through direct queries to our SPARQL endpoint.
+Access TED Open Data via direct queries to our SPARQL endpoint or download TED Notice XML Data
 
 [.button]
 <<ODS:ROOT:index.adoc#, Read the docs>>
@@ -46,6 +46,15 @@ TED API is a collection of public interfaces allowing 3rd party applications to 
 ****
 
 ////
+[.tile]
+.TED Open Data
+****
+The TED Open Data Service allows machine-to-machine interaction with public procurement data. It provides open access to current and historical TED data through direct queries to our SPARQL endpoint.
+
+[.button]
+<<ODS:ROOT:index.adoc#, Read the docs>>
+****
+
 [.tile]
 .Reusing TED Data 
 ****
