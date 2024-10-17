@@ -8,22 +8,27 @@
 * xref:eforms:active-versions/index.adoc[Active SDK Versions]
 * link:https://docs.ted.europa.eu/eforms-sdk-explorer[SDK Explorer, window=_blank]
 
-* [.separated]#**TED API**#
-* xref:api-home:ROOT:index.adoc[TED API Docs `{api_latest_version}`]
-
 * [.separated]#**eProcurement Ontology**#
 * xref:epo-home::index.adoc[ePO Docs `{epo_latest_version}`]
 * xref:epo-wgm::index.adoc[Working Group Meetings]
 
-* [.separated]#**TED Open Data Service**#
-* xref:ODS::index.adoc[TED Open Data Service]
-
-* [.separated]#**model2owl**#
-* xref:m2o-home::index.adoc[model2owl docs]
+* [.separated]#**TED API**#
+* xref:api-home:ROOT:index.adoc[TED API Docs `{api_latest_version}`]
 
 * [.separated]#**ESPD**#
 * xref:ESPD-EDM::index.adoc[ESPD-EDM Docs `{espd_latest_version}`]
 * xref:espd-ouc::index.adoc[Open User Community Meetings]
 
+* [.separated]#**TED Open Data**#
+* xref:ODS::index.adoc[TED Open Data Service]
+
+* [.separated]#**TED API**#
+* xref:api::index.adoc[TED Open Data Service]
+
+////
+* [.separated]#**model2owl**#
+* xref:m2o-home::index.adoc[model2owl docs]
+
 * [.separated]#**Reusing TED Data**#
 * xref:reuse::index.adoc[Downloading TED Notices]
+////
