@@ -12,14 +12,6 @@ eForms is the new notification standard for public procurement procedures in the
 ****
 
 [.tile]
-.TED API
-****
-TED API is a collection of public interfaces allowing 3rd party applications to validate and submit eForms notices, publish tender documents, and search the TED archives.
-
-<<api-home:ROOT:index.adoc#, Read the docs>>
-****
-
-[.tile]
 .eProcurement Ontology
 ****
 The eProcurement Ontology provides the formal, semantic foundation for the creation and reuse of linked open data in the domain of public procurement in the EU.
@@ -37,7 +29,7 @@ The European Single Procurement Document enables accelerated processing of preli
 ****
 
 [.tile]
-.TED Open Data Service
+.TED Open Data
 ****
 The TED Open Data Service allows machine-to-machine interaction with public procurement data. It provides open access to current and historical TED data through direct queries to our SPARQL endpoint.
 
@@ -46,6 +38,15 @@ The TED Open Data Service allows machine-to-machine interaction with public proc
 ****
 
 [.tile]
+.TED API
+****
+TED API is a collection of public interfaces allowing 3rd party applications to validate and submit eForms notices, publish tender documents, and search the TED archives.
+
+<<api-home:ROOT:index.adoc#, Read the docs>>
+****
+
+////
+[.tile]
 .Reusing TED Data 
 ****
 Learn how to download TED notices in various formats via the TED Website and API. Daily or monthly packages are available.
@@ -53,4 +54,5 @@ Learn how to download TED notices in various formats via the TED Website and API
 <<reuse:ROOT:index.adoc#, Read the docs>>
 
 ****
+////
 --
