@@ -42,7 +42,7 @@ Access TED Open Data via direct queries to our SPARQL endpoint or download TED N
 ****
 TED API is a collection of public interfaces allowing 3rd party applications to validate and submit eForms notices, publish tender documents, and search the TED archives.
 
-<<api-home:ROOT:index.adoc#, Read the docs>>
+<<api:ROOT:index.adoc#, Read the docs>>
 ****
 
 ////
