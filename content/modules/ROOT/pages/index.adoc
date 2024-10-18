@@ -34,7 +34,7 @@ The European Single Procurement Document enables accelerated processing of preli
 Access TED Open Data via direct queries to our SPARQL endpoint or download TED Notice XML Data
 
 [.button]
-<<ODS:ROOT:index.adoc#, Read the docs>>
+<<ODS:ROOT:data_index.adoc#, Read the docs>>
 ****
 
 [.tile]
