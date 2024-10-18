@@ -17,7 +17,7 @@
 * xref:espd-ouc::index.adoc[Open User Community Meetings]
 
 * [.separated]#**TED Open Data**#
-* xref:ODS:ROOT:data_index.adoc[TED Data Docs `{ODS_latest_version}`]
+* xref:ODS::ROOT:index.adoc[TED Data Docs `{ODS_latest_version}`]
 
 * [.separated]#**TED API**#
 * xref:api-home:ROOT:index.adoc[TED API Docs `{api_latest_version}`]
