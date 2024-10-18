@@ -28,7 +28,7 @@ asciidoc:
     # So, as a workaround, we store the latest version of each component in these site-wide asciidoc attributes.
     # The downside is that we have to update these attributes whenever we release a new version of a component.
     #
-    eforms_latest_version: '1.11'
+    eforms_latest_version: '1.12'
     epo_latest_version: '4.1.0'
     espd_latest_version: '4.0.0'
     api_latest_version: '2.0'
