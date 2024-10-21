@@ -45,6 +45,14 @@ TED API is a collection of public interfaces allowing 3rd party applications to 
 <<api:ROOT:index.adoc#, Read the docs>>
 ****
 
+[.tile]
+.model2owl
+****
+"model2owl" is a tool for transforming human-readable semantic models into machine-readable OWL files and SHACL shapes
+
+<<m2o-home:ROOT:index.adoc#, Read the docs>>
+****
+
 ////
 [.tile]
 .TED Open Data
