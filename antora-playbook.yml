@@ -2,7 +2,7 @@ site:
   title: TED Developer Documentation
   url: https://docs.ted.europa.eu
   start_page: home::index.adoc
-  robots: disallow
+
 
 antora:
   extensions:
@@ -28,9 +28,9 @@ asciidoc:
     # So, as a workaround, we store the latest version of each component in these site-wide asciidoc attributes.
     # The downside is that we have to update these attributes whenever we release a new version of a component.
     #
-    eforms_latest_version: '1.11'
-    epo_latest_version: '4.0.0'
-    espd_latest_version: '3.3.0'
+    eforms_latest_version: '1.12'
+    epo_latest_version: '4.1.0'
+    espd_latest_version: '4.0.0'
 
   extensions:
   - ./lib/apidoc/apidoc-asciidoc-extension
@@ -47,7 +47,7 @@ content:
   ### eForms SDK
   - url: https://github.com/OP-TED/eforms-docs.git
     start_path: /
-    branches: 1.12.x, 1.11.x, 1.11.x-generated, 1.10.x, 1.10.x-generated, 1.9.x, 1.9.x-generated, 1.8.x, 1.8.x-generated, 1.7.x, 1.7.x-generated, 1.6.x, 1.6.x-generated, 1.5.x, 1.5.x-generated , 1.4.x, 1.4.x-generated, main # The "main" branch contains the eForms FAQ and RoadMap
+    branches: 1.12.x, 1.12.x-generated, 1.11.x, 1.11.x-generated, 1.10.x, 1.10.x-generated, 1.9.x, 1.9.x-generated, 1.8.x, 1.8.x-generated, 1.7.x, 1.7.x-generated, 1.6.x, 1.6.x-generated, main # The "main" branch contains the eForms FAQ and RoadMap
 
  ### ePO Documentation
   - url: https://github.com/OP-TED/epo-docs.git
@@ -57,8 +57,9 @@ content:
   ###  ESPD
   - url: https://github.com/OP-TED/espd-docs.git
     start_path: /
-    branches: new_v3, new_main, new_wgm, bus, tech
-    # branches: v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3.3.x, wgm-reports
+    branches: main, v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3.3.x, v4.0.x, wgm-reports
+    #tags:
+    #- 2.1.0
     
   ### TED API
   - url: https://github.com/OP-TED/tedapi-docs.git
@@ -73,7 +74,12 @@ content:
   ### TED Data for Reusers
   - url: https://github.com/OP-TED/ted-reuse-docs.git
     start_path: /
-    branches: main 
+    branches: main
+
+  ### model2owl
+  - url: https://github.com/OP-TED/ted-model2owl-docs
+    start_path: /
+    branches: main
 
 urls:
   redirect_facility: static

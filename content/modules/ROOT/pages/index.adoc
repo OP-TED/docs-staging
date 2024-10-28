@@ -28,12 +28,12 @@ The eProcurement Ontology provides the formal, semantic foundation for the creat
 ****
 
 [.tile]
-.ESPD EDM
+.ESPD-EDM
 ****
-The European Single Procurement Document enables accelerated processing of preliminary evidence in EU public procurement. The ESPD EDM enables applications to integrate with national ESPD service providers.
+The European Single Procurement Document enables accelerated processing of preliminary evidence in EU public procurement. The ESPD-EDM enables applications to integrate with national ESPD service providers.
 
 [.button]
-<<espd:ROOT:index.adoc#, Read the docs>>
+<<ESPD-EDM:ROOT:index.adoc#, Read the docs>>
 ****
 
 [.tile]
@@ -51,6 +51,15 @@ The TED Semantic Web Service allows machine-to-machine interaction with public p
 Learn how to download TED notices in various formats via the TED Website and API. Daily or monthly packages are available.
 
 <<reuse:ROOT:index.adoc#, Read the docs>>
+
+****
+
+[.tile]
+.model2owl
+****
+"model2owl" is a tool for transforming human-readable semantic models into machine-readable OWL files and SHACL shapes
+
+<<m2o-home:ROOT:index.adoc#, Read the docs>>
 
 ****
 --
