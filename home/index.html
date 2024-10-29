@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Documentation for TED developers and eSenders :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/home/index.html">
-    <meta name="generator" content="Antora 3.1.7">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
     <link rel="stylesheet" href="../_/css/vendor/docsearch-2.6.3.css">
@@ -110,31 +110,31 @@
     <a class="nav-link" href="../epo-wgm/index.html">Working Group Meetings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>TED Semantic Web Service</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../SWS/index.html">TED Semantic Web Service</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>ESPD-EDM</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../ESPD-EDM/latest/index.html">ESPD-EDM Docs <code>4.0.0</code></a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../espd-wgm/index.html">Open User Community Meetings</a>
+    <a class="nav-link" href="#espd-ouc::index.adoc">Open User Community Meetings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Reusing TED Data</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>TED Data</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../reuse/index.html">Downloading TED Notices</a>
+    <a class="nav-link" href="../ODS/latest/index.html">TED Data Docs <code>1.0</code></a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>TED API</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../api/latest/index.html">TED API Docs <code>2.0</code></a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>model2owl</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../m2o-home/index.html">model2owl docs</a>
+    <a class="nav-link" href="../m2o-home/index.html">model2owl docs <code>1.0</code></a>
   </li>
 </ul>
   </li>
@@ -170,6 +170,12 @@
             </li>
             <li class="version">
               <a href="../eforms/1.6/index.html">1.6</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.5/index.html">1.5</a>
+            </li>
+            <li class="version">
+              <a href="../eforms/1.4/index.html">1.4</a>
             </li>
         </ul>
       </li>
@@ -231,6 +237,25 @@
             </li>
         </ul>
       </li>
+      <li class="component">
+        <a class="title" href="../api/latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../api/3.0/index.html">3.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../api/latest/index.html">2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../ODS/latest/index.html">TED Data</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../ODS/latest/index.html">1.0</a>
+            </li>
+        </ul>
+      </li>
   </ul>
 </div>    </div>
   </aside>
@@ -267,17 +292,6 @@
 </div>
 <div class="sidebarblock tile">
 <div class="content">
-<div class="title">TED API</div>
-<div class="paragraph">
-<p>TED API is a collection of public interfaces allowing 3rd party applications to validate and submit eForms notices, publish tender documents, and search the TED archives.</p>
-</div>
-<div class="paragraph">
-<p><a href="../api/index.html" class="xref page">Read the docs</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile">
-<div class="content">
 <div class="title">eProcurement Ontology</div>
 <div class="paragraph">
 <p>The eProcurement Ontology provides the formal, semantic foundation for the creation and reuse of linked open data in the domain of public procurement in the EU.</p>
@@ -289,9 +303,9 @@
 </div>
 <div class="sidebarblock tile">
 <div class="content">
-<div class="title">ESPD-EDM</div>
+<div class="title">ESPD EDM</div>
 <div class="paragraph">
-<p>The European Single Procurement Document enables accelerated processing of preliminary evidence in EU public procurement. The ESPD-EDM enables applications to integrate with national ESPD service providers.</p>
+<p>The European Single Procurement Document enables accelerated processing of preliminary evidence in EU public procurement. The ESPD EDM enables applications to integrate with national ESPD service providers.</p>
 </div>
 <div class="paragraph button">
 <p><a href="../ESPD-EDM/latest/index.html" class="xref page">Read the docs</a></p>
@@ -300,23 +314,23 @@
 </div>
 <div class="sidebarblock tile">
 <div class="content">
-<div class="title">TED Semantic Web Service</div>
+<div class="title">TED Data</div>
 <div class="paragraph">
-<p>The TED Semantic Web Service allows machine-to-machine interaction with public procurement data. It enables uniform access to current and historical TED data through RDF downloads or direct queries to our SPARQL endpoint.</p>
+<p>Access TED Open Data via direct queries to our SPARQL endpoint or download TED Notice XML Data.</p>
 </div>
 <div class="paragraph button">
-<p><a href="../SWS/index.html" class="xref page">Read the docs</a></p>
+<p><a href="../ODS/latest/index.html" class="xref page">Read the docs</a></p>
 </div>
 </div>
 </div>
 <div class="sidebarblock tile">
 <div class="content">
-<div class="title">Reusing TED Data</div>
+<div class="title">TED API</div>
 <div class="paragraph">
-<p>Learn how to download TED notices in various formats via the TED Website and API. Daily or monthly packages are available.</p>
+<p>TED API is a collection of public interfaces allowing 3rd party applications to validate and submit eForms notices, publish tender documents, and search the TED archives.</p>
 </div>
 <div class="paragraph">
-<p><a href="../reuse/index.html" class="xref page">Read the docs</a></p>
+<p><a href="../api/latest/index.html" class="xref page">Read the docs</a></p>
 </div>
 </div>
 </div>
