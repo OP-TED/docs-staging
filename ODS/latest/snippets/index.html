@@ -482,15 +482,13 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_winnerlegalname_derived_from_winner"><a class="anchor" href="#_winnerlegalname_derived_from_winner"></a><strong>?WinnerLegalName</strong> derived from <em>?Winner</em>:</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_winnerlegalname_derived_from_winner"><a class="anchor" href="#_winnerlegalname_derived_from_winner"></a><strong>?WinnerLegalName</strong> derived from <em>?Winner</em>:</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?Winner a org:Organization;
         epo:hasLegalName ?WinnerLegalName.</code></pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -528,7 +526,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_businesssize_is_derived_from_notice"><a class="anchor" href="#_businesssize_is_derived_from_notice"></a><strong>?BusinessSize</strong> is derived from <em>?Notice</em></h3>
+<h3 id="_businesssize_derived_from_notice"><a class="anchor" href="#_businesssize_derived_from_notice"></a><strong>?BusinessSize</strong> derived from <em>?Notice</em></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?Notice epo:announcesRole ?Buyer .
@@ -549,13 +547,10 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_search_for_a_procurement_object_type_of_goods_supplied_by_common_procurement_vocabulary_cpv_code_mainclassification_from_procurementobject"><a class="anchor" href="#_search_for_a_procurement_object_type_of_goods_supplied_by_common_procurement_vocabulary_cpv_code_mainclassification_from_procurementobject"></a>Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: <strong>?MainClassification</strong> from <em>?ProcurementObject</em></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_procurement_object_by_common_procurement_vocabulary_cpv_code"><a class="anchor" href="#_procurement_object_by_common_procurement_vocabulary_cpv_code"></a>Procurement object by common procurement vocabulary (CPV) code.</h3>
 <div class="paragraph">
-<p>(This example searches for <strong>CPV 0341xxxx: wood</strong>)</p>
+<p>Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: <strong>?MainClassification</strong> from <em>?ProcurementObject</em>. This example searches for <strong>CPV 0341xxxx: wood</strong>.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -564,8 +559,11 @@
 FILTER(strstarts(str(?MainClassification), 'http://data.europa.eu/cpv/cpv/0341')) .</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Note: the code above can be substituted for any other CPV code that contains subcodes.</p>
+</div>
 <div class="sect3">
-<h4 id="_enumerate_the_subtypes_of_the_mainclassification_cpv_code"><a class="anchor" href="#_enumerate_the_subtypes_of_the_mainclassification_cpv_code"></a>Enumerate the subtypes of the <strong>?MainClassification CPV code</strong></h4>
+<h4 id="_subtypes_of_the_mainclassification_cpv_code"><a class="anchor" href="#_subtypes_of_the_mainclassification_cpv_code"></a>Subtypes of the <strong>?MainClassification CPV code</strong></h4>
 <div class="paragraph">
 <p>(This adds the subtype of wood for each record: soft wood, hard wood, etc.)</p>
 </div>
@@ -589,6 +587,7 @@ You can search through the CPV codes on the <a href="https://ted.europa.eu/en/ad
 </td>
 </tr>
 </table>
+</div>
 </div>
 </div>
 </div>
