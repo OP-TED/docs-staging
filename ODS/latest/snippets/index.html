@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Snippets :: TED Developer Documentation</title>
+    <title>Commonly used public procurement SPARQL Snippets :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/snippets/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -405,25 +405,20 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Snippets</h1>
+<h1 class="page">Commonly used public procurement SPARQL Snippets</h1>
 <div class="sect1">
-<h2 id="_intro_to_be_written"><a class="anchor" href="#_intro_to_be_written"></a>Intro to be written</h2>
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Some SPARQL code snippets are provided below for classes that are used often in public procurement SPARQL queries. These are classes such as winner country, lot value, currency, date, winner business size, etc.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_query_section_logic_indentation_heirarchy"><a class="anchor" href="#_query_section_logic_indentation_heirarchy"></a>Query section logic/ indentation/ heirarchy</h2>
+<h2 id="_sample_snippets"><a class="anchor" href="#_sample_snippets"></a>Sample Snippets</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_sample_snippets"><a class="anchor" href="#_sample_snippets"></a>Sample Snippets</h3>
-
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_limit_filter_results_by_language_en"><a class="anchor" href="#_limit_filter_results_by_language_en"></a>Limit/ filter results by language (EN)</h2>
-<div class="sectionbody">
+<h3 id="_limit_filter_results_by_language_en"><a class="anchor" href="#_limit_filter_results_by_language_en"></a>Limit/ filter results by language (EN)</h3>
 <div class="paragraph">
 <p>This snippet shows limiting the results to those in English. This can be done for any language:</p>
 </div>
@@ -436,10 +431,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_limit_the_results_to_a_specified_date"><a class="anchor" href="#_limit_the_results_to_a_specified_date"></a>Limit the results to a specified date</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_limit_the_results_to_a_specified_date"><a class="anchor" href="#_limit_the_results_to_a_specified_date"></a>Limit the results to a specified date</h3>
 <div class="paragraph">
 <p>This snippet shows limiting the results to a specified date. Change this as required:</p>
 </div>
@@ -455,18 +448,14 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_limit_the_results_to_a_date_range"><a class="anchor" href="#_limit_the_results_to_a_date_range"></a>Limit the results to a date range</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_limit_the_results_to_a_date_range"><a class="anchor" href="#_limit_the_results_to_a_date_range"></a>Limit the results to a date range</h3>
 <div class="paragraph">
 <p>to be included</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_loturi_and_noticepublicationdate_derived_from_notice"><a class="anchor" href="#_loturi_and_noticepublicationdate_derived_from_notice"></a><strong>?LotURI</strong> and <strong>?NoticePublicationDate</strong> derived from <em>?Notice</em>:</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_loturi_and_noticepublicationdate_derived_from_notice"><a class="anchor" href="#_loturi_and_noticepublicationdate_derived_from_notice"></a><strong>?LotURI</strong> and <strong>?NoticePublicationDate</strong> derived from <em>?Notice</em>:</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?Notice epo:hasPublicationDate ?NoticePublicationDate ;
@@ -474,10 +463,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_loturi_monetaryvalue_and_tenderawardoutcome_derived_from_from_lotawardoutcome"><a class="anchor" href="#_loturi_monetaryvalue_and_tenderawardoutcome_derived_from_from_lotawardoutcome"></a><strong>?LotURI</strong>, <strong>?MonetaryValue</strong> and <strong>?TenderAwardOutcome</strong> derived from from <em>?LotAwardOutcome</em>:</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_loturi_monetaryvalue_and_tenderawardoutcome_derived_from_from_lotawardoutcome"><a class="anchor" href="#_loturi_monetaryvalue_and_tenderawardoutcome_derived_from_from_lotawardoutcome"></a><strong>?LotURI</strong>, <strong>?MonetaryValue</strong> and <strong>?TenderAwardOutcome</strong> derived from from <em>?LotAwardOutcome</em>:</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?LotAwardOutcome epo:describesLot ?LotURI ;
@@ -486,10 +473,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_winner_derived_from_tenderawardoutcome"><a class="anchor" href="#_winner_derived_from_tenderawardoutcome"></a><strong>?Winner</strong> derived from <em>?TenderAwardOutcome</em>:</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_winner_derived_from_tenderawardoutcome"><a class="anchor" href="#_winner_derived_from_tenderawardoutcome"></a><strong>?Winner</strong> derived from <em>?TenderAwardOutcome</em>:</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?TenderAwardOutcome a epo:TenderAwardOutcome;
@@ -498,8 +483,9 @@
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_winnerlegalname_derived_from_winner"><a class="anchor" href="#_winnerlegalname_derived_from_winner"></a><strong>?WinnerLegalName</strong> derived from <em>Winner</em>:</h2>
+<h2 id="_winnerlegalname_derived_from_winner"><a class="anchor" href="#_winnerlegalname_derived_from_winner"></a><strong>?WinnerLegalName</strong> derived from <em>?Winner</em>:</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -507,11 +493,8 @@
         epo:hasLegalName ?WinnerLegalName.</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_winnercountrycode_derived_from_winner"><a class="anchor" href="#_winnercountrycode_derived_from_winner"></a>?WinnerCountryCode* derived from <em>?Winner</em>:</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_winnercountrycode_derived_from_winner"><a class="anchor" href="#_winnercountrycode_derived_from_winner"></a><strong>?WinnerCountryCode</strong> derived from <em>?Winner</em>:</h3>
 <div class="paragraph">
 <p>(in this case, if a country code is available, therefore optional)</p>
 </div>
@@ -523,10 +506,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_lotawardedvalue_and_lotawardedvaluecurrency_derived_from_monetaryvalue"><a class="anchor" href="#_lotawardedvalue_and_lotawardedvaluecurrency_derived_from_monetaryvalue"></a><strong>?LotAwardedValue</strong> and <strong>?LotAwardedValueCurrency</strong> derived from <em>?MonetaryValue</em>:</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_lotawardedvalue_and_lotawardedvaluecurrency_derived_from_monetaryvalue"><a class="anchor" href="#_lotawardedvalue_and_lotawardedvaluecurrency_derived_from_monetaryvalue"></a><strong>?LotAwardedValue</strong> and <strong>?LotAwardedValueCurrency</strong> derived from <em>?MonetaryValue</em>:</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?MonetaryValue a epo:MonetaryValue;
@@ -535,10 +516,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_organization_and_legalname_are_derived_from_notice"><a class="anchor" href="#_organization_and_legalname_are_derived_from_notice"></a><strong>?Organization</strong> and <strong>?LegalName</strong> are derived from <em>?Notice</em></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_organization_and_legalname_are_derived_from_notice"><a class="anchor" href="#_organization_and_legalname_are_derived_from_notice"></a><strong>?Organization</strong> and <strong>?LegalName</strong> are derived from <em>?Notice</em></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?Notice epo:announcesRole ?Buyer .
@@ -548,10 +527,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_businesssize_is_derived_from_notice"><a class="anchor" href="#_businesssize_is_derived_from_notice"></a><strong>?BusinessSize</strong> is derived from <em>?Notice</em></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_businesssize_is_derived_from_notice"><a class="anchor" href="#_businesssize_is_derived_from_notice"></a><strong>?BusinessSize</strong> is derived from <em>?Notice</em></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?Notice epo:announcesRole ?Buyer .
@@ -561,10 +538,8 @@
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_contract_value_and_currency_awardedvalue_and_lotawardedvaluecurrencyuri_derived_from_notice"><a class="anchor" href="#_contract_value_and_currency_awardedvalue_and_lotawardedvaluecurrencyuri_derived_from_notice"></a>Contract Value and currency <strong>(?AwardedValue</strong> and <strong>?LotAwardedValueCurrencyURI</strong>) derived from <em>?Notice</em></h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_contract_value_and_currency_awardedvalue_and_lotawardedvaluecurrencyuri_derived_from_notice"><a class="anchor" href="#_contract_value_and_currency_awardedvalue_and_lotawardedvaluecurrencyuri_derived_from_notice"></a>Contract Value and currency <strong>(?AwardedValue</strong> and <strong>?LotAwardedValueCurrencyURI</strong>) derived from <em>?Notice</em></h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">?Notice epo:refersToLot ?Lot .
@@ -575,11 +550,12 @@
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_search_for_a_procurement_object_type_of_goods_supplied_by_common_procurement_vocabulary_cpv_code_mainclassification_from_procurementobject"><a class="anchor" href="#_search_for_a_procurement_object_type_of_goods_supplied_by_common_procurement_vocabulary_cpv_code_mainclassification_from_procurementobject"></a>Search for a procurement object (type of goods supplied) by common procurement vocabulary (CPV) code: <strong>?MainClassification</strong> from <em>?ProcurementObject</em></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(This example searches for <strong>cpv 0341xxxx: wood</strong>)</p>
+<p>(This example searches for <strong>CPV 0341xxxx: wood</strong>)</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -588,10 +564,10 @@
 FILTER(strstarts(str(?MainClassification), 'http://data.europa.eu/cpv/cpv/0341')) .</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_enumerate_the_subtypes_of_the_mainclassification_cpv_code"><a class="anchor" href="#_enumerate_the_subtypes_of_the_mainclassification_cpv_code"></a>Enumerate the subtypes of the <strong>?MainClassification CPV code</strong></h3>
+<div class="sect3">
+<h4 id="_enumerate_the_subtypes_of_the_mainclassification_cpv_code"><a class="anchor" href="#_enumerate_the_subtypes_of_the_mainclassification_cpv_code"></a>Enumerate the subtypes of the <strong>?MainClassification CPV code</strong></h4>
 <div class="paragraph">
-<p>(This adds a column listing the type of wood for each record: soft wood, hard wood, etc.)</p>
+<p>(This adds the subtype of wood for each record: soft wood, hard wood, etc.)</p>
 </div>
 <div class="listingblock">
 <div class="content">
