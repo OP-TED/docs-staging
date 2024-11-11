@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Jupyter Notebook - Python :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/connecting/old_jupyter_notebook_python.html">
+    <title>Mapping Suites :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/mapping_suite/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -117,16 +117,16 @@
     <span class="nav-text">Connecting to TED Linked Open Data</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="../connecting/index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="sparql.html">Submitting a query in the Cellar SPARQL Endpoint</a>
+    <a class="nav-link" href="../connecting/sparql.html">Submitting a query in the Cellar SPARQL Endpoint</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="excel.html">Connect using Excel</a>
+    <a class="nav-link" href="../connecting/excel.html">Connect using Excel</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="python.html">Connect using Jupyter Notebook and Python</a>
+    <a class="nav-link" href="../connecting/python.html">Connect using Jupyter Notebook and Python</a>
   </li>
 </ul>
   </li>
@@ -395,7 +395,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Data</a></li>
-    <li><a href="old_jupyter_notebook_python.html">Jupyter Notebook - Python</a></li>
+    <li><a href="index.html">Mapping Suites</a></li>
   </ul>
 </nav>
 </div>
@@ -404,315 +404,211 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Jupyter Notebook - Python</h1>
+<h1 class="page">Mapping Suites</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document shows an example in Python using Jupyter Notebook.
-Jupyter Notebook is an application for creating and sharing
-computational documents. Python is a programming language for
-writing computational documents. To use Jupyter Notebook and Python, it may be
-necessary to install some tools and applications to run the Python query on the Cellar database, and display the results in tabular
-format.</p>
+<p>To understand the Mapping Suite Documentation, it would be beneficial to have some of the following:</p>
 </div>
-<div class="paragraph">
-<p>To run the sample application using Python, follow the steps below:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_python.ipynb">Download Jupyter Notebook </a></p>
-</li>
-</ol>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="2">
-<li>
-<p>Download &amp; Install Python 3.8</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Windows 64bit:
-<a href="https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe"><span class="underline">download</span></a></p>
-</li>
-<li>
-<p>Windows 86bit:
-<a href="https://www.python.org/ftp/python/3.8.10/python-3.8.10.exe"><span class="underline">download</span></a></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Open the Jupyter Notebook file with the code editor</p>
-</li>
-<li>
-<p>In the code editor, select the Python interpreter that was installed in the previous step</p>
-</li>
-</ol>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="user_manual/jupyter_notebook/image1.png" alt="image" width="817" height="204">
-</div>
-<div class="title">Figure 1. Interpreter selection</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="5">
-<li>
-<p>Install dependencies</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Use OS command line and run the following command</p>
-</li>
-</ul>
-</div>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-python hljs" data-lang="python">pip3 install sparqlwrapper pandas Jinja2 matplotlib</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-After installation, restart the kernel from Jupyter Notebook to update it with new dependencies. This can be done by clicking on the "Restart" button in the code editor.
-</td>
-</tr>
-</table>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="6">
-<li>
-<p>Run all Jupyter Notebook Cells</p>
-</li>
-</ol>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="user_manual/jupyter_notebook/image2.png" alt="image" width="501" height="84">
-</div>
-<div class="title">Figure 2. Button that runs all cells</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
-<li>
-<p>After running all the cells in the Jupyter Notebook successfully, the results table can be viewed:</p>
-</li>
-</ol>
-</div>
-<div class="imageblock unresolved">
-<div class="content">
-<img src="user_manual/jupyter_notebook/image3.png" alt="image" width="987" height="420">
-</div>
-<div class="title">Figure 3. Results table</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Knowledge of Semantic Web Technologies</dt>
+<dd>
+<p>A good understanding of Semantic Web concepts and technologies is crucial. This includes knowledge of RDF triples, ontologies, and linked data principles.</p>
+</dd>
+<dt class="hdlist1">Understanding of RDF, RML and SPARQL</dt>
+<dd>
+<p>Familiarity with RDF (Resource Description Framework) and the RML (the RDF Mapping Language) is important, while experience with SPARQL (SPARQL Protocol and RDF Query Language) is highly beneficial. TED-SWS provides data in RDF format and utilises SPARQL for querying.</p>
+</dd>
+<dt class="hdlist1">Understanding of EU Procurement Data and Familiarity with eProcurement ontology</dt>
+<dd>
+<p>If your goal is to understand how the mappings are used to transform specific types of EU procurement data, such as contract notices or award notices, it&#8217;s important to have a basic understanding of these concepts, and the <a href="https://docs.ted.europa.eu/EPO/latest/index.html">eProcurement Ontology</a>.</p>
+</dd>
+<dt class="hdlist1">Familiarity with Spreadsheet editing tools</dt>
+<dd>
+<p>Since most of the Conceptual mappings is done in spreadsheet working experience with spreadsheet editing tools such as MS Excel would be beneficial.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_explaining_the_query"><a class="anchor" href="#_explaining_the_query"></a>Explaining the query</h2>
+<h2 id="_mapping_suite_contents"><a class="anchor" href="#_mapping_suite_contents"></a>Mapping Suite Contents</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Question: Who are the winners for a given date?</strong></p>
+<p>Transformation rules and other artefacts used for the mapping of Standard Forms and eForms for the TED Semantic Web Services (TED-SWS) are organised in the ted-rdf-mapping repository.
+The repository structure and folder descriptions are shown below.  The base of the folder path is <a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/" class="bare">https://github.com/OP-TED/ted-rdf-mapping/tree/main/</a>.  However, if the reader wishes to view a specific release, then the path is adapted by replacing main by the given release. For example, if release 2.1.1-rc.1 is required, the path should be amended to <a href="https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1" class="bare">https://github.com/OP-TED/ted-rdf-mapping/tree/2.1.1-rc.1</a></p>
+</div>
+<div class="sect2">
+<h3 id="_upper_level_folders_of_the_github_repository"><a class="anchor" href="#_upper_level_folders_of_the_github_repository"></a>Upper Level folders of the GitHub Repository</h3>
+<div class="paragraph">
+<p>This section describes the upper level of the GitHub repository, the next section describes the lower levels of the GitHub repository where the more granular artefacts can be found. The aim of this section is to give the reader an overview of the repository structure.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Folder</th>
+<th class="tableblock halign-left valign-top">Subfolders</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/docs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/antora</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the documentation for the ted-rdf mapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings">/mappings</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03">/package_F03</a>
+<a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F06">/package_F06</a>
+<a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F13">/package_F13</a>
+<a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F21">/package_F21</a>
+<a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23">/package_F22</a>
+<a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F23">/package_F23</a>
+<a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F25">/package_F25</a></p>
 </div>
 <div class="paragraph">
-<p>This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.</p>
+<p>NB: the example provided here is for Standard Form F03 but can be applied in the same way for the mapping suites for the other forms covered by the mappings.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains <a href="#mapping_suite/mapping-suite-structure.adoc" class="xref unresolved">mapping suite packages</a> organised based on the standard forms numbers. Their name is formed based on the form number (e.g. F03, F06) prefixed with package_ for readability. When the eForms are mapped, the corresponding appropriate organisation will be chosen.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/mappings continued: subfolders</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_2021">/package_F03/test_data/form_number_F03_2021</a></p>
 </div>
 <div class="paragraph">
-<p>This query is composed of:</p>
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S01">/package_F03/test_data/form_number_F03_S01</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S02">/package_F03/test_data/form_number_F03_S02</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S03">/package_F03/test_data_form_number_F03_S03</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S04">/package_F03/test_data_form_number_F03_S04</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/mappings/package_F03/test_data/form_number_F03_S05">/package_F03/test_data_form_number_F03_S05</a></p>
+</div>
+<div class="paragraph">
+<p>NB the example provided here is for Standard Form F03 but can be applied in the same way to the other form package.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains example notices extracted from the TED website with real data for the forms concerned in this example F03.</p>
+</div>
+<div class="paragraph">
+<p>The folder ending F03_2021 contain examples from notices published in 2021</p>
+</div>
+<div class="paragraph">
+<p>The folder ending F03_S01 contains examples from notices published using the xml release R2.0.9.S01.E01</p>
+</div>
+<div class="paragraph">
+<p>The folder ending F03_S02 contains examples from notices published using the xml release R2.0.9.S02.E01, and so forth whereby the S01 is replaced by either S02, S03, S04 and S05</p>
+</div>
+<div class="paragraph">
+<p>The latest publication xml can be found at TED schemas - EU Vocabularies - Publications Office of the EU (europa.eu) under Publication Schema the Excel file in the zip file provides the change log between schema.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/src">/src</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/src/mappings">/mappings</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains the "single source of truth" for the mapping rules across various mapping suite packages. This is necessary because of the modularisation and reuse method adopted in this project. The basic idea is that the mapping rules are organised in modules, and all are stored in the source folder.</p>
+</div>
+<div class="paragraph">
+<p>Each mapping suite provides in the conceptual mapping workbook the list of modules that be used to compose the complete set of transformation rules of the mapped form number.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/test_data</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/test_data/sampling_2014_2022">/sampling_2014_2022</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/test_data/sampling_2021">/sampling_2021</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ted-rdf-mapping/tree/main/test_data/sampling_manual/form_number_F03">/sampling_manual</a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Covers samples of notices across all form types whether they are covered by the actual mappings covered to date.</p>
+</div>
+<div class="paragraph">
+<p>The samples are broken down by a mapping to the eForms sub-type:</p>
+</div>
+<div class="paragraph">
+<p>/sampling_2014_2022 and sampling_2021 cover notices over the respective periods and are generated respectively.</p>
+</div>
+<div class="paragraph">
+<p>/sample_manual are notices that have been produced manually concerning F03</p>
+</div>
+<div class="paragraph">
+<p>Test data is also provided in the mapping suite packages that are specific to the mapping suites.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_the_lower_level_folders_of_the_github_repository"><a class="anchor" href="#_the_lower_level_folders_of_the_github_repository"></a>The lower level folders of the GitHub Repository</h3>
+<div class="paragraph">
+<p>This section provides more detailed information on the content available in the lower levels of the repository:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The Prefix section: used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).</p>
-<div class="literalblock">
-<div class="content">
-<pre>PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
-PREFIX org: &lt;http://www.w3.org/ns/org#&gt;
-PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;</pre>
-</div>
-</div>
-</li>
-<li>
-<p>The Select section: responsible for specifying which variables or values are to be retrieved from the dataset.</p>
-<div class="literalblock">
-<div class="content">
-<pre>SELECT DISTINCT
-?WinnerLegalName
-(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
-(SUM(?AwardedValue) as ?TotalAwardedValue)
-(?AwardedValueCurrency as ?AwardedValueCurrencyURI)</pre>
-</div>
-</div>
-</li>
-<li>
-<p>The Where section: used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:</p>
+<p>Mapping suite package structure</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Specifying specific filters for output</p>
-<div class="literalblock">
-<div class="content">
-<pre>VALUES ?NoticePublicationDate {
-    "20230905"
-}
-FILTER(LANG(?WinnerLegalName) = 'en')</pre>
-</div>
-</div>
+<p>output</p>
 </li>
 <li>
-<p>Defining notice according to EPO ontology</p>
-<div class="literalblock">
-<div class="content">
-<pre>?Notice a epo:Notice;
-        epo:hasPublicationDate ?NoticePublicationDate ;
-        epo:refersToLot ?Lot .</pre>
-</div>
-</div>
+<p>test-data</p>
 </li>
 <li>
-<p>Defining lot and lot award outcome according to EPO ontology</p>
-<div class="literalblock">
-<div class="content">
-<pre>?Lot a epo:Lot.
-?LotAwardOutcome epo:describesLot ?Lot;
-                 a epo:LotAwardOutcome;
-                 epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
-?TenderAwardOutcome a epo:TenderAwardOutcome;
-                    epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.</pre>
-</div>
-</div>
+<p>transformation</p>
 </li>
 <li>
-<p>Defining the winner according to EPO ontology</p>
-<div class="literalblock">
-<div class="content">
-<pre>?Winner a org:Organization;
-        epo:hasLegalName ?WinnerLegalName .
-OPTIONAL {
-    ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
-}</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Defining award value and currency according to EPO ontology</p>
-<div class="literalblock">
-<div class="content">
-<pre>?MonetaryValue a epo:MonetaryValue;
-               epo:hasAmountValue ?AwardedValue;
-               epo:hasCurrency ?AwardedValueCurrency .</pre>
-</div>
-</div>
+<p>validation</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>The Group By section: used to group the results by a specific variable. In the example above group by means that the results will be grouped by the winner legal name and the awarded value currency:</p>
-<div class="literalblock">
-<div class="content">
-<pre>GROUP BY ?WinnerLegalName ?AwardedValueCurrency</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The query retrieves:</p>
-</div>
+<p>source files</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The legal name of the winner</p>
+<p>mappings</p>
 </li>
 <li>
-<p>The winners country code as URI</p>
-</li>
-<li>
-<p>The value awarded to winner</p>
-</li>
-<li>
-<p>The currency of the awarded value as URI</p>
+<p>validation</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>The notice publication date and winner legal name language can be changed to create other queries. To do this, change the following section:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>VALUES ?NoticePublicationDate {
-    "20230905"
-}
-FILTER(LANG(?WinnerLegalName) = 'en')</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Existing value for publication date in example above:</p>
-<div class="literalblock">
-<div class="content">
-<pre>"20230905"</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Existing value for winner legal name language in example above:</p>
-<div class="literalblock">
-<div class="content">
-<pre>'en'</pre>
-</div>
 </div>
 </li>
 </ul>
 </div>
-<div class="sect3">
-<h4 id="_query_text"><a class="anchor" href="#_query_text"></a>Query text</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
-PREFIX org: &lt;http://www.w3.org/ns/org#&gt;
-PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
-SELECT DISTINCT
-?WinnerLegalName
-(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
-(SUM(?AwardedValue) as ?TotalAwardedValue)
-(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
-WHERE {
-    VALUES ?NoticePublicationDate {
-        "20230905"
-    }
-    FILTER(LANG(?WinnerLegalName) = 'en')
-    ?Notice a epo:Notice;
-            epo:hasPublicationDate ?NoticePublicationDate ;
-            epo:refersToLot ?Lot .
-    ?LotAwardOutcome epo:describesLot ?Lot ;
-                     epo:hasAwardedValue ?MonetaryValue ;
-                     epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
-    ?TenderAwardOutcome a epo:TenderAwardOutcome;
-                        epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
-    ?Winner a org:Organization;
-            epo:hasLegalName ?WinnerLegalName .
-    OPTIONAL {
-        ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
-    }
-    ?MonetaryValue a epo:MonetaryValue;
-                   epo:hasAmountValue ?AwardedValue;
-                   epo:hasCurrency ?AwardedValueCurrency .
-}
-GROUP BY ?WinnerLegalName ?AwardedValueCurrency</code></pre>
-</div>
+<hr>
+<div class="paragraph">
+<p>Any comments on the documentation?</p>
 </div>
 <div class="paragraph">
-<p>Unresolved include directive in modules/connecting/pages/old_jupyter_notebook_python.adoc - include::partial$feedback.adoc[]</p>
+<p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
 </div>
 </div>
 </div>

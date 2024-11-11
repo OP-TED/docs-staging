@@ -408,15 +408,16 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This page demonstrates an example in the R language using Jupyter Notebook. R is
-software environment for statistical computing and graphic representation.
-To use R, you must first install Python and Jupiter Notebook. After this installation, R code can be used to perform a query on the CELLAR database and display the results in tabular format.</p>
+<p>This page shows an example in the R language using Jupyter Notebook. R is a
+software environment for statistical computing and graphical
+representation. In this example, R is the programming language used for
+writing notebook documents. To use R and Jupiter Notebook, it may first be necessary to install some tools and applications. Once installed, the R code can perform a query on the Cellar database, and display the results in tabular format.</p>
 </div>
 <div class="paragraph">
-<p>Python and Jupyter Notebook can be installed using the following tutorial: <a href="#ODS:ROOT:sample_app/jupyter_notebook_python.adoc" class="xref unresolved">this</a> section.</p>
+<p>Before proceeding, ensure that Python and Jupyter Notebook are already installed. This can be done using the steps in the <a href="#SWS:ROOT:sample_app/jupyter_notebook_python.adoc" class="xref unresolved">Jupyter Notebook - Python</a> section.</p>
 </div>
 <div class="paragraph">
-<p>To run the sample application using the R language follow the steps below:</p>
+<p>To run the sample application using R, follow the steps below:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -428,7 +429,7 @@ To use R, you must first install Python and Jupiter Notebook. After this install
 <div class="olist arabic">
 <ol class="arabic" start="2">
 <li>
-<p><a href="https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb">Download the Jupyter Notebook file</a>.</p>
+<p><a href="https://github.com/OP-TED/ted-rdf-docs/blob/main/notebooks/query_cellar_R.ipynb">Download the Jupyter Notebook example file</a>.</p>
 </li>
 </ol>
 </div>
@@ -442,7 +443,7 @@ To use R, you must first install Python and Jupiter Notebook. After this install
 <div class="olist arabic">
 <ol class="arabic" start="4">
 <li>
-<p>Install the IRKernel.</p>
+<p>Install the IRKernel:</p>
 </li>
 </ol>
 </div>
@@ -517,7 +518,7 @@ install.packages('XML')</code></pre>
 <div class="olist arabic">
 <ol class="arabic" start="8">
 <li>
-<p>After running successfully all the cells in the Jupyter Notebook, the results table can be viewed.</p>
+<p>After running all the cells in the Jupyter Notebook successfully, the results table can be viewed:</p>
 </li>
 </ol>
 </div>
@@ -536,7 +537,7 @@ install.packages('XML')</code></pre>
 <p><strong>Question: Who are the winners for a given date?</strong></p>
 </div>
 <div class="paragraph">
-<p>This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230921" or 21-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.</p>
+<p>This SPARQL query aims to retrieve information about the winners of procurement lots for a specific date ("20230905" or 05-09-2023). It does so by specifying a value for the publication date, and then querying the RDF data based on that value. The query returns information about the lots, the organizations that won them, and details about the awarded amounts and currencies.</p>
 </div>
 <div class="paragraph">
 <p>This query is composed of:</p>
@@ -544,7 +545,7 @@ install.packages('XML')</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>The Prefix section is used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).</p>
+<p>The Prefix section: used to define short aliases (prefixes) for long URIs (Uniform Resource Identifiers).</p>
 <div class="literalblock">
 <div class="content">
 <pre>PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
@@ -554,20 +555,19 @@ PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;</pre>
 </div>
 </li>
 <li>
-<p>The Select section is responsible for specifying which variables or values are to be retrieved from the dataset.</p>
+<p>The Select section: responsible for specifying which variables or values are to be retrieved from the dataset.</p>
 <div class="literalblock">
 <div class="content">
 <pre>SELECT DISTINCT
-?Lot
 ?WinnerLegalName
-?WinnerCountryCode
-?AwardedValue
-?AwardedValueCurrency</pre>
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)</pre>
 </div>
 </div>
 </li>
 <li>
-<p>The Where section is used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:</p>
+<p>The Where section: used to define the specific patterns and conditions that the data in the dataset must match in order to be included in the query result. In this example we have:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -575,7 +575,7 @@ PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;</pre>
 <div class="literalblock">
 <div class="content">
 <pre>VALUES ?NoticePublicationDate {
-    "20230921"
+    "20230905"
 }
 FILTER(LANG(?WinnerLegalName) = 'en')</pre>
 </div>
@@ -585,9 +585,9 @@ FILTER(LANG(?WinnerLegalName) = 'en')</pre>
 <p>Defining notice according to EPO ontology</p>
 <div class="literalblock">
 <div class="content">
-<pre>?NoticeId a epo:ResultNotice;
-          epo:hasPublicationDate ?NoticePublicationDate;
-          epo:refersToLot ?Lot.</pre>
+<pre>?Notice a epo:Notice;
+        epo:hasPublicationDate ?NoticePublicationDate ;
+        epo:refersToLot ?Lot .</pre>
 </div>
 </div>
 </li>
@@ -620,14 +620,21 @@ OPTIONAL {
 <p>Defining award value and currency according to EPO ontology</p>
 <div class="literalblock">
 <div class="content">
-<pre>?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
-?LotAwardedValue a epo:MonetaryValue;
-                 epo:hasAmountValue ?AwardedValue;
-                 epo:hasCurrency ?AwardedValueCurrency.</pre>
+<pre>?MonetaryValue a epo:MonetaryValue;
+               epo:hasAmountValue ?AwardedValue;
+               epo:hasCurrency ?AwardedValueCurrency .</pre>
 </div>
 </div>
 </li>
 </ul>
+</div>
+</li>
+<li>
+<p>The Group By section: used to group the results by a specific variable. In the example above group by means that the results will be grouped by the winner legal name and the awarded value currency:</p>
+<div class="literalblock">
+<div class="content">
+<pre>GROUP BY ?WinnerLegalName ?AwardedValueCurrency</pre>
+</div>
 </div>
 </li>
 </ul>
@@ -638,9 +645,6 @@ OPTIONAL {
 <div class="ulist">
 <ul>
 <li>
-<p>Lot URI</p>
-</li>
-<li>
 <p>The legal name of the winner</p>
 </li>
 <li>
@@ -650,7 +654,7 @@ OPTIONAL {
 <p>The value awarded to winner</p>
 </li>
 <li>
-<p>The currency of the awarded value</p>
+<p>The currency of the awarded value as URI</p>
 </li>
 </ul>
 </div>
@@ -660,7 +664,7 @@ OPTIONAL {
 <div class="literalblock">
 <div class="content">
 <pre>VALUES ?NoticePublicationDate {
-    "20230921"
+    "20230905"
 }
 FILTER(LANG(?WinnerLegalName) = 'en')</pre>
 </div>
@@ -671,7 +675,7 @@ FILTER(LANG(?WinnerLegalName) = 'en')</pre>
 <p>Existing value for publication date in example above:</p>
 <div class="literalblock">
 <div class="content">
-<pre>"20230921"</pre>
+<pre>"20230905"</pre>
 </div>
 </div>
 </li>
@@ -693,22 +697,20 @@ FILTER(LANG(?WinnerLegalName) = 'en')</pre>
 PREFIX org: &lt;http://www.w3.org/ns/org#&gt;
 PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
 SELECT DISTINCT
-?Lot
 ?WinnerLegalName
-?WinnerCountryCode
-?AwardedValue
-?AwardedValueCurrency
+(SAMPLE(?WinnerCountryCode) as ?WinnereCountryCodeURI)
+(SUM(?AwardedValue) as ?TotalAwardedValue)
+(?AwardedValueCurrency as ?AwardedValueCurrencyURI)
 WHERE {
     VALUES ?NoticePublicationDate {
-        "20230921"
+        "20230905"
     }
     FILTER(LANG(?WinnerLegalName) = 'en')
-    ?NoticeId a epo:ResultNotice;
-              epo:hasPublicationDate ?NoticePublicationDate;
-              epo:refersToLot ?Lot.
-    ?Lot a epo:Lot.
-    ?LotAwardOutcome epo:describesLot ?Lot;
-                     a epo:LotAwardOutcome;
+    ?Notice a epo:Notice;
+            epo:hasPublicationDate ?NoticePublicationDate ;
+            epo:refersToLot ?Lot .
+    ?LotAwardOutcome epo:describesLot ?Lot ;
+                     epo:hasAwardedValue ?MonetaryValue ;
                      epo:comprisesTenderAwardOutcome ?TenderAwardOutcome.
     ?TenderAwardOutcome a epo:TenderAwardOutcome;
                         epo:indicatesAwardOfLotToWinner / epo:playedBy ?Winner.
@@ -717,11 +719,11 @@ WHERE {
     OPTIONAL {
         ?Winner cccev:registeredAddress / epo:hasCountryCode ?WinnerCountryCode.
     }
-    ?LotAwardOutcome epo:hasAwardedValue ?LotAwardedValue.
-    ?LotAwardedValue a epo:MonetaryValue;
-                     epo:hasAmountValue ?AwardedValue;
-                     epo:hasCurrency ?AwardedValueCurrency.
-}</code></pre>
+    ?MonetaryValue a epo:MonetaryValue;
+                   epo:hasAmountValue ?AwardedValue;
+                   epo:hasCurrency ?AwardedValueCurrency .
+}
+GROUP BY ?WinnerLegalName ?AwardedValueCurrency</code></pre>
 </div>
 </div>
 <div class="paragraph">
