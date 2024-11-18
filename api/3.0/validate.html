@@ -250,381 +250,56 @@
 </aside>
     <article class="doc">
 <h1 class="page">Validation API</h1>
-<div class="sect1">
-<h2 id="_abstract"><a class="anchor" href="#_abstract"></a>Abstract</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>This API provides an operation to validate a notice and get a validation
-report</p>
+<p>Validation API provides 2 operations:</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_endpoints"><a class="anchor" href="#_endpoints"></a>Endpoints</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_validation"><a class="anchor" href="#_validation"></a>Validation</h3>
-<div class="sect3">
-<h4 id="_validate"><a class="anchor" href="#_validate"></a>Validate</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v1/notices/validation</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/config/sdk-versions</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Validate a notice</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description"><a class="anchor" href="#_description"></a>Description</h4>
-<div class="paragraph">
-<p>Validate a notice sent in the request body. This operation returns a schematron validation report which describes all the tests performed.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h4>
-<div class="sect4">
-<h5 id="_body_parameter"><a class="anchor" href="#_body_parameter"></a>Body Parameter</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 28.5714%;">
-<col style="width: 28.5714%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">InputNoticeValidation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.ted.europa.eu/docs-staging/api/latest/endpoints/cvs-ted-europa-eu.html#InputNoticeValidation">InputNoticeValidation</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_header_parameters"><a class="anchor" href="#_header_parameters"></a>Header Parameters</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 28.5714%;">
-<col style="width: 28.5714%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X-API-Key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">TED API key identifying the author of the request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_return_type"><a class="anchor" href="#_return_type"></a>Return Type<br></h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_content_type"><a class="anchor" href="#_content_type"></a>Content Type</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>application/xml</p>
+<p>This operation provides information on the set of currently <a href="https://docs.ted.europa.eu/eforms-common/active-versions/index.html#_terminology">active SDK</a> versions in JSON format.</p>
 </li>
 <li>
-<p>application/json</p>
+<p>It doesn&#8217;t use any input parameter.</p>
+</li>
+<li>
+<p>Information is valid at the moment when the operation is called and can be changed over the time.</p>
+</li>
+<li>
+<p>History of the changes cannot be retrieved, only the last update.</p>
+</li>
+<li>
+<p>Information content and how to get the set of active SDK versions from it is described on the page <a href="https://docs.ted.europa.eu/eforms-common/active-versions/index.html#version-range">sdk-versions</a>.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_responses"><a class="anchor" href="#_responses"></a>Responses</h5>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>http Response Codes</p>
-</li>
-</ol>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 66.6666%;">
-<col style="width: 16.6668%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Message</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Datatype</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The report is returned.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">400</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - The 'language' parameter is not valid. - The 'validationMode' parameter is not valid. The 'validationMode' parameter is not valid. - The rules are missing for the following version.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.ted.europa.eu/docs-staging/api/latest/endpoints/cvs-ted-europa-eu.html#ErrorResponse">ErrorResponse</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing key in header: X-API-Key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.ted.europa.eu/docs-staging/api/latest/endpoints/cvs-ted-europa-eu.html#ErrorResponse">ErrorResponse</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Invalid key in header: X-API-Key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.ted.europa.eu/docs-staging/api/latest/endpoints/cvs-ted-europa-eu.html#ErrorResponse">ErrorResponse</a></p></td>
-</tr>
-</tbody>
-</table>
-<div class="sect5">
-<h6 id="_samples"><a class="anchor" href="#_samples"></a>Samples</h6>
-
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_versionrange"><a class="anchor" href="#_versionrange"></a>VersionRange</h3>
-<div class="sect3">
-<h4 id="_versionrange_2"><a class="anchor" href="#_versionrange_2"></a>versionRange</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v1/version-range</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/validate</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Return information on the SDK versions accepted for publication</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_description_2"><a class="anchor" href="#_description_2"></a>Description</h4>
-<div class="paragraph">
-<p>Return information on the versions of the eForms SDK currently accepted for publication, as a JSON response. This indicates the earliest and latest SDK versions accepted for publication, and any versions in between that are excluded.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>Parameters</h4>
-<div class="sect4">
-<h5 id="_header_parameters_2"><a class="anchor" href="#_header_parameters_2"></a>Header Parameters</h5>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 28.5714%;">
-<col style="width: 28.5714%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Name</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Default</th>
-<th class="tableblock halign-left valign-top">Pattern</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X-API-Key</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">null</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_return_type_2"><a class="anchor" href="#_return_type_2"></a>Return Type<br></h5>
-<div class="paragraph">
-<p>-</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_content_type_2"><a class="anchor" href="#_content_type_2"></a>Content Type</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>application/json</p>
+<p>This operation returns a <a href="https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_introduction">schematron</a> validation report which describes all the tests performed.</p>
+</li>
+<li>
+<p>Parameter <code>notice</code> is mandatory and contains notice content encoded in base64 string.</p>
+</li>
+<li>
+<p>Parameter <code>language</code> specifies language used for text messages related to failed assertions. If it is not specified, then "en" value is used as default.</p>
+</li>
+<li>
+<p>Parameter <code>validationMode</code> specifies <a href="https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_structure_of_schematron_folder_and_files">types of rules</a> applied for the validation. If it is not specified, then "static" value is used as default.</p>
+</li>
+<li>
+<p>Parameter <code>eFormsSdkVersion</code> specifies active SDK version against which the notice is being validated. If it is not specified, then value from <code>CustomizationID</code> element from the notice is used as default.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_responses_2"><a class="anchor" href="#_responses_2"></a>Responses</h5>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. http response codes</caption>
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 66.6666%;">
-<col style="width: 16.6668%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Code</th>
-<th class="tableblock halign-left valign-top">Message</th>
-<th class="tableblock halign-left valign-top">Datatype</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Information on accepted SDK versions is returned</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;&lt;&gt;&gt;</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">401</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Missing key in header: X-API-Key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ErrorResponse</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">403</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Possible issues: - Invalid key in header: X-API-Key</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ErrorResponse</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_samples_2"><a class="anchor" href="#_samples_2"></a>Samples</h5>
-
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_models"><a class="anchor" href="#_models"></a>Models</h3>
-<div class="sect3">
-<h4 id="_errorresponse"><a class="anchor" href="#_errorresponse"></a><em>ErrorResponse</em></h4>
-<div class="paragraph">
-<p>Error response</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 28.5714%;">
-<col style="width: 28.5714%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field Name</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">errorCode</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Integer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HTTP error code</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">int32</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">message</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error description</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">timestamp</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Error timestamp in RFC 3339 format</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_inputnoticevalidation"><a class="anchor" href="#_inputnoticevalidation"></a><em>InputNoticeValidation</em></h4>
-<div class="paragraph">
-<p>Request parameters for validation</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 28.5714%;">
-<col style="width: 28.5714%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2857%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Field Name</th>
-<th class="tableblock halign-left valign-top">Required</th>
-<th class="tableblock halign-left valign-top">Type</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">notice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">byte[]</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Payload in base64 for the XML document</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">byte</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Language to generate the SVRL report. Enum: [bg, cs, da, de, el, en, es, et, fi, fr, ga, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sl, sv, hr]</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">validationMode</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the validation mode that will be applied, selecting the corresponding set of rules from the eForms SDK that will be applied.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enum: dynamic, static,</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">eFormsSdkVersion</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the eForms SDK version to use for validating the notice. This parameter should be omitted unless you want to override the version indicated in the cbc:CustomizationID element in the notice.</p></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
 </div>
 </article>
     <div id="widgetContainer">
