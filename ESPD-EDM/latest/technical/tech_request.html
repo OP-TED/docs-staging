@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>The ESPD Request Document :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/tech_request.html">
-    <meta name="generator" content="Antora 3.1.7">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
     <link rel="stylesheet" href="../../../_/css/vendor/docsearch-2.6.3.css">
@@ -174,6 +174,12 @@
             <li class="version">
               <a href="../../../eforms/1.6/index.html">1.6</a>
             </li>
+            <li class="version">
+              <a href="../../../eforms/1.5/index.html">1.5</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.4/index.html">1.4</a>
+            </li>
         </ul>
       </li>
       <li class="component">
@@ -231,6 +237,25 @@
             </li>
             <li class="version">
               <a href="../../1.0.2/index.html">1.0.2</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../api/latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../../../api/3.0/index.html">3.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../../../api/latest/index.html">2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../ODS/latest/index.html">TED Data</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../ODS/latest/index.html">1.0</a>
             </li>
         </ul>
       </li>
@@ -293,9 +318,6 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sectionbody">
 <div class="paragraph">
 <p>The ESPD-EDM uses the UBL-2.3 document named QualificationApplicationRequest.xsd XSD Schema. This schema can be found under the GitHub folder <a href="https://github.com/OP-TED/ESPD-EDM/tree/master/ubl-2.3/xsdrt/maindoc">ubl-2.3/xsdrt/maindoc</a> (or the equivalent documented xsd folder).</p>
-</div>
-<div class="paragraph">
-<p>The figure below shows the XSD Schema defined by UBL-2.3 for the document "Qualification Application Request". This schema replaces the previous scheme form UBL 2.2.</p>
 </div>
 <div class="paragraph">
 <p>The figure below shows a diagram representing the UBL-2.3 XSD Schema. Only the first level components of the schema are shown. The inner sub-elements and sub-classes are covered in detail in the following sub-sections of this document.</p>
@@ -364,14 +386,14 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>Information requirement:</p>
 </div>
 <div class="paragraph">
-<p>Note that <strong>all theses documents share the same business rule identifiers</strong> (e.g. tbrxx-yyy for Business Requirement Identifiers in ESPDInt, and BR-Type-Id#n for the Test Cases technical rules).</p>
+<p>Note that <strong>all these documents share the same business rule identifiers</strong> (e.g. tbrxx-yyy for Business Requirement Identifiers in ESPDInt, and BR-Type-Id#n for the Test Cases technical rules).</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>The mapping between the business requirements, the logic layer of the ESPD-EDM, and the UBL-2.3 physical layer:</p>
+<p>The table below shows the mapping between the business requirements, the logic layer of the ESPD-EDM, and the UBL-2.3 physical layer:</p>
 </div>
 <div class="paragraph">
 <p><em>Table 5. Class QualificationApplicationRequest, components required by the ESPD-EDM</em></p>
@@ -381,12 +403,13 @@ The links to the business code explanations are provided by <a href="https://dig
 <col style="width: 50%;">
 <col style="width: 50%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Document name:</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>QualificationApplicationRequest</strong>
-+</p></td>
+<th class="tableblock halign-left valign-top"><strong>Document name:</strong></th>
+<th class="tableblock halign-left valign-top"><strong>QualificationApplicationRequest</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition 1</strong>:</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -457,7 +480,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <th class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ID</strong></p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">1</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">An identifier for this document, normally generated by the system that creates the ESPD document, or the organisation responsible for the document (e.g. the buyer, e.g. a buyer, or the supplier, e.g. an economic operator). An identifier for this document, normally generated by the system that creates the ESPD document, or the organisation responsible for the document (e.g. the buyer, e.g. a buyer, or the supplier, e.g. an economic operator). The identifier enables positive referencing the document instance for various purposes including referencing between transactions that are part of the same process.</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">An identifier for this document, normally generated by the system that creates the ESPD document, or the organisation responsible for the document (e.g. the buyer, e.g. a buyer, or the supplier, e.g. an economic operator). The identifier enables referencing the document instance for various purposes including referencing between transactions that are part of the same process.</p></th>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-002"><em>tbr070-002</em></a>.</p>
 </div>
@@ -474,9 +497,13 @@ The links to the business code explanations are provided by <a href="https://dig
 <th class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Indicates whether this document is a copy (true) or not (false).<br>
 ESPD definition: this component enables to keep track of the event of having forwarded the same document several times to the same or to different destinations.<br>
-Additional comments: copies of an ESPD document should be identified with same UUIDs.a</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-002"><em>tbr070-002</em></a>.</p>
-<p class="tableblock"><strong>Rule</strong>: It is a good practice to use the CopyIndicator component if the same document is forwarded several times to the same or to different destinations. Use it in combination with the UUID identifier: copies of an ESPD document should be identified with same UUIDs.</p></td>
+Additional comments: copies of an ESPD document should be identified with same UUIDs.</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-002"><em>tbr070-002</em></a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rule</strong>: It is a good practice to use the CopyIndicator component if the same document is forwarded several times to the same or to different destinations. Use it in combination with the UUID identifier: copies of an ESPD document should be identified with same UUIDs.</p>
+</div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:UUID</strong></p></th>
@@ -729,7 +756,7 @@ Reference</strong></p></th>
 <div class="sect2">
 <h3 id="_lot_identifiers"><a class="anchor" href="#_lot_identifiers"></a>Lot identifiers</h3>
 <div class="paragraph">
-<p>This version of the ESPD changes the form to identify Lots and Groups of Lots, taking the eForms format. This changes is done with the aim of improving the interoperability of both models.</p>
+<p>This version of the ESPD changes the form to identify Lots and Groups of Lots, taking the eForms format. This change is done with the aim of improving the interoperability of both models.</p>
 </div>
 <div class="paragraph">
 <p>Up to version 2.1.1, the lots were identified with the following structure, "Lot1, Lot2, Lot3". With the new approach (eForms), the Lots identifiers will be as follows:</p>
@@ -764,7 +791,7 @@ Reference</strong></p></th>
 <div class="sect2">
 <h3 id="_mock_up"><a class="anchor" href="#_mock_up"></a>Mock-up</h3>
 <div class="paragraph">
-<p>The Figure below is a mock-up of how to collect the data expected to reference publications on official gazettes or journals. This mechanism can, of course, also be used for contracts below the threshold.</p>
+<p>The Figure below is a mock-up of how to collect the data expected to reference publications on official gazettes or journals. This mechanism can, of course, also be used for contracts below the <a href="https://single-market-economy.ec.europa.eu/single-market/public-procurement/legal-rules-and-implementation/thresholds_en">threshold</a>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Publications_mock-up.jpg" alt="Publications mock-up" width="500" height="459"></span></p>
@@ -942,7 +969,7 @@ Reference</strong></p></th>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Beware that the ESPD document does not embed the content of referenced documents, instead it make a reference to its source. Thus the class 'DocumentReference' aggregates a 'cac:Attachment' class that allows for embedding the content or making reference to an external source of the content. This is the preferred way in the ESPD (see the XSD schema above):</p>
+<p>Beware that the ESPD document does not embed the content of referenced documents, instead it makes a reference to its source. Thus the class 'DocumentReference' aggregates a 'cac:Attachment' class that allows for embedding the content or making reference to an external source of the content. This is the preferred way in the ESPD (see the XSD schema above):</p>
 </div>
 <div class="paragraph">
 <p>The mapping between the business requirements, the logic layer of the ESPD-EDM, and the UBL-2.3 physical layer:</p>
@@ -1119,7 +1146,7 @@ Reference</strong></p></th>
 <p>The title of the CN must be placed in the FileName field of the attachment. UBL does not provide a placeholder for the title of the document.</p>
 </li>
 <li>
-<p>If publication on TED is at the ESPD Request preparation time, and the procurer does not yet have the OJS number, they can receive a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</p>
+<p>If notice publication on TED happens at the same time the ESPD Request is prepared, the procurer will not yet have an OJS number. They can receive a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</p>
 </li>
 <li>
 <p>schemeAgencyID is used in this example to specify that the national Agency that created this reference to the national publication (e.g., "PLACE" to refer to the ID of the national electronic board where the CN was published). The pattern of the ID is the one created by the Spanish buyer.</p>
@@ -1632,7 +1659,7 @@ cac:ContractingParty/cac:Party/cac:Contact</p></td>
 <p><em>Figure 22. cac:ServiceProvider</em></p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/cacService_provider_Party_elements.jpg" alt="service provider&#8217;s 'Party' elements" width="506" height="524"></span></p>
+<p><span class="image"><img src="_images/cacServiceProvider_XSD_Schema.jpg" alt="service provider&#8217;s 'Party' elements" width="506" height="524"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 23. cac:ServiceProvider/cac:Party elements expected for the service provider</em></p>

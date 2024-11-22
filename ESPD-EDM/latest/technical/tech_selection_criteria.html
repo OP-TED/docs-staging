@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Selection criteria :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/tech_selection_criteria.html">
-    <meta name="generator" content="Antora 3.1.7">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
     <link rel="stylesheet" href="../../../_/css/vendor/docsearch-2.6.3.css">
@@ -174,6 +174,12 @@
             <li class="version">
               <a href="../../../eforms/1.6/index.html">1.6</a>
             </li>
+            <li class="version">
+              <a href="../../../eforms/1.5/index.html">1.5</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.4/index.html">1.4</a>
+            </li>
         </ul>
       </li>
       <li class="component">
@@ -231,6 +237,25 @@
             </li>
             <li class="version">
               <a href="../../1.0.2/index.html">1.0.2</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../api/latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../../../api/3.0/index.html">3.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../../../api/latest/index.html">2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../ODS/latest/index.html">TED Data</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../ODS/latest/index.html">1.0</a>
             </li>
         </ul>
       </li>
@@ -3085,7 +3110,7 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 <div class="paragraph">
 <p><strong>And one more data structure to define the allowance of checks:
-*</strong> Special requierements check (spec-req-check)</p>
+*</strong> Special requirements check (spec-req-check)</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3819,16 +3844,16 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_mock_ups_buyer_perspective_5"><a class="anchor" href="#_mock_ups_buyer_perspective_5"></a>Mock-ups - buyer perspective</h3>
 <div class="paragraph">
-<p>The buyer has selected the 'allowance of checks' (in <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> will be shown as "Special requierements check", spec-req-check) option in a ESPD Request builder software application GUI. This software application will create a criterion of this in the ESPD Request XML instance with zero, one or more REQUIREMENT(s) by the EO.</p>
+<p>The buyer has selected the 'allowance of checks' (in <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> will be shown as "Special requierement check", spec-req-check) option in a ESPD Request builder software application GUI. This software application will create a criterion of this in the ESPD Request XML instance with zero, one or more REQUIREMENT(s) by the EO.</p>
 </div>
 <div class="paragraph">
 <p>The buyer (CA) can specify none, one or several REQUIREMENT(s). In this case a REQUIREMENT is a descriptive text provided by the buyer where the criterion is better explained or where certain conditions relating to the criterion. In this example the buyer is specifying which type of premises it wants to check and for which reasons.</p>
 </div>
 <div class="paragraph">
-<p><span class="image unresolved"><img src="Special_requierements_check_CA_mock-up.jpg" alt="Checks" width="524" height="213"></span></p>
+<p><span class="image"><img src="_images/Special_requirements_check_CA_mock-up.jpg" alt="Checks" width="524" height="213"></span></p>
 </div>
 <div class="paragraph">
-<p><em>Figure 172.  Special requierements check buyer REQUIREMENT edition mock-up</em></p>
+<p><em>Figure 172.  Special requirements check buyer REQUIREMENT edition mock-up</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -3837,10 +3862,10 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>The EO should see as many boxes (groups) of REQUIREMENT + QUESTION as REQUIREMENT(s) specified by the CA. In this case the economic operator (EO) sees one REQUIREMENT associated to one QUESTION. The expected answer is <strong>Yes</strong> or <strong>No</strong>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/Special_requierements_check'%20EO_mock-up.jpg" alt="Special requierements check' EO mock-up" width="636" height="122"></span></p>
+<p><span class="image unresolved"><img src="Special_requirements_check' EO_mock-up.jpg" alt="Special requirements check' EO mock-up" width="636" height="122"></span></p>
 </div>
 <div class="paragraph">
-<p><em>Figure 173. 'Special requierements check' EO mock-up</em></p>
+<p><em>Figure 173. 'Special requirements check' EO mock-up</em></p>
 </div>
 </div>
 <div class="sect2">
@@ -3880,17 +3905,17 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect2">
 <h3 id="_xml_example_13"><a class="anchor" href="#_xml_example_13"></a>XML Example</h3>
 <div class="paragraph">
-<p><em>Allowance of checks criterion /Special requierements check</em></p>
+<p><em>Allowance of checks criterion /Special requirements check</em></p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- header elements removed for brevity --&gt;
 
-&lt;!-- Criterion:Special requierements check --&gt;
+&lt;!-- Criterion:Special requirements check --&gt;
         &lt;cac:TenderingCriterion&gt;
                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="4.0.0"&gt;c8809aa1-29b6-4f27-ae2f-27e612e394db&lt;/cbc:ID&gt;
                 &lt;cbc:CriterionTypeCode listID="http://publications.europa.eu/resource/authority/criterion" listAgencyID="OP" listVersionID="20230315-0"&gt;spec-req-check&lt;/cbc:CriterionTypeCode&gt;
-                &lt;cbc:Name&gt;Special requierements check&lt;/cbc:Name&gt;
+                &lt;cbc:Name&gt;Special requirements check&lt;/cbc:Name&gt;
                 &lt;cbc:Description&gt;For complex products or services to be supplied or, exceptionally, for products or services which are required for a special purpose: The economic operator will allow checks to be conducted on the production capacities or the technical capacity of the economic operator and, where necessary, on the means of study and research which are available to it and on the quality control measures? The check is to be performed by the contracting authority or, in case the latter consents to this, on its behalf by a competent official body of the country in which the supplier or service provider is established.&lt;/cbc:Description&gt;
                 &lt;cac:ProcurementProjectLotReference&gt;
                         &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="4.0.0"&gt;LOT-00000&lt;/cbc:ID&gt;
