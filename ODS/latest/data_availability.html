@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Data Currently Available :: TED Developer Documentation</title>
+    <title>Data Currently Available in Cellar :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/data_availability.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -83,11 +83,11 @@
     <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>TED Linked Open Data</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>TED Open Data</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Querying TED Linked Open data</span>
+    <span class="nav-text">Querying TED Open data</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="querying/index.html">Home</a>
@@ -114,7 +114,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Connecting to TED Linked Open Data</span>
+    <span class="nav-text">Connecting to TED Open Data</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="connecting/index.html">Home</a>
@@ -138,13 +138,7 @@
     <a class="nav-link" href="samples/index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="samples/query1.html">Query 1: tbd</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="samples/query2.html">Query 2: tbd</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="samples/query3.html">Query 3: tbd</a>
+    <a class="nav-link" href="samples/query0_epo4.html">Query 1: notices per procurement type per country</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="snippets/index.html">Sample Snippets</a>
@@ -393,84 +387,64 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Data Currently Available</h1>
+<h1 class="page">Data Currently Available in Cellar</h1>
 <div class="sect1">
-<h2 id="_ted_linked_open_data"><a class="anchor" href="#_ted_linked_open_data"></a>TED Linked Open Data</h2>
+<h2 id="_current_processing"><a class="anchor" href="#_current_processing"></a>Current Processing:</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_eform_notices"><a class="anchor" href="#_eform_notices"></a>eForm Notices</h3>
 <div class="paragraph">
-<p>Data is currently available from August 2023 to December 2023</p>
-</div>
-<div class="paragraph">
-<p>Notice Data is currently available from <strong>Contract Award Notices</strong> in the above time period<br></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Linked open data is being constantly added to Cellar. Refer back to this page to check if there have been updates.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_ted_xml_schema_notice_data"><a class="anchor" href="#_ted_xml_schema_notice_data"></a>TED XML Schema Notice Data</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The format of schema XML data has changed over the years in line with changes in the legislation. "Schema" refers to the fields required by law in the notice form and therefore to the data collected by the notice.</p>
+<p>Two categories of data are being processed by the SWS pipeline currently:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Schema 2.08 complies with <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:32009L0081">Defence Directive 2009/81/EU</a> and applies since 2009 to the current day to notices published using forms 16, 17, 18, and 19 pertaining to defence related purchases. The current schema version is R2.0.8.S25.</p>
+<p>Daily eForm notices of form types 10 to 24, and 29, as of the 4 November 2024</p>
 </li>
 <li>
-<p>Schema 2.09 complies with the following directives and applied to notices published from 2016 until 1 February 2024 (non-EU Institutions) and 28 June 2024 (EU Institutions), when the transition period from schema 2.09 to eForms ended:</p>
+<p>The backlog of eForm notices of form types 10 to 24, and 29, from before the 4 November 2024 to the beginning of eForms (October 2023)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The processing of these eForm notices is against the eProcurement Ontology v4.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_xml_notices"><a class="anchor" href="#_xml_notices"></a>XML Notices</h3>
+<div class="paragraph">
+<p>A limited number of XML notices are available in Cellar. These were produced during the initial SWS Pipeline proof of concept.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0024">Directive 2014/24/EU</a> repealing Directive 2004/18/EC,</p>
-</li>
-<li>
-<p><a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0025">Directive 2014/25/EU</a> repealing  Directive 2004/17/EC,</p>
-</li>
-<li>
-<p><a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0023">Directive 2014/23/EU</a>,</p>
-</li>
-<li>
-<p>Regulation (EC) No 1370/2007.</p>
+<p>Contract Award Notices (CANs) from September 2023 to January 2024</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>The eForms schema was implemented on the 14 November 2022 and applies to public procurement from this date. The transition period where two versions of notice data applied, schema 2.09 and eForms, was from the 14 November 2022 to the 28 June 2024.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The processing of these was against the eProcurement Ontology v3.1.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-XML Schema Data is available from 1993 to the present day.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_legislation_affects_data"><a class="anchor" href="#_legislation_affects_data"></a>Legislation affects data</h2>
+<h2 id="_planned_processing"><a class="anchor" href="#_planned_processing"></a>Planned processing:</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_eform_notices_2"><a class="anchor" href="#_eform_notices_2"></a>eForm Notices</h3>
 <div class="paragraph">
-<p>The legislation, updated from time to time (here the link to the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019R1780">Regulation (EU) 2019/1780</a> that applies from the 14 November 2022), sets out which forms must be used in public procurement procedures, and the mandatory and optional fields that must be provided and filled in in the public procurement forms. These fields contain data that are eventually available for query. Although complex, the detail is useful in discovering which data are available for query.</p>
+<p>With the <a href="https://docs.ted.europa.eu/epo-home/history.html">completion of the eProcurement Ontology</a>, and with the mapping of the rest of the form types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Daily eForm notices of all types as of April 2025</p>
+</li>
+<li>
+<p>The backlog of all eForm notice types as of April 2025</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -479,13 +453,10 @@ XML Schema Data is available from 1993 to the present day.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-As these change slightly with amendments in legislation, the exact fields might not be carried through from the beginning of data collection to now, or their class names might have changed. Fields might have been added and removed along the way.
+Refer back to this page regularly to check if there have been updates. Use the <a href="querying/epo.html" class="xref page">ePO resources</a> of the versions mentioned above to find the classes you wish to use in your queries.
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>For an overview of what data can be extracted from a notice in its current form, you can also use the notice search facility available on the <a href="https://ted.europa.eu/en/">TED website</a>. Choose "Advanced Search" (All Notices), then the type of notice you are interested in, and then look at the contents of a notice from the list returned.</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -493,6 +464,7 @@ As these change slightly with amendments in legislation, the exact fields might 
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
 </div>
 </div>
 </div>

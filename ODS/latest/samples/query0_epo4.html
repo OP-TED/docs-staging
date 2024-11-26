@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Querying EU Public Procurement Data :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/querying/index.html">
+    <title>Find the highest value contract award published on a particular date :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/samples/query0_epo4.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -89,26 +89,26 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Querying TED Open data</span>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="index.html">Home</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../querying/index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="starting.html">Getting started</a>
+    <a class="nav-link" href="../querying/starting.html">Getting started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="online_training.html">Online training resources</a>
+    <a class="nav-link" href="../querying/online_training.html">Online training resources</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="designing_query.html">Designing a query</a>
+    <a class="nav-link" href="../querying/designing_query.html">Designing a query</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="structure.html">SPARQL query structure</a>
+    <a class="nav-link" href="../querying/structure.html">SPARQL query structure</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="notice_data.html">Notice data</a>
+    <a class="nav-link" href="../querying/notice_data.html">Notice data</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="epo.html">eProcurement Ontology resources</a>
+    <a class="nav-link" href="../querying/epo.html">eProcurement Ontology resources</a>
   </li>
 </ul>
   </li>
@@ -135,10 +135,10 @@
     <span class="nav-text">Example Query Library</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../samples/index.html">Home</a>
+    <a class="nav-link" href="index.html">Home</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../samples/query0_epo4.html">Query 1: notices per procurement type per country</a>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="query0_epo4.html">Query 1: notices per procurement type per country</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../snippets/index.html">Sample Snippets</a>
@@ -378,8 +378,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Data</a></li>
-    <li>Querying TED Open data</li>
-    <li><a href="index.html">Home</a></li>
+    <li>Example Query Library</li>
+    <li><a href="query0_epo4.html">Query 1: notices per procurement type per country</a></li>
   </ul>
 </nav>
 </div>
@@ -388,44 +388,95 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Querying EU Public Procurement Data</h1>
+<h1 class="page">Find the highest value contract award published on a particular date</h1>
+<div class="sect1">
+<h2 id="_the_query"><a class="anchor" href="#_the_query"></a>The Query</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Querying EU Public Procurement Data introduces the resources and guides available to help those interested improve their public procurement knowledge and querying skills.</p>
+<p>This query returns data on</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Publication number (notice number)</p>
+</li>
+<li>
+<p>The buyer&#8217;s legal name</p>
+</li>
+<li>
+<p>The procedure type (open/ negotiated)</p>
+</li>
+<li>
+<p>The procedure typ eURI (used to extract the procedure type)</p>
+</li>
+<li>
+<p>The buyer&#8217;s country</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><a href="starting.html" class="xref page">Getting started</a><br>
-The resources you need to start querying public procurement open data</p>
+<p>The query enables the results to be pasted into an Excel spread sheet where they can be <a href="../connecting/excel.html" class="xref page">manipulated further in pivot tables</a>. This enables the data to be displayed in different ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>notices per procurement type per country</p>
+</li>
+<li>
+<p>percentage of notices per procurement type per country</p>
+</li>
+<li>
+<p>percentage of notices per procurement type within a country</p>
+</li>
+<li>
+<p>list of buyers per procurement type per country</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><a href="online_training.html" class="xref page">Online training resources</a><br>
-Online resources for learning RDF and SPARQL</p>
+<p>This query interrogates eForm data against v4 of the eProcurement Ontology.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-SPARQL hljs" data-lang="SPARQL">PREFIX dc: &lt;http://purl.org/dc/elements/1.1/&gt;
+PREFIX epo: &lt;http://data.europa.eu/a4g/ontology#&gt;
+PREFIX cccev: &lt;http://data.europa.eu/m8g/&gt;
+PREFIX org: &lt;http://www.w3.org/ns/org#&gt;
+PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX skos: &lt;http://www.w3.org/2004/02/skos/core#&gt;
+
+SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country ?procedureTypeUri
+WHERE {
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+
+  GRAPH ?g {
+    ?notice
+      		epo:hasPublicationDate ?publicationDate ;
+      		epo:refersToProcedure [
+        		epo:hasProcedureType ?procedureTypeUri ;
+          		a epo:Procedure
+    		];
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasFormType &lt;http://publications.europa.eu/resource/authority/form-type/competition&gt; ;
+            epo:announcesRole [
+              epo:playedBy [
+               epo:hasLegalName ?legalName ;
+               cccev:registeredAddress [
+                 epo:hasCountryCode ?countryUri
+               ]
+             ]
+      ]
+    }
+    ?procedureTypeUri a skos:Concept ;
+    	skos:prefLabel ?procedureType .
+    FILTER (lang(?procedureType) = "en")
+
+  ?countryUri dc:identifier ?country .
+}</code></pre>
+</div>
 </div>
 <div class="paragraph">
-<p><a href="designing_query.html" class="xref page">Designing a query</a><br>
-How to approach designing queries</p>
-</div>
-<div class="paragraph">
-<p><a href="structure.html" class="xref page">SPARQL query structure</a><br>
-How to approach designing queries</p>
-</div>
-<div class="paragraph">
-<p><a href="notice_data.html" class="xref page">Notice data</a><br>
-The Information and fields in Notice data</p>
-</div>
-<div class="paragraph">
-<p><a href="epo.html" class="xref page">eProcurement Ontology resources</a><br>
-The eProcurement Ontology Resources</p>
-</div>
-<div class="paragraph">
-<p><a href="../samples/index.html" class="xref page">Browse the sample queries</a><br>
-Sample Queries to get you started</p>
-</div>
-<div class="paragraph">
-<p><a href="../connecting/index.html" class="xref page">Executing your query</a><br>
-Executing your query via the SPARQL EndPoint, Excel or Python</p>
-</div>
-<div class="paragraph">
-<p>Queries can be submitted via Cellar&#8217;s <a href="https://publications.europa.eu/webapi/rdf/sparql">SPARQL endpoint</a>, for which there is a link on the <a href="https://op.europa.eu/en/web/eu-vocabularies">EU Vocabularies page</a>.</p>
+<p>Copy the query and run it in the <a href="https://publications.europa.eu/webapi/rdf/sparql">public procurement SPARQL End Point</a></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -433,6 +484,8 @@ Executing your query via the SPARQL EndPoint, Excel or Python</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
+</div>
 </div>
 </article>
     <div id="widgetContainer">
