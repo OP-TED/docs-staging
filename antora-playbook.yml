@@ -55,7 +55,7 @@ content:
   ### ePO Documentation
   - url: https://github.com/OP-TED/epo-docs.git
     start_path: /
-    branches: main, v*, updt_wg-meetings
+    branches: main, v*, updt_wg_meetings
 
   ###  ESPD
   - url: https://github.com/OP-TED/espd-docs.git
