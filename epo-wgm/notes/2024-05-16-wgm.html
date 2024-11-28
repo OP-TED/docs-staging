@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Working Group meeting :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/epo-wgm/notes/2024-05-16-wgm.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/custom.css">
+    <link rel="stylesheet" href="../../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/styles/optional/custom.css" media="screen"/>
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
+<div class="eu-flag">
+    <nav class="navbar-scrollable">
+        <div class="navbar-brand">
+
+            <div class="eu-emblem" style="display: inline-block;">
+                <!-- flag and logo-->
+                <a href="https://european-union.europa.eu/index_en" target="_blank">
+                    <div class="eu-emblem-std-en"><span></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="sep-frame">
+            <div class="rect-grey"></div>
+        </div>
+    </nav>
+
+</div>
+
+<div class="eu-tenders">
+    <nav class="navbar">
+        <div class="text-eu-tenders">
+            <a href="https://ted.europa.eu/en/" target="_blank">EU tenders</a>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+
+            <div class="text-eu-subtext-text">
+                <a href="/">TED Developer Docs</a>
+            </div>
+ <div class="text-eu-subtext-label">
+                <a href="/">Documentation for TED developers and eSenders</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</div><div class="body">
+<script src="../../_/js/07-scrollable-header-nav.js"></script>
+<div class="nav-container" data-component="epo-wgm" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">eProcurement Ontology</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>General Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/business.html">Business Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../epo-home/stories.html">User Stories and Natural Language Statements</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../epo-home/stories_eAccess.html">eAccess (ESPD Request)</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../epo-home/stories_eSubmission.html">eSubmission (ESPD Response)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/conceptual.html">Conceptual Models</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/glossaries.html">Glossaries</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../EPO/latest/release-notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Reference Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#epo-home::references.adoc">Reference Documents</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/history.html">History and Planned Developments</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/methodology2024.html">Methodology</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../epo-home/versioning.html">ePO Versioning Rules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Working Group Documents</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../wider.html">Quarterly Meetings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cumulative.html">Cumulative Reports (by year)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../indiv.html">Individual Meeting Reports</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../eforms/latest/index.html">1.12</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.11/index.html">1.11.0</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.10/index.html">1.10</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.9/index.html">1.9</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.8/index.html">1.8</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.7/index.html">1.7</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.6/index.html">1.6</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.5/index.html">1.5</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.4/index.html">1.4</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../../EPO/4.2/index.html">4.2.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../../EPO/latest/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/4/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../ESPD-EDM/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../ESPD-EDM/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.3.0/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../api/latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../../api/3.0/index.html">3.0-rc.1</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../../api/latest/index.html">2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../ODS/latest/index.html">TED Data</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../ODS/latest/index.html">1.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">eProcurement Ontology</a></li>
+    <li><a href="2024-05-16-wgm.html">Working Group meeting</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+    <article class="doc">
+<h1 class="page">Working Group meeting</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Date</strong>: 16/05/2024   <br>
+<strong>Participants:</strong>  Paloma Arillo, Ioannis Fountoukidis, Natalie Muric, Dragos Stoica. <br>
+<strong>Model editor:</strong> Andreea Pasăre  <br>
+<strong>Note editor:</strong> Achilles Dougalis</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_agenda"><a class="anchor" href="#_agenda"></a>Agenda</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>eInvoicing</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discussion"><a class="anchor" href="#_discussion"></a>Discussion</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>A draft of the eInvoicing ORSD document was presented and edited by the Working Group.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The concepts of roles that participate in eInvoicing were discussed:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Buyer</p>
+</li>
+<li>
+<p>Seller</p>
+</li>
+<li>
+<p>Payee (if it is different than the Seller)</p>
+</li>
+<li>
+<p>Seller Tax representative</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Specifically, it was mentioned that the eInvoicing model does not explicitly show who is the service provider or/nor any checks made on who the service provider is.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>It was also noted that the Invoice should be linked to the Buyer.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The Activity description part of the draft was discussed. The following statements were compiled:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Seller generates an invoice and the additional supporting documents.</p>
+</li>
+<li>
+<p>The Seller sends the invoice to the Buyer.</p>
+</li>
+<li>
+<p>The Buyer receives and processes the invoice.</p>
+</li>
+<li>
+<p>The Buyer pays the Seller/Payee the amount of the invoice before the due date.</p>
+</li>
+<li>
+<p>It was decided that the scope of the module will not include penalties, fraudulent charges, and unpaid invoices after their due date at this stage of the module.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The user stories part of the ORSD was presented and discussed.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Code</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Role</strong></th>
+<th class="tableblock halign-left valign-top"><strong>User Story</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer, I want to know the Seller&#8217;s identification information at the invoice (document) level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer, I want to know the Payee identification information at invoice (document) level, if different from the Seller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer I want to know the information about payment at invoice (document) level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Seller</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Seller, I want to know the Buyer&#8217;s financial account information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer I want to know the information to trace back to the related order at the invoice (document) level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer I want to know the information to trace back to the related order line at the invoice line level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer I want to know the information to trace back to the related contract from the invoice (document) level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer I want to know the information to trace back to the related despatch advice from the invoice (document) level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">INV-9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Buyer I want to know the information to trace back to the related receiving advice from the invoice (document) level.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>The natural language statements that will be included in the ORSD were presented.And modified.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Natural Language Statements</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has an unique identifier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has a date of issuance.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can have a payment due date.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice must have a currency of all the amounts (except for the total VAT amount in accounting currency).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can refer to the procurement project.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can refer to the contract.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can refer to an order.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can refer to a despatch advice.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can refer to a receipt advice.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can refer to a lot.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can have a textual note.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can have payment terms.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can refer to previous invoices.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has to specify information about the Seller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has to specify information about the address of the Seller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify the contact point information of the Seller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has to specify information about the Buyer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has to specify information about the address of the Buyer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify the contact point information of the Buyer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about the Payee, if different than the Seller.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about the Seller&#8217;s tax representative.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about where and when the goods and services invoiced are delivered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about it&#8217;s delivery period.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about the address to which goods and services invoiced were or are delivered.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify the payment instructions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify the credit transfer payments.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about card used for payment contemporaneous with invoice issuance.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify a direct debit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about allowances applicable to the Invoice as a whole.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice can specify information about charges and taxes other than VAT, applicable to the invoice as a whole.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has to specify the monetary totals for the invoice.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has to specify information about VAT breakdown by different categories, rates and exemption reasons.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice may refer to one or many additional supporting documents.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice has to refer to one or many invoice lines.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice line may specify information about it&#8217;s delivery period.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice line may specify information about allowances applicable to the Invoice as a whole.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice line may specify information about charges and taxes other than VAT, applicable to the invoice as a whole.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice line has to specify information about the price applied for the goods and services invoiced on the invoice line.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice line has to specify information about the VAT applicable for the goods and services invoiced on the invoice line.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice line has to specify information about the goods and services invoiced on the invoice line.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An invoice line may provide information about properties of the goods and services invoiced.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p>It was decided that  the terms providing information on the Business Process will not be covered in ePO, because it is out of the Ontology&#8217;s scope.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_action_points"><a class="anchor" href="#_action_points"></a>Action Points</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Need to check cardinality for payment instructions  in the latest version of the standard, for the Natural Language Statements.</p>
+</li>
+<li>
+<p>Need to check if the payment terms should be mandatory.</p>
+</li>
+<li>
+<p>Need to check what is Receiving advice. Is it receipt advice?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+    <a href="https://ted.europa.eu/" target="_blank">TED Website</a>
+  </div>
+</article>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('/home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<style type="text/css">
+    @import url('/documents/d/global/custom');
+</style>
+
+<div class="footer">
+    <div class="three-columns">
+
+        <div class="col-md-12 col-lg-4">
+            <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img
+                        alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png"
+                        height="48" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+            <div class="ted-footer__rich-text">
+                <p>This website is managed by:
+                    <u>
+                        <a href="https://op.europa.eu/en/home" target="_blank">Publications Office of the European
+                            Union</a>
+                    </u>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">Need Help?</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/contact">Contact the TED Helpdesk</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Follow us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer">
+                    <a href="https://twitter.com/EUTenders"> <img src="../../_/img/twitter.svg"
+                            class="icon-footer" /><span>X/Twitter</span></a>
+                    <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img
+                            src="../../_/img/youtube.svg" class="icon-footer-2nd" /><span>YouTube</span></a>
+                </li>
+            </ul>
+
+            <h3 class="ted-footer__title">Legal</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/legal-notice" target="_blank">Legal Notice</a>
+                </li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/cookie-choice" target="_blank">Cookies</a>
+                </li>
+                <li class="li-footer"><a
+                        href="https://ted.europa.eu/en/accessibility"
+                        target="_blank">Accessibility</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">About us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/">About TED</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Other services</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+                <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+                <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+                <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="three-columns">
+        <div class="col-md-12 col-lg-4">
+            <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+
+            <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union"
+                        class="ls-op" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+           
+            <div class="ted-footer__rich-text">
+                <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span
+                            style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <h3 class="ted-footer__title">Contact the EU</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other
+                        Telephone options</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via
+                        our contact forms</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of
+                        the EU centres</a></li>
+
+            </ul>
+
+        </div>
+        <div class="col-md-12 col-lg-4">
+             <h3 class="ted-footer__title">Social Media</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a
+                        href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i
+                            aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+
+            </ul>
+            <h3 class="ted-footer__title">EU institutions and bodies</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer institutions"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">Search all EU institutions and bodies</a></li>
+               
+            </ul>
+        </div>
+
+        <script>
+            ECL.autoInit();
+        </script>
+    </div>
+</div>  </body>
+</html>
