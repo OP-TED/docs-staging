@@ -338,7 +338,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>Each branch in this 'criteria classification' corresponds to one data structure that is identical for all the leaves under that branch.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/Exclusion_criteria_clasification.jpg" alt="Exclusion criteria clasification" width="510" height="374"></span></p>
+<p><span class="image"><img src="_images/Exclusion_criteria_classification.jpg" alt="Exclusion criteria classification" width="510" height="374"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 49. Exclusion criteria classification</em></p>
@@ -373,7 +373,7 @@ The links to the business code explanations are provided by <a href="https://dig
 </table>
 </div>
 <div class="paragraph">
-<p>In an initial phase, the European Commission provided an ESPD service to support the ESPD’s uptake. As announced in 2018, on 2 May 2019, the Commission’s ESPD service has been turned off. To reap the full benefit of an electronic ESPD, the integration with national eProcurement services and national databases is necessary. This will enable data reusability, default form pre-filling and data interexchange among different databases. In turn, buyers and suppliers will benefit from the automatism, making the application of the ESPD much easier and decreasing the data errors rates.</p>
+<p>In an initial phase, the European Commission provided an ESPD service to support the ESPD’s uptake. As announced in 2018, on 2 May 2019, the Commission’s ESPD service has been turned off. To reap the full benefit of an electronic ESPD, the integration with national eProcurement services and national databases is necessary. This will enable data reusability, default form pre-filling and data inter-exchange among different databases. In turn, buyers and suppliers will benefit from the automatism, making the application of the ESPD much easier and decreasing the data errors rates.</p>
 </div>
 <div class="sect2">
 <h3 id="_data_structure"><a class="anchor" href="#_data_structure"></a>Data structure</h3>
@@ -604,7 +604,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>The cbc:ValueDataType indicates the type of value that the buyer requires for this QUESTION. Therefore, in its answer (inside the ESPD Request document) the economic operator will have to use also an INDICATOR value (true/false). Otherwise the mechanism used to validate the ESPD Response should consider the XML instance as invalid (should be treated as a FATAL error).</p>
 </li>
 <li>
-<p>Data structures defined by GROW are <strong>re-usable</strong>. This is specially the case (but not uniquelly) of the structure 'Is this information available electronically?' Notice that the UUID that identifies this structure is always the same in all the criteria that include it. Similarly structures that are reused in different criteria do have the same UUID (as they are the same). Beware that the group of properties (URI, Reference/Code, Issuer) will only be shown if the answer is 'Yes', thus the sub-group code ONTRUE.</p>
+<p>Data structures defined by GROW are <strong>re-usable</strong>. This is specially the case (but not uniquely) of the structure 'Is this information available electronically?' Notice that the UUID that identifies this structure is always the same in all the criteria that include it. Similarly structures that are reused in different criteria do have the same UUID (as they are the same). Beware that the group of properties (URI, Reference/Code, Issuer) will only be shown if the answer is 'Yes', thus the sub-group code ONTRUE.</p>
 </li>
 </ol>
 </div>
@@ -645,7 +645,7 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The buyer needs to be able to specify national exclusion criteria linked to one EU criterion as well as criteria particular for the procurement procedure. The economic operator, in the ESPD Response document, will have to responde "Yes" or "No" to each national criterion thus confirming that it in breach of the Law.</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The buyer needs to be able to specify national exclusion criteria linked to one EU criterion as well as criteria particular for the procurement procedure. The economic operator, in the ESPD Response document, will have to respond "Yes" or "No" to each national criterion thus confirming that it in breach of the Law.</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -901,10 +901,10 @@ Thus, in the case of Convictions, a new requirement could be introduced in G1 (s
 <p>Beware that No answer is expected here from the economic operator (do not get confused by the presence of the cbc:ValueDataType, as said it is used by both the Buyer and the EO.</p>
 </li>
 <li>
-<p>The value supplied by the buyer for this requirement (50 Euros, in this example). Notice that the currency is specified in the attibute currencyID of the cbc:Amount component.</p>
+<p>The value supplied by the buyer for this requirement (50 Euros, in this example). Notice that the currency is specified in the attribute currencyID of the cbc:Amount component.</p>
 </li>
 <li>
-<p>The MS also allows the buyer the possibility of adding multiple additional textual requirements (in this case the Buyer uses this to explain that ''Beware that the national Tax Agency won&#8217;t permit the existence of a debt, even if minimial, for two consecutive years'').</p>
+<p>The MS also allows the buyer the possibility of adding multiple additional textual requirements (in this case the Buyer uses this to explain that ''Beware that the national Tax Agency won&#8217;t permit the existence of a debt, even if minimal, for two consecutive years'').</p>
 </li>
 <li>
 <p>Again, no answer is expected here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the buyer.</p>
@@ -1907,7 +1907,7 @@ _&lt;!-- ... the rest of elements in the QualificationApplicationRequest documen
 <div class="sect2">
 <h3 id="_mock_up_economic_operator_perspective"><a class="anchor" href="#_mock_up_economic_operator_perspective"></a>Mock-up - economic operator perspective</h3>
 <div class="paragraph">
-<p>The figure below shows a fragment of a list of national criteria that a software application has captured from e-Certis. <strong>Per each criterion</strong> the economic operator has to specify whether it fulfills the Criterion or not and eventually provide references to online evidence.</p>
+<p>The figure below shows a fragment of a list of national criteria that a software application has captured from e-Certis. <strong>Per each criterion</strong> the economic operator has to specify whether it fulfils the Criterion or not and eventually provide references to online evidence.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Purely_national_criteria_mockup_CA_perspective.jpg" alt="Purely national criteria" width="500" height="350"></span></p>

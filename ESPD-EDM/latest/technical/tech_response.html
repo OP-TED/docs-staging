@@ -522,7 +522,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-020"><em>tbr92-019</em></a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: Other documents, e.g. the tender, might refer to the ESPD Response using this identifier (thus its compulsoriness). Copies of a document must be identified with a different UUID. Compulsory use of schemeAgencyID attribute.</p>
+<p><strong>Rule</strong>: Other documents, e.g. the tender, might refer to the ESPD Response using this identifier (thus it being compulsory). Copies of a document must be identified with a different UUID. Compulsory use of schemeAgencyID attribute.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -786,7 +786,7 @@ xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:QualificationAp
 
 &lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="2.0"&gt;1.0&lt;/cbc:VersionID&gt;
 
-&lt;!-- The type of the procurement procedure; this information is provided by eForms and the concret notice per procedure. e.g. open = In open procedures any interested economic operator may submit a tender in response to a call for competition.--&gt;
+&lt;!-- The type of the procurement procedure; this information is provided by eForms and the concrete notice per procedure. e.g. open = In open procedures any interested economic operator may submit a tender in response to a call for competition.--&gt;
 
 &lt;cbc:ProcedureCode listID="Dummy_procurement-procedure-type" listAgencyID="" listVersionID=""&gt;open&lt;/cbc:ProcedureCode&gt;
 
@@ -821,7 +821,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The economic operator must include in its ESPD Response document a reference to the ESPD Request. For this, the values of the two identifiers </strong>cbc:ID<strong> and </strong>cbc:UUID<strong> of the ESPD Request must be used as the values for the </strong>cbc:ID<strong> and </strong>cbc:UUID* in the ESPD Response cac:AdditionalDocumentReference (to refer to that ESDP Request).*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The economic operator must include in its ESPD Response document a reference to the ESPD Request. For this, the values of the two identifiers </strong>cbc:ID<strong> and </strong>cbc:UUID<strong> of the ESPD Request must be used as the values for the </strong>cbc:ID<strong> and </strong>cbc:UUID* in the ESPD Response cac:AdditionalDocumentReference (to refer to that ESPD Request).*</p></td>
 </tr>
 </tbody>
 </table>
@@ -956,7 +956,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-013"><em>tbr92-013</em></a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the value ESPD_REQUEST from the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc"><em>docref-content-type</em></a>. See also the XML example below on how to specify the ESPD Request.</p>
+<p><strong>Rule</strong>: For the ESPD-EDM it is compulsory use of the value ESPD_REQUEST from the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc"><em>docref-content-type</em></a>. See also the XML example below on how to specify the ESPD Request.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-OTH-01, BR-COM-10#3, BR-OTH-01#3, BR-OTH-03)</p>
@@ -1128,7 +1128,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>One ESPD Response per economic operator</strong>. The ESPD-EDM, as all the previous versions of the ESPD, requires that every economic operator that participates in one tender provide its own ESDP Response document. This affects sole traders that rely on other entities for the execution of the contract (e.g. subcontractors) and groups of economic operators, e.g. a Joint Venture or a Consortium, and all the sub-contractors on which each economic operator of the group relies on to meet the selection criteria.</p>
+<p><strong>One ESPD Response per economic operator</strong>. The ESPD-EDM, as all the previous versions of the ESPD, requires that every economic operator that participates in one tender provide its own ESPD Response document. This affects sole traders that rely on other entities for the execution of the contract (e.g. subcontractors) and groups of economic operators, e.g. a Joint Venture or a Consortium, and all the sub-contractors on which each economic operator of the group relies on to meet the selection criteria.</p>
 </div>
 <div class="paragraph">
 <p>Moreover, each EO should submit an ESPD Response per lot or group of Lots which tenders to.</p>
@@ -1213,10 +1213,10 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p>The information that the economic operator (EO) has to provide is relatively abundant, especially if the EO is the lead entity of a group. UBL does provide a class cac:EconomicOperatorParty with sufficient data elements to identify the economic operator, its role, its representatives, physical location, officially registered address and other.</p>
 </div>
 <div class="paragraph">
-<p>As the whole ESDP-EDM is based entirely on the UBL-2.3 XSD (W3C) Schemas, these schemas are to be used for ESPD.</p>
+<p>As the whole ESPD-EDM is based entirely on the UBL-2.3 XSD (W3C) Schemas, these schemas are to be used for ESPD.</p>
 </div>
 <div class="paragraph">
-<p>Nonetheless some data requested in the ESPD are not modeled in UBL-2.3, namely those aiming at purposes going beyond the identification of the economic operator; e.g. data with statistical purposes; or to ensure the transparency of the procurement procedure; other.</p>
+<p>Nonetheless some data requested in the ESPD are not modelled in UBL-2.3, namely those aiming at purposes going beyond the identification of the economic operator; e.g. data with statistical purposes; or to ensure the transparency of the procurement procedure; other.</p>
 </div>
 <div class="paragraph">
 <p>Therefore in the ESPD-EDM, the information about the economic operator is spread in two different places:</p>
@@ -1279,7 +1279,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p>The (pre)qualification system is perfectly identified (and trusted, as it is registered in eCertis); and</p>
 </li>
 <li>
-<p>The economic operator, identified with the number used in that (pre)qualification system, is linked inequivocally to that (pre)qualification system.</p>
+<p>The economic operator, identified with the number used in that (pre)qualification system, is linked unequivocally to that (pre)qualification system.</p>
 </li>
 </ul>
 </div>
@@ -2158,7 +2158,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p>If it belongs to a group, is the economic operator the leader of the group, a member or another entity (see the different types of 'roles' below);</p>
 </li>
 <li>
-<p>Does the economic operator rely on other entities to fulfill the selection criteria?</p>
+<p>Does the economic operator rely on other entities to fulfil the selection criteria?</p>
 </li>
 <li>
 <p>Is the procurement procedure divided into lots?</p>
@@ -2175,7 +2175,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>The sole contractor or leader will have to produce a complete ESDP;</p>
+<p>The sole contractor or leader will have to produce a complete ESPD;</p>
 </li>
 <li>
 <p>The sole contractor or leader will also have to identify the rest of the procurers (in the case of a group);</p>
@@ -2392,7 +2392,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p>The Sole contractor or the Leader of a group will have also to provide information about subcontractors on whose capacity the economic operator does not rely. Remember that this information does not need to be supplied by the members of a group or other entities.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="_images/EO_Roles_entities_not_reliedon.jpg" alt="EO Roles-entities not relied on" width="600" height="226"></span></p>
+<p><span class="image unresolved"><img src="EO_Roles_entities_not_relied_on.jpg" alt="EO Roles-entities not relied on" width="600" height="226"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 230. EO Roles-entities not relied on, mock-up</em></p>
@@ -2410,7 +2410,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <div class="sect3">
 <h4 id="_xml_example_2"><a class="anchor" href="#_xml_example_2"></a>XML Example</h4>
 <div class="paragraph">
-<p>This example contains all the data about an economic operator. Beware that the basic identification data is placed into the cac:EconomicOperatorParty component, whilst the rest of the data (namely for statististical purposes) is structured in the data structures described above.</p>
+<p>This example contains all the data about an economic operator. Beware that the basic identification data is placed into the cac:EconomicOperatorParty component, whilst the rest of the data (namely for statistical purposes) is structured in the data structures described above.</p>
 </div>
 <div class="paragraph">
 <p><em>Economic operator data - XML example</em></p>
@@ -2538,7 +2538,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p>Name of the economic operator. A text field.</p>
 </li>
 <li>
-<p>Street and number of the economic operator. Notice that the cac:AddressLine element is used instead of cbc:StreetnName and cbc:BuildingNumber. This is because name and number are not split in two fields.</p>
+<p>Street and number of the economic operator. Notice that the cac:AddressLine element is used instead of cbc:StreetName and cbc:BuildingNumber. This is because name and number are not split in two fields.</p>
 </li>
 <li>
 <p>Postcode (zip code) of the EO. A text field. Either the GUI and/or an external Schematron rule could be implemented to control the pattern of this text.</p>
@@ -2633,7 +2633,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p><em>Figure 234. EO representatives Power of Attorney, XSD Schema</em></p>
 </div>
 <div class="paragraph">
-<p>Notice that the largest part of the data is held in the component cac:EconomicOperatorParty/cac:Party/cac:PowerOfAttorney/cac:AgentParty/cac:Person. The figure below shows (in blue) the expected elements. See the table "Expecte Elements" and the XML example below for the details (e.g. how to use the cac:Person/cac:Contact element to contact the representative.</p>
+<p>Notice that the largest part of the data is held in the component cac:EconomicOperatorParty/cac:Party/cac:PowerOfAttorney/cac:AgentParty/cac:Person. The figure below shows (in blue) the expected elements. See the table "Expected Elements" and the XML example below for the details (e.g. how to use the cac:Person/cac:Contact element to contact the representative.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/EO_representatives_element_Person.jpg" alt="EO representatives - element Person" width="284" height="496"></span></p>
@@ -2848,7 +2848,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PowerOfAttorney/cbc:Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The short description for the role of the economic operstors representative and other detailed information on the representation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The short description for the role of the economic operators representative and other detailed information on the representation.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr092-010"><em>tbr92-010</em></a></p>
 </div>
@@ -3122,7 +3122,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>The ESPD Response must include one criterion response (one answer), and only one, linked to one, and only one, criterion property (one QUESTION) copied from the ESPD Request into the ESPD Response document; and to each criterion property added by the economic operator to the ESDP Response.</p>
+<p>The ESPD Response must include one criterion response (one answer), and only one, linked to one, and only one, criterion property (one QUESTION) copied from the ESPD Request into the ESPD Response document; and to each criterion property added by the economic operator to the ESPD Response.</p>
 </div>
 <div class="paragraph">
 <p>One criterion response, though, may contain a list of response values of the <strong>same type</strong>.</p>
@@ -3311,7 +3311,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ID</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A language-independent token, e.g., a number, that allows to identify a criterion response uniquely as well as allows to reference the criterion response in other documents. A criterion response describes how an economic operators fulfills an specific criterion.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A language-independent token, e.g., a number, that allows to identify a criterion response uniquely as well as allows to reference the criterion response in other documents. A criterion response describes how an economic operators fulfils an specific criterion.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-018"><em>tbr92-018, tbr92-007, tbr92-005, tbr92-006</em></a></p>
 </div>
@@ -3326,7 +3326,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ValidatedCriterionPropertyID</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A cross-reference to the criterion propertys which is validated thorugh this response expressed as an identifier.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A cross-reference to the criterion properties which is validated through this response expressed as an identifier.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-018"><em>tbr92-018, tbr92-007, tbr92-005, tbr92-006</em></a></p>
 </div>
@@ -3637,7 +3637,7 @@ _&lt;!-- ... rest of document removed for brevity --&gt;_</code></pre>
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1-tbr92-018"><em>tbr92-018</em></a></p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: Recommendation: use a UUDI-version 4 number.</p>
+<p><strong>Rule</strong>: Recommendation: use a UUID-version 4 number.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: BR-TCR-05</p>
@@ -3892,7 +3892,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 <p>The QUESTION ''Please describe them'', presented if the EO answered true to the previous QUESTION (''Your answer'').</p>
 </li>
 <li>
-<p>The type of data expected here is a free text bythe EO (for the Response, a DESCRIPTION maps to the UBL-2.3 element cbc:Description, which is an extension of the xsd:String).</p>
+<p>The type of data expected here is a free text by the EO (for the Response, a DESCRIPTION maps to the UBL-2.3 element cbc:Description, which is an extension of the xsd:String).</p>
 </li>
 </ol>
 </div>
@@ -3937,7 +3937,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 
 &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="4.0.0"&gt;de6f1bdd-abce-42f7-b9b8-30c4e7c4c94d&lt;/cbc:ID&gt;
 
-&lt;cbc:Description&gt;This Consortium fulfills all the conditions defined by the buyer in the contract notice, and notably
+&lt;cbc:Description&gt;This Consortium fulfils all the conditions defined by the buyer in the contract notice, and notably
 
 the Consortium is duly registered in the national pre-qualification system of the country of the Consortium lead where
 
@@ -3953,10 +3953,10 @@ all the information about its classification and documentation about its financi
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Notice this UUID is identical to the cac:TenderingCriterionProperty one. This is the way the UBL-2.3 Qualification Application Response document links each QUESTION(s) to one response (and only one), or viceversa.</p>
+<p>Notice this UUID is identical to the cac:TenderingCriterionProperty one. This is the way the UBL-2.3 Qualification Application Response document links each QUESTION(s) to one response (and only one), or vice versa.</p>
 </li>
 <li>
-<p>The economic operator states here that it meets the criteria. Notice that the data element is the UBL-2.3 element cbc:ResponseIndicator, which is an ''semantisation'' (a specialisation) of cbc:Indicator and therefore corresponds to the type of data expected by the buyer in the Request (in cbc:ValueDataTypeCode).</p>
+<p>The economic operator states here that it meets the criteria. Notice that the data element is the UBL-2.3 element cbc:ResponseIndicator, which is an ''semantisisation'' (a specialisation) of cbc:Indicator and therefore corresponds to the type of data expected by the buyer in the Request (in cbc:ValueDataTypeCode).</p>
 </li>
 <li>
 <p>This is the UUID corresponding to the QUESTION in the Request ''Please describe them''.</p>
@@ -4445,7 +4445,7 @@ all the information about its classification and documentation about its financi
 <p>ID value of the first criterion property (QUESTION) for which this response value is the answer.</p>
 </li>
 <li>
-<p>The criteron is to be treated as 'PUBLIC': it could be published.</p>
+<p>The criterion is to be treated as 'PUBLIC': it could be published.</p>
 </li>
 <li>
 <p>Identifier of the first evidence object that is used for this criterion: it must match the value provided for the cac:Evidence/cbc:ID element of the evidence.</p>
@@ -4472,13 +4472,13 @@ all the information about its classification and documentation about its financi
 <p>URL from where to get the document. The fact that the evidence MUST BE treated as CONFIDENTIAL is not inconsistent with the fact that the evidence is available online from a free-of-charge national data base.</p>
 </li>
 <li>
-<p>The name of the issuer of the first evidenciary document.</p>
+<p>The name of the issuer of the first document of evidence.</p>
 </li>
 <li>
 <p>ID of the second criterion property (QUESTION) for which this response value is the answer.</p>
 </li>
 <li>
-<p>The criteron is to be treated as 'CONFIDENTIAL': addressed only to the evaluators.</p>
+<p>The criterion is to be treated as 'CONFIDENTIAL': addressed only to the evaluators.</p>
 </li>
 <li>
 <p>Verification code ID of the second evidence.</p>
@@ -4487,7 +4487,7 @@ all the information about its classification and documentation about its financi
 <p>URL from where to get the document.</p>
 </li>
 <li>
-<p>The name of the issuer of the second evidenciary document.</p>
+<p>The name of the issuer of the second document of evidence.</p>
 </li>
 </ol>
 </div>
