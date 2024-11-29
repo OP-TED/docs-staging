@@ -241,6 +241,14 @@
         </ul>
       </li>
       <li class="component">
+        <a class="title" href="../../../M2O/latest/index.html">model2owl Documentation</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../M2O/latest/index.html">2.2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
         <a class="title" href="../../../api/latest/index.html">TED API</a>
         <ul class="versions">
             <li class="version">
@@ -1066,6 +1074,113 @@ Reference</strong></p></th>
 <div class="paragraph">
 <p>The XML snippet below illustrates how to use the cac:AdditionalDocumentReference in the ESPDRequest XML document to refer to a Contract Notice published in TED and on a national procurement board:</p>
 </div>
+<div class="sect3">
+<h4 id="_code_with_callouts"><a class="anchor" href="#_code_with_callouts"></a>Code with callouts</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The source code can be copied from the code block below the callout section
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;!--- Root elements eliminated for the sake of brevity --&gt;
+
+&lt;!-- Reference to the Contract Notice published on TED --&gt;
+
+&lt;cac:AdditionalDocumentReference&gt;
+
+&lt;cbc:ID schemeAgencyID="OP"&gt;2017/S 142-293520&lt;/cbc:ID&gt;
+
+&lt;cbc:DocumentTypeCode listID="http://publications.europa.eu/resource/authority/docrefcontent-type" listAgencyID="OP" listVersionID="20220928-0"&gt;TED_CN&lt;/cbc:DocumentTypeCode&gt;
+
+&lt;cac:Attachment&gt;
+
+&lt;cac:ExternalReference&gt;
+
+&lt;!-- Beware XML URI fields may require encoded URLs --&gt;
+
+&lt;cbc:URI schemeAgencyID="OP"&gt;http://ted.europa.eu/udl?uri%3DTED:NOTICE:293520-2017:TEXT:EN:HTML%026src%3D0&lt;/cbc:URI&gt;
+
+&lt;cbc:FileName&gt;Spain-Zamora: Repair and maintenance services&lt;/cbc:FileName&gt;
+
+&lt;cbc:Description&gt;Repair and maintenance services. Real estate services.&lt;/cbc:Description&gt;
+
+&lt;cbc:Description&gt;293520-2017&lt;/cbc:Description&gt;
+
+&lt;/cac:ExternalReference&gt;
+
+&lt;/cac:Attachment&gt;
+
+&lt;/cac:AdditionalDocumentReference&gt;
+
+&lt;!-- Reference to the Contract Notice published on the Spanish Central Government eTendering Platform --&gt;
+
+&lt;cac:AdditionalDocumentReference&gt;
+
+&lt;!-- Contract Notice published on the Spanish Central eTendering Platform "PLACE" Plataforma de Contratación del Sector Público --&gt;
+
+&lt;cbc:ID schemeAgencyID="PLACE"&gt;3.17/20830.0160&lt;/cbc:ID&gt;
+
+&lt;!-- Contract Notice (CN) published on a National Government Official Journal --&gt;
+
+&lt;cbc:DocumentTypeCode listID="http://publications.europa.eu/resource/authority/docrefcontent-type" listAgencyID="OP" listVersionID="20220928-0"&gt;NOJCN&lt;/cbc:DocumentTypeCode&gt;
+
+&lt;cac:Attachment&gt;
+
+&lt;cac:ExternalReference&gt;
+
+&lt;!-- Beware XML URI fields may require encoded URLs --&gt;
+
+&lt;cbc:URI schemeAgencyID="PLACE"&gt;https://contrataciondelestado.es/wps/portal/!ut/p/b1/pY_LDoIwEEW_hQ8wM5S2wJKH5REUVEDbjenCGI3Axvj9gmFrMXF2Nzkncy8okDahHD2XMAYnUL1-3a76eRt6_Ziy4me6LqNIpAS9gxMjKeKm4ekUyQhIA5AQo5-w2WdORNu8rfghSxCzVMRFY7NR57_5-OUC_K-_t9j_CMqMkBkwTfwAhg3bdOguIEfMPQfthedkvoNluB8f5dWmrhJiI3KoQYbhEkYnLA-hUw8hhJ_dqV7pwLLeHJySpA!!/&lt;/cbc:URI&gt;
+
+&lt;cbc:FileName&gt;Suministro y transporte de balasto&lt;/cbc:FileName&gt;
+
+&lt;cbc:Description&gt;Suministro y transporte de balasto para el tramo Zamora — Pedralba de la Línea de Alta Velocidad Olmedo — Lubián — Ourense. Subtramo 8.&lt;/cbc:Description&gt;
+
+&lt;/cac:ExternalReference&gt;
+
+&lt;/cac:Attachment&gt;
+
+&lt;/cac:AdditionalDocumentReference&gt;
+
+&lt;/QualificationApplicationRequest&gt;</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>For TED Notices, the Publications Office Official Journal Supplement number must be used in its original format [][][][]/S [][][]-[][][][][][], e.g. 2017/S 142-293520. Notice that the schemeAgencyID is OP (OP standing for 'Publications Office').</p>
+</li>
+<li>
+<p>The jurisdiction scope of this document is typified in the Code List docref-content-type (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package). <strong>Beware that the name and content of this Code List has changed from the previous ESPD-EDM version 2.1.1</strong>.</p>
+</li>
+<li>
+<p>The actual content is never embedded in the ESPD documents. Rather the content is always referenced from its original source (alignment with the Once-Only-Principle).</p>
+</li>
+<li>
+<p>The title of the CN must be placed in the FileName field of the attachment. UBL does not provide a placeholder for the title of the document.</p>
+</li>
+<li>
+<p>If notice publication on TED happens at the same time the ESPD Request is prepared, the procurer will not yet have an OJS number. They can receive a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</p>
+</li>
+<li>
+<p>schemeAgencyID is used in this example to specify that the national Agency that created this reference to the national publication (e.g., "PLACE" to refer to the ID of the national electronic board where the CN was published). The pattern of the ID is the one created by the Spanish buyer.</p>
+</li>
+<li>
+<p>In this case, the code NOJCN means 'Contract Notice (CN) published on a National Government Official Journal' (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_copy_the_code_block"><a class="anchor" href="#_copy_the_code_block"></a>Copy the code block</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!--- Root elements eliminated for the sake of brevity --&gt;
@@ -1131,30 +1246,6 @@ Reference</strong></p></th>
 &lt;/QualificationApplicationRequest&gt;</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>For TED Notices, the Publications Office Official Journal Supplement number must be used in its original format [][][][]/S [][][]-[][][][][][], e.g. 2017/S 142-293520. Notice that the schemeAgencyID is OP (OP standing for 'Publications Office').</p>
-</li>
-<li>
-<p>The jurisdiction scope of this document is typified in the Code List docref-content-type (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package). <strong>Beware that the name and content of this Code List has changed from the previous ESPD-EDM version 2.1.1</strong>.</p>
-</li>
-<li>
-<p>The actual content is never embedded in the ESPD documents. Rather the content is always referenced from its original source (alignment with the Once-Only-Principle).</p>
-</li>
-<li>
-<p>The title of the CN must be placed in the FileName field of the attachment. UBL does not provide a placeholder for the title of the document.</p>
-</li>
-<li>
-<p>If notice publication on TED happens at the same time the ESPD Request is prepared, the procurer will not yet have an OJS number. They can receive a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</p>
-</li>
-<li>
-<p>schemeAgencyID is used in this example to specify that the national Agency that created this reference to the national publication (e.g., "PLACE" to refer to the ID of the national electronic board where the CN was published). The pattern of the ID is the one created by the Spanish buyer.</p>
-</li>
-<li>
-<p>In this case, the code NOJCN means 'Contract Notice (CN) published on a National Government Official Journal' (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package).</p>
-</li>
-</ol>
 </div>
 </div>
 </div>
@@ -1800,6 +1891,90 @@ IdentificationCode</strong></p></td>
 <div class="paragraph">
 <p>The XML snippet below shows how an example of how to supply the expected data for the service provider.</p>
 </div>
+<div class="sect3">
+<h4 id="_code_with_callouts_2"><a class="anchor" href="#_code_with_callouts_2"></a>Code with callouts</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The source code can be copied from the code block below the callout section
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>...
+
+_&lt;!--- Root elements eliminated for the sake of brevity --&gt;_
+
+&lt;cac:ContractingParty&gt;
+
+&lt;cac:Party&gt;
+
+&lt;cac:PartyIdentification&gt;&lt;cbc:ID schemeAgencyID="VIES"&gt;B82387770&lt;/cbc:ID&gt; &lt;/cac:PartyIdentification&gt;
+
+&lt;cac:PartyName&gt;&lt;cbc:Name&gt;Ministerio de Defensa&lt;/cbc:Name&gt;&lt;/cac:PartyName&gt;
+
+&lt;cac:PostalAddress&gt;&lt;cac:Country&gt;&lt;cbc:IdentificationCode listID="http://publications.europa.eu/resource/authority/country" listAgencyID="OP" listVersionID="20220928-0"&gt;ES&lt;/cbc:IdentificationCode&gt;&lt;/cac:Country&gt;&lt;/cac:PostalAddress&gt;
+
+&lt;cac:ServiceProviderParty&gt;
+
+&lt;cac:Party&gt;
+
+&lt;cbc:WebsiteURI&gt;http://www.minhafp.gob.es/es-ES/Areas%20Tematicas/Patrimonio%20del%20Estado/Contratacion%20del%20Sector%20Publico/Paginas/ROLECE.aspx&lt;/cbc:WebsiteURI&gt;
+
+&lt;cbc:EndpointID&gt;http://www.minhafp.gob.es/ESPD/endpoint&lt;/cbc:EndpointID&gt;
+
+&lt;cac:PartyIdentification&gt;
+
+&lt;cbc:ID schemeAgencyID="AEAT"&gt;B36699932&lt;/cbc:ID&gt;
+
+&lt;/cac:PartyIdentification&gt;
+
+&lt;cac:PartyName&gt;
+
+&lt;cbc:Name&gt;Registro Oficial de Licitadores y Empresas Clasificadas (ROLECE)&lt;/cbc:Name&gt;&lt;/cac:PartyName&gt;
+
+&lt;cac:PostalAddress&gt;
+
+&lt;cac:Country&gt;&lt;cbc:IdentificationCode listID="http://publications.europa.eu/resource/authority/country" listAgencyID="OP" listVersionID="20220928-0"&gt;ESP&lt;/cbc:IdentificationCode&gt;&lt;/cac:Country&gt;
+
+&lt;/cac:PostalAddress&gt;
+
+&lt;/cac:Party&gt;
+
+&lt;/cac:ServiceProviderParty&gt;
+
+&lt;/cac:Party&gt;
+
+&lt;/cac:ContractingParty&gt;
+
+...</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ContractingParty non-compulsory elements have been omitted for the sake of brevity.</p>
+</li>
+<li>
+<p>The service provider VAT number. The issuer Agency is the Spanish Tax Agency (AEAT). You can use the VIES platform to verify that the VAT number exists and is correct for Spain.</p>
+</li>
+<li>
+<p>The registered name of the service provider is mandatory.</p>
+</li>
+<li>
+<p>The country code of the service provider (ESP) is compulsory. You will need to use this code (ESP) to verify the VAT number in the VIES service.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_copy_the_code_block_2"><a class="anchor" href="#_copy_the_code_block_2"></a>Copy the code block</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">...
@@ -1851,28 +2026,13 @@ _&lt;!--- Root elements eliminated for the sake of brevity --&gt;_
 ...</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>ContractingParty non-compulsory elements have been omitted for the sake of brevity.</p>
-</li>
-<li>
-<p>The service provider VAT number. The issuer Agency is the Spanish Tax Agency (AEAT). You can use the VIES platform to verify that the VAT number exists and is correct for Spain.</p>
-</li>
-<li>
-<p>The registered name of the service provider is mandatory.</p>
-</li>
-<li>
-<p>The country code of the service provider (ESP) is compulsory. You will need to use this code (ESP) to verify the VAT number in the VIES service.</p>
-</li>
-</ol>
-</div>
 <hr>
 <div class="paragraph">
 <p>Any comments on the documentation?</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
 </div>
 </div>
 </div>
