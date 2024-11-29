@@ -31,9 +31,7 @@ asciidoc:
     eforms_latest_version: '1.12'
     epo_latest_version: '4.1.0'
     espd_latest_version: '4.0.0'
-    api_latest_version: '2.0'
-    ODS_latest_version: '1.0'
-    m2o_latest_version: '2.2'
+    
 
   extensions:
   - ./lib/apidoc/apidoc-asciidoc-extension
