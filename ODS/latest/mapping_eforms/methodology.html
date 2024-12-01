@@ -408,7 +408,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">MG-{TrailingClass}-{intermediateClassAndPropertyPath}-{RootClass}</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">MG-\{TrailingClass\}-\{intermediateClassAndPropertyPath\}-\{RootClass\}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -416,7 +416,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">MG-Address-hasAddress-Location-hasLocation-Organization</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">MG-\{Address\}-\{hasAddress\}-\{Location\}-\{hasLocation\}-\{Organization\}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -424,7 +424,7 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-Address-hasAddress-Location-hasLocation-Organization_ND-Company a rr:TriplesMap</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-\{Address\}-\{hasAddress\}-\{Location\}-\{hasLocation\}-\{Organization\}_ND-Company a rr:TriplesMap</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -453,26 +453,26 @@ the instances of those relationships).</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-LotGroup_ND-LotsGroup
-tedm:MG-Identifier-identifier-LotGroup_ND-LotsGroup
-tedm:MG-Identifier-hasInternalIdentifier-LotGroup_ND-LotsGroupProcurementScope
-tedm:MG-LotGroup_ND-LotsGroupProcurementScope
-tedm:MG-MonetaryValue-hasEstimatedValue-LotGroup_ND-LotsGroupValueEstimate
-tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGroupValueEstimateExtension
-tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGroupFA
-tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardCriterion
-tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardFixedCriterionParameter
-tedm:MG-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardWeightCriterionParameter
-tedm:MG-Constraint-hasConstraint-AwardCriterion-specifiesProcurementCriterion-LotGroup_ND-LotsGroupAwardThresholdCriterionParameter</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-\{LotGroup\}_ND-\{LotsGroup\}
+tedm:MG-\{Identifier\}-\{identifier\}-\{LotGroup\}_ND-\{LotsGroup\}
+tedm:MG-\{Identifier\}-\{hasInternalIdentifier\}-\{LotGroup\}_ND-\{LotsGroupProcurementScope\}
+tedm:MG-\{LotGroup\}_ND-\{LotsGroupProcurementScope\}
+tedm:MG-\{MonetaryValue\}-\{hasEstimatedValue\}-\{LotGroup\}_ND-\{LotsGroupValueEstimate\}
+tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupValueEstimateExtension\}
+tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupFA\}
+tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardCriterion\}
+tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardFixedCriterionParameter\}
+tedm:MG-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardWeightCriterionParameter\}
+tedm:MG-\{Constraint\}-\{hasConstraint\}-\{AwardCriterion\}-\{specifiesProcurementCriterion\}-\{LotGroup\}_ND-\{LotsGroupAwardThresholdCriterionParameter\}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Looking at the above example we can observe that, on one hand, a node <code>ND-LotsGroup</code> can have children fields that provide information for the generation of multiple insctances, e.g. an <code>epo:LotGroup</code> instance from <code>tedm:MG-LotGroup_ND-LotsGroup</code>, and an <code>adms:Identifier</code> instance from <code>tedm:MG-Identifier-identifier-LotGroup_ND-LotsGroup</code>. On the other hand, the full definition of the same EPO instance, can achieved by combining information provided in fields that are organized under different nodes, e.g. the MonetaryValue that represents the hasLaunchFrameworkAgreementMaximumValue property of a LotGroup can come both from fields that are chidren of the <code>ND-LotsGroupValueEstimateExtension</code> node and those that are children of the <code>ND-LotsGroupFA</code> node:</p>
+<p>Looking at the above example we can observe that, on one hand, a node <code>ND-LotsGroup</code> can have children fields that provide information for the generation of multiple insctances, e.g. an <code>epo:LotGroup</code> instance from <code>tedm:MG-{LotGroup}_ND-{LotsGroup}</code>, and an <code>adms:Identifier</code> instance from <code>tedm:MG-{Identifier}-{identifier}-{LotGroup}_ND-{LotsGroup}</code>. On the other hand, the full definition of the same EPO instance, can achieved by combining information provided in fields that are organized under different nodes, e.g. the MonetaryValue that represents the hasLaunchFrameworkAgreementMaximumValue property of a LotGroup can come both from fields that are chidren of the <code>ND-LotsGroupValueEstimateExtension</code> node and those that are children of the <code>ND-LotsGroupFA</code> node:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGroupValueEstimateExtension,
-tedm:MG-MonetaryValue-hasLaunchFrameworkAgreementMaximumValue-LotGroup_ND-LotsGroupFA</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupValueEstimateExtension\},
+tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup\}_ND-\{LotsGroupFA\}</code></pre>
 </div>
 </div>
 </div>
@@ -510,7 +510,7 @@ The TriplesMaps in the various RML modules, especially those that represent vers
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">{ns}id_{notice-id}_{concept}_{trailer}</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">\{ns\}id_\{notice-id\}_\{concept\}_\{trailer\}</code></pre>
 </div>
 </div>
 <div class="paragraph">
