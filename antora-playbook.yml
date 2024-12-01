@@ -71,10 +71,10 @@ content:
     start_path: /
     branches: bugfix/docs-structure
 
-  ### TED Open Data Web Service
+  ### TED Open Data Service
   - url: https://github.com/OP-TED/ted-rdf-docs
     start_path: docs/antora 
-    branches: develop
+    branches: TEDSWS-docs-review
 
   ### TED Data for Reusers
   - url: https://github.com/OP-TED/ted-reuse-docs.git
