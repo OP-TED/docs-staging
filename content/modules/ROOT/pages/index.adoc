@@ -29,7 +29,7 @@ The European Single Procurement Document enables accelerated processing of preli
 ****
 
 [.tile]
-.TED Data
+.TED Open Data
 ****
 Access TED Open Data via direct queries to our SPARQL endpoint or download TED Notice XML Data. Learn how to create mappings to transform XML data into RDF.
 
