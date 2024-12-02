@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>What&#8217;s new in EFX 2 :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/eforms-common/sdk2/efx2.html">
+    <title>Navigating eForms Change Management :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/eforms-common/articles/eforms-change-management.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -94,8 +94,8 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../versioning/index.html">SDK Versioning</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../articles/eforms-change-management.html">eForms Change Management</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="eforms-change-management.html">eForms Change Management</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>General Reference</strong> <code>1.12</code></span></span>
@@ -321,7 +321,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">eForms SDK</a></li>
-    <li><a href="efx2.html">What&#8217;s new in EFX 2</a></li>
+    <li><a href="eforms-change-management.html">eForms Change Management</a></li>
   </ul>
 </nav>
 </div>
@@ -330,75 +330,168 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">What&#8217;s new in EFX 2</h1>
+<h1 class="page">Navigating eForms Change Management</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-This is a pre-release version of this document.
- The eForms SDK 2.0.0 is still under development.
- This notice will be removed when the document is finalized.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
-<p>EFX 2 is the version of EFX released with SDK 2.0.0. EFX 2 focuses mostly on adding features and flexibility to EFX Templates. However, it also includes several improvements for EFX Expressions.</p>
+<p>This article aims to explain the principles, reasoning, and methods used
+to control the impact of changes with the eForms SDK. By examining why
+changes occur, how they are propagated and controlled, and what
+safeguards are in place, we hope to demystify the process and help you
+explore the different options that are available to you for increasing
+your resilience to change and its impact.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_backwards_compatibility"><a class="anchor" href="#_backwards_compatibility"></a>Backwards compatibility</h2>
+<h2 id="_understanding_the_role_of_the_sdk"><a class="anchor" href="#_understanding_the_role_of_the_sdk"></a>Understanding the role of the SDK</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>EFX 2 contains new features, that are not supported by EFX 1. Although, most EFX 1 expressions are still valid EFX 2 expressions, some EFX 1 expressions need to be slightly modified before they can be parsed by an EFX 2 parser. More specifically, EFX 1 expressions that use <strong>codelist identifiers</strong> need to be modified. See the section "Breaking change in codelist identifiers" for more details.</p>
+<p>Before diving into practical details, let us start with a couple of
+definitions to make sure that we are all looking at the eForms SDK from
+the same perspective:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>eForms is</strong> a specification for creating, encoding, transmitting, and
+publishing public procurement notices. It is established and maintained
+through a regulatory framework.</p>
+</li>
+<li>
+<p><strong>Public procurement notices are</strong>
+created, encoded, and transmitted to a central hub (the Publications
+Office) through a hybrid network of eSender applications. All nodes and
+hubs of this network are managed and operated independently but ensure
+that transmitted notices always adhere to the eForms specification by
+sharing a common communications protocol with the central hub. This
+protocol is materialised through the eForms SDK.</p>
+</li>
+<li>
+<p><strong>The eForms SDK is</strong> a means of encoding and distributing the eForms
+specification in a way that can be directly used by computer
+applications. Its purpose is to allow computer applications to:<br></p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Create and <strong>encode</strong> notices that adhere to the latest eForms
+specification.</p>
+</li>
+<li>
+<p>Read and interpret (<strong>decode</strong>) notices that were created in the past
+(and thus adhere to a regulatory framework that may have changed since
+their creation).</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>The role of the eForms SDK is</strong> therefore <strong>to distribute</strong> the
+information that computer applications need to encode and decode public
+procurement notices in continuous adherence to the ever-evolving <strong>eForms
+specification</strong>.</p>
+</div>
+<div class="paragraph">
+<p>A key element in the design of the eForms SDK is the ability to adapt to
+change and provide a basis for the creation and interpretation of
+notices created across different periods of the regulatory framework&#8217;s
+evolution.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_efx_templates"><a class="anchor" href="#_efx_templates"></a>EFX Templates</h2>
+<h2 id="_drivers_of_change"><a class="anchor" href="#_drivers_of_change"></a>Drivers of change</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_template_variables"><a class="anchor" href="#_template_variables"></a>Template variables</h3>
 <div class="paragraph">
-<p>One of the difficulties we had with EFX 1 was the complexity of expressions required to navigate complex relationships in the XML files. The main cause of this difficulty was the fact that the context of a template line in EFX 1 was unique to each line and there was no way to share context between template lines. As a result it was impossible to navigate complex relationships in nested template lines without writing unnecessarily complex expressions.</p>
+<p>The publication of public procurement notices aims primarily to promote
+transparency and equal opportunities across borders. While each notice
+is a snapshot of a procurement procedure, the collection of all notices
+offers a rich dataset valuable to policy makers and economic operators.
+One of the objectives of the eForms regulation is to leverage this data
+for informed decision-making contributing to the digital transformation.
+Thus, it is crucial for the SDK to be updated regularly to align with
+regulatory changes, to enhance the quality and reliability of data, and
+to optimise the data collection processes.</p>
 </div>
 <div class="paragraph">
-<p>To solve this issue, EFX 2 introduces template variables. Template variables are declared within the context declaration block of a template line, and are visible within the template block headed by that line. A "template block" is a group of nested template lines.</p>
+<p>The following are the possible reasons that may trigger the need for
+changes in the eForms SDK:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Regulatory changes</strong> in the eForms specification: Any regulatory
+change must be communicated to all the information systems that need to
+encode public procurement notices to ensure continued regulatory
+compliance. Such regulatory changes may for example introduce new forms
+or fields etc.</p>
+</li>
+<li>
+<p><strong>Fixes and incremental updates</strong>: These are improvements <strong>in the
+information encoded</strong> and transmitted with the SDK. Examples of such
+improvements are fixes of trivial mistakes like inaccurate translations,
+enhancement of the notice forms, improvement of validation rules, etc.</p>
+</li>
+<li>
+<p><strong>Protocol updates</strong>: These are efforts to improve <strong>the way the
+information is encoded</strong> inside the SDK itself. Evolution of technology
+as well as acquired experience and lessons learnt may drive the need for
+significant improvements in the way the eForms specification is encoded
+in the SDK itself. For example, improvements in the eForms Expression
+Language (EFX) may be deemed necessary to improve performance in
+validation or visualisation of notices.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>The new syntax for context declaration block is as follows:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">// For example: {context:$ctx = fieldAlias1, number:$number = numericFieldAlias2}
-contextDeclarationBlock: StartExpression contextDeclaration (Comma templateVariableList)? EndExpression;
-
-contextDeclaration: contextVariableInitializer | fieldContext | nodeContext;
-
-templateVariableList: templateVariableInitializer (Comma templateVariableInitializer)*;
-
-// For example: context:$ctx = fieldAlias
-contextVariableInitializer: ContextTypeCast Variable Assignment fieldContext;
-
-// For example: text:$variable = concat(fieldAlias1, fieldAlias2)
-templateVariableInitializer
-    : TextTypeCast Variable Assignment stringExpression
-    | BooleanTypeCast Variable Assignment booleanExpression
-    | NumericTypeCast Variable Assignment numericExpression
-    | DateTypeCast Variable Assignment dateExpression
-    | TimeTypeCast Variable Assignment timeExpression
-    | DurationTypeCast Variable Assignment durationExpression
-    ;</code></pre>
+<p><em>In short, the collection and publication of public procurement notices
+and data is an <strong>ever-evolving process</strong> that aims to progressively
+improve its own efficiency, and effectiveness. <strong>Managing change in a
+systematic and sustainable way</strong> is therefore a core requirement of this
+process which the eForms SDK versioning system and release process aim
+to achieve.</em></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_impact_of_change"><a class="anchor" href="#_impact_of_change"></a>Impact of change</h4>
+</div>
+<div class="sect1">
+<h2 id="_controlling_change"><a class="anchor" href="#_controlling_change"></a>Controlling change</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Given that change is inevitable, the Publications Office has adopted a
+new approach to control and normalise its impact. This approach, which
+is new to eForms, is based on two key components:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <strong>metadata-driven</strong> paradigm: This is based on the idea that changes
+in the regulatory environment and the eForms specification should only
+influence the <em>behaviour</em> of the applications; not their <em>logic</em> or
+<em>structure</em>. To achieve this, we have established <strong>a protocol</strong> with
+which we can encode and transmit all the <strong>parameters</strong> that an
+application may need to automatically adjust its <strong>behaviour</strong> to any
+change that may occur.</p>
+</li>
+<li>
+<p>A clear and robust <strong>versioning system</strong>:This is essential for the clear
+packaging, labelling (identification) and distribution of successive
+sets of changes. Changes are bundled in <strong>controlled sets</strong>, packaged,
+labelled, and distributed as <strong>released versions</strong> of the eForms SDK.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Each SDK version is a labelled and sealed (<strong>unchangeable</strong>) package that
+contains a named <strong>snapshot</strong> of the eForms technical specification at a
+given point in time.</p>
+</div>
+<div class="paragraph">
+<p>The versioning system that we use allocates three numbers to each SDK
+version: the major, minor and patch version number encoded as
+major.minor.patch (e.g. 1.2.3).</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -406,211 +499,310 @@ templateVariableInitializer
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This change only impacts implementers that have created custom EFX parsers with EFX Template parsing functionality. Custom parsers that are not used for EFX Template parsing are not impacted by this change. EFX Template features are used only for generating visualisation templates for eForms notices.
+<strong>For more information</strong> on SDK versioning
+rules please <a href="https://docs.ted.europa.eu/eforms-common/versioning/">follow this link</a>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Regulatory changes, fixes and other incremental updates</strong> are packaged
+in <strong>maintenance</strong> <strong>releases</strong> and are indicated by increasing the minor
+and/or patch version numbers only.</p>
+</li>
+<li>
+<p><strong>Protocol changes are always major</strong> changes and are indicated by increasing the major version number. Since the release of SDK 1.0.0 in August 2022, the SDK has not undergone any
+protocol change and its current major version number remains 1, while version 2 is under development and is due to be released in 2025.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is possible that a large regulatory change may trigger the need for a
+protocol change. An example of such a
+dramatic change was the need to discontinue the legacy "Standard Forms"
+(also known as TEDXML) and to replace them with "eForms". One of the
+roles of the eForms SDK and a reason for its introduction was <strong>to
+eliminate the need for such aggressive changes in the future</strong> by
+introducing a more flexible system that can support the propagation of
+incremental updates regardless of the nature of the changes that trigger
+them.</p>
+</div>
+<div class="paragraph">
+<p><em>In short, the version control system together with the metadata-driven
+approach adopted by the eForms SDK allows for the incremental
+distribution of different kinds of changes in a systematic and
+sustainable way. By enabling the classification of changes into three
+different groups based on their impact and
+by encoding them as metadata, it allows metadata-driven applications to
+adapt to most changes automatically and minimises the need for (as well
+as the impact of) major changes.</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_frequency_of_change"><a class="anchor" href="#_frequency_of_change"></a>Frequency of change</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since the initial launch of SDK 1.0.0 in August 2022, the Publications
+Office has completed twelve (12) additional maintenance releases (minor
+versions) while SDK 1.13.0 is currently (October 2024) under acceptance
+testing. In total <strong>13 minor versions</strong> of the eForms SDK have been
+released <strong>in the first 26 months</strong> of its existence, indicating that the
+average frequency of SDK releases was once every two months.</p>
+</div>
+<div class="paragraph">
+<p>As the eForms technical specification gradually matures, the frequency
+of SDK releases is gradually dropping to once every quarter or less.</p>
+</div>
+<div class="paragraph">
+<p>In short, the <strong>frequency of maintenance releases</strong> of the eForms SDK
+is proportional to the demand for change/adaptation mostly driven by regulatory needs. Process constraints limit the maximum number of maintenance releases that can be issued in a
+year to no more than six.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>frequency of major releases</strong> of the SDK is very low and currently
+is estimated to be at one major release every three years.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adapting_to_change"><a class="anchor" href="#_adapting_to_change"></a>Adapting to change</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Although the SDK provides a solid basis for the systematic encoding and
+distribution of changes across the eSender network, each individual
+application must adopt (or be adapted to) these changes. Therefore, the
+<strong>design paradigm</strong> chosen by different applications might yield
+<strong>different levels of resilience</strong> to change. For example, applications
+that follow a metadata-driven paradigm, will be able to process and
+adopt most changes automatically, whereas other applications might need
+developer intervention to adapt to any type of change.</p>
+</div>
+<div class="paragraph">
+<p>Developers of eSender applications that do not follow a metadata-driven
+paradigm are encouraged to consider the benefits of gradually adopting
+it as it will have significant impact on the long-term maintainability
+of their systems.</p>
+</div>
+<div class="paragraph">
+<p>Considering the different speeds at which different eSenders can adapt
+to changes in the SDK, the Publications Office has put together a
+comprehensive strategy for the roll-out, and management of the lifecycle
+of SDK versions. This strategy <strong>aims to help every eSender</strong> in their
+efforts to adapt their systems to eForms and provides several <strong>alternative solutions</strong> for the continuous evolution of eSender applications.</p>
+</div>
+<div class="sect2">
+<h3 id="_cumulative_updates"><a class="anchor" href="#_cumulative_updates"></a>Cumulative updates</h3>
+<div class="paragraph">
+<p>Each SDK version contains all the updates that were issued with all its
+previous versions. This means that eSender applications do not need to
+adapt to each SDK version successively. Instead, they can <strong>go directly
+to the latest</strong> version. This provides eSenders with the ability to
+schedule their SDK update cycles as it best fits their calendar and
+<strong>skip as many versions</strong> of the SDK as needed to go directly from their
+current adopted version to the latest one available at the time of their
+scheduled update.</p>
+</div>
+<div class="paragraph">
+<p>This way different eSenders, depending on the adaptability of their
+current systems can follow the evolution of the eForms regulatory
+environment and technical implementation at their <strong>own pace</strong>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multiple_active_versions"><a class="anchor" href="#_multiple_active_versions"></a>Multiple active versions</h3>
+<div class="paragraph">
+<p>To allow eSender applications more time to adopt new versions of the
+SDK, older SDK versions are not automatically discontinued when new
+versions are released. eSenders can <strong>choose their own timing</strong> for
+adopting a new SDK version. The Publications Office will continue to
+accept for publication notices created with an SDK version other than
+the latest one. Some limitations of course apply; see "version lifespan"
+below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_patching"><a class="anchor" href="#_patching"></a>Patching</h3>
+<div class="paragraph">
+<p>To allow eSenders that have not yet switched to the latest version of
+the SDK to benefit from as many as possible of the latest updates, the
+Publications Office issues patch releases for previous versions of the
+SDK shortly after a new version is released. Patch releases typically
+contain updated translations and notice visualisation templates and most
+eSender applications, regardless of whether they follow a
+metadata-driven approach, can use these patch updates with minimal or no
+intervention.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_version_lifespan"><a class="anchor" href="#_version_lifespan"></a>Version lifespan</h3>
+<div class="paragraph">
+<p>The version lifespan policy is designed to <strong>counterbalance</strong> the multiple
+active versions policy described above. It is essential in limiting the
+number of versions of the SDK that are actively being used by eSenders
+to a reasonable and manageable total. There are several reasons for
+which we need to limit the number of SDK versions that are actively
+being used to create and submit new notices:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Patching older SDK versions is a <strong>resource intensive</strong> operation. Limiting the number of maintained SDK versions is essential in ensuring our continued ability to issue
+patches.</p>
+</li>
+<li>
+<p>Outdated SDK versions may contain <strong>outdated validation rules</strong>.
+Preventing the active usage of outdated validation rules is essential
+for the progressive increase in the quality and reliability of the
+collected data.</p>
+</li>
+<li>
+<p><strong>Regulatory restrictions</strong> may require the discontinuation of outdated
+SDK versions.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Without this counterbalancing policy limiting the lifespan of SDK
+versions, our ability to maintain multiple active versions of the SDK
+would not be sustainable as their total number would perpetually
+increase. The quality and reliability of the collected data would also
+be compromised in the long term. It is therefore essential for securing the benefits of an
+individualised pace of adaptation for each eSender and the flexibility
+that it provides to the eSender network.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<strong>For more information</strong> on the SDK version lifespan policy please <a href="https://docs.ted.europa.eu/eforms-common/active-versions/">follow this link</a>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>If you have developed a custom EFX Template parser, then you will need to update your parser to support the new syntax. The intervention that wil be required involves tracking of the scope of template variables. Your parser already tracks template line nesting. As the scope of template variables is limited to template blocks, you will be able to track the variable scope together with template line nesting.</p>
-</div>
-<div class="paragraph">
-<p>If you have  developed a custom EFX Template parser, you probably also have developed your own notice visualisation application that uses your translated templates. This application will also need to be updated to implement the new capabilities introduced by template variables. Your application already has a notion of template "fragments" that correspond to the template blocks defined in the source EFX template file. The intervention required for your visualisation application, involves enabling your existing template fragments to take and use parameters. Template variables are evaluated in the template line (fragment) where they are declared, and are passed as parameters to nested template fragments.</p>
-</div>
+<p><em>In short, the metadata-driven approach and version lifecycle management
+policy adopted for the eForms SDK, provide several degrees of freedom to
+eSenders for adapting to the inevitable recurring changes in the
+regulatory and technical environment. They allow more time for adopting
+new versions, independent timing of adaptations, continuous quality
+improvements and process optimisations, as well as various levels of
+automation, without compromising the regulatory objectives.</em></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_efx_expressions"><a class="anchor" href="#_efx_expressions"></a>EFX Expressions</h2>
+<h2 id="_communication"><a class="anchor" href="#_communication"></a>Communication</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>In our ever evolving regulatory and operational environment, clear
+communication is essential for our data collection and dissemination
+network. Recognising the need for continuous multifaceted communication
+we have tried to put in place several channels to address the needs of
+different audiences.</p>
+</div>
 <div class="sect2">
-<h3 id="_field_and_node_aliases"><a class="anchor" href="#_field_and_node_aliases"></a>Field and Node aliases</h3>
+<h3 id="_machine_to_machine_communication"><a class="anchor" href="#_machine_to_machine_communication"></a>Machine-to-machine communication</h3>
 <div class="paragraph">
-<p>One of the issues of EFX 1 is that it adopted the existing Field and Node identifiers for referencing Fields and Nodes in EFX expressions. The problem is that these identifiers were defined before the introduction of EFX, and their naming conventions did not take under consideration the readability of expressions that may contain them. As a result, it is hard to understand what an EFX 1 expression is trying to achieve without looking-up the definitions of the Fields and Nodes that are referenced in the expression.</p>
-</div>
-<div class="paragraph">
-<p>To make EFX Expressions more readable, EFX 2 introduces the concept of Field and Node aliases. A Field or Node alias is an alternative name that can be used to reference a Field or Node in an EFX expression. We decided to add these aliases (instead of renaming existing identifiers) in order to maintain backwards compatibility with EFX 1 expressions and to avoid disrupting ongoing development efforts.</p>
-</div>
-<div class="sect3">
-<h4 id="_naming_conventions"><a class="anchor" href="#_naming_conventions"></a>Naming conventions</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Node aliases are written in PascalCase. Therefore node aliases always start with an uppercase letter. For example: The node with identifier "ND-Root" now has an alias "Root"; the node with identifier "ND-Lot" now has an alias "Lot".</p>
-</li>
-<li>
-<p>Field aliases are written in camelCase. Therefore field aliases always start with a lowercase letter. For example: The field with identifier "BT-Name" now has an alias "name"; the field with identifier "FD-Description" now has an alias "description".</p>
-</li>
-<li>
-<p>When an alias is composed of several parts, then those parts are separated by an underscore and are written in descending order from container to content (container_content). Each part follows the capitalisation of the corresponding type (Nodes_Are_PascalCase, fields_are_camelCase).</p>
-</li>
-</ul>
-</div>
-<div class="sect4">
-<h5 id="_examples"><a class="anchor" href="#_examples"></a>Examples:</h5>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">* NR-Root -&gt; Root
-* ND-Lot -&gt; Lot
-* ND-LotProcurementScope -&gt; Lot_ProcurementScope
-* BT-262-Lot -&gt; lot_mainClassificationCode
-* BT-262-Part -&gt; part_mainClassificationCode
-* BT-262-Procedure -&gt; procedure_mainClassificationCode</code></pre>
-</div>
+<p>The SDK itself is the medium used for machine-to-machine communication.
+All the information needed by applications is <strong>transmitted through the
+SDK</strong>. Applications can call TEDAPI periodically to discover new SDK
+versions and monitor the lifespan of all active versions.</p>
 </div>
 <div class="paragraph">
-<p>As Field identifiers use short Business Term numbers, it is reasonable that the introduction of descriptive aliases will increase the length of EFX expressions. However their readability will also improve drastically.</p>
+<p>Applications that want to automatically download and process new SDK
+versions can retrieve them from its <strong>central distribution repository</strong>
+(Maven Central).</p>
 </div>
-</div>
+<div class="paragraph">
+<p>The nature of changes is indicated to applications by the version number
+of the SDK. Metadata-driven applications are largely unaffected by
+maintenance releases (minor and patch versions). To consume new major
+versions, applications need to be first appropriately updated by
+developers to support the updated protocol.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_breaking_change_in_codelist_identifiers"><a class="anchor" href="#_breaking_change_in_codelist_identifiers"></a>Breaking change in codelist identifiers</h3>
+<h3 id="_change_overviews"><a class="anchor" href="#_change_overviews"></a>Change overviews</h3>
 <div class="paragraph">
-<p>In EFX 1, there are five different uses of identifiers:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Node identifiers (eg. <code>ND-NodeName</code>)</p>
-</li>
-<li>
-<p>Field identifiers (eg. <code>BT-123-Context</code>)</p>
-</li>
-<li>
-<p>Variable identifiers (eg. <code>$variableName</code>)</p>
-</li>
-<li>
-<p>Attribute identifiers (eg. <code>@attributeName</code>)</p>
-</li>
-<li>
-<p>Codelist identifiers (eg. <code>(codeListName)</code>)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>As EFX 1 only supports built-in functions, function names are not included in this list.</p>
-</div>
-<div class="paragraph">
-<p>The introduction of aliases for Fields and Nodes makes the current notation of codelist identifiers ambiguous, because the parenthesis used to wrap a codelist name in EFX 1 are also used for controlling the order of evaluation and for grouping function arguments. For example, the identifier <code>(accessibility)</code> could refer to the Codelist named <code>accessibility</code>, or to a Field with alias <code>accessibility</code>. In order to avoid this ambiguity, we decided to change the notation of Codelist identifiers. The new notation uses a prefix <code>codelist:</code> to distinguish Codelist identifiers from other identifiers. For example, the identifier <code>(accessibility)</code> now becomes <code>codelist:accessibility</code>.</p>
-</div>
-<div class="paragraph">
-<p>Therefore, in EFX 2 the five different uses of identifiers listed above become:</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier type</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EFX 1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EFX 2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Node</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ND-NodeName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ND-NodeName</code> or <code>Context_NodeName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Improved readability</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Field</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-123-Context</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BT-123-Context</code> or <code>context_fieldName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Improved readability</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Variable</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$variableName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$variableName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No change</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@attributeName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@attributeName</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No change</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Codelist</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>(accessibility)</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>codelist:accessibility</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">New notation (breaking change)</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-This change is a <strong>breaking change</strong>. Therefore, EFX 1 expressions that use codelist identifiers need to be slightly modified before they can be parsed by an EFX 2 parser.
-</td>
-</tr>
-</table>
+<p>Every new SDK version comes with release notes and a changelog that list
+the most important changes that the new version introduces. This is
+meant to provide a quick overview for change managers and developers.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_indexers"><a class="anchor" href="#_indexers"></a>Indexers</h3>
+<h3 id="_side_by_side_comparison_tool"><a class="anchor" href="#_side_by_side_comparison_tool"></a>Side-by-side comparison tool</h3>
 <div class="paragraph">
-<p>Sequences now support an index notation which allows an expression to access the element of a sequence at a specific index. The index notation is similar to the one used on XPath (but is also common to several other programming languages). Like XPath, (but unlike other programming languages), the index notation uses a 1-based index.</p>
-</div>
-<div class="paragraph">
-<p>For example:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-efx hljs" data-lang="efx">('a', 'b', 'c')[2]</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The above expression returns the string <code>b</code> because the index <code>2</code> refers to the second element in the sequence.</p>
+<p>Detailed and interactive side-by-side comparison of any two versions of
+the eForms SDK is provided by the This is a tool that was developed to
+assist change managers and developers in reviewing and assessing the
+impact of changes between any two versions of the eForms SDK. This tool
+is particularly useful to change managers and developers of applications
+that are not metadata driven.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_new_functions"><a class="anchor" href="#_new_functions"></a>New functions:</h3>
-<div class="sect3">
-<h4 id="_string_join_function"><a class="anchor" href="#_string_join_function"></a><code>string-join</code> function</h4>
+<h3 id="_detailed_documentation"><a class="anchor" href="#_detailed_documentation"></a>Detailed documentation</h3>
 <div class="paragraph">
-<p>The <code>string-join</code> function allows to join a list of strings into a single string. The function takes two arguments: the list of strings to join, and the separator to use between each string.</p>
+<p>The Publications Office provides a developer documentation portal where
+it maintains detailed documentation of all active versions of the eForms
+SDK. The documentation portal contains extensive reference material on the content of each SDK version as well as the protocol definition for each major version. It
+also provides developer guides addressing specific technical and
+architectural topics intended to help developers to understand the
+semantics and models used by the SDK and design their applications
+appropriately.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_feedback_and_assistance"><a class="anchor" href="#_feedback_and_assistance"></a>Feedback and assistance</h3>
 <div class="paragraph">
-<p>The following example shows how to use the string join function:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-efx hljs" data-lang="efx">string-join(("a", "b", "c"), ", ")</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The result of the above expression is the string <code>a, b, c</code>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_preferred_language_function"><a class="anchor" href="#_preferred_language_function"></a><code>preferred-language</code> function</h4>
-<div class="paragraph">
-<p>The <code>preferred-language</code> function is used to determine the identifier of the language that should be displayed, among the languages available in a given multilingual text field. It is meant to be used in a predicate to select the appropriate linguistic version of a multilingual text field.</p>
+<p>A discussions forum is available on GitHub where developers can provide
+feedback and ask technical questions. Although this is primarily a
+self-help forum where developers can help each other with shared issues, the development team of the eForms SDK actively monitors
+the discussions, processes feedback, responds to questions and plans remediation actions when needed. This forum is also used by the Publications Office to announce
+new releases and upcoming developments.</p>
 </div>
 <div class="paragraph">
-<p>The function, only takes a simple reference to a multilingual text field as a parameter. Using the field reference, it can determine the available linguistic versions of the field&#8217;s text.</p>
+<p>Additionally, a helpdesk is available to assist non-technical users with
+any issues related to new SDK releases.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_workshops"><a class="anchor" href="#_workshops"></a>Workshops</h3>
+<div class="paragraph">
+<p>The Publications Office also holds workshops on a regular basis where
+business and technical matters are discussed with the eSender and re-user
+communities.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_conclusion"><a class="anchor" href="#_conclusion"></a>Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just as cars rely on suspension systems to absorb shocks and keep the
+ride smooth, the tools and methods we have put together for eForms are
+designed to handle the bumps that come with the inevitable regulatory
+and technical changes. The metadata-driven approach, versioning and
+release strategy introduced with the eForms SDK are designed to act as a
+suspension, allowing eSenders and re-users to navigate change without
+disruptive shocks. Their effectiveness however is subject to their
+adoption by each individual eSender.</p>
 </div>
 <div class="paragraph">
-<p>This function is only available to EFX templates (not to EFX expressions).</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_preferred_language_text_function"><a class="anchor" href="#_preferred_language_text_function"></a><code>preferred-language-text</code> function</h4>
-<div class="paragraph">
-<p>This functions is used to retrieve the text of a multilingual text field in the preferred language. In essence it uses the <code>preferred-language</code> function to determine the preferred language, and then returns the text of the field in that language.</p>
-</div>
-</div>
+<p>With or without these new tools and processes in place, the transition
+from Standard Forms to eForms would have been a difficult undertaking
+for everyone. Our collective efforts however to embrace change,
+systematise our approach to managing it, and increase our flexibility as
+a data collection and dissemination network, will progressively yield
+benefits both at the operational and overall quality levels.</p>
 </div>
 </div>
 </div>
