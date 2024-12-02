@@ -477,7 +477,36 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">Unresolved include directive in modules/samples/pages/query-6.adoc - include::../queries/competition-notices.sparql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">SELECT DISTINCT ?publicationNumber ?legalName ?procedureType ?country
+WHERE {
+	FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+	FILTER (?formType = &lt;http://publications.europa.eu/resource/authority/form-type/competition&gt;)
+
+  GRAPH ?g {
+    ?notice
+        epo:hasPublicationDate ?publicationDate ;
+        epo:refersToProcedure [
+            epo:hasProcedureType ?procedureTypeUri ;
+            a epo:Procedure
+        ] ;
+        epo:hasNoticePublicationNumber ?publicationNumber ;
+        epo:hasFormType ?formType ;
+        epo:announcesRole [
+            a epo:Buyer ;
+            epo:playedBy [
+                epo:hasLegalName ?legalName ;
+                cccev:registeredAddress [
+                    epo:hasCountryCode ?countryUri
+                ]
+            ]
+        ]
+    }
+    ?procedureTypeUri a skos:Concept ;
+        skos:prefLabel ?procedureType.
+    FILTER (lang(?procedureType) = "en")
+
+    ?countryUri dc:identifier ?country.
+}</code></pre>
 </div>
 </div>
 <div class="ulist">

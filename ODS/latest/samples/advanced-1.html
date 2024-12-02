@@ -419,7 +419,38 @@
 <h1 class="page">List the named graphs published on a specified period</h1>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">Unresolved include directive in modules/samples/pages/advanced-1.adoc - include::../queries/mets-packages.sparql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">SELECT ?date ?journalNumber ?metsNamedGraph ?noticeNamedGraph ?accessUrl ?xmlSource
+WHERE {
+
+  FILTER (?date &gt;= "2024-11-04T00:00:00"^^xsd:dateTime &amp;&amp;
+          ?date &lt;= "2024-11-05T23:59:59"^^xsd:dateTime)
+
+  GRAPH ?metsNamedGraph {
+    ?s a cdm:procurement_public .
+    ?s cdm:procurement_public_number_document_in_official-journal ?journalNumber .
+    ?s cdm:work_date_document ?date .
+
+    # Construct the target URI based on date and journal number
+    BIND(IRI(CONCAT(
+               "http://data.europa.eu/a4g/resource/",
+               STR(YEAR(xsd:dateTime(?date))), "/",
+               ?journalNumber, "_",
+               STR(YEAR(xsd:dateTime(?date)))
+            )) AS ?noticeNamedGraph)
+
+    BIND(IRI(CONCAT(
+               "https://ted.europa.eu/en/notice/-/detail/",
+               ?journalNumber, "-",
+               STR(YEAR(xsd:dateTime(?date)))
+            )) AS ?accessUrl)
+
+    BIND(IRI(CONCAT(
+               "https://ted.europa.eu/en/notice/",
+               ?journalNumber, "-",
+               STR(YEAR(xsd:dateTime(?date))), "/xml"
+            )) AS ?xmlSource)
+  }
+}</code></pre>
 </div>
 </div>
 <hr>

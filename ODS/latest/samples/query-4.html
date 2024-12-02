@@ -471,7 +471,46 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">Unresolved include directive in modules/samples/pages/query-4.adoc - include::../queries/winners-per-day.sparql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">SELECT ?publicationNumber ?winnerLegalName  ?amount ?currency WHERE {
+
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date )
+  FILTER (?currencyUri = &lt;http://publications.europa.eu/resource/authority/currency/EUR&gt; )
+  FILTER (?rank = 1 )
+  FILTER (?awardStatusUri = &lt;http://publications.europa.eu/resource/authority/winner-selection-status/selec-w&gt; )  # was selected
+
+  	?noticeUri a epo:Notice ;
+  		epo:hasPublicationDate ?publicationDate ;
+	  	epo:hasNoticePublicationNumber ?publicationNumber ;
+    	epo:announcesAwardDecision [
+      		a epo:AwardDecision ;
+    		epo:comprisesAwardOutcome [
+    			a epo:LotAwardOutcome ;
+      			epo:hasAwardStatus ?awardStatusUri ;
+         		epo:concernsLot ?lotUri ;
+                epo:comprisesTenderAwardOutcome [
+          			a epo:TenderAwardOutcome ;
+                	epo:hasAwardRank ?rank ;
+                    epo:concernsTender [
+                        a epo:Tender ;
+                        epo:isSubmitedBy [
+                              a epo:Tenderer ;
+                              epo:playedBy ?winnerUri
+                            ] ;
+                        epo:hasFinancialOfferValue [
+                            a epo:MonetaryValue ;
+                            epo:hasAmountValue ?amount ;
+                            epo:hasCurrency ?currencyUri ;
+
+                        ]
+                    ] ;
+      			]
+  			]
+  		] .
+
+  ?winnerUri epo:hasLegalName ?winnerLegalName .
+  ?currencyUri dc:identifier ?currency .
+
+} ORDER BY DESC(?amount)</code></pre>
 </div>
 </div>
 <div class="ulist">

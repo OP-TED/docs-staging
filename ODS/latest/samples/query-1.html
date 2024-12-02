@@ -468,7 +468,36 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">Unresolved include directive in modules/samples/pages/query-1.adoc - include::../queries/notices-per-day.sparql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">SELECT ?publicationNumber ?procedureType ?noticeType ?formType
+WHERE {
+  FILTER (?publicationDate = "2024-11-06"^^xsd:date)
+  GRAPH ?g {
+    ?notice a epo:Notice ;
+            epo:hasPublicationDate ?publicationDate ;
+            epo:hasNoticePublicationNumber ?publicationNumber ;
+            epo:hasNoticeType ?noticeTypeUri ;
+            epo:hasFormType ?formTypeUri ;
+            epo:refersToProcedure [
+                 a epo:Procedure ;
+                 epo:hasProcedureType ?procedureTypeUri
+           ] .
+  }
+
+  # Retrieve the label in english for noticeTypeUri
+  ?noticeTypeUri a skos:Concept ;
+                 skos:prefLabel ?noticeType .
+  FILTER (lang(?noticeType) = "en")
+
+  # Retrieve the label in english for formTypeUri
+  ?formTypeUri a skos:Concept ;
+               skos:prefLabel ?formType .
+  FILTER (lang(?formType) = "en")
+
+  # Retrieve the label in english for procedureTypeUri
+  ?procedureTypeUri a skos:Concept ;
+                    skos:prefLabel ?procedureType .
+  FILTER (lang(?procedureType) = "en")
+}</code></pre>
 </div>
 </div>
 <div class="ulist">

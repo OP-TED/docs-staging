@@ -468,7 +468,40 @@ It focuses on extracting metadata such as the publication number, associated lot
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">Unresolved include directive in modules/samples/pages/query-3.adoc - include::../queries/awarded-tender-amounts.sparql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql">SELECT ?publicationNumber ?lotUri ?legalName ?amount
+WHERE {
+  FILTER (?publicationDate = "2024-11-04"^^xsd:date)
+  FILTER (?currencyUri = &lt;http://publications.europa.eu/resource/authority/currency/EUR&gt;)
+  ?noticeUri a epo:Notice ;
+             epo:hasPublicationDate ?publicationDate ;
+             epo:hasNoticePublicationNumber ?publicationNumber ;
+             epo:announcesAwardDecision [
+       a epo:AwardDecision ;
+       epo:comprisesAwardOutcome [
+         a epo:LotAwardOutcome ;
+         epo:hasAwardStatus &lt;http://publications.europa.eu/resource/authority/winner-selection-status/selec-w&gt; ;
+         epo:concernsLot ?lotUri ;
+         epo:comprisesTenderAwardOutcome [
+           a epo:TenderAwardOutcome ;
+           epo:concernsTender [
+             a epo:Tender ;
+             epo:isSubmitedBy [
+               a epo:Tenderer ;
+               epo:playedBy [
+                 epo:hasLegalName ?legalName
+               ]
+             ] ;
+             epo:hasFinancialOfferValue [
+               a epo:MonetaryValue ;
+               epo:hasAmountValue ?amount ;
+               epo:hasCurrency ?currencyUri
+             ]
+           ]
+         ]
+       ]
+     ] .
+}
+ORDER BY DESC(?amount)</code></pre>
 </div>
 </div>
 <div class="ulist">
