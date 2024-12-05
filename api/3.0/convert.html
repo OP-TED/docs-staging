@@ -250,26 +250,67 @@
 </aside>
     <article class="doc">
 <h1 class="page">Conversion API</h1>
+<div class="sect1">
+<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Conversion API provides operation:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/convert</code></pre>
+<p>Converts legacy TED XML notices into current eForms notices, to facilitate continuity and consistency in data.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This operation returns a partial eForms notice as a result of conversion of XML notice in the old <a href="https://github.com/OP-TED/ted-xml-data-converter#current-status">TED XML format</a></p>
+<p>Transforms legacy TED XML notice formats into "partial" eForms notices, which can then be completed by users.</p>
 </li>
 <li>
-<p>Request body contains notice content in TED XML format.</p>
-</li>
-<li>
-<p><code>CustomizationID</code> element in the returned eForms notice is set to the latest value maintained for conversion and this value can change in time.</p>
+<p>Bridges the gap between legacy systems and the eForms standard that is currently in use.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As eForms replaced legacy TED XML notices, the Conversion API simplifies the transition by enabling systems to convert older formats automatically. This ensures compatibility and preserves access to critical procurement data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/convert    Convert TED XML notices into partial eForms notices</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>eSenders migrating legacy data to the eForms ecosystem.</p>
+</li>
+<li>
+<p>Developers managing legacy procurement notices.</p>
+</li>
+<li>
+<p>eNotices2 web user interface when users select to import a published TED XML notice to continue a procedure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Explore the full documentation here: <a href="https://github.com/OP-TED/ted-xml-data-converter" class="bare">https://github.com/OP-TED/ted-xml-data-converter</a></p>
+</div>
+</div>
 </div>
 </article>
     <div id="widgetContainer">

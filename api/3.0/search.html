@@ -250,47 +250,78 @@
 </aside>
     <article class="doc">
 <h1 class="page">Search API</h1>
+<div class="sect1">
+<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Search API provides operation:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/search</code></pre>
+<p>Allows developers to search and retrieve published procurement notices and their data.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This operation returns list of published notices matching the search query and their data.</p>
+<p>Provides access to published notices via expert queries.</p>
 </li>
 <li>
-<p>Parameter <code>query</code> is mandatory and contains query description using <a href="https://ted.europa.eu/en/expert-search">expert search</a> syntax.</p>
-</li>
-<li>
-<p>Parameter <code>fields</code> is mandatory and contains list of fields to be returned with each notice matching the search query.</p>
-</li>
-<li>
-<p>Parameter <code>page</code> specifies a sequential number of the page to be returned from the search results with a pagination applied. If not specified, value 0 is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>limit</code> specifies page size as number of results to be returned per page. If not specified, value 10 is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>scope</code> specifies scope of search. (LATEST: only notices of the current OJ S release, ACTIVE: only active notices, ALL: all notices). If not specified, value LATEST is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>checkQuerySyntax</code> specifies if the search is to be executed (false), or only the syntax of the query is to be checked, but the search query is not executed. When not specified, value false is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>paginationMode</code> specifies type of pagination to be applied. The PAGE_NUMBER mode allows retrieval up to 15000 notices for a given query, using pagination. To retrieve more notices, it is possible to use the ITERATION mode. ITERATION mode does not have limitation on the number of retrievable notices, but in this case it is not possible to choose the specific page. The first request will return an iterationNextToken that should be provided to the next call of the search endpoint in order to retrieve the next result page. If not specified, PAGE_NUMBER value is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>onlyLatestVersions</code> specifies if all versions of matching notices is to be returned, or only the latest versions. If not specified, value true is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>iterationNextToken</code> specifies Opaque token returned by the previous call to the search endpoint to retrieve the next result page. It shouldn&#8217;t be provided in PAGE_NUMBER mode or if this is the first request in ITERATION mode.</p>
+<p>Enables bulk downloads of notices in XML format for analysis or reuse.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Search API is mostly targeted to data reusers; it ensures transparency and accessibility by making publicly available procurement data easy to find and reuse.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/search		Search and retrieve published notices</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_special_features"><a class="anchor" href="#_special_features"></a>Special Features</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This API does not require authentication, making it accessible to any system or user.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Commercial organisations providing added-value services to vendors and buyers by integrating TED data into their platforms.</p>
+</li>
+<li>
+<p>Researchers analysing public procurement trends.</p>
+</li>
+<li>
+<p>Developers creating transparency tools or reusing public data.</p>
+</li>
+<li>
+<p>eNotices2 web interface when a user imports a notice from TED to continue a procedure.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Explore the full documentation here: <a href="https://ted.europa.eu/en/simap/developers-corner-for-reusers">Developers' corner: APIs for your own integration - ted.europa.eu - TED</a></p>
+</div>
+</div>
 </div>
 </article>
     <div id="widgetContainer">
