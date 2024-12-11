@@ -74,12 +74,12 @@ content:
   ### TED Open Data Service
   - url: https://github.com/OP-TED/ted-rdf-docs
     start_path: docs/antora 
-    branches: develop
+    branches: updates
 
   ### TED Data for Reusers
-  - url: https://github.com/OP-TED/ted-reuse-docs.git
-    start_path: /
-    branches: main 
+  #- url: https://github.com/OP-TED/ted-reuse-docs.git
+  #  start_path: /
+  #  branches: main 
 
 urls:
   redirect_facility: static
