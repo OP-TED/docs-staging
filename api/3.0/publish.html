@@ -85,7 +85,7 @@
     <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="authenticate.html">Authentication API</a>
+    <a class="nav-link" href="developer%20operations.html">Developer Operations API</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="convert.html">Conversion API</a>
@@ -250,125 +250,70 @@
 </aside>
     <article class="doc">
 <h1 class="page">Publication API</h1>
+<div class="sect1">
+<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Publication API provides 4 operations:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/submit</code></pre>
+<p>Manage the publication steps of procurement notices programmatically, connecting with the eNotices2 system for seamless integration.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This operation tries to create a new notice instance and returns information about its <a href="https://docs.ted.europa.eu/eforms-common/FAQ/index.html#_forms_and_procedures">status</a>.</p>
+<p>Allows programmatic submission of notices for publication.</p>
 </li>
 <li>
-<p>Parameter <code>noticeAuthorEmail</code> is mandatory and should contain valid email address of the buyer to be notified about rejection/ publication of the notice.</p>
+<p>Stops publication of notices that have been successfully submitted but not yet published.</p>
 </li>
 <li>
-<p>Parameter <code>noticeAuthorLang</code> is mandatory and should indicate the EU official language in which the buyer wishes to be notified by the Publications Office.</p>
+<p>Retrieves the validation reports of one’s own submitted notices.</p>
 </li>
 <li>
-<p>Parameter <code>notice</code> is mandatory binary string representing content of the eForms XML notice.</p>
-</li>
-<li>
-<p>Notice XML must contain a new unique <code>businessId</code> (concatenated string from noticeId-versionId)</p>
-</li>
-<li>
-<p>When notice parsing was successful and notice content was successfully validated, new notice instance is created, status is set to <em>SUBMITTED</em>. Notice is added into the publication process.</p>
-</li>
-<li>
-<p>When notice parsing was successful and notice content was not successfully validated, the notice status is set to <em>VALIDATION-FAILED</em>.</p>
-</li>
-<li>
-<p>When notice parsing was not successful or new unique <code>businessId</code> was not found, no notice instance is created.</p>
+<p>Enables querying of one’s own submitted notices allowing synchronisation of the notice metadata, e.g. a notice status during the publication process.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Publication API automates the handling of procurement notices, reducing reliance on manual processes. It empowers eSenders and public authorities to manage notices efficiently at scale.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
+<div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/{businessId}/stop-publication</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/submit			        Submit new notices for publication on TED
+POST /v3/notices/{businessId}/stop-publication	Request to stop the publication of submitted notice
+GET /v3/notices/{businessId}/validation-report	Retrieve validation report for submitted notice
+GET /v3/notices/			        Query submitted notices</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This operation tries to stop the notice publication and returns the new notice status.</p>
+<p>eSenders managing notices on behalf of contracting authorities.</p>
 </li>
 <li>
-<p>Parameter <code>businessId</code> is mandatory and identifies the unique notice which was submitted for publication.</p>
-</li>
-<li>
-<p>When notice was found and its status is <em>SUBMITTED</em>, the notice is removed from the publication process and the status is set to <em>STOPPED</em>.</p>
-</li>
-<li>
-<p>When notice was found and its status is not <em>SUBMITTED</em>, no change is done.</p>
+<p>Public authorities managing their own procurement notices through an application that connects to the Publication API</p>
 </li>
 </ul>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/{businessId}/validation-report</code></pre>
 </div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>This operation returns validation report created during submit operation</p>
-</li>
-<li>
-<p>Parameter <code>businessId</code> is mandatory and identifies the unique notice which was submitted for publication.</p>
-</li>
-<li>
-<p>When notice was found, validation report created during submit operation is returned.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/</code></pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>This operation returns list of created notices matching the search criteria and their metadata.</p>
-</li>
-<li>
-<p>Parameter <code>id</code> sets a filter on <em>noticeId</em>.</p>
-</li>
-<li>
-<p>Parameter <code>versionId</code> sets a filter on <em>versionId</em>.</p>
-</li>
-<li>
-<p>Parameter <code>submittedAfter</code> and <code>submittedBefore</code> define a filter on <em>submittedAt</em> value.</p>
-</li>
-<li>
-<p>Parameter <code>publishedAfter</code> and <code>publishedBefore</code> define a filter on <em>publicationDate</em> value.</p>
-</li>
-<li>
-<p>Parameter <code>statuses</code> sets a filter on <em>status</em> value.</p>
-</li>
-<li>
-<p>Parameter <code>noticeAuthor</code> sets a filter on <em>noticeAuthor</em> value.</p>
-</li>
-<li>
-<p>Parameter <code>sortProperty</code> specifies the property used for the sorting.</p>
-</li>
-<li>
-<p>Parameter <code>sortDirection</code> specifies the direction used for the sorting, ascending (ASC) or descending (DESC).</p>
-</li>
-<li>
-<p>Parameter <code>page</code> specifies the page number of the paginated result list, if not specified, value 0 is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>size</code> specifies the page size of the paginated result list, if not specified, value 20 is used as default.</p>
-</li>
-<li>
-<p>For every notice matching the search criteria the following metadata are returned in JSON format: id, versionId, procedureId, status, updatedAt, submittedAt, publicationId, publicationDate, noticeType, legalBasis, languages, noticeAuthor, expectedPublicationDate.</p>
-</li>
-</ul>
 </div>
 </article>
     <div id="widgetContainer">

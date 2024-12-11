@@ -461,7 +461,7 @@
 <div class="sect2">
 <h3 id="_modular_rml_mappings"><a class="anchor" href="#_modular_rml_mappings"></a>Modular RML Mappings</h3>
 <div class="paragraph">
-<p>Given the large number of mappings that are necessry for the conversion of a certain eForms Notice (the CM contains around 500 entries for various fields and nodes that belong to a type of notice), a mapping package ends up containing 200+ RML TriplesMaps with 500+ predicateObjectMap, resulting in more than 11,000 lines of RML code. To be able to efficiently and properly manage this amount of information, we split it up into multiple RML files that are organized following a certain logic.</p>
+<p>Given the large number of mappings that are necessary for the conversion of a certain eForms Notice (the CM contains around 500 entries for various fields and nodes that belong to a type of notice), a mapping package ends up containing 200+ RML TriplesMaps with 500+ predicateObjectMap, resulting in more than 11,000 lines of RML code. To be able to efficiently and properly manage this amount of information, we split it up into multiple RML files that are organized following a certain logic.</p>
 </div>
 <div class="paragraph">
 <p>The structure of the RML files (we call them <em>modules</em> because they are modular
@@ -494,7 +494,7 @@ tedm:MG-\{Constraint\}-\{hasConstraint\}-\{AwardCriterion\}-\{specifiesProcureme
 </div>
 </div>
 <div class="paragraph">
-<p>Looking at the above example we can observe that, on one hand, a node <code>ND-LotsGroup</code> can have children fields that provide information for the generation of multiple insctances, e.g. an <code>epo:LotGroup</code> instance from <code>tedm:MG-{LotGroup}_ND-{LotsGroup}</code>, and an <code>adms:Identifier</code> instance from <code>tedm:MG-{Identifier}-{identifier}-{LotGroup}_ND-{LotsGroup}</code>. On the other hand, the full definition of the same EPO instance, can achieved by combining information provided in fields that are organized under different nodes, e.g. the MonetaryValue that represents the hasLaunchFrameworkAgreementMaximumValue property of a LotGroup can come both from fields that are chidren of the <code>ND-LotsGroupValueEstimateExtension</code> node and those that are children of the <code>ND-LotsGroupFA</code> node:</p>
+<p>Looking at the above example we can observe that, on one hand, a node <code>ND-LotsGroup</code> can have children fields that provide information for the generation of multiple instances, e.g. an <code>epo:LotGroup</code> instance from <code>tedm:MG-{LotGroup}_ND-{LotsGroup}</code>, and an <code>adms:Identifier</code> instance from <code>tedm:MG-{Identifier}-{identifier}-{LotGroup}_ND-{LotsGroup}</code>. On the other hand, the full definition of the same EPO instance, can achieved by combining information provided in fields that are organized under different nodes, e.g. the MonetaryValue that represents the hasLaunchFrameworkAgreementMaximumValue property of a LotGroup can come both from fields that are children of the <code>ND-LotsGroupValueEstimateExtension</code> node and those that are children of the <code>ND-LotsGroupFA</code> node:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -515,7 +515,7 @@ tedm:MG-\{MonetaryValue\}-\{hasLaunchFrameworkAgreementMaximumValue\}-\{LotGroup
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-BASH hljs" data-lang="BASH">Lot.rml.ttl                 # mappings valid accross all SDK versions
+<pre class="highlightjs highlight"><code class="language-BASH hljs" data-lang="BASH">Lot.rml.ttl                 # mappings valid across all SDK versions
 Lot_v1.3-1.8.rml.ttl        # mappings valid up to SDK version 1.8 (inclusive)
 Lot_v1.4+.rml.ttl           # mappings valid for all SDK versions starting with v1.4
 Lot_v1.7+.rml.ttl           # mappings valid for all SDK versions starting with v1.7
@@ -527,7 +527,7 @@ Lot_v1.8-1.8.rml.ttl        # mappings valid for only SDK versions v1.8</code></
 </div>
 <div class="paragraph">
 <p><strong>Important Note: </strong>
-The TriplesMaps in the various RML modules, especially those that represent version specific mappings, can spread accross multiple files. For example, a TriplesMap can have it logical source/iterator, its subject map, and its various predicat-object maps in several files, depending on what aspect is specified in a given SDK version and/or belongs to a given module. However, this information needs to be provided and organized in such a manner that when they are combined together in a package, the RML mappings should be valid, complete, correct and non-conflicting. E.g. every TriplesMap, after the modules are combined, should have one and only one logical source and subject map, and the subject map and all predicate-obect maps should work with the logical source that they are conbined with.</p>
+The TriplesMaps in the various RML modules, especially those that represent version specific mappings, can spread across multiple files. For example, a TriplesMap can have it logical source/iterator, its subject map, and its various predicate-object maps in several files, depending on what aspect is specified in a given SDK version and/or belongs to a given module. However, this information needs to be provided and organized in such a manner that when they are combined together in a package, the RML mappings should be valid, complete, correct and non-conflicting. E.g. every TriplesMap, after the modules are combined, should have one and only one logical source and subject map, and the subject map and all predicate-object maps should work with the logical source that they are combined with.</p>
 </div>
 </div>
 <div class="sect2">

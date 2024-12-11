@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Search API :: TED Developer Documentation</title>
+    <title>Developer Operations API :: TED Developer Documentation</title>
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -84,7 +84,7 @@
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="developer%20operations.html">Developer Operations API</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -99,7 +99,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="visualise.html">Visualisation API</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="search.html">Search API</a>
   </li>
 </ul>
@@ -233,13 +233,13 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED API</a></li>
-    <li><a href="search.html">Search API</a></li>
+    <li><a href="developer%20operations.html">Developer Operations API</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">3.0-rc.1</button>
   <div class="version-menu">
-    <a class="version is-current" href="search.html">3.0-rc.1</a>
+    <a class="version is-current" href="developer%20operations.html">3.0-rc.1</a>
     <a class="version is-missing" href="../latest/index.html">2.0</a>
   </div>
 </div>
@@ -249,12 +249,12 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Search API</h1>
+<h1 class="page">Developer Operations API</h1>
 <div class="sect1">
 <h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Allows developers to search and retrieve published procurement notices and their data.</p>
+<p>Provides auxiliary operations to support integration and compatibility with TED APIs, ensuring smooth functionality and uninterrupted service.</p>
 </div>
 </div>
 </div>
@@ -264,10 +264,38 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Provides access to published notices via expert queries.</p>
+<p>Allows systems to programmatically renew API keys, maintaining access to TED services.</p>
 </li>
 <li>
-<p>Enables bulk downloads of notices in XML format for analysis or reuse.</p>
+<p>Provides configuration details, such as the <a href="https://docs.ted.europa.eu/eforms-common/active-versions/index.html#version-range">active SDK versions</a> range, to ensure compatibility with supported SDK versions during submissions.</p>
+</li>
+<li>
+<p>Lays the foundation for future developer-focused tools and operations.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/api-keys/{token}/renew		extend the validity of an API key</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_it_does_2"><a class="anchor" href="#_what_it_does_2"></a>What It Does</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Enables systems to autonomously renew API keys nearing expiration.</p>
+</li>
+<li>
+<p>Prevents disruptions by avoiding manual interventions.</p>
 </li>
 </ul>
 </div>
@@ -277,25 +305,7 @@
 <h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Search API is mostly targeted to data reusers; it ensures transparency and accessibility by making publicly available procurement data easy to find and reuse.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/search		Search and retrieve published notices</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_special_features"><a class="anchor" href="#_special_features"></a>Special Features</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This API does not require authentication, making it accessible to any system or user.</p>
+<p>It ensures continuous access for applications that rely on TED services, particularly in unattended environments or automated workflows.</p>
 </div>
 </div>
 </div>
@@ -305,21 +315,69 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Commercial organisations providing added-value services to vendors and buyers by integrating TED data into their platforms.</p>
+<p>Developers automating API key management.</p>
 </li>
 <li>
-<p>Researchers analysing public procurement trends.</p>
-</li>
-<li>
-<p>Developers creating transparency tools or reusing public data.</p>
-</li>
-<li>
-<p>eNotices2 web interface when a user imports a notice from TED to continue a procedure.</p>
+<p>Systems requiring uninterrupted access to TED APIs over extended periods.</p>
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="_note"><a class="anchor" href="#_note"></a>Note</h3>
 <div class="paragraph">
-<p>Explore the full documentation here: <a href="https://ted.europa.eu/en/simap/developers-corner-for-reusers">Developers' corner: APIs for your own integration - ted.europa.eu - TED</a></p>
+<p>To manage notices that are not yet published, TED API requires the \cas\logincaller to be authenticated with an API key. Developers can generate and manage their own API keys by logging in to their account in the <a href="https://developer.ted.europa.eu/">TED Developer Portal</a>.</p>
+</div>
+<div class="paragraph">
+<p>An API key is valid for 24 months. Users are notified to renew their API key via an email that contains a token. The link can be clinked on to update a key manually, or applications can be configured to extract the token and use it in the /renew endpoint programmatically.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoint_2"><a class="anchor" href="#_endpoint_2"></a>Endpoint</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/config/sdk-versions		Retrieve the active range of SDK versions</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_it_does_3"><a class="anchor" href="#_what_it_does_3"></a>What It Does</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Returns the current range of SDK versions supported by the TED Central Validation Service (CVS).</p>
+</li>
+<li>
+<p>Helps developers ensure that notices submitted via their applications use a compatible SDK version.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_this_api_exists_2"><a class="anchor" href="#_why_this_api_exists_2"></a>Why This API Exists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Submissions to TED require notices to conform to an <a href="https://docs.ted.europa.eu/eforms-common/active-versions/index.html#version-range">active SDK versions</a> range. This endpoint ensures developers can align their submissions with supported versions, avoiding compatibility issues.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_who_uses_this_api_2"><a class="anchor" href="#_who_uses_this_api_2"></a>Who Uses This API</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Developers validating SDK compatibility before submitting notices.</p>
+</li>
+<li>
+<p>Applications automating notice creation and submission processes.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

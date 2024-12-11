@@ -85,7 +85,7 @@
     <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="authenticate.html">Authentication API</a>
+    <a class="nav-link" href="developer%20operations.html">Developer Operations API</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="convert.html">Conversion API</a>
@@ -250,56 +250,67 @@
 </aside>
     <article class="doc">
 <h1 class="page">Validation API</h1>
+<div class="sect1">
+<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Validation API provides 2 operations:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/config/sdk-versions</code></pre>
+<p>Validate procurement notices to ensure compliance with EU standards and eForms regulations.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This operation provides information on the set of currently <a href="https://docs.ted.europa.eu/eforms-common/active-versions/index.html#_terminology">active SDK</a> versions in JSON format.</p>
+<p>Checks notices for errors (e.g., missing fields, incorrect values).</p>
 </li>
 <li>
-<p>It doesn&#8217;t use any input parameter.</p>
-</li>
-<li>
-<p>Information is valid at the moment when the operation is called and can be changed over the time.</p>
-</li>
-<li>
-<p>History of the changes cannot be retrieved, only the last update.</p>
-</li>
-<li>
-<p>Information content and how to get the set of active SDK versions from it is described on the page <a href="https://docs.ted.europa.eu/eforms-common/active-versions/index.html#version-range">sdk-versions</a>.</p>
+<p>Issues/ Returns warnings for potential lawfulness concerns that require further human review.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Validation API ensures notices meet mandatory legal and procedural standards at any time before or upon submission, preventing errors and reducing the risk of non-compliance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
+<div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/validate</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/validate		Validate notices for compliance at any time before or upon submission</code></pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This operation returns a <a href="https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_introduction">schematron</a> validation report which describes all the tests performed.</p>
+<p>Developers ensuring notices meet requirements, especially before submission.</p>
 </li>
 <li>
-<p>Parameter <code>notice</code> is mandatory and contains notice content encoded in base64 string.</p>
+<p>eSenders avoiding compliance errors during submission.</p>
 </li>
 <li>
-<p>Parameter <code>language</code> specifies language used for text messages related to failed assertions. If it is not specified, then "en" value is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>validationMode</code> specifies <a href="https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_structure_of_schematron_folder_and_files">types of rules</a> applied for the validation. If it is not specified, then "static" value is used as default.</p>
-</li>
-<li>
-<p>Parameter <code>eFormsSdkVersion</code> specifies active SDK version against which the notice is being validated. If it is not specified, then value from <code>CustomizationID</code> element from the notice is used as default.</p>
+<p>eNotices2 web interface for validating notices before or upon submission.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Explore more about schematron rules and validation reports here: <a href="https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_structure_of_schematron_folder_and_files" class="bare">https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_structure_of_schematron_folder_and_files</a></p>
+</div>
+</div>
 </div>
 </article>
     <div id="widgetContainer">

@@ -85,7 +85,7 @@
     <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="authenticate.html">Authentication API</a>
+    <a class="nav-link" href="developer%20operations.html">Developer Operations API</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="convert.html">Conversion API</a>
@@ -250,35 +250,73 @@
 </aside>
     <article class="doc">
 <h1 class="page">Visualisation API</h1>
+<div class="sect1">
+<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Visualisation API provides operation:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/render</code></pre>
+<p>Render procurement notices into user-friendly formats for publication or internal use.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>This operation returns a PDF or HTML rendering of a valid eForms notice.</p>
-</li>
-<li>
-<p>Parameter <code>file</code> is mandatory and contains notice content encoded in base64 string.</p>
-</li>
-<li>
-<p>Parameter <code>language</code> is mandatory and specifies language used for rendering of field labels and text values. If a text value doesn&#8217;t exist in the notice in the specified language, first notice original language is used.</p>
-</li>
-<li>
-<p>Parameter <code>format</code> is mandatory and specifies the output format of the rendering, PDF or HTML.</p>
-</li>
-<li>
-<p>Parameter <code>summary</code> specifies if the rendered output should contain only specific elements forming the summary. If not specified, the value false is used as default.</p>
-</li>
-<li>
-<p>The rendering template and labels are taken from the SDK version that is specified by <code>CustomizationID</code> element from the notice content.</p>
+<p>Converts XML notices into visually accessible formats like PDF or HTML.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Visualisation API makes procurement notices easier to read and share by converting them into familiar formats. It supports both public dissemination and internal workflows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/render 	Generate formatted notices (synchronous rendering)
+POST /v3/notices/render-async 	Generate formatted notices (asynchronous rendering)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_note"><a class="anchor" href="#_note"></a>Note</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This API provides operations in two variants. For larger, more complex notices, the asynchronous API should be used to prevent request time-outs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Organisations integrating visualised notices into their platforms.</p>
+</li>
+<li>
+<p>TED developers generating previews for notices.</p>
+</li>
+<li>
+<p>eNotices2 for the rendering of notices.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Explore more about view templates used in rendering here: <a href="https://docs.ted.europa.eu/eforms/latest/viewer-templates/index.html" class="bare">https://docs.ted.europa.eu/eforms/latest/viewer-templates/index.html</a></p>
+</div>
+</div>
 </div>
 </article>
     <div id="widgetContainer">
