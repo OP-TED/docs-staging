@@ -107,9 +107,6 @@
     <a class="nav-link" href="methodology2024.html">Methodology</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#workflow:index.adoc">Workflow</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="versioning.html">ePO Versioning Rules</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -137,7 +134,7 @@
     <span class="nav-text"><span class="separated"><strong>Working Group Documents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../epo-wgm/wider.html">Quarterly Meetings</a>
+    <a class="nav-link" href="../epo-wgm/wider.html">Biannual Meetings</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../epo-wgm/cumulative.html">Cumulative Reports (by year)</a>
@@ -758,7 +755,7 @@ packages, classes, data types, enumerations, enumeration items, class attributes
 <p>Relation names should be chosen so that  there is a balance of accuracy and precision on one hand, and relation re-usability on the other. These two dimensions are inversely correlated: the higher the reuse, the lower the accuracy, and vice versa.</p>
 </div>
 <div class="paragraph">
-<p>If more generic predicates are choosen such as “isSpecifiedIn”, this tends towards maximising relation reusability across the model. However, at the same time the risk of overloading the relation meaning also increases.</p>
+<p>If more generic predicates are chosen such as “isSpecifiedIn”, this tends towards maximising relation reusability across the model. However, at the same time the risk of overloading the relation meaning also increases.</p>
 </div>
 <div class="paragraph">
 <p>The above risk could be mitigated by simply appending the range class to the relation name: such as “isSpecifiedInContract”, and “isSpecifiedInProcedure” following the following naming pattern: verbPhrase + [RangeClassName] Qualifier. This ensures predicate uniqueness and maximum level of specificity at the cost of re-usability across and beyond the model. The latter can be achieved through inference, but an additional predicate inheritance structure must be defined.</p>
