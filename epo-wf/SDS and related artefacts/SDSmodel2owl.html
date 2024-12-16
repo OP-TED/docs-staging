@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>SDS artefact groups and purposes :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/epo-wf/SDS%20and%20related%20artefacts/SDSArtefacts.html">
+    <link rel="canonical" href="https://docs.ted.europa.eu/epo-wf/SDS%20and%20related%20artefacts/SDSmodel2owl.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -120,51 +120,21 @@
     <a class="nav-link" href="../Business%20Process%20workflow/stage1/stage1.html">Stage 1: Requirements Gathering</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../Business%20Process%20workflow/stage2/stage2.html">Stage 2: Designing Conceptual Model</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../Business%20Process%20workflow/stage2/stage2.html#CMCONV">Conceptual Model Conventions</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../Business%20Process%20workflow/stage2/stage2.html#CMVM">Conceptual Model version management</a>
-  </li>
-</ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../Business%20Process%20workflow/stage3/stage3.html">Stage 3: Preparing Semantic Data Specification Version Release</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../Business%20Process%20workflow/stage3/stage3.html#ASDS">Automated Semantic Data Specification generation and validation</a>
-  </li>
-</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../Business%20Process%20workflow/stage4/stage4.html">Stage 4: Publishing Candidate Semantic Data Specification Version</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../Business%20Process%20workflow/stage5/stage5.html">Stage 5: Publishing Stable SDS Version</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../Business%20Process%20workflow/stage5/stage5.html#Cellar">Publishing to Cellar</a>
   </li>
 </ul>
   </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="SDSIndex.html">SDS and related artefacts</a>
-<ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="SDSArtefacts.html">SDS artefact groups and purposes</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="model2owl.html">model2owl in a nutshell (and its functionalities)</a>
-  </li>
-</ul>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="SDSmodel2owl.html">SDS and related artefacts</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../GitHub%20repositories/githubRepositories.html">GitHub Repositories</a>
@@ -300,8 +270,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">eProcurement Ontology</a></li>
-    <li><a href="SDSIndex.html">SDS and related artefacts</a></li>
-    <li><a href="SDSArtefacts.html">SDS artefact groups and purposes</a></li>
+    <li><a href="SDSmodel2owl.html">SDS and related artefacts</a></li>
   </ul>
 </nav>
 </div>
@@ -455,6 +424,118 @@ As seen in the figure below, these artefacts are:</p>
 </div>
 <div class="paragraph">
 <p><em>Automated evolution artefacts diagram</em></p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_model2owl_in_a_nutshell_and_its_functionalities"><a class="anchor" href="#_model2owl_in_a_nutshell_and_its_functionalities"></a>model2owl in a nutshell (and its functionalities)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/model2owl">Model2Owl</a> is a set of tools for transforming a UML (v2.5) model from its XMI (v2.5.1) serialization into a formal OWL ontology, and a SHACL shape. This transforming approach is conformant to the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC Style Guide</a> and with the  <a href="https://github.com/meaningfy-ws/model2owl/blob/master/docs/ontology-architecture/ontology-architecture.pdf">eProcurement Ontology Architecture specification</a>.<br>
+In this section we list the model2owl functionalities.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>currently supported:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Generation of formal SDS artefacts</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OWL-core,</p>
+</li>
+<li>
+<p>OWL-restrictions,</p>
+</li>
+<li>
+<p>SHACL shapes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Generation of reference documentation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Glossary - suited for documentation purpose, not suitable for dereferencing purpose)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Validation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>UML conventions checking,</p>
+</li>
+<li>
+<p>ITB conventions checking done in SEMIC</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Not yet supported:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Generation of evolutive artefacts:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OWL Diff reports (human readable, e.g. HTML, formal e.g. for automated upgrade recommendation in RML rules)</p>
+</li>
+<li>
+<p>SHACL Diff report</p>
+</li>
+<li>
+<p>Change notes (based on diffing). Currently, Change notes are added manually by the Development Team and are prone to errors.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Generation of formal SDS artefacts</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OWL-deprecated – for the purpose of maintaining concept persistence i.e. <a href="https://chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/Towards-a-common-approach-for-the-management-of-persistent-URIs-by-EU-institutions_v.0.53.pdf">EU-PURIs</a>), generated based on the diffing</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Validation/</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SHACL based validation of OWL-core, OWL-restrictions, SHACL shapes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Generation of reference documentation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>SDS Reference document (not he same as Glossary), in ReSpec/Widoco/custom view in HTML format (not AsciiDoc) - for the purpose of HTML dereferencing</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </article>
