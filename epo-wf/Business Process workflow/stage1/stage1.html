@@ -166,6 +166,9 @@
   </li>
 </ul>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../GitHub%20repositories/githubRepositories.html">GitHub Repositories</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -311,7 +314,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this stage, all preliminary work is done such as deciding the ePO version that will be released, what contents are foreseen for this release and the creation of the necessary GitHub branches. Also in this stage, the requirements for the new ePO module are collected in the Ontology Requirements Specification Document (ORSD) by the Working Group.</p>
+<p>In this stage, all preliminary work is done such as deciding the ePO version that will be released, what contents are foreseen for this release and the creation of the necessary GitHub branches. Also in this stage, the requirements for the new ePO module are collected in the Ontology Requirements Specification Document (ORSD) by the Working Group. If no new module is required for this release then the ORSD shall contain specifications for each of the updates required for the existing modules.</p>
 </div>
 </div>
 </div>
@@ -341,7 +344,7 @@
 <p><em>Requirements Gathering business view with stakeholders diagram</em></p>
 </div>
 <div class="paragraph">
-<p>In the “Decide work goal &amp; scope and release version” business process, The Product Owner decides which ePO module will be developed and into which version the module will be released. The versioning follows a “X.Y.Z” format, where X is the major version number, Y the minor version number, and Z the patch version number. For more information on ePO versioning rules, consult <a href="https://docs.ted.europa.eu/epo-home/versioning.html">this page</a>. Finally, in this business process, the Product Owner points out to the Development Team the GitHub Issues that will be implemented in the upcoming version. These GitHub Issues are assigned the milestone related to the X.Y.Z release.</p>
+<p>In the “Decide work goal &amp; scope and release version” business process, The Product Owner decides which ePO module will be developed, if any, and into which version the module will be released. The versioning follows a “X.Y.Z” format, where X is the major version number, Y the minor version number, and Z the patch version number. For more information on ePO versioning rules, consult <a href="https://docs.ted.europa.eu/epo-home/versioning.html">this page</a>. Finally, in this business process, the Product Owner points out to the Development Team the GitHub Issues that will be implemented in the upcoming version. These GitHub Issues are assigned the milestone related to the X.Y.Z release.</p>
 </div>
 <div class="paragraph">
 <p>In the "<strong>Prepare the publication space for the work</strong>" business process, The Product Owner creates the GitHub release branches marked as “release/X.Y.Z” of the specific ePO version in the following GitHub repositories (as they appear in the figure above: <br>
@@ -350,13 +353,13 @@
 - The <a href="https://github.com/OP-TED/epo-docs">OP/ePO-docs</a> where the contents of the website containing the SDS documentation will be moved and/or generated.</p>
 </div>
 <div class="paragraph">
-<p>In the “<strong>Configure the artefact transformation pipeline</strong>“ business process, the Development Team Configures the model2owl transformation script on the release/X.Y.Z branch of the OP/epo-conceptual-model repository in order for model2owl to correctly transform the conceptual model of the new module. The development may need to make additional adjustments to the configuration files during the “preparing SDS version release” stage if needed. As a result of this business process, the SDS Generation Configuration business object is created.</p>
+<p>In the “<strong>Configure the artefact transformation pipeline</strong>“ business process, the Development Team Configures the model2owl transformation script on the release/X.Y.Z branch of the OP/epo-conceptual-model repository in order for model2owl to correctly transform the conceptual model of the new release. The development may need to make additional adjustments to the configuration files during the “preparing SDS version release” stage if needed. As a result of this business process, the SDS Generation Configuration business object is created.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Collect subject relevant material</strong>" business process, the ePO Working Group starts to meet on a weekly basis in order to develop the new ePO module. In the first meetings the Working Group collects and analyses relevant material to the new ePO module such as reports, sample data, and PEPPOL specifications. All the resulting files from this process are stored on a drive in Sharepoint. As a result of this business process, the “ORSD Supplementary Material” business object is created.</p>
+<p>In the "<strong>Collect subject relevant material</strong>" business process, the ePO Working Group starts to meet on a weekly basis in order to develop the new ePO release. In the first meetings the Working Group collects and analyses relevant material to the new ePO release such as reports, sample data, and PEPPOL specifications. All the resulting files from this process are stored on a drive in Sharepoint. As a result of this business process, the “ORSD Supplementary Material” business object is created.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Interview domain experts</strong>" business process, the Working Group discusses the nature of the module. Specifically, the domain experts that are part of the Working Group describe the eProcurement process that needs to be modeled in detail and are interviewed by the Development Team in order to fill any missing information regarding the eProcurement process. During these sessions, domain experts may provide or point out additional ORSD supplementary material to the rest of the Working Group.</p>
+<p>In the "<strong>Interview domain experts</strong>" business process, the Working Group discusses the nature of the release. Specifically, the domain experts that are part of the Working Group describe the eProcurement processes that need to be modeled in detail and are interviewed by the Development Team in order to fill any missing information regarding the eProcurement process. During these sessions, domain experts may provide or point out additional ORSD supplementary material to the rest of the Working Group.</p>
 </div>
 <div class="paragraph">
 <p>In the "<strong>Writing ORSD</strong>" business process, the Development Team writes the ORSD as Word document in OP Sharepoint using the ORSD Supplementary Material, and the notes from the interviews with domain experts. The Ontology Requirements Specification Document (ORSD) Business Object is created as a result of this business process.</p>
