@@ -315,7 +315,7 @@
 <p>The first business process of this section is “<strong>Trunk-based development of the Model</strong>”. This is an iterative process that will happen multiple times in this stage. The first time that this process happens, the Development Team will create the first draft of the Conceptual Model as a UML diagram in an Enterprise architect file and store it on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository. During all the subsequent times that this process takes place, the Development team will continue editing and updating the Conceptual Model in order to implement feedback received in the Working Group Meetings. As a result of this business process, the “Conceptual Model (editable)” business object is created or updated. Also In this Process, the Development Team implements any GitHub issues pointed by the Product Owner in the “Decide work goal &amp; scope and release version” business process or any GitHub issues created during the ”CM Working Group Meeting” business process.</p>
 </div>
 <div class="paragraph">
-<p>In the “<strong>Dev Team internal review</strong>” business process, The Development Team uses model2owl on the current Conceptual Model in order to generate a conventions report ( see <a href="../stage3/stage3.html#SDSGen" class="xref page">here</a> on how model2owl is used to generate a conventions report). The Development Team consults the conventions report and the ORSD, and makes adjustments to the Conceptual Model if needed, going to “Trunk-based development of the Model” or “Fixing Model Bugs in the release version” business process. If no changes are currently needed, the next business process will be “CM Working Group Meeting”.</p>
+<p>In the “<strong>Dev Team internal review</strong>” business process, The Development Team uses model2owl on the current Conceptual Model in order to generate a conventions report. See <a href="../stage3/stage3.html#SDSGen" class="xref page">here</a> on how model2owl is used to generate a conventions report. For a conventions report example see <a href="https://github.com/OP-TED/ePO/tree/master/implementation/eAccess/conventions_report">here</a>. The Development Team consults the conventions report and the ORSD, and makes adjustments to the Conceptual Model if needed, going to “Trunk-based development of the Model” or “Fixing Model Bugs in the release version” business process. If no changes are currently needed, the next business process will be “CM Working Group Meeting”.</p>
 </div>
 <div class="paragraph">
 <p>In the ”<strong>CM Working Group Meeting</strong>” business process, that takes place during the weekly Working Group meeting, the Development Team Presents and explains the conceptual model to the rest of the Working Group. The Working Group validates the model and develops it further. By the end of the meeting, the Development Team either:</p>
@@ -461,7 +461,7 @@ Model2owl will transfer the text contained in the ‘Notes section’ to skos:de
 <div class="ulist">
 <ul>
 <li>
-<p>For each external concept, the ‘Notes’ section of the Conceptual Model contains a hyperlink to a human-readable website that provides the original definition of the concept.</p>
+<p>For each external concept, the ‘Notes’ section of the Conceptual Model contains a hyperlink to a human-readable website that provides the original definition of the concept. Note that the external concepts are not exported in the formal SDS artefacts (OWL and SHACL files), but can be seen in the generated <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html#P2" class="xref page">Conceptual Model visual documentation” business object</a> (html pages of the conceptual model).</p>
 </li>
 </ul>
 </div>
@@ -471,7 +471,7 @@ Model2owl will transfer the text contained in the ‘Notes section’ to skos:de
 <div class="ulist">
 <ul>
 <li>
-<p>Even though the Conceptual model contains Code lists as enumerations, the values of the code lists are not exported to the SDS Artefacts since they are not parts of the Ontology and are only referenced from ePO.</p>
+<p>Even though code lists are visible in the Conceptual model as enumerations, they are not exported to the OWL files since they are only recommendations of the ePO. However, they can be included or not in the SHACL files for validation purposes.</p>
 </li>
 </ul>
 </div>
@@ -484,6 +484,9 @@ Model2owl will transfer the text contained in the ‘Notes section’ to skos:de
 <div class="sect1">
 <h2 id="_conceptual_model_version_management"><a class="anchor" href="#_conceptual_model_version_management"></a>Conceptual Model version management<a id="CMVM"></a></h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>In this section, we describe the problem of managing the different versions of the binary EA Conceptual Model QEAX file and present the current solution. We also briefly mention two alternative ways of versioning the Conceptual Model.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -506,7 +509,7 @@ Model2owl will transfer the text contained in the ‘Notes section’ to skos:de
 </div>
 </li>
 <li>
-<p>There are other approaches to CM versioning:</p>
+<p>There are other approaches to CM versioning listed below. Both of these approaches seem problematic when compared to the current approach. It would be a good idea to further investigate these approaches or any others as future work.</p>
 <div class="ulist">
 <ul>
 <li>
