@@ -1,4 +1,4 @@
-site:
+velopsite:
   title: TED Developer Documentation
   url: https://docs.ted.europa.eu
   start_page: home::index.adoc
@@ -74,7 +74,7 @@ content:
   ### TED Open Data Service
   - url: https://github.com/OP-TED/ted-rdf-docs
     start_path: docs/antora 
-    branches: xml-nav-update
+    branches: develop
 
   ### TED Data for Reusers
   #- url: https://github.com/OP-TED/ted-reuse-docs.git
