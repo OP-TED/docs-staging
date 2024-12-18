@@ -1,4 +1,4 @@
-velopsite:
+site:
   title: TED Developer Documentation
   url: https://docs.ted.europa.eu
   start_page: home::index.adoc
