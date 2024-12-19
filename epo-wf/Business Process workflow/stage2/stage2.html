@@ -282,7 +282,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this stage, the Development Team works with the rest of the Working Group in order to iteratively design the Conceptual Model (CM) of the module to be released. The CM is represented as a collection of UML diagrams in an Enterprise Architect file in the <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository.</p>
+<p>In this stage, the Development Team works with the rest of the Working Group in order to iteratively design the Conceptual Model (CM) of the module to be released. The CM is represented as a collection of UML diagrams in an Enterprise Architect file in the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository.</p>
 </div>
 </div>
 </div>
@@ -312,7 +312,7 @@
 <p><em>Designing Conceptual Model business view with stakeholders diagram</em></p>
 </div>
 <div class="paragraph">
-<p>The first business process of this section is “<strong>Trunk-based development of the Model</strong>”. This is an iterative process that will happen multiple times in this stage. The first time that this process happens, the Development Team will create the first draft of the Conceptual Model as a UML diagram in an Enterprise architect file and store it on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository. During all the subsequent times that this process takes place, the Development team will continue editing and updating the Conceptual Model in order to implement feedback received in the Working Group Meetings. As a result of this business process, the “Conceptual Model (editable)” business object is created or updated. Also In this Process, the Development Team implements any GitHub issues pointed by the Product Owner in the “Decide work goal &amp; scope and release version” business process or any GitHub issues created during the ”CM Working Group Meeting” business process.</p>
+<p>The first business process of this section is “<strong>Trunk-based development of the Model</strong>”. This is an iterative process that will happen multiple times in this stage. The first time that this process happens, the Development Team will create the first draft of the Conceptual Model as a UML diagram in an Enterprise architect file and store it on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository. During all the subsequent times that this process takes place, the Development team will continue editing and updating the Conceptual Model in order to implement feedback received in the Working Group Meetings. As a result of this business process, the “Conceptual Model (editable)” business object is created or updated. Also In this Process, the Development Team implements any GitHub issues pointed by the Product Owner in the “Decide work goal &amp; scope and release version” business process or any GitHub issues created during the ”CM Working Group Meeting” business process.</p>
 </div>
 <div class="paragraph">
 <p>In the “<strong>Dev Team internal review</strong>” business process, The Development Team uses model2owl on the current Conceptual Model in order to generate a conventions report. See <a href="../stage3/stage3.html#SDSGen" class="xref page">here</a> on how model2owl is used to generate a conventions report. For a conventions report example see <a href="https://github.com/OP-TED/ePO/tree/master/implementation/eAccess/conventions_report">here</a>. The Development Team consults the conventions report and the ORSD, and makes adjustments to the Conceptual Model if needed, going to “Trunk-based development of the Model” or “Fixing Model Bugs in the release version” business process. If no changes are currently needed, the next business process will be “CM Working Group Meeting”.</p>
@@ -336,21 +336,30 @@
 <div class="ulist">
 <ul>
 <li>
-<p>If changes are needed after the “Product Owner internal review” business process, then the changes happen on the develop branch.</p>
+<p>If changes are needed after the “Product Owner internal review” business process, then the changes happen on the develop branch.
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 </li>
 <li>
-<p>If the changes happen during the “Review the release candidate” business process by the Wider Public (read more about this business process  <a href="../stage4/stage4.html#DWGWPR" class="xref page">here</a>), then the “Fixing Model Bugs in the release version” business process is invoked. During this process, the Conceptual Model file is updated in the release branch of the OP/epo-conceptual-model.</p>
+<p>If the changes happen during the “Review the release candidate” business process (by the Wider Public), then the “Fixing Model Bugs in the release version” business process is invoked. During this process, the Conceptual Model file is updated in the release branch of the GitHub OP-TED/epo-conceptual-model.</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>If the changes happen during the “Review the release candidate” business process by the Wider Public (read more about this business process  <a href="../stage4/stage4.html#DWGWPR" class="xref page">here</a>), then the “Fixing Model Bugs in the release version” business process is invoked. During this process, the Conceptual Model file is updated in the release branch of the OP/epo-conceptual-model.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; de79c6bae97441da0ed761ee579c417faeb97376</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>In the “<strong>Porting the bug fixes into the trunk</strong>” business process, the changes done in the previous “Fixing Model Bugs in the release version” business process are replicated in the develop branch of the OP/epo-conceptual-model. This replication happens because there is no possibility to edit EA files in parallel and then have an organic easy merge. However, if no new trunk-based development has happened on the develop branch (e.g., no new modules have been developed), then this can be done as a simple branch merge.</p>
+<p>In the “<strong>Porting the bug fixes into the trunk</strong>” business process, the changes done in the previous “Fixing Model Bugs in the release version” business process are replicated in the develop branch of the GitHub OP-TED/epo-conceptual-model. This replication happens because there is no possibility to edit EA files in parallel and then have an organic easy merge. However, if no new trunk-based development has happened on the develop branch (e.g., no new modules have been developed), then this can be done as a simple branch merge.</p>
 </div>
+<div class="paragraph">
+<p>== Application and Technology view</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_application_and_technology_view"><a class="anchor" href="#_application_and_technology_view"></a>Application and Technology view</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>The concise diagram for the Designing Conceptual Model Stage that describes all the artefacts involved in this stage using business (yellow), application (blue) and technology (green) layers is depicted in the figure below. The GitHub Repositories branches that are used for this stage are also depicted as orange rectangles for reference purposes.</p>
 </div>
@@ -363,7 +372,14 @@
 <p><em>Application and Technology Layers of the “Designing conceptual model” stage diagram</em></p>
 </div>
 <div class="paragraph">
-<p>The “Conceptual Model (editable)” Business Object is translated into the “Enterprise Architect UML Model” Data Object that represents the UML model, which is in turn translated in the “Enterprise Architect Database in .qeax format” artefact located on the ”develop” or “release.X.Y.Z” branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository. The .qeax file can be edited on Enterprise Architect 16 or 17. For simplicity, the owl generated artefacts used by the “Dev Team internal review” process are omitted from this diagram, as they are explained in the <a href="../stage3/stage3.html" class="xref page">“Preparing Semantic Data Specification Version Release” Stage</a> in detail.<br></p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+The “Conceptual Model (editable)” Business Object is translated into the “Enterprise Architect UML Model” Data Object that represents the UML model, which is in turn translated in the “Enterprise Architect Database in .qeax format” artefact located on the ”develop” or “release.X.Y.Z” branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository. The .qeax file can be edited on Enterprise Architect 16 or 17. For simplicity, the owl generated artefacts used by the “Dev Team internal review” process are omitted from this diagram, as they are explained in the <a href="#workflow/Business Process workflow/stage3/stage3.adoc" class="xref unresolved">“Preparing Semantic Data Specification Version Release” Stage</a> in detail.<br></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The “Conceptual Model (editable)” Business Object is translated into the “Enterprise Architect UML Model” Data Object that represents the UML model, which is in turn translated in the “Enterprise Architect Database in .qeax format” artefact located on the ”develop” or “release.X.Y.Z” branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository. The .qeax file can be edited on Enterprise Architect 16 or 17. For simplicity, the owl generated artefacts used by the “Dev Team internal review” process are omitted from this diagram, as they are explained in the <a href="../stage3/stage3.html" class="xref page">“Preparing Semantic Data Specification Version Release” Stage</a> in detail.<br>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; de79c6bae97441da0ed761ee579c417faeb97376</p>
 </div>
 </div>
 </div>
@@ -371,7 +387,7 @@
 <h2 id="_conceptual_model_conventions"><a class="anchor" href="#_conceptual_model_conventions"></a>Conceptual Model Conventions<a id="CMCONV"></a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ePO Conceptual Model is designed according to the <a href="https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html">SEMIC style guide UML Conceptual model conventions</a> and follows <a href="https://github.com/OP-TED/model2owl?tab=readme-ov-file#documents">model2owl UML covnetions</a> so that model2owl can be used for SDS artefact generation.</p>
+<p>The ePO Conceptual Model is designed according to the <a href="https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html">SEMIC style guide UML Conceptual model conventions</a> and follows ink: <a href="https://meaningfy-ws.github.io/ted-model2owl-docs/public-review/uml/conceptual-model-conventions.html">model2owl UML conventions</a> so that model2owl can be used for SDS artefact generation.</p>
 </div>
 <div class="sect2">
 <h3 id="_epo_concept_life_cycle"><a class="anchor" href="#_epo_concept_life_cycle"></a>ePO concept life Cycle</h3>
@@ -410,7 +426,7 @@
 </div>
 <div class="paragraph">
 <p><strong>Deprecation</strong><br>
-A fourth ePO concept state exists, but it is not part of the CM: Deprecated. The concept was published in a previous release and is no longer relevant. Deprecated concepts are not part of the Conceptual Model and only exist as references in a dedicated OWL-core file that is created automatically by model2owl by comparing the most recent version of ePO with the older versions.  See <a href="#workflow/Business Process workflow/stage3/stage3.adoc" class="xref unresolved">stage 3</a> for more information.</p>
+A fourth ePO concept state exists, but it is not part of the CM: Deprecated. The concept was published in a previous release but is no longer relevant. Discussions are underway as to how to deal with deprecated concepts. A suggestion is that they remain not part of the Conceptual Model and only exist as references in a dedicated OWL-core file that is created automatically by model2owl by comparing the most recent version of ePO with the older versions.  See <a href="#../stage3/stage3.adoc" class="xref unresolved">stage 3</a> for more information.</p>
 </div>
 </div>
 <div class="sect2">

@@ -316,12 +316,19 @@
 </div>
 <div class="paragraph">
 <p>In the "<strong>Prepare the publication space for the work</strong>" business process, The Product Owner creates the GitHub release branches marked as “release/X.Y.Z” of the specific ePO version in the following GitHub repositories (as they appear in the figure above: <br>
-- The <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository, where the Conceptual Model and the SDS artefacts will be created and can be reviewed.<br>
-- The <a href="https://github.com/OP-TED/ePO">OP/ePO</a> repository, where the SDS artefacts to be published as a stable release will be moved once reviewed.<br>
-- The <a href="https://github.com/OP-TED/epo-docs">OP/ePO-docs</a> where the contents of the website containing the SDS documentation will be moved and/or generated.</p>
+- The <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository, where the Conceptual Model and the SDS artefacts will be created and can be reviewed.<br>
+- The <a href="https://github.com/OP-TED/ePO">GitHub OP-TED/epo</a> repository, where the SDS artefacts to be published as a stable release will be moved once reviewed.<br>
+- The <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> where the contents of the website containing the SDS documentation will be moved and/or generated.</p>
 </div>
 <div class="paragraph">
-<p>In the “<strong>Configure the artefact transformation pipeline</strong>“ business process, the Development Team Configures the model2owl transformation script on the release/X.Y.Z branch of the OP/epo-conceptual-model repository in order for model2owl to correctly transform the conceptual model of the new release. The Development Team may need to make additional adjustments to the configuration files during the “preparing SDS version release” stage if needed (due to a bug for example). As a result of this business process, the SDS Generation Configuration business object is created.</p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+In the “<strong>Configure the artefact transformation pipeline</strong>“ business process, the Development Team Configures the model2owl transformation script on the release/X.Y.Z branch of the GitHub OP-TED/epo-conceptual-model repository in order for model2owl to correctly transform the conceptual model of the new release. The development may need to make additional adjustments to the configuration files during the “preparing SDS version release” stage if needed. As a result of this business process, the SDS Generation Configuration business object is created.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>In the “<strong>Configure the artefact transformation pipeline</strong>“ business process, the Development Team Configures the model2owl transformation script on the release/X.Y.Z branch of the OP/epo-conceptual-model repository in order for model2owl to correctly transform the conceptual model of the new release. The Development Team may need to make additional adjustments to the configuration files during the “preparing SDS version release” stage if needed (due to a bug for example). As a result of this business process, the SDS Generation Configuration business object is created.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; de79c6bae97441da0ed761ee579c417faeb97376</p>
 </div>
 <div class="paragraph">
 <p>In the "<strong>Collect subject relevant material</strong>" business process, the ePO Working Group starts to meet on a weekly basis in order to develop the new ePO release. In the first meetings the Working Group collects and analyses relevant material to the new ePO release such as reports, sample data, and PEPPOL specifications. All the resulting files from this process are stored on a <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">drive in OP&#8217;s Internal sharepoint</a>. As a result of this business process, the “ORSD Supplementary Material” business object is created.</p>
@@ -333,21 +340,29 @@
 <p>In the "<strong>Writing ORSD</strong>" business process, the Development Team writes the ORSD as Word document in <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">in OP&#8217;s Internal sharepoint</a> using the ORSD Supplementary Material, and the notes from the interviews with domain experts. The Ontology Requirements Specification Document (ORSD) Business Object is created as a result of this business process.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Review ORSD</strong>" business process, The Working Group reviews the ORSD and provides feedback. This can happen during the WG meetings, via GitHub Issues or discussions on the <a href="https://github.com/OP-TED/ePO">OP/ePO</a> repository, via eMail or other channels.</p>
+<p>In the "<strong>Review ORSD</strong>" business process, The Working Group reviews the ORSD and provides feedback. This can happen during the WG meetings, via GitHub Issues or discussions on the <a href="https://github.com/OP-TED/ePO">GitHub OP-TED/epo</a> repository, via eMail or other channels.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>ORSD consolidation</strong>" business process, The Development team integrates the feedback from the working group into the ORSD Word document and transcribes the document into an <a href="https://asciidoc.org/">AsciiDoc</a> page placed in the release branch on the <a href="https://github.com/OP-TED/epo-docs">OP/ePO-docs</a> repository. This Process may be revisited from the “Preparing Semantic Data Specification” Stage, if an inconsistency was discovered during the review of the formal artefacts.</p>
+<p>In the "<strong>ORSD consolidation</strong>" business process, The Development team integrates the feedback from the working group into the ORSD Word document and transcribes the document into an <sup class="footnote" id="_footnote_AsciiDoc">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> Asciidoc page placed in the <a href="https://docs.ted.europa.eu/epo-home/stories.html">release branch</a> on the ePO-docs] repository. This Process may be revisited from the “Preparing Semantic Data Specification” Stage, if an inconsistency was discovered during the review of the formal artefacts.</p>
 </div>
+<div class="paragraph">
+<p>== Application and Technology view</p>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_application_and_technology_view"><a class="anchor" href="#_application_and_technology_view"></a>Application and Technology view</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>The concise diagram for the Requirements Gathering Stage that describes all the artefacts involved in this stage using business (yellow), application (blue) and technology (green) layers is depicted in the figure below. The Github Repositories branches that are used for this stage are also depicted as orange rectangles for reference purposes.</p>
 </div>
 <div class="paragraph">
 <p>The “Ontology Requirements Specification Document (ORSD)” Business Object as defined in the <a href="https://docs.ted.europa.eu/epo-home/methodology2024.html">ePO LOT methodology</a>, is translated into 2 Data Objects (documents):</p>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+* The "Print optimised ORSD document, which is stored in the Microsoft sharePoint Server along with the Supplementary ORSD documents.
+* The "Web optimised ORSD document", which is stored in the <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> repository, as an <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> Asciidoc page. For an example ORSD file in ePO, see <a href="https://github.com/OP-TED/epo-docs/blob/main/modules/ROOT/pages/stories_eAccess.adoc">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>The diagram also describes how the SDS Generation Configuration business object is translated as the “Owl Configuration” Data Object representing the model2owl configuration files that are stored in the <a href="https://github.com/OP-TED/ePO">GitHub OP-TED/epo</a> repository. For an explanation of what these files contain and how to generate them see <a href="https://github.com/OP-TED/ePO/tree/master/implementation/ePO_core/model2owl-config">here</a>. For an example of the configuration files in ePO See <a href="https://github.com/OP-TED/ePO/tree/master/implementation/ePO_core/model2owl-config">here</a>.</p>
+</div>
+</div>
 </div>
 <div class="ulist">
 <ul>
@@ -360,7 +375,8 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>The diagram also describes how the SDS Generation Configuration business object is translated as the “Owl Configuration” Data Object representing the model2owl configuration files that are stored in the <a href="https://github.com/OP-TED/ePO">OP/ePO</a> repository. For an explanation of what these files contain and how to generate them see <a href="https://github.com/OP-TED/model2owl?tab=readme-ov-file#configuration">here</a>. For an example of the configuration files in ePO See <a href="https://github.com/OP-TED/ePO/tree/master/implementation/ePO_core/model2owl-config">here</a>.</p>
+<p>The diagram also describes how the SDS Generation Configuration business object is translated as the “Owl Configuration” Data Object representing the model2owl configuration files that are stored in the <a href="https://github.com/OP-TED/ePO">OP/ePO</a> repository. For an explanation of what these files contain and how to generate them see <a href="https://github.com/OP-TED/model2owl?tab=readme-ov-file#configuration">here</a>. For an example of the configuration files in ePO See <a href="https://github.com/OP-TED/ePO/tree/master/implementation/ePO_core/model2owl-config">here</a>.
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; de79c6bae97441da0ed761ee579c417faeb97376</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -370,6 +386,12 @@
 <div class="paragraph">
 <p><em>Application and Technology Layers of the “Requirements Gathering” stage diagram</em></p>
 </div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://asciidoc.org" class="bare">https://asciidoc.org</a>
 </div>
 </div>
 </article>
