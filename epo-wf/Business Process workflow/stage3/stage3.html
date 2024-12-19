@@ -336,13 +336,29 @@
 <p><em>Publish HTML versions in EA</em></p>
 </div>
 <div class="paragraph">
-<p>These webpages will be reviewed by the Development Team and the Product Owner in their respective business processes later in this stage. In the next stage, “publishing candidate SDS version” the website will be integrated into <a href="https://github.com/OP-TED/epo-docs">OP/ePO-docs</a> repository and from there published in the TED developer documentation website.</p>
+<p>These HTML files will be reviewed by the Development Team and the Product Owner in their respective business processes later in this stage. In the next stage, “publishing candidate SDS version” the HTML pages will be integrated into <a href="https://github.com/OP-TED/epo-docs">OP/ePO-docs</a> repository and from there published in the TED developer documentation website.</p>
 </div>
 <div class="paragraph">
-<p>In the “Produce the interchange format of the conceptual model” business process, the Development Team exports an .XMI file containing all the UML concepts including classes, attributes, properties, notes, etc., found in the diagrams of the Conceptual Model (editable) business object. The XMI file shall be used as an input for model2owl toolkit in order to generate the SDS artefacts. Currently the version of the XMI/UML that is being exported is 2.5.1. The XMI file is placed into the model2owl input folder on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository and is represented as the “Conceptual Model (exchangeable)” business Object on the workflow diagram.</p>
+<p>In the “Produce the interchange format of the conceptual model” business process, the Development Team exports an .XMI file containing all the UML concepts including classes, attributes, properties, notes, etc., found in the diagrams of the Conceptual Model (editable) business object. The XMI file shall be used as an input for model2owl toolkit in order to generate the SDS artefacts. Currently the version of the XMI/UML that is being exported is 2.5.1. The XMI file is placed into the model2owl input folder on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository and is represented as the “Conceptual Model (exchangeable)” business Object on the workflow diagram. Once the XMI file is pushed on the repository, model2owl will automatically begin generating all the SDS artefacts. In order to simplify this artefact generation we divide it into 4 business processes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Generate formal artefacts</p>
+</li>
+<li>
+<p>Generate human-readable artefacts</p>
+</li>
+<li>
+<p>Generate diffing artefacts</p>
+</li>
+<li>
+<p>Generate compliance checking artefacts</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>In the “Generate formal artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate the following SDS artefacts (listed as Business Objects) on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository for each module, using the “Conceptual Model (exchangeable)” Business Object (XMI) as input:</p>
+<p>In the “Generate formal artefacts” Business Process, model2owl generates the following SDS artefacts (listed as Business Objects) on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository for each module, using the “Conceptual Model (exchangeable)” Business Object (XMI) as input:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -358,13 +374,13 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>For more information on these concepts, read the <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html#Purpose 1" class="xref page">documentation here</a></p>
+<p>For more information on these concepts, read the <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html#Purpose 1" class="xref page">documentation here</a>.</p>
 </div>
 <div class="paragraph">
-<p>In the “Generate human-readable artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate the “SDS reference document” Business Object (the glossaries), and possibly other human-readable reference documentation artefacts on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository.</p>
+<p>In the “Generate human-readable artefacts” Business Process, model2owl generates the “SDS reference document (glossaries)” Business Object, and possibly other human-readable reference documentation artefacts on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository.</p>
 </div>
 <div class="paragraph">
-<p>In the “Generate diffing artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate diffing reports, and change notes by comparing the current version  XMI, with the latest published version of SDS. For dealing with deprecation, refer to <a href="#../stage2/stage2.adoc" class="xref unresolved">../stage2/stage2.adoc</a> for more information. Specifically, the following Business Objects are generated on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository as described in the <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html#Purpose 4" class="xref page">SDS Model2owl document</a>:</p>
+<p>In the “Generate diffing artefacts” Business Process,model2owl generates diffing reports, and change notes by comparing the current version  XMI, with the latest published version of SDS. For dealing with deprecation, refer to <a href="#../stage2.adoc" class="xref unresolved">../stage2.adoc</a> for more information. Specifically, the following Business Objects are generated on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository as described in the <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html#Purpose 4" class="xref page">SDS Model2owl document</a>:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -380,7 +396,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>In the “Generate compliance checking artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate the UML conventions reports for each model (represented in the diagram as the “Quality assessment reports” Business Object) on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository. These reports include SHACL shape checking of the formal artefacts, and possibly other types of checks.</p>
+<p>In the “Generate compliance checking artefacts” Business Process, model2owl generates the UML conventions reports for each model (represented in the diagram as the “Quality assessment reports” Business Object) on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository. These reports include SHACL shape checking of the formal artefacts, and possibly other types of checks.</p>
 </div>
 </div>
 <div class="sect2">
