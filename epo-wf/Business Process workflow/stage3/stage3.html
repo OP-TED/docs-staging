@@ -325,13 +325,7 @@
 <p><em>The SDS Generation substage</em></p>
 </div>
 <div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-In the “Produce business view of the Conceptual Model” business process, the Development Team exports an HTML page for each folder in the Enterprise Architect (including the folder of the new ePO module) creating the “Conceptual Model visual documentation” business object on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository. This is done automatically by the Enterprise Architect program. These webpages will be reviewed by the Development Team and the Product Owner in their respective business processes later in this stage. In the next stage, “publishing candidate SDS version” the website will be <a href="#../stage4/stage4.adoc" class="xref unresolved">integrated</a> into <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> repository and from there published in the TED developer documentation website.</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>In the “Produce business view of the Conceptual Model” business process, the Development Team exports an HTML page for each folder in the Enterprise Architect (including the folder of the new ePO module) creating the “Conceptual Model visual documentation” business object on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository. This can be done automatically by the "Publish" the Enterprise Architect program. as seen in the figure below:</p>
+<p>In the “Produce business view of the Conceptual Model” business process, the Development Team exports an HTML page for each folder in the Enterprise Architect (including the folder of the new ePO module) creating the “Conceptual Model visual documentation” business object on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository. This is done automatically by the Enterprise Architect program. These webpages will be reviewed by the Development Team and the Product Owner in their respective business processes later in this stage. In the next stage, “publishing candidate SDS version” the website will be <a href="#../../stage4/stage4.adoc" class="xref unresolved">integrated</a> into <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> repository and from there published in the TED developer documentation website.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -365,20 +359,13 @@ In the “Produce business view of the Conceptual Model” business process, the
 </ol>
 </div>
 <div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-For more information on these concepts, read the <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html#Purpose 1" class="xref page">documentation here</a></p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>In the “Generate human-readable artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate the “SDS reference document (glossaries)” Business Object, and possibly other human-readable reference documentation artefacts on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP/epo-conceptual-model</a> repository.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; de79c6bae97441da0ed761ee579c417faeb97376</p>
+<p>For more information on these concepts, read the <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html#Purpose 1" class="xref page">documentation here</a></p>
 </div>
 <div class="paragraph">
 <p>In the “Generate human-readable artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate the “SDS reference document” Business Object (the glossaries), and possibly other human-readable reference documentation artefacts on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository.</p>
 </div>
 <div class="paragraph">
-<p>In the “Generate diffing artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate diffing reports, and change notes by comparing the current version  XMI, with the latest published version of SDS. For dealing with deprecation, refer to <a href="#../stage2.adoc" class="xref unresolved">../stage2.adoc</a> for more information. Specifically, the following Business Objects are generated on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository as described in the <a href="#../../SDS and related artefacts\SDSmodel2owl.adoc#Purpose 4" class="xref unresolved">SES Model2owl document</a>:</p>
+<p>In the “Generate diffing artefacts” Business Process, the Development Team triggers a GitHub action that prompts model2owl toolkit to automatically generate diffing reports, and change notes by comparing the current version  XMI, with the latest published version of SDS. For dealing with deprecation, refer to <a href="#../../stage2.adoc" class="xref unresolved">../../stage2.adoc</a> for more information. Specifically, the following Business Objects are generated on the develop branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository as described in the <a href="#../../SDS and related artefacts\SDSmodel2owl.adoc#Purpose 4" class="xref unresolved">SES Model2owl document</a>:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -435,23 +422,10 @@ For more information on these concepts, read the <a href="../../SDS%20and%20rela
 <div class="paragraph">
 <p>In the “Product Owner internal review” Business Process, The Product Owner reviews all Objects generated in this stage for each module. Specifically:</p>
 </div>
-<div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The Quality assessment reports.</p>
-</li>
-</ol>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The Quality assessment reports (convention reports).
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; de79c6bae97441da0ed761ee579c417faeb97376</p>
+<p>The Quality assessment reports (convention reports).</p>
 </li>
 <li>
 <p>The Diffing reports.</p>
@@ -495,9 +469,12 @@ For more information on these concepts, read the <a href="../../SDS%20and%20rela
 <p>If no errors are found during the “Product Owner internal review” Business Process, then the <br>
 “Product Owner approves SDS for release” Business Process takes place. During this Process, the Product Owner communicates to the Development Team that no changes are needed in the current version of the SDS, and it can be published as a Release candidate. The Development Team subsequently merges the develop branch to the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model</a> repository.</p>
 </div>
-<div class="paragraph">
-<p>== Application and Technology view</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_application_and_technology_view"><a class="anchor" href="#_application_and_technology_view"></a>Application and Technology view</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The concise diagram for the “Preparing Semantic Data Specification Version Release” Stage that describes all the artefacts involved in this stage using business (yellow), application (blue) and technology (green) layers is depicted in the figure below. The GitHub Repository branch that is used for this stage is also depicted as an orange rectangle for reference purposes. Note that here we do not explain purposes of Artefacts, but we describe what is produced and how. The actual description of the produced Artefacts is provided <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html" class="xref page">here</a>.</p>
 </div>
@@ -673,14 +650,13 @@ For more information on these concepts, read the <a href="../../SDS%20and%20rela
 <div class="paragraph">
 <p><em>The technology layer of the model2owl toolkit</em></p>
 </div>
-<div class="paragraph">
-<p>== Automated Semantic Data Specification generation and validation</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_automated_semantic_data_specification_generation_and_validation"><a class="anchor" href="#_automated_semantic_data_specification_generation_and_validation"></a>Automated Semantic Data Specification generation and validation</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Automated SDS development shall be adopted as the <a href="https://semiceu.github.io/style-guide/1.0.0/index.html">SEMIC style guide</a>  suggests: Using the UML Conceptual model as a <a href="https://semiceu.github.io/style-guide/1.0.0/gc-conceptual-model-conventions.html#sec:cmc-r1">Single Source of Truth</a> principle, and automatically generating the SDS from the UML. For the purposes of automatic generation, we use <a href="https://github.com/OP-TED/model2owl">model2owl</a> tool, described in section 4. Following the <a href="https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/application-profiles-what-are-they-and-how-model-and-reuse-them-properly-look-through-dcat-ap">SEMIC blog articles,</a>  it is clear that automation is needed for all points of the UML transformation to SDS artefacts, and manual transformations should be discouraged and avoided at all costs, as SDS artefacts that are generated manually will often display inconsistencies between them, and the Single Source of Truth.</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
