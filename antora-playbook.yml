@@ -69,7 +69,7 @@ content:
   ### model2owl
   - url: https://github.com/OP-TED/ted-model2owl-docs
     start_path: /
-    branches: bugfix/docs-structure
+    branches: main
 
   ### TED Open Data Service
   - url: https://github.com/OP-TED/ted-rdf-docs
