@@ -342,10 +342,10 @@ Other systems, such as TED Monitor, are internal to the Publications Office and 
 <div class="ulist">
 <ul>
 <li>
-<p>Visit the <a href="https://developer.ted.europa.eu/home">TED Developer Portal</a>.</p>
+<p>Visit the <a href="https://developer.ted.europa.eu/home"><strong>TED Developer Portal</strong></a><sup class="footnote" id="_footnote_portal">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
 </li>
 <li>
-<p>Log in with your EU Login credentials.</p>
+<p>Log in with your <strong>EU Login</strong><sup class="footnote" id="_footnote_eu-login">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> credentials.</p>
 </li>
 <li>
 <p>Generate your API Key via the <strong>Manage API Keys</strong> section.</p>
@@ -410,6 +410,18 @@ The Search API does not require a key.
 </li>
 </ol>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+eSenders and developers can create multiple accounts in the Preview environment for testing. In the Production environment, only one account and one API key per EU Login are allowed. We strongly recommend using a shared or functional email address for setting up Production accounts instead of a personal email.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -419,7 +431,7 @@ The Search API does not require a key.
 <p>User authentication and authorisation (for those TED APIs that require it) is controlled by the use of API keys. TED API keys are essentially UUIDs (Universally Unique Identifiers) without hyphens (dashes).</p>
 </div>
 <div class="paragraph">
-<p>You can generate and manage your own API keys by logging-in to your account in the <a href="https://developer.ted.europa.eu"><strong>TED Developer Portal</strong></a><sup class="footnote" id="_footnote_portal">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
+<p>You can generate and manage your own API keys by logging-in to your account in the <a href="https://developer.ted.europa.eu"><strong>TED Developer Portal</strong></a><sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>If you use the Publication API, after you generate your key, log into the <a href="https://enotices2.ted.europa.eu">eNotices2 website</a> at least once to pair your account and perform at least one valid API request for the system to recognise you as an "eSender".</p>
@@ -439,7 +451,7 @@ Only one API key is allowed per user. The creation of a new API key implies the 
 <div class="sect2">
 <h3 id="_api_key_generation"><a class="anchor" href="#_api_key_generation"></a>API key generation</h3>
 <div class="paragraph">
-<p>You can generate an API Key by logging into the TED Developer Portal<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and clicking on the "Manage your API Keys" button. To login to the TED Developer Portal you will need a valid EU Login<sup class="footnote" id="_footnote_eu-login">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> account.</p>
+<p>You can generate an API Key by logging into the TED Developer Portal<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and clicking on the "Manage your API Keys" button. To login to the TED Developer Portal you will need a valid EU Login<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> account.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -592,7 +604,7 @@ For security reasons API keys are not stored and cannot be retrieved via the TED
 <h2 id="_testing_your_apps"><a class="anchor" href="#_testing_your_apps"></a>Testing your apps</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <a href="https://docs.ted.europa.eu/eforms-common/preview/index.html"><strong>eForms Preview Environment</strong></a> was made available to allow and encourage developers to test their applications before or after deployment.</p>
+<p>The <a href="https://docs.ted.europa.eu/eforms-common/preview/index.html"><strong>eForms Preview Environment</strong></a> was made available to allow and encourage developers to test their applications before or after deployment. Here is how to get started:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -601,7 +613,7 @@ For security reasons API keys are not stored and cannot be retrieved via the TED
 <div class="ulist">
 <ul>
 <li>
-<p>Create an EU Login account in the <a href="https://ecas.acceptance.ec.europa.eu/cas/login">EU-Login Acceptance Environment</a></p>
+<p>Create an EU Login account in the <a href="https://ecas.acceptance.ec.europa.eu/cas/login">EU-Login Acceptance Environment</a>.</p>
 </li>
 <li>
 <p>Generate an API key on the <a href="https://developer.preview.ted.europa.eu/home">TED Developer Portal of the Preview Environment</a> via the <strong>Manage API Keys</strong> section.</p>
