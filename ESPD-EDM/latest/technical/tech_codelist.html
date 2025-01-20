@@ -71,7 +71,7 @@
 </div>
 <div class="body">
 <script src="../../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="ESPD-EDM" data-version="3.3.0">
+<div class="nav-container" data-component="ESPD-EDM" data-version="4.0.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -102,10 +102,10 @@
     <a class="nav-link" href="../business/index.html">Business Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../business/service.html">What is an ESPD Service?</a>
+    <a class="nav-link" href="../business/service.html">The ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../business/using.html">The Structure of an ESPD Service</a>
+    <a class="nav-link" href="../business/using.html">Using an ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
@@ -129,16 +129,16 @@
     <a class="nav-link" href="../../../espd-home/laws.html">Laws and Directives</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Open User Community Documents</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Open User Community Reports</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../../espd-wgm/index.html">Upcoming Meeting Dates</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/monthly.html">Regular Meetings</a>
+    <a class="nav-link" href="../../../espd-wgm/monthly.html">Monthly Reports</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/annual.html">Annual Seminars</a>
+    <a class="nav-link" href="../../../espd-wgm/annual.html">Annual Reports</a>
   </li>
 </ul>
   </li>
@@ -148,7 +148,7 @@
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">ESPD EDM</span>
-          <span class="version">3.3.0</span>
+          <span class="version">4.0.0</span>
       </div>
   <ul class="components">
       <li class="component">
@@ -216,7 +216,10 @@
         <a class="title" href="../index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-current is-latest">
-              <a href="../index.html">3.3.0</a>
+              <a href="../index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../3.3.0/index.html">3.3.0</a>
             </li>
             <li class="version">
               <a href="../../3.2.0/index.html">3.2.0</a>
@@ -280,9 +283,10 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">3.3.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">4.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="tech_codelist.html">3.3.0</a>
+    <a class="version is-current" href="tech_codelist.html">4.0.0</a>
+    <a class="version" href="../../3.3.0/technical/tech_codelist.html">3.3.0</a>
     <a class="version is-missing" href="../../3.2.0/index.html">3.2.0</a>
     <a class="version is-missing" href="../../3.1.0/index.html">3.1.0</a>
     <a class="version is-missing" href="../../3.0.1/index.html">3.0.1</a>
@@ -361,10 +365,10 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Codes are normally maintained in "code lists". The ESPD-EDM keeps and distributes these code lists in Genericode 1.0 (<a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/">GC</a>) files (one *.gc file per code list).</p>
+<p>Codes are normally maintained in "code lists". The ESPD-EDM keeps and distributes these code lists in Genericode 1.0 (<a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/">GC</a>) files (one *.gc file per code list).</p>
 </div>
 <div class="paragraph">
-<p>The ESPD reuses code lists from EU Vocabularies. This is to facilitate alignment between the ESPD and eForms models, ensuring maximum interoperability. The excel and ods code list files themselves are not provided, their metadata and their location in EU Vocabularies is given.</p>
+<p>The ESPD reuses code lists from EU Vocabularies. This is to facilitate alignment between the ESPD and eForms models, ensuring maximum interoperability. The excel and code list files themselves are not provided, their metadata and their location in EU Vocabularies is given.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -398,25 +402,13 @@ For Genericodes it is different. In this version ESPD  provides the genericode (
 </ul>
 </div>
 <div class="paragraph">
-<p>The figure below illustrate how these elements are organised in the code lists maintained in spread-sheets:</p>
+<p>The figure below illustrates how these elements are organised in the code lists maintained in spread-sheets:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Elements_metadata_of_ESPD_codelist.jpg" alt="Elements and metadata of an ESPD code list"></span></p>
 </div>
 <div class="paragraph">
 <p><em>Figure 6. Elements and metadata of an ESPD code list</em></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<strong><em>Annex I</em></strong> of this document lists all the code lists used by the ESPD and in which context or element it is used.
-</td>
-</tr>
-</table>
 </div>
 </div>
 <div class="sect2">
@@ -447,7 +439,7 @@ For Genericodes it is different. In this version ESPD  provides the genericode (
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For identifiers, this ESPD specification requires at least (and always) the mandatory attribute </strong>schemeAgencyID. When identifying parties, like the Economic Operator, the Buyer, etc., the attribute schemeID SHOULD also be used (for this use the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/EOIDType.gc">EOIDType</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For identifiers, this ESPD specification requires at least (and always) the mandatory attribute </strong>schemeAgencyID. When identifying parties, like the Economic Operator, the Buyer, etc., the attribute schemeID SHOULD also be used (for this use the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/EOIDType.gc">EOIDType</a>).</p></td>
 </tr>
 </tbody>
 </table>
@@ -458,7 +450,7 @@ For Genericodes it is different. In this version ESPD  provides the genericode (
 <p>One convenient characteristic of these two CCT elements (Codes and Identifiers) is that they use a rich set of attributes that allow to identify their pattern, the name of the list, the URI from where to obtain the list, the Agency that maintains the list, the version of the list, and other.</p>
 </div>
 <div class="paragraph">
-<p>UBL-2.3 CCT are defined in the file CCTS_CCT_SchemaModule-2.3.xsd (see folders xsd/common or xsdrt/common in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0">distribution package</a>).</p>
+<p>UBL-2.3 CCT are defined in the file CCTS_CCT_SchemaModule-2.3.xsd (see folders xsd/common or xsdrt/common in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0">distribution package</a>).</p>
 </div>
 <div class="paragraph">
 <p>The figure below shows the complete list of attributes for the CCT CodeType component.</p>
@@ -597,38 +589,46 @@ The source code can be copied from the code block below the callout section
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.3&lt;/cbc:UBLVersionID&gt;
-
+<pre><i class="conum" data-value="1"></i><b>(1)</b>
+&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.3&lt;/cbc:UBLVersionID&gt;
+<i class="conum" data-value="2"></i><b>(2)</b>
 &lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
-
-&lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP" schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
-
-&lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/cbc:ContractFolderID&gt;
-
+&lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP"
+<i class="conum" data-value="3"></i><b>(3)</b>
+          schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
+<i class="conum" data-value="4"></i><b>(4)</b>
+&lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/
+cbc:ContractFolderID&gt;
+<i class="conum" data-value="5"></i><b>(5)</b>
 &lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1.0&lt;/cbc:VersionID&gt;</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The Agency responsible for the maintenance of the UBL versioning is the OASIS UBL Technical Committee</p>
-</li>
-<li>
-<p>The identifier for this document was issued by the a Spanish Central Government Directorate identified as 'DGPE'</p>
-</li>
-<li>
-<p>The UUID follows the ISO/IEC Scheme 9834-8:2008 Version 4 and was generated by the European Commission&#8217;s Directorate General GROWTH (DG GROW)</p>
-</li>
-<li>
-<p>The reference number used to identify to which procurement procedure this ESPD document belongs (PP.20170419.1024-9) has been supplied by the Spanish Directorate DGPE</p>
-</li>
-<li>
-<p>Generic information, such as the content version ID, use always by default the "OP" Agency ID. Notice that the other additional attributes may be also used, as in this example.</p>
-</li>
-<li>
-<p>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder /codelists of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0">distribution package</a>.</p>
-</li>
-</ol>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The Agency responsible for the maintenance of the UBL versioning is the OASIS UBL Technical Committee</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The identifier for this document was issued by the a Spanish Central Government Directorate identified as 'DGPE'</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The UUID follows the ISO/IEC Scheme 9834-8:2008 Version 4 and was generated by the European Commission&#8217;s Directorate General GROWTH (DG GROW)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The reference number used to identify to which procurement procedure this ESPD document belongs (PP.20170419.1024-9) has been supplied by the Spanish Directorate DGPE</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Generic information, such as the content version ID, use always by default the "OP" Agency ID. Notice that the other additional attributes may be also used, as in this example.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder /codelists of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0">distribution package</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -636,13 +636,10 @@ The source code can be copied from the code block below the callout section
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.3&lt;/cbc:UBLVersionID&gt;
-
 &lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
-
-&lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP" schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
-
+&lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP"
+          schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
 &lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/cbc:ContractFolderID&gt;
-
 &lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1.0&lt;/cbc:VersionID&gt;</code></pre>
 </div>
 </div>
@@ -654,7 +651,7 @@ The source code can be copied from the code block below the callout section
 <p>Code lists contain the code identifiers that are expected as "values" for a data element of type CODE (i.e. a UBL-2.3. cbc:CodeType element). This is case of code lists such as <em>eo-role-type</em>, or <em>docref-content-type</em>, etc.</p>
 </div>
 <div class="paragraph">
-<p>However, this ESP-EDM specification also uses the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/EOIDType.gc">EOIDType</a> with a different purpose, "the identification of the type of scheme used to identify parties, namely Economic Operators" (but should also used to identify the schemes used to identify Buyers, Service Providers, etc.).</p>
+<p>However, this ESP-EDM specification also uses the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/EOIDType.gc">EOIDType</a> with a different purpose, "the identification of the type of scheme used to identify parties, namely Economic Operators" (but should also used to identify the schemes used to identify Buyers, Service Providers, etc.).</p>
 </div>
 <div class="paragraph">
 <p>The figure below shows the possible values of this code list. These codes are to be used as values of the schemeID attribute (attribute of the UBL-2.3 element cbc:Identifier):</p>
@@ -671,8 +668,11 @@ The source code can be copied from the code block below the callout section
 <div class="paragraph">
 <p><em>TenderingCriterionProperty (a QUESTION) asking for the identifier of the Economic Operator</em></p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_xml_example_2"><a class="anchor" href="#_xml_example_2"></a>1.6. XML Example</h3>
 <div class="sect3">
-<h4 id="_code_with_callouts_2"><a class="anchor" href="#_code_with_callouts_2"></a>1.5.1. Code with callouts</h4>
+<h4 id="_code_with_callouts_2"><a class="anchor" href="#_code_with_callouts_2"></a>1.6.1. Code with callouts</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -688,43 +688,45 @@ The source code can be copied from the code block below the callout section
 <div class="listingblock">
 <div class="content">
 <pre>&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ID&gt;
-
-&lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
-
-&lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
-
-&lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ECONOMIC_OPERATOR_IDENTIFIER&lt;/cbc:ValueDataTypeCode&gt;
-
+  &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+     1fa05728-308f-43b0-b547-c903ffb0a8af
+  <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;/cbc:ID&gt;
+  &lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
+  &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+  &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;
+    ECONOMIC_OPERATOR_IDENTIFIER
+  <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;/cbc:ValueDataTypeCode&gt;
 &lt;/cac:TenderingCriterionProperty&gt;</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The identifier of the property will be used in the response to map link the response to this QUESTION.</p>
-</li>
-<li>
-<p>The ECONOMIC_OPERATOR_IDENTIFIER is mapped to an element cbc:ResponseID in the response (which is based on the UBL-2.3. element cbc:Identifier).</p>
-</li>
-</ol>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The identifier of the property will be used in the response to map link the response to this QUESTION.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The ECONOMIC_OPERATOR_IDENTIFIER is mapped to an element cbc:ResponseID in the response (which is based on the UBL-2.3. element cbc:Identifier).</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_copy_the_code_block_2"><a class="anchor" href="#_copy_the_code_block_2"></a>1.5.2. Copy the code block</h4>
+<h4 id="_copy_the_code_block_2"><a class="anchor" href="#_copy_the_code_block_2"></a>1.6.2. Copy the code block</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ID&gt;
-
-&lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
-
-&lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
-
-&lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ECONOMIC_OPERATOR_IDENTIFIER&lt;/cbc:ValueDataTypeCode&gt;
-
+  &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+     1fa05728-308f-43b0-b547-c903ffb0a8af
+  &lt;/cbc:ID&gt;
+  &lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
+  &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+  &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;
+    ECONOMIC_OPERATOR_IDENTIFIER
+  &lt;/cbc:ValueDataTypeCode&gt;
 &lt;/cac:TenderingCriterionProperty&gt;</code></pre>
 </div>
 </div>
@@ -732,8 +734,11 @@ The source code can be copied from the code block below the callout section
 <p><em>TenderingCriterionResponse (the answer to the previous QUESTION)</em></p>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_xml_example_3"><a class="anchor" href="#_xml_example_3"></a>1.7. XML Example</h3>
 <div class="sect3">
-<h4 id="_code_with_callouts_3"><a class="anchor" href="#_code_with_callouts_3"></a>1.5.3. Code with callouts</h4>
+<h4 id="_code_with_callouts_3"><a class="anchor" href="#_code_with_callouts_3"></a>1.7.1. Code with callouts</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -749,32 +754,43 @@ The source code can be copied from the code block below the callout section
 <div class="listingblock">
 <div class="content">
 <pre>&lt;cac:TenderingCriterionResponse&gt;
-&lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
-&lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ValidatedCriterionPropertyID&gt;
-&lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;B82387770&lt;/cbc:ResponseID&gt;
+  &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
+  &lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+    1fa05728-308f-43b0-b547-c903ffb0a8af
+  <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;/cbc:ValidatedCriterionPropertyID&gt;
+  &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;
+    B82387770
+  <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;/cbc:ResponseID&gt;
 &lt;/cac:TenderingCriterionResponse&gt;</pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Notice that this UUID is identical to the QUESTION UUID, which is the mechanism used in UBL to link the answer to the very specific QUESTION it is responding.</p>
-</li>
-<li>
-<p>The element cbc:ResponseID is of type Identifier(as defined in the Core Component Type Specification library). The value ''VAT'' assigned to the attribute schemeID, taken from the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/EOIDType.gc">EOIDType</a>, is used to indicate that the type of identifier used is the Value Added Tax identifier issued by the Spanish Tax Agency (ES-AEAT).
-.a</p>
-</li>
-</ol>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Notice that this UUID is identical to the QUESTION UUID, which is the mechanism used in UBL to link the answer to the very specific QUESTION it is responding.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The element cbc:ResponseID is of type Identifier(as defined in the Core Component Type Specification library). The value ''VAT'' assigned to the attribute schemeID, taken from the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/EOIDType.gc">EOIDType</a>, is used to indicate that the type of identifier used is the Value Added Tax identifier issued by the Spanish Tax Agency (ES-AEAT).</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_copy_the_code_block_3"><a class="anchor" href="#_copy_the_code_block_3"></a>1.5.4. Copy the code block</h4>
+<h4 id="_copy_the_code_block_3"><a class="anchor" href="#_copy_the_code_block_3"></a>1.7.2. Copy the code block</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionResponse&gt;
-&lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
-&lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ValidatedCriterionPropertyID&gt;
-&lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;B82387770&lt;/cbc:ResponseID&gt;
+  &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
+  &lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+    1fa05728-308f-43b0-b547-c903ffb0a8af
+  &lt;/cbc:ValidatedCriterionPropertyID&gt;
+  &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;
+    B82387770
+  &lt;/cbc:ResponseID&gt;
 &lt;/cac:TenderingCriterionResponse&gt;</code></pre>
 </div>
 </div>
@@ -789,7 +805,7 @@ The source code can be copied from the code block below the callout section
 <h2 id="access-right-table"><a class="anchor" href="#access-right-table"></a>2. access-right</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>An example of how to use this code list can be found in <a href="tech_codelist_examples.html#access-right-xml-example" class="xref page">access-right xml example</a>.</p>
+<p>An example of how to use this code list can be found in <a href="tech_codelist_examples.html#access-right-xml-example" class="xref page">access-right xml Example</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -843,7 +859,7 @@ The source code can be copied from the code block below the callout section
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20220316-0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20240612-0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -851,11 +867,11 @@ The source code can be copied from the code block below the callout section
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/access-right/20220316-0" class="bare">http://publications.europa.eu/resource/dataset/access-right/20220316-0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/access-right/20240612-0" class="bare">http://publications.europa.eu/resource/dataset/access-right/20240612-0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/access-right" class="bare">https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/access-right</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/access-right/20240612-0/xml/gc/AccessRight.gc" class="bare">http://publications.europa.eu/resource/distribution/access-right/20240612-0/xml/gc/AccessRight.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -927,7 +943,7 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -935,11 +951,11 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/BooleanGUIControlType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/BooleanGUIControlType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/BooleanGUIControlType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/BooleanGUIControlType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -981,7 +997,7 @@ Contains values to be use by software implementations to display graphic control
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Contains controlled vocabulary that lists concepts associated with names of countries and territories with a three letter coding.</p>
+<p>Contains controlled vocabulary that lists concepts associated with names of countries and territories with a three-letter coding.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1006,7 +1022,7 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20220928-0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20240925-0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1014,11 +1030,11 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/country/20220928-0" class="bare">http://publications.europa.eu/resource/dataset/country/20220928-0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/country/20240925-0" class="bare">http://publications.europa.eu/resource/dataset/country/20240925-0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/country/20220928-0/xml/gc/Country.gc" class="bare">http://publications.europa.eu/resource/distribution/country/20220928-0/xml/gc/Country.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/country/20240925-0/xml/gc/Country.gc" class="bare">http://publications.europa.eu/resource/distribution/country/20240925-0/xml/gc/Country.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -1093,7 +1109,7 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20230315-0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20240612-0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1101,11 +1117,11 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/criterion/20230315-0" class="bare">http://publications.europa.eu/resource/dataset/criterion/20230315-0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/criterion/20240612-0" class="bare">http://publications.europa.eu/resource/dataset/criterion/20240612-0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/criterion/20230315-0/xml/gc/Criterion.gc" class="bare">http://publications.europa.eu/resource/distribution/criterion/20230315-0/xml/gc/Criterion.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/criterion/20240612-0/xml/gc/Criterion.gc" class="bare">http://publications.europa.eu/resource/distribution/criterion/20240612-0/xml/gc/Criterion.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -1176,7 +1192,7 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1184,11 +1200,11 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/CriterionElementType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/CriterionElementType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/CriterionElementType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/CriterionElementType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -1422,7 +1438,7 @@ This code list is maintained as technical for the time being. In the future it m
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20220316-0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20240612-0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1430,11 +1446,11 @@ This code list is maintained as technical for the time being. In the future it m
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/economic-operator-size/20220316-0" class="bare">http://publications.europa.eu/resource/dataset/economic-operator-size/20220316-0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/economic-operator-size/20240612-0" class="bare">http://publications.europa.eu/resource/dataset/economic-operator-size/20240612-0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/economic-operator-size/20220316-0/xml/gc/EconomicOperatorSize.gc" class="bare">http://publications.europa.eu/resource/distribution/economic-operator-size/20220316-0/xml/gc/EconomicOperatorSize.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/economic-operator-size/20240612-0/xml/gc/EconomicOperatorSize.gc" class="bare">http://publications.europa.eu/resource/distribution/economic-operator-size/20240612-0/xml/gc/EconomicOperatorSize.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -1484,7 +1500,7 @@ This code list is maintained as technical for the time being. In the future it m
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Contains coded party&#8217;s identification type used in <strong><em>cac:PartyIdentification</em></strong>.
+<p>Contains coded parts identification type used in <strong><em>cac:PartyIdentification</em></strong>.
 This code list is maintained as technical for the time being. In the future it may be removed or published on EU Vocabularies.</p>
 </div></div></td>
 </tr>
@@ -1506,7 +1522,7 @@ This code list is maintained as technical for the time being. In the future it m
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1514,11 +1530,11 @@ This code list is maintained as technical for the time being. In the future it m
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/EOIDType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/EOIDType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/EOIDType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/EOIDType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -1669,7 +1685,7 @@ This code list is maintained by the ESPD Team and codes are collected from Banqu
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1677,11 +1693,11 @@ This code list is maintained by the ESPD Team and codes are collected from Banqu
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/FinancialRatioType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/FinancialRatioType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/FinancialRatioType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/FinancialRatioType.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -1757,7 +1773,7 @@ The concepts included are correlated with the ISO 639 international standard.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20220928-0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20240925-0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1765,11 +1781,11 @@ The concepts included are correlated with the ISO 639 international standard.</p
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/language/20220928-0" class="bare">http://publications.europa.eu/resource/dataset/language/20220928-0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/language/20240925-0" class="bare">http://publications.europa.eu/resource/dataset/language/20240925-0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/language/20220928-0/xml/gc/Language.gc" class="bare">http://publications.europa.eu/resource/distribution/language/20220928-0/xml/gc/Language.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/language/20240925-0/xml/gc/Language.gc" class="bare">http://publications.europa.eu/resource/distribution/language/20240925-0/xml/gc/Language.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -1820,7 +1836,7 @@ The concepts included are correlated with the ISO 639 international standard.</p
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Contains codes for professional enrolment areas in which the Economic Operator must be registered in.
-This code list is maintained by the ESPD Team but content is collected from the <a href="https://esco.ec.europa.eu/en/classification">esco classification</a> (from now on <strong>ESCO</strong>). This code list remains as technical but in the future it could be published in EU Vocabularies or provided directly from <strong>ESCO</strong>.
+This code list is maintained by the ESPD Team but content is collected from the <a href="#esco">[esco]</a> (from now on <strong>ESCO</strong>) classification. This code list remains as technical but in the future it could be published in EU Vocabularies or provided directly from <strong>ESCO</strong>.
 The data type expected for this code is URL following the <strong>ESCO</strong> taxonomy identification that uses a URI as the key value.</p>
 </div></div></td>
 </tr>
@@ -1923,7 +1939,7 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -1931,11 +1947,11 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/ProfileExecutionID.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/ProfileExecutionID.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/ProfileExecutionID.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/ProfileExecutionID.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -1975,11 +1991,8 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Contains coded types to be used by software implementations to control which elements to be rendered in the displayed user interface.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+</div>
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -1995,7 +2008,7 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -2003,11 +2016,11 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/PropertyGroupType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/PropertyGroupType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/PropertyGroupType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/PropertyGroupType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -2047,11 +2060,8 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Contains identifiers used to describe data type expected in criteria elements.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+</div>
+<table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -2067,7 +2077,7 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
@@ -2075,11 +2085,11 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/ResponseDataType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/ResponseDataType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/ResponseDataType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/ResponseDataType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
