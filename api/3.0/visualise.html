@@ -260,16 +260,16 @@
     <article class="doc">
 <h1 class="page">Visualisation API</h1>
 <div class="sect1">
-<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available operations</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Render procurement notices into user-friendly formats for publication or internal use.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/render 	Generate formatted notices (synchronous rendering)
+POST /v3/notices/render-async 	Generate formatted notices (asynchronous rendering)</code></pre>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -278,31 +278,30 @@
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_swagger_api_endpoint"><a class="anchor" href="#_swagger_api_endpoint"></a>Swagger API Endpoint</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Visualisation/render" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Visualisation/render</a></p>
+</li>
+<li>
+<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Visualisation/renderWithCallback" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Visualisation/renderWithCallback</a></p>
+</li>
+</ul>
 </div>
-<div class="sect1">
-<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Visualisation API makes procurement notices easier to read and share by converting them into familiar formats. It supports both public dissemination and internal workflows.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This API provides operations in two variants. For larger, more complex notices, the asynchronous API should be used to prevent request time-outs.
+</td>
+</tr>
+</table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/render 	Generate formatted notices (synchronous rendering)
-POST /v3/notices/render-async 	Generate formatted notices (asynchronous rendering)</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_note"><a class="anchor" href="#_note"></a>Note</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This API provides operations in two variants. For larger, more complex notices, the asynchronous API should be used to prevent request time-outs.</p>
 </div>
 </div>
 </div>
@@ -312,13 +311,13 @@ POST /v3/notices/render-async 	Generate formatted notices (asynchronous renderin
 <div class="ulist">
 <ul>
 <li>
-<p>Organisations integrating visualised notices into their platforms.</p>
+<p><strong>Organisations</strong>: Integrating visualised notices into their platforms.</p>
 </li>
 <li>
-<p>TED developers generating previews for notices.</p>
+<p><strong>TED developers</strong>: Generating previews for notices.</p>
 </li>
 <li>
-<p>eNotices2 for the rendering of notices.</p>
+<p><strong>eNotices2</strong>: For the rendering of notices via the web interface in PDF or HTML.</p>
 </li>
 </ul>
 </div>

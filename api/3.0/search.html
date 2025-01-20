@@ -259,76 +259,77 @@
 </aside>
     <article class="doc">
 <h1 class="page">Search API</h1>
-<div class="sect1">
-<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Allows developers to search and retrieve published procurement notices and their data.</p>
+<p>The Search API allows developers to search and retrieve published procurement notices and their data. It ensures transparency and accessibility by providing programmatic access to publicly available procurement information for analysis and reuse.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Provides access to published notices via expert queries.</p>
-</li>
-<li>
-<p>Enables bulk downloads of notices in XML format for analysis or reuse.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Search API is mostly targeted to data reusers; it ensures transparency and accessibility by making publicly available procurement data easy to find and reuse.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
+<h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available Operations</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/search		Search and retrieve published notices</code></pre>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_special_features"><a class="anchor" href="#_special_features"></a>Special Features</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This API does not require authentication, making it accessible to any system or user.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What it Does</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Commercial organisations providing added-value services to vendors and buyers by integrating TED data into their platforms.</p>
+<p>Provides access to published notices via expert queries.</p>
 </li>
 <li>
-<p>Researchers analysing public procurement trends.</p>
+<p>Enables bulk downloads of notices in XML format for reuse or analysis.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Search API is mostly targeted to data reusers; it does not require authentication, making it openly accessible to any system or user.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_swagger_api_endpoint"><a class="anchor" href="#_swagger_api_endpoint"></a>Swagger API Endpoint</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Search/search" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Search/search</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Commercial Organisations</strong>: Integrating TED data into platforms to provide added-value services for vendors and buyers.</p>
 </li>
 <li>
-<p>Developers creating transparency tools or reusing public data.</p>
+<p><strong>Researchers</strong>: Analysing public procurement trends and patterns.</p>
 </li>
 <li>
-<p>eNotices2 web interface when a user imports a notice from TED to continue a procedure.</p>
+<p><strong>Developers</strong>: Creating transparency tools or reusing public data.</p>
+</li>
+<li>
+<p><strong>eNotices2 Users</strong>: Importing a notice from TED via the web interface to continue a procedure.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
 <p>Explore the full documentation here: <a href="https://ted.europa.eu/en/simap/developers-corner-for-reusers">Developers' corner: APIs for your own integration - ted.europa.eu - TED</a></p>
+</div>
 </div>
 </div>
 </div>
