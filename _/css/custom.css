@@ -208,3 +208,11 @@ div.qanda > ol > li {
 .doc table.fixed-layout {
     table-layout: fixed;
 }
+
+.indent4 {
+    padding-left: 4rem;
+}
+
+.indent8 {
+    padding-left: 8rem;
+}
