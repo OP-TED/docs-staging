@@ -267,59 +267,120 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available Operations</h2>
+<h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available operations</h2>
 <div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/			        Query submitted notices</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Enables synchronization of notice metadata, such as publication status, during the publication process.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_swagger_api_endpoint"><a class="anchor" href="#_swagger_api_endpoint"></a>Swagger API Endpoint</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://api.acceptance.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getNotices" class="bare">https://api.acceptance.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getNotices</a></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/{businessId}/stop-publication	Request to stop the publication of submitted notice</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_what_it_does_2"><a class="anchor" href="#_what_it_does_2"></a>What It Does</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Stops the publication of notices that are successfully submitted but not yet published.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_swagger_api_endpoint_2"><a class="anchor" href="#_swagger_api_endpoint_2"></a>Swagger API Endpoint</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/stopPublication" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/stopPublication</a></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/{businessId}/validation-report	Retrieve validation report for submitted notice</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_what_it_does_3"><a class="anchor" href="#_what_it_does_3"></a>What It Does</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Provides the validation report that is created when a notice is submitted for publication.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_swagger_api_endpoint_3"><a class="anchor" href="#_swagger_api_endpoint_3"></a>Swagger API Endpoint</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getValidationReport" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getValidationReport</a></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/submit			        Submit new notices for publication on TED</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_what_it_does_4"><a class="anchor" href="#_what_it_does_4"></a>What It Does</h4>
 <div class="ulist">
 <ul>
 <li>
 <p>Allows programmatic submission of notices for publication.</p>
 </li>
-<li>
-<p>Stops publication of notices that have been successfully submitted but not yet published.</p>
-</li>
-<li>
-<p>Retrieves the validation reports of one’s own submitted notices.</p>
-</li>
-<li>
-<p>Enables querying of one’s own submitted notices allowing synchronisation of the notice metadata, e.g. a notice status during the publication process.</p>
-</li>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The Publication API automates the handling of procurement notices, reducing reliance on manual processes. It empowers eSenders and public authorities to manage notices efficiently at scale.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/submit			        Submit new notices for publication on TED
-POST /v3/notices/{businessId}/stop-publication	Request to stop the publication of submitted notice
-GET /v3/notices/{businessId}/validation-report	Retrieve validation report for submitted notice
-GET /v3/notices/			        Query submitted notices</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_swagger_api_endpoint_4"><a class="anchor" href="#_swagger_api_endpoint_4"></a>Swagger API Endpoint</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>eSenders managing notices on behalf of contracting authorities.</p>
-</li>
-<li>
-<p>Public authorities managing their own procurement notices through an application that connects to the Publication API</p>
+<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/submitNotice" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/submitNotice</a></p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>eSenders</strong>: Managing notices on behalf of contracting authorities.</p>
+</li>
+<li>
+<p><strong>Public Authorities</strong>: Handling their own procurement notices through connected applications.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
