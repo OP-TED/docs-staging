@@ -71,7 +71,7 @@
 </div>
 <div class="body">
 <script src="../../../_/js/07-scrollable-header-nav.js"></script>
-<div class="nav-container" data-component="ESPD-EDM" data-version="4.0.0">
+<div class="nav-container" data-component="ESPD-EDM" data-version="3.3.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -102,10 +102,10 @@
     <a class="nav-link" href="../business/index.html">Business Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../business/service.html">The ESPD Service</a>
+    <a class="nav-link" href="../business/service.html">What is an ESPD Service?</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../business/using.html">Using an ESPD Service</a>
+    <a class="nav-link" href="../business/using.html">The Structure of an ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
@@ -129,16 +129,16 @@
     <a class="nav-link" href="../../../espd-home/laws.html">Laws and Directives</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Open User Community Reports</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Open User Community Documents</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../../../espd-wgm/index.html">Upcoming Meeting Dates</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/monthly.html">Monthly Reports</a>
+    <a class="nav-link" href="../../../espd-wgm/monthly.html">Regular Meetings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/annual.html">Annual Reports</a>
+    <a class="nav-link" href="../../../espd-wgm/annual.html">Annual Seminars</a>
   </li>
 </ul>
   </li>
@@ -148,7 +148,7 @@
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">ESPD EDM</span>
-          <span class="version">4.0.0</span>
+          <span class="version">3.3.0</span>
       </div>
   <ul class="components">
       <li class="component">
@@ -216,10 +216,7 @@
         <a class="title" href="../index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-current is-latest">
-              <a href="../index.html">4.0.0</a>
-            </li>
-            <li class="version">
-              <a href="../../3.3.0/index.html">3.3.0</a>
+              <a href="../index.html">3.3.0</a>
             </li>
             <li class="version">
               <a href="../../3.2.0/index.html">3.2.0</a>
@@ -283,10 +280,9 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">3.3.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="tech_request.html">4.0.0</a>
-    <a class="version" href="../../3.3.0/technical/tech_request.html">3.3.0</a>
+    <a class="version is-current" href="tech_request.html">3.3.0</a>
     <a class="version is-missing" href="../../3.2.0/index.html">3.2.0</a>
     <a class="version is-missing" href="../../3.1.0/index.html">3.1.0</a>
     <a class="version is-missing" href="../../3.0.1/index.html">3.0.1</a>
@@ -329,9 +325,6 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>The ESPD-EDM uses the UBL-2.3 document named QualificationApplicationRequest.xsd XSD Schema. This schema can be found under the GitHub folder <a href="https://github.com/OP-TED/ESPD-EDM/tree/master/ubl-2.3/xsdrt/maindoc">ubl-2.3/xsdrt/maindoc</a> (or the equivalent documented xsd folder).</p>
 </div>
 <div class="paragraph">
-<p>The figure below shows the XSD Schema defined by UBL-2.3 for the document "Qualification Application Request". This schema replaces the previous scheme form UBL 2.2.</p>
-</div>
-<div class="paragraph">
 <p>The figure below shows a diagram representing the UBL-2.3 XSD Schema. Only the first level components of the schema are shown. The inner sub-elements and sub-classes are covered in detail in the following sub-sections of this document.</p>
 </div>
 <div class="paragraph">
@@ -371,7 +364,7 @@ The links to the business code explanations are provided by <a href="https://dig
 </ol>
 </div>
 <div class="paragraph">
-<p>The cardinality constraints added by the ESPD are not defined in the XSD Schema. To control these constraints, the ESPD-EDM uses <a href="https://schematron.com/">ISO Schematron</a> assertions. The ESPD-EDM distribution package provides Schematron schemata and CVA files for the validation of the XML instances (folder <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/validation"><em>/validation</em></a>).</p>
+<p>The cardinality constraints added by the ESPD are not defined in the XSD Schema. To control these constraints, the ESPD-EDM uses <a href="https://schematron.com/">ISO Schematron</a> assertions. The ESPD-EDM distribution package provides Schematron schemata and CVA files for the validation of the XML instances (folder <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/validation"><em>/validation</em></a>).</p>
 </div>
 </div>
 </div>
@@ -398,7 +391,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>Information requirement:</p>
 </div>
 <div class="paragraph">
-<p>Note that <strong>all theses documents share the same business rule identifiers</strong> (e.g. tbrxx-yyy for Business Requirement Identifiers in ESPDInt, and BR-Type-Id#n for the Test Cases technical rules).</p>
+<p>Note that <strong>all these documents share the same business rule identifiers</strong> (e.g. tbrxx-yyy for Business Requirement Identifiers in ESPDInt, and BR-Type-Id#n for the Test Cases technical rules).</p>
 </div>
 </td>
 </tr>
@@ -436,7 +429,7 @@ The links to the business code explanations are provided by <a href="https://dig
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/ubl-2.3/xsd/maindoc/">/ubl-2.3/xsd/maindoc/UBL-QualificationApplicationRequest-2.3.xsd</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/ubl-2.3/xsd/maindoc/">/ubl-2.3/xsd/maindoc/UBL-QualificationApplicationRequest-2.3.xsd</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -491,7 +484,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <th class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:ID</strong></p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">1</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">An identifier for this document, normally generated by the system that creates the ESPD document, or the organisation responsible for the document (e.g. the buyer, e.g. a buyer, or the supplier, e.g. an economic operator). An identifier for this document, normally generated by the system that creates the ESPD document, or the organisation responsible for the document (e.g. the buyer, e.g. a buyer, or the supplier, e.g. an economic operator). The identifier enables positive referencing the document instance for various purposes including referencing between transactions that are part of the same process.</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">An identifier for this document, normally generated by the system that creates the ESPD document, or the organisation responsible for the document (e.g. the buyer, e.g. a buyer, or the supplier, e.g. an economic operator). The identifier enables referencing the document instance for various purposes including referencing between transactions that are part of the same process.</p></th>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-002"><em>tbr070-002</em></a>.</p>
 </div>
@@ -507,10 +500,14 @@ The links to the business code explanations are provided by <a href="https://dig
 <th class="tableblock halign-left valign-top"><p class="tableblock">Indicator</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Indicates whether this document is a copy (true) or not (false).<br>
-ESPD definition: this component enables to keep track of the event of having forwarded the same document several times to the same or to different destinations.<br>
-Additional comments: copies of an ESPD document should be identified with same UUIDs.a</p></th>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-002"><em>tbr070-002</em></a>.</p>
-<p class="tableblock"><strong>Rule</strong>: It is a good practice to use the CopyIndicator component if the same document is forwarded several times to the same or to different destinations. Use it in combination with the UUID identifier: copies of an ESPD document should be identified with same UUIDs.</p></td>
+ESPD definition: this component indicates if the document is an original or a copy, i.e., has or has not been generated or sent previously. <br>
+Additional comments: copies of an ESPD document should be identified with same UUIDs.</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-002"><em>tbr070-002</em></a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Rule</strong>: It is a good practice to use the CopyIndicator component if the same document is forwarded several times to the same or to different destinations. Use it in combination with the UUID identifier: copies of an ESPD document should be identified with same UUIDs.</p>
+</div></div></td>
 </tr>
 <tr>
 <th class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:UUID</strong></p></th>
@@ -763,7 +760,7 @@ Reference</strong></p></th>
 <div class="sect2">
 <h3 id="_lot_identifiers"><a class="anchor" href="#_lot_identifiers"></a>Lot identifiers</h3>
 <div class="paragraph">
-<p>This version of the ESPD changes the form to identify Lots and Groups of Lots, taking the eForms format. This changes is done with the aim of improving the interoperability of both models.</p>
+<p>This version of the ESPD changes the form to identify Lots and Groups of Lots, taking the eForms format. This change is done with the aim of improving the interoperability of both models.</p>
 </div>
 <div class="paragraph">
 <p>Up to version 2.1.1, the lots were identified with the following structure, "Lot1, Lot2, Lot3". With the new approach (eForms), the Lots identifiers will be as follows:</p>
@@ -798,7 +795,7 @@ Reference</strong></p></th>
 <div class="sect2">
 <h3 id="_mock_up"><a class="anchor" href="#_mock_up"></a>Mock-up</h3>
 <div class="paragraph">
-<p>The Figure below is a mock-up of how to collect the data expected to reference publications on official gazettes or journals. This mechanism can, of course, also be used for contracts below the threshold.</p>
+<p>The Figure below is a mock-up of how to collect the data expected to reference publications on official gazettes or journals. This mechanism can, of course, also be used for contracts below the <a href="https://single-market-economy.ec.europa.eu/single-market/public-procurement/legal-rules-and-implementation/thresholds_en">minimum threshold</a> value above which the harmonised rules for tenders whose monetary value exceeds a certain amount and which are presumed to be of cross-border interest.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/Publications_mock-up.jpg" alt="Publications mock-up" width="500" height="459"></span></p>
@@ -928,7 +925,7 @@ Reference</strong></p></th>
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-007"><em>tbr070-007</em></a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: For the ESDP-EDM it is compulsory to use the Code List "docref-content-type". See the example below on how to specify the OJS Contract Notice. If, for other documents, the type of document is not available in this list, provide the code "Other" and describe the content in the element DocumentType.</p>
+<p><strong>Rule</strong>: For the ESPD-EDM it is compulsory to use the Code List "docref-content-type". See the example below on how to specify the OJS Contract Notice. If, for other documents, the type of document is not available in this list, provide the code "Other" and describe the content in the element DocumentType.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-OTH-01, BR-OTH-01#3, BR-OTH-03)</p>
@@ -976,7 +973,7 @@ Reference</strong></p></th>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Beware that the ESPD document does not embed the content of referenced documents, instead it make a reference to its source. Thus the class 'DocumentReference' aggregates a 'cac:Attachment' class that allows for embedding the content or making reference to an external source of the content. This is the preferred way in the ESPD (see the XSD schema above):</p>
+<p>Beware that the ESPD document does not embed the content of referenced documents, instead it makes a reference to its source. Thus the class 'DocumentReference' aggregates a 'cac:Attachment' class that allows for embedding the content or making reference to an external source of the content. This is the preferred way in the ESPD (see the XSD schema above):</p>
 </div>
 <div class="paragraph">
 <p>The mapping between the business requirements, the logic layer of the ESPD-EDM, and the UBL-2.3 physical layer:</p>
@@ -1109,7 +1106,7 @@ Reference</strong></p></th>
 
 &lt;cac:AdditionalDocumentReference&gt;
 
-&lt;!-- Contract Notice publishied on the Spanish Central eTendering Platform "PLACE" Plataforma de Contratación del Sector Público --&gt;
+&lt;!-- Contract Notice published on the Spanish Central eTendering Platform "PLACE" Plataforma de Contratación del Sector Público --&gt;
 
 &lt;cbc:ID schemeAgencyID="PLACE"&gt;3.17/20830.0160&lt;/cbc:ID&gt;
 
@@ -1144,7 +1141,7 @@ Reference</strong></p></th>
 <p>For TED Notices, the Publications Office Official Journal Supplement number must be used in its original format [][][][]/S [][][]-[][][][][][], e.g. 2017/S 142-293520. Notice that the schemeAgencyID is OP (OP standing for 'Publications Office').</p>
 </li>
 <li>
-<p>The jurisdiction scope of this document is typified in the Code List docref-content-type (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package). <strong>Beware that the name and content of this Code List has changed from the previous ESPD-EDM version 2.1.1</strong>.</p>
+<p>The jurisdiction scope of this document is typified in the Code List docref-content-type (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package). <strong>Beware that the name and content of this Code List has changed from the previous ESPD-EDM version 2.1.1</strong>.</p>
 </li>
 <li>
 <p>The actual content is never embedded in the ESPD documents. Rather the content is always referenced from its original source (alignment with the Once-Only-Principle).</p>
@@ -1153,13 +1150,13 @@ Reference</strong></p></th>
 <p>The title of the CN must be placed in the FileName field of the attachment. UBL does not provide a placeholder for the title of the document.</p>
 </li>
 <li>
-<p>If publication on TED is at the ESPD Request preparation time, and the procurer does not yet have the OJS number, they can receive a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</p>
+<p>If the notice publication on TED is at the ESPD Request preparation time i.e., the procurer does not yet have the OJS number, they can use a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</p>
 </li>
 <li>
 <p>schemeAgencyID is used in this example to specify that the national Agency that created this reference to the national publication (e.g., "PLACE" to refer to the ID of the national electronic board where the CN was published). The pattern of the ID is the one created by the Spanish buyer.</p>
 </li>
 <li>
-<p>In this case, the code NOJCN means 'Contract Notice (CN) published on a National Government Official Journal' (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package).</p>
+<p>In this case, the code NOJCN means 'Contract Notice (CN) published on a National Government Official Journal' (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/DocRefContentType.gc">/codelists/gc/DocRefContentType.gc</a> in the distribution package).</p>
 </li>
 </ol>
 </div>
@@ -1350,7 +1347,7 @@ Reference</strong></p></th>
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-001"><em>tbr070-001</em></a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: When possible, use the VAT identification of the contracting body (see the <a href="https://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system). When not possible, a different identifier may be used. The code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/EOIDType.gc">EOIDType</a> may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
+<p><strong>Rule</strong>: When possible, use the VAT identification of the contracting body (see the <a href="https://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system). When not possible, a different identifier may be used. The code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/EOIDType.gc">EOIDType</a> may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-REQ-20#4, BR-OTH-02)</p>
@@ -1415,7 +1412,7 @@ Reference</strong></p></th>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contractinng body address information.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contracting body address information.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
@@ -1761,7 +1758,7 @@ cac:Party</p></td>
 <p><strong>Information Requirement</strong>: <a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-+ESPD+V2.1.0#BIS41-ESPDV2.1.0-tbr070-0011"><em>tbr070-011</em></a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: An identifier for the service provider must always be provided. Compulsory use of the attribute SchemeAgencyID. When possible use the VAT identification of the service provider (see the VIES platform for a EU cross-border national VAT number verification system). See XML example below. The code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/gc/EOIDType.gc">EOIDType</a> may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
+<p><strong>Rule</strong>: An identifier for the service provider must always be provided. Compulsory use of the attribute SchemeAgencyID. When possible use the VAT identification of the service provider (see the VIES platform for a EU cross-border national VAT number verification system). See XML example below. The code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/codelists/gc/EOIDType.gc">EOIDType</a> may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-REQ-20#5, BR-OTH-02")</p>
@@ -1807,6 +1804,86 @@ IdentificationCode</strong></p></td>
 <div class="paragraph">
 <p>The XML snippet below shows how an example of how to supply the expected data for the service provider.</p>
 </div>
+<div class="sect3">
+<h4 id="_code_with_callouts"><a class="anchor" href="#_code_with_callouts"></a>Code with callouts</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The source code can be copied from the code block below the callout section
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>_&lt;!--- Root elements eliminated for the sake of brevity --&gt;_
+
+&lt;cac:ContractingParty&gt;
+
+&lt;cac:Party&gt;
+
+&lt;cac:PartyIdentification&gt;&lt;cbc:ID schemeAgencyID="VIES"&gt;B82387770&lt;/cbc:ID&gt; &lt;/cac:PartyIdentification&gt;
+
+&lt;cac:PartyName&gt;&lt;cbc:Name&gt;Ministerio de Defensa&lt;/cbc:Name&gt;&lt;/cac:PartyName&gt;
+
+&lt;cac:PostalAddress&gt;&lt;cac:Country&gt;&lt;cbc:IdentificationCode listID="http://publications.europa.eu/resource/authority/country" listAgencyID="OP" listVersionID="20220928-0"&gt;ES&lt;/cbc:IdentificationCode&gt;&lt;/cac:Country&gt;&lt;/cac:PostalAddress&gt;
+
+&lt;cac:ServiceProviderParty&gt;
+
+&lt;cac:Party&gt;
+
+&lt;cbc:WebsiteURI&gt;http://www.minhafp.gob.es/es-ES/Areas%20Tematicas/Patrimonio%20del%20Estado/Contratacion%20del%20Sector%20Publico/Paginas/ROLECE.aspx&lt;/cbc:WebsiteURI&gt;
+
+&lt;cbc:EndpointID&gt;http://www.minhafp.gob.es/ESPD/endpoint&lt;/cbc:EndpointID&gt;
+
+&lt;cac:PartyIdentification&gt;
+
+&lt;cbc:ID schemeAgencyID="AEAT"&gt;B36699932&lt;/cbc:ID&gt;
+
+&lt;/cac:PartyIdentification&gt;
+
+&lt;cac:PartyName&gt;
+
+&lt;cbc:Name&gt;Registro Oficial de Licitadores y Empresas Clasificadas (ROLECE)&lt;/cbc:Name&gt;&lt;/cac:PartyName&gt;
+
+&lt;cac:PostalAddress&gt;
+
+&lt;cac:Country&gt;&lt;cbc:IdentificationCode listID="http://publications.europa.eu/resource/authority/country" listAgencyID="OP" listVersionID="20220928-0"&gt;ESP&lt;/cbc:IdentificationCode&gt;&lt;/cac:Country&gt;
+
+&lt;/cac:PostalAddress&gt;
+
+&lt;/cac:Party&gt;
+
+&lt;/cac:ServiceProviderParty&gt;
+
+&lt;/cac:Party&gt;
+
+&lt;/cac:ContractingParty&gt;</pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ContractingParty non-compulsory elements have been omitted for the sake of brevity.</p>
+</li>
+<li>
+<p>The service provider VAT number. The issuer Agency is the Spanish Tax Agency (AEAT). You can use the VIES platform to verify that the VAT number exists and is correct for Spain.</p>
+</li>
+<li>
+<p>The registered name of the service provider is mandatory.</p>
+</li>
+<li>
+<p>The country code of the service provider (ESP) is compulsory. You will need to use this code (ESP) to verify the VAT number in the VIES service.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_copy_the_code_block"><a class="anchor" href="#_copy_the_code_block"></a>Copy the code block</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">...
@@ -1858,28 +1935,13 @@ _&lt;!--- Root elements eliminated for the sake of brevity --&gt;_
 ...</code></pre>
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>ContractingParty non-compulsory elements have been omitted for the sake of brevity.</p>
-</li>
-<li>
-<p>The service provider VAT number. The issuer Agency is the Spanish Tax Agency (AEAT). You can use the VIES platform to verify that the VAT number exists and is correct for Spain.</p>
-</li>
-<li>
-<p>The registered name of the service provider is mandatory.</p>
-</li>
-<li>
-<p>The country code of the service provider (ESP) is compulsory. You will need to use this code (ESP) to verify the VAT number in the VIES service.</p>
-</li>
-</ol>
-</div>
 <hr>
 <div class="paragraph">
 <p>Any comments on the documentation?</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
 </div>
 </div>
 </div>
