@@ -58,8 +58,8 @@ content:
   ###  ESPD
   - url: https://github.com/OP-TED/espd-docs.git
     start_path: /
-    branches: main, v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3-A1-feedback, v4-img-code, wgm-reports
-    # v4.0.x 
+    branches: main, v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3-A1-feedback, v4-A1-Feedback, wgm-reports
+    # v4.0.x, v4-img-code
     
   ### TED API
   - url: https://github.com/OP-TED/tedapi-docs.git
