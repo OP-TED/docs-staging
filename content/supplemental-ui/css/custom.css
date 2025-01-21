@@ -228,3 +228,7 @@ div.qanda > ol > li {
 .indent6 {
     padding-left: 6rem;
 }
+
+.ul.b {
+  list-style-type: square;
+}
