@@ -209,10 +209,22 @@ div.qanda > ol > li {
     table-layout: fixed;
 }
 
+.indent2 {
+    padding-left: 2rem;
+}
+
+.indent3 {
+    padding-left: 3rem;
+}
+
 .indent4 {
     padding-left: 4rem;
 }
 
-.indent8 {
-    padding-left: 8rem;
+.indent5 {
+    padding-left: 5rem;
+}
+
+.indent6 {
+    padding-left: 6rem;
 }
