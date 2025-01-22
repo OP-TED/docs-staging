@@ -388,20 +388,7 @@ This document is further refined in the <a href="https://meaningfy-ws.github.io/
 <div class="sect2">
 <h3 id="_epo_concept_life_cycle"><a class="anchor" href="#_epo_concept_life_cycle"></a>ePO concept life Cycle</h3>
 <div class="paragraph">
-<p>Regarding the ePO life cycle, conventions for controlling which concepts of the Conceptual Model can be published/released are introduced in the form of properties for these elements (status labels for each concept in the EA file as depicted in the image below). These conventions take the form of the following states:</p>
-</div>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><strong>Proposed</strong>: The concept is under Working Group discussion or has not been discussed yet. In the latter case, the concept is in the “sandbox” subfolder of the CM file.</p>
-</li>
-<li>
-<p><strong>Approved</strong>: The concept has a Working Group approval tag and should be moved to its respective module subfolder.</p>
-</li>
-<li>
-<p><strong>Implemented</strong>: The concept has been published in the current stable ePO release or is ready for publication in the upcoming release.</p>
-</li>
-</ol>
+<p>Regarding the ePO life cycle, conventions for controlling which concepts of the Conceptual Model can be published/released are introduced in the form of properties for these elements (status labels for each concept in the EA file as depicted in the image below).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -412,17 +399,32 @@ This document is further refined in the <a href="https://meaningfy-ws.github.io/
 <p><em>Figure: Status of concepts in EA life cycle states</em></p>
 </div>
 <div class="paragraph">
-<p>The three aforementioned states form the ePO concept lifecycle as depicted in the figure 	below.</p>
+<p>These conventions take the form of the following states:</p>
 </div>
 <div class="paragraph">
-<p>(1) Proposed &#8594; (2) Approved &#8594; (3) Implemented (~= Published )</p>
+<p><strong>Proposed</strong><br>
+The concept is under Working Group discussion or has not been discussed yet. In the latter case, the concept is in the “sandbox” subfolder of the CM file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Approved</strong><br>
+The concept has a Working Group approval tag and should be moved to its respective module subfolder.</p>
+</div>
+<div class="paragraph">
+<p><strong>Implemented</strong><br>
+The concept has been published in the current stable ePO release or is ready for publication in the upcoming release.</p>
 </div>
 <div class="paragraph">
 <p>Note that due to limitations on EA,  Proposed,  Approved and  Implemented ((pre-)release stages) are only possible for Classes.</p>
 </div>
 <div class="paragraph">
-<p><strong>Deprecation</strong><br>
-A fourth ePO concept state exists, but it is not part of the CM: Deprecated. The concept was published in a previous release but is no longer relevant. It was decided that Deprecated concepts will exist as references in the Owl-core file and will be generated automatically by model2owl by comparing the most recent version of ePO with the older versions. Deprecated Concepts will also be available for viewing in the Glossaries. A consideration for the future would be to generate Deprecated concepts by using the Conceptual Model and not a comparison with older versions. For more information on Deprecated concepts, See <a href="../stage3/stage3.html" class="xref page">stage 3</a>.</p>
+<p><strong>Deprecated</strong> (not part of the CM)<br>
+The concept was published in a previous release but is no longer relevant. It was decided that Deprecated concepts will not ne part of the CM (in order to have more clear diagrams) but will exist as references in the Owl-core file and will be generated automatically by model2owl by comparing the most recent version of ePO with the older versions. Deprecated Concepts will also be available for viewing in the Glossaries. A consideration for the future would be to generate Deprecated concepts by using the Conceptual Model and not a comparison with older versions. For more information on Deprecated concepts, See <a href="../stage3/stage3.html" class="xref page">stage 3</a>.</p>
+</div>
+<div class="paragraph">
+<p>The four aforementioned states form the ePO concept lifecycle as depicted in the figure 	below.</p>
+</div>
+<div class="paragraph">
+<p>(1) Proposed &#8594; (2) Approved &#8594; (3) Implemented (~= Published ) &#8594; Deprecated (Not in the CM)</p>
 </div>
 </div>
 <div class="sect2">
