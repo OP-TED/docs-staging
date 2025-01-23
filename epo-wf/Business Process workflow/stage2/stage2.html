@@ -501,13 +501,40 @@ Model2owl will transfer the text contained in the ‘Notes section’ to skos:de
 <div class="paragraph">
 <p>In this section, we describe the problem of managing the different versions of the binary EA Conceptual Model QEAX file and present the current solution. We also briefly mention two alternative ways of versioning the Conceptual Model.</p>
 </div>
-<div class="ulist">
-<ul>
+<div class="paragraph">
+<p>Enterprise Architect (EA) binary files, such as .eap or .qeax project files, cannot be properly versioned in traditional version control systems (e.g., Git) for several reasons related to their nature and how version control systems (VCS) handle files:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Problem definition - the CM files QEAPX are binary and cannot be versioned properly in GitHub.</p>
+<p>Binary Nature and Lack of Transparency
+EA .qeax files are stored in a binary format, making their content opaque and incompatible with systems optimized for text files. Changes cannot be tracked at a granular level, so even minor updates (e.g., modifying a diagram) result in the entire file being marked as changed. This prevents meaningful insights into what was modified.</p>
 </li>
 <li>
-<p>Current approach: pure Git – This method forces us to use Trunk based development, which requires:</p>
+<p>Inefficient Storage and Versioning
+Version control systems store differences between file versions (deltas) for text files. For binary files like .qeax, the entire file must be stored for every change, leading to significant storage inefficiencies, especially for large EA projects.</p>
+</li>
+<li>
+<p>No Conflict Resolution
+When multiple users edit the same .qeax file, version control systems cannot resolve conflicts because binary files lack a structured format for merging. One user&#8217;s changes will overwrite another&#8217;s, risking data loss.</p>
+</li>
+<li>
+<p>Limited Collaboration
+EA .qeax files are monolithic, meaning the entire project is stored in a single file. This prevents team members from working on different parts of the project in parallel, creating bottlenecks and reducing productivity.</p>
+</li>
+<li>
+<p>Lack of Diffing and Comparison Tools
+Version control tools rely on text-based content to visualize changes and show differences between versions. Since .qeax files are binary, these tools cannot provide a meaningful diff, making it impossible to review or audit changes over time.</p>
+</li>
+<li>
+<p>Scalability Challenges
+As the size of a .qeax file grows, these issues compound, making it increasingly difficult to manage projects effectively using a version control system.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The approach in the ePO project until now was to use pure Git. This method forces us to use Trunk based development, which requires:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -521,9 +548,9 @@ Model2owl will transfer the text contained in the ‘Notes section’ to skos:de
 </li>
 </ul>
 </div>
-</li>
-<li>
+<div class="paragraph">
 <p>There are other approaches to CM versioning listed below. Both of these approaches seem problematic when compared to the current approach. It would be a good idea to further investigate these approaches or any others as future work.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -531,9 +558,6 @@ Model2owl will transfer the text contained in the ‘Notes section’ to skos:de
 </li>
 <li>
 <p>EA 17 also uses a new feature called package control. It uses an auxiliary XML file for each module that is saved next to the EA .qeax file. When an update to the .qeax file is made, the user can use package control to see the changes made, and either keep them, or discard them. This feature is, however, experimental and needs to be tested. Moreover, even a small change such as a slight move of an element in a diagram or the resizing of an element, will trigger a change, making keeping track of what has changed difficult.</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
