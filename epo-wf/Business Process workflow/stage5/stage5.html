@@ -326,7 +326,7 @@
 <p>In the “Update the documentation and publish the website” Business Process, the Product Owner removes the “rc” mark from the asciidoc pages of the documentation on the release/x.y.z branch of the <a href="https://github.com/OP-TED/epo-docs">OP-TED/epo-docs</a> repository. Consequently, the Documentation Website must be generated again to reflect this change.</p>
 </div>
 <div class="paragraph">
-<p>On the <a href="https://github.com/OP-TED/ePO">OP-TED/ePO</a> repository, a release tag is created on the same commit as the latest release candidate tag in the “Mark the release version” business Process. Then, in the
+<p>On the <a href="https://github.com/OP-TED/ePO">OP-TED/ePO</a> repository, a release tag is created on the same commit as the latest release candidate tag in the “Tag the release version” business Process. Then, in the
 “The latest candidate release is marked as stable version” Business Process, The GitHub pre-release flag is unchecked, making the release stable as seen in the figure below.</p>
 </div>
 <div class="imageblock">
@@ -338,7 +338,7 @@
 <p><em>The v4.2.0-rc1 tag is currently set as a pre-release tag. To change it, just click at the checkbox “Set as the latest release” at the bottom of the screen.</em></p>
 </div>
 <div class="paragraph">
-<p>After the GitHub pre-release flag is unchecked, the release can be merged into the Develop and Master branches of the <a href="https://github.com/OP-TED/ePO">OP-TED/ePO</a> repository.</p>
+<p>After the GitHub pre-release flag is unchecked, the release can be merged into the Master branch of the <a href="https://github.com/OP-TED/ePO">OP-TED/ePO</a> repository.</p>
 </div>
 <div class="paragraph">
 <p>During the “Final Business Review” Business Process, the Product Owner makes sure that everything is as it should be regarding the new Release. The Product Owner does the following checks:</p>
@@ -349,7 +349,7 @@
 <p>There should be a Release tag on the same commit as the latest release candidate tag in the <a href="https://github.com/OP-TED/ePO">OP-TED/ePO</a> repository.</p>
 </li>
 <li>
-<p>The develop and master branches should contain the correct versions of the release. (not the rc version or any other version).</p>
+<p>The master branch should contain the correct versions of the release. (not the rc version or any other version).</p>
 </li>
 <li>
 <p>The GitHub pre-release flag should be unchecked.</p>
