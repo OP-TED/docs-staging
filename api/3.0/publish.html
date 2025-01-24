@@ -288,6 +288,7 @@
 <p><a href="https://api.acceptance.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getNotices" class="bare">https://api.acceptance.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getNotices</a></p>
 </div>
 <hr>
+<hr>
 </div>
 </div>
 <div class="sect2">
@@ -295,7 +296,7 @@
 <div class="paragraph">
 <p>This API operation allows API users to stop the publication process for a notice they have submitted. It must be done before the notice is exported to TED, at which point the publication process becomes irreversible. If a notice is halted in time, it prevents the notice from being published, offering control over the publication timeline. Once a notice reaches the "publishing" status, it cannot be stopped.</p>
 </div>
-<div class="sect3 indent2">
+<div class="sect3">
 <h4 id="_api_request_2"><a class="anchor" href="#_api_request_2"></a>API Request</h4>
 <div class="listingblock">
 <div class="content">
@@ -303,27 +304,21 @@
 </div>
 </div>
 </div>
-<div class="sect3 indent2">
+<div class="sect3">
 <h4 id="_swagger_api_endpoint_2"><a class="anchor" href="#_swagger_api_endpoint_2"></a>Swagger API Endpoint</h4>
 <div class="paragraph">
 <p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/stopPublication" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/stopPublication</a></p>
 </div>
 <hr>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_retrieve_validation_report_for_submitted_notice"><a class="anchor" href="#_retrieve_validation_report_for_submitted_notice"></a>Retrieve Validation Report for Submitted Notice</h3>
 <div class="paragraph">
-<p>+</p>
-</div>
-<div class="ulist hlist">
-<ul>
-<li>
-<p>Retrieve Validation Report for Submitted Notice</p>
-</li>
-</ul>
-</div>
-<div class="paragraph indent2">
 <p>Every submitted eForms notice undergoes a validation process to ensure it complies with regulatory business rules, resulting in a report even if it does not successfully pass validation. This API operation allows API users to obtain the validation report generated during the submission of their notice. It ensures users can review and address any validation issues identified during the submission.</p>
 </div>
-</div>
-<div class="sect3 indent2">
+<div class="sect3">
 <h4 id="_api_request_3"><a class="anchor" href="#_api_request_3"></a>API Request</h4>
 <div class="listingblock">
 <div class="content">
@@ -331,24 +326,21 @@
 </div>
 </div>
 </div>
-<div class="sect3 indent2">
+<div class="sect3">
 <h4 id="_swagger_api_endpoint_3"><a class="anchor" href="#_swagger_api_endpoint_3"></a>Swagger API Endpoint</h4>
 <div class="paragraph">
 <p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getValidationReport" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Publication/getValidationReport</a></p>
 </div>
 <hr>
-<div class="ulist hlist">
-<ul>
-<li>
-<p>Submit New Notices for Publication on TED</p>
-</li>
-</ul>
+<hr>
 </div>
-<div class="paragraph indent2">
+</div>
+<div class="sect2">
+<h3 id="_submit_new_notices_for_publication_on_ted"><a class="anchor" href="#_submit_new_notices_for_publication_on_ted"></a>Submit New Notices for Publication on TED</h3>
+<div class="paragraph">
 <p>This API operation allows users to programmatically submit new notices in XML format for publication. The notice must have a unique identifier and meet specific requirements, such as including a valid notice author email and the preferred language for notifications. The email identifies the responsible party, like the Contracting Authority, while the language must be an official EU language. Upon submission, the notice is validated against a set of business rules. If it successfully passes, it is marked "SUBMITTED" and eligible for publication. If it fails, it is marked "VALIDATION_FAILED" and cannot be published.</p>
 </div>
-</div>
-<div class="sect3 indent2">
+<div class="sect3">
 <h4 id="_api_request_4"><a class="anchor" href="#_api_request_4"></a>API Request</h4>
 <div class="listingblock">
 <div class="content">
@@ -356,7 +348,7 @@
 </div>
 </div>
 </div>
-<div class="sect3 indent2">
+<div class="sect3">
 <h4 id="_swagger_api_endpoint_4"><a class="anchor" href="#_swagger_api_endpoint_4"></a>Swagger API Endpoint</h4>
 <div class="paragraph">
 <p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/submitNotice" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Endpoints/submitNotice</a></p>
