@@ -209,6 +209,10 @@ div.qanda > ol > li {
     table-layout: fixed;
 }
 
+.indent0 {
+    padding-left: 0rem;
+}
+
 .indent2 {
     padding-left: 2rem;
 }
