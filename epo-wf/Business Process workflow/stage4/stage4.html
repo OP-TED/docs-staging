@@ -302,28 +302,18 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>the reviewed SDS formal artefacts on the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model repository</a> are moved to the corresponding release branch of the <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a>  in order to become a release candidate (for justification on why we use both a conceptual and an ePO repository see <a href="../../GitHub%20repositories/githubRepositories.html" class="xref page">the GitHub repositories section</a>).</p>
+<p>the reviewed SDS formal artefacts on the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model"> OP-TED/epo-conceptual-model repository</a> are moved to the corresponding release branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a>  in order to become a release candidate (for justification on why we use both a conceptual and an ePO repository see <a href="../../GitHub%20repositories/githubRepositories.html" class="xref page">the GitHub repositories section</a>). A review from the Product Owner takes place and the SDS formal artefacts are moved to the develop branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a>.</p>
 </li>
 <li>
-<p>A review from the Product Owner takes place, the SDS formal artefacts are moved to the develop branch of the <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a>.</p>
+<p>The existing SDS documentation artefacts are moved from the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model repository</a> to the corresponding release branch of the <a href="https://github.com/OP-TED/epo-docs">OP-TED/epo-docs</a> repository, where the rest of the SDS documentation artefacts are generated. After that, the documentation website of the release candidate is generated, the SDS documentation artefacts are uploaded to the website, and the website is reviewed by the Product Owner.</p>
 </li>
-</ol>
-</div>
-<div class="paragraph">
-<p>2.The existing SDS documentation artefacts are moved from the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model repository</a> to the corresponding release branch of the <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> repository, where the rest of the SDS documentation artefacts are generated.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
-<p>A release candidate is created</p>
+<p>A release candidate is created by the Product Owner.</p>
 </li>
-</ol>
-</div>
-<div class="paragraph">
-<p>After that, the documentation website of the release candidate is generated, the SDS documentation artefacts are uploaded to the website, and the website is reviewed.</p>
-</div>
-<div class="paragraph">
+<li>
 <p>At the end of this stage the Product Owner invites the Wider Public to review the release candidate and decides whether or not to incorporate any feedback received to this release candidate or to a future release.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
@@ -331,63 +321,53 @@
 <h2 id="_business_view"><a class="anchor" href="#_business_view"></a>Business view</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The detailed business workflow diagram for the Publishing Candidate Semantic Data Specification Version Stage is depicted in the figure below.</p>
+<p>The detailed business workflow for the Publishing Candidate Semantic Data Specification Version Stage is depicted in the diagram below.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../_images/publishing%20candidate%20SDS%20version%20stage%20[detailed].bmp" alt="publishing candidate SDS version stage [detailed]">
+<img src="../../_images/publishing%20candidate%20SDS%20version%20[detailed].bmp" alt="publishing candidate SDS version [detailed]">
 </div>
 </div>
 <div class="paragraph">
 <p><em>The Publishing Candidate Semantic Data Specification Version Business view diagram</em></p>
 </div>
 <div class="paragraph">
-<p>The business workflow diagram with Stakeholders for the Preparing Semantic Data Specification Version Release Stage is depicted in the figure below:</p>
+<p>The business workflow with Stakeholders for the Preparing Semantic Data Specification Version Release Stage is depicted in the diagram below:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../_images/publishing%20candidate%20SDS%20version%20stage%20[stakeholders]%20.bmp" alt="publishing candidate SDS version stage [stakeholders] ">
+<img src="../../_images/publishing%20candidate%20SDS%20version%20[stakeholders]%20.bmp" alt="publishing candidate SDS version [stakeholders] ">
 </div>
 </div>
 <div class="paragraph">
 <p><em>The Publishing Candidate Semantic Data Specification Version with stakeholders business view diagram.</em></p>
 </div>
 <div class="paragraph">
-<p>The stage can be further be divided into two substages: Part 1 that describes the moving of the SDS artefacts and the creation of the release candidate, and part 2, that describes the documentation website generation and the review of the release candidate by the Wider Public.</p>
-</div>
-<div class="sect2">
-<h3 id="_creating_the_release_candidate_substage"><a class="anchor" href="#_creating_the_release_candidate_substage"></a>Creating the release candidate substage</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../../_images/creatingReleaseCandidateSub.png" alt="creatingReleaseCandidateSub">
-</div>
+<p>During the “<strong>SDS artefacts transfer(CM to ePO)</strong>” Business Process, the Development Team moves the Semantic Data Specification artefacts from the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model repository</a>, to the corresponding release branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a>.</p>
 </div>
 <div class="paragraph">
-<p><em>Creating the release candidate substage Business view diagram</em></p>
+<p>In the next Business Process, "<strong>Pull from Release to Develop (ePO)</strong>" the Development team does a pull request in order to merge the develop branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a> to the specific release branch “release/X.Y.Z” of the same repository. (for more on the creation of the“release/X.Y.Z” branch see <a href="../stage1/stage1.html" class="xref page">Stage 1: Requirements Gathering</a>).</p>
 </div>
 <div class="paragraph">
-<p>During the “SDS artefacts transfer” Business Process, the Development Team moves the Semantic Data Specification artefacts from the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model repository</a>, to the corresponding release branch of the <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a>.</p>
+<p>In the “<strong>Product Owner internal review (ePO repository)</strong>” Business Process, In the context of the pull request mentioned in the "Pull from Release to Develop (ePO)" Business Process above, The Product Owner reviews the ePO SDS artefacts again, this time from the perspective of the closed Github Issues with the milestone related to this upcoming release, making sure that all Github Issues are correctly implemented. The product owner also makes sure that the SDS artefacts were not changed during the move from  the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model repository</a>, to the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a>. If no further changes are needed, then the pull request is accepted, and the merge to the develop branch is done. Subsequently, the "Tag the release candidate SDS in the ePO repository on Release branch" Business process is triggered. If any errors or bugs are encountered, the Product Owner informs the Development Team, and the whole Workflow from the “ORSD consolidation” Business Process, to the current Business Process is repeated.</p>
 </div>
 <div class="paragraph">
-<p>In the next Business Process, "Pull from Release to Develop (ePO)" the Development team does a pull request in order to merge the develop branch of the <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a> to the specific release branch  “release/X.Y.Z” of the same repository. (for more on the creation of the“release/X.Y.Z” branch see <a href="../stage1/stage1.html" class="xref page">Stage 1: Requirements Gathering</a>)</p>
+<p>In the “<strong>Tag the release candidate SDS in the ePO repository on Release branch</strong>” Business Process, the Product Owner creates a GitHub tag in the release branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a> that contains the name of the branch with a "v" prefix, and the “-rc.X” suffix where X is the number of the release candidate for that version. For example, the first release candidate for version 5.0.0 would be placed in the release/5.0.0 branch, tagged as ”v5.0.0-rc.1”.</p>
 </div>
 <div class="paragraph">
-<p>In the “Product Owner internal review (ePO repository)” Business Process, In the context of the pull request mentioned in the "Pull from Release to Develop (ePO)" Business Process above, The Product Owner reviews the ePO SDS artefacts again, this time from the perspective of the closed Github Issues with the milestone related to this upcoming release, making sure that all Github Issues are correctly implemented. The product owner also makes sure that the SDS artefacts were not changed during the move from  the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model repository</a>, to the <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a>. If no further changes are needed, then the pull request is accepted, and the merge to the the develop branch is done. Subsequently, the "Tag the release candidate SDS in the ePO repository on Release branch" Business process is triggered. If any errors or bugs are encountered, the Product Owner informs the Development Team, and the whole Workflow from the “ORSD consolidation” Business Process, to the current Business Process is repeated.</p>
+<p>In the “<strong>SDS documentation transfer</strong>” Business Process, the Development Team moves the existing SDS documentation artefacts from the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model repository</a> to the corresponding release branch of the <a href="https://github.com/OP-TED/epo-docs">OP-TED/epo-docs</a> repository.</p>
 </div>
 <div class="paragraph">
-<p>In the “Tag the release candidate SDS in the ePO repository on Release branch” Business Process, the Product Owner creates a GitHub tag in the release branch of the <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a> that contains the name of the branch with a "v" prefix, and the “-rc.X” where X is the number of the release candidate for that version. For example, the first release candidate for version 5.0.0 would be placed in the release/5.0.0 branch, tagged as ”v5.0.0-rc.1”.</p>
+<p>In the subsequent “<strong>Produce release notes</strong>” Business Process, The Development team creates the “Release notes” Business Object by writing a release summary statement followed by the change notes that were automatically generated in the “Generate diffing artefacts” Business Process in the previous stage. See <a href="https://docs.ted.europa.eu/EPO/latest/release-notes.html#_release_notes">here</a> for an example of the release notes.</p>
 </div>
 <div class="paragraph">
-<p>In the “SDS documentation transfer” Business Process, the Development Team moves the existing SDS documentation artefacts from the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">GitHub OP-TED/epo-conceptual-model repository</a> to the corresponding release branch of the <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> repository.</p>
+<p>In the “Publish staging documentation website” Business Process, the Product Owner generates the static website from the release branch on the <a href="https://github.com/OP-TED/epo-docs">OP-TED/epo-docs</a> repository and publishes it in the staging environment which is not accessible to the public. The Product Owner then reviews the staging documentation website in the "<strong>Review staging documentation website</strong>" Business Process and if changes are required modifies the AsciiDocs pages to integrate the necessary website adjustments in the "<strong>Update the release documentation</strong>" Business Process. This loop repeats until the Product Owner finds no mistake in the staging documentation website.</p>
 </div>
 <div class="paragraph">
-<p>In the subsequent “Produce release notes” business Process, The Development team creates the “Release notes” Business Object by writing a release summary statement followed by the change notes that were automatically generated in the “Generate diffing artefacts” Business Process in the previous stage. See <a href="https://docs.ted.europa.eu/EPO/latest/release-notes.html#_release_notes">here</a> for an example of the release notes.</p>
+<p>In the next Business Process, “<strong>Tag the release candidate documentation in the ePO-docs repository</strong>” the Product Owner creates a GitHub tag on the release branch of the <a href="https://github.com/OP-TED/epo-docs">OP-TED/epo-docs</a> repository similar to the one mentioned in “Mark the release candidate SDS” Business Process.</p>
 </div>
 <div class="paragraph">
-<p>In the next Business Process, “Tag the release candidate documentation” the Development Team creates a GitHub tag on the release branch of the <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> repository similar to the one mentioned in “Mark the release candidate SDS” Business Process.</p>
-</div>
-<div class="paragraph">
-<p>After both “Tag the release candidate SDS” and “Tag the release candidate documentation” Business Processes are concluded, the “Create candidate release” Business Process is triggered. During this process the Product Owner uses the tag on the release branch of the  <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a> to create a GitHub Release and marks it as a pre-release (as seen on the image below) in the <a href="https://github.com/OP-TED/epo">GitHub OP-TED/epo repository</a>, using the “Release Notes” Business Object generated in the <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> repository.</p>
+<p>After both “Tag the release candidate SDS” and “Tag the release candidate documentation” Business Processes are concluded, the “<strong>Publish release candidate</strong>” Business Process is triggered. During this process the Product Owner uses the tag on the release branch of the  <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a> to create a GitHub Release and marks it as a pre-release (as seen on the image below) in the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a>, using the “Release Notes” Business Object generated in the <a href="https://github.com/OP-TED/epo-docs"> OP-TED/epo-docs</a> repository.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -397,26 +377,11 @@
 <div class="paragraph">
 <p><em>How to create a GitHub Release from GitHub</em></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_documentation_website_generation_and_wider_public_review_substage"><a class="anchor" href="#_documentation_website_generation_and_wider_public_review_substage"></a>Documentation website generation and Wider Public Review substage<a id="DWGWPR"></a></h3>
-<div class="imageblock">
-<div class="content">
-<img src="../../_images/websiteAndPublicReviewSub.png" alt="websiteAndPublicReviewSub">
-</div>
+<div class="paragraph">
+<p>In the “<strong>Publish public documentation website</strong>"Business Process, the Product Owner integrates the documentation webpage on the staging site,to the existing eProcurement Ontology web site under the specified version.</p>
 </div>
 <div class="paragraph">
-<p><em>Documentation website generation and Wider Public Review substage Business view diagram</em></p>
-</div>
-<div class="paragraph">
-<p>In the “Publish staging documentation website” Business Process, the Product Owner generates the static website from the tag in <a href="https://github.com/OP-TED/epo-docs">GitHub OP-TED/epo-docs</a> and publishes it in the staging environment which is not accessible to the public. The Product Owner then reviews the staging documentation website and if changes are required modifies the AsciiDocs pages to integrate the necessary website adjustments. This process repeats until the Product Owner finds no mistake in the documentation website, and the “Publish public documentation website” Business Process can commence.</p>
-</div>
-<div class="paragraph">
-<p>In the “Publish public documentation website "Business Process, the Product Owner integrates the documentation webpage to the existing eProcurement Ontology web site under the specified version.</p>
-</div>
-<div class="paragraph">
-<p>In the “Announce the start of the public review period” Business Process, the Product Owner announces the beginning of the two-month review period of the new module by the Wider Public. During this period, The Wider Public reviews the new ePO version in the “Review the release candidate” Business Process. At the same time, in the “Collect, assess and respond to the public review feedback” Business Process, the Product Owner receives the feedback from the Wider Public in the form of electronic mail, GitHub issues and discussions. The feedback issues are then divided into bugs and change requests. In case there are bugs, then the conceptual model needs to be updated for a correct release of this version; otherwise, changes are planned for implementation into the next version. In the former case, the next Business Process will be “ORSD consolidation” (in the 1<sup>st</sup> stage), and all the stages and processes have to be repeated. In the latter case, the Product Owner can initiate the “Decide to release” Business Process in the last stage of the workflow in order to convert the latest release candidate to a stable release.</p>
-</div>
+<p>In the “<strong>Announce the start of the public review period</strong>” Business Process, the Product Owner announces the beginning of the two-month review period of the new module by the Wider Public. During this period, The Wider Public reviews the new ePO version in the “<strong>Review the release candidate</strong>” Business Process. At the same time, in the “<strong>Collect, assess and respond to the public review feedback</strong>” Business Process, the Product Owner receives the feedback from the Wider Public in the form of electronic mail, GitHub issues and discussions. The feedback issues are then divided into bugs and change requests. In case there are bugs, then the conceptual model needs to be updated for a correct release of this version; otherwise, changes are planned for implementation into the next version. In the former case, the next Business Process will be “ORSD consolidation” (in the 1<sup>st</sup> stage), and all the stages and processes have to be repeated. In the latter case, the Product Owner can initiate the last stage of the workflow in order to convert the latest release candidate to a stable release.</p>
 </div>
 </div>
 </div>
@@ -424,11 +389,11 @@
 <h2 id="_application_and_technology_view"><a class="anchor" href="#_application_and_technology_view"></a>Application and Technology view</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The concise diagram for the “Publishing Candidate Semantic Data Specification Version” Stage that describes all the artefacts involved in this stage using business (yellow), application (blue) and technology (green) layers is depicted in the figure below. The GitHub Repository branches that are used for this stage are also depicted as an orange rectangle for reference purposes. Note that here we do not explain purposes of Artefacts, but we describe what is produced and how. The actual description of the produced Artefacts is provided <a href="#../../SDS and related artefacts/SDSArtefacts.adoc" class="xref unresolved">here</a>.</p>
+<p>The diagram below describes all the artefacts involved in this stage using business (yellow), application (blue) and technology (green) layers. The GitHub Repositories branches that are used for this stage are also depicted as orange rectangles for reference purposes. Note that here we do not explain purposes of Artefacts, but we describe what is produced and how. The actual description of the produced Artefacts is provided <a href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html" class="xref page">here</a>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../_images/publishing%20candidate%20SDS%20version%20stage%20[concise].bmp" alt="publishing candidate SDS version stage [concise]">
+<img src="../../_images/publishing%20candidate%20SDS%20version%20[concise].bmp" alt="publishing candidate SDS version [concise]">
 </div>
 </div>
 <div class="paragraph">
@@ -452,7 +417,7 @@
 <p>The “Change Notes” Data Object realises  the “Change Notes” Business Object and contains the change notes of the current release that should be automatically created by model2owl, by comparing the current release with the latest release.</p>
 </li>
 <li>
-<p>The “Static website with CM diagrams” Data Object realises  the “Conceptual Model visual documentation” Business Object.</p>
+<p>The “Static website with CM diagrams” Data Object realises  the “Conceptual Model visual representation” Business Object.</p>
 </li>
 <li>
 <p>The “Web optimised ORSD document” Data Object realises  the “Ontology Requirements Specification Document (ORSD)” Business Object.</p>
