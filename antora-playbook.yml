@@ -74,7 +74,7 @@ content:
   ### TED Open Data Service
   - url: https://github.com/OP-TED/ted-rdf-docs
     start_path: docs/antora 
-    branches: reuse_titles
+    branches: develop
     
 
   ### TED Data for Reusers
