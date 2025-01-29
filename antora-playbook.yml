@@ -74,7 +74,7 @@ content:
   ### TED Open Data Service
   - url: https://github.com/OP-TED/ted-rdf-docs
     start_path: docs/antora 
-    branches: reuse_titles
+    branches: develop
   # develop
     
 
@@ -87,6 +87,7 @@ content:
   - url: https://github.com/OP-TED/ted-rdf-conversion-pipeline
     start_path: docs/antora 
     branches: main
+    
 urls:
   redirect_facility: static
   # html_extension_style: indexify
