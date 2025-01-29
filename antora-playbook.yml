@@ -81,8 +81,12 @@ content:
   ### TED Data for Reusers
   #- url: https://github.com/OP-TED/ted-reuse-docs.git
   #  start_path: /
-  #  branches: main 
+  #  branches: main
 
+  ### TED RDF Conversion Pipeline 
+  - url: https://github.com/OP-TED/ted-rdf-conversion-pipeline
+    start_path: docs/antora 
+    branches: main
 urls:
   redirect_facility: static
   # html_extension_style: indexify
