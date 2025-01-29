@@ -1,0 +1,459 @@
+openapi: 3.0.1
+info:
+  title: TED Search API
+  description: |
+    # Introduction
+
+    This API provides multiple read-only operations on the TED website data.
+    The endpoint 'Notice Search API' can be used to search notices both TED
+    schema notices and eForms notices.
+
+    More information is available on the help pages of the TED website:
+
+    - [TED - Website](https://ted.europa.eu)
+    - [Expert Search](https://ted.europa.eu/en/search/expert-search)
+    - [Contact](https://ted.europa.eu/en/contact)
+    - [Legal notice](https://ted.europa.eu/en/legal-notice)
+
+    The API is accessible to the general public and can be utilized by anyone in
+    accordance with the [terms of usage](#terms-of-usage).
+
+    # Change logs
+
+    | Version | Date | Changes |
+    |---------|------|---------|
+    | N/A | N/A | N/A |
+
+    # Public API search modes
+
+    This section describes the different search modes provided by the public
+    search API.
+
+    Each parameter of the search API is detailed in the OpenAPI documentation of
+    the API.
+
+    ## Pagination mode
+
+    The pagination mode is the default mode of the public search API.
+
+    This mode is stateless: the user can retrieve any result page, and not
+    necessarily in order. It also means that there is no mechanism to ensure
+    consistency between two retrieved pages: if the user retrieves multiple
+    pages and an OJS is released between two retrieved pages, then the user
+    might miss some notices or have duplicated notices.
+
+    Also, due to how Elasticsearch works internally, a limit on the number of
+    retrievable notices for a given query has been put in place. This limit is
+    described in the Definition of limits section.
+
+    The user must provide the following parameters to the API to paginate
+    results:
+
+    - limit: the number of notices returned per page. For example, limit=10 means that 10 notices will be returned.
+    - page: the page number to retrieve. For example, page=1 means that the first result page will be retrieved.
+
+    ## Scroll mode
+
+    The scroll mode allows users to retrieve all notices for a given query,
+    without limitations defined in section Definition of limits.
+
+    With this mode, the user calls the search API to retrieve the first result
+    page and a token. This token can then be included in the next query sent to
+    the search API to retrieve the next result page. The user knows all notices
+    have been retrieved once there is no more notice returned.
+
+    The Elasticsearch point in time feature is used to ensure consistency
+    between all returned pages, which means that the user cannot miss notices or
+    have duplicated notices. An Elasticsearch point in time is a freeze of the
+    Elasticsearch instance at a specific time. If notices are added or removed
+    during the lifetime of a point in time, the notices registered in the point
+    in time don't change.
+
+    The point in time has an expiration time. This expiration time is defined as
+    the date of the next OJS release plus 24 hours. It means that the user has
+    always at least 24 hours to retrieve all the notices for a given query.
+
+    The user must provide the following parameters to the API to retrieve
+    results in scroll mode:
+
+    - paginationMode should be set to "ITERATION".
+    - limit: the number of notices to return for the next page.
+    - iterationNextToken: the token returned by the previous call to the search API. If this is the first call (i.e., to retrieve the first page), this parameter shouldn't be provided.
+
+    # Definition of limits
+
+    Here is a definition of the different limits defined for the SEM (Search
+    Engine Module) endpoints:
+
+    - Maximum number of retrievable notices: This corresponds to the number of notices that can be retrieved once the user has queried all pages. For example, if the user retrieves all notices for a given query with page size 250, and the limit of retrievable notices is 10k, it means the SEM will return no more notice after page 10k / 250 = 40, even if the query matches more than 10k notices.
+    - Maximum number of notices per page: if this limit is X, then it means the user can retrieve X or less notices per page, but not more than X notices per page.
+    - Maximum number of fields per page: the number of fields per page is defined as the number of notices per page multiplied by the number of fields retrieved for each notice. For example, with a limit of 250, the user is allowed to retrieve 50 notices per page and 4 fields per notice (50 * 4 < 250). However, they are not allowed to retrieve 100 notices per page and 4 fields per notice (100 * 4 > 250).
+
+    ## Search using pagination mode of public API
+
+    The pagination mode of the public search API has the following limits:
+
+    - Maximum number of retrievable notices: 15k.
+    - Maximum number of notices per page: 250.
+    - Maximum number of fields per page: 10k.
+
+    In case a limit is reached, the search API will return an error to the user.
+
+    ## Search using scroll mode of public API
+
+    The scroll mode of the public search API has the following limits:
+
+    - Maximum number of notices per page: 250.
+    - Maximum number of fields per page: 10k.
+
+    In case a limit is reached, the search API will return an error to the user.
+
+    There is no limit on the number of retrievable notices.
+
+    # Versioning
+
+    The versioning of the TED Public API is managed by including the major
+    version in the URL (eg. v1). An upgrade of the major version will denote
+    breaking changes of the API whereas minor and maintenance will be
+    transparent to the client. The [change logs](#change-log) will contain the
+    details of any modifications made to the API, serving as a means to notify
+    clients about newly added features or bug fixes. The list of fields by
+    their variable nature are excluded from the versioning, addition, removal
+    or update of a field will not change the versioning.
+
+    # Frequently Asked Questions
+
+    ## How can I create, test or validate an expert query?
+
+    ## The API returns an error regarding an invalid field, format or value, how can I debug?
+
+    The [TED Expert Search](https://ted.europa.eu/en/search/expert-search) page
+    can be used for that purpose. It includes the capabilities to write a query,
+    check the syntax, list all the fields and execute the query. The query once
+    tailored can be reused in the query field parameter.
+
+    # Terms of Usage
+
+    Please refer to the [Legal notice](https://ted.europa.eu/en/legal-notice)
+
+servers:
+  - url: https://api.ted.europa.eu/
+
+tags:
+  - name: notice-search-v3
+    description: Notice Search API V3
+
+paths:
+  /v3/notices/search:
+    post:
+      tags:
+        - notice-search-v3
+      summary: Search for notices using expert search query
+      description: >
+        Search for notices using expert search query. More information about the
+        query format and field names can be found on [this
+        page](https://ted.europa.eu/en/search/expert-search)
+      operationId: search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PublicExpertSearchRequestV1'
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/ExpertSearchResponse'
+        '400':
+          description: Bad Request
+          content:
+            '*/*':
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/QuerySyntaxErrorError'
+                  - $ref: '#/components/schemas/QueryInvalidFieldFormatDetails'
+                  - $ref: '#/components/schemas/QueryUnknownFieldError'
+                  - $ref: '#/components/schemas/QueryUnsupportedFieldOperationError'
+                  - $ref: '#/components/schemas/QueryUnsupportedFieldValueError'
+                  - $ref: '#/components/schemas/UnsupportedValueException'
+                  - $ref: '#/components/schemas/ExpiredIterationTokenError'
+                  - $ref: '#/components/schemas/InvalidIterationTokenError'
+        '500':
+          description: Internal Server Error
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/ErrorResponseObject'
+
+components:
+  schemas:
+    NoticeResponse:
+      type: object
+      description: Response containing notice details
+      properties:
+        # Your existing notice response properties here
+        # They should follow the same format as the corrected examples above
+        ID:
+          type: string
+          description: Unique identifier of the notice
+        title:
+          type: string
+          description: Title of the notice
+        # ... other properties
+
+    PublicExpertSearchRequestV1:
+      type: object
+      required:
+        - fields
+        - query
+      properties:
+        query:
+          type: string
+          description: Expert search query to filter and sort notices
+        fields:
+          type: array
+          uniqueItems: true
+          description: Fields to return for each notice
+          items:
+            type: string
+        page:
+          type: integer
+          minimum: 1
+          format: int32
+          default: 1
+          description: Result page number, used to paginate results
+        limit:
+          type: integer
+          minimum: 0
+          format: int32
+          default: 10
+          description: Maximum number of returned notices per page
+        scope:
+          type: string
+          default: ACTIVE
+          enum:
+            - LATEST
+            - ACTIVE
+            - ALL
+          description: Search scope (LATEST: only notices of the current OJS release, ACTIVE: only active notices, ALL: all notices)
+        checkQuerySyntax:
+          type: boolean
+          default: false
+          description: When true, only checks query syntax without executing the search
+        paginationMode:
+          type: string
+          default: PAGE_NUMBER
+          enum:
+            - PAGE_NUMBER
+            - ITERATION
+          description: Pagination mode for retrieving results
+        onlyLatestVersions:
+          type: boolean
+          default: false
+          description: Include only the latest versions of notices
+        iterationNextToken:
+          type: string
+          description: Token for retrieving next page in ITERATION mode
+
+    ErrorResponseObject:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Error message
+        error:
+          type: object
+          description: Additional error details
+
+    QueryLocation:
+      type: object
+      properties:
+        beginColumn:
+          type: integer
+          format: int32
+        beginLine:
+          type: integer
+          format: int32
+        endColumn:
+          type: integer
+          format: int32
+        endLine:
+          type: integer
+          format: int32
+      description: Location of error in query
+
+    QuerySyntaxErrorError:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - QUERY_SYNTAX_ERROR
+          description: Code to identify the error type
+        location:
+          $ref: '#/components/schemas/QueryLocation'
+
+    QueryInvalidFieldFormatDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - QUERY_INVALID_FIELD_FORMAT
+          description: Code to identify the error type
+        location:
+          $ref: '#/components/schemas/QueryLocation'
+        fieldName:
+          type: string
+          description: Invalid field name
+        allowedPattern:
+          type: string
+          description: Allowed pattern for the values of the invalid field
+
+    QueryUnknownFieldError:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - QUERY_UNKNOWN_FIELD
+          description: Code to identify the error type
+        location:
+          $ref: '#/components/schemas/QueryLocation'
+        fieldName:
+          type: string
+          description: Unknown field name
+
+    QueryUnsupportedFieldOperationError:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - QUERY_UNSUPPORTED_FIELD_OPERATION
+          description: Code to identify the error type
+        location:
+          $ref: '#/components/schemas/QueryLocation'
+        operation:
+          type: string
+          enum:
+            - TERM
+            - EXACT_TERM
+            - PHRASE
+            - EXACT_PHRASE
+            - WILDCARD
+            - PREFIX
+            - EXIST
+            - COMPARISON
+            - SORT
+          description: Unsupported operation
+        fieldName:
+          type: string
+          description: Name of the field with the unsupported operation
+
+    QueryUnsupportedFieldValueError:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - QUERY_UNSUPPORTED_FIELD_VALUE
+          description: Code to identify the error type
+        location:
+          $ref: '#/components/schemas/QueryLocation'
+        fieldName:
+          type: string
+          description: Name of the field with the unsupported value
+        fieldValue:
+          type: string
+          description: Unsupported value
+
+    UnsupportedValueException:
+      type: object
+      properties:
+        cause:
+          type: object
+          properties:
+            stackTrace:
+              type: array
+              items:
+                type: object
+                properties:
+                  classLoaderName:
+                    type: string
+                  moduleName:
+                    type: string
+                  moduleVersion:
+                    type: string
+                  methodName:
+                    type: string
+                  fileName:
+                    type: string
+                  lineNumber:
+                    type: integer
+                    format: int32
+                  className:
+                    type: string
+                  nativeMethod:
+                    type: boolean
+            message:
+              type: string
+            localizedMessage:
+              type: string
+        message:
+          type: string
+        error:
+          $ref: '#/components/schemas/UnsupportedValueError'
+
+    UnsupportedValueError:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - UNSUPPORTED_VALUE
+          description: Code to identify the error type
+        parameterName:
+          type: string
+          description: Name of the parameter with the unsupported value
+        unsupportedValue:
+          type: string
+          description: Unsupported value
+
+    ExpiredIterationTokenError:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - EXPIRED_ITERATION_TOKEN
+          description: Code to identify the error type
+
+    InvalidIterationTokenError:
+      type: object
+      properties:
+        type:
+          type: string
+          enum:
+            - INVALID_ITERATION_TOKEN
+          description: Code to identify the error type
+
+    ExpertSearchResponse:
+      type: object
+      properties:
+        notices:
+          type: array
+          items:
+            $ref: '#/components/schemas/NoticeResponse'
+          description: Found notices
+        totalNoticeCount:
+          type: integer
+          format: int64
+          description: Total number of notices matching the search query
+        iterationNextToken:
+          type: string
+          description: Token for retrieving next page in ITERATION mode

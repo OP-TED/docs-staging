@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/api/index.html">
+    <title>TED Search API Documentation :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/api/search-api.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -80,7 +80,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -95,7 +95,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="endpoints/viewer-ted-europa-eu.html">Visualisation API</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="search-api.html">Search API</a>
   </li>
 </ul>
@@ -226,14 +226,14 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED API</a></li>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="search-api.html">Search API</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">default</button>
   <div class="version-menu">
-    <a class="version is-current" href="index.html">default</a>
-    <a class="version" href="3.0/index.html">3.0-rc.1</a>
+    <a class="version is-current" href="search-api.html">default</a>
+    <a class="version is-missing" href="3.0/index.html">3.0-rc.1</a>
   </div>
 </div>
 </div>
@@ -242,190 +242,402 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-Please refrain from testing in the Production environment of eNotices2. This is reserved for notices that will be published in TED. TED Apps for eForms are available in the <a href="https://docs.ted.europa.eu/home/eforms/preview/index.html">Preview environment</a> for testing purposes. If you are an eSender, please note that URLs and API keys in "Production" and "Preview" environments are not interchangeable.
-</td>
-</tr>
-</table>
+<h1 class="page">TED Search API Documentation</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_important_links">Important Links</a></li>
+</ul>
+</li>
+<li><a href="#_base_url">Base URL</a></li>
+<li><a href="#_api_version">API Version</a></li>
+<li><a href="#_public_api_search_modes">Public API Search Modes</a>
+<ul class="sectlevel2">
+<li><a href="#_pagination_mode">Pagination Mode</a>
+<ul class="sectlevel3">
+<li><a href="#_limits_for_pagination_mode">Limits for Pagination Mode</a></li>
+</ul>
+</li>
+<li><a href="#_scroll_mode">Scroll Mode</a>
+<ul class="sectlevel3">
+<li><a href="#_limits_for_scroll_mode">Limits for Scroll Mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_endpoints">Endpoints</a>
+<ul class="sectlevel2">
+<li><a href="#_search_notices">Search Notices</a>
+<ul class="sectlevel3">
+<li><a href="#_response_objects">Response Objects</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_schema_definitions">Schema Definitions</a>
+<ul class="sectlevel2">
+<li><a href="#_noticeresponse">NoticeResponse</a></li>
+<li><a href="#_querylocation">QueryLocation</a></li>
+<li><a href="#_errorresponseobject">ErrorResponseObject</a></li>
+</ul>
+</li>
+<li><a href="#_faq">FAQ</a>
+<ul class="sectlevel2">
+<li><a href="#_how_can_i_create_test_or_validate_an_expert_query">How can I create, test or validate an expert query?</a></li>
+<li><a href="#_what_should_i_do_if_the_api_returns_an_error_about_an_invalid_field_format_or_value">What should I do if the API returns an error about an invalid field, format, or value?</a></li>
+</ul>
+</li>
+</ul>
 </div>
-<h1 id="_ted_api_documentation" class="sect0"><a class="anchor" href="#_ted_api_documentation"></a>TED API Documentation</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a><a class="link" href="#_introduction">Introduction</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>TED API allows application developers to connect their 3rd party applications to the TED web services. Using TED APIs you can create applications that:</p>
+<p>This API provides multiple read-only operations on the TED website data. The endpoint 'Notice Search API' can be used to search notices both TED schema notices and eForms notices.</p>
 </div>
+<div class="sect2">
+<h3 id="_important_links"><a class="anchor" href="#_important_links"></a><a class="link" href="#_important_links">Important Links</a></h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Search for and retrieve published notices from the TED Website,</p>
+<p><a href="https://ted.europa.eu">TED - Website</a></p>
 </li>
 <li>
-<p>Submit new public procurement notices for publication,</p>
+<p><a href="https://ted.europa.eu/en/search/expert-search">Expert Search</a></p>
 </li>
 <li>
-<p>Validate or render notices.</p>
+<p><a href="https://ted.europa.eu/en/contact">Contact</a></p>
+</li>
+<li>
+<p><a href="https://ted.europa.eu/en/legal-notice">Legal notice</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>TED API allows anonymous access to all services manipulating published notices (i.e. searching for, or retrieving notices already published on TED). These APIs are mostly targeted to data reusers. You can find information on reusing TED data at the <a href="https://simap.ted.europa.eu/en_GB/web/simap/developers-corner#get-published">SIMAP Developers' Corner</a>.</p>
+<p>The API is accessible to the general public and can be utilized by anyone in accordance with the terms of usage.</p>
 </div>
-<div class="paragraph">
-<p>All TED APIs manipulating notices that are not yet published, require the \cas\logincaller to be authenticated with an API key.</p>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_api_keys"><a class="anchor" href="#_api_keys"></a>API keys</h2>
+<h2 id="_base_url"><a class="anchor" href="#_base_url"></a><a class="link" href="#_base_url">Base URL</a></h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://api.ted.europa.eu/</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_api_version"><a class="anchor" href="#_api_version"></a><a class="link" href="#_api_version">API Version</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>User authentication and authorisation (for those TED APIs that require it) is controlled with the use of API keys. TED API keys are essentially UUIDs (Universally Unique Identifiers), without hyphens (dashes).</p>
+<p>Current version: v3</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_public_api_search_modes"><a class="anchor" href="#_public_api_search_modes"></a><a class="link" href="#_public_api_search_modes">Public API Search Modes</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_pagination_mode"><a class="anchor" href="#_pagination_mode"></a><a class="link" href="#_pagination_mode">Pagination Mode</a></h3>
+<div class="paragraph">
+<p>The pagination mode is the default mode of the public search API.</p>
 </div>
 <div class="paragraph">
-<p>You can generate and manage your own API keys by logging-in to your account in the <a href="https://developer.ted.europa.eu"><strong>TED Developer Portal</strong></a><sup class="footnote" id="_footnote_portal">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
+<p>This mode is stateless: the user can retrieve any result page, and not necessarily in order. It also means that there is no mechanism to ensure consistency between two retrieved pages: if the user retrieves multiple pages and an OJS is released between two retrieved pages, then the user might miss some notices or have duplicated notices.</p>
 </div>
-<div class="paragraph">
-<p>If you use the the eNotices2 API, after you generate your key, please log into the <a href="https://enotices2.ted.europa.eu">eNotices2 website</a> at least once to pair your account.</p>
-</div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Required Parameters</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Only one API key is allowed per user. The creation of a new API key implies the automatic revocation of the previous one.
-</td>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Example</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of notices returned per page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">limit=10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The page number to retrieve</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page=1</p></td>
+</tr>
+</tbody>
 </table>
+<div class="sect3">
+<h4 id="_limits_for_pagination_mode"><a class="anchor" href="#_limits_for_pagination_mode"></a><a class="link" href="#_limits_for_pagination_mode">Limits for Pagination Mode</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Maximum number of retrievable notices: 15k</p>
+</li>
+<li>
+<p>Maximum number of notices per page: 250</p>
+</li>
+<li>
+<p>Maximum number of fields per page: 10k</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_api_key_generation"><a class="anchor" href="#_api_key_generation"></a>API key generation</h3>
+<h3 id="_scroll_mode"><a class="anchor" href="#_scroll_mode"></a><a class="link" href="#_scroll_mode">Scroll Mode</a></h3>
 <div class="paragraph">
-<p>You can generate an API Key by logging into the TED Developer Portal<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and clicking on the "Manage your API Keys" button. To login to the TED Developer Portal you will need a valid EU Login<sup class="footnote" id="_footnote_eu-login">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> account.</p>
+<p>The scroll mode allows users to retrieve all notices for a given query without the limitations defined in the pagination mode.</p>
 </div>
-<div class="admonitionblock note">
-<table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Required Parameters</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 50%;">
+<col style="width: 30%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For security reasons API keys are not stored and cannot be retrieved via the TED Developer Portal after they are generated. Your API key will be delivered to you only at the time of generation. Copy and safely store the provided API key. If you lose it you will have to generate a new one.
-</td>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Example</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">paginationMode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must be set to "ITERATION"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">paginationMode=ITERATION</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of notices to return for the next page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">limit=250</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iterationNextToken</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Token from previous response (not needed for first request)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">token123&#8230;&#8203;</p></td>
+</tr>
+</tbody>
 </table>
+<div class="sect3">
+<h4 id="_limits_for_scroll_mode"><a class="anchor" href="#_limits_for_scroll_mode"></a><a class="link" href="#_limits_for_scroll_mode">Limits for Scroll Mode</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Maximum number of notices per page: 250</p>
+</li>
+<li>
+<p>Maximum number of fields per page: 10k</p>
+</li>
+<li>
+<p>No limit on total retrievable notices</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endpoints"><a class="anchor" href="#_endpoints"></a><a class="link" href="#_endpoints">Endpoints</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_search_notices"><a class="anchor" href="#_search_notices"></a><a class="link" href="#_search_notices">Search Notices</a></h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 28.5714%;">
+<col style="width: 71.4286%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">POST</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/v3/notices/search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content-Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">application/json</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="title">Request Body Schema</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "query": "string",
+  "fields": ["string"],
+  "page": integer,
+  "limit": integer,
+  "scope": "LATEST" | "ACTIVE" | "ALL",
+  "checkQuerySyntax": boolean,
+  "paginationMode": "PAGE_NUMBER" | "ITERATION",
+  "onlyLatestVersions": boolean,
+  "iterationNextToken": "string"
+}</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_response_objects"><a class="anchor" href="#_response_objects"></a><a class="link" href="#_response_objects">Response Objects</a></h4>
+<div class="sect4">
+<h5 id="_success_response_200_ok"><a class="anchor" href="#_success_response_200_ok"></a><a class="link" href="#_success_response_200_ok">Success Response (200 OK)</a></h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "notices": [
+    {
+      // Notice fields based on requested fields
+    }
+  ],
+  "totalNoticeCount": integer,
+  "iterationNextToken": "string"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_error_responses"><a class="anchor" href="#_error_responses"></a><a class="link" href="#_error_responses">Error Responses</a></h5>
+<div class="sect5">
+<h6 id="_400_bad_request"><a class="anchor" href="#_400_bad_request"></a><a class="link" href="#_400_bad_request">400 Bad Request</a></h6>
+<div class="paragraph">
+<p>Possible error types:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>QUERY_SYNTAX_ERROR</p>
+</li>
+<li>
+<p>QUERY_INVALID_FIELD_FORMAT</p>
+</li>
+<li>
+<p>QUERY_UNKNOWN_FIELD</p>
+</li>
+<li>
+<p>QUERY_UNSUPPORTED_FIELD_OPERATION</p>
+</li>
+<li>
+<p>QUERY_UNSUPPORTED_FIELD_VALUE</p>
+</li>
+<li>
+<p>UNSUPPORTED_VALUE</p>
+</li>
+<li>
+<p>EXPIRED_ITERATION_TOKEN</p>
+</li>
+<li>
+<p>INVALID_ITERATION_TOKEN</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_500_internal_server_error"><a class="anchor" href="#_500_internal_server_error"></a><a class="link" href="#_500_internal_server_error">500 Internal Server Error</a></h6>
+<div class="paragraph">
+<p>Returns an error message and additional error details.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_schema_definitions"><a class="anchor" href="#_schema_definitions"></a><a class="link" href="#_schema_definitions">Schema Definitions</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_noticeresponse"><a class="anchor" href="#_noticeresponse"></a><a class="link" href="#_noticeresponse">NoticeResponse</a></h3>
+<div class="paragraph">
+<p>Contains the notice details based on requested fields.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_api_key_lifetime"><a class="anchor" href="#_api_key_lifetime"></a>API key lifetime</h3>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Expiry</dt>
-<dd>
-<p>Every API key is valid for 24 months. After its validity period elapses, the API key expires.</p>
-</dd>
-<dt class="hdlist1">Renewal</dt>
-<dd>
-<p>API key renewal extends the validity of an API key for 12 months.</p>
-<div class="paragraph">
-<p>An automated notification will be sent four (4) weeks before the expiration of the API key to the email address associated with the EU-Login account of the user that created the API key. The email will contain a hyperlink that can be used to renew the API key. If you don&#8217;t click on the hyperlink within 21 days, the link will expire and a new email will be sent to you with a new hyperlink.</p>
-</div>
-</dd>
-<dt class="hdlist1">Revocation</dt>
-<dd>
-<p>You can revoke any unused API keys as needed in the TED Developer Portal. Revoked API keys are invalidated permanently.</p>
-</dd>
-</dl>
+<h3 id="_querylocation"><a class="anchor" href="#_querylocation"></a><a class="link" href="#_querylocation">QueryLocation</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "beginColumn": integer,
+  "beginLine": integer,
+  "endColumn": integer,
+  "endLine": integer
+}</code></pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_errorresponseobject"><a class="anchor" href="#_errorresponseobject"></a><a class="link" href="#_errorresponseobject">ErrorResponseObject</a></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "message": "string",
+  "error": object
+}</code></pre>
 </div>
-<div class="sect1">
-<h2 id="_available_apis"><a class="anchor" href="#_available_apis"></a>Available APIs</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can find below the Swagger pages documenting the TED API endpoints that are currently available in production:</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Validation</dt>
-<dd>
-<p>Validate notices, get validation report.<br>
-<a href="https://cvs.ted.europa.eu/swagger-ui/index.html" class="bare">https://cvs.ted.europa.eu/swagger-ui/index.html</a></p>
-</dd>
-<dt class="hdlist1">Publication</dt>
-<dd>
-<p>Submit notices; search submitted notices; stop publication:<br>
-<a href="https://enotices2.ted.europa.eu/esenders/webjars/swagger-ui/index.html" class="bare">https://enotices2.ted.europa.eu/esenders/webjars/swagger-ui/index.html</a></p>
-</dd>
-<dt class="hdlist1">Visualisation</dt>
-<dd>
-<p>Render notices in PDF or HTML:<br>
-<a href="https://viewer.ted.europa.eu/swagger-ui/index.html" class="bare">https://viewer.ted.europa.eu/swagger-ui/index.html</a></p>
-</dd>
-</dl>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_testing_your_apps"><a class="anchor" href="#_testing_your_apps"></a>Testing your apps</h2>
+<h2 id="_faq"><a class="anchor" href="#_faq"></a><a class="link" href="#_faq">FAQ</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_can_i_create_test_or_validate_an_expert_query"><a class="anchor" href="#_how_can_i_create_test_or_validate_an_expert_query"></a><a class="link" href="#_how_can_i_create_test_or_validate_an_expert_query">How can I create, test or validate an expert query?</a></h3>
 <div class="paragraph">
-<p>An <strong>eForms Preview Environment</strong> is available to allow and encourage developers to test their applications. You can find more <a href="../eforms-common/preview/index.html" class="xref page">details on the eForms Preview Environment here</a>.</p>
+<p>Use the <a href="https://ted.europa.eu/en/search/expert-search">TED Expert Search</a> page. It provides capabilities to:</p>
 </div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-caution" title="Caution"></i>
-</td>
-<td class="content">
-To use the eForms Preview Environment you will need an API key generated using the <a href="https://developer.preview.ted.europa.eu/home">TED Developer Portal of the Preview Environment</a>. This means that you will also need an EU Login account from the <a href="https://ecas.acceptance.ec.europa.eu/cas/login">EU-Login Acceptance Environment</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Information about eSentool, the legacy API to submit and manage notices, is available on the <a href="https://webgate.ec.europa.eu/fpfis/wikis/display/TEDeSender">legacy eSenders Wiki</a>.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_status_roadmap"><a class="anchor" href="#_status_roadmap"></a>Status &amp; Roadmap</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The TED API endpoints currently available are the first generation of APIs for the new TED web services for eForms.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Write queries</p>
+</li>
+<li>
+<p>Check syntax</p>
+</li>
+<li>
+<p>List all available fields</p>
+</li>
+<li>
+<p>Execute test queries</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>These APIs have been initially released in June 2022 together with the "eForms Preview Environment" and have since remained unchanged. These endpoints will also remain unchanged throughout their lifetime.</p>
-</div>
-<div class="paragraph">
-<p>We are currently in the process of simplifying, better documenting and rationalising our APIs to improve user experience and to allow us to keep enriching them in the future for offering better and consistent services to our developer community.</p>
-</div>
-<div class="paragraph">
-<p>A second generation of TED APIs is being developed. The release of this second version of TED APIs (which will be known as TED API v2) will be added next to the currently available endpoints and will not replace them. This will allow 3rd party applications that already use the current endpoints to continue functioning <strong>undisrupted</strong>. The current endpoints will only be discontinued when no 3rd party applications use them any more.</p>
+<p>The validated query can then be used in the API&#8217;s query field parameter.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_what_should_i_do_if_the_api_returns_an_error_about_an_invalid_field_format_or_value"><a class="anchor" href="#_what_should_i_do_if_the_api_returns_an_error_about_an_invalid_field_format_or_value"></a><a class="link" href="#_what_should_i_do_if_the_api_returns_an_error_about_an_invalid_field_format_or_value">What should I do if the API returns an error about an invalid field, format, or value?</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Check the field name against the available fields list</p>
+</li>
+<li>
+<p>Verify the format matches the field&#8217;s requirements</p>
+</li>
+<li>
+<p>Ensure the value is within the allowed range/format</p>
+</li>
+<li>
+<p>Test the query on the Expert Search page first</p>
+</li>
+</ol>
 </div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. The <a href="https://developer.ted.europa.eu">TED Developer Portal</a> is the single point of access for all TED developers.
 </div>
-<div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. EU Login is the European Commission&#8217;s user authentication service. It allows authorised users to access a wide range of Commission web services, using a single email address and password. If you don&#8217;t have one, you can <a href="https://ecas.ec.europa.eu/cas/eim/external/register.cgi">create an EU Login account here</a>.
 </div>
 </div>
 </article>
