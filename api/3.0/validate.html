@@ -262,43 +262,35 @@
 </aside>
     <article class="doc">
 <h1 class="page">Validation API</h1>
-<div class="sect1">
-<h2 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h2>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Validate procurement notices to ensure compliance with EU standards and eForms regulations.</p>
+<p>The Validation API is part of the TED Central Validation Service (TED CVS), which ensures that procurement notices meet compliance standards. It allows users to check notices for errors and warnings independently at any time, ensuring they are correct before submission for publication.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_what_it_does"><a class="anchor" href="#_what_it_does"></a>What It Does</h2>
+<h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available Operations</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Checks notices for errors (e.g., missing fields, incorrect values).</p>
-</li>
-<li>
-<p>Issues/ Returns warnings for potential lawfulness concerns that require further human review.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_why_this_api_exists"><a class="anchor" href="#_why_this_api_exists"></a>Why This API Exists</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_validate_procurement_notices"><a class="anchor" href="#_validate_procurement_notices"></a>Validate Procurement Notices</h3>
 <div class="paragraph">
-<p>The Validation API ensures notices meet mandatory legal and procedural standards at any time before or upon submission, preventing errors and reducing the risk of non-compliance.</p>
+<p>The Validation API ensures procurement notices meet EU standards by identifying errors and issuing warnings for potential legal issues. This independent service can validate notices anytime before they’re sent for publication, ensuring they are technically ready for TED. Any notice that passes validation through CVS upon submission to the Publication API or the eNotices2 front-end, can be considered technically valid for publication on TED.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_endpoint"><a class="anchor" href="#_endpoint"></a>Endpoint</h2>
-<div class="sectionbody">
+<div class="sect3">
+<h4 id="_api_request"><a class="anchor" href="#_api_request"></a>API Request</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/validate		Validate notices for compliance at any time before or upon submission</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/validate</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_swagger_api_endpoint"><a class="anchor" href="#_swagger_api_endpoint"></a>Swagger API Endpoint</h4>
+<div class="paragraph">
+<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Validation/validate" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Validation/validate</a></p>
+</div>
+<hr>
 </div>
 </div>
 </div>
@@ -309,13 +301,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Developers ensuring notices meet requirements, especially before submission.</p>
+<p>Developers: Ensuring notices meet requirements, especially before submission.</p>
 </li>
 <li>
-<p>eSenders avoiding compliance errors during submission.</p>
+<p>eSenders: Avoiding compliance errors during submission.</p>
 </li>
 <li>
-<p>eNotices2 web interface for validating notices before or upon submission.</p>
+<p>eNotices2 web interface: For validating notices before or upon submission.</p>
 </li>
 </ul>
 </div>
