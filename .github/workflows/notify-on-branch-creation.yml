@@ -9,20 +9,13 @@ on:
   
 
 jobs:
-  send_email:
+  notify_teams:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Email
+      - name: Notify Microsoft Teams
         run: |
-          curl -X POST \
-            --url https://api.sendgrid.com/v3/mail/send \
-            -H "Authorization: Bearer ${{ secrets.SENDGRID_API_KEY }}" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "personalizations": [{
-                "to": [{"email": "sevasti.yfanti@cloudform.lu"}],
-                "subject": "New Branch Created: ${{ github.ref_name }}"
-              }],
-              "from": {"email": "noreply@OP-TEDDocs.com"},
-              "content": [{"type": "text/plain", "value": "A new branch was created in the repository ${{ github.repository }}."}]
-            }'
+          curl -H "Content-Type: application/json" \
+               -d '{
+                 "text": "A new branch **${{ github.ref_name }}** was created in the repository **${{ github.repository }}**."
+               }' \
+               ${{ secrets.TEAMS_WEBHOOK }}
