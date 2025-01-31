@@ -13,12 +13,6 @@
 <loc>https://docs.ted.europa.eu/sitemap-EPO.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.ted.europa.eu/sitemap-epo-home.xml</loc>
-</sitemap>
-<sitemap>
-<loc>https://docs.ted.europa.eu/sitemap-epo-wf.xml</loc>
-</sitemap>
-<sitemap>
 <loc>https://docs.ted.europa.eu/sitemap-epo-wgm.xml</loc>
 </sitemap>
 <sitemap>
@@ -40,6 +34,6 @@
 <loc>https://docs.ted.europa.eu/sitemap-ODS.xml</loc>
 </sitemap>
 <sitemap>
-<loc>https://docs.ted.europa.eu/sitemap-rdf-conversion.xml</loc>
+<loc>https://docs.ted.europa.eu/sitemap-reuse.xml</loc>
 </sitemap>
 </sitemapindex>
