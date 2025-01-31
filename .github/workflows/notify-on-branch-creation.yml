@@ -20,7 +20,7 @@ jobs:
             -H "Content-Type: application/json" \
             -d '{
               "personalizations": [{
-                "to": [{"email": "nicole-anne.paterson-jones@ext.ec.europa.eu"}],
+                "to": [{"email": "sevasti.yfanti@cloudform.lu"}],
                 "subject": "New Branch Created: ${{ github.ref_name }}"
               }],
               "from": {"email": "noreply@OP-TEDDocs.com"},
