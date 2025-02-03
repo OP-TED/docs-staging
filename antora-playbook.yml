@@ -84,9 +84,9 @@ content:
   #  branches: main
 
   ### TED RDF Conversion Pipeline 
-  - url: https://github.com/OP-TED/ted-rdf-conversion-pipeline
-    start_path: docs/antora 
-    branches: main
+  #- url: https://github.com/OP-TED/ted-rdf-conversion-pipeline
+  #  start_path: docs/antora 
+  #  branches: main
     
 urls:
   redirect_facility: static
