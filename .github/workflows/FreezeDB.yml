@@ -2,7 +2,8 @@ name: Teams Announcement DB Freeze
 
 on:
   repository_dispatch:
-    types: [send-teams-announcement]  # Custom API trigger
+    types: 
+      - send-teams-announcement
 
 jobs:
   send-message:
