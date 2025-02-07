@@ -25,16 +25,3 @@
 * [.separated]#**model2owl**#
 * xref:m2o-home::index.adoc[model2owl docs `1.0`]
 
-* [.separated]#**SWS Pipeline**#
-* xref:rdf-conversion::index.adoc[SWS Pipeline Docs]
-
-////
-
-* [.separated]#**TED API**#
-* xref:api::index.adoc[TED Open Data Service]
-
-
-
-* [.separated]#**Reusing TED Data**#
-* xref:reuse::index.adoc[Downloading TED Notices]
-////
