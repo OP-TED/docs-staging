@@ -124,7 +124,7 @@
               <a href="../../eforms/latest/index.html">1.12</a>
             </li>
             <li class="version">
-              <a href="../../eforms/1.11/index.html">1.11.0</a>
+              <a href="../../eforms/1.11/index.html">1.11</a>
             </li>
             <li class="version">
               <a href="../../eforms/1.10/index.html">1.10</a>
@@ -275,7 +275,7 @@
 <div class="sect2">
 <h3 id="_extend_the_validity_of_an_api_key"><a class="anchor" href="#_extend_the_validity_of_an_api_key"></a>Extend the validity of an API key</h3>
 <div class="paragraph">
-<p>The TED API requires the \cas\logincaller to be authenticated with an API key to manage notices that are not yet published. Developers can generate and manage their API keys by logging into their account in the <a href="https://developer.ted.europa.eu/">TED Developer Portal</a>. This operation enables systems to autonomously renew API keys nearing expiration, thus preventing disruptions by avoiding manual interventions.</p>
+<p>The TED API requires an API key to manage unpublished notices. Developers can create and manage these keys via the <a href="https://developer.ted.europa.eu/">TED Developer Portal</a>. This operation allows systems to automatically renews API keys before they expire, ensuring uninterrupted service without the need for manual intervention.</p>
 </div>
 <div class="sect3">
 <h4 id="_api_request"><a class="anchor" href="#_api_request"></a>API Request</h4>
@@ -288,7 +288,7 @@
 <div class="sect3">
 <h4 id="_swagger_api_endpoint"><a class="anchor" href="#_swagger_api_endpoint"></a>Swagger API Endpoint</h4>
 <div class="paragraph">
-<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Developer%20Operations/renewApiKey" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Developer%20Operations/renewApiKey</a></p>
+<p><a href="https://api.preview.ted.europa.eu/swagger/index.html#//Developer%20Operations/renewApiKey" class="bare">https://api.preview.ted.europa.eu/swagger/index.html#//Developer%20Operations/renewApiKey</a></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -321,7 +321,7 @@ API Key Management: API keys are valid for 24 months and are required to manage 
 <div class="sect3">
 <h4 id="_swagger_api_endpoint_2"><a class="anchor" href="#_swagger_api_endpoint_2"></a>Swagger API Endpoint</h4>
 <div class="paragraph">
-<p><a href="https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Developer%20Operations/sdk-range" class="bare">https://api.ted.europa.eu/webjars/swagger-ui/index.html#/Developer%20Operations/sdk-range</a></p>
+<p><a href="https://api.preview.ted.europa.eu/swagger/index.html#//Developer%20Operations/sdk-range" class="bare">https://api.preview.ted.europa.eu/swagger/index.html#//Developer%20Operations/sdk-range</a></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -349,13 +349,13 @@ SDK Version Compliance: All notices submitted to TED must conform to an active S
 <div class="ulist">
 <ul>
 <li>
-<p>Developers: Automating API key management and ensuring SDK compatibility for seamless submissions.</p>
+<p><strong>Developers</strong>: Automating API key management and ensuring SDK compatibility for seamless submissions.</p>
 </li>
 <li>
-<p>Applications: Validating SDK versions and maintaining uninterrupted integration with TED services.</p>
+<p><strong>Applications</strong>: Validating SDK versions and maintaining uninterrupted integration with TED services.</p>
 </li>
 <li>
-<p>eSenders: Ensuring compliance with active SDK requirements during notice submissions.</p>
+<p><strong>eSenders</strong>: Ensuring compliance with active SDK requirements during notice submissions.</p>
 </li>
 </ul>
 </div>
