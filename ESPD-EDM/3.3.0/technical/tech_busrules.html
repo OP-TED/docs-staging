@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Business Rules Guide :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/tech_busrules.html">
-    <meta name="generator" content="Antora 3.1.2">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
     <link rel="stylesheet" href="../../../_/css/vendor/docsearch-2.6.3.css">
@@ -26,6 +26,38 @@
     <script>var uiRootPath = '../../../_'</script>
   </head>
   <body class="article">
+</script>
+<!-- Piwik PRO Tracking Code -->
+<script type="text/javascript">
+  (function (window, document, dataLayerName, id) {
+    window[dataLayerName] = window[dataLayerName] || [];
+    window[dataLayerName].push({ start: new Date().getTime(), event: "stg.start" });
+    var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+    function stgCreateCookie(a, b, c) {
+      var d = ""; 
+      if (c) { 
+        var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString();
+      }
+      document.cookie = a + "=" + b + d + "; path=/";
+    }
+    var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug");
+    stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+    var qP = [];
+    dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug");
+    var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+    tags.async = true, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+    !function (a, n, i) {
+      a[n] = a[n] || {};
+      for (var c = 0; c < i.length; c++)!function (i) {
+        a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {
+          var a = [].slice.call(arguments, 0); 
+          "string" == typeof a[0] && window[dataLayerName].push({ event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1) })
+        }
+      }(i[c])
+    }(window, "ppms", ["tm", "cm"]);
+  })(window, document, 'dataLayer', '23a2ab51-a9a6-40a8-bd2b-573ecafa90e3');
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
 <script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
 <div class="eu-flag">
@@ -175,12 +207,6 @@
             <li class="version">
               <a href="../../../eforms/1.6/index.html">1.6</a>
             </li>
-            <li class="version">
-              <a href="../../../eforms/1.5/index.html">1.5</a>
-            </li>
-            <li class="version">
-              <a href="../../../eforms/1.4/index.html">1.4</a>
-            </li>
         </ul>
       </li>
       <li class="component">
@@ -246,17 +272,6 @@
         <ul class="versions">
             <li class="version is-latest">
               <a href="../../../M2O/latest/index.html">2.3.0</a>
-            </li>
-        </ul>
-      </li>
-      <li class="component">
-        <a class="title" href="../../../api/latest/index.html">TED API</a>
-        <ul class="versions">
-            <li class="version">
-              <a href="../../../api/3.0/index.html">3.0-rc.2</a>
-            </li>
-            <li class="version is-latest">
-              <a href="../../../api/latest/index.html">2.0</a>
             </li>
         </ul>
       </li>
@@ -8315,12 +8330,17 @@ Party/cac:PowerOfAttorney.</p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Test Case Rule ID</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">* RS-20-R50
-* RS-80-R60</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>RS-20-R50</p>
+</li>
+<li>
+<p>RS-80-R60</p>
+</li>
+</ul>
+</div></div></td>
 <td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -8331,39 +8351,46 @@ Party/cac:PowerOfAttorney.</p></td>
 </li>
 </ul>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Rule description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about compliance of selection criteria CAN be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Mapping description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Criterion responses are implemented as Tendering Criterion response components</p></td>
 <td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XSD Path</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
 <p>/cac:TenderingCriterionResponse[0..n]</p>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Business requirement</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41+-ESPD+V2.0#BIS41-ESPDV2.0-tbr092-018[tbr92-018], link:http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-ESPD+V2.0#BIS41-ESPDV2.0-tbr092-007[tbr92-007]_, _[.underline]#tbr92-005#_, link:http://wiki.ds.unipi.gr/display/ESPDInt/BIS+41-+ESPD+V2.0#BIS41-ESPDV2.0-tbr092-006">tbr92-006</a></p></td>
 <td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XSD Business Rule description</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XSD Business Rule Schematron</p></td>
+<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Same business rules as BR-RESP-30</p></td>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -8382,11 +8409,13 @@ Party/cac:PowerOfAttorney.</p></td>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>Mapping Rule ID</strong></th>
 <th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top">Test Case Rule ID</th>
+<th class="tableblock halign-left valign-top"></th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test Case Rule ID</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -8397,6 +8426,8 @@ Party/cac:PowerOfAttorney.</p></td>
 </li>
 </ul>
 </div></div></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -8408,34 +8439,35 @@ Party/cac:PowerOfAttorney.</p></td>
 </li>
 </ul>
 </div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Rule description</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">When the pre-qualification system the EO is registered on does not cover all the selection criteria, information about compliance of selection criteria MUST be provided.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mapping description</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When the pre-qualification system the EO is registered on does not cover all the selection criteria, information about compliance of selection criteria MUST be provided.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mapping description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Criterion responses are implemented as Tendering Criterion response components</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XSD Path</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">/cac:TenderingCriterionResponse[0..n]</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XSD Business Rule description</p></td>
-<td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">XSD Business Rule Schematron</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>No Schematron rule can be implemented</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>No Schematron rule can be implemented</strong></p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -9019,11 +9051,32 @@ EO_DATA.LOTS_TENDERED.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The list of lots the EO tenders for MUST be provided.</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
 <p>Severity: ERROR</p>
 </div>
+</blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>If /cac:ProcurementProjectLot/cbc:ID is not 0 and the /cac:TenderingCriterion type is CRITERION.OTHER.EO_DATA.LOTS_TENDERED. Then, its /cac:TenderingCriterionResponse /cbc:ResponseID must exist within /cac:ProcurementProjectLot /cbc:ID</p>
+<p>If /cac:ProcurementProjectLot/cbc:ID is not 0 and the /cac:TenderingCriterion type is CRITERION.OTHER.EO_DATA.LOTS_TENDERED</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Then, its /cac:TenderingCriterionResponse /cbc:ResponseID must exist within /cac:ProcurementProjectLot /cbc:ID</p>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -9299,11 +9352,29 @@ EO_DATA.LOTS_TENDERED.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Convention: Lots should always be identified with a sequential number, as in the examples: Lot1, Lot2 Lot7.</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
 <p>Severity: WARNING</p>
 </div>
+</blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
 <p>/cac:ProcurementProjectLot /cbc:ID must be unique in the XML instance.</p>
+</div>
+</blockquote>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -9580,30 +9651,55 @@ EO_DATA.LOTS_TENDERED.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about the other participants MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
 <p>Severity: ERROR</p>
 </div>
+</blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>At least one /cac:TenderingCriterionResponse<br>
-/cbc:ValidatedCriterionPropertyID must match<br>
-an IDs criterion within<br>
-/cac:TenderingCriterionProperty/cbc:ID which<br>
-/cac:TenderingCriterion/cbc:CriterionTypeCode<br>
-is <em>CRITERION.OTHER.EO_DATA.<br>
+<p>At least one /cac:TenderingCriterionResponse /cbc:ValidatedCriterionPropertyID must match
+an IDs criterion within /cac:TenderingCriterionProperty
+/cbc:ID which /cac:TenderingCriterion/cbc:CriterionTypeCode is <em>CRITERION.OTHER.EO_DATA.
 TOGETHER_WITH_OTHERS</em></p>
 </div>
-<div class="paragraph">
-<p>/cac:TenderingCriterionResponse<br>
-/cac:ResponseValue/cbc:ResponseIndicator is<br>
-true; meaning that the EO is<br>
-participating with others.</p>
+</blockquote>
 </div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>Each of the criterion subgroups identified within:<br>
-/cac:TenderingCriterion<br>
-/cac:TenderingCriterionPropertyGroup<br>
-/cac:SubsidiaryTenderingCriterionPropertyGroup/<br>
-cac:TenderingCriterionProperty, must be answered.</p>
+<p>/cac:TenderingCriterionResponse /cac:ResponseValue
+/cbc:ResponseIndicator is true; meaning that the EO
+is participating with others.</p>
+</div>
+</blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Each of the criterion subgroups identified within: /cac:TenderingCriterion
+/cac:TenderingCriterionPropertyGroup /cac:SubsidiaryTenderingCriterionPropertyGroup/cac:TenderingCriterionProperty, must be answered.</p>
+</div>
+</blockquote>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -9698,14 +9794,29 @@ ESPDV2.0-tbr092-008[<em><span class="underline">tbr092-008</span></em>]</p></td>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about the group MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
 <p>Severity: WARNING</p>
 </div>
+</blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
 <div class="paragraph">
-<p>If /cbc:EconomicOperatorGroupName is not<br>
-implemented, a warning is thrown to inform<br>
-that the ESPDResponse is going to be used<br>
-as Sole contractor and not lead entity.</p>
+<p>If /cbc:EconomicOperatorGroupName is not implemented, a warning is thrown to inform that the ESPDResponse is going to be used as Sole contractor and not lead entity.</p>
+</div>
+</blockquote>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -9800,13 +9911,31 @@ as Sole contractor and not lead entity.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about all the entities the EO relies on MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>At least one /cac:TenderingCriterionResponse<br>
-/cbc:ValidatedCriterionPropertyID must match<br>
-an IDs criterion within /cac:TenderingCriterion/cbc:ID<br>
-which /cac:TenderingCriterion/cbc:CriterionTypeCode is<br>
-<em>CRITERION.OTHER.EO_DATA.<br>
-RELIES_ON_OTHER_CAPACITIES</em></p>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Severity: ERROR</p>
+</div>
+</blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>At least one /cac:TenderingCriterionResponse /cbc:ValidatedCriterionPropertyID must match
+an IDs criterion within /cac:TenderingCriterion/cbc:ID which /cac:TenderingCriterion/cbc:CriterionTypeCode
+is <em>CRITERION.OTHER.EO_DATA.RELIES_ON_OTHER_CAPACITIES</em></p>
+</div>
+</blockquote>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -9901,28 +10030,43 @@ RELIES_ON_OTHER_CAPACITIES</em></p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about all subcontractors MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Severity: ERROR</p>
-</div>
-<div class="paragraph">
-<p>At least one /cac:TenderingCriterionResponse<br>
-/cbc:ValidatedCriterionPropertyID must match<br>
-an IDs criterion within /cac:TenderingCriterion/cbc:ID<br>
-which /cac:TenderingCriterion/cbc:CriterionTypeCode is<br>
-<em>CRITERION.OTHER.EO_DATA.<br>
-SUBCONTRACTS_WITH_THIRD_PARTIES</em></p>
-</div>
-<div class="paragraph">
-<p>If the response cac:TenderingCriterionResponse<br>
-/cac:ResponseValue/cbc:ResponseIndicator is true;<br>
-each of the criterion subgroups identified within:<br>
-/cac:TenderingCriterion /cac:TenderingCriterionPropertyGroup<br>
-/cac:SubsidiaryTenderingCriterionPropertyGroup/ + cac:TenderingCriterionProperty, must be answered</p>
-</div>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p></p>
 <div class="quoteblock">
 <blockquote>
-
+<div class="paragraph">
+<p>Severity: ERROR</p>
+</div>
 </blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>At least one /cac:TenderingCriterionResponse /cbc:ValidatedCriterionPropertyID must match
+an IDs criterion within /cac:TenderingCriterion/cbc:ID which /cac:TenderingCriterion/cbc:CriterionTypeCode
+is <em>CRITERION.OTHER.EO_DATA.SUBCONTRACTS</em>
+WITH_THIRD_PARTIES_</p>
+</div>
+</blockquote>
+</div>
+</li>
+<li>
+<p></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>If the response cac:TenderingCriterionResponse /cac:ResponseValue/cbc:ResponseIndicator is
+true; each of the criterion subgroups identified within: /cac:TenderingCriterion /cac:TenderingCriterionPropertyGroup /cac:SubsidiaryTenderingCriterionPropertyGroup/cac:TenderingCriterionProperty, must be answered</p>
+</div>
+</blockquote>
+</div>
+</li>
+</ul>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -11833,5 +11977,57 @@ Response</em></p>
             ECL.autoInit();
         </script>
     </div>
-</div>  </body>
+</div> <!-- Cookie Banner -->
+   <div id="cookie-banner">
+    <div class="cookie-wrapper">
+    <div class="info">
+      <div class="icon">
+      <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false" xmlns="xmlns=&quot;http://www.w3.org/2000/svg" class="icon wt-icon--l wt-icon--primary" width="32" height="32" fill="currentColor">
+      <path fill-rule="evenodd" d="M42 3H6C4.35 3 3 4.35 3 6v36c0 1.65 1.35 3 3 3h36c1.65 0 3-1.35 3-3V6c0-1.65-1.35-3-3-3M21.93 13.38a2.31 2.31 0 0 1 2.1-1.41c.6 0 1.17.24 1.59.66s.66.99.66 1.59c0 .45-.12.87-.39 1.26-.24.36-.6.66-1.02.84s-.87.21-1.29.12c-.45-.09-.84-.3-1.14-.63-.3-.3-.54-.72-.63-1.14s-.03-.9.12-1.29M30 36H18v-3h4.5v-9h-3v-3h6v12H30z" clip-rule="evenodd"></path>
+      
+      </svg>
+      </div>
+      <div class="text">
+        This site uses cookies. Visit our <a href="https://ted.europa.eu/en/cookie-choice">cookies policy page</a> or click the link in any footer for more information and to change your preferences.
+      </div>
+    </div>
+    <div class="actions">
+      <button onclick="acceptCookies('all')">Accept all cookies</button>
+      <button onclick="acceptCookies('essential')">Accept only essential cookies</button>
+    </div>
+    </div>
+  </div>
+
+   <!-- JavaScript to handle cookie banner -->
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const isAccepted = localStorage.getItem('cookiesAccepted');
+    if (!isAccepted) {
+      document.getElementById('cookie-banner').style.display = 'flex';
+    } else {
+      applyConsentSettings(isAccepted);
+    }
+  });
+
+  function acceptCookies(type) {
+    localStorage.setItem('cookiesAccepted', type);
+    document.getElementById('cookie-banner').style.display = 'none';
+    applyConsentSettings(type);
+  }
+
+  function applyConsentSettings(type) {
+    if (type === 'all') {
+      // User accepts all cookies
+      var consentAccepted = { consents: { analytics: { status: 1 } } };
+      ppms.cm.api('setComplianceSettings', consentAccepted, function (new_consent) {});
+    } else if (type === 'essential') {
+      // User accepts only essential cookies
+      var consentRejected = { consents: { analytics: { status: 0 } } };
+      ppms.cm.api('setComplianceSettings', consentRejected, function (new_consent) {});
+    }
+  }
+
+
+_
+  </body>
 </html>
