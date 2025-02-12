@@ -20,7 +20,7 @@
 * xref:ODS:ROOT:index.adoc[TED Open Data Docs]
 
 * [.separated]#**TED API**#
-* xref:api:ROOT:index.adoc[TED API Docs]
+* xref:api:ROOT:index.adoc[TED API Docs `2.0`]
 
 * [.separated]#**model2owl**#
 * xref:m2o-home::index.adoc[model2owl docs `1.0`]
