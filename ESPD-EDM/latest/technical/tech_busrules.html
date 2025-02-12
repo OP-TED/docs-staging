@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Business Rules Guide :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/tech_busrules.html">
-    <meta name="generator" content="Antora 3.1.7">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
     <link rel="stylesheet" href="../../../_/css/vendor/docsearch-2.6.3.css">
@@ -181,6 +181,12 @@
             <li class="version">
               <a href="../../../eforms/1.6/index.html">1.6</a>
             </li>
+            <li class="version">
+              <a href="../../../eforms/1.5/index.html">1.5</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.4/index.html">1.4</a>
+            </li>
         </ul>
       </li>
       <li class="component">
@@ -246,6 +252,17 @@
         <ul class="versions">
             <li class="version is-latest">
               <a href="../../../M2O/latest/index.html">2.3.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../api/latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version">
+              <a href="../../../api/3.0/index.html">3.0-rc.2</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../../../api/latest/index.html">2.0</a>
             </li>
         </ul>
       </li>
@@ -9308,13 +9325,11 @@ Then</p>
 <tr>
 <th class="tableblock halign-left valign-top"><strong>Mapping Rule ID</strong></th>
 <th class="tableblock halign-left valign-top"></th>
-<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Test Case Rule ID</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Test Case Rule ID</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -9325,8 +9340,6 @@ Then</p>
 </li>
 </ul>
 </div></div></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
@@ -9338,11 +9351,10 @@ Then</p>
 </li>
 </ul>
 </div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rule description</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rule description</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">When the pre-qualification system the EO is registered on does not cover all the selection criteria, information about compliance of selection criteria MUST be provided.</p></td>
-<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
 <tr>
@@ -9947,32 +9959,18 @@ Then</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The list of lots the EO tenders for MUST be provided.</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Severity: ERROR</p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>If /cac:ProcurementProjectLot/cbc:ID is not 0 and the /cac:TenderingCriterion type is CRITERION.OTHER.EO_DATA.LOTS_TENDERED</p>
-</div>
-</blockquote>
+<p>If /cac:ProcurementProjectLot/cbc:ID is not 0<br>
+and the /cac:TenderingCriterion type is<br>
+CRITERION.OTHER.EO_DATA.LOTS_TENDERED</p>
 </div>
 <div class="paragraph">
-<p>Then, its /cac:TenderingCriterionResponse /cbc:ResponseID must exist within /cac:ProcurementProjectLot /cbc:ID</p>
-</div>
-</li>
-</ul>
+<p>Then, its /cac:TenderingCriterionResponse<br>
+/cbc:ResponseID must exist within<br>
+/cac:ProcurementProjectLot /cbc:ID</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -10547,49 +10545,27 @@ Then</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about the other participants MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Severity: ERROR</p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>At least one /cac:TenderingCriterionResponse /cbc:ValidatedCriterionPropertyID must match an IDs criterion within /cac:TenderingCriterionProperty /cbc:ID which /cac:TenderingCriterion/cbc:CriterionTypeCode is <em>CRITERION.OTHER.EO_DATA.TOGETHER_WITH_OTHERS</em></p>
+<p>At least one /cac:TenderingCriterionResponse<br>
+/cbc:ValidatedCriterionPropertyID must match an<br>
+IDs criterion within /cac:TenderingCriterionProperty
+/cbc:ID which /cac:TenderingCriterion/cbc:CriterionTypeCode<br>
+is <em>CRITERION.OTHER.EO_DATA.<br>
+TOGETHER_WITH_OTHERS</em></p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>/cac:TenderingCriterionResponse /cac:ResponseValue/cbc:ResponseIndicator is true; meaning that the EO is participating with others.</p>
+<p>/cac:TenderingCriterionResponse /cac:ResponseValue/<br>
+cbc:ResponseIndicator is true; meaning that the EO<br>
+is participating with others.</p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>Each of the criterion subgroups identified within: /cac:TenderingCriterion /cac:TenderingCriterionPropertyGroup /cac:SubsidiaryTenderingCriterionPropertyGroup/cac:TenderingCriterionProperty, must be answered.</p>
-</div>
-</blockquote>
-</div>
-</li>
-</ul>
+<p>Each of the criterion subgroups identified within:<br>
+/cac:TenderingCriterion /cac:TenderingCriterionPropertyGroup<br>
+/cac:SubsidiaryTenderingCriterionPropertyGroup/<br>
+cac:TenderingCriterionProperty, must be answered.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -10683,29 +10659,13 @@ Then</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about the group MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Severity: WARNING</p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>If /cbc:EconomicOperatorGroupName is not implemented, a warning is thrown to inform that the ESPDResponse is going to be used as Sole contractor and not lead entity.</p>
-</div>
-</blockquote>
-</div>
-</li>
-</ul>
+<p>If /cbc:EconomicOperatorGroupName is not implemented,<br>
+a warning is thrown to inform that the ESPDResponse is<br>
+going to be used as Sole contractor and not lead entity.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -10800,29 +10760,16 @@ Then</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about all the entities the EO relies on MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Severity: ERROR</p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>At least one /cac:TenderingCriterionResponse /cbc:ValidatedCriterionPropertyID must match an IDs criterion within /cac:TenderingCriterion/cbc:ID which /cac:TenderingCriterion/cbc:CriterionTypeCode is <em>CRITERION.OTHER.EO_DATA.RELIES_ON_OTHER_CAPACITIES</em></p>
-</div>
-</blockquote>
-</div>
-</li>
-</ul>
+<p>At least one /cac:TenderingCriterionResponse<br>
+/cbc:ValidatedCriterionPropertyID must match an IDs<br>
+criterion within /cac:TenderingCriterion/cbc:ID which<br>
+/cac:TenderingCriterion/cbc:CriterionTypeCode is<br>
+<em>CRITERION.OTHER.EO_DATA.<br>
+RELIES_ON_OTHER_CAPACITIES</em></p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>
@@ -10917,39 +10864,25 @@ Then</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Information about all subcontractors MUST be provided</p></td>
 <td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
-<div class="paragraph">
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Severity: ERROR</p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>At least one /cac:TenderingCriterionResponse /cbc:ValidatedCriterionPropertyID must match an IDs criterion within /cac:TenderingCriterion/cbc:ID which /cac:TenderingCriterion/cbc:CriterionTypeCode is <em>CRITERION.OTHER.EO_DATA.SUBCONTRACTS_WITH_THIRD_PARTIES</em></p>
+<p>At least one /cac:TenderingCriterionResponse<br>
+/cbc:ValidatedCriterionPropertyID must match an<br>
+IDs criterion within /cac:TenderingCriterion/cbc:ID which<br>
+/cac:TenderingCriterion/cbc:CriterionTypeCode is<br>
+<em>CRITERION.OTHER.EO_DATA.<br>
+SUBCONTRACTS_WITH_THIRD_PARTIES</em></p>
 </div>
-</blockquote>
-</div>
-</li>
-<li>
-<p></p>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>If the response cac:TenderingCriterionResponse /cac:ResponseValue/cbc:ResponseIndicator is true; each of the criterion subgroups identified within: /cac:TenderingCriterion /cac:TenderingCriterionPropertyGroup /cac:SubsidiaryTenderingCriterionPropertyGroup/cac:TenderingCriterionProperty, must be answered</p>
-</div>
-</blockquote>
-</div>
-</li>
-</ul>
+<p>If the response cac:TenderingCriterionResponse<br>
+/cac:ResponseValue/cbc:ResponseIndicator is true;<br>
+each of the criterion subgroups identified within:<br>
+/cac:TenderingCriterion<br>
+/cac:TenderingCriterionPropertyGroup<br>
+/cac:SubsidiaryTenderingCriterionPropertyGroup/<br>
+cac:TenderingCriterionProperty, must be answered</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"></td>
 </tr>

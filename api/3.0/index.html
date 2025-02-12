@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TED API :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/api/latest/index.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/custom.css">
+    <link rel="stylesheet" href="../../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../_/img/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../_/img/icons/site.webmanifest">
+    <link rel="mask-icon" href="../../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="/styles/optional/custom.css" media="screen"/>
+    <meta name="google-site-verification" content="9zNtA8Mxo6eMk-CIvQQbCvXFWjOoAHT6phYIK3saIV4" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <script>var uiRootPath = '../../_'</script>
+  <script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>
+
+</head>
+
+<body class="article">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
+<div class="eu-flag">
+    <nav class="navbar-scrollable">
+        <div class="navbar-brand">
+
+            <div class="eu-emblem" style="display: inline-block;">
+                <!-- flag and logo-->
+                <a href="https://european-union.europa.eu/index_en" target="_blank">
+                    <div class="eu-emblem-std-en"><span></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="sep-frame">
+            <div class="rect-grey"></div>
+        </div>
+    </nav>
+
+</div>
+
+<div class="eu-tenders">
+    <nav class="navbar">
+        <div class="text-eu-tenders">
+            <a href="https://ted.europa.eu/en/" target="_blank">EU tenders</a>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+
+            <div class="text-eu-subtext-text">
+                <a href="https://docs.ted.europa.eu">TED Developer Documentation</a>
+            </div>
+            <div class="text-eu-subtext-label">
+                <a href="https://docs.ted.europa.eu"></a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+  <div class="body">
+<script src="../../_/js/07-scrollable-header-nav.js"></script>
+<div class="nav-container" data-component="api" data-version="3.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">TED API</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="intro.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="developer%20operations.html">Developer Operations API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="convert.html">Conversion API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="publish.html">Publication API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="validate.html">Validation API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="visualise.html">Visualisation API</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="search.html">Search API</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title">TED API</span>
+          <span class="version">3.0-rc.2</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../eforms/latest/index.html">1.12</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.11/index.html">1.11</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.10/index.html">1.10</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.9/index.html">1.9</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.8/index.html">1.8</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.7/index.html">1.7</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.6/index.html">1.6</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.5/index.html">1.5</a>
+            </li>
+            <li class="version">
+              <a href="../../eforms/1.4/index.html">1.4</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../EPO/latest/index.html">4.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/4.1/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/4/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../ESPD-EDM/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../ESPD-EDM/latest/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.3.0/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../M2O/latest/index.html">model2owl Documentation</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../M2O/latest/index.html">2.3.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component is-current">
+        <a class="title" href="../latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version is-current">
+              <a href="index.html">3.0-rc.2</a>
+            </li>
+            <li class="version is-latest">
+              <a href="../latest/index.html">2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../ODS/latest/index.html">TED Open Data</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../ODS/latest/index.html">1.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">TED API</a></li>
+    <li><a href="index.html">Home</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.0-rc.2</button>
+  <div class="version-menu">
+    <a class="version is-current" href="index.html">3.0-rc.2</a>
+    <a class="version" href="../latest/index.html">2.0</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+    <article class="doc">
+<h1 class="page">TED API</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Publications Office (OP) has developed a range of applications for the submission, validation, processing, visualisation and dissemination of <a href="https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/eforms_en">eForms</a> notices. These went into production on 14 November 2022 and are collectively known as <strong>TED Apps</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The OP has also developed <strong>TED API</strong>, a set of programmatic tools that allows third-party developers to integrate their applications with the TED ecosystem and the TED Apps. By using TED API, organisations can automate and streamline processes related to public procurement, enabling efficient interaction with TED services across Europe. This makes it an essential resource for governments, businesses, and developers (e.g. eSenders or reusers of TED Data) who need to work with public procurement notices.</p>
+</div>
+<div class="paragraph">
+<p>Using the TED API, developers can create applications that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Retrieve published procurement notices from the TED website for analysis or reuse.</p>
+</li>
+<li>
+<p>Submit and manage notices for publication programmatically, eliminating manual steps.</p>
+</li>
+<li>
+<p>Validate notices to ensure compliance with procurement regulations.</p>
+</li>
+<li>
+<p>Visualise notices in readable formats such as PDFs or HTML.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>TED API allows anonymous access to all services manipulating published notices (i.e. searching for, or retrieving notices already published on TED). All TED API endpoints that manipulate notices which are not yet published, require the \cas\logincaller to be authenticated with an API key.</p>
+</div>
+<div class="paragraph">
+<p>See section <a href="#_api_keys">API keys</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_ted_api_connects_to_ted_apps"><a class="anchor" href="#_how_ted_api_connects_to_ted_apps"></a>How TED API connects to TED Apps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each TED API operation aligns with specific TED applications, enabling the seamless processing, validation, and publication of eForms notices. The diagram below illustrates how these connections are structured:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/api_connections.png" alt="api connections">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>eNotices2:</strong> This is the single entry point for submitting and managing eForms notices. It interacts with the <strong>Publication API</strong> to allow programmatic submissions, queries, and publication management. The eNotices2 web user interface was designed with front-end users in mind, whereas applications and developers should interact directly with the Publication API. It also interacts with the <strong>TED Central Validation Service</strong> for validating notices before and upon submission.</p>
+</li>
+<li>
+<p><strong>TED Central Validation Service (TED CVS):</strong> This service – which exists only as an API – ensures notices meet compliance standards. The <strong>Validation API</strong> provides a mechanism to check notices for errors and warnings. This service can be used independently at any time to detect and correct errors in notices prior to sending them for publication via the Publication API. Any notice that passes validation through CVS upon submission to the Publication API or the eNotices2 front-end, can be considered technically valid for publication on TED.</p>
+</li>
+<li>
+<p><strong>TED Viewer:</strong> Used for rendering notices into readable formats such as HTML and PDF. The <strong>Visualisation API</strong> facilitates this functionality. It also interacts with eNotices2 to preview a notice in PDF or HTML and can be called directly by external parties to preview their XML notices.</p>
+</li>
+<li>
+<p><strong>TED Website:</strong> This is the public-facing platform for published notices. The <strong>Search API</strong> enables access to these notices for reuse or analysis. Expert queries built on the TED Website can also be used via the API.</p>
+</li>
+<li>
+<p><strong>TED XML Data Converter (TEDXDC):</strong> This service – which exists only as an API – was designed to help with the process of converting a notice published in the legacy TED XML schemas, to a draft form of the same notice in eForms. It is used by eNotices2 when the user imports a published TED XML notice in the interface to continue a procedure in eForms; however, it can also be used as a stand-alone API by developers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This interconnected structure ensures that developers can automate every stage of notice processing, from submission to publication and visualisation, while adhering to EU standards.
+Other systems, such as TED Monitor, are internal to the Publications Office and support the preparation of notices for publication. Additionally, auxiliary developer operations provide essential tools for both developers and OP systems.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_get_started"><a class="anchor" href="#_how_to_get_started"></a>How to get started</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Obtain an API key</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Visit the <a href="https://developer.ted.europa.eu/home"><strong>TED Developer Portal</strong></a><sup class="footnote" id="_footnote_portal">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
+</li>
+<li>
+<p>Log in with your <strong>EU Login</strong><sup class="footnote" id="_footnote_eu-login">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> credentials.</p>
+</li>
+<li>
+<p>Generate your API Key via the <strong>Manage API Keys</strong> section.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Copy and save your API key upon creation; it cannot be retrieved later.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Search API does not require a key.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p><strong>Authenticate Your Application</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use your API Key in the header of requests to access TED services.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p><strong>Test in the <a href="https://docs.ted.europa.eu/eforms-common/preview/index.html">eForms Preview Environment</a></strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>It is important that you refrain from testing in the Production environment. This is reserved for notices that will be published on TED.</p>
+</li>
+<li>
+<p>For more information, see section <a href="#_testing_your_apps">Testing your apps</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+eSenders and developers can create multiple accounts in the Preview environment for testing. In the Production environment, only one account and one API key per EU Login are allowed. We strongly recommend using a shared or functional email address for setting up Production accounts instead of a personal email.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_api_keys"><a class="anchor" href="#_api_keys"></a>API keys</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>User authentication and authorisation (for those TED APIs that require it) is controlled by the use of API keys. TED API keys are essentially UUIDs (Universally Unique Identifiers) without hyphens (dashes).</p>
+</div>
+<div class="paragraph">
+<p>You can generate and manage your own API keys by logging-in to your account in the <a href="https://developer.ted.europa.eu"><strong>TED Developer Portal</strong></a><sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>If you use the Publication API, after you generate your key, log into the <a href="https://enotices2.ted.europa.eu">eNotices2 website</a> at least once to pair your account and perform at least one valid API request for the system to recognise you as an "eSender".</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only one API key is allowed per user. The creation of a new API key implies the automatic revocation of the previous one.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_api_key_generation"><a class="anchor" href="#_api_key_generation"></a>API key generation</h3>
+<div class="paragraph">
+<p>You can generate an API Key by logging into the TED Developer Portal<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and clicking on the "Manage your API Keys" button. To login to the TED Developer Portal you will need a valid EU Login<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> account.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For security reasons API keys are not stored and cannot be retrieved via the TED Developer Portal after they are generated. Your API key will be delivered to you only at the time of generation. Copy and safely store the provided API key; if you lose it, you will have to generate a new one.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_api_key_life_span"><a class="anchor" href="#_api_key_life_span"></a>API key life span</h3>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Expiry</dt>
+<dd>
+<p>Every API key is valid for 24 months. After its validity period elapses, the API key expires.</p>
+</dd>
+<dt class="hdlist1">Renewal</dt>
+<dd>
+<p>API key renewal extends the validity of an API key for 12 months.</p>
+<div class="paragraph">
+<p>An automated notification will be sent four (4) weeks before the expiration of the API key to the email address associated with the EU-Login account of the user that created the API key. The email will contain a hyperlink that can be used to renew the API key. If you don&#8217;t click on the hyperlink within 21 days, the link will expire and a new email will be sent to you with a new hyperlink.</p>
+</div>
+</dd>
+<dt class="hdlist1">Revocation</dt>
+<dd>
+<p>You can revoke any unused API keys as needed in the TED Developer Portal. Revoked API keys are invalidated permanently.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_new_in_ted_api_v3"><a class="anchor" href="#_new_in_ted_api_v3"></a>New in TED API v3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The new TED API v3 simplifies access, consolidates services under a unified gateway, and improves user experience for developers and organisations alike. To address feedback from developers and streamline integration, it introduces a range of improvements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Unified Gateway:</strong> All APIs are accessible through a single domain: <a href="https://api.ted.europa.eu/v3" class="bare">https://api.ted.europa.eu/v3</a></p>
+</li>
+<li>
+<p><strong>Rationalised and standardised API endpoints:</strong> The structure of API URLs has been harmonised: <a href="https://api.ted.europa.eu/{api-version}/{resource}/{action}" class="bare">https://api.ted.europa.eu/{api-version}/{resource}/{action}</a></p>
+</li>
+<li>
+<p><strong>Consolidated Swagger Interface:</strong> Explore all endpoints in one place for easier navigation and integration: https://api.ted.europa.eu/webjars/swagger-ui/</p>
+</li>
+<li>
+<p><strong>Streamlined API transitions:</strong> One unified version number for all APIs</p>
+</li>
+<li>
+<p><strong>Backward Compatibility:</strong> TED API v2 remains active, allowing for a smooth transition to v3</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_transitioning_from_ted_api_v2"><a class="anchor" href="#_transitioning_from_ted_api_v2"></a>Transitioning from TED API v2</h3>
+<div class="paragraph">
+<p>TED API v2 will remain supported for at least six months until July 2025, ensuring a smooth transition to the latest version.</p>
+</div>
+<div class="paragraph">
+<p>Developers are encouraged to migrate to the latest version as soon as possible to benefit from its enhanced features and unified interface.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_versioning_policy"><a class="anchor" href="#_versioning_policy"></a>Versioning policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>TED API is committed to providing a stable and reliable environment for developers. Our versioning policy ensures clarity and minimises disruption when introducing updates.</p>
+</div>
+<div class="sect2">
+<h3 id="_supported_versions"><a class="anchor" href="#_supported_versions"></a>Supported versions</h3>
+<div class="paragraph">
+<p>At any given time, TED API supports two active versions to allow users ample time to transition to the latest version.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_current_active_versions"><a class="anchor" href="#_current_active_versions"></a>Current active versions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Version 2 (Legacy, recommended for migration).</p>
+</li>
+<li>
+<p>Version 3 (Primary focus, unified and improved features).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Future transitions will maintain the two-version policy, with older versions being deprecated only after ensuring most users have migrated.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when_versions_are_changed"><a class="anchor" href="#_when_versions_are_changed"></a>When versions are changed</h3>
+<div class="paragraph">
+<p>New versions of TED API are introduced to deliver significant improvements or to address limitations in previous versions. A version change is triggered when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New functionalities or services are added that cannot be accommodated within the current version.</p>
+</li>
+<li>
+<p>Technical or compliance requirements necessitate modifications that constitute "breaking changes".</p>
+</li>
+<li>
+<p>A need arises to consolidate or rationalise APIs for better usability.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The team is committed to providing smooth version transitions by offering extensive support, backwards compatibility, and clear timelines.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_breaking_changes"><a class="anchor" href="#_breaking_changes"></a>Breaking Changes</h3>
+<div class="paragraph">
+<p>We strive to avoid breaking changes within a single version. Breaking changes are defined as changes that can disrupt or require updates to existing integrations. These include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Removing an endpoint: Users rely on stable access to endpoints for their systems.</p>
+</li>
+<li>
+<p>Adding a new required request parameter: This introduces incompatibility for existing requests. Adding a new optional parameter is <strong>not</strong> considered a breaking change.</p>
+</li>
+<li>
+<p>Removing or changing the type of a request parameter or response attribute: This impacts how applications handle data.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When a breaking change is necessary, a new version will be introduced to preserve compatibility for existing users. We will always provide clear migration guidance and sufficient notice before deprecating an older version.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing_your_apps"><a class="anchor" href="#_testing_your_apps"></a>Testing your apps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://docs.ted.europa.eu/eforms-common/preview/index.html"><strong>eForms Preview Environment</strong></a> was made available to allow and encourage developers to test their applications before or after deployment. Here is how to get started:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Obtain an API key</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Create an EU Login account in the <a href="https://ecas.acceptance.ec.europa.eu/cas/login">EU-Login Acceptance Environment</a>.</p>
+</li>
+<li>
+<p>Generate an API key on the <a href="https://developer.preview.ted.europa.eu/home">TED Developer Portal of the Preview Environment</a> via the <strong>Manage API Keys</strong> section.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Copy and save your API key upon creation; it cannot be retrieved later.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Accounts and API keys in "Production" and "Preview" environments are not interchangeable.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p><strong>Authenticate Your Application</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use your API Key in the header of requests to access TED services.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If you are using the Publication API, you also need to create an account in <a href="https://enotices2.preview.ted.europa.eu/home">eNotices2 in the Preview environment</a> by logging in with the same EU Login account and perform at least one valid API request for the system to recognise you an an "eSender".
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Search API and the TED Website are not available in the Preview environment; notices submitted in the Preview environment do not get published.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources_and_support"><a class="anchor" href="#_resources_and_support"></a>Resources and Support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Unified Swagger Interface: <a href="https://api.ted.europa.eu/v3" class="bare">https://api.ted.europa.eu/v3</a></p>
+</div>
+<div class="paragraph">
+<p>Developer Portal:  <a href="https://developer.ted.europa.eu/" class="bare">https://developer.ted.europa.eu/</a></p>
+</div>
+<div class="paragraph">
+<p>Developers’ Corner: Explore additional tools and resources for reusing TED data at <a href="https://ted.europa.eu/en/simap/developers-corner-for-reusers" class="bare">https://ted.europa.eu/en/simap/developers-corner-for-reusers</a></p>
+</div>
+<div class="paragraph">
+<p>eForms Preview Environment: Read what it is before you test your eSender integration at <a href="https://docs.ted.europa.eu/eforms-common/preview/index.html">eForms Preview environment</a>.</p>
+</div>
+<div class="paragraph">
+<p>Technical issues related to the eForms SDK: Please go to the discussions on GitHub at <a href="https://github.com/OP-TED/eForms-SDK/discussions" class="bare">https://github.com/OP-TED/eForms-SDK/discussions</a></p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. The <a href="https://developer.ted.europa.eu">TED Developer Portal</a> is the single point of access for all TED developers.
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. EU Login is the European Commission&#8217;s user authentication service. It allows authorised users to access a wide range of Commission web services, using a single email address and password. If you don&#8217;t have one, you can <a href="https://ecas.ec.europa.eu/cas/eim/external/register.cgi">create an EU Login account here</a>.
+</div>
+</div>
+</article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+    <a href="https://ted.europa.eu/" target="_blank">TED Website</a>
+  </div>
+</article>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('/home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
+  <script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<style type="text/css">
+    @import url('/documents/d/global/custom');
+</style>
+
+<div class="footer">
+    <div class="three-columns">
+
+        <div class="col-md-12 col-lg-4">
+            <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img
+                        alt="TED Developer Docs" class="ls-op" src="../../_/img/ted-logo-footer2.png"
+                        height="48" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+            <div class="ted-footer__rich-text">
+                <p>This website is managed by:
+                    <u>
+                        <a href="https://op.europa.eu/en/home" target="_blank">Publications Office of the European
+                            Union</a>
+                    </u>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">Need Help?</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/contact">Contact the TED Helpdesk</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Follow us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer">
+                    <a href="https://twitter.com/EUTenders"> <img src="../../_/img/twitter.svg"
+                            class="icon-footer" /><span>X/Twitter</span></a>
+                    <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img
+                            src="../../_/img/youtube.svg" class="icon-footer-2nd" /><span>YouTube</span></a>
+                </li>
+            </ul>
+
+            <h3 class="ted-footer__title">Legal</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/legal-notice" target="_blank">Legal Notice</a>
+                </li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/cookie-choice" target="_blank">Cookies</a>
+                </li>
+                <li class="li-footer"><a
+                        href="https://ted.europa.eu/en/accessibility"
+                        target="_blank">Accessibility</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">About us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/">About TED</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Other services</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+                <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+                <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+                <li class="li-footer"><a href="/web/librarians-corner">EU publications</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="three-columns">
+        <div class="col-md-12 col-lg-4">
+            <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+
+            <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union"
+                        class="ls-op" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+           
+            <div class="ted-footer__rich-text">
+                <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span
+                            style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <h3 class="ted-footer__title">Contact the EU</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other
+                        Telephone options</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via
+                        our contact forms</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of
+                        the EU centres</a></li>
+
+            </ul>
+
+        </div>
+        <div class="col-md-12 col-lg-4">
+             <h3 class="ted-footer__title">Social Media</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a
+                        href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i
+                            aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+
+            </ul>
+            <h3 class="ted-footer__title">EU institutions and bodies</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer institutions"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">Search all EU institutions and bodies</a></li>
+               
+            </ul>
+        </div>
+
+        <script>
+            ECL.autoInit();
+        </script>
+    </div>
+</div>  <!-- Cookie Consent Kit -->
+  <script type="application/json">
+    {
+      "utility" : "cck",
+      "url": {
+        "en": "https://ted.europa.eu/en/cookie-choice",
+        "fr": "https://ted.europa.eu/fr/cookie-choice"
+      },
+      "appendix": {
+        "en": "We use cookies to improve your experience and analyze our traffic.",
+        "fr": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic."
+      },
+      "target": true
+    }
+    </script>
+
+  <!-- Piwik PRO Tracking Code -->
+  <script type="text/javascript">
+    function loadPiwikPro() {
+      (function (window, document, dataLayerName, id) {
+        window[dataLayerName] = window[dataLayerName] || [];
+        window[dataLayerName].push({start: new Date().getTime(), event: "stg.start"});
+        var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+        function stgCreateCookie(a, b, c) {
+          var d = "";
+          if (c) {
+            var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString();
+          }
+          document.cookie = a + "=" + b + d + "; path=/";
+        }
+        var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug");
+        stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+        var qP = [];
+        dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug");
+        var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+        tags.async = true, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+        !function (a, n, i) {
+          a[n] = a[n] || {};
+          for (var c = 0; c < i.length; c++)!function (i) {
+            a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {
+              var a = [].slice.call(arguments, 0);
+              "string" == typeof a[0] && window[dataLayerName].push({event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1)})
+            }
+          }(i[c])
+        }(window, "ppms", ["tm", "cm"]);
+      })(window, document, 'dataLayer', '23a2ab51-a9a6-40a8-bd2b-573ecafa90e3');
+         console.log("Piwik PRO loaded.");
+
+    }
+
+    window.addEventListener("cck_all_accepted", loadPiwikPro);
+    window.addEventListener("cck_technical_accepted", function () {
+      console.log("Only essential cookies accepted, Piwik PRO not loaded.");
+    });
+  </script>
+</body>
+
+</html>
