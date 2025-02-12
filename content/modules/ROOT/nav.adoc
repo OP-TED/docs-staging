@@ -1,3 +1,4 @@
+
 * xref:index.adoc[Home]
 
 * [.separated]#**eForms SDK**#
@@ -11,17 +12,18 @@
 * xref:epo-home::index.adoc[ePO Docs `{epo_latest_version}`]
 * xref:epo-wgm::index.adoc[Working Group Meetings]
 
-* [.separated]#**TED Semantic Web Service**#
-* xref:SWS::index.adoc[TED Semantic Web Service]
-
-
 * [.separated]#**ESPD-EDM**#
-
 * xref:ESPD-EDM::index.adoc[ESPD-EDM Docs `{espd_latest_version}`]
 * xref:espd-wgm::index.adoc[Open User Community Meetings]
 
-* [.separated]#**Reusing TED Data**#
-* xref:reuse::index.adoc[Downloading TED Notices]
+
+* [.separated]#**TED Open Data**#
+* xref:ODS:ROOT:index.adoc[TED Open Data Docs]
+
+* [.separated]#**TED API**#
+* xref:api:ROOT:index.adoc[TED API Docs `2.0`]
 
 * [.separated]#**model2owl**#
-* xref:m2o-home::index.adoc[model2owl docs]
+* xref:m2o-home::index.adoc[model2owl docs `1.0`]
+
+

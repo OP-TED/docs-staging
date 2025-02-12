@@ -28,9 +28,12 @@ asciidoc:
     # So, as a workaround, we store the latest version of each component in these site-wide asciidoc attributes.
     # The downside is that we have to update these attributes whenever we release a new version of a component.
     #
-    eforms_latest_version: '1.12'
-    epo_latest_version: '4.1.0'
+
+    eforms_latest_version: '1.13'
+    epo_latest_version: '4.2.0'
     espd_latest_version: '4.0.0'
+    api_latest_version: '2.0'
+
 
   extensions:
   - ./lib/apidoc/apidoc-asciidoc-extension
@@ -52,35 +55,47 @@ content:
  ### ePO Documentation
   - url: https://github.com/OP-TED/epo-docs.git
     start_path: /
-    branches: feature/docUpdate, v*, wg-meetings
+
+    branches: main-wf, v*, wg-meetings, workflow-imp
+
 
   ###  ESPD
   - url: https://github.com/OP-TED/espd-docs.git
     start_path: /
-    branches: main, v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3.3.x, v4.0.x, wgm-reports
-    #tags:
-    #- 2.1.0
+
+    branches: main, v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3-A1-feedback, v4-A1-feedback, wgm-reports
+    # v4.0.x, v4-A1-feedback 
+
     
   ### TED API
   - url: https://github.com/OP-TED/tedapi-docs.git
     start_path: /
-    branches: main # The "main" branch contains unversioned content.
-
-  ### TED Semantic Web Service
-  - url: https://github.com/OP-TED/ted-rdf-docs
-    start_path: docs/antora 
-    branches: main
-
-  ### TED Data for Reusers
-  - url: https://github.com/OP-TED/ted-reuse-docs.git
-    start_path: /
-    branches: main
+    branches: v2.0, v3.0-rc.2 # The "main" branch contains unversioned content.
 
   ### model2owl
   - url: https://github.com/OP-TED/ted-model2owl-docs
     start_path: /
     branches: main
 
+  ### TED Open Data Service
+  - url: https://github.com/OP-TED/ted-rdf-docs
+    start_path: docs/antora 
+    branches: reuse_survey
+  # develop
+    
+
+  ### TED Data for Reusers
+
+  #- url: https://github.com/OP-TED/ted-reuse-docs.git
+  #  start_path: /
+  #  branches: main
+
+
+  ### TED RDF Conversion Pipeline 
+  #- url: https://github.com/OP-TED/ted-rdf-conversion-pipeline
+  #  start_path: docs/antora 
+  #  branches: main
+    
 urls:
   redirect_facility: static
   # html_extension_style: indexify
