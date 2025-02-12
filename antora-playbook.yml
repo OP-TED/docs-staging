@@ -28,10 +28,12 @@ asciidoc:
     # So, as a workaround, we store the latest version of each component in these site-wide asciidoc attributes.
     # The downside is that we have to update these attributes whenever we release a new version of a component.
     #
+
     eforms_latest_version: '1.13'
     epo_latest_version: '4.2.0'
     espd_latest_version: '4.0.0'
     api_latest_version: '2.0'
+
 
   extensions:
   - ./lib/apidoc/apidoc-asciidoc-extension
@@ -48,18 +50,22 @@ content:
   ### eForms SDK
   - url: https://github.com/OP-TED/eforms-docs.git
     start_path: /
-    branches: 1.12.x, 1.11.x, 1.11.x-generated, 1.10.x, 1.10.x-generated, 1.9.x, 1.9.x-generated, 1.8.x, 1.8.x-generated, 1.7.x, 1.7.x-generated, 1.6.x, 1.6.x-generated, 1.5.x, 1.5.x-generated , 1.4.x, 1.4.x-generated, main # The "main" branch contains the eForms FAQ and RoadMap
+    branches: 1.12.x, 1.12.x-generated, 1.11.x, 1.11.x-generated, 1.10.x, 1.10.x-generated, 1.9.x, 1.9.x-generated, 1.8.x, 1.8.x-generated, 1.7.x, 1.7.x-generated, 1.6.x, 1.6.x-generated, main # The "main" branch contains the eForms FAQ and RoadMap
 
-  ### ePO Documentation
+ ### ePO Documentation
   - url: https://github.com/OP-TED/epo-docs.git
     start_path: /
+
     branches: main-wf, v*, wg-meetings, workflow-imp
+
 
   ###  ESPD
   - url: https://github.com/OP-TED/espd-docs.git
     start_path: /
+
     branches: main, v1.0.x, v2.0.x, v2.1.x, v3.0.x, v3.1.x, v3.2.x, v3-A1-feedback, v4-A1-feedback, wgm-reports
     # v4.0.x, v4-A1-feedback 
+
     
   ### TED API
   - url: https://github.com/OP-TED/tedapi-docs.git
@@ -79,9 +85,11 @@ content:
     
 
   ### TED Data for Reusers
+
   #- url: https://github.com/OP-TED/ted-reuse-docs.git
   #  start_path: /
   #  branches: main
+
 
   ### TED RDF Conversion Pipeline 
   #- url: https://github.com/OP-TED/ted-rdf-conversion-pipeline

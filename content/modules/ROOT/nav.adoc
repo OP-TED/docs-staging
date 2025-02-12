@@ -14,7 +14,8 @@
 
 * [.separated]#**ESPD-EDM**#
 * xref:ESPD-EDM::index.adoc[ESPD-EDM Docs `{espd_latest_version}`]
-* xref:espd-ouc::index.adoc[Open User Community Meetings]
+* xref:espd-wgm::index.adoc[Open User Community Meetings]
+
 
 * [.separated]#**TED Open Data**#
 * xref:ODS:ROOT:index.adoc[TED Open Data Docs]
@@ -24,4 +25,5 @@
 
 * [.separated]#**model2owl**#
 * xref:m2o-home::index.adoc[model2owl docs `1.0`]
+
 

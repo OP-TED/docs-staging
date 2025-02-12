@@ -1,0 +1,18 @@
+name: Notify on Branch Creation
+
+on:
+  create:
+    ref_type: branch
+  
+
+jobs:
+  notify_teams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Microsoft Teams
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{
+                 "text": "A new branch **${{ github.ref_name }}** was created in the repository **${{ github.repository }}**."
+               }' \
+               ${{ secrets.TEAMS_WEBHOOK }}
