@@ -16,9 +16,6 @@
     
   <!-- Cookie Consent Kit -->
   <script>
-    var initialConsent = {consents: ['analytics']};
-    ppms.cm.api('setInitialComplianceSettings', initialConsent, function (initialConsent) { });
-
     window.addEventListener("cck_all_accepted", function () {
       var consentAccepted = {consents: {analytics: {status: 1}}};
       ppms.cm.api('setComplianceSettings', consentAccepted, function (new_consent) { });
