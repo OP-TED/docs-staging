@@ -1,5 +1,8 @@
 = Documentation for TED developers and eSenders
 
+[.banner]
+We are currently running a survey on how our data reusers use the Reuse (Bulk Downloads) Documentation . If you are already a data reuser, or thinking  about becoming one,  please reply to our https://ec.europa.eu/eusurvey/runner/670dc92b-c6ef-94d5-3af0-c54d65b0ad6d[survey on Reusing TED XML Data from the TED Website] to help us improve our documentation according to your needs.
+
 [.tile-container]
 --
 
