@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Stage 4: Publishing Candidate Semantic Data Specification Version (on the ePO and epo-docs repositories) :: TED Developer Documentation</title>
+    <title>Publishing Candidate Semantic Data Specification Version (on the ePO and epo-docs repositories) :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/epo-wf/Business%20Process%20workflow/stage4/stage4.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -299,11 +299,11 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Stage 4: Publishing Candidate Semantic Data Specification Version (on the ePO and epo-docs repositories)</h1>
+<h1 class="page">Publishing Candidate Semantic Data Specification Version (on the ePO and epo-docs repositories)</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this stage, the following steps take place:</p>
+<p>In the fourth stage, the following steps take place:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -352,7 +352,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <p>During the “<strong>SDS artefacts transfer(CM to ePO)</strong>” Business Process, the Development Team moves the Semantic Data Specification artefacts from the release branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model repository</a>, to the corresponding release branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a>.</p>
 </div>
 <div class="paragraph">
-<p>In the next Business Process, "<strong>Pull from Release to Develop (ePO)</strong>" the Development team does a pull request in order to merge the develop branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a> to the specific release branch “release/X.Y.Z” of the same repository. (for more on the creation of the“release/X.Y.Z” branch see <a href="../stage1/stage1.html" class="xref page">Stage 1: Requirements Gathering</a>).</p>
+<p>In the next Business Process, "<strong>Pull from Release to Develop (ePO)</strong>" the Development team does a pull request in order to merge the develop branch of the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a> to the specific release branch “release/X.Y.Z” of the same repository. (for more on the creation of the“release/X.Y.Z” branch see <a href="../stage1/stage1.html" class="xref page">Requirements gathering</a>).</p>
 </div>
 <div class="paragraph">
 <p>In the “<strong>Product Owner internal review (ePO repository)</strong>” Business Process, In the context of the pull request mentioned in the "Pull from Release to Develop (ePO)" Business Process above, The Product Owner reviews the ePO SDS artefacts again, this time from the perspective of the closed Github Issues with the milestone related to this upcoming release, making sure that all Github Issues are correctly implemented. The product owner also makes sure that the SDS artefacts were not changed during the move from  the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model repository</a>, to the <a href="https://github.com/OP-TED/epo">OP-TED/epo repository</a>. If no further changes are needed, then the pull request is accepted, and the merge to the develop branch is done. Subsequently, the "Tag the release candidate SDS in the ePO repository on Release branch" Business process is triggered. If any errors or bugs are encountered, the Product Owner informs the Development Team, and the whole Workflow from the “ORSD consolidation” Business Process, to the current Business Process is repeated.</p>

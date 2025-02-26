@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Stage 1: Requirements Gathering :: TED Developer Documentation</title>
+    <title>Requirements gathering :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/epo-wf/Business%20Process%20workflow/stage1/stage1.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -299,11 +299,11 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Stage 1: Requirements Gathering</h1>
+<h1 class="page">Requirements gathering</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this stage, all preliminary work is done such as deciding the ePO version that will be released, what contents are foreseen for this release and the creation of the necessary GitHub branches. Also in this stage, the requirements for the new ePO module are collected in the Ontology Requirements Specification Document (ORSD) by the Working Group. If no new module is required for this release then the ORSD will contain specifications for each of the updates required for the existing modules.</p>
+<p>The requirements gathering stage includes all preliminary and preparation work such as deciding the ePO version to be released, what contents are to be included the release, and tool set-up e.g., the creation of the necessary GitHub branches. Also in this stage, the requirements for the new ePO module are collected in the Ontology Requirements Specification Document (ORSD) by the working group. If no new module is required for this release then the ORSD will contain specifications for each of the updates required for existing modules. The ORSDs can be viewed <a href="../../../epo-home/stories.html" class="xref page">here</a></p>
 </div>
 </div>
 </div>
@@ -333,15 +333,15 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <p><em>Requirements Gathering business view with stakeholders diagram</em></p>
 </div>
 <div class="paragraph">
-<p>In the “<strong>Decide work goal &amp; scope and release version</strong>” Business Process, The Product Owner decides which ePO module will be developed, if any, and into which version the module will be released. The versioning follows a “X.Y.Z” format, where X is the major version number, Y the minor version number, and Z the patch version number. For more information on ePO versioning rules, consult <a href="https://docs.ted.europa.eu/epo-home/versioning.html">this page</a>. Finally, in this business process, the Product Owner points out to the Development Team the GitHub Issues that will be implemented in the upcoming version. These GitHub Issues are assigned the milestone related to the X.Y.Z release.</p>
+<p>In the “<strong>Decide work goal &amp; scope and release version</strong>” business rocess, The product owner decides which ePO module will be developed, if any, and into which version the module will be released. The versioning follows a “X.Y.Z” format, where X is the major version number, Y the minor version number, and Z the patch version number. For more information on ePO versioning rules, consult <a href="https://docs.ted.europa.eu/epo-home/versioning.html">the versioning page</a>. Finally, in this business process, the product owner informs the development team which fixes to open GitHub issues will be implemented in the upcoming version. These GitHub issues are assigned the milestone related to the X.Y.Z release.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Prepare the publication space for the work</strong>" Business Process, The Product Owner creates the GitHub release branches marked as “release/X.Y.Z” of the specific ePO version in the following GitHub repositories:</p>
+<p>In the "<strong>Prepare the publication space for the work</strong>" business process, The product owner creates the GitHub release branches marked as “release/X.Y.Z” of the specific ePO version in the following GitHub repositories:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/ePO-conceptual-model</a> repository, where the Conceptual Model and the SDS artefacts will be generated and will be reviewed.</p>
+<p>The <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/ePO-conceptual-model</a> repository, where the conceptual model and the SDS artefacts will be generated and will be reviewed.</p>
 </li>
 <li>
 <p>The <a href="https://github.com/OP-TED/ePO">OP-TED/ePO</a> repository, where the SDS artefacts to be published as a stable release will be moved once reviewed.</p>
@@ -352,22 +352,22 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 </ul>
 </div>
 <div class="paragraph">
-<p>In the “<strong>Configure the artefact transformation pipeline</strong>“ Business Process, the Development Team Configures the model2owl transformation script on the release/X.Y.Z branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model</a>  repository in order for model2owl to correctly transform the conceptual model of the new release. The Development Team may need to make additional adjustments to the configuration files during the “preparing SDS version release” stage if needed (due to a bug for example). As a result of this Business Process, the SDS Generation Configuration Business Object is created.</p>
+<p>In the “<strong>Configure the artefact transformation pipeline</strong>“ business process, the development team Configures the model2owl transformation script on the release/X.Y.Z branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model</a>  repository in order for model2owl to correctly transform the conceptual model of the new release. The development team may need to make additional adjustments to the configuration files during the <a href="../stage3/stage3.html" class="xref page">“preparing SDS version release”</a> stage if needed (due to a bug for example). As a result of this business process, the SDS Generation Configuration Business Object is created.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Collect subject relevant material</strong>" Business Process, the ePO Working Group starts to meet on a weekly basis in order to develop the new ePO release. In the first meetings the Working Group collects and analyses relevant material to the new ePO release such as reports, sample data, and specifications. All the resulting files from this process are stored on a <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">drive in OP&#8217;s Internal sharepoint</a>. As a result of this Business Process, the “ORSD Supplementary Material” Business Object is created.</p>
+<p>In the "<strong>Collect subject relevant material</strong>" business process, the ePO working group starts to meet on a weekly basis to develop the new ePO release. In the first meetings the working group collects and analyses material relevant to the new ePO release such as reports, sample data, and specifications. All the resulting files from this process are stored on a <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">drive in OP&#8217;s Internal sharepoint</a>. As a result of this business process, the “ORSD Supplementary Material” business object is created.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Interview domain experts</strong>" Business Process, the Working Group discusses the nature of the release. Specifically, the domain experts that are part of the Working Group describe the eProcurement processes that need to be modeled in detail and are interviewed by the Development Team in order to fill any missing information regarding the eProcurement process. During these sessions, domain experts may provide or point out additional ORSD supplementary material to the rest of the Working Group.</p>
+<p>In the "<strong>Interview domain experts</strong>" business process, the working group discusses the nature of the release. Specifically, the domain experts that are part of the working group describe the eProcurement processes that need to be modelled in detail and are interviewed by the development team in order to fill any missing information regarding the eProcurement process. During these sessions, domain experts may provide or point out additional ORSD supplementary material to the rest of the working group.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Writing ORSD</strong>" Business Process, the Development Team writes the ORSD as Word document in <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">in OP&#8217;s Internal sharepoint</a> using the ORSD Supplementary Material, and the notes from the interviews with domain experts. The Ontology Requirements Specification Document (ORSD) Business Object is created as a result of this Business Process.</p>
+<p>In the "<strong>Writing ORSD</strong>" business process, the development team writes the ORSD as Word document in <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">in OP&#8217;s Internal SharePoint</a> using the ORSD Supplementary Material, and the notes from the interviews with domain experts. The Ontology Requirements Specification Document (ORSD) Business Object is created as a result of this business process.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>Review ORSD</strong>" Business Process, The Working Group reviews the ORSD and provides feedback. This can happen during the WG meetings, via GitHub Issues or discussions on the <a href="https://github.com/OP-TED/ePO">OP-TED/epo</a> repository, via eMail or other channels.</p>
+<p>In the "<strong>Review ORSD</strong>" business process, The working group reviews the ORSD and provides feedback. This can happen during the WG meetings, via GitHub Issues or discussions on the <a href="https://github.com/OP-TED/ePO">OP-TED/epo</a> repository, via eMail or other channels.</p>
 </div>
 <div class="paragraph">
-<p>In the "<strong>ORSD consolidation</strong>" Business Process, The Development Team integrates the feedback from the working group into the ORSD Word document and transcribes the document into an <sup class="footnote" id="_footnote_AsciiDoc">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> Asciidoc page placed in the <a href="https://docs.ted.europa.eu/epo-home/stories.html">release branch</a> on the ePO-docs] repository. This Process may be revisited in future stages, if an inconsistency was discovered during the review of the formal artefacts.</p>
+<p>In the "<strong>ORSD consolidation</strong>" business process, The development team integrates the feedback from the working group into the ORSD Word document and transcribes the document into an <sup class="footnote" id="_footnote_AsciiDoc">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> Asciidoc page placed in the <a href="https://docs.ted.europa.eu/epo-home/stories.html">release branch</a> on the ePO-docs] repository. This Process may be revisited in future stages, if an inconsistency was discovered during the review of the formal artefacts.</p>
 </div>
 </div>
 </div>
@@ -391,7 +391,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <div class="ulist">
 <ul>
 <li>
-<p>The "Print optimised ORSD document, which is stored in the <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">OP&#8217;s Internal sharepoint</a> server along with the Supplementary ORSD documents.</p>
+<p>The "Print optimised ORSD document, which is stored in the <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">OP&#8217;s Internal SharePoint</a> server along with the Supplementary ORSD documents.</p>
 </li>
 <li>
 <p>The "Web optimised ORSD document", which is stored in the <a href="https://github.com/OP-TED/epo-docs">OP-TED/ePO-docs</a> repository, as an <a href="https://asciidoc.org/">AsciiDoc</a> page. For an example  of an ORSD file in ePO, see <a href="https://github.com/OP-TED/epo-docs/blob/main/modules/ROOT/pages/stories_eAccess.adoc">here</a>.</p>
