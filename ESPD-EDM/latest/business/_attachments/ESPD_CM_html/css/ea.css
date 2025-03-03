@@ -264,16 +264,14 @@ UL {
 	margin-bottom: -5px;
 	padding: 0px;
 }
-
 .IndexTitle {
 	color: #405E8D;
 	font-size: 15px;
 	font-weight: bold;
-	float: right;
-	padding-top: 0.5em;
-	padding-right: 0.5em;
+	position: absolute;
+	top: 40px;
+	left: 5px;
 }
-
 .issuecontent {
 	background-color: #FFFFFF;
 	border-bottom: #DCDCDC 1px solid;
