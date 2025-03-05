@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Validation API :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/api/latest/validate.html">
+    <title>Versioning policy :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/api/latest/versioning.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -95,7 +95,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Home</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="versioning.html">Versioning Policy</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -119,7 +119,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="search.html">Search API</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="validate.html">Validation API</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -261,13 +261,13 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED API</a></li>
-    <li><a href="validate.html">Validation API</a></li>
+    <li><a href="versioning.html">Versioning Policy</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">3.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="validate.html">3.0</a>
+    <a class="version is-current" href="versioning.html">3.0</a>
     <a class="version is-missing" href="../2.0/index.html">2.0</a>
   </div>
 </div>
@@ -277,67 +277,85 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Validation API</h1>
+<h1 class="page">Versioning policy</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Validation API is part of the TED Central Validation Service (TED CVS), which ensures that procurement notices meet compliance standards. It allows users to check notices for errors and warnings independently at any time, ensuring they are correct before submission for publication.</p>
+<p>TED API is committed to providing a stable and reliable environment for developers. Our versioning policy ensures clarity and minimises disruption when introducing updates.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available Operations</h2>
+<h2 id="_supported_versions"><a class="anchor" href="#_supported_versions"></a>Supported versions</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_validate_procurement_notices"><a class="anchor" href="#_validate_procurement_notices"></a>Validate Procurement Notices</h3>
 <div class="paragraph">
-<p>The Validation API ensures procurement notices meet EU standards by identifying errors and issuing warnings for potential legal issues. This independent service can validate notices anytime before they’re sent for publication, ensuring they are technically ready for TED. Any notice that passes validation through CVS upon submission to the Publication API or the eNotices2 front-end, can be considered technically valid for publication on TED.</p>
-</div>
-<div class="sect3">
-<h4 id="_api_request"><a class="anchor" href="#_api_request"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/validate</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints"><a class="anchor" href="#_swagger_api_endpoints"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger-ui/index.html#/Validation/validate">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-<a href="https://api.ted.europa.eu/swagger-ui/index.html#/Validation/validate">Access the Swagger API Interface</a></p>
-</li>
-</ul>
-</div>
-</div>
+<p>At any given time, TED API supports two active versions to allow users ample time to transition to the latest version.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
+<h2 id="_current_active_versions"><a class="anchor" href="#_current_active_versions"></a>Current active versions</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Developers</strong>: Ensuring notices meet requirements, especially before submission.</p>
+<p>Version 2 (Legacy, recommended for migration).</p>
 </li>
 <li>
-<p><strong>eSenders</strong>: Avoiding compliance errors during submission.</p>
-</li>
-<li>
-<p><strong>eNotices2 application</strong>: For validating notices before or upon submission.</p>
+<p>Version 3 (Primary focus, unified and improved features).</p>
 </li>
 </ul>
 </div>
-<hr>
 <div class="paragraph">
-<p>Explore more about schematron rules and validation reports here: <a href="https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_structure_of_schematron_folder_and_files" class="bare">https://docs.ted.europa.eu/eforms/latest/schematrons/index.html#_structure_of_schematron_folder_and_files</a></p>
+<p>Future transitions will maintain the two-version policy, with older versions being deprecated only after ensuring most users have migrated.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_when_versions_are_changed"><a class="anchor" href="#_when_versions_are_changed"></a>When versions are changed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>New versions of TED API are introduced to deliver significant improvements or to address limitations in previous versions. A version change is triggered when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New functionalities or services are added that cannot be accommodated within the current version.</p>
+</li>
+<li>
+<p>Technical or compliance requirements necessitate modifications that constitute "breaking changes".</p>
+</li>
+<li>
+<p>A need arises to consolidate or rationalise APIs for better usability.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The team is committed to providing smooth version transitions by offering extensive support, backwards compatibility, and clear timelines.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_breaking_changes"><a class="anchor" href="#_breaking_changes"></a>Breaking Changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We strive to avoid breaking changes within a single version. Breaking changes are updates that might require you to make changes in your current systems to keep them working smoothly. These include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Removing an endpoint: Users rely on stable access to endpoints for their systems.</p>
+</li>
+<li>
+<p>Adding a new required request parameter: This introduces incompatibility for existing requests. Adding a new optional parameter is <strong>not</strong> considered a breaking change.</p>
+</li>
+<li>
+<p>Removing or changing the type of a request parameter or response attribute: This impacts how applications handle data.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If we need to make significant updates that could affect how your system works with our API, we&#8217;ll introduce a new version. This ensures your current setup continues to operate without issues while giving you time to adjust. We will always provide clear migration guidance and sufficient notice before deprecating an older version.</p>
 </div>
 </div>
 </div>
