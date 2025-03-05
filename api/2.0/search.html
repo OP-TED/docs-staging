@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Publication API :: TED Developer Documentation</title>
+    <title>Search API :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/api/latest/search.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -82,7 +83,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
     </nav>
 </div>
 <div class="body">
-<div class="nav-container" data-component="api" data-version="3.0">
+<div class="nav-container" data-component="api" data-version="2.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -92,34 +93,22 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="index.html">Home</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="#versioning.adoc">Versioning Policy</a>
+    <a class="nav-link" href="#api-home::index.adoc">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Available APIs</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="intro.html">Introduction</a>
+    <a class="nav-link" href="endpoints/cvs-ted-europa-eu.html">Validation API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="convert.html">Conversion API</a>
+    <a class="nav-link" href="endpoints/enotices2-ted-europa-eu-esenders.html">Publication API</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="developer%20operations.html">Developer Operations API</a>
+    <a class="nav-link" href="endpoints/viewer-ted-europa-eu.html">Visualisation API</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="publish.html">Publication API</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="search.html">Search API</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="validate.html">Validation API</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="visualise.html">Visualisation API</a>
   </li>
 </ul>
   </li>
@@ -129,7 +118,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">TED API</span>
-          <span class="version">3.0-rc.2</span>
+          <span class="version">2.0</span>
       </div>
   <ul class="components">
       <li class="component">
@@ -230,11 +219,11 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
       <li class="component is-current">
         <a class="title" href="../latest/index.html">TED API</a>
         <ul class="versions">
-            <li class="version is-current">
-              <a href="index.html">3.0-rc.2</a>
-            </li>
             <li class="version is-latest">
-              <a href="../latest/index.html">2.0</a>
+              <a href="../latest/index.html">3.0</a>
+            </li>
+            <li class="version is-current">
+              <a href="index.html">2.0</a>
             </li>
         </ul>
       </li>
@@ -257,14 +246,14 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED API</a></li>
-    <li><a href="publish.html">Publication API</a></li>
+    <li><a href="search.html">Search API</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">3.0-rc.2</button>
+  <button class="version-menu-toggle" title="Show other versions of page">2.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="publish.html">3.0-rc.2</a>
-    <a class="version is-missing" href="../latest/index.html">2.0</a>
+    <a class="version" href="../latest/search.html">3.0</a>
+    <a class="version is-current" href="search.html">2.0</a>
   </div>
 </div>
 </div>
@@ -273,11 +262,11 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Publication API</h1>
+<h1 class="page">Search API</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Publication API allows users and systems to programmatically submit notices for publication on TED using an API key. With this key, users can also query their own submitted notices, stop the publication process, or retrieve validation reports. Connecting with the eNotices2 system and the TED Central Validation Service, this API enables eSenders and public authorities to process notices efficiently and at scale.</p>
+<p>The Search API allows access to published procurement notices for analysis and reuse, promoting transparency. It lets users search through different types of notices on the TED website.</p>
 </div>
 </div>
 </div>
@@ -285,122 +274,24 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available Operations</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_query_submitted_notices"><a class="anchor" href="#_query_submitted_notices"></a>Query Submitted Notices</h3>
+<h3 id="_search_and_retrieve_published_notices"><a class="anchor" href="#_search_and_retrieve_published_notices"></a>Search and retrieve published notices</h3>
 <div class="paragraph">
-<p>This operation enables users to query the status and details of their submitted notices. API users can access a paginated list of all their submitted notices, which they can filter and sort based on relevant criteria. Access is exclusive to the user&#8217;s own submissions, requiring an API key. Additionally, this operation facilitates the synchronisation of important metadata, such as publication status, during the notice management process.</p>
+<p>The Search API provides access to published notices via expert queries and enables bulk downloads of notices in XML format for reuse or analysis. Note that this API is primarily targeted at data reusers and does not require authentication, making it openly accessible to any system or user.</p>
 </div>
 <div class="sect3">
 <h4 id="_api_request"><a class="anchor" href="#_api_request"></a>API Request</h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/search</code></pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_swagger_api_endpoints"><a class="anchor" href="#_swagger_api_endpoints"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger/index.html#/Publication//getNotices">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-The Production environment is not yet available; please use the Preview environment for now.</p>
-</li>
-</ul>
+<h4 id="_swagger_api_endpoint"><a class="anchor" href="#_swagger_api_endpoint"></a>Swagger API Endpoint</h4>
+<div class="paragraph">
+<p><a href="https://ted.europa.eu/api/documentation/index.html#/notice-search-v3/search" class="bare">https://ted.europa.eu/api/documentation/index.html#/notice-search-v3/search</a></p>
 </div>
 <hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stop_publication"><a class="anchor" href="#_stop_publication"></a>Stop Publication</h3>
-<div class="paragraph">
-<p>This API operation enables users to stop the publication process for a notice they have submitted. This action must be taken before the notice is exported to TED, as the publication process becomes irreversible at that point. Halting a notice in time prevents it from being published, offering control over the publication timeline. Once a notice reaches the "publishing" status, it cannot be stopped.</p>
-</div>
-<div class="sect3">
-<h4 id="_api_request_2"><a class="anchor" href="#_api_request_2"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/{businessId}/stop-publication</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints_2"><a class="anchor" href="#_swagger_api_endpoints_2"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger/index.html#/Publication/stopPublication">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-The Production environment is not yet available; please use the Preview environment for now.</p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_retrieve_validation_report"><a class="anchor" href="#_retrieve_validation_report"></a>Retrieve Validation Report</h3>
-<div class="paragraph">
-<p>Every submitted eForms notice undergoes a validation process to ensure compliance with regulatory business rules; this results in a report even if the notice does not pass validation successfully. This API operation enables users to obtain the validation report generated during their notice submission. It ensures users can review and address any validation issues identified during the submission.</p>
-</div>
-<div class="sect3">
-<h4 id="_api_request_3"><a class="anchor" href="#_api_request_3"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/{businessId}/validation-report</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints_3"><a class="anchor" href="#_swagger_api_endpoints_3"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger/index.html#/Publication/getValidationReport">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-The Production environment is not yet available; please use the Preview environment for now.</p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_submit_notices_for_publication"><a class="anchor" href="#_submit_notices_for_publication"></a>Submit Notices for Publication</h3>
-<div class="paragraph">
-<p>This API operation enables users to programmatically submit new notices in XML format for publication. The notice must have a unique identifier and meet specific requirements, such as including a valid notice author email and the preferred language for notifications. The email identifies the responsible party, such as the Contracting Authority, and the language must be an official EU language. Upon submission, the notice is validated against a set of business rules. If it successfully passes, it is marked "SUBMITTED" and becomes eligible for publication. If it fails, it is marked "VALIDATION_FAILED" and cannot be published.</p>
-</div>
-<div class="sect3">
-<h4 id="_api_request_4"><a class="anchor" href="#_api_request_4"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/submit</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints_4"><a class="anchor" href="#_swagger_api_endpoints_4"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger/index.html#/Publication/submitNotice">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-The Production environment is not yet available; please use the Preview environment for now.</p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 </div>
@@ -411,12 +302,22 @@ The Production environment is not yet available; please use the Preview environm
 <div class="ulist">
 <ul>
 <li>
-<p><strong>eSenders</strong>: Managing notices on behalf of contracting authorities.</p>
+<p><strong>Commercial Organisations</strong>: Integrating TED data into platforms to provide added-value services for vendors and buyers.</p>
 </li>
 <li>
-<p><strong>Public Authorities</strong>: Handling their own procurement notices through connected applications.</p>
+<p><strong>Researchers</strong>: Analysing public procurement trends and patterns.</p>
+</li>
+<li>
+<p><strong>Developers</strong>: Creating transparency tools or reusing public data.</p>
+</li>
+<li>
+<p><strong>eNotices2 Users</strong>: Importing a notice from TED via the web interface to continue a procedure.</p>
 </li>
 </ul>
+</div>
+<hr>
+<div class="paragraph">
+<p>Explore the full documentation here: <a href="https://ted.europa.eu/en/simap/developers-corner-for-reusers">Developers' corner: APIs for your own integration - ted.europa.eu - TED</a></p>
 </div>
 </div>
 </div>
