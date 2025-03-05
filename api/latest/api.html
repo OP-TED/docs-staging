@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Publication API :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/api/latest/publish.html">
+    <title>API keys :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/api/latest/api.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -98,7 +98,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="#versioning.adoc">Versioning Policy</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="api.html">API key management</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -113,7 +113,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="developer%20operations.html">Developer Operations API</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="publish.html">Publication API</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -261,13 +261,13 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">TED API</a></li>
-    <li><a href="publish.html">Publication API</a></li>
+    <li><a href="api.html">API key management</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">3.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="publish.html">3.0</a>
+    <a class="version is-current" href="api.html">3.0</a>
     <a class="version is-missing" href="../2.0/index.html">2.0</a>
   </div>
 </div>
@@ -277,151 +277,110 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Publication API</h1>
+<h1 class="page">API keys</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The Publication API allows users and systems to programmatically submit notices for publication on TED using an API key. With this key, users can also query their own submitted notices, stop the publication process, or retrieve validation reports. Connecting with the eNotices2 system and the TED Central Validation Service, this API enables eSenders and public authorities to process notices efficiently and at scale.</p>
+<p>User authentication and authorisation (for those TED APIs that require it) is controlled by the use of API keys. TED API keys are essentially UUIDs (Universally Unique Identifiers) without hyphens (dashes).</p>
+</div>
+<div class="paragraph">
+<p>You can generate and manage your own API keys by logging-in to your account in the <a href="https://developer.ted.europa.eu"><strong>TED Developer Portal</strong></a><sup class="footnote" id="_footnote_portal">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.</p>
+</div>
+<div class="paragraph">
+<p>If you use the Publication API, after you generate your key, log into the <a href="https://enotices2.ted.europa.eu">eNotices2 website</a> at least once to pair your account and perform at least one valid API request for the system to recognise you as an "eSender".</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only one API key is allowed per user. The creation of a new API key implies the automatic revocation of the previous one.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_available_operations"><a class="anchor" href="#_available_operations"></a>Available Operations</h2>
+<h2 id="_api_key_generation"><a class="anchor" href="#_api_key_generation"></a>API key generation</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_query_submitted_notices"><a class="anchor" href="#_query_submitted_notices"></a>Query Submitted Notices</h3>
 <div class="paragraph">
-<p>This operation enables users to query the status and details of their submitted notices. API users can access a paginated list of all their submitted notices, which they can filter and sort based on relevant criteria. Access is exclusive to the user&#8217;s own submissions, requiring an API key. Additionally, this operation facilitates the synchronisation of important metadata, such as publication status, during the notice management process.</p>
+<p>You can generate an API Key by logging into the TED Developer Portal<sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and clicking on the "Manage your API Keys" button. To login to the TED Developer Portal you will need a valid EU Login<sup class="footnote" id="_footnote_eu-login">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> account.</p>
 </div>
-<div class="sect3">
-<h4 id="_api_request"><a class="anchor" href="#_api_request"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints"><a class="anchor" href="#_swagger_api_endpoints"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger-ui/index.html#/Publication/getNotices">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-<a href="https://api.ted.europa.eu/swagger-ui/index.html#/Publication/getNotices">Access the Swagger API Interface</a></p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stop_publication"><a class="anchor" href="#_stop_publication"></a>Stop Publication</h3>
-<div class="paragraph">
-<p>This API operation enables users to stop the publication process for a notice they have submitted. This action must be taken before the notice is exported to TED, as the publication process becomes irreversible at that point. Halting a notice in time prevents it from being published, offering control over the publication timeline. Once a notice reaches the "publishing" status, it cannot be stopped.</p>
-</div>
-<div class="sect3">
-<h4 id="_api_request_2"><a class="anchor" href="#_api_request_2"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/{businessId}/stop-publication</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints_2"><a class="anchor" href="#_swagger_api_endpoints_2"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger-ui/index.html#/Publication/stopPublication">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-<a href="https://api.ted.europa.eu/swagger-ui/index.html#/Publication/stopPublication">Access the Swagger API Interface</a></p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_retrieve_validation_report"><a class="anchor" href="#_retrieve_validation_report"></a>Retrieve Validation Report</h3>
-<div class="paragraph">
-<p>Every submitted eForms notice undergoes a validation process to ensure compliance with regulatory business rules; this results in a report even if the notice does not pass validation successfully. This API operation enables users to obtain the validation report generated during their notice submission. It ensures users can review and address any validation issues identified during the submission.</p>
-</div>
-<div class="sect3">
-<h4 id="_api_request_3"><a class="anchor" href="#_api_request_3"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">GET /v3/notices/{businessId}/validation-report</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints_3"><a class="anchor" href="#_swagger_api_endpoints_3"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger-ui/index.html#/Publication/getValidationReport">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-<a href="https://api.ted.europa.eu/swagger-ui/index.html#/Publication/getValidationReport">Access the Swagger API Interface</a></p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_submit_notices_for_publication"><a class="anchor" href="#_submit_notices_for_publication"></a>Submit Notices for Publication</h3>
-<div class="paragraph">
-<p>This API operation enables users to programmatically submit new notices in XML format for publication. The notice must have a unique identifier and meet specific requirements, such as including a valid notice author email and the preferred language for notifications. The email identifies the responsible party, such as the Contracting Authority, and the language must be an official EU language. Upon submission, the notice is validated against a set of business rules. If it successfully passes, it is marked "SUBMITTED" and becomes eligible for publication. If it fails, it is marked "VALIDATION_FAILED" and cannot be published.</p>
-</div>
-<div class="sect3">
-<h4 id="_api_request_4"><a class="anchor" href="#_api_request_4"></a>API Request</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">POST /v3/notices/submit</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_swagger_api_endpoints_4"><a class="anchor" href="#_swagger_api_endpoints_4"></a>Swagger API Endpoints</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Preview Environment:</strong>
-<a href="https://api.preview.ted.europa.eu/swagger-ui/index.html#/Publication/submitNotice">Access the Swagger API Interface</a></p>
-</li>
-<li>
-<p><strong>Production Environment:</strong>
-<a href="https://api.ted.europa.eu/swagger-ui/index.html#/Publication/submitNotice">Access the Swagger API Interface</a></p>
-</li>
-</ul>
-</div>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For security reasons API keys are not stored and cannot be retrieved via the TED Developer Portal after they are generated. Your API key will be delivered to you only at the time of generation. Copy and safely store the provided API key; if you lose it, you will have to generate a new one.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_who_uses_this_api"><a class="anchor" href="#_who_uses_this_api"></a>Who Uses This API</h2>
+<h2 id="_api_key_life_span"><a class="anchor" href="#_api_key_life_span"></a>API key life span</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><strong>eSenders</strong>: Managing notices on behalf of contracting authorities.</p>
+<p><strong>Expiry:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Every API key is valid for 24 months.</p>
 </li>
 <li>
-<p><strong>Public Authorities</strong>: Handling their own procurement notices through connected applications.</p>
+<p>After its validity period elapses, the API key expires.</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p><strong>Renewal:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>API key renewal extends the validity of an API key for 12 months.</p>
+</li>
+<li>
+<p>An automated notification will be sent four (4) weeks before expiration to the email associated with the EU-Login account used to create the API key.</p>
+</li>
+<li>
+<p>The email contains a hyperlink for renewing the API key. If not clicked within 21 days, the link expires, and a new email will be sent with a fresh hyperlink.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Revocation:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can revoke any unused API keys as needed in the TED Developer Portal.</p>
+</li>
+<li>
+<p>Revoked API keys are invalidated permanently.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. {dev-portal}
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. {eu-login}
 </div>
 </div>
 </article>
