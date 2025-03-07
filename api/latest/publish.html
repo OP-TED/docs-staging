@@ -291,7 +291,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <div class="sect2">
 <h3 id="_query_submitted_notices"><a class="anchor" href="#_query_submitted_notices"></a>Query Submitted Notices</h3>
 <div class="paragraph">
-<p>This operation enables users to query the status and details of their submitted notices. API users can access a paginated list of all their submitted notices, which they can filter and sort based on relevant criteria. Access is exclusive to the user&#8217;s own submissions, requiring an API key. Additionally, this operation facilitates the synchronisation of important metadata, such as publication status, during the notice management process.</p>
+<p>This operation enables users to query the status and details of their ted notices. API users can access a paginated list of all their submitted notices, which they can filter and sort based on relevant criteria. Access is exclusive to the user&#8217;s own submissions, requiring an API key. Additionally, this operation facilitates the synchronisation of important metadata, such as publication status, during the notice management process.</p>
 </div>
 <div class="sect3">
 <h4 id="_api_request"><a class="anchor" href="#_api_request"></a>API Request</h4>
@@ -382,6 +382,18 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <h3 id="_submit_notices_for_publication"><a class="anchor" href="#_submit_notices_for_publication"></a>Submit Notices for Publication</h3>
 <div class="paragraph">
 <p>This API operation enables users to programmatically submit new notices in XML format for publication. The notice must have a unique identifier and meet specific requirements, such as including a valid notice author email and the preferred language for notifications. The email identifies the responsible party, such as the Contracting Authority, and the language must be an official EU language. Upon submission, the notice is validated against a set of business rules. If it successfully passes, it is marked "SUBMITTED" and becomes eligible for publication. If it fails, it is marked "VALIDATION_FAILED" and cannot be published.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Please be aware that in TED API v3, the mandatory property "noticeAuthorLocale" in the metadata has been replaced by "<strong>noticeAuthorLang</strong>." Both properties will be accepted during the transition period to v3, but we recommend making the change as soon as possible.
+</td>
+</tr>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_api_request_4"><a class="anchor" href="#_api_request_4"></a>API Request</h4>
