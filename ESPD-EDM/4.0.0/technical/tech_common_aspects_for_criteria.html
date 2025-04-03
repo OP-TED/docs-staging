@@ -314,18 +314,6 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <h1 class="page">Common Aspects for Criteria</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The links to the business code explanations are provided by <a href="https://digital-strategy.ec.europa.eu/en/news/e-sens-digitising-government-services-across-europe">e-Sens</a> and are hosted by the University of Piraeus. Availability to the information is therefore subject to external schedules.
-</td>
-</tr>
-</table>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -459,7 +447,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><strong>Information Requirement</strong>: <a href="tbr70_reqs.html#list_of_criteria" class="xref page">tbr70-010</a> .</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: Each Criterion is defined in e-Certis and must use the UUID supplied by e-Certis. See also the spreadsheets <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a>.</p>
+<p><strong>Rule</strong>: Each Criterion is defined in e-Certis and must use the UUID supplied by e-Certis. See also the spreadsheets <a href="https://github.com/OP-TED/ESPD-EDM/blob/main/criterion/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-TC-02, BR-TC-12, BR-TC-13, BR-OTH-02)</p>
@@ -489,7 +477,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><strong>Information Requirement</strong>: <a href="tbr70_reqs.html#list_of_criteria" class="xref page">tbr70-010</a>]</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: The name should match the one from e-Certis, which should be the same as in the in the spreadsheets <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a>], e.g. 'Convictions', 'Corruption', 'Fraud', 'Financial ratio', 'Subcontracting proportion&#8217;etc.).</p>
+<p><strong>Rule</strong>: The name should match the one from e-Certis, which should be the same as in the in the spreadsheets <a href="https://github.com/OP-TED/ESPD-EDM/blob/main/criterion/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a>, e.g. 'Convictions', 'Corruption', 'Fraud', 'Financial ratio', 'Subcontracting proportion&#8217;etc.).</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-TC-05)</p>
@@ -504,7 +492,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><strong>Information Requirement</strong>: <a href="tbr70_reqs.html#list_of_criteria" class="xref page">tbr70-010</a>]</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: The description should match the one from e-Certis, which should be the same as in the in the spreadsheets  <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a>], e.g. 'Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).'.</p>
+<p><strong>Rule</strong>: The description should match the one from e-Certis, which should be the same as in the in the spreadsheets  <a href="https://github.com/OP-TED/ESPD-EDM/blob/main/criterion/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a>, e.g. 'Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).'.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-TC-06, BR-TC-19)</p>
@@ -916,7 +904,7 @@ _&lt;!-- ... elements omitted for brevity --&gt;_
 <p><strong>Rule</strong>: Compulsory use of the UUIDs supplied by e-Certis.</p>
 </div>
 <div class="paragraph">
-<p>See also the spreadsheet <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a>.</p>
+<p>See also the spreadsheet <a href="https://github.com/OP-TED/ESPD-EDM/blob/main/criterion/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-TC-12, BR-OTH-02, BR-OTH-02#01)</p>
@@ -2221,7 +2209,7 @@ The source code can be copied from the code block below the callout section
 <p>The value of the amount meets the REQUIREMENT, as the amount is required to be above 10006 Euros (see XML above, notice the currencyID type value, too).</p>
 </li>
 <li>
-<p>Beware that, contrary to other numeric types of data, AMOUNT is not semanticised and mapped to cbc:ResponseMinimumAmount nor cbc:ResponseMaximumAmount`, as in the current ESPD-EDM specification all monetary thresholds are always "minimum" (and similarly for QUANTITY or QUANTITY_INTEGER, e.g. see the REQUIREMENT ''Minimum number of years'' in criterion #49 (tab <em>SC-Abilities_5 (Staff)</em> in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v4.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
+<p>Beware that, contrary to other numeric types of data, AMOUNT is not semanticised and mapped to cbc:ResponseMinimumAmount nor cbc:ResponseMaximumAmount`, as in the current ESPD-EDM specification all monetary thresholds are always "minimum" (and similarly for QUANTITY or QUANTITY_INTEGER, e.g. see the REQUIREMENT ''Minimum number of years'' in criterion #49 (tab <em>SC-Abilities_5 (Staff)</em> in the <a href="https://github.com/OP-TED/ESPD-EDM/blob/main/criterion/ESPD-criterion.xlsx"><em>ESPD-criterion</em></a> spread-sheet).</p>
 </li>
 </ol>
 </div>
