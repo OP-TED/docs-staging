@@ -108,7 +108,7 @@ div.qanda > ol > li {
 }
 
 .paragraph_grey {
-    background-color: #e1e1e1 !important; /* grey background */
+    background-color: #f3f6fc !important; /* grey background */
     color: #222 !important; /* body-text */
     padding: 1rem; /* Padding around the text */
     border-radius: 4px; /* Rounded corners */
