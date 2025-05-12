@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>User guides to ePO :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/epo-home/guide.html">
+    <title>eQualification Ontology Requirements Specification Document (ORSD) :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/epo-home/stories_eQualification.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../_/css/site.css">
     <link rel="stylesheet" href="../_/css/custom.css">
@@ -98,7 +98,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>General Documentation</strong></span></span>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="guide.html">User Guides</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -285,7 +285,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">eProcurement Ontology</a></li>
-    <li><a href="guide.html">User Guides</a></li>
+    <li><a href="stories_eQualification.html">eQualification Ontology Requirements Specification Document (ORSD)</a></li>
   </ul>
 </nav>
 </div>
@@ -294,40 +294,316 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">User guides to ePO</h1>
+<h1 class="page">eQualification Ontology Requirements Specification Document (ORSD)</h1>
 <div class="sect1">
-<h2 id="_guides"><a class="anchor" href="#_guides"></a>Guides</h2>
+<h2 id="_resources"><a class="anchor" href="#_resources"></a>Resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Evidence Request</p>
+</li>
+<li>
+<p>Evidence Receipt (only indication that it was received)</p>
+</li>
+<li>
+<p>Evidence Submission</p>
+</li>
+<li>
+<p>Qualification Response</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_equalification"><a class="anchor" href="#_equalification"></a>eQualification</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The pages below contain user guides that provide information on different aspects of the Ontology</p>
+<p>eQualification is checking whether a Tenderer or Candidate respects the exclusion Grounds and/or Selection Criteria.  <br>
+eQualification may be used in :</p>
 </div>
-<div class="sect2">
-<h3 id="_guide_to_the_conceptual_models"><a class="anchor" href="#_guide_to_the_conceptual_models"></a><a href="guides/conceptualModelGuide.html" class="xref page">Guide to the Conceptual models</a></h3>
-
-</div>
-<div class="sect2">
-<h3 id="_guide_to_the_glossaries"><a class="anchor" href="#_guide_to_the_glossaries"></a><a href="guides/glossaryGuide.html" class="xref page">Guide to the Glossaries</a></h3>
-
-</div>
-<div class="sect2">
-<h3 id="_guide_to_the_epo_modules"><a class="anchor" href="#_guide_to_the_epo_modules"></a><a href="guides/moduleGuide.html" class="xref page">Guide to the epo Modules</a></h3>
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The qualification of Tenderers in particular for an open Procedure, where it would be inserted in points 2 - 4, of eAwarding ORSD.</p>
+</li>
+<li>
+<p>The prequalification of economic operators in particular for Dynamic Purchase System (DPS) and Prequalification systems, specifically for works.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_examples_conceptual_model_glossary_usage"><a class="anchor" href="#_examples_conceptual_model_glossary_usage"></a>Examples (Conceptual model &amp; Glossary usage)</h2>
+<h2 id="_roles_involved"><a class="anchor" href="#_roles_involved"></a>Roles involved</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>The following examples demonstrate how the ePO conceptual models and glossaries can be used to navigate the ontology. These resources can be used to locate key concepts and their relationships. This information is essential, for example, for a developer who is creating applications that use concepts from the ePO, or for people wishing to query ePO data using SPARQL query language.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Unique Responsible of the Procurement – played by a Person; it is part of the Buyer’s Organization (the head of the Organisation; the person that has the final decision)</p>
+</li>
+<li>
+<p>Buyer</p>
+</li>
+<li>
+<p>Candidate or Tenderer</p>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="_example_1_who_buys_what_from_whom"><a class="anchor" href="#_example_1_who_buys_what_from_whom"></a><a href="examples/ex1.html" class="xref page">Example 1: Who buys what from whom?</a></h3>
-
 </div>
-<div class="sect2">
-<h3 id="_example_2_how_many_contractors_are_smes_for_a_given_country_and_given_date"><a class="anchor" href="#_example_2_how_many_contractors_are_smes_for_a_given_country_and_given_date"></a><a href="examples/ex2.html" class="xref page">Example 2: How many contractors are SMEs for a given country and given date?</a></h3>
-
+</div>
+<div class="sect1">
+<h2 id="_activity_description"><a class="anchor" href="#_activity_description"></a>Activity description</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The Unique Responsible of the Procurement requests the evidences for the Participation Conditions and the Qualification Criteria (exclusion grounds and selection criteria) from:</p>
+</li>
+<li>
+<p>Tenderers proposed for Qualification in an Open Procedure.</p>
+</li>
+<li>
+<p>Candidates in a DPS or prequalification</p>
+</li>
+<li>
+<p>Each Tenderer or Candidate submits the required evidences.</p>
+</li>
+<li>
+<p>The Unique Responsible of the Procurement checks the evidences.</p>
+</li>
+<li>
+<p>If the evidence is good:</p>
+</li>
+<li>
+<p>In the case of an Open Procedure, the Award Decision is signed by the Unique Responsible of the Procurement.</p>
+</li>
+<li>
+<p>In the case of a DPS or prequalification, the Qualification Response is sent by the Unique Responsible of the Procurement to the Candidate mentioning he is accepted on the Candidate List.</p>
+</li>
+<li>
+<p>If the evidence is not good:</p>
+</li>
+<li>
+<p>In the case of an Open Procedure, the Buyer can ask for clarifications from the non-compliant Tenderer:</p>
+</li>
+<li>
+<p>If the clarification confirms that the evidence is good, the Award Decision is signed by the Unique Responsible of the Procurement.</p>
+</li>
+<li>
+<p>If the clarification confirms that the evidence is not good, the evidences of the Tenderer who submitted the Tender next in rank are requested and checked until the required number of winning Tenders is reached.</p>
+</li>
+<li>
+<p>In the case of a DPS or prequalification, the Qualification Response is sent by the Unique Responsible of the Procurement to the Candidate mentioning he is not accepted on the Candidate List.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_use_cases"><a class="anchor" href="#_use_cases"></a>Use cases</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Use case</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Actors</th>
+<th class="tableblock halign-left valign-top">Flow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Request to Participate along with an ESPD (if necessary) and/or evidence is sent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An economic operator sends a Request to Participate along with. if necessary. an ESPD and/or evidence, to the Buyer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator (The Candidate), Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator sends a Request to Participate to the Buyer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A receipt is sent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Buyer sends a receipt to the Candidate for the Request to Participate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer, Candidate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Buyer sends a receipt to the Candidate for the Request to Participate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evidence for the Participation Conditions and the Qualification Criteria are checked</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Unique Responsible of the Procurement ensures the evidence for the Participation Conditions and the Qualification Criteria are fulfilled by Candidates proposed for Qualification.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Unique Responsible of the Procurement checks that the Participation Conditions and the Qualification Criteria provided by each Candidate / Tenderer are fulfilled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evidence for the Participation Conditions and the Qualification Criteria is good</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the Qualification Response is sent by the Unique Responsible of the Procurement to the Candidate mentioning he is accepted on the Candidate List.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the Evidence for the Participation Conditions and the Qualification Criteria is good, the Unique Responsible of the Procurement informs the Candidate that he is accepted on the Candidate List via the Qualification Response document.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evidence for the Participation Conditions and the Qualification Criteria is not good</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the Qualification Response is sent by the Unique Responsible of the Procurement to the Candidate mentioning he is not accepted on the Candidate List.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the Evidence for the Participation Conditions and the Qualification Criteria are not good, the Unique Responsible of the Procurement informs the Candidate that he is not accepted on the Candidate List via the Qualification Response document.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clarifications from the non-compliant Tenderer are required</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the evidences are not good the Buyer can ask for clarifications from the non-compliant Tenderer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement,</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the clarification confirms that the evidence is good, the Award Decision is signed by the Unique Responsible of the Procurement.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_stories"><a class="anchor" href="#_user_stories"></a>User stories</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Role</th>
+<th class="tableblock halign-left valign-top">User Story</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Buyer, I want to be able to create a Call For Competition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Candidate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Candidate, I want to be able to reference a Call For Competition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Candidate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Candidate, I want to be able to send a Request to Participate to the Buyer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Candidate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Candidate, I want to be able to send an ESPD Request</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Buyer, I want to have access to all the Requests to Participate for a specific Call For Competition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Buyer, I want to send a receipt to a Candidate for a specific Request to Participate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Unique Responsible of the Procurement, I want to know the evidence for the Participation Conditions and the Qualification Criteria of the Candidates proposed for Qualification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Unique Responsible of the Procurement, I want to be able to check and verify the evidence for the Participation Conditions and the Qualification Criteria of the Candidates proposed for Qualification.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Buyer, I want to be able to know if an evidence or Participation Conditions criterion is incomplete or wrong.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Buyer, I want to ask clarifications from a Tender whose evidences or Participation Conditions criteria are incomplete or wrong.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Buyer, I want to receive clarifications from a Tender.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Unique Responsible of the Procurement, I want to be able to add a candidate to the Candidate List.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique Responsible of the Procurement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As the Unique Responsible of the Procurement, I want to send the qualification Response to the candidates.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Candidate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Candidate I want to have access to the Qualification Response</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUA-15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tenderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">As a Tenderer, I want to be able to give clarifications to the Buyer about an Participation Conditions and/or Qualification Criteria</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_natural_language_statements"><a class="anchor" href="#_natural_language_statements"></a>Natural Language Statements</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The Unique Responsible of the Procurement is played by a Person.</p>
+</li>
+<li>
+<p>The Unique Responsible of the Procurement is the head of the Buyer’s Organization.</p>
+</li>
+<li>
+<p>The Buyer is played by an Organization.</p>
+</li>
+<li>
+<p>The Buyer creates a Call For Competition.</p>
+</li>
+<li>
+<p>The Unique Responsible of the Procurement checks the evidence for the Participation Conditions and the Qualification Criteria provided by a Candidate.</p>
+</li>
+<li>
+<p>The Unique Responsible of the Procurement decides whether the evidence provided by a Candidate is good.</p>
+</li>
+<li>
+<p>The Unique Responsible of the Procurement sends the Qualification Response to each Candidate.</p>
+</li>
+<li>
+<p>The Unique Responsible of the Procurement can add a Candidate in the Candidate List.</p>
+</li>
+<li>
+<p>The Candidate is an economic Operator.</p>
+</li>
+<li>
+<p>The Candidate sends a Request to Participate to the Buyer.</p>
+</li>
+<li>
+<p>A request to Participate may include an ESP Request.</p>
+</li>
+<li>
+<p>The Buyer sends a Request to Participate Receipt to the Candidate.</p>
+</li>
+<li>
+<p>A Request to Participate Receipt refers to a Request to Participate.</p>
+</li>
+<li>
+<p>A Buyer uses the Candidate List for a Call for Tenders.</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
