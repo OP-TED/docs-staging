@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Contracting Body Requirements :: TED Developer Documentation</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/tbr70_reqs.html">
+    <title>Economic Operator Requirements :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/tbr92_reqs.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -83,7 +83,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
     </nav>
 </div>
 <div class="body">
-<div class="nav-container" data-component="ESPD-EDM" data-version="4.1.0">
+<div class="nav-container" data-component="ESPD-EDM" data-version="5.0.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -160,7 +160,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">ESPD EDM</span>
-          <span class="version">4.1.0</span>
+          <span class="version">5.0.0 alpha</span>
       </div>
   <ul class="components">
       <li class="component">
@@ -222,13 +222,13 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
         </ul>
       </li>
       <li class="component is-current">
-        <a class="title" href="../index.html">ESPD EDM</a>
+        <a class="title" href="../../latest/index.html">ESPD EDM</a>
         <ul class="versions">
-            <li class="version">
-              <a href="../../5.0.0/index.html">5.0.0 alpha</a>
+            <li class="version is-current">
+              <a href="../index.html">5.0.0 alpha</a>
             </li>
-            <li class="version is-current is-latest">
-              <a href="../index.html">4.1.0</a>
+            <li class="version is-latest">
+              <a href="../../latest/index.html">4.1.0</a>
             </li>
             <li class="version">
               <a href="../../4.0.0/index.html">4.0.0</a>
@@ -294,16 +294,16 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ESPD EDM</a></li>
-    <li><a href="tbr70_reqs.html">Contracting Body Requirements</a></li>
+    <li><a href="tbr92_reqs.html">Economic Operator Requirements</a></li>
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.1.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">5.0.0 alpha</button>
   <div class="version-menu">
-    <a class="version" href="../../5.0.0/technical/tbr70_reqs.html">5.0.0 alpha</a>
-    <a class="version is-current" href="tbr70_reqs.html">4.1.0</a>
-    <a class="version" href="../../4.0.0/technical/tbr70_reqs.html">4.0.0</a>
-    <a class="version" href="../../3.3.0/technical/tbr70_reqs.html">3.3.0</a>
+    <a class="version is-current" href="tbr92_reqs.html">5.0.0 alpha</a>
+    <a class="version" href="../../latest/technical/tbr92_reqs.html">4.1.0</a>
+    <a class="version" href="../../4.0.0/technical/tbr92_reqs.html">4.0.0</a>
+    <a class="version" href="../../3.3.0/technical/tbr92_reqs.html">3.3.0</a>
     <a class="version is-missing" href="../../3.2.0/index.html">3.2.0</a>
     <a class="version is-missing" href="../../3.1.0/index.html">3.1.0</a>
     <a class="version is-missing" href="../../3.0.1/index.html">3.0.1</a>
@@ -318,257 +318,256 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Contracting Body Requirements</h1>
+<h1 class="page">Economic Operator Requirements</h1>
 <div class="sect1">
-<h2 id="general"><a class="anchor" href="#general"></a>General</h2>
+<h2 id="eo"><a class="anchor" href="#eo"></a>Economic Operator</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 7%;">
-<col style="width: 93%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-002</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request shall be identified and dated. The time of
-issue should be stated and it should be indicated whether the document
-is a copy. The UBL version and the ESPD version, the ESPD specification
-and the transaction should be identified as well.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-001</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to include all information necessary for identification: Party Name, Party Identification, endpoint id.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-002</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to include contact information: Postal address, telephone number, fax number, e-mail address, contact person(s), Internet address.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-003</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to define his country of registration. The country of registration is needed to identify relevant evidences and the legal domain of evidence provision.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-004</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to indicate, whether he is a micro, a small or a medium-sized enterprise (SME).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-005</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In case of reserved procurement, the economic operator must be able to indicate that he is in a sheltered program (e.g. sheltered workshop, social business, etc.). If so, he must be able to indicate the corresponding percentage of disabled or disadvantaged workers and details on whether the employees concerned belong to a specific category.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-006</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the economic operator is registered on an official list of approved economic operators or is in possession of an equivalent certificate (e.g. under a national (pre)qualification system), he must be able to provide:
+  a) the relevant registration or certification number,
+  b) in case the certificate is available electronically: the web address, issuing body, and precise reference of the documentation;
+  c) the references on which the registration or certification is based, as well as the classification obtained in the official list;
+  d) whether the registration or certification covers all the required exclusion grounds and selection criteria.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-007</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the call for tender demands a certificate with regard to the payment of social security contributions and taxes, the economic operator must be able to indicate if he can provide such a certificate. And if so, in the case the certificate can be retrieved free of charge electronically: the web address, issuing body, and precise reference of the documentation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-008</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to indicate if he is participating together with others (e.g. with subcontractors or with other partners). If so, he must be able to provide:
+  a) the role of the economic operator in the group (leader, responsible for specific tasks, etc.);
+  b) the identification of the other economic operators participating in the procurement procedure;
+  c) (where applicable) name of the participating group.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="contracting_body"><a class="anchor" href="#contracting_body"></a>Contracting body</h2>
+<h2 id="reps_eo"><a class="anchor" href="#reps_eo"></a>Representative of the Economic Operator</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 8%;">
-<col style="width: 92%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-001</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting body must be identified, hence information
-about the party is required, such as party name, identification,
-endpoint id-, buyer profile  and country- .</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-009</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to name a natural person that is acting as the representative of the economic operator and to include the personal information necessary for identifying this natural person (e.g. Identifier, name, nationality, address, place of birth, date of birth).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-006</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The qualification document should contain contact
-information of the contracting body: Postal address, telephone number,
-fax number, e-mail address, contact person(s).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-005</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting authority must be able to provide the CPV
-codes in the ESPD request.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-010</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must also be able to specify the position (acting capacity) the natural person takes in the company in the qualification/tendering phase. If needed, the economic operator shall be able to provide detailed information on the representation (its forms, extent, purpose, etc.).</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="call_for_tender"><a class="anchor" href="#call_for_tender"></a>Call for tenders</h2>
+<h2 id="ca"><a class="anchor" href="#ca"></a>Contracting Authority</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 6%;">
-<col style="width: 94%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-007</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request must contain the object of the contract,
-its name, a description, the type of procedure, the type of procurement
-project and the applied CPV codes as well as a reference to the call for
-tenders, i.e. the procurement project ID or notice ID (PIN, CN, and
-CAN), which defines the requirements (i.e. criteria) for which this
-document is created and submitted by the economic operator. It must be
-possible to maintain this information in order to keep track of the
-connection between ESPD request and call for tenders/notices.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-011</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting authority must be identified, hence information about the party are required, such as party name, country, identification, endpoint id.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-012</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD should contain contact information of the contracting authority: Postal address, telephone number, fax number, e-mail address, contact person(s).</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="procurement_lots"><a class="anchor" href="#procurement_lots"></a>Procurement lots</h2>
+<h2 id="call_tender_refs"><a class="anchor" href="#call_tender_refs"></a>Call for Tender Reference</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 7%;">
-<col style="width: 93%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-008</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request may contain information about the
-procurement lots defined in a call for tender and indicate for each
-tendering criterion what lots are related to it. The contracting body
-shall also set the minimum yearly turnover that economic operators are
-required to have if they tender for more than one lot. In this case, the
-contracting body shall provide a reference to the group of lots of the
-call for tender, to which the minimum turnover applies (art. 58 of
-2014/24/EU).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-013</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD must contain a reference to the call for tenders, i.e. the procurement project ID, which defines the requirements (i.e. criteria) for which this document is created and submitted by the economic operator.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="list_of_criteria"><a class="anchor" href="#list_of_criteria"></a>List of Criteria</h2>
+<h2 id="lots"><a class="anchor" href="#lots"></a>Procurement Lots</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 6%;">
-<col style="width: 94%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-003</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting authority must be able to define the
-particular requirements that apply to selection criteria regarding
-Suitability.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-009</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request must contain information about the
-criteria that set the exclusion grounds as stated in directive
-2014/24/EU Art. 57 and referred to in directive 2014/25/EU Art. 80
-and/or according to national legislation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-010</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request must contain information about qualitative
-selection criteria as stated in directive 2014/24/EU Art. 58 and
-2014/25/EU Art. 80 and/or according to national legislation.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-004</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting body must be able to indicate, which
-criteria for exclusion grounds and qualitative selection specific types
-of economic operators (e.g. subcontractors or partners in consortia)
-need to declare.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-013</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request shall provide criteria of exclusion
-grounds and of qualitative selection in a structured way, i.e. grouping
-the criteria along the criteria groups as put forward in the directive
-2014/24/EU. Additional information for each criterion may be provided
-such as: Legal reference (EU level, contracting body national level,
-economic operator national level), type of criterion (e.g. technical
-capability, financial standing, etc.) or specific requirements for
-natural persons as settled in Art. 67-69 of directive 2014/24/EU. This
-information is provided by the contracting body, who includes the
-information from the call for tenders or it is automatically/directly
-imported from the call for tenders.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-015</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD must provide information about thresholds
-regarding unpaid taxes or social security obligations.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-016</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting authority must be able to provide
-information about weighted criteria.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-017</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Information about weighted criteria provided by the
-contracting authority must be displayed to the economic operator.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-018</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Several selection criteria must be displayed only for a
-particular type of contract.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-019</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The contracting authority must be able to provide
-information about the applicable periods for qualification criteria</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-014</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Where the call for tender is divided into lots, the economic operator must be able to indicate, which lot he is tendering.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="service_provider"><a class="anchor" href="#service_provider"></a>ESPD service provider</h2>
+<h2 id="crit_list"><a class="anchor" href="#crit_list"></a>List of Criteria</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 9%;">
-<col style="width: 91%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-011</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request may contain information of identification
-regarding an ESPD service provider: Name, Party Identification, Endpoint
-ID, Website, Country.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-015</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD must contain corresponding information about the (non)existence of exclusion grounds as set out in the call for tender or ESPD template (cf. tbr70-009). The information shall contain a legal reference (EU level, contracting authority national level, economic operator national level). Furthermore it must contain the name of criterion and criterion group to which it belongs (according to names of Art. 57 of 2014/24/EC and referred to in Art. 80 of 2014/25/EC) as well as indications of (non)existence of each single exclusion ground contained and details and explanations as requested according to Art. 57 of directive 2014/25/EU and the ESPD form agreed among the Member State. Where demanded and if available electronically, the ESPD shall provide the following information to relevant documentation: the web address, issuing body, and precise reference of the documentation. The ESPD shall also accommodate information of self-cleaning measures and reliability explanations in cases, where an exclusion ground exists.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-016</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD must contain corresponding information about the fulfilment of selection criteria as set out in the call for tender or ESPD template (cf. tbr70-010). The information shall contain a legal reference (EU level, contracting authority national level, economic operator national level). Furthermore it must contain the name of criterion and criterion group to which it belongs (according to names of Art. 58 of 2014/24/EC and referred to in Art. 80 of 2014/25/EC) as well as indications of fulfilment of selection criteria contained as well as details and explanations as requested according to Art. 58 of directive 2014/25/EU and the ESPD form agreed among the Member State. Where demanded and if available electronically, the ESPD shall provide the following information to relevant documentation: the web address, issuing body, and precise reference of the documentation.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="sect1">
-<h2 id="additional_documentation"><a class="anchor" href="#additional_documentation"></a>Additional documentation</h2>
+<h2 id="evidence_link"><a class="anchor" href="#evidence_link"></a>Link to Evidences</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 12%;">
-<col style="width: 88%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-012</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD service provider may be able to provide
-complementary information such as liability statements.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-017</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to add the internet address of a national database (including any identification data and, where applicable, the necessary declaration of consent cf. Art. 59 of 2014/24/EC) from which a contracting authority can directly retrieve any evidence documents and certificates or supporting documents which prove the EO’s compliance to the requested criteria defined in the call for tender and stated in the ESPD.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eval_crit"><a class="anchor" href="#eval_crit"></a>Evaluation of Criteria</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-018</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD shall contain structured information describing the fulfilment of selection criteria and non-existence of exclusion grounds. This is essential for automatic evaluation of criteria.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="date_time"><a class="anchor" href="#date_time"></a>Issuing Date and Time</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD shall have an ID and reflect the date and time when it has been issued.</p></td>
 </tr>
 </tbody>
 </table>
@@ -579,22 +578,88 @@ complementary information such as liability statements.</p></td>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 7%;">
-<col style="width: 93%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top"><strong>ID</strong></th>
-<th class="tableblock halign-left valign-top"><strong>Requirement</strong></th>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tbr070-014</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD should allow to include a Version ID and a
-Previous Version ID to the ESPD. Both help to identify the status of
-subsystems that have supported the creation of the ESPD. The Previous
-version ID is needed to trace changes that have occurred.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-020</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD should allow to include a VersionID to the ESPD. The VersionID helps to identify the status of subsystems that have supported the creation of the ESPD. It is needed to trace changes that have occurred.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="service_provider"><a class="anchor" href="#service_provider"></a>ESPD Service Provider</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tbr92-021</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD may reflect information about the issuing service that was used to create the ESPD itself.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="additional_info"><a class="anchor" href="#additional_info"></a>Additional Documentation</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-022</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator should be able to include any additional documents that are not classified as evidentiary information that prove specific exclusion grounds or selection criteria.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="signature"><a class="anchor" href="#signature"></a>Date, Place of Issuance and Signature</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ID</th>
+<th class="tableblock halign-left valign-top">Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tbr92-023</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator must be able to indicate date and place where the ESPD has been compiled. Where required, he must be able to digitally sign the ESPD.</p></td>
 </tr>
 </tbody>
 </table>
