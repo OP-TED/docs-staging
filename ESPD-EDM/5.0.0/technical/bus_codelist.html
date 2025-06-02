@@ -365,7 +365,7 @@ Some code lists used in ESPD were modified to align with those of the eForms.
 <p>The <a href="tech_codelist.html" class="xref page">code list catalogue</a> in this documentation;</p>
 </li>
 <li>
-<p>The multilingual <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/">Genericode</a> *.gc files automatically produced based on these spread-sheets; <mark>and</mark>?</p>
+<p>The multilingual <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/">Genericode</a> *.gc files automatically produced based on Enterprise Architect information.</p>
 </li>
 </ul>
 </div>
@@ -397,11 +397,6 @@ Some code lists used in ESPD were modified to align with those of the eForms.
 <td class="tableblock halign-left valign-top"><p class="tableblock">See element 'cac:PostalAddress/&#8203;cac:Country/&#8203;cbc:IdentificationCode` of the UBL-2.3 XSD Schemas, e.g. the postal address of an economic operator party)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CriteriaType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission, defined in e-Certis)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">See each Criterion taxonomy code in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/__ESPDTeam__/ESPD-CodeLists.xlsx">Criteria Data</a> Structures. See also the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">Genericode file</a>.</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CriterionElementType</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">See element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:TypeCode of the UBL-2.3 XSD QualificationApplicationRequest Schema</p></td>
@@ -417,19 +412,24 @@ Some code lists used in ESPD were modified to align with those of the eForms.
 <td class="tableblock halign-left valign-top"><p class="tableblock">UBL-2.3 element cac:AdditionalDocumentReference/&#8203;cbc:DocumentTypeCode. See XML example in section <strong>2.5 EU and notice publications</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">EOIDType</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute cac:PartyIdentification/cbc:ID@SchemeID. See 'Requirement" boxes in section <strong>6.6 Economic Operator</strong></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EconomicOperatorSize</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used in the UBL-2.3 element cac:EconomicOperatorParty/&#8203;cac:QualifyingParty/&#8203;cbc:IndustryClassificationCode to specify the size of the economic operator.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EOIDType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute cac:PartyIdentification/cbc:ID@SchemeID. See 'Requirement" boxes in section <strong>6.6 Economic Operator</strong></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">EoRoleType</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">DG GROW (European Commission)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:EconomicOperatorRole/&#8203;cbc:RoleCode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExclusionGroud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to specify the Exclusion Groud Criteria in the UBL-2.3 element cac:TenderingCriterion/&#8203;cbc:CriterionTypeCode</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">FinancialRatioType</p></td>
@@ -440,6 +440,11 @@ Some code lists used in ESPD were modified to align with those of the eForms.
 <td class="tableblock halign-left valign-top"><p class="tableblock">Language</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">e.g. in cac:Legislation/&#8203;cac:Language/&#8203;cbc:LocaleCode. See for instance XML example in section <strong>4. 7 Early termination</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Occupation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:ExpectedCode</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ProfileExecutionID</p></td>
@@ -457,9 +462,9 @@ Some code lists used in ESPD were modified to align with those of the eForms.
 <td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:ValueDataTypeCode.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Occupation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SelectionCriterion</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the EU</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:ExpectedCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to specify the Selection Criterion Criteria in the UBL-2.3 element cac:TenderingCriterion/&#8203;cbc:CriterionTypeCode</p></td>
 </tr>
 </tbody>
 </table>
