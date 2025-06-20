@@ -331,6 +331,8 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:Evidence&gt;
     &lt;cbc:ID schemeAgencyID="OP"&gt;EVIDENCE-00001&lt;/cbc:ID&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+<i class="conum" data-value="2"></i><b>(2)</b>
     &lt;cbc:ConfidentialityLevelCode listID="http://publications.europa.eu/resource/authority/access-right" listAgencyID="OP" listVersionID="20220316-0"&gt;CONFIDENTIAL&lt;/cbc:ConfidentialityLevelCode&gt;
     &lt;cac:DocumentReference&gt;
         &lt;cbc:ID schemeAgencyID="OP"&gt;SAT-11121233&lt;/cbc:ID&gt;
@@ -348,18 +350,17 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 &lt;/cac:Evidence&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The element <em>cbc:ConfidentialityLevelCode</em> is of type code with the following attribute values:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><em>listID</em>=<strong>"access-right"</strong>. Informing this code is provided in  the code list <a href="tech_codelist.html#access-right-table" class="xref page">access-right</a>.</p>
-</li>
-<li>
-<p>value <strong><em>CONFIDENTIAL</em></strong> is one of the valid codes defined in the code list <a href="tech_codelist.html#access-right-table" class="xref page">access-right</a>.</p>
-</li>
-</ul>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The element <em>cbc:ConfidentialityLevelCode</em> is of type code with the following attribute values: <em>listID</em>=<strong>"access-right"</strong>. Informing this code is provided in  the code list <a href="tech_codelist.html#access-right-table" class="xref page">access-right</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>value <strong><em>CONFIDENTIAL</em></strong> is one of the valid codes defined in the code list <a href="tech_codelist.html#access-right-table" class="xref page">access-right</a>.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -372,66 +373,63 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">(...)
-&lt;cac:TenderingCriterionProperty&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;977149e9-9a91-4aa6-acb6-6928a0dd6609&lt;/cbc:ID&gt;
         &lt;cbc:Description&gt;Select the type of requirement&lt;/cbc:Description&gt;
-        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="4.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
-        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;CODE_BOOLEAN&lt;/cbc:ValueDataTypeCode&gt;
+        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;CODE_BOOLEAN&lt;/cbc:ValueDataTypeCode&gt;
         &lt;!-- No answer is expected
 here from the economic operator, as this is a REQUIREMENT issued by the contracting
 authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
 the requirement issued by the contracting authority --&gt;
-        &lt;cbc:ExpectedCode listID="boolean-gui-control-type" listVersionID="4.0.0"&gt;RADIO_BUTTON_TRUE&lt;/cbc:ExpectedCode&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;cbc:ExpectedCode listID="boolean-gui-control-type" listVersionID="5.0.0"&gt;RADIO_BUTTON_TRUE&lt;/cbc:ExpectedCode&gt;
 &lt;/cac:TenderingCriterionProperty&gt;
 &lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
     &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210929-0"&gt;ca15c15f-110e-4a10-8d6e-5e41cf5f9098&lt;/cbc:ID&gt;
-    &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="4.0.0"&gt;ONTRUE&lt;/cbc:PropertyGroupTypeCode&gt;
+<i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ONTRUE&lt;/cbc:PropertyGroupTypeCode&gt;
     &lt;cac:TenderingCriterionProperty&gt;
             &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210929-0"&gt;4d879427-f3e8-431b-a516-1c0f22edd56a&lt;/cbc:ID&gt;
             &lt;cbc:Description&gt;Description of the economic or financial requirement&lt;/cbc:Description&gt;
-            &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="4.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
-            &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;DESCRIPTION&lt;/cbc:ValueDataTypeCode&gt;
+            &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+            &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;DESCRIPTION&lt;/cbc:ValueDataTypeCode&gt;
             &lt;!-- No answer is expected
 here from the economic operator, as this is a REQUIREMENT issued by the contracting
 authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
 the requirement issued by the contracting authority --&gt;
             &lt;cbc:ExpectedDescription&gt;[Description]&lt;/cbc:ExpectedDescription&gt;
     &lt;/cac:TenderingCriterionProperty&gt;
-    (...)
 &lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-(...)
+
 &lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;cc96aa19-a0be-4409-af58-ff3f3812741b&lt;/cbc:ID&gt;
-        &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="4.0.0"&gt;ONFALSE&lt;/cbc:PropertyGroupTypeCode&gt;
+        &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ONFALSE&lt;/cbc:PropertyGroupTypeCode&gt;
         &lt;cac:TenderingCriterionProperty&gt;
                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;d996223a-3f54-4803-bf05-39019c843e94&lt;/cbc:ID&gt;
                 &lt;cbc:Description&gt;Minimum rating&lt;/cbc:Description&gt;
-                &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="4.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
-                &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;QUANTITY&lt;/cbc:ValueDataTypeCode&gt;
+                &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+                &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;QUANTITY&lt;/cbc:ValueDataTypeCode&gt;
                 &lt;!-- No answer is expected
 here from the economic operator, as this is a REQUIREMENT issued by the contracting
 authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
 the requirement issued by the contracting authority --&gt;
                 &lt;cbc:ExpectedValueNumeric&gt;0.33&lt;/cbc:ExpectedValueNumeric&gt;
         &lt;/cac:TenderingCriterionProperty&gt;
-        (...)
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-(...)</code></pre>
+&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>This case of use has to be interpreted by the software application that displays the ESPDRequest document so the <a href="#eo">[eo]</a> can select which <em>REQUIREMENT_SUBGROUP</em> is shown and provide an answer to it. Taking this into consideration:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The value of <em>boolean-gui-control</em> will be used by the application software to display either the REQUIREMENT for "Description of the economic or financial requirement" or the REQUIREMENT for "Minimum rating".</p>
-</li>
-<li>
-<p>In this case the value for <em>boolean-gui-control</em> is <em>RADIO_BUTTON_TRUE</em>. This will display REQUIREMENT for "Description of the economic or financial requirement" as defaul since the following <em>cac:SubsidiaryTenderingCriterionPropertyGroup</em> is defined with <em>cbc:PropertyGroupTypeCode</em> value=<strong>ONTRUE</strong>.</p>
-</li>
-</ol>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This case of use has to be interpreted by the software application that displays the ESPD Request document so the <a href="#eo">[eo]</a> can select which <em>REQUIREMENT_SUBGROUP</em> is shown and provide an answer to it. The value of <em>boolean-gui-control</em> will be used by the application software to display either the REQUIREMENT for "Description of the economic or financial requirement" or the REQUIREMENT for "Minimum rating".</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>In this case the value for <em>boolean-gui-control</em> is <em>RADIO_BUTTON_TRUE</em>. This will display REQUIREMENT for "Description of the economic or financial requirement" as defaul since the following <em>cac:SubsidiaryTenderingCriterionPropertyGroup</em> is defined with <em>cbc:PropertyGroupTypeCode</em> value=<strong>ONTRUE</strong>.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -442,21 +440,25 @@ the requirement issued by the contracting authority --&gt;
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:Party&gt;
-(...)
 &lt;cac:PostalAddress&gt;
         &lt;cbc:StreetName&gt;DummyValue&lt;/cbc:StreetName&gt;
         &lt;cbc:CityName&gt;DummyValue&lt;/cbc:CityName&gt;
         &lt;cbc:PostalZone&gt;DummyValue&lt;/cbc:PostalZone&gt;
         &lt;cac:Country&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
                 &lt;cbc:IdentificationCode listID="http://publications.europa.eu/resource/authority/country" listAgencyID="OP" listVersionID="20220928-0"&gt;AND&lt;/cbc:IdentificationCode&gt;
         &lt;/cac:Country&gt;
 &lt;/cac:PostalAddress&gt;
-(...)
 &lt;/cac:Party&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The code list <a href="tech_codelist.html#country-table" class="xref page">country</a> is used to define the value of element cbc:IdentificationCode in class cac:Country.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The code list <a href="tech_codelist.html#country-table" class="xref page">country</a> is used to define the value of element cbc:IdentificationCode in class cac:Country.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -468,22 +470,24 @@ the requirement issued by the contracting authority --&gt;
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Criterion:Participation in a criminal organisation --&gt;
 &lt;cac:TenderingCriterion&gt;
-        (...)
+<i class="conum" data-value="1"></i><b>(1)</b>
         &lt;cbc:CriterionTypeCode listID="http://publications.europa.eu/resource/authority/criterion" listAgencyID="OP" listVersionID="20230315-0"&gt;crime-org&lt;/cbc:CriterionTypeCode&gt;
         &lt;cbc:Name&gt;Participation in a criminal organisation&lt;/cbc:Name&gt;
         &lt;cbc:Description&gt;Has the economic operator itself or any person who is a member of its administrative, management or supervisory body or has powers of representation, decision or control therein been the subject of a conviction by final judgment for participation in a criminal organisation, by a conviction rendered at the most five years ago or in which an exclusion period set out directly in the conviction continues to be applicable? As defined in Article 2 of Council Framework Decision 2008/841/JHA of 24 October 2008 on the fight against organised crime (OJ L 300, 11.11.2008, p. 42).&lt;/cbc:Description&gt;
         &lt;cac:SubTenderingCriterion&gt;
-        (...)
         &lt;/cac:SubTenderingCriterion&gt;
         &lt;cac:Legislation&gt;
-        (...)
         &lt;/cac:Legislation&gt;
-        (...)
 &lt;/cac:TenderingCriterion&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The code list <a href="tech_codelist.html#criterion-table" class="xref page">criterion</a> is used to define the value of element <em>cbc:CriterionTypeCode</em> for any class <em>cac:TenderingCriterion</em> present in the <strong>ESPDRequest</strong> document.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The code list <a href="tech_codelist.html#criterion-table" class="xref page">criterion</a> is used to define the value of element <em>cbc:CriterionTypeCode</em> for any class <em>cac:TenderingCriterion</em> present in the <strong>ESPDRequest</strong> document.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -508,8 +512,9 @@ the requirement issued by the contracting authority --&gt;
                 &lt;cac:TenderingCriterionProperty&gt;
                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;ae5e864a-f3ba-489b-ba17-b87af8b10138&lt;/cbc:ID&gt;
                         &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
-                        &lt;cbc:TypeCode listID="criterion-element-type"  listVersionID="4.0.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
-                        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                        &lt;cbc:TypeCode listID="criterion-element-type"  listVersionID="5.0.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
+                        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
                 &lt;/cac:TenderingCriterionProperty&gt;
                 (...)
                 &lt;/cac:TenderingCriterionPropertyGroup&gt;
@@ -520,8 +525,8 @@ the requirement issued by the contracting authority --&gt;
                 &lt;cac:TenderingCriterionProperty&gt;
                         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;c31b6447-bf88-4172-901a-f9b105205391&lt;/cbc:ID&gt;
                         &lt;cbc:Description&gt;Your answer&lt;/cbc:Description&gt;
-                        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="4.0.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
-                        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;INDICATOR&lt;/cbc:ValueDataTypeCode&gt;
+                        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+                        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;INDICATOR&lt;/cbc:ValueDataTypeCode&gt;
                 &lt;/cac:TenderingCriterionProperty&gt;
                 (...)
         &lt;/cac:TenderingCriterionPropertyGroup&gt;
@@ -529,10 +534,23 @@ the requirement issued by the contracting authority --&gt;
 &lt;/cac:TenderingCriterion&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Code list <em>criterion-element-type</em> is used to specify the value of class <em>cbc:TypeCode</em> of element <em>cac:TenderingCriterionProperty</em>. <em>cbc:TypeCode</em> corresponds to values in columns 3 to 5 in the schema shown in <a href="#img-criterion_criterion-element-type">[img-criterion_criterion-element-type]</a>:
-* <em>cac:TenderingCriterionProperty</em> with <em>cbc:ID</em>=ae5e864a-f3ba-489b-ba17-b87af8b10138 is defined as <em>cbc:TypeCode</em>=<strong>CAPTION</strong>
-* <em>cac:TenderingCriterionProperty</em> with <em>cbc:ID</em>=c31b6447-bf88-4172-901a-f9b105205391 is defined as <em>cbc:TypeCode</em>=<strong>QUESTION</strong></p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Code list <em>criterion-element-type</em> is used to specify the value of class <em>cbc:TypeCode</em> of element <em>cac:TenderingCriterionProperty</em>. <em>cbc:TypeCode</em> corresponds to values in columns 3 to 5 in the schema shown in <a href="#img-criterion_criterion-element-type">[img-criterion_criterion-element-type]</a>:
+<div class="ulist">
+<ul>
+<li>
+<p><em>cac:TenderingCriterionProperty</em> with <em>cbc:ID</em>=ae5e864a-f3ba-489b-ba17-b87af8b10138 is defined as <em>cbc:TypeCode</em>=<strong>CAPTION</strong></p>
+</li>
+<li>
+<p><em>cac:TenderingCriterionProperty</em> with <em>cbc:ID</em>=c31b6447-bf88-4172-901a-f9b105205391 is defined as <em>cbc:TypeCode</em>=<strong>QUESTION</strong></p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -540,20 +558,26 @@ the requirement issued by the contracting authority --&gt;
 <div class="paragraph">
 <p>The following xml code are examples of use of code list <a href="tech_codelist.html#currency-table" class="xref page">currency</a> in an ESPDRequest.</p>
 </div>
-<div class="paragraph">
-<p>Code list <a href="tech_codelist.html#currency-table" class="xref page">currency</a> can be used to specify the code for class <em>cbc:ValueCurrencyCode</em> inside an element <em>cac:TenderingCriterionProperty</em> as shown below:</p>
-</div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
         (...)
         &lt;cbc:Description&gt;Additional Information&lt;/cbc:Description&gt;
-        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="4.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
-        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;DESCRIPTION&lt;/cbc:ValueDataTypeCode&gt;
+        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;DESCRIPTION&lt;/cbc:ValueDataTypeCode&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
         &lt;cbc:ValueCurrencyCode listID="http://publications.europa.eu/resource/authority/currency" listAgencyID="OP" listVersionID="20220928-0"&gt;EUR&lt;/cbc:ValueCurrencyCode&gt;
         (...)
 &lt;/cac:TenderingCriterionProperty&gt;</code></pre>
 </div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Code list <a href="tech_codelist.html#currency-table" class="xref page">currency</a> can be used to specify the code for class <em>cbc:ValueCurrencyCode</em> inside an element <em>cac:TenderingCriterionProperty</em> as shown below:</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Code list <a href="tech_codelist.html#currency-table" class="xref page">currency</a> also can be used to specify the currency of a quantity amount in a <strong>REQUIREMENT</strong> for as shown below:</p>
@@ -563,18 +587,24 @@ the requirement issued by the contracting authority --&gt;
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
         (...)
         &lt;cbc:Description&gt;Minimum requirement&lt;/cbc:Description&gt;
-        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="4.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
-        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;AMOUNT&lt;/cbc:ValueDataTypeCode&gt;
+        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;AMOUNT&lt;/cbc:ValueDataTypeCode&gt;
         &lt;!-- No answer is expected
         here from the economic operator, as this is a REQUIREMENT issued by the contracting
         authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
         the requirement issued by the contracting authority --&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
         &lt;cbc:ExpectedAmount currencyID="EUR"&gt;100000&lt;/cbc:ExpectedAmount&gt;
 &lt;/cac:TenderingCriterionProperty&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Code list is used to define attribute <em>currencyID</em> of element <em>cbc:ExpectedAmount</em> inside <em>cac:TenderingCriterionProperty</em> corresponding to a <strong>REQUIREMENT</strong> expressed as a monetary amount in currency "EUR".</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Code list is used to define attribute <em>currencyID</em> of element <em>cbc:ExpectedAmount</em> inside <em>cac:TenderingCriterionProperty</em> corresponding to a <strong>REQUIREMENT</strong> expressed as a monetary amount in currency "EUR".</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -586,6 +616,7 @@ the requirement issued by the contracting authority --&gt;
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:AdditionalDocumentReference&gt;
         &lt;cbc:ID schemeAgencyID="OP"&gt;2017/S 142-293520&lt;/cbc:ID&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
         &lt;cbc:DocumentTypeCode listID="http://publications.europa.eu/resource/authority/docrefcontent-type"
         listVersionID="20220928-0"&gt;TED_CN&lt;/cbc:DocumentTypeCode&gt;
         &lt;cac:Attachment&gt;
@@ -602,8 +633,13 @@ the requirement issued by the contracting authority --&gt;
 &lt;/cac:AdditionalDocumentReference&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>This <em>cac:AdditionalDocumentReference</em> specifies a <a href="#ted">[ted]</a> Notice as it is declared in element <em>cbc:DocumentTypeCode</em> with code "TED_CN".</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This <em>cac:AdditionalDocumentReference</em> specifies a <a href="#ted">[ted]</a> Notice as it is declared in element <em>cbc:DocumentTypeCode</em> with code "TED_CN".</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -617,6 +653,7 @@ the requirement issued by the contracting authority --&gt;
         (...)
         &lt;cac:Party&gt;
                 &lt;cbc:WebsiteURI&gt;www.Procurer.com&lt;/cbc:WebsiteURI&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
                 &lt;cbc:IndustryClassificationCode listID="http://publications.europa.eu/resource/authority/economic-operator-size" listAgencyID="OP" listVersionID="20220316-0"&gt;sme&lt;/cbc:IndustryClassificationCode&gt;
                 &lt;cac:PartyIdentification&gt;
                         &lt;cbc:ID schemeAgencyID="OP"&gt;AD123456789&lt;/cbc:ID&gt;
@@ -629,8 +666,13 @@ the requirement issued by the contracting authority --&gt;
 &lt;/cac:EconomicOperatorParty&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The <a href="#eo">[eo]</a> in this example has a size classification of 'Micro, small, or medium' (<em>sme</em>) as it is specified in attribute <em>cbc:IndustryClassificationCode</em> of class <em>cac:Party</em>.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <a href="#eo">[eo]</a> in this example has a size classification of 'Micro, small, or medium' (<em>sme</em>) as it is specified in attribute <em>cbc:IndustryClassificationCode</em> of class <em>cac:Party</em>.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -640,18 +682,19 @@ the requirement issued by the contracting authority --&gt;
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">(...)
-&lt;cac:TenderingCriterionResponse&gt;
-    &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="4.0.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionResponse&gt;
+    &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
     &lt;cbc:ValidatedCriterionPropertyID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ValidatedCriterionPropertyID&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
     &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;B82387770&lt;/cbc:ResponseID&gt;
-&lt;/cac:TenderingCriterionResponse&gt;
-(...)</code></pre>
+&lt;/cac:TenderingCriterionResponse&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The element <em>cbc:ResponseID</em> is of type <em>Identifier</em> with the following attribute values:</p>
-</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The element <em>cbc:ResponseID</em> is of type <em>Identifier</em> with the following attribute values:
 <div class="ulist">
 <ul>
 <li>
@@ -661,6 +704,9 @@ the requirement issued by the contracting authority --&gt;
 <p><em>schemeAgencyID</em>=<strong>"ES-AEAT"</strong>. Informing this identifier is issued by the <strong>Spanish Tax Agency (ES-AEAT)</strong>.</p>
 </li>
 </ul>
+</div></td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -673,6 +719,7 @@ the requirement issued by the contracting authority --&gt;
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">(...)
 &lt;cac:EconomicOperatorParty&gt;
         &lt;cac:EconomicOperatorRole&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
                 &lt;cbc:RoleCode listID="http://publications.europa.eu/resource/authority/eo-role-type" listAgencyID="OP" listVersionID="20211208-0"&gt;group-mem&lt;/cbc:RoleCode&gt;
         &lt;/cac:EconomicOperatorRole&gt;
         &lt;cac:Party&gt;
@@ -682,8 +729,13 @@ the requirement issued by the contracting authority --&gt;
 (...)</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The example <a href="#eo">[eo]</a> is declared with element <em>cac:EconomicOperatorParty</em> and its role specified in element <em>cbc:RoleCode</em> as 'Group member' with code list value <em>group-mem</em>.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The example <a href="#eo">[eo]</a> is declared with element <em>cac:EconomicOperatorParty</em> and its role specified in element <em>cbc:RoleCode</em> as 'Group member' with code list value <em>group-mem</em>.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -698,22 +750,23 @@ the requirement issued by the contracting authority --&gt;
         &lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP"
                         schemeVersionID="20210616-0"&gt;ee486082-93fa-4c17-8920-fdf01b890bd1&lt;/cbc:ID&gt;
-                &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="4.0.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
+                &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
                 &lt;cac:TenderingCriterionProperty&gt;
                         &lt;cbc:ID schemeID="criterion" schemeAgencyID=
                         "OP" schemeVersionID="20210616-0"&gt;96df5f9f-f458-40cf-818f-a2beade58b1a&lt;/cbc:ID&gt;
                         &lt;cbc:Description&gt;Ratio Type&lt;/cbc:Description&gt;
                         &lt;cbc:TypeCode listID="criterion-element-type"
-                        listVersionID="4.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+                        listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
                         &lt;cbc:ValueDataTypeCode listID=
-                        "response-data-type" listVersionID="4.0.0"&gt;
+                        "response-data-type" listVersionID="5.0.0"&gt;
                         CODE&lt;/cbc:ValueDataTypeCode&gt;
                         &lt;!-- No answer is expected here from the
                 economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element
                 'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the
                 buyer --&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
                         &lt;cbc:ExpectedCode listID=
-                        "financial-ratio-type" listVersionID="4.0.0"&gt;R11&lt;/cbc:ExpectedCode&gt;
+                        "financial-ratio-type" listVersionID="5.0.0"&gt;R11&lt;/cbc:ExpectedCode&gt;
                 &lt;/cac:TenderingCriterionProperty&gt;
                 (...)
         &lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
@@ -721,8 +774,13 @@ the requirement issued by the contracting authority --&gt;
 &lt;/cac:TenderingCriterion&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>In criterion <em>finan-rat</em>, value for <em>REQUIREMENT</em> with description 'Ratio Type' (<em>96df5f9f-f458-40cf-818f-a2beade58b1a</em>) is provided in <em>cbc:ExpectedCode</em> with code <strong>R11</strong> from code list <em>financial-ratio-type</em>.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>In criterion <em>finan-rat</em>, value for <em>REQUIREMENT</em> with description 'Ratio Type' (<em>96df5f9f-f458-40cf-818f-a2beade58b1a</em>) is provided in <em>cbc:ExpectedCode</em> with code <strong>R11</strong> from code list <em>financial-ratio-type</em>.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -740,13 +798,19 @@ the requirement issued by the contracting authority --&gt;
         &lt;cbc:Article&gt;[Article, e.g. Article 2.I.a]&lt;/cbc:Article&gt;
         &lt;cbc:URI&gt;http://eur-lex.europa.eu/&lt;/cbc:URI&gt;
         &lt;cac:Language&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
                 &lt;cbc:LocaleCode listID="http://publications.europa.eu/resource/authority/language" listAgencyName="OP" listVersionID="20220928-0"&gt;ENG&lt;/cbc:LocaleCode&gt;
         &lt;/cac:Language&gt;
 &lt;/cac:Legislation&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Language used in class <em>cac:Legislation</em> is defined in element <em>cac:Language</em> assigning <em>cbc:LocaleCode</em> with value <strong>"ENG"</strong> from code list <em>language</em>.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Language used in class <em>cac:Legislation</em> is defined in element <em>cac:Language</em> assigning <em>cbc:LocaleCode</em> with value <strong>"ENG"</strong> from code list <em>language</em>.</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -758,31 +822,37 @@ the requirement issued by the contracting authority --&gt;
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Criterion:Enrolment in a relevant professional register --&gt;
 &lt;cac:TenderingCriterion&gt;
- &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="4.0.0"&gt;6ee55a59-6adb-4c3a-b89f-e62a7ad7be7f&lt;/cbc:ID&gt;
+ &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;6ee55a59-6adb-4c3a-b89f-e62a7ad7be7f&lt;/cbc:ID&gt;
         &lt;cbc:CriterionTypeCode listID="http://publications.europa.eu/resource/authority/criterion" listAgencyID="OP" listVersionID="20230315-0"&gt;prof-regist&lt;/cbc:CriterionTypeCode&gt;
         &lt;cbc:Name&gt;Enrolment in a relevant professional register&lt;/cbc:Name&gt;
         &lt;cbc:Description&gt;It is enrolled in relevant professional registers kept in the Member State of its establishment as described in Annex XI of Directive 2014/24/EU; economic operators from certain Member States may have to comply with other requirements set out in that Annex.&lt;/cbc:Description&gt;
         (...)
         &lt;cac:TenderingCriterionPropertyGroup&gt;
         &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;b01d8f8f-ceac-4b47-b7aa-88cdeb630465&lt;/cbc:ID&gt;
-        &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="4.0.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
+        &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
         &lt;cac:TenderingCriterionProperty&gt;
                 &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;53fe9bf5-38c9-4281-b8a9-7250b75a9407&lt;/cbc:ID&gt;
                 &lt;cbc:Description&gt;occupation&lt;/cbc:Description&gt;
-                &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="4.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
-                &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="4.0.0"&gt;CODE&lt;/cbc:ValueDataTypeCode&gt;
+                &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+                &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;CODE&lt;/cbc:ValueDataTypeCode&gt;
                 &lt;!-- No answer is expected
                 here from the economic operator, as this is a REQUIREMENT issued by the contracting
                 authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
                 the requirement issued by the contracting authority --&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
                 &lt;cbc:ExpectedCode listID="http://publications.europa.eu/resource/authority/occupation" listVersionID="20221214-0"&gt;http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de&lt;/cbc:ExpectedCode&gt;
         &lt;/cac:TenderingCriterionProperty&gt;
         (...)
 &lt;/cac:TenderingCriterionPropertyGroup&gt;</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>The expected occupation for criterion <em>prof-regist</em> is defined in element <em>cac:TenderingCriterionProperty</em> with value <em>cbc:ExpectedCode</em> <strong><a href="http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de" class="bare">http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de</a></strong> that corresponds to <em>occupation</em> label <strong>"agricultural engineer"</strong>.</p>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The expected occupation for criterion <em>prof-regist</em> is defined in element <em>cac:TenderingCriterionProperty</em> with value <em>cbc:ExpectedCode</em> <strong><a href="http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de" class="bare">http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de</a></strong> that corresponds to <em>occupation</em> label <strong>"agricultural engineer"</strong>.</td>
+</tr>
+</table>
 </div>
 </div>
 </article>
