@@ -99,7 +99,7 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
     <span class="nav-text"><span class="separated"><strong>Release Documentation</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../4.0.0/release_notes.html">Release Notes</a>
+    <a class="nav-link" href="../release_notes.html">Release Notes</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
@@ -111,19 +111,19 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
     <span class="nav-text"><span class="separated"><strong>Information for Business Users</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../4.0.0/business/index.html">Business Information</a>
+    <a class="nav-link" href="../business/index.html">Business Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../4.0.0/business/implementation.html">An ESPD Implementation</a>
+    <a class="nav-link" href="../business/implementation.html">An ESPD Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../4.0.0/business/using.html">The Structure of an ESPD Implementation</a>
+    <a class="nav-link" href="../business/using.html">The Structure of an ESPD Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../4.0.0/technical/index.html">Technical Information</a>
+    <a class="nav-link" href="index.html">Technical Information</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
@@ -432,7 +432,7 @@ For Genericodes it is different. In this version ESPD  provides the genericode (
 </div>
 </div>
 <div class="sect2">
-<h3 id="_compulsory_attributes"><a class="anchor" href="#_compulsory_attributes"></a>1.3. Compulsory attributes</h3>
+<h3 id="_mandatory_attributes"><a class="anchor" href="#_mandatory_attributes"></a>1.3. Mandatory attributes</h3>
 <div class="paragraph">
 <p><em>Table 1. ESPD Requirement regarding codes</em></p>
 </div>
@@ -599,22 +599,22 @@ For Genericodes it is different. In this version ESPD  provides the genericode (
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.3&lt;/cbc:UBLVersionID&gt;
-<i class="conum" data-value="1"></i><b>(1)</b>
-&lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"><i class="conum" data-value="1"></i><b>(1)</b>
+&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.3&lt;/cbc:UBLVersionID&gt;
 <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
+<i class="conum" data-value="3"></i><b>(3)</b>
 &lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP" schemeVersionID="4"&gt;
   0fddbf2d-1e33-4267-b04f-52b59b72ccb6
 &lt;/cbc:UUID&gt;
-<i class="conum" data-value="3"></i><b>(3)</b>
+<i class="conum" data-value="4"></i><b>(4)</b>
 &lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;
    PP.20170419.1024-9
 &lt;/cbc:ContractFolderID&gt;
-<i class="conum" data-value="4"></i><b>(4)</b>
+<i class="conum" data-value="5"></i><b>(5)</b>
 &lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;
   1.0
-&lt;/cbc:VersionID&gt;
-<i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+&lt;/cbc:VersionID&gt;</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -989,11 +989,8 @@ Contains values to be use by software implementations to display graphic control
 </div>
 </div>
 <div class="sect1">
-<h2 id="criterion-table"><a class="anchor" href="#criterion-table"></a>5. criterion</h2>
+<h2 id="selection-criterion-table"><a class="anchor" href="#selection-criterion-table"></a>5. selection-criterion</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#criterion-xml-example" class="xref unresolved">criterion xml Example</a>.</p>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1003,13 +1000,13 @@ Contains values to be use by software implementations to display graphic control
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong><em>Criterion</em></strong></p>
+<p><strong><em>Selection criterion</em></strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Procurement specific</p>
+<p>Public Procurement specific</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1021,7 +1018,7 @@ Contains values to be use by software implementations to display graphic control
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Contains coded exclusion and selection  criteria used for public procurement procedures.</p>
+<p>This table provides the list of condictions that are concerned for evaluation purposes. In the domain of public procurement, selection criteria are normally based on a specific legal framework. This codelist is a subset of the ESPD codelist CriterionTaxonomy.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1034,31 +1031,31 @@ Contains values to be use by software implementations to display graphic control
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SelectionCriterion</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">criterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selection-criterion</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/criterion" class="bare">http://publications.europa.eu/resource/authority/criterion</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/selection-criterion" class="bare">http://publications.europa.eu/resource/authority/selection-criterion</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20230315-0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250319-0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/criterion" class="bare">http://publications.europa.eu/resource/dataset/criterion</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/selection-criterion" class="bare">http://publications.europa.eu/resource/dataset/selection-criterion</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/criterion/20230315-0" class="bare">http://publications.europa.eu/resource/dataset/criterion/20230315-0</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/selection-criterion/20250319-0" class="bare">http://publications.europa.eu/resource/dataset/selection-criterion/20250319-0</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/criterion/20230315-0/xml/gc/Criterion.gc" class="bare">http://publications.europa.eu/resource/distribution/criterion/20230315-0/xml/gc/Criterion.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/selection-criterion/20250319-0/xml/gc/SelectionCriterion.gc" class="bare">http://publications.europa.eu/resource/distribution/selection-criterion/20250319-0/xml/gc/SelectionCriterion.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -1076,7 +1073,91 @@ Contains values to be use by software implementations to display graphic control
 </div>
 </div>
 <div class="sect1">
-<h2 id="criterion-element-type-table"><a class="anchor" href="#criterion-element-type-table"></a>6. criterion-element-type</h2>
+<h2 id="exclusion-ground-table"><a class="anchor" href="#exclusion-ground-table"></a>6. exclusion-ground</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>Exclusion ground</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Public Procurement specific</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Exclusion grounds in public procurement refer to the criteria that prevent certain entities from participating in public contracts due to criminal offenses, tax breaches, or other specified misconduct, aiming to ensure fairness and integrity in public procurement processes.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExclusionGround</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exclusion-ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/exclusion-ground" class="bare">http://publications.europa.eu/resource/authority/exclusion-ground</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250319-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/exclusion-ground" class="bare">http://publications.europa.eu/resource/dataset/exclusion-ground</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/exclusion-ground/20250319-0" class="bare">http://publications.europa.eu/resource/dataset/exclusion-ground/20250319-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/exclusion-ground/20250319-0/xml/gc/ExclusionGround.gc" class="bare">http://publications.europa.eu/resource/distribution/exclusion-ground/20250319-0/xml/gc/ExclusionGround.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="criterion-element-type-table"><a class="anchor" href="#criterion-element-type-table"></a>7. criterion-element-type</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#criterion-element-type-xml-example" class="xref unresolved">criterion-element-type xml Example</a>.</p>
@@ -1151,7 +1232,7 @@ Contains values to be use by software implementations to display graphic control
 </div>
 </div>
 <div class="sect1">
-<h2 id="currency-table"><a class="anchor" href="#currency-table"></a>7. currency</h2>
+<h2 id="currency-table"><a class="anchor" href="#currency-table"></a>8. currency</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#currency-xml-example" class="xref unresolved">currency xml Example</a>.</p>
@@ -1238,7 +1319,7 @@ Contains values to be use by software implementations to display graphic control
 </div>
 </div>
 <div class="sect1">
-<h2 id="docrefcontent-type-table"><a class="anchor" href="#docrefcontent-type-table"></a>8. docrefcontent-type</h2>
+<h2 id="docrefcontent-type-table"><a class="anchor" href="#docrefcontent-type-table"></a>9. docrefcontent-type</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#docrefcontent-type-xml-example" class="xref unresolved">docrefcontent-type xml Example</a>.</p>
@@ -1318,7 +1399,7 @@ This code list is maintained as technical for the time being. In the future it m
 </div>
 </div>
 <div class="sect1">
-<h2 id="economic-operator-size-table"><a class="anchor" href="#economic-operator-size-table"></a>9. economic-operator-size</h2>
+<h2 id="economic-operator-size-table"><a class="anchor" href="#economic-operator-size-table"></a>10. economic-operator-size</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#economic-operator-size-xml-example" class="xref unresolved">economic-operator-size xml Example</a>.</p>
@@ -1405,7 +1486,7 @@ This code list is maintained as technical for the time being. In the future it m
 </div>
 </div>
 <div class="sect1">
-<h2 id="eoid-type-table"><a class="anchor" href="#eoid-type-table"></a>10. eoid-type</h2>
+<h2 id="eoid-type-table"><a class="anchor" href="#eoid-type-table"></a>11. eoid-type</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#eoid-type-xml-example" class="xref unresolved">eoid-type xml Example</a>.</p>
@@ -1481,7 +1562,7 @@ This code list is maintained as technical for the time being. In the future it m
 </div>
 </div>
 <div class="sect1">
-<h2 id="eo-role-type-table"><a class="anchor" href="#eo-role-type-table"></a>11. eo-role-type</h2>
+<h2 id="eo-role-type-table"><a class="anchor" href="#eo-role-type-table"></a>12. eo-role-type</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#eo-role-type-xml-example" class="xref unresolved">eo-role-type xml Example</a>.</p>
@@ -1568,7 +1649,7 @@ This code list is maintained as technical for the time being. In the future it m
 </div>
 </div>
 <div class="sect1">
-<h2 id="financial-ratio-type-table"><a class="anchor" href="#financial-ratio-type-table"></a>12. financial-ratio-type</h2>
+<h2 id="financial-ratio-type-table"><a class="anchor" href="#financial-ratio-type-table"></a>13. financial-ratio-type</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#financial-ratio-type-xml-example" class="xref unresolved">financial-ratio-type xml Example</a>.</p>
@@ -1652,7 +1733,7 @@ This code list is maintained by the ESPD Team and codes are collected from Banqu
 </div>
 </div>
 <div class="sect1">
-<h2 id="language-table"><a class="anchor" href="#language-table"></a>13. language</h2>
+<h2 id="language-table"><a class="anchor" href="#language-table"></a>14. language</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#language-xml-example" class="xref unresolved">language xml Example</a>.</p>
@@ -1740,7 +1821,7 @@ The concepts included are correlated with the ISO 639 international standard.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="occupation-table"><a class="anchor" href="#occupation-table"></a>14. occupation</h2>
+<h2 id="occupation-table"><a class="anchor" href="#occupation-table"></a>15. occupation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#code_list_examples.adoc#occupation-xml-example" class="xref unresolved">occupation xml Example</a>.</p>
@@ -1829,7 +1910,7 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </div>
 </div>
 <div class="sect1">
-<h2 id="profile-execution-id-table"><a class="anchor" href="#profile-execution-id-table"></a>15. profile-execution-id</h2>
+<h2 id="profile-execution-id-table"><a class="anchor" href="#profile-execution-id-table"></a>16. profile-execution-id</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1898,7 +1979,7 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </div>
 </div>
 <div class="sect1">
-<h2 id="property-group-type-table"><a class="anchor" href="#property-group-type-table"></a>16. property-group-type</h2>
+<h2 id="property-group-type-table"><a class="anchor" href="#property-group-type-table"></a>17. property-group-type</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1967,7 +2048,7 @@ The data type expected for this code is URL following the <strong>ESCO</strong> 
 </div>
 </div>
 <div class="sect1">
-<h2 id="response-data-type-table"><a class="anchor" href="#response-data-type-table"></a>17. response-data-type</h2>
+<h2 id="response-data-type-table"><a class="anchor" href="#response-data-type-table"></a>18. response-data-type</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
