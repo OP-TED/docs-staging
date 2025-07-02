@@ -722,103 +722,16 @@ tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/contain
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_xml_examples_2"><a class="anchor" href="#_xml_examples_2"></a>XML Examples</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>See examples in sections about exclusion and selection criteria.</p>
-</div>
 <div class="sect2">
 <h3 id="_xml_example"><a class="anchor" href="#_xml_example"></a>XML Example</h3>
-<div class="sect3">
-<h4 id="_code_with_callouts"><a class="anchor" href="#_code_with_callouts"></a>Code with callouts</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The source code can be copied from the code block below the callout section
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;cac:TenderingCriterion&gt;
-
-_&lt;!-- ... elements omitted for brevity --&gt;_
-
-&lt;cac:Legislation&gt;
-
-&lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="4.0.0"&gt;4ea7a10a-643e-4022-b67e-e06573b28ff5&lt;/cbc:ID&gt;
-
-&lt;cbc:Title&gt;DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC&lt;/cbc:Title&gt;
-
-&lt;cbc:Description&gt;DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC&lt;/cbc:Description&gt;
-
-&lt;cbc:JurisdictionLevel languageID="en"&gt;EU Directive&lt;/cbc:JurisdictionLevel&gt;
-
-&lt;cbc:Article&gt;57(1)&lt;/cbc:Article&gt;
-
-&lt;cbc:URI&gt;http://eur-lex.europa.eu/legal-content/ES/TXT/?uri=celex%3A32014L0024&lt;/cbc:URI&gt;
-
-&lt;/cac:Legislation&gt;
-
-_&lt;!-- ... elements omitted for brevity --&gt;_
-
-&lt;/cac:TenderingCriterion&gt;</pre>
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Use the UUID provided by GROW.</p>
-</li>
-<li>
-<p>The official long title of the legislation is expected in the Title.</p>
-</li>
-<li>
-<p>The short name that is commonly used to refer to the legislation is expected in the Description.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_copy_the_code_block"><a class="anchor" href="#_copy_the_code_block"></a>Copy the code block</h4>
 <div class="paragraph">
-<p>Snippet of XML to illustrate how to use the cac:Legislation component inside a criterion:</p>
+<p>The xml of the criterion is best viewed directly in the xml examples made available in release v4.0 on GitHub:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterion&gt;
-
-_&lt;!-- ... elements omitted for brevity --&gt;_
-
-&lt;cac:Legislation&gt;
-
-&lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="4.0.0"&gt;4ea7a10a-643e-4022-b67e-e06573b28ff5&lt;/cbc:ID&gt;
-
-&lt;cbc:Title&gt;DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC&lt;/cbc:Title&gt;
-
-&lt;cbc:Description&gt;DIRECTIVE 2014/24/EU OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 26 February 2014 on public procurement and repealing Directive 2004/18/EC&lt;/cbc:Description&gt;
-
-&lt;cbc:JurisdictionLevel languageID="en"&gt;EU Directive&lt;/cbc:JurisdictionLevel&gt;
-
-&lt;cbc:Article&gt;57(1)&lt;/cbc:Article&gt;
-
-&lt;cbc:URI&gt;http://eur-lex.europa.eu/legal-content/ES/TXT/?uri=celex%3A32014L0024&lt;/cbc:URI&gt;
-
-&lt;/cac:Legislation&gt;
-
-_&lt;!-- ... elements omitted for brevity --&gt;_
-
-&lt;/cac:TenderingCriterion&gt;</code></pre>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ESPD-EDM/blob/v4.0.0/xml-examples/ESPD-Request.xml#L97" class="bare">https://github.com/OP-TED/ESPD-EDM/blob/v4.0.0/xml-examples/ESPD-Request.xml#L97</a></p>
 </div>
-</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ESPD-EDM/blob/v4.0.0/xml-examples/ESPD-Response.xml#L111" class="bare">https://github.com/OP-TED/ESPD-EDM/blob/v4.0.0/xml-examples/ESPD-Response.xml#L111</a></p>
 </div>
 </div>
 </div>
@@ -964,7 +877,7 @@ _&lt;!-- ... elements omitted for brevity --&gt;_
 </div>
 </div>
 <div class="sect1">
-<h2 id="_xml_examples_3"><a class="anchor" href="#_xml_examples_3"></a>XML Examples</h2>
+<h2 id="_xml_examples_2"><a class="anchor" href="#_xml_examples_2"></a>XML Examples</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -1301,7 +1214,7 @@ _&lt;!-- ... elements omitted for brevity --&gt;_
 </div>
 </div>
 <div class="sect1">
-<h2 id="_xml_examples_4"><a class="anchor" href="#_xml_examples_4"></a>XML Examples</h2>
+<h2 id="_xml_examples_3"><a class="anchor" href="#_xml_examples_3"></a>XML Examples</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
@@ -1319,7 +1232,7 @@ _&lt;!-- ... elements omitted for brevity --&gt;_
 <h2 id="_mock_ups"><a class="anchor" href="#_mock_ups"></a>Mock-ups</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Chapters <strong>4 Exclusion Criteria</strong> and <strong>5. Selection Criteria</strong> describe in detail the different <strong>types</strong> of exclusion and selection criteria defined and used in the ESPD-EDM. By <strong>type</strong> of criterion we refer to criteria that share common characteristics, namely how they are structured. Each type of criterion is presented from three perspectives:</p>
+<p>Sections <strong>Exclusion Grounds</strong> and <strong>Selection Criteria</strong> describe in detail the different <strong>types</strong> of exclusion and selection criteria defined and used in the ESPD-EDM. By <strong>type</strong> of criterion we refer to criteria that share common characteristics, namely how they are structured. Each type of criterion is presented from three perspectives:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1646,7 +1559,7 @@ _&lt;!-- ... elements omitted for brevity --&gt;_
 <p>The following fragment of XML code shows how this is expressed:</p>
 </div>
 <div class="sect2">
-<h3 id="_code_with_callouts_2"><a class="anchor" href="#_code_with_callouts_2"></a>Code with callouts</h3>
+<h3 id="_code_with_callouts"><a class="anchor" href="#_code_with_callouts"></a>Code with callouts</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2077,7 +1990,7 @@ _&lt;!--...--&gt;_
 <p><em>Response of the economic operator to the REQUIREMENT "Amount"</em></p>
 </div>
 <div class="sect3">
-<h4 id="_code_with_callouts_3"><a class="anchor" href="#_code_with_callouts_3"></a>Code with callouts</h4>
+<h4 id="_code_with_callouts_2"><a class="anchor" href="#_code_with_callouts_2"></a>Code with callouts</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2129,7 +2042,7 @@ The source code can be copied from the code block below the callout section
 </div>
 </div>
 <div class="sect3">
-<h4 id="_copy_the_code_block_2"><a class="anchor" href="#_copy_the_code_block_2"></a>Copy the code block</h4>
+<h4 id="_copy_the_code_block"><a class="anchor" href="#_copy_the_code_block"></a>Copy the code block</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">_&lt;!-- ... --&gt;_
@@ -2499,7 +2412,7 @@ The last part <em>occurrence</em> is optional if there is content or not in the 
 </ol>
 </div>
 <div class="sect3">
-<h4 id="_code_with_callouts_4"><a class="anchor" href="#_code_with_callouts_4"></a>Code with callouts</h4>
+<h4 id="_code_with_callouts_3"><a class="anchor" href="#_code_with_callouts_3"></a>Code with callouts</h4>
 <div class="admonitionblock note">
 <table>
 <tr>

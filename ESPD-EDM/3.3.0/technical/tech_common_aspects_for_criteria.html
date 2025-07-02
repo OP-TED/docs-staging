@@ -371,19 +371,19 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>One criterion <strong>may</strong> have descendent 'sub-criteria'. This is very useful, for example, to define national exclusion criteria that specialise in the EU criteria defined in the Directive;</p>
+<p>A criterion <strong>may</strong> have descendent 'sub-criteria'. This is very useful, for example, to define national exclusion criteria that specialise in the EU criteria defined in the Directive;</p>
 </li>
 <li>
-<p>One criterion <strong>may</strong> refer to one or several pieces of legislation (EU, national, other);</p>
+<p>A criterion <strong>may</strong> refer to one or several pieces of legislation (EU, national, other);</p>
 </li>
 <li>
-<p>One criterion <strong>must</strong> always contain at least one group of 'properties'. Properties may be informative captions; general requirements issued by the Member State or procedure-specific requirements specified by the buyer; and questions addressed to the economic operator;</p>
+<p>A criterion <strong>must</strong> always contain at least one group of 'properties'. Properties may be informative captions; general requirements issued by the Member State or procedure-specific requirements specified by the buyer; and questions addressed to the economic operator;</p>
 </li>
 <li>
-<p>One group of properties <strong>must</strong> always specify at least one 'property';</p>
+<p>A group of properties <strong>must</strong> always specify at least one 'property';</p>
 </li>
 <li>
-<p>One group of properties <strong>may</strong> contain one or several 'sub-groups' of properties.</p>
+<p>A group of properties <strong>may</strong> contain one or several 'sub-groups' of properties.</p>
 </li>
 </ol>
 </div>
@@ -393,7 +393,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <h2 id="_xsd_schema"><a class="anchor" href="#_xsd_schema"></a>XSD Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This XSD Schema diagram shows a global view of the UBL 2.3 cac:TenderingCriterion component:</p>
+<p>The XSD Schema diagram here shows a global view of the UBL 2.3 cac:TenderingCriterion component:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="_images/cacTenderingCriterion_XSD_Schema.jpg" alt="cac:TenderingCriterion - XSD Schema" width="500" height="700"></span></p>
@@ -579,7 +579,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <h2 id="_xml_examples"><a class="anchor" href="#_xml_examples"></a>XML Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>See XML examples in the sections about exclusion and selection criteria.</p>
+<p>Examples can be viewed directly in the xml files provided on <a href="https://github.com/OP-TED/ESPD-EDM/tree/v3.3.0/xml-examples">GitHub</a>.</p>
 </div>
 </div>
 </div>
@@ -1717,212 +1717,14 @@ _&lt;!-- ... elements omitted for brevity --&gt;_
 </div>
 <div class="sect2">
 <h3 id="_xml_example_2"><a class="anchor" href="#_xml_example_2"></a>XML Example</h3>
-<div class="sect3">
-<h4 id="_code_with_callouts"><a class="anchor" href="#_code_with_callouts"></a>Code with callouts</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The source code can be copied from the code block below the callout section
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The xml structure of the TenderingCriterionPropertyGroup element can be viewed in either the examples provided on GitHub. Search either document to view the many instances of use:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>_Use of semanticised boolean codes for REQUIREMENT processing control_
-
-_&lt;!-- lines with '...' refer to elements that have been removed for brevity. See complete sample in folder xml-examples of this distribution --&gt;_
-
-&lt;cac:TenderingCriterionPropertyGroup&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;Description&gt;Lots the requirement applies to&lt;/Description&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;Description&gt;Lot ID&lt;/Description&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;26ece6a2-b360-46c1-890d-8338913b8719&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;9c62f2c7-0c51-451d-8730-427f92ed618c&lt;/ID&gt;
-
-&lt;Description&gt;Select the type of requirement&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CODE_BOOLEAN&lt;/ValueDataTypeCode&gt;
-
-&lt;ExpectedCode listID="boolean-gui-control-type" listAgencyID="OP" listVersionID="3.3.0"&gt;RADIO_BUTTON_TRUE&lt;/ExpectedCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ONTRUE&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;13728a54-21e3-4c84-8b11-48666c3d260f&lt;/ID&gt;
-
-&lt;Description&gt;Specify the total invoiced amount, taxes included.&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;DESCRIPTION&lt;/ValueDataTypeCode&gt;
-
-&lt;ExpectedDescription&gt;__FinReqsDescription&lt;/ExpectedDescription&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;48c7b3bf-8d1c-4497-a915-78d53ba68089&lt;/ID&gt;
-
-&lt;Description&gt;Minimum amount&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;AMOUNT&lt;/ValueDataTypeCode&gt;
-
-&lt;MinimumAmount currencyID="EUR"&gt;100006&lt;/MinimumAmount&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;8b4ae4f0-2849-49ea-a64b-7bb20c60bde4&lt;/ID&gt;
-
-&lt;Description&gt;Start date; End date&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;PERIOD&lt;/ValueDataTypeCode&gt;
-
-&lt;cac:ApplicablePeriod&gt;
-
-&lt;StartDate&gt;2000-10-10&lt;/StartDate&gt;
-
-&lt;EndDate&gt;2000-10-10&lt;/EndDate&gt;
-
-&lt;/cac:ApplicablePeriod&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;9b3a04ff-e36d-4d4f-b47c-82ad402b9b02&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1d89c188-58d2-461e-a4f6-a17f689d87f4&lt;/ID&gt;
-
-&lt;Description&gt;Amount&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;AMOUNT&lt;/ValueDataTypeCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;cc96aa19-a0be-4409-af58-ff3f3812741b&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ONFALSE&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;57d4160f-20b4-4b43-967b-76b038a2fa6b&lt;/ID&gt;
-
-&lt;Description&gt;Minimum rating&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUANTITY&lt;/ValueDataTypeCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;f07b5174-93ae-46dd-aa26-7f451d97f6a8&lt;/ID&gt;
-
-&lt;Description&gt;Rating scheme&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;DESCRIPTION&lt;/ValueDataTypeCode&gt;
-
-&lt;ExpectedDescription&gt;&lt;/ExpectedDescription&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;5fe93344-ed91-4f97-bcab-b6720a131798&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;3bd1913b-c461-41eb-87c4-84e003785a56&lt;/ID&gt;
-
-&lt;Description&gt;Rating&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUANTITY&lt;/ValueDataTypeCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;!--...--&gt;
-
-&lt;/cac:TenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:TenderingCriterion&gt;</pre>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ESPD-EDM/blob/v3.3.0/xml-examples/ESPD-Request.xml" class="bare">https://github.com/OP-TED/ESPD-EDM/blob/v3.3.0/xml-examples/ESPD-Request.xml</a></p>
 </div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ESPD-EDM/blob/v3.3.0/xml-examples/ESPD-Response.xml" class="bare">https://github.com/OP-TED/ESPD-EDM/blob/v3.3.0/xml-examples/ESPD-Response.xml</a></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1939,7 +1741,7 @@ _&lt;!--...--&gt;_
 <p>The buyer is specifying that an amount above 100006 Euros is expected.</p>
 </li>
 <li>
-<p>This is the QUESTION that the economic operator needs to respond (the "Amount" corresponding to the economic of financial requirement (in this example: "Specify the total invoiced amount, taxes included" (cac:TenderingCriterionProperty UUID 13728a54-21e3-4c84-8b11-48666c3d260f).</p>
+<p>This is the QUESTION that the economic operator needs to respond to (the "Amount" corresponding to the economic of financial requirement) in this example: "Specify the total invoiced amount, taxes included" (cac:TenderingCriterionProperty UUID 13728a54-21e3-4c84-8b11-48666c3d260f).</p>
 </li>
 <li>
 <p>The economic operator (EO) will have to respond using an element of type cbc:Amount, see the next fragment of XML below for the response of the EO. The validation mechanism checks that the type of data specified by the buyer in the ESPD-Request (AMOUNT) and the type of data provided in the ESPD-Response (cbc:ResponseAmount) are coherent.</p>
@@ -1952,201 +1754,8 @@ _&lt;!--...--&gt;_
 </li>
 </ol>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_copy_the_code_block"><a class="anchor" href="#_copy_the_code_block"></a>Copy the code block</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">_Use of semanticised boolean codes for REQUIREMENT processing control_
-
-_&lt;!-- lines with '...' refer to elements that have been removed for brevity. See complete sample in folder xml-examples of this distribution --&gt;_
-
-&lt;cac:TenderingCriterionPropertyGroup&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;Description&gt;Lots the requirement applies to&lt;/Description&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;Description&gt;Lot ID&lt;/Description&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;26ece6a2-b360-46c1-890d-8338913b8719&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ON*&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;9c62f2c7-0c51-451d-8730-427f92ed618c&lt;/ID&gt;
-
-&lt;Description&gt;Select the type of requirement&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;CODE_BOOLEAN&lt;/ValueDataTypeCode&gt;
-
-&lt;ExpectedCode listID="boolean-gui-control-type" listAgencyID="OP" listVersionID="3.3.0"&gt;RADIO_BUTTON_TRUE&lt;/ExpectedCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-_&lt;!--...--&gt;_
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ONTRUE&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;13728a54-21e3-4c84-8b11-48666c3d260f&lt;/ID&gt;
-
-&lt;Description&gt;Specify the total invoiced amount, taxes included.&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;DESCRIPTION&lt;/ValueDataTypeCode&gt;
-
-&lt;ExpectedDescription&gt;__FinReqsDescription&lt;/ExpectedDescription&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;48c7b3bf-8d1c-4497-a915-78d53ba68089&lt;/ID&gt;
-
-&lt;Description&gt;Minimum amount&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;AMOUNT&lt;/ValueDataTypeCode&gt;
-
-&lt;MinimumAmount currencyID="EUR"&gt;100006&lt;/MinimumAmount&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;8b4ae4f0-2849-49ea-a64b-7bb20c60bde4&lt;/ID&gt;
-
-&lt;Description&gt;Start date; End date&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;PERIOD&lt;/ValueDataTypeCode&gt;
-
-&lt;cac:ApplicablePeriod&gt;
-
-&lt;StartDate&gt;2000-10-10&lt;/StartDate&gt;
-
-&lt;EndDate&gt;2000-10-10&lt;/EndDate&gt;
-
-&lt;/cac:ApplicablePeriod&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;9b3a04ff-e36d-4d4f-b47c-82ad402b9b02&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1d89c188-58d2-461e-a4f6-a17f689d87f4&lt;/ID&gt;
-
-&lt;Description&gt;Amount&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;AMOUNT&lt;/ValueDataTypeCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;cc96aa19-a0be-4409-af58-ff3f3812741b&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;ONFALSE&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;57d4160f-20b4-4b43-967b-76b038a2fa6b&lt;/ID&gt;
-
-&lt;Description&gt;Minimum rating&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUANTITY&lt;/ValueDataTypeCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;f07b5174-93ae-46dd-aa26-7f451d97f6a8&lt;/ID&gt;
-
-&lt;Description&gt;Rating scheme&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;REQUIREMENT&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;DESCRIPTION&lt;/ValueDataTypeCode&gt;
-
-&lt;ExpectedDescription&gt;&lt;/ExpectedDescription&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;ID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;5fe93344-ed91-4f97-bcab-b6720a131798&lt;/ID&gt;
-
-&lt;PropertyGroupTypeCode listID="property-group-type" listAgencyID="OP" listVersionID="3.3.0"&gt;&lt;/PropertyGroupTypeCode&gt;
-
-&lt;cac:TenderingCriterionProperty&gt;
-
-&lt;ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;3bd1913b-c461-41eb-87c4-84e003785a56&lt;/ID&gt;
-
-&lt;Description&gt;Rating&lt;/Description&gt;
-
-&lt;TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/TypeCode&gt;
-
-&lt;ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUANTITY&lt;/ValueDataTypeCode&gt;
-
-&lt;/cac:TenderingCriterionProperty&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
-
-&lt;!--...--&gt;
-
-&lt;/cac:TenderingCriterionPropertyGroup&gt;
-
-&lt;/cac:TenderingCriterion&gt;</code></pre>
-</div>
+<div class="paragraph">
+<p>Responses to any element to a requirement, are placed in a &lt;cac:TenderingCriterionResponse&gt;:</p>
 </div>
 <div class="paragraph">
 <p><em>Response of the economic operator to the REQUIREMENT "Amount"</em></p>
@@ -2155,7 +1764,7 @@ _&lt;!--...--&gt;_
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">_&lt;!-- ... --&gt;_
 
-&lt;cac:TenderingCriterionResponse&gt;
+
 
 &lt;ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;76085d25-05ad-4cb3-b1e0-675558e3f43e&lt;/ID&gt;
 
@@ -2188,6 +1797,8 @@ _&lt;!--...--&gt;_
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>More instances of this element can be viewed in the sample xml response file: <a href="https://github.com/OP-TED/ESPD-EDM/blob/v3.3.0/xml-examples/ESPD-Response.xml" class="bare">https://github.com/OP-TED/ESPD-EDM/blob/v3.3.0/xml-examples/ESPD-Response.xml</a></p>
 </div>
 </div>
 </div>
