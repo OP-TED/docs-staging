@@ -392,20 +392,6 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_structure"><a class="anchor" href="#_data_structure"></a>Data structure</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following image shows an example of how it represented in the spread-sheets (see ESPD-Criterion)</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Initial_Question_data_structure.jpg" alt="Does the EO fulfil the criteria by itself? Data structure" width="566" height="369"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 3. 'Does the EO fulfil the criteria by itself? Data structure and UUID.</em></p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_mockup"><a class="anchor" href="#_mockup"></a>Mockup</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -435,9 +421,9 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_2"><a class="anchor" href="#_data_structure_2"></a>Data Structure</h3>
+<h3 id="_data_structure"><a class="anchor" href="#_data_structure"></a>Data Structure</h3>
 <div class="paragraph">
-<p>Few details regarding data structure for Suitability selection criteria</p>
+<p>Regarding data structure for Suitability selection criteria</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -452,15 +438,6 @@ The links to the business code explanations are provided by <a href="https://dig
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>(The figure below is defined in the the tab "Suitability-I of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/SC_Suitability_enrolement.jpg" alt="SC Suitability enrolement" width="506" height="331"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 5. 'Suitability' criterion data structure (enrolments)</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_xml_example"><a class="anchor" href="#_xml_example"></a>XML Example</h3>
@@ -471,7 +448,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><em>'Enrolment in a relevant professional register' suitability criterion</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -479,24 +456,12 @@ The links to the business code explanations are provided by <a href="https://dig
 
 </div>
 <div class="sect2">
-<h3 id="_data_structure_service_contracts"><a class="anchor" href="#_data_structure_service_contracts"></a>Data Structure (service contracts)</h3>
-<div class="paragraph">
-<p>(The figure below is defined in the the tab "Suitability-II" of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Suitability%20criterion_data%20structure_service%20contracts.jpg" alt="Suitability criterion data structure (service contracts)" width="566" height="438"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 6. 'Suitability' criterion data structure (service contracts)</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_service_contracts"><a class="anchor" href="#_xml_example_service_contracts"></a>XML Example (service contracts)</h3>
 <div class="paragraph">
 <p><em>Example of suitability criterion</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -513,7 +478,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p>Notice the use of the attribute languageID meaning, in this example, that the name is expressed in Spanish.</p>
 </li>
 <li>
-<p>A "choice" structure is coming now: A true/false QUESTION is asked ("Your answer" to the question contained in the Criterion "Is a particular membership of a particular organisation needed in order to be able to perform the service &#8230;&#8203;". If the user (the EO) answers "Yes" (true) then it has to provide the registration number of the authorisation. Otherwise the EO will have to provide a justification about why the authorisation is not registered.</p>
+<p>A "choice" structure is coming now: A true/false QUESTION is asked "Your answer" to the question contained in the Criterion "Is a particular membership of a particular organisation needed in order to be able to perform the service &#8230;&#8203;". If the user (the EO) answers "Yes" (true) then it has to provide the registration number of the authorisation. Otherwise the EO will have to provide a justification about why the authorisation is not registered.</p>
 </li>
 <li>
 <p>If yes&#8230;&#8203; provide the registration number for the authorisation.</p>
@@ -640,24 +605,12 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_3"><a class="anchor" href="#_data_structure_3"></a>Data Structure</h3>
-<div class="paragraph">
-<p>In this this figure what it is being shown is that the buyer required three general yearly turnovers, for which it defined minimum amounts in one REQUIREMENT(s) group. Next, three groups of QUESTION(s) are provided, each one of them corresponding to the past three years. Remember that the spreadsheet used in this guide to represent the criteria data structure is also used to generate sample XML instances. So by including three groups of QUESTION(s) in the spread-sheet, the tool generating sample XML instances will automatically generate three sub-groups of properties each one with distinct UUIDs.</p>
-</div>
-<div class="paragraph">
-<p><span class="image unresolved"><img src="General_Yearly_Turnovers_criterion_data_structure.jpg" alt="General Yearly Turnovers" width="566" height="448"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 10. 'General Yearly Turnovers' criterion data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_2"><a class="anchor" href="#_xml_example_2"></a>XML Example</h3>
 <div class="paragraph">
 <p><em>General yearly turnover</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -715,21 +668,12 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_4"><a class="anchor" href="#_data_structure_4"></a>Data Structure</h3>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Average_yearly%20turnover_criterion_data_structure.jpg" alt="Average yearly turnover" width="522" height="427"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 13. 'Average yearly turnover' criterion data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_3"><a class="anchor" href="#_xml_example_3"></a>XML Example</h3>
 <div class="paragraph">
 <p><em>Average yearly turnover</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -795,9 +739,9 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_5"><a class="anchor" href="#_data_structure_5"></a>Data Structure</h3>
+<h3 id="_data_structure_2"><a class="anchor" href="#_data_structure_2"></a>Data Structure</h3>
 <div class="paragraph">
-<p>Notice that:</p>
+<p>Note that:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -818,12 +762,6 @@ The links to the business code explanations are provided by <a href="https://dig
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><span class="image unresolved"><img src="Specific_yearly turnover_criterion_data_structure.jpg" alt="Specific yearly turnover" width="509" height="403"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 16. 'Specific yearly turnover' criterion data structure</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_xml_example_4"><a class="anchor" href="#_xml_example_4"></a>XML Example</h3>
@@ -831,7 +769,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><em>Specific yearly turnover</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -859,24 +797,12 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_6"><a class="anchor" href="#_data_structure_6"></a>Data Structure</h3>
-<div class="paragraph">
-<p>Notice that this  <strong>specific average turnover</strong> structure is <strong>'practically identical'</strong> to the data structure of the <strong>specific yearly turnover</strong> criterion. The only difference is that the <strong>cardinality of the amount is 1</strong> (instead of 1..n).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Specific_average%20turnover_criterion_data_structure.jpg" alt="Specific average turnover' criterion data structure" width="566" height="450"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 19. Specific average turnover' criterion data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_5"><a class="anchor" href="#_xml_example_5"></a>XML Example</h3>
 <div class="paragraph">
 <p><em>Specific average turnover</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
@@ -930,36 +856,10 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_7"><a class="anchor" href="#_data_structure_7"></a>Data Structure</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>REQUIREMENT(s) specified by the buyers can be place outside a group of QUESTION(s) (see any other previous criteria) or <strong>inside</strong> a group of <strong>QUESTION(s)</strong>, which is the case for financial ratios, as you can see in the data structure for this criterion, below.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Notice how the spreadsheet has been used to specify the three different financial ratios of the above mock-up example: the XML example below was produced using a XSL-T transformation <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/xml-examples/__xslt__/ODS-Data-Structures-to-ESPD-XML/ESPDRequest-Annotated.xslt">ESPDRequest-Annotated</a> that takes the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/xml-examples/ESPD-criterion.xml">ESPD-criterion</a> and produced the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/xml-examples/ESPD-Request.xml">ESPD-Request</a>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Financial_ratio_criterion_data_structure.jpg" alt="Financial ratio" width="526" height="293"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 21. 'Financial ratio' criterion data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_6"><a class="anchor" href="#_xml_example_6"></a>XML Example</h3>
 <div class="paragraph">
 <p><em>Financial Ratio</em>
-Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1063,7 +963,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_8"><a class="anchor" href="#_data_structure_8"></a>Data Structure</h3>
+<h3 id="_data_structure_3"><a class="anchor" href="#_data_structure_3"></a>Data Structure</h3>
 <div class="paragraph">
 <p>This structure is quite particular. Notice that:</p>
 </div>
@@ -1090,15 +990,6 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>The XML example below illustrates all this. The values used in the example are the same as the ones in the spread-sheet.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/risk_indemnity_insurance_criterion_data_structure.jpg" alt="risk indemnity insurance' criterion data structure" width="566" height="314"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 25. 'risk indemnity insurance' criterion data structure</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_xml_example_7"><a class="anchor" href="#_xml_example_7"></a>XML Example</h3>
@@ -1106,7 +997,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>'Risk indemnity insurance' criterion (<strong>Procedure with Lots</strong>)</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
@@ -1174,7 +1065,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_9"><a class="anchor" href="#_data_structure_9"></a>Data Structure</h3>
+<h3 id="_data_structure_4"><a class="anchor" href="#_data_structure_4"></a>Data Structure</h3>
 <div class="paragraph">
 <p>Notice the following aspects from the 'other economic or financial requirements':</p>
 </div>
@@ -1207,12 +1098,6 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Other_economic_financial_requirements_criterion_data_structur.jpg" alt="Other economic or financial requirements" width="566" height="337"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 27. 'Other economic or financial requirements' criterion data structure</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_xml_example_8"><a class="anchor" href="#_xml_example_8"></a>XML Example</h3>
@@ -1220,7 +1105,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>'Other economic or financial requirements' criterion</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
@@ -1348,7 +1233,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_10"><a class="anchor" href="#_data_structure_10"></a>Data Structure</h3>
+<h3 id="_data_structure_5"><a class="anchor" href="#_data_structure_5"></a>Data Structure</h3>
 <div class="paragraph">
 <p>The data structure for references caters for:</p>
 </div>
@@ -1368,12 +1253,6 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/References_criterion_data_structure.jpg" alt="References" width="505" height="216"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 30.'References' criterion data structure</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_xml_example_9"><a class="anchor" href="#_xml_example_9"></a>XML Example</h3>
@@ -1381,7 +1260,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>'References for a works contract' criterion</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 <div class="paragraph">
 <p>The following elements can be read in the example:</p>
@@ -1497,7 +1376,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 <div class="paragraph">
 <p><strong>And one more data structure to define the allowance of checks:
-*</strong> Special requierements check (spec-req-check)</p>
+*</strong> Special requirements check (spec-req-check)</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1556,21 +1435,9 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_11"><a class="anchor" href="#_data_structure_11"></a>Data Structure</h3>
-<div class="paragraph">
-<p>(The figure below is defined in the the tab ''SC-Abilities_1 (Persons)'' of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Abilities_Persons_criterion_data%20structure.jpg" alt="Abilities (I)(Persons)" width="566" height="372"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 33. 'Abilities (I)(Persons)' criterion data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_10"><a class="anchor" href="#_xml_example_10"></a>XML Example</h3>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1578,7 +1445,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 
 </div>
 <div class="sect2">
-<h3 id="_data_structure_12"><a class="anchor" href="#_data_structure_12"></a>Data Structure</h3>
+<h3 id="_data_structure_6"><a class="anchor" href="#_data_structure_6"></a>Data Structure</h3>
 <div class="paragraph">
 <p>(The figure below is defined in the the tab ''SC_Abilities_2 (Facilities,&#8230;&#8203;)'' of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
 </div>
@@ -1595,24 +1462,11 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>Criterion "Technical facilities and measures for ensuring quality" (ESPD-Request)</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_abilities_iii_education"><a class="anchor" href="#_abilities_iii_education"></a>Abilities (III) - Education</h3>
-
-</div>
-<div class="sect2">
-<h3 id="_data_structure_13"><a class="anchor" href="#_data_structure_13"></a>Data Structure</h3>
-<div class="paragraph">
-<p>(The figure below is defined in the the tab ''SC_Abilities_3 (Education)'' of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
-</div>
-<div class="paragraph">
-<p><span class="image unresolved"><img src="abilitites-education-datastructure.png.jpg" alt="Abilities (III) (Education)' criterion data structure" width="566" height="313"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 35. 'Abilities (III) (Education)' criterion data structure</em></p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1656,7 +1510,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>Criterion "Educational and professional qualifications" ESPD-Request)</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1691,7 +1545,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_14"><a class="anchor" href="#_data_structure_14"></a>Data Structure</h3>
+<h3 id="_data_structure_7"><a class="anchor" href="#_data_structure_7"></a>Data Structure</h3>
 <div class="paragraph">
 <p>The data structure below shows how this criterion is organised. Notice the following:</p>
 </div>
@@ -1711,18 +1565,6 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>(Some columns have been hidden to enhance the readability of the image).</p>
-</div>
-<div class="paragraph">
-<p>(The figure below is defined in the the tab 'SC_Abilities_4 (Checks)' of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Abilities_IV_Checks_criterion%20data_structure.jpg" alt="Abilities (IV) (Checks)" width="539" height="353"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 38. 'Abilities (IV) (Checks)' criterion data structure</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_xml_example_13"><a class="anchor" href="#_xml_example_13"></a>XML Example</h3>
@@ -1730,7 +1572,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>Allowance of checks criterion /Special requierements check</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1738,24 +1580,12 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 
 </div>
 <div class="sect2">
-<h3 id="_data_structure_15"><a class="anchor" href="#_data_structure_15"></a>Data Structure</h3>
-<div class="paragraph">
-<p>(The figure below is defined in the the tab ''SC_Abilities_5 (Staff)'' of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ESPD-criterion.xlsx">ESPD-criterion</a> spread-sheet).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Abilities_V_Checks_criterion%20data_structure.jpg" alt="Abilities (V) (Staff)" width="566" height="362"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 39. 'Abilities (V) (Staff)' criterion data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_14"><a class="anchor" href="#_xml_example_14"></a>XML Example</h3>
 <div class="paragraph">
 <p><em>Criterion SC-Abilities (Staff) ESPD-Request</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
@@ -1804,24 +1634,12 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_16"><a class="anchor" href="#_data_structure_16"></a>Data Structure</h3>
-<div class="paragraph">
-<p>(Some columns have been hidden to enhance the readability of the image).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Subcontracting%20proportion_criterion_data_structure.jpg" alt="Subcontracting proportion' criterion data structure" width="566" height="321"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 42. 'Subcontracting proportion' criterion data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_15"><a class="anchor" href="#_xml_example_15"></a>XML Example</h3>
 <div class="paragraph">
 <p><em>'Subcontracting proportion' criterion</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
@@ -1876,24 +1694,12 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_17"><a class="anchor" href="#_data_structure_17"></a>Data Structure</h3>
-<div class="paragraph">
-<p>(Some columns have been hidden to enhance the readability of the image).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Samples_certificates_criteria_data_structure.jpg" alt="Samples and certificates criteria data structure" width="566" height="327"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 45. 'Samples and certificates' criteria data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_16"><a class="anchor" href="#_xml_example_16"></a>XML Example</h3>
 <div class="paragraph">
 <p><em>'Samples and certificates' criterion</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
@@ -1935,7 +1741,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_18"><a class="anchor" href="#_data_structure_18"></a>Data Structure</h3>
+<h3 id="_data_structure_8"><a class="anchor" href="#_data_structure_8"></a>Data Structure</h3>
 <div class="paragraph">
 <p>Notice the following:</p>
 </div>
@@ -1952,15 +1758,6 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>(Some columns have been hidden to enhance the readability of the image).</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Quality%20Assurance%20schemes_environmental_data_struc.jpg" alt="Quality Assurance schemes and environmental management standards" width="566" height="347"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 48. 'Quality Assurance schemes and environmental management standards' criteria data structure</em></p>
-</div>
 </div>
 <div class="sect2">
 <h3 id="_xml_example_17"><a class="anchor" href="#_xml_example_17"></a>XML Example</h3>
@@ -1968,7 +1765,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>'Certificates by quality control institutes' criterion</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
@@ -1999,18 +1796,6 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_structure_19"><a class="anchor" href="#_data_structure_19"></a>Data structure</h3>
-<div class="paragraph">
-<p>The figure below shows the data elements required to the economic operator for this criterion in the ESPD-Request:</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/Reduction_candidates_data_structure.jpg" alt="Reduction of candidates" width="566" height="156"></span></p>
-</div>
-<div class="paragraph">
-<p><em>Figure 49. 'Reduction of candidates' data structure</em></p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_xml_example_espd_request"><a class="anchor" href="#_xml_example_espd_request"></a>XML example (ESPD-Request)</h3>
 <div class="paragraph">
 <p>The XML snippet below shows how an instance of this criterion looks like in the ESPD-Request.</p>
@@ -2019,7 +1804,7 @@ Please generate an ESPD Request and ESPD Response documents on <a href="https://
 <p><em>Reduction of Candidates - (QUESTION(s) in the ESPD-Request)</em></p>
 </div>
 <div class="paragraph">
-<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see a full example.</p>
 </div>
 </div>
 </div>
