@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Requirements gathering :: TED Developer Documentation</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/epo-wf/Business%20Process%20workflow/stage1/stage1.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/custom.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../_/img/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="../../../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../../../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../../../_/css/custom.css">
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+<script>var uiRootPath = '../../../_'</script>
+<script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>
+
+  </head>
+  <body class="article">
+<!-- Piwik PRO Tracking Code -->
+<!-- followed the istructions bellow -->
+<!-- citnet.tech.ec.europa.eu/CITnet/jira/secure/attachment/3485014/OP_PiwikPRO_TED-docs-installation-CCK-web-analytics_v1.txt -->
+<script type="text/javascript">
+(function (window, document, dataLayerName, id) {
+window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({start: (new Date).getTime(), event: "stg.start"});
+var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+function stgCreateCookie(a, b, c) {var d = ""; if (c) {var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString(); f = "; SameSite=Strict"} document.cookie = a + "=" + b + d + f + "; path=/"}
+var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+!function (a, n, i) {a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) {a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1)})}}(i[c])}(window, "ppms", ["tm", "cm"]);
+})(window, document, 'dataLayer', '23a2ab51-a9a6-40a8-bd2b-573ecafa90e3');
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
+<div class="eu-flag">
+    <nav class="navbar-scrollable">
+        <div class="navbar-brand">
+
+            <div class="eu-emblem" style="display: inline-block;">
+                <!-- flag and logo-->
+                <a href="https://european-union.europa.eu/index_en" target="_blank">
+                    <div class="eu-emblem-std-en"><span></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="sep-frame">
+            <div class="rect-grey"></div>
+        </div>
+    </nav>
+
+</div>
+
+<div class="eu-tenders">
+    <nav class="navbar">
+        <div class="text-eu-tenders">
+            <a href="https://ted.europa.eu/en/" target="_blank">EU tenders</a>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+
+            <div class="text-eu-subtext-text">
+                <a href="https://docs.ted.europa.eu">TED Developer Documentation</a>
+            </div>
+            <div class="text-eu-subtext-label">
+                <a href="https://docs.ted.europa.eu"></a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="epo-wf" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">eProcurement Ontology</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../epo-home/index.html">ePO Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">ePO Workflow Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../index.html">Introduction</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../businessProcessWorkflowIndex.html">ePO Workflow</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../stakeholders.html">Stakeholders</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../businessProcessOverview.html">Business process overview</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="stage1.html">Stage 1: Requirements Gathering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../stage2/stage2.html">Stage 2: Designing Conceptual Model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../stage3/stage3.html">Stage 3: Preparing Semantic Data Specification Version Release</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../stage4/stage4.html">Stage 4: Publishing Candidate Semantic Data Specification Version</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../stage5/stage5.html">Stage 5: Publishing Stable SDS Version</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../SDS%20and%20related%20artefacts/SDSmodel2owl.html">ePO artefacts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../GitHub%20repositories/githubRepositories.html">GitHub Repositories</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../methodology/methodologyIndex.html">Workflow Documentation Methodology</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../methodology/workflowAsEA.html">Workflow Documentation description as Enterprise Architecture model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../methodology/SDA.html">Service-Driven Approach (SDA) to Workflow Documentation management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../methodology/archimateElements.html">Employed ArchiMate elements</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../legend.html">List of Abbreviations</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title dim">Select a product/version</span>
+          <span class="version">&nbsp;</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../../../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../eforms/latest/index.html">1.12</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.11/index.html">1.11</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.10/index.html">1.10</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.9/index.html">1.9</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.8/index.html">1.8</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.7/index.html">1.7</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.6/index.html">1.6</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../EPO/latest/index.html">5.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/5/index.html">5.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/4.2/index.html">4.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/4.1/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/4/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../ESPD-EDM/latest/index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../ESPD-EDM/latest/index.html">5.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/4.1.0/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/4.0.0/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/3.3.0/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../../ESPD-EDM/1.0.2/index.html">1.0.2</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../M2O/latest/index.html">Model2Owl Documentation</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../M2O/latest/index.html">3.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../api/latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../api/latest/index.html">3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../api/2.0/index.html">2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../ODS/latest/index.html">TED Open Data</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../ODS/latest/index.html">1.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">eProcurement Ontology</a></li>
+    <li>ePO Workflow Documentation</li>
+    <li><a href="../businessProcessWorkflowIndex.html">ePO Workflow</a></li>
+    <li><a href="stage1.html">Stage 1: Requirements Gathering</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+    <article class="doc">
+<h1 class="page">Requirements gathering</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The requirements gathering stage includes all preliminary and preparation work such as deciding the ePO version to be released, what contents are to be included the release, and tool set-up e.g., the creation of the necessary GitHub branches. Also in this stage, the requirements for the new ePO module are collected in the Ontology Requirements Specification Document (ORSD) by the working group. If no new module is required for this release then the ORSD will contain specifications for each of the updates required for existing modules. The ORSDs can be viewed <a href="../../../epo-home/stories.html" class="xref page">here</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_business_view"><a class="anchor" href="#_business_view"></a>Business view</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The detailed business workflow for the Requirements Gathering Stage is depicted in the diagram below.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/requirements%20gathering%20[detailed].bmp" alt="requirements gathering [detailed]">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Requirements Gathering business view diagram</em></p>
+</div>
+<div class="paragraph">
+<p>The business workflow with Stakeholders for the Requirements Gathering Stage is depicted in the diagram below</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/requirements%20gathering%20[stakeholders].bmp" alt="requirements gathering [stakeholders]">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Requirements Gathering business view with stakeholders diagram</em></p>
+</div>
+<div class="paragraph">
+<p>In the “<strong>Decide work goal &amp; scope and release version</strong>” business process, The product owner decides which ePO module will be developed, if any, and into which version the module will be released. The versioning follows a “X.Y.Z” format, where X is the major version number, Y the minor version number, and Z the patch version number. For more information on ePO versioning rules, consult <a href="https://docs.ted.europa.eu/epo-home/versioning.html">the versioning page</a>. Finally, in this business process, the product owner informs the development team which fixes to open GitHub issues will be implemented in the upcoming version. These GitHub issues are assigned the milestone related to the X.Y.Z release.</p>
+</div>
+<div class="paragraph">
+<p>In the "<strong>Prepare the publication space for the work</strong>" business process, The product owner creates the GitHub release branches marked as “release/X.Y.Z” of the specific ePO version in the following GitHub repositories:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/ePO-conceptual-model</a> repository, where the conceptual model and the SDS artefacts will be generated and will be reviewed.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/OP-TED/ePO">OP-TED/ePO</a> repository, where the SDS artefacts to be published as a stable release will be moved once reviewed.</p>
+</li>
+<li>
+<p>The <a href="https://github.com/OP-TED/epo-docs">OP-TED/ePO-docs</a> repository where the contents of the website containing the SDS documentation will be moved and/or generated.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the “<strong>Configure the artefact transformation pipeline</strong>“ business process, the development team Configures the model2owl transformation script on the release/X.Y.Z branch of the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/epo-conceptual-model</a>  repository in order for model2owl to correctly transform the conceptual model of the new release. The development team may need to make additional adjustments to the configuration files during the <a href="../stage3/stage3.html" class="xref page">“preparing SDS version release”</a> stage if needed (due to a bug for example). As a result of this business process, the SDS Generation Configuration Business Object is created.</p>
+</div>
+<div class="paragraph">
+<p>In the "<strong>Collect subject relevant material</strong>" business process, the ePO working group starts to meet on a weekly basis to develop the new ePO release. In the first meetings the working group collects and analyses material relevant to the new ePO release such as reports, sample data, and specifications. All the resulting files from this process are stored on a <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">drive in OP&#8217;s Internal sharepoint</a>. As a result of this business process, the “ORSD Supplementary Material” business object is created.</p>
+</div>
+<div class="paragraph">
+<p>In the "<strong>Interview domain experts</strong>" business process, the working group discusses the nature of the release. Specifically, the domain experts that are part of the working group describe the eProcurement processes that need to be modelled in detail and are interviewed by the development team in order to fill any missing information regarding the eProcurement process. During these sessions, domain experts may provide or point out additional ORSD supplementary material to the rest of the working group.</p>
+</div>
+<div class="paragraph">
+<p>In the "<strong>Writing ORSD</strong>" business process, the development team writes the ORSD as Word document in <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">in OP&#8217;s Internal SharePoint</a> using the ORSD Supplementary Material, and the notes from the interviews with domain experts. The Ontology Requirements Specification Document (ORSD) Business Object is created as a result of this business process.</p>
+</div>
+<div class="paragraph">
+<p>In the "<strong>Review ORSD</strong>" business process, The working group reviews the ORSD and provides feedback. This can happen during the WG meetings, via GitHub Issues or discussions on the <a href="https://github.com/OP-TED/ePO">OP-TED/epo</a> repository, via eMail or other channels.</p>
+</div>
+<div class="paragraph">
+<p>In the "<strong>ORSD consolidation</strong>" business process, The development team integrates the feedback from the working group into the ORSD Word document and transcribes the document into an <sup class="footnote" id="_footnote_AsciiDoc">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> Asciidoc page placed in the <a href="https://docs.ted.europa.eu/epo-home/stories.html">release branch</a> on the ePO-docs] repository. This Process may be revisited in future stages, if an inconsistency was discovered during the review of the formal artefacts.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_application_and_technology_view"><a class="anchor" href="#_application_and_technology_view"></a>Application and Technology view</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The  diagram below describes all the artefacts involved in this stage using business (yellow), application (blue) and technology (green) layers. The Github Repositories branches that are used for this stage are also depicted as orange rectangles for reference purposes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/requirements%20gathering%20[concise].bmp" alt="requirements gathering [concise]">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Application and Technology Layers of the “Requirements Gathering” stage diagram</em></p>
+</div>
+<div class="paragraph">
+<p>The “Ontology Requirements Specification Document (ORSD)” Business Object as defined in the <a href="https://docs.ted.europa.eu/epo-home/methodology2024.html">ePO LOT methodology</a>, is translated into two Data Objects (documents):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The "Print optimised ORSD document, which is stored in the <a href="https://eceuropaeu.sharepoint.com/:f:/r/teams/GRP-eProcurementOntologyWorkingGroup/Shared%20Documents/General?csf=1&amp;web=1&amp;e=GXRttd">OP&#8217;s Internal SharePoint</a> server along with the Supplementary ORSD documents.</p>
+</li>
+<li>
+<p>The "Web optimised ORSD document", which is stored in the <a href="https://github.com/OP-TED/epo-docs">OP-TED/ePO-docs</a> repository, as an <a href="https://asciidoc.org/">AsciiDoc</a> page. For an example  of an ORSD file in ePO, see <a href="https://github.com/OP-TED/epo-docs/blob/main/modules/ROOT/pages/stories_eAccess.adoc">here</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The diagram also describes how the SDS Generation Configuration Business Object is translated as the “Owl Configuration” Data Object representing the model2owl configuration files that are stored in the <a href="https://github.com/OP-TED/epo-conceptual-model">OP-TED/ePO-conceptual-model</a> repository. For an explanation of what these files contain and how to generate them see <a href="https://github.com/OP-TED/model2owl?tab=readme-ov-file#configuration">here</a>. For an example of the configuration files in ePO See <a href="https://github.com/OP-TED/ePO/tree/master/implementation/ePO_core/model2owl-config">here</a>.</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://asciidoc.org" class="bare">https://asciidoc.org</a>
+</div>
+</div>
+</article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+    <a href="https://ted.europa.eu/" target="_blank">TED Website</a>
+  </div>
+</article>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('/home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<!-- Cookie Consent Kit -->
+  <script type="application/json">
+    {
+      "utility" : "cck",
+      "url": {
+        "en": "https://ted.europa.eu/en/cookie-choice",
+        "fr": "https://ted.europa.eu/fr/cookie-choice"
+      },
+      "appendix": {
+        "en": "We use cookies to improve your experience and analyze our traffic.",
+        "fr": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic."
+      },
+      "target": true
+    }
+    </script>
+    
+  <!-- Cookie Consent Kit -->
+  <script>
+    window.addEventListener("cck_all_accepted", function () {
+      var consentAccepted = {consents: {analytics: {status: 1}}};
+      ppms.cm.api('setComplianceSettings', consentAccepted, function (new_consent) { });
+    });
+    window.addEventListener("cck_technical_accepted", function () {
+      var consentRejected = {consents: {analytics: {status: 0}}};
+      ppms.cm.api('setComplianceSettings', consentRejected, function (new_consent) { });
+    });
+  </script>
+<div class="footer">
+    <div class="three-columns">
+
+        <div class="col-md-12 col-lg-4">
+            <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img
+                        alt="TED Developer Docs" class="ls-op" src="../../../_/img/ted-logo-footer2.png"
+                        height="48" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+            <div class="ted-footer__rich-text">
+                <p>This website is managed by:
+                    <u>
+                        <a href="https://op.europa.eu/en/home" target="_blank">Publications Office of the European
+                            Union</a>
+                    </u>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">Need Help?</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/contact">Contact the TED Helpdesk</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Follow us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer">
+                    <a href="https://twitter.com/EUTenders"> <img src="../../../_/img/twitter.svg"
+                            class="icon-footer" /><span>X/Twitter</span></a>
+                    <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img
+                            src="../../../_/img/youtube.svg" class="icon-footer-2nd" /><span>YouTube</span></a>
+                </li>
+            </ul>
+
+            <h3 class="ted-footer__title">Legal</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/legal-notice" target="_blank">Legal Notice</a>
+                </li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/cookie-choice" target="_blank">Cookies</a>
+                </li>
+                <li class="li-footer"><a
+                        href="https://ted.europa.eu/en/accessibility"
+                        target="_blank">Accessibility</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">About us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/">About TED</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Other services</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+                <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+                <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/librarians-corner">EU publications</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="three-columns">
+        <div class="col-md-12 col-lg-4">
+            <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+
+            <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union"
+                        class="ls-op" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+           
+            <div class="ted-footer__rich-text">
+                <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span
+                            style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <h3 class="ted-footer__title">Contact the EU</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other
+                        Telephone options</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via
+                        our contact forms</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of
+                        the EU centres</a></li>
+
+            </ul>
+
+        </div>
+        <div class="col-md-12 col-lg-4">
+             <h3 class="ted-footer__title">Social Media</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a
+                        href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i
+                            aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+
+            </ul>
+            <h3 class="ted-footer__title">EU institutions and bodies</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer institutions"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">Search all EU institutions and bodies</a></li>
+               
+            </ul>
+        </div>
+    </div>
+</div>  </body>
+</html>
