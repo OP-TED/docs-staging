@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Documentation for TED developers and eSenders :: TED Developer Docs</title>
+    <title>Documentation for TED developers and eSenders :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/home/index.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../_/css/site.css">
@@ -20,24 +20,26 @@
     <link rel="stylesheet" href="../_/css/custom.css">
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-<meta name="google-site-verification" content="google8bce9cd167a02a39.html" />
+
 <script>var uiRootPath = '../_'</script>
-<script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>  </head>
+<script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>
+
+  </head>
   <body class="article">
- <!-- Piwik PRO Tracking Code -->
- <!-- followed the istructions bellow -->
+<!-- Piwik PRO Tracking Code -->
+<!-- followed the istructions bellow -->
 <!-- citnet.tech.ec.europa.eu/CITnet/jira/secure/attachment/3485014/OP_PiwikPRO_TED-docs-installation-CCK-web-analytics_v1.txt -->
-  <script type="text/javascript">
-    (function (window, document, dataLayerName, id) {
-      window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({start: (new Date).getTime(), event: "stg.start"});
-      var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
-      function stgCreateCookie(a, b, c) {var d = ""; if (c) {var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString(); f = "; SameSite=Strict"} document.cookie = a + "=" + b + d + f + "; path=/"}
-      var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
-      var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
-      tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
-      !function (a, n, i) {a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) {a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1)})}}(i[c])}(window, "ppms", ["tm", "cm"]);
-    })(window, document, 'dataLayer', '363c8269-fce7-42d6-88eb-0abc9e22ea96');
-  </script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+(function (window, document, dataLayerName, id) {
+window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({start: (new Date).getTime(), event: "stg.start"});
+var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+function stgCreateCookie(a, b, c) {var d = ""; if (c) {var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString(); f = "; SameSite=Strict"} document.cookie = a + "=" + b + d + f + "; path=/"}
+var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+!function (a, n, i) {a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) {a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1)})}}(i[c])}(window, "ppms", ["tm", "cm"]);
+})(window, document, 'dataLayer', '23a2ab51-a9a6-40a8-bd2b-573ecafa90e3');
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
 <script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
 <div class="eu-flag">
     <nav class="navbar-scrollable">
@@ -67,10 +69,10 @@
         <div id="topbar-nav" class="navbar-menu">
 
             <div class="text-eu-subtext-text">
-                <a href="https://docs.ted.europa.eu">TED Developer Docs</a>
+                <a href="https://docs.ted.europa.eu">TED Developer Documentation</a>
             </div>
             <div class="text-eu-subtext-label">
-                <a href="https://docs.ted.europa.eu">Documentation for TED developers and eSenders</a>
+                <a href="https://docs.ted.europa.eu"></a>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item search">
@@ -97,25 +99,16 @@
     <span class="nav-text"><span class="separated"><strong>eForms SDK</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../eforms/latest/index.html">Documentation <code>1.13</code></a>
+    <a class="nav-link" href="../eforms/latest/index.html">eForms SDK Docs <code>1.13</code></a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../eforms-common/FAQ/index.html">eForms FAQ</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../eforms-common/roadmap/index.html">SDK Roadmap</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../eforms-common/articles/eforms-change-management.html">eForms Change Management</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../eforms-common/versioning/index.html">SDK Versioning</a>
+    <a class="nav-link" href="../eforms-common/preview/index.html">Preview Environment</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../eforms-common/active-versions/index.html">Active SDK Versions</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../eforms-common/preview/index.html">Preview Environment</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><a href="https://docs.ted.europa.eu/eforms-sdk-explorer" target="_blank" rel="noopener">SDK Explorer</a></span>
@@ -124,40 +117,37 @@
     <span class="nav-text"><span class="separated"><strong>eProcurement Ontology</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../epo-home/index.html">Documentation <code>5.1.0</code></a>
+    <a class="nav-link" href="../epo-home/index.html">ePO Docs <code>5.1.0</code></a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../epo-wgm/index.html">Working Group Meetings</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>TED Open Data</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../ODS/latest/index.html">Documentation</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><a href="https://data.ted.europa.eu" target="_blank" rel="noopener">data.ted.europa.eu</a></span>
-  </li>
-  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>ESPD-EDM</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../ESPD-EDM/latest/index.html">Documentation <code>4.0.0</code></a>
+    <a class="nav-link" href="../ESPD-EDM/latest/index.html">ESPD-EDM Docs <code>5.1.0</code></a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../espd-wgm/index.html">Open User Community Meetings</a>
+    <a class="nav-link" href="#espd-wgm::index.adoc">Open User Community Meetings</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>TED Open Data</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#ODS:ROOT:index.adoc">TED Open Data Docs</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>TED API</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../api/latest/index.html">Documentation 3.0</a>
+    <a class="nav-link" href="../api/latest/index.html">TED API Docs <code>2.0</code></a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Model2Owl</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>model2owl</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../M2O/latest/index.html">Documentation</a>
+    <a class="nav-link" href="#m2o-home::index.adoc">model2owl docs <code>1.0</code></a>
   </li>
 </ul>
   </li>
@@ -174,10 +164,7 @@
         <a class="title" href="../eforms/latest/index.html">eForms SDK</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../eforms/latest/index.html">1.13</a>
-            </li>
-            <li class="version">
-              <a href="../eforms/1.12/index.html">1.12</a>
+              <a href="../eforms/latest/index.html">1.12</a>
             </li>
             <li class="version">
               <a href="../eforms/1.11/index.html">1.11</a>
@@ -238,7 +225,13 @@
         <a class="title" href="../ESPD-EDM/latest/index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-latest">
-              <a href="../ESPD-EDM/latest/index.html">4.0.0</a>
+              <a href="../ESPD-EDM/latest/index.html">5.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/4.1.0/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../ESPD-EDM/4.0.0/index.html">4.0.0</a>
             </li>
             <li class="version">
               <a href="../ESPD-EDM/3.3.0/index.html">3.3.0</a>
@@ -282,14 +275,6 @@
             </li>
         </ul>
       </li>
-      <li class="component">
-        <a class="title" href="../ODS/latest/index.html">TED Open Data</a>
-        <ul class="versions">
-            <li class="version is-latest">
-              <a href="../ODS/latest/index.html">1.0</a>
-            </li>
-        </ul>
-      </li>
   </ul>
 </div>    </div>
   </aside>
@@ -326,34 +311,12 @@
 </div>
 <div class="sidebarblock tile">
 <div class="content">
-<div class="title">TED API</div>
-<div class="paragraph">
-<p>TED API is a collection of public interfaces allowing 3rd party applications to validate and submit eForms notices, publish tender documents, and search the TED archives.</p>
-</div>
-<div class="paragraph">
-<p><a href="../api/latest/index.html" class="xref page">Read the docs</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile">
-<div class="content">
 <div class="title">eProcurement Ontology</div>
 <div class="paragraph">
 <p>The eProcurement Ontology provides the formal, semantic foundation for the creation and reuse of linked open data in the domain of public procurement in the EU.</p>
 </div>
 <div class="paragraph">
 <p><a href="../EPO/latest/index.html" class="xref page">Read the docs</a></p>
-</div>
-</div>
-</div>
-<div class="sidebarblock tile">
-<div class="content">
-<div class="title">TED Open Data</div>
-<div class="paragraph">
-<p>Access TED Open Data via direct queries to our SPARQL endpoint or download TED Notice XML Data. Learn how to reuse our RML mappings to transform XML data into RDF.</p>
-</div>
-<div class="paragraph button">
-<p><a href="../ODS/latest/index.html" class="xref page">Read the docs</a></p>
 </div>
 </div>
 </div>
@@ -370,9 +333,31 @@
 </div>
 <div class="sidebarblock tile">
 <div class="content">
-<div class="title">Model2Owl</div>
+<div class="title">TED Open Data</div>
 <div class="paragraph">
-<p>Model2Owl is a tool for transforming human-readable semantic models into machine-readable OWL files and SHACL shapes</p>
+<p>Access TED Open Data via direct queries to our SPARQL endpoint or download TED Notice XML Data. Learn how to create mappings to transform XML data into RDF.</p>
+</div>
+<div class="paragraph button">
+<p><a href="#ODS:ROOT:index.adoc" class="xref unresolved">Read the docs</a></p>
+</div>
+</div>
+</div>
+<div class="sidebarblock tile">
+<div class="content">
+<div class="title">TED API</div>
+<div class="paragraph">
+<p>TED API is a collection of public interfaces allowing 3rd party applications to validate and submit eForms notices, publish tender documents, and search the TED archives.</p>
+</div>
+<div class="paragraph">
+<p><a href="../api/latest/index.html" class="xref page">Read the docs</a></p>
+</div>
+</div>
+</div>
+<div class="sidebarblock tile">
+<div class="content">
+<div class="title">model2owl</div>
+<div class="paragraph">
+<p>"model2owl" is a tool for transforming human-readable semantic models into machine-readable OWL files and SHACL shapes</p>
 </div>
 <div class="paragraph">
 <p><a href="../M2O/latest/index.html" class="xref page">Read the docs</a></p>
