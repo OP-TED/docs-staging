@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ESPD Architecture and Procurement Procedure Steps :: TED Developer Docs</title>
+    <title>ESPD Architecture and Procurement Procedure Steps :: TED Developer Documentation</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/tech_architecture.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -20,24 +20,26 @@
     <link rel="stylesheet" href="../../../_/css/custom.css">
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-<meta name="google-site-verification" content="google8bce9cd167a02a39.html" />
+
 <script>var uiRootPath = '../../../_'</script>
-<script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>  </head>
+<script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>
+
+  </head>
   <body class="article">
- <!-- Piwik PRO Tracking Code -->
- <!-- followed the istructions bellow -->
+<!-- Piwik PRO Tracking Code -->
+<!-- followed the istructions bellow -->
 <!-- citnet.tech.ec.europa.eu/CITnet/jira/secure/attachment/3485014/OP_PiwikPRO_TED-docs-installation-CCK-web-analytics_v1.txt -->
-  <script type="text/javascript">
-    (function (window, document, dataLayerName, id) {
-      window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({start: (new Date).getTime(), event: "stg.start"});
-      var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
-      function stgCreateCookie(a, b, c) {var d = ""; if (c) {var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString(); f = "; SameSite=Strict"} document.cookie = a + "=" + b + d + f + "; path=/"}
-      var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
-      var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
-      tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
-      !function (a, n, i) {a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) {a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1)})}}(i[c])}(window, "ppms", ["tm", "cm"]);
-    })(window, document, 'dataLayer', '363c8269-fce7-42d6-88eb-0abc9e22ea96');
-  </script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+(function (window, document, dataLayerName, id) {
+window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({start: (new Date).getTime(), event: "stg.start"});
+var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+function stgCreateCookie(a, b, c) {var d = ""; if (c) {var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString(); f = "; SameSite=Strict"} document.cookie = a + "=" + b + d + f + "; path=/"}
+var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+!function (a, n, i) {a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) {a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1)})}}(i[c])}(window, "ppms", ["tm", "cm"]);
+})(window, document, 'dataLayer', '23a2ab51-a9a6-40a8-bd2b-573ecafa90e3');
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
 <script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
 <div class="eu-flag">
     <nav class="navbar-scrollable">
@@ -67,10 +69,10 @@
         <div id="topbar-nav" class="navbar-menu">
 
             <div class="text-eu-subtext-text">
-                <a href="https://docs.ted.europa.eu">TED Developer Docs</a>
+                <a href="https://docs.ted.europa.eu">TED Developer Documentation</a>
             </div>
             <div class="text-eu-subtext-label">
-                <a href="https://docs.ted.europa.eu">Documentation for TED developers and eSenders</a>
+                <a href="https://docs.ted.europa.eu"></a>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item search">
@@ -81,7 +83,7 @@
     </nav>
 </div>
 <div class="body">
-<div class="nav-container" data-component="ESPD-EDM" data-version="4.0.0">
+<div class="nav-container" data-component="ESPD-EDM" data-version="5.0.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -115,7 +117,7 @@
     <a class="nav-link" href="../business/implementation.html">An ESPD Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../business/using.html">Using an ESPD Implementation</a>
+    <a class="nav-link" href="../business/using.html">The Structure of an ESPD Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
@@ -142,13 +144,13 @@
     <span class="nav-text"><span class="separated"><strong>Open User Community Reports</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/index.html">Upcoming Meeting Dates</a>
+    <a class="nav-link" href="#espd-wgm::index.adoc">Upcoming Meeting Dates</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/monthly.html">Monthly Reports</a>
+    <a class="nav-link" href="#espd-wgm::monthly.adoc">Monthly Reports</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/annual.html">Annual Reports</a>
+    <a class="nav-link" href="#espd-wgm::annual.adoc">Annual Reports</a>
   </li>
 </ul>
   </li>
@@ -158,7 +160,7 @@
 <div class="nav-panel-explore" data-panel="explore">
       <div class="context">
           <span class="title">ESPD EDM</span>
-          <span class="version">4.0.0</span>
+          <span class="version">5.0.0</span>
       </div>
   <ul class="components">
       <li class="component">
@@ -226,7 +228,13 @@
         <a class="title" href="../index.html">ESPD EDM</a>
         <ul class="versions">
             <li class="version is-current is-latest">
-              <a href="../index.html">4.0.0</a>
+              <a href="../index.html">5.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../4.1.0/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../4.0.0/index.html">4.0.0</a>
             </li>
             <li class="version">
               <a href="../../3.3.0/index.html">3.3.0</a>
@@ -270,14 +278,6 @@
             </li>
         </ul>
       </li>
-      <li class="component">
-        <a class="title" href="../../../ODS/latest/index.html">TED Open Data</a>
-        <ul class="versions">
-            <li class="version is-latest">
-              <a href="../../../ODS/latest/index.html">1.0</a>
-            </li>
-        </ul>
-      </li>
   </ul>
 </div>    </div>
   </aside>
@@ -293,9 +293,11 @@
   </ul>
 </nav>
 <div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">4.0.0</button>
+  <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="tech_architecture.html">4.0.0</a>
+    <a class="version is-current" href="tech_architecture.html">5.0.0</a>
+    <a class="version" href="../../4.1.0/technical/tech_architecture.html">4.1.0</a>
+    <a class="version" href="../../4.0.0/technical/tech_architecture.html">4.0.0</a>
     <a class="version is-missing" href="../../3.3.0/index.html">3.3.0</a>
     <a class="version is-missing" href="../../3.2.0/index.html">3.2.0</a>
     <a class="version is-missing" href="../../3.1.0/index.html">3.1.0</a>
@@ -343,8 +345,10 @@
 <div class="paragraph">
 <p>Below is a high level overview of the ESPD Architecture.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/ESPD_Architecture_Overview.jpg" alt="ESPD Architecture Overview" width="650" height="500"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNq1Vu9vokoU_c5fcdPNJpoVOiCsth9eAgNumnTTvto2m7xsGpRR5wXBN6B2__t3h1GXIqD7K34Qr8O5955z7oXLS7gP5wwuczZdJHwaxsXVSyimC45X-VowY5EvY7hZVs69cBnJLoPxvf_ils6_3G2Y2HC2Nf5dzaEz4nMMgkkMkEehfBT2R7uaew3_uOY1TNJXEGEEzuoVLp4-317AhbxND_zP-gPLVmmSMd27e76AaRqnAsireWVRm8KMxzH-ch35wV-5FgqRbkH_63BS_ae51plpHs9Kg3jhNahkPNnwjE9iBlG6TcAi72Em0iW4ppGB5vZ_a3-CzxctXdq_s8uvmpeKiAmFmS94Alse5QtwjeL7AzEcjC2YrAmD6mIXDWVkypKcCU2TxOyKNk3k57hyzUMvaJ595AbvFjp37vhmDE8JR-dkYQzeOuMJyzK4DZP5Gh3ZxSb_Xocxn6FNc54m7moV7y4f2H9rluXGaxY1tTwgrm9_LPgtVeq8LVQdwhKtP1CikuXMGrWvqAPKYDDFMoMP0LF7pAtNgnl1gnlHgnkHwahUg5pVNYph3hGK_fhhHsI4F-tisJsqt-1Bn7a61wmvJpGD-az2fF-km08maYavjuKX8e0jjHjMOpmUB84Gbxp5ZEzOPKZy6jtROv8J6j6eSPir3A1-nbuT5DmSPGoO61qhacRi_gO282w6CM7j7upEwhbuSlka8S1yzF1BXRtvJeDDvBdDOuMiyyUekqVDh_SIMWyefFo3-fRo8ulh8n05-f4nu230Qa48JGXXxGnli626TDcMLOe9RLfa3PrD8GXkfpuW8IklTPApUB6xAj5rxC8JUMavPmGfcaVHxRZHNW4kh-mKiXDCY55_g0fJlseixiwj27OGVo3MHn7hWieG1QPdNIZOFxpF9utE9o9E9vciv6t7fOjEMNFHWiANEFhH-j-hV5_TaThZx6HgkriGjkaUEIIIVY0ZZSLnJ-6TJZlQDCykM1gJtuHpOkO4qrDs_u5noaoaslEqlj9dWHXVPwZ-E9TQ7lNCCyjDqgWrrvEHNke-pb1OLIrG8gY1A4FSjuVL-JSd0bRh1-C-8SpVq0i3DNIDs9tk06DOpsGRTYPDLlIbtXg44BuMtCmaFFPgUOA45GlhXrkDZVBX0crrWhOEXotxGiJTQ0l63wF8I1EA5tVZVWT7MiynhEJVGSosYewSjNp1ZRiqxladxnp2lWxVJSpokjaEQC0Yvf8GgqoOceMconuI3WDXQFi1EIdOyoQcg_h7Tp0yqYEiFavrS12qAP8D5_Bd0g==" alt="ESPD Architecture Overview" width="650" height="450">
+</div>
 </div>
 <div class="paragraph">
 <p><em>Figure 1. ESPD Architecture Overview</em></p>
@@ -355,7 +359,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>The UBL (<a href="https://docs.oasis-open.org/ubl/UBL-2.3.html">Universal Business Language</a>) component</strong></p>
+<p><strong>The UBL (Universal Business Language) component</strong></p>
 </li>
 </ul>
 </div>
@@ -380,7 +384,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>This describes each Request and Response criterion and its hierarchical tree structure of descriptive elements. It is maintained in MS Excel format file then transformed (saved) into an ODS (Open Document) file, from which an initial XML file is extracted. From the XML file an ESPD UBL XML file is generated using XSLT transformation rules. This is an internal process that provides standard xml documents for developers to refer to (provided on GetHub). Developers also have the possibility to generate their own xml files using the The ESPD Demo tools which enables them to create custom xml files based on their own scenarios.</p>
+<p>This describes each Request and Response criterion and its hierarchical tree structure of descriptive elements. It is maintained in MS Excel format file then transformed (saved) into an ODS (Open Document) file, from which an initial XML file is extracted. From the XML file an ESPD UBL XML file is generated using XSLT transformation rules.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -420,7 +424,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>This validates the generated files produced (ESPD Request UBL XML, ESPD Response UBL XML, ESPD Codelists Generic Code) against a UBL schema and a set of ESPD specific rules. This allows the  high level validation of ESPD documents produced by the various ESPD Services implemented by different member states. The validation tool (testbed) can be found <a href="https://www.itb.ec.europa.eu/espd/upload">here online</a>.</p>
+<p>This validates the generated files produced (ESPD Request UBL XML, ESPD Response UBL XML, ESPD Codelists Generic Code) against a UBL schema and a set of ESPD specific rules.</p>
 </div>
 </div>
 </div>
@@ -433,8 +437,10 @@
 <div class="paragraph">
 <p>The Buyer or the Contracting Authority (CA) initiates a procurement procedure.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/ESPD_Buyer_Plan.jpg" alt="Buyer Planning" width="650" height="500"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNqNkMFOwzAQRO_5ilFOcHESSITokbQgLigSH2BtjessdezKdSH8PU5KpSonbrO7M29XWxToyGgUUavesSI7K0lB9ZxUPAUt-jhYvA4Ln-Spcyw2791aPp1-dJCdJSc-DwY3z2xSElUpSWAeYho6duY2y6IeI_K5vcqhvPUBW0tqnw3-SyOw6SNK0bDLNi_VCls_ItAHmsOI_MK5BMuxerxr6xY7tjZVdf1w3zapite0SpRnGi1wbz6y0sd_0M5XL9d_T38CRST2n2WBvHbQLwuieKs=" alt="Buyer Planning" width="450" height="50">
+</div>
 </div>
 <div class="paragraph">
 <p><em>Figure 1_a. Buyer Planning</em></p>
@@ -442,8 +448,10 @@
 <div class="paragraph">
 <p>The Buyer launches a Request.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/ESPD_Buyer_Request.jpg" alt="Buyer Request" width="650" height="500"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNqtksFOwzAMhu99CqsSElzaDlqh7Ug7ELeKPUDltG4bSJeROqzw9KSFoWmapk3iZsf2__1xEoaQY0MQMpXtWpaopqhAU7bSRWwNBS13Cp67g75Cjid9uFzlWfFgP8kUL_RuqefgddPA9aNs3DDMokIEMNXht37jeUwDgz-dLnwotdIGhMLyzev0B4GRTcsQBYlce8un2QKEHsBgBclmAH8k7rQgoxqtYh_8DBlhxcZOrneq0TCb36ZxCrVUymVxfH-XJi5jD43RW2cwuvrrTXAuqmRk4iloanvWnfyi6t-54hQ3t0LJvqUKajeGDp4bXTpqR2tXdTFV53n4eYCLNrkdfwQgg3N5bP6MpexL4DGNCy-4rye-AS-A678=" alt="Buyer Request" width="700" height="50">
+</div>
 </div>
 <div class="paragraph">
 <p><em>Figure 1_b. Buyer Request</em></p>
@@ -451,8 +459,10 @@
 <div class="paragraph">
 <p>Economic Operators (EO) respond to the (officially published) Request.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/ESPD_EO_Response.jpg" alt="EO Response" width="650" height="500"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNqtklFrg0AMx9_9FEEYtC9qt8poX60be2pZP4DEM9XbTk_OuMo-_WJZSxmltLC35Eh-__yTC0PYYEkQMqmq0QrNIcrQqUpLxL2joOLawFv9py7T40sXptvNKkvX2Tt1rW06Cj7aEiYvupRWmEWZCiBVtrG1VrBuySFbB5N0PYVjx9TzmAYG_3Ld0gdljSS5QfXp1faLwOmyYoiCWDde-jpbQm4HcFhA3A7CkZFOdFjRDnvDPvgrZIQtu_7g64iNhtniMZknsNPGSDafPz8lsWTsoXN2Lyaih1NtjIu8iEdRvKqa9B2Ll28q_l04vyq87fNaM1MBO-lDUd84q0S2poZhjKm4bYjfo9y1zP34bQAZZM6LgBv2cs7Ai5A7PZ4D8x8f5PjN" alt="Economic Operator (EO) Response" width="900" height="50">
+</div>
 </div>
 <div class="paragraph">
 <p><em>Figure 1_c. Economic Operator (EO) Response</em></p>
@@ -460,28 +470,13 @@
 <div class="paragraph">
 <p>Finally, the Buyer and the EO interact to conclude the procurement procedure.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="_images/ESPD_Buyer_EO.jpg" alt="Buyer and EO" width="650" height="500"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNqlkE0OgjAQRvecYtJEl6YojQFX2hCXLjzBFKo2FkrqKPX2oiEGcWPicjLve_NDOhCwzfWuPUyxalaQ7zIGlwqthcJZ50FZLM5R5W4avDmeCPhMmDrKt3EGygXwWIJoArC9trog42rWJ3mI07lMJBxMZ-MhSZYLKbqKIvTetRBzPnmzAlNViqcXR-J1i778V6pGUulq8ljQD156PenrvPZkSAMSdPae-dh02MceGE8dMuoB4mB8YA==" alt="Buyer and EO" width="600" height="50">
+</div>
 </div>
 <div class="paragraph">
 <p><em>Figure 1_d. Buyer and EO</em></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_example_xml_request_and_response_files"><a class="anchor" href="#_example_xml_request_and_response_files"></a>Example XML Request and Response files</h2>
-<div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Example XML files can be generated using the <a href="https://docs.ted.europa.eu/espd-demo">ESPD Demo Development Tools</a>. This is a useful facility that allows developers to generate different request and response XML files based on individual/ specific scenarios. These can then be used to facilitate understanding of their development task and to test their code.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
