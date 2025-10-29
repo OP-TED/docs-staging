@@ -3502,6 +3502,34 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 <div class="paragraph">
 <p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First QUESTION (a criterion property of type QUESTION, the type follows below).</p>
+</li>
+<li>
+<p>The buyer  is requesting to the economic Operator that it states whether it meets the ''objective and non-discriminatory criteria or rules [..]".</p>
+</li>
+<li>
+<p>The type of the criterion property: QUESTION.</p>
+</li>
+<li>
+<p>The type of data that the economic operator (EO) will have to provide in the response (true or false).</p>
+</li>
+<li>
+<p>The next QUESTION is enclose in a SUBGROUP because the processing instruction ONTRUE can be used only by GROUPs or SUBGROUPs of REQUIREMENTs and QUESTIONs.</p>
+</li>
+<li>
+<p>If the previous QUESTION is answered with a true the EO will be presented with a new demand expressed in th next QUESTION.</p>
+</li>
+<li>
+<p>The QUESTION ''Please describe them'', presented if the EO answered true to the previous QUESTION (''Your answer'').</p>
+</li>
+<li>
+<p>The type of data expected here is a free text bythe EO (for the Response, a DESCRIPTION maps to the UBL-2.3 element cbc:Description, which is an extension of the xsd:String).</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="sect1">
