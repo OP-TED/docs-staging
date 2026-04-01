@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Turning a Question about Data into a Query :: TED Developer Docs</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/querying/scenarios.html">
+    <title>Contributing to the Query Library :: TED Developer Docs</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ODS/latest/samples/contributing.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -98,25 +98,25 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Querying TED Open data</a>
+    <a class="nav-link" href="../querying/index.html">Querying TED Open data</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="starting.html">Getting started</a>
+    <a class="nav-link" href="../querying/starting.html">Getting started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="online_training.html">Online training resources</a>
+    <a class="nav-link" href="../querying/online_training.html">Online training resources</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="designing_query.html">Designing a query</a>
+    <a class="nav-link" href="../querying/designing_query.html">Designing a query</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="structure.html">SPARQL query structure</a>
+    <a class="nav-link" href="../querying/structure.html">SPARQL query structure</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="notice_data.html">Notice data</a>
+    <a class="nav-link" href="../querying/notice_data.html">Notice data</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="epo.html">eProcurement Ontology resources</a>
+    <a class="nav-link" href="../querying/epo.html">eProcurement Ontology resources</a>
   </li>
 </ul>
   </li>
@@ -226,7 +226,7 @@
     <a class="nav-link" href="../data_availability.html">Current data availability</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../samples/index.html">Query Library</a>
+    <a class="nav-link" href="index.html">Query Library</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../glossary.html">Glossary</a>
@@ -382,7 +382,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">TED Open Data</a></li>
-    <li><a href="scenarios.html">Turning a Question about Data into a Query</a></li>
+    <li><a href="contributing.html">Contributing to the Query Library</a></li>
   </ul>
 </nav>
 </div>
@@ -391,16 +391,64 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Turning a Question about Data into a Query</h1>
-<div class="sect1">
-<h2 id="_add_2_3_scenarios"><a class="anchor" href="#_add_2_3_scenarios"></a>Add 2-3 scenarios</h2>
+<h1 class="page">Contributing to the Query Library</h1>
+<div id="preamble">
 <div class="sectionbody">
-<hr>
 <div class="paragraph">
-<p>Any comments on the documentation?</p>
+<p>The Query Library provides example SPARQL queries that are displayed in the <a href="https://data.ted.europa.eu/">TED Open Data Service</a>. Contributions from the community are welcome.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_you_can_help"><a class="anchor" href="#_how_you_can_help"></a>How you can help</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Add comments</strong> to existing queries to make them easier to understand</p>
+</li>
+<li>
+<p><strong>Fix or improve</strong> existing queries (e.g. adding explicit joins for better performance)</p>
+</li>
+<li>
+<p><strong>Contribute new queries</strong> that demonstrate useful data retrieval patterns</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to_contribute"><a class="anchor" href="#_how_to_contribute"></a>How to contribute</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a branch from <code>develop</code> in the <a href="https://github.com/OP-TED/ted-rdf-docs">ted-rdf-docs</a> repository</p>
+</li>
+<li>
+<p>Add or edit <code>.sparql</code> files in the <a href="https://github.com/OP-TED/ted-rdf-docs/tree/main/docs/antora/modules/samples/queries">queries directory</a></p>
+</li>
+<li>
+<p>Update <code>index.yaml</code> if adding a new query (with category, title, and description)</p>
+</li>
+<li>
+<p>Test your query on the <a href="https://data.ted.europa.eu/">TED Open Data Service</a></p>
+</li>
+<li>
+<p>Open a pull request targeting <code>develop</code></p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p><a href="https://github.com/OP-TED/ted-rdf-docs/issues/new/choose">Click here to let us know</a></p>
+<p>Your changes will be published with the next release.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_writing_guidelines"><a class="anchor" href="#_writing_guidelines"></a>Writing guidelines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For detailed instructions on query format, commenting conventions, prefix usage, and best practices, see the <a href="https://github.com/OP-TED/ted-rdf-docs/blob/main/docs/antora/modules/samples/queries/CONTRIBUTING.md">Query Library contributing guide</a>.</p>
 </div>
 </div>
 </div>
