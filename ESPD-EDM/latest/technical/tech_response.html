@@ -763,7 +763,13 @@ The links to the business code explanations are provided by <a href="https://dig
 <h2 id="_xml_example"><a class="anchor" href="#_xml_example"></a>XML example</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like. Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example.</p>
+<p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v5.0.0/ESPDResponse/xsl/ESPD-criterion.xml#L2-L20" class="bare">https://github.com/OP-TED/espd-validation-schematron/blob/v5.0.0/ESPDResponse/xsl/ESPD-criterion.xml#L2-L20</a></p>
+</div>
+<div class="paragraph">
+<p>For a complete instance of an ESPD Response XML document see the the example file: <a href="https://github.com/OP-TED/espd-validation-schematron/blob/v5.0.0/ESPDResponse/xsl/ESPD-criterion.xml">ESPD-criterion.xml</a></p>
 </div>
 </div>
 </div>
@@ -783,7 +789,7 @@ The links to the business code explanations are provided by <a href="https://dig
 </tbody>
 </table>
 <div class="paragraph">
-<p>For EU and notice publications that need to be included in the ESPD Response. See the section "2.6 EU and notice publications" where this information is presented in detail and illustrated with examples.</p>
+<p>For EU and notice publications that need to be included in the ESPD Response see the section "2.6 EU and notice publications" where this information is presented in detail and illustrated with examples.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -932,7 +938,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><strong>Information Requirement</strong>: <a href="tbr92_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the value ESPD_REQUEST from the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocRefContentType.gc"><em>docref-content-type</em></a>. See also the XML example below on how to specify the ESPD Request.</p>
+<p><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the value ESPD_REQUEST from the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocrefcontentType.gc"><em>docrefcontent-type</em></a>. See also the XML example below on how to specify the ESPD Request.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-OTH-01, BR-COM-10#3, BR-OTH-01#3, BR-OTH-03)</p>
@@ -947,7 +953,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <p><strong>Information Requirement</strong>: <a href="tbr92_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Language.gc"><em>Language</em></a> for the value of the languageID attribute.</p>
+<p><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Language.gc"><em>language</em></a> for the value of the languageID attribute.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule scope</strong>: Common (BR-OTH-01, BR-OTH-01#4, BR-OTH-03)</p>
@@ -1370,7 +1376,7 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="sect3">
 <h4 id="_expected_elements_2"><a class="anchor" href="#_expected_elements_2"></a>Expected elements</h4>
 <div class="paragraph">
-<p>Please, remember that the elements cac:ContractingAuthority, cac:ProcurementProject, cac:ProcurementProjectLot and cac:AdditionalDocumentReference are expected in the ESPD Request, too. However, for the sake of brevity, and as they are taken from the ESPD Request and 'copied' in the ESPD Response, they have not been re-explained in this section about the ESPD Response. Therefore for details on those elements please refer to the section <strong>2. The ESPD Request document</strong>.</p>
+<p>Please, remember that the elements cac:ContractingAuthority, cac:ProcurementProject, cac:ProcurementProjectLot and cac:AdditionalDocumentReference are expected in the ESPD Request, too. However, for the sake of brevity, and as they are taken from the ESPD Request and 'copied' in the ESPD Response, they have not been re-explained in this section about the ESPD Response. Therefore for details on those elements please refer to the section <strong>The ESPD Request document</strong>.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -2278,6 +2284,12 @@ The links to the business code explanations are provided by <a href="https://dig
 <div class="paragraph">
 <p>If the economic operator answers <strong>Yes</strong> the fields about the 'percentage of disabled/disadvantaged workers and the category of handicap to which they belong to should shown, validated or processed.</p>
 </div>
+<div class="paragraph">
+<p><strong>Data structure for a sheltered workshop or social business in case of reserved procurement</strong>:</p>
+</div>
+<div class="paragraph">
+<p>To view the criterion, consult the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a>. The information will be visible in the OT57 "Economic operator is a sheltered workshop".</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_eo_registered_in_a_prequalification_system_pqs"><a class="anchor" href="#_eo_registered_in_a_prequalification_system_pqs"></a>EO registered in a (Pre)Qualification System (PQS)</h5>
@@ -2304,6 +2316,9 @@ The links to the business code explanations are provided by <a href="https://dig
 </ul>
 </div>
 <div class="paragraph">
+<p>To view the criterion, consult the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a>. The information will be visible in the OT58 "Economic operator registered in a pre qualification system".</p>
+</div>
+<div class="paragraph">
 <p><strong>Data structure to</strong> identify <strong>the rest of the EOs that are members of the group</strong>:</p>
 </div>
 <div class="paragraph">
@@ -2322,6 +2337,18 @@ The links to the business code explanations are provided by <a href="https://dig
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>To view the criterion, consult the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a>. The information will be visible in the OT59 "Economic Operator together with others".</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_certificates_about_contributions_to_the_tax_agency_andor_social_security"><a class="anchor" href="#_certificates_about_contributions_to_the_tax_agency_andor_social_security"></a>Certificates about contributions to the Tax Agency and/or Social Security</h5>
+<div class="paragraph">
+<p><strong>Data structure for the certificates about contributions to the Tax Agency and/or Social Security</strong>:</p>
+</div>
+<div class="paragraph">
+<p>To view the criterion, consult the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a>. The information will be visible in the C07 "Breaching obligation relating to payment of taxes" and C08 "Breaching obligation relating to payment of social security contributions".</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -2334,6 +2361,12 @@ The links to the business code explanations are provided by <a href="https://dig
 </div>
 <div class="paragraph">
 <p><em>Figure 17. EO Roles-entities relied on, mock-up</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Data structure for the entities upon which the EO relies on</strong>:</p>
+</div>
+<div class="paragraph">
+<p>To view the criterion, consult the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a>. The information will be visible in the OT60 "Relied on entities".</p>
 </div>
 </div>
 <div class="sect3">
