@@ -323,7 +323,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The latest distribution package can be found on <a href="https://github.com/OP-TED/ESPD-EDM/tree/master">OP TED GitHub</a></p>
+<p>The latest distribution package can be found on <a href="https://github.com/OP-TED/ESPD-EDM/tree/main">OP TED GitHub</a>.</p>
 </div>
 </div>
 </div>
@@ -331,88 +331,88 @@
 <h2 id="_the_code_tab"><a class="anchor" href="#_the_code_tab"></a>The Code tab</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_subfolders_in_the_espd_edm_repository"><a class="anchor" href="#_subfolders_in_the_espd_edm_repository"></a>Subfolders in the ESPD-EDM Repository</h3>
+<h3 id="_repository_structure"><a class="anchor" href="#_repository_structure"></a>Repository Structure</h3>
 <div class="sect3">
 <h4 id="_branches"><a class="anchor" href="#_branches"></a>Branches</h4>
 <div class="paragraph">
-<p>The master branch contains the code. Only a master branch is maintained with different version tags.</p>
+<p>The <strong>main</strong> branch contains the latest released version of the code. Only a main branch is maintained with different version tags.</p>
 </div>
 <div class="paragraph">
-<p>The wgm-reports branch is for the Open user Community reports which are minutes of the monthly meetings.</p>
+<p>The <strong>wgm-reports</strong> branch is for the Open User Community presentations and reports of the meetings.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_readme_md"><a class="anchor" href="#_readme_md"></a>README.md</h4>
 <div class="paragraph">
-<p>this is the description of the contents, and a brief overview of what can be found where in the repository. It is also used as the release notes.</p>
+<p>The README.md at the root level describes the contents and provides a brief overview of what can be found where in the repository.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_folders_under_the_latest_version"><a class="anchor" href="#_folders_under_the_latest_version"></a>Folders under the latest version</h4>
-<div class="sect4">
-<h5 id="_the_codelists_folder"><a class="anchor" href="#_the_codelists_folder"></a>The codelists folder</h5>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>README.md</strong> that describes the folder contents</p>
-</li>
-<li>
-<p><strong>Bach-Database-Ratios.xlsx</strong>: source code for the financial-ratio-type code list that is maintained by the OP, sourced from the Bank of France.</p>
-</li>
-<li>
-<p><strong>ESPD-Codelists.xlsx</strong>: Code list source definition that is transformed using the /XLSX CodeLists to Genericode/Excel_to_GC_Multilang_v1.0.xsl into the .gc codelist files in ESPD-EDM/codelists/gc. (A list of all the ESPD code lists).</p>
-</li>
-</ul>
 </div>
+<div class="sect2">
+<h3 id="_folders"><a class="anchor" href="#_folders"></a>Folders</h3>
 <div class="paragraph">
-<p>The <strong>gc sub-folder</strong> contains all the generic codes that the ESPD uses. General codelists are downloaded and used as is, or a subset of them is used.</p>
+<p>The repository has the following folder structure:</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 70%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Folder</th>
+<th class="tableblock halign-left valign-top">Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>codelists</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the definition of technical code lists managed by the ESPD Team as well as references to the EU Vocabularies code lists. The code list files are in Genericode (.gc) format. These files are used in conjunction with the UBL XML structure and the ESPD Model to generate and validate ESPD Request and ESPD Response XML files. A <code>codelists.json</code> file provides the code list definitions in JSON format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>criterion</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the criterion structure definition. The file <code>espd-edm.json</code> contains the data structure of ESPD-EDM Exclusion Grounds and Selection Criteria in JSON format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemas</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the OASIS UBL 2.4 Distribution package. It includes:<br>
+- <code>common/</code>: contains files that describe and represent the common elements and structures.<br>
+- <code>maindoc/</code>: contains the XSD schemas for the ESPD Request and Response.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>validation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the ESPD-EDM validation files (Schematron and XSL). These files are created following the procedure described in the <a href="https://github.com/OP-TED/espd-validation-schematron">ESPD Validation Schematron repository</a>, and the resulting XSL files are stored in the corresponding sub-folders in this repository. The required business rules validation files (XSL) are uploaded to the <a href="https://www.itb.ec.europa.eu/espd/upload">ITB Testbed</a>.<br>
+<br>
+Sub-folders:<br>
+- <code>common/cva/</code>: CVA file for code lists (<code>01-ESPD-codelist-values.cva</code>)<br>
+- <code>common/sch/</code>: Schematron files for common elements and structure validation (code list values, attributes, criterion, etc.)<br>
+- <code>ESPDRequest/sch/</code>: Schematron files for ESPD Request Business Rules<br>
+- <code>ESPDRequest/xsl/</code>: Transformed Schematron-to-XSL files for ESPD Request<br>
+- <code>ESPDResponse/sch/</code>: Schematron files for ESPD Response Business Rules<br>
+- <code>ESPDResponse/xsl/</code>: Transformed Schematron-to-XSL files for ESPD Response</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>conceptual-model</code> folder and <code>ubl-2.3</code> folder from previous versions have been removed. The UBL 2.4 schema is now in the <code>schemas</code> folder. The Conceptual Model is accessible via the documentation site.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a>Release Notes</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Transform files are used to generate technical code lists if there are many changes to do at one time. If there is a small change, e.g., to one code, the ESPD-codelists.xlsx file is used as the source file. The procedure for generating new code lists after changes can be found via this link.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_conceptual_model_folder"><a class="anchor" href="#_the_conceptual_model_folder"></a>The Conceptual-model folder</h5>
-<div class="paragraph">
-<p>The README.md describes the content of the folder</p>
-</div>
-<div class="paragraph">
-<p>The .eapx and .xmi file include two views and diagrams of the conceptual model:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Business oriented view (BOV) aimed at facilitating the understanding of the model and the business context, with references to the technical model, and;</p>
-</li>
-<li>
-<p>Technically oriented view (TOV) providing an UBL based schema with references to the business-oriented view, aligned with the eProcurement ontology.
-Folder ESPD_CM_html contains the HTML version of the UML conceptual model. If you do not want to download the folder to view the model you can view it on the documentation page under ESPD-EDM CONCEPTUAL MODEL HTML.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_ubl_2_3_folder"><a class="anchor" href="#_the_ubl_2_3_folder"></a>The UBL-2.3 folder</h5>
-<div class="paragraph">
-<p>Contains the ubl 2.3. schema, a direct download from the UBL site.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_validation_folder"><a class="anchor" href="#_the_validation_folder"></a>The Validation folder</h5>
-<div class="paragraph">
-<p>The validation folder contains the schematron and xsl files for the validation of the ESPD Request and Response xml files as well a link to the “testbed”, an online facility for validating the two xml documents. The procedure for updating the schematron files can be found vis this link.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_xml_examples_folder"><a class="anchor" href="#_the_xml_examples_folder"></a>The xml-examples folder</h5>
-<div class="paragraph">
-<p>This folder contains examples of the ESPD Request and Response xml files for use by the OUC.</p>
-</div>
-<div class="paragraph">
-<p>(The ESPD-criterion.xml file is not used by external users, it is an xml format of the xlsx file provided in the code list folder. It is used internally in the process that produces the schematron files used by the online Testbed.)</p>
-</div>
-</div>
-</div>
+<p>Release notes for each release are available on <a href="https://github.com/OP-TED/ESPD-EDM/releases">GitHub Releases</a>. The distribution package for each release is attached to the corresponding release and the source code is tagged in the GitHub repository.</p>
 </div>
 </div>
 </div>
@@ -420,7 +420,7 @@ Folder ESPD_CM_html contains the HTML version of the UML conceptual model. If yo
 <h2 id="_the_issues_tab"><a class="anchor" href="#_the_issues_tab"></a>The Issues Tab</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This tab contains all the questions and issues submitted to the ESPD team by the open user community.</p>
+<p>This tab contains all the questions and issues submitted to the ESPD Team by the Open User Community.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -436,7 +436,7 @@ Folder ESPD_CM_html contains the HTML version of the UML conceptual model. If yo
 </ul>
 </div>
 <div class="paragraph">
-<p>The ESPD team also raises issues here to inform the OUC of any decision and to open discussion for topics that do not need to, or cannot wait for, a monthly meeting.</p>
+<p>The ESPD Team also raises issues here to inform the OUC of any decision and to open discussion for topics that do not need to, or cannot wait for, a monthly meeting.</p>
 </div>
 <hr>
 <div class="paragraph">
