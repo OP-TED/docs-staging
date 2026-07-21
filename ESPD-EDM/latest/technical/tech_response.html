@@ -321,7 +321,7 @@
     <article class="doc">
 <h1 class="page">The ESPD Response Document</h1>
 <div class="sect1">
-<h2 id="_business_requirements_specification"><a class="anchor" href="#_business_requirements_specification"></a>Business requirements specification</h2>
+<h2 id="business_requirements_specification"><a class="anchor" href="#business_requirements_specification"></a>Business requirements specification</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The ESPD-EDM models the business and information requirements for the ESPD Response transaction in accordance with Directive 2014/24/EU (Article 59) and Regulation (EU) 2016/7. The formal information requirements are defined in the <a href="tech_br_response_reqs.html" class="xref page">ESPD Response Requirements</a>.</p>
@@ -347,7 +347,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_espd_response_xsd_schema"><a class="anchor" href="#_espd_response_xsd_schema"></a>ESPD Response XSD Schema</h2>
+<h2 id="espd_response_xsd_schema"><a class="anchor" href="#espd_response_xsd_schema"></a>ESPD Response XSD Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>For the ESPD Response, the ESPD-EDM uses the UBL-2.4 document named QualificationApplicationResponse.xsd XSD Schema. This schema is available at the following location <a href="https://docs.oasis-open.org/ubl/os-UBL-2.4/xsdrt/maindoc">ubl-2.4/xsdrt/maindoc</a>.</p>
@@ -366,7 +366,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This section about the ESPD Response does not cover those information elements that were already described in the ESPD Request, unless a characteristic related to the ESPD Response needs to be clarified. Thus for details about elements like cac:ContractingParty, cac:ProcurementProject and cac:AdditionalDocumentReference refer to the section <strong>2. The ESPD Request</strong>.</p>
+<p>This section about the ESPD Response does not cover those information elements that were already described in the ESPD Request, unless a characteristic related to the ESPD Response needs to be clarified. Thus for details about elements like cac:ContractingParty, cac:ProcurementProject and cac:AdditionalDocumentReference refer to the section <a href="tech_request.html" class="xref page">The ESPD Request</a>.</p>
 </div>
 </td>
 </tr>
@@ -383,7 +383,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_espd_response_cardinalities"><a class="anchor" href="#_espd_response_cardinalities"></a>ESPD Response cardinalities</h2>
+<h2 id="espd_response_cardinalities"><a class="anchor" href="#espd_response_cardinalities"></a>ESPD Response cardinalities</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>As you can see the UBL-2.4 Schema is quite flexible as, except for a few cases, most elements are optional.</p>
@@ -419,7 +419,7 @@
 <p>The European Commission (EC) <a href="https://ec.europa.eu/isa2/awards_en">ISA2 Programme</a> provides an <a href="https://joinup.ec.europa.eu/asset/itb/description">Interoperability Testbed</a> where Stakeholders can freely test these validation artefacts.</p>
 </div>
 <div class="sect2">
-<h3 id="_root_elements"><a class="anchor" href="#_root_elements"></a>Root elements</h3>
+<h3 id="root_elements"><a class="anchor" href="#root_elements"></a>Root elements</h3>
 <div class="paragraph">
 <p>The table below lists the elements that are expected in the ESPD Response and provides details on the cardinalities and usage of those elements.</p>
 </div>
@@ -640,7 +640,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Any natural or legal person or public entity which offers the execution of works and/or a work, the supply of products or the provision of services on the market. Information about the party submitting the qualification.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-001</a>.</p>
+<p><strong>Information Requirement</strong>: The economic operator must be able to include all information necessary for identification: Party Name, Party Identification, endpoint id.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: The ESPD Response only refers to one, and only one, economic operator.</p>
@@ -654,8 +654,8 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text describing this procurement project.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">This element is required in the ESPD, however it should be identical to that provided in eForms. In general the corresponding eForm should feed the corresponding ESPD with the corresponding data.
-<strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: The ESPD must contain a reference to the call for tenders, i.e. the procurement project ID, which defines the requirements (i.e. criteria) for which this document is created and submitted by the economic operator.</p>
+<p class="tableblock">This element is required in the ESPD, however it should be identical to that provided in eForms. In general the corresponding eForm should feed the corresponding ESPD with the corresponding data.</p>
 <p class="tableblock"><strong>Rule</strong>: Use this component to identify and describe the procurement administrative procedure.</p></td>
 </tr>
 <tr>
@@ -664,7 +664,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The procurement project lot or group of lots this ESPD Response tenders to.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#lots" class="xref page">tbr92-014</a>.</p>
+<p><strong>Information Requirement</strong>: Where the call for tender is divided into lots, the economic operator must be able to indicate, which lot he is tendering.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: The economic operator has to specify the Procurement Project Lot the ESPD refers to.</p>
@@ -679,7 +679,10 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A tendering criterion describes a rule or a condition that is used by the contracting body to evaluate and compare tenders by economic operators and which will be used for the exclusion and the selection of candidates to the award decision.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#crit_list" class="xref page">tbr92-015</a>, <a href="tech_br_response_reqs.html#crit_list" class="xref page">tbr92-016</a>.</p>
+<p><strong>Information Requirement</strong>: The ESPD must contain corresponding information about the (non)existence of exclusion grounds as set out in the call for tender or ESPD template. The information shall contain a legal reference (EU level, buyer national level, economic operator national level). Furthermore it must contain the name of criterion and criterion group to which it belongs (according to names of Art. 57 of 2014/24/EC and referred to in Art. 80 of 2014/25/EC) as well as indications of (non)existence of each single exclusion ground contained and details and explanations as requested according to Art. 57 of directive 2014/25/EU and the ESPD form agreed among the Member State. Where demanded and if available electronically, the ESPD shall provide the following information to relevant documentation: the web address, issuing body, and precise reference of the documentation. The ESPD shall also accommodate information of self-cleaning measures and reliability explanations in cases, where an exclusion ground exists.</p>
+</div>
+<div class="paragraph">
+<p>The ESPD must contain corresponding information about the fulfilment of selection criteria as set out in the call for tender or ESPD template. The information shall contain a legal reference (EU level, buyer national level, economic operator national level). Furthermore it must contain the name of criterion and criterion group to which it belongs (according to names of Art. 58 of 2014/24/EC and referred to in Art. 80 of 2014/25/EC) as well as indications of fulfilment of selection criteria contained as well as details and explanations as requested according to Art. 58 of directive 2014/25/EU and the ESPD form agreed among the Member State. Where demanded and if available electronically, the ESPD shall provide the following information to relevant documentation: the web address, issuing body, and precise reference of the documentation.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: (see examples further below in this document)</p>
@@ -691,7 +694,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Response of the economic operator to the requirements and questions issued by the buyer in the ESPD Request.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-005</a>, <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-006</a>, <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-007</a>, <a href="tech_br_response_reqs.html#eval_crit" class="xref page">tbr92-018</a>.</p>
+<p><strong>Information Requirement</strong>: The ESPD shall contain structured information describing the fulfilment of selection criteria and non-existence of exclusion grounds. This is essential for automatic evaluation of criteria.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: (see examples further below in this document)</p>
@@ -703,13 +706,13 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to an additional document associated with this document.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
+<p><strong>Information Requirement</strong>: The ESPD must contain a reference to the call for tenders, i.e. the procurement project ID, which defines the requirements (i.e. criteria) for which this document is created and submitted by the economic operator.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rules</strong>: At least two instances of the AdditionalDocumentReference are expected:</p>
 </div>
 <div class="paragraph">
-<p><strong>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED</strong>. See section "Reference to the Contract Notice" for a complete example.*</p>
+<p><strong>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED</strong>. See section <a href="#reference_to_publications">Reference to publications and to the ESPD Request</a> for a complete example.*</p>
 </div>
 <div class="paragraph">
 <p>In the ESPD Response it is also compulsory to make reference to the ESPD Request document.</p>
@@ -724,7 +727,13 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..n</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to an online document available for free in a national or EU database.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-006</a>, <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-007</a>, <a href="tech_br_response_reqs.html#evidence_link" class="xref page">tbr92-017</a>.</p>
+<p><strong>Information Requirement</strong>: If the economic operator is registered on an official list of approved economic operators or is in possession of an equivalent certificate (e.g. under a national (pre)qualification system), he must be able to provide: a) the relevant registration or certification number, b) in case the certificate is available electronically: the web address, issuing body, and precise reference of the documentation; c) the references on which the registration or certification is based, as well as the classification obtained in the official list; d) whether the registration or certification covers all the required exclusion grounds and selection criteria.</p>
+</div>
+<div class="paragraph">
+<p>If the call for tender demands a certificate with regard to the payment of social security contributions and taxes, the economic operator must be able to indicate if he can provide such a certificate. And if so, in the case the certificate can be retrieved free of charge electronically: the web address, issuing body, and precise reference of the documentation.</p>
+</div>
+<div class="paragraph">
+<p>The economic operator must be able to add the internet address of a national database (including any identification data and, where applicable, the necessary declaration of consent cf. Art. 59 of 2014/24/EC) from which a contracting authority can directly retrieve any evidence documents and certificates or supporting documents which prove the EO’s compliance to the requested criteria defined in the call for tender and stated in the ESPD.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Used to point at an instance of the cac:Evidence.</p>
@@ -736,7 +745,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_xml_example"><a class="anchor" href="#_xml_example"></a>XML example</h2>
+<h2 id="xml_example_root"><a class="anchor" href="#xml_example_root"></a>XML example</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The XML snippet below shows how the beginning of an ESPD Response XML instance looks like:</p>
@@ -750,7 +759,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_reference_to_publications_and_to_the_espd_request"><a class="anchor" href="#_reference_to_publications_and_to_the_espd_request"></a>Reference to publications and to the ESPD Request</h2>
+<h2 id="reference_to_publications"><a class="anchor" href="#reference_to_publications"></a>Reference to publications and to the ESPD Request</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -765,7 +774,7 @@
 </tbody>
 </table>
 <div class="paragraph">
-<p>For EU and notice publications that need to be included in the ESPD Response see the section "2.6 EU and notice publications" where this information is presented in detail and illustrated with examples.</p>
+<p>For EU and notice publications that need to be included in the ESPD Response see the section <a href="tech_request.html#eu_notice_publications" class="xref page">EU and notice publications</a> where this information is presented in detail and illustrated with examples.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -820,7 +829,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_expected_elements"><a class="anchor" href="#_expected_elements"></a>Expected elements</h2>
+<h2 id="expected_elements_publications"><a class="anchor" href="#expected_elements_publications"></a>Expected elements</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>Table 27. Reference to the ESPD Request, expected elements</em></p>
@@ -845,7 +854,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ubl-2.4/xsdrt/common/UBL-CommonAggregateComponents-2.4xsd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.oasis-open.org/ubl/os-UBL-2.4/xsdrt/common/UBL-CommonAggregateComponents-2.4.xsd">os-UBL-2.4/xsdrt/common/UBL-CommonAggregateComponents-2.4.xsd</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong>:</p></td>
@@ -881,7 +890,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier for the referenced document, generally issued by the entity responsible for the document.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
+<p><strong>Information Requirement</strong>: The ESPD must contain a reference to the call for tenders, i.e. the procurement project ID, which defines the requirements (i.e. criteria) for which this document is created and submitted by the economic operator.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:ID</strong>.</p>
@@ -896,9 +905,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A universally unique identifier that can be used to reference this ESPD document instance.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
-</div>
-<div class="paragraph">
 <p><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:UUID</strong>.</p>
 </div>
 <div class="paragraph">
@@ -911,9 +917,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as a code.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
-</div>
-<div class="paragraph">
 <p><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the value ESPD_REQUEST from the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocrefcontentType.gc"><em>docrefcontent-type</em></a>. See also the XML example below on how to specify the ESPD Request.</p>
 </div>
 <div class="paragraph">
@@ -926,9 +929,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as text.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
-</div>
-<div class="paragraph">
 <p><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Language.gc"><em>language</em></a> for the value of the languageID attribute.</p>
 </div>
 <div class="paragraph">
@@ -941,7 +941,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Date when the document was issued by the buyer.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>.</p>
+<p><strong>Information Requirement</strong>: The ESPD shall have an ID and reflect the date and time when it has been issued.</p>
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Format "YYYY-MM-DD". If available in the referenced document place here the data of publication by the buyer.</p>
@@ -952,14 +952,15 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Time</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Time when the document was issued by the buyer.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>. <strong>Rule</strong>: If available in the referenced document place here the time of publication by the buyer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: The ESPD shall have an ID and reflect the date and time when it has been issued.</p>
+<p class="tableblock"><strong>Rule</strong>: If available in the referenced document place here the time of publication by the buyer.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:DocumentDescription</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text describing the referenced document.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Information Requirement</strong>: <a href="tech_br_response_reqs.html#call_tender_refs" class="xref page">tbr92-013</a>. <strong>Rule</strong>: Use the attribute languageID to indicate the language of the text. Use the Code List LanguageCodeEU for the value of the languageID attribute.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rule</strong>: Use the attribute languageID to indicate the language of the text. Use the Code List LanguageCodeEU for the value of the languageID attribute.</p>
 <p class="tableblock"><strong>Rule scope</strong>: Common (BR-OTH-01, BR-OTH-01#4, BR-OTH-03)</p></td>
 </tr>
 </tbody>
@@ -1063,13 +1064,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_economic_operator"><a class="anchor" href="#_economic_operator"></a>Economic Operator</h2>
+<h2 id="economic_operator"><a class="anchor" href="#economic_operator"></a>Economic Operator</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_related_information_requirements"><a class="anchor" href="#_related_information_requirements"></a>Related information requirements</h2>
+<h2 id="eo_related_information_requirements"><a class="anchor" href="#eo_related_information_requirements"></a>Related information requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>See formal requirements related to the economic operators in the e-Sens site: <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-001</a>, <a href="tech_br_response_reqs.html#eo" class="xref page">tbr92-008</a>.</p>
@@ -1192,7 +1193,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_xsd_schemas"><a class="anchor" href="#_xsd_schemas"></a>XSD Schemas</h2>
+<h2 id="eo_xsd_schemas"><a class="anchor" href="#eo_xsd_schemas"></a>XSD Schemas</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>cac:EconomicOperatorParty</p>
@@ -1222,7 +1223,7 @@
 </ol>
 </div>
 <div class="sect2">
-<h3 id="_cacqualifyingparty"><a class="anchor" href="#_cacqualifyingparty"></a>cac:QualifyingParty</h3>
+<h3 id="qualifying_party"><a class="anchor" href="#qualifying_party"></a>cac:QualifyingParty</h3>
 <div class="paragraph">
 <p>The diagram below shows the XSD element that will hold the data required by the ESPD (see mock-up 1/7, too). Beware that:</p>
 </div>
@@ -1285,7 +1286,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_caceconomicoperatorrole"><a class="anchor" href="#_caceconomicoperatorrole"></a>cac:EconomicOperatorRole</h3>
+<h3 id="economic_operator_role"><a class="anchor" href="#economic_operator_role"></a>cac:EconomicOperatorRole</h3>
 <div class="paragraph">
 <p>The UBL-2.4 element for the role of the economic operator is quite straightforward and typical in UBL: it provides a pair <strong>code + description</strong> (see Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EoRoleType.gc">EoRoleType</a> for the codes and descriptions; see also the XML example below).</p>
 </div>
@@ -1299,7 +1300,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_cacparty"><a class="anchor" href="#_cacparty"></a>cac:Party</h3>
+<h3 id="eo_party"><a class="anchor" href="#eo_party"></a>cac:Party</h3>
 <div class="paragraph">
 <p>The XSD diagram below shows (in blue) the elements for which data are expected in the ESPD Response for the cac:Party element of the economic operator.</p>
 </div>
@@ -1350,7 +1351,7 @@
 <p><em>Figure 12. The UBL-2.4 Legal Entity Party</em></p>
 </div>
 <div class="sect3">
-<h4 id="_expected_elements_2"><a class="anchor" href="#_expected_elements_2"></a>Expected elements</h4>
+<h4 id="eo_expected_elements"><a class="anchor" href="#eo_expected_elements"></a>Expected elements</h4>
 <div class="paragraph">
 <p>Please, remember that the elements cac:ContractingAuthority, cac:ProcurementProject, cac:ProcurementProjectLot and cac:AdditionalDocumentReference are expected in the ESPD Request, too. However, for the sake of brevity, and as they are taken from the ESPD Request and 'copied' in the ESPD Response, they have not been re-explained in this section about the ESPD Response. Therefore for details on those elements please refer to the section <strong>The ESPD Request document</strong>.</p>
 </div>
@@ -2328,7 +2329,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mock_up_information_about_reliance_on_the_capacities_of_the_other_entities"><a class="anchor" href="#_mock_up_information_about_reliance_on_the_capacities_of_the_other_entities"></a>Mock-up: Information about reliance on the capacities of the other entities</h4>
+<h4 id="reliance_on_capacities"><a class="anchor" href="#reliance_on_capacities"></a>Mock-up: Information about reliance on the capacities of the other entities</h4>
 <div class="paragraph">
 <p>As explained above, the Sole tenderer or the Leader of a group will have to provide information about the entities it relies on in order to meet the selection criteria. The mock-up below shows the set of data the ESPD-EDM expects from this role. Remember that this information does not need to be supplied by the members of a group or other entities.</p>
 </div>
@@ -2346,7 +2347,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mock_up_information_about_third_parties_on_which_the_eo_does_not_rely_on"><a class="anchor" href="#_mock_up_information_about_third_parties_on_which_the_eo_does_not_rely_on"></a>Mock-up: Information about third parties on which the EO does not rely on</h4>
+<h4 id="third_parties_not_relied_on"><a class="anchor" href="#third_parties_not_relied_on"></a>Mock-up: Information about third parties on which the EO does not rely on</h4>
 <div class="paragraph">
 <p>The Sole contractor or the Leader of a group will have also to provide information about subcontractors on whose capacity the economic operator does not rely. Remember that this information does not need to be supplied by the members of a group or other entities.</p>
 </div>
@@ -2364,7 +2365,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_xml_example_2"><a class="anchor" href="#_xml_example_2"></a>XML Example</h4>
+<h4 id="eo_xml_example"><a class="anchor" href="#eo_xml_example"></a>XML Example</h4>
 <div class="paragraph">
 <p>This example contains all the data about an economic operator. Beware that the basic identification data is placed into the cac:EconomicOperatorParty component, whilst the rest of the data (namely for statististical purposes) is structured in the data structures described above.</p>
 </div>
@@ -2436,11 +2437,11 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_economic_operator_representatives"><a class="anchor" href="#_economic_operator_representatives"></a>Economic operator representatives</h4>
+<h4 id="eo_representatives"><a class="anchor" href="#eo_representatives"></a>Economic operator representatives</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_related_information_requirements_2"><a class="anchor" href="#_related_information_requirements_2"></a>Related information requirements</h4>
+<h4 id="reps_related_requirements"><a class="anchor" href="#reps_related_requirements"></a>Related information requirements</h4>
 <div class="paragraph">
 <p>See formal requirements related to the representatives of the economic operator in the e-Sens site: <a href="tech_br_response_reqs.html#service_provider" class="xref page">tbr92-021</a>.</p>
 </div>
@@ -2449,7 +2450,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mock_up"><a class="anchor" href="#_mock_up"></a>Mock-up</h4>
+<h4 id="reps_mockup"><a class="anchor" href="#reps_mockup"></a>Mock-up</h4>
 <div class="paragraph">
 <p><strong>In this example of mock-up the economic operator is specifying two representatives:</strong></p>
 </div>
@@ -2461,7 +2462,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_xsd_schema"><a class="anchor" href="#_xsd_schema"></a>XSD Schema</h4>
+<h4 id="reps_xsd_schema"><a class="anchor" href="#reps_xsd_schema"></a>XSD Schema</h4>
 <div class="paragraph">
 <p>In the ESPD-EDM all the data regarding the representative of the economic operators is placed in the UBL-2.4 component cac:EconomicOperatorParty/cac:Party/cac:PowerOfAttorney. In principle the elements expected by the ESPD-EDM are very few, only the ones represented in the mock-up above. However this UBL element provides other possibilities that may be used in the future or for other purposes (or as a national extension of the ESPD).</p>
 </div>
@@ -2510,7 +2511,7 @@
 </div>
 </div>
 <div class="sect3">
-<h4 id="_expected_elements_3"><a class="anchor" href="#_expected_elements_3"></a>Expected Elements</h4>
+<h4 id="reps_expected_elements"><a class="anchor" href="#reps_expected_elements"></a>Expected Elements</h4>
 <div class="paragraph">
 <p><em>Table 39. Representatives of the economic operator, expected elements</em></p>
 </div>
@@ -2718,13 +2719,13 @@
 </table>
 </div>
 <div class="sect3">
-<h4 id="_data_structure"><a class="anchor" href="#_data_structure"></a>Data Structure</h4>
+<h4 id="reps_data_structure"><a class="anchor" href="#reps_data_structure"></a>Data Structure</h4>
 <div class="paragraph">
 <p><strong>None</strong>, all the data is placed in the UBL-2.4 component cac:PowerOfAttorney</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_xml_example_3"><a class="anchor" href="#_xml_example_3"></a>XML Example</h4>
+<h4 id="reps_xml_example"><a class="anchor" href="#reps_xml_example"></a>XML Example</h4>
 <div class="paragraph">
 <p>Notice that this XML example contains two representatives, as in the mock-up.</p>
 </div>
@@ -2779,7 +2780,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_answering_questions"><a class="anchor" href="#_answering_questions"></a>Answering QUESTIONs</h2>
+<h2 id="answering_questions"><a class="anchor" href="#answering_questions"></a>Answering QUESTIONs</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -2845,7 +2846,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_xsd_schema_2"><a class="anchor" href="#_xsd_schema_2"></a>XSD Schema</h2>
+<h2 id="response_xsd_schema"><a class="anchor" href="#response_xsd_schema"></a>XSD Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To answer a QUESTION the ESPD-EDM uses the UBL-2.4 component cac:TenderingCriterionResponse. The expected elements are highlighted in blue in the figure below:</p>
@@ -2904,7 +2905,7 @@
 <p>One answer to one QUESTION may be linked to multiple evidences. The XSD diagram below shows that to make this link possible the element cac:TenderingCriterionResponse element associates a class cac:EvidenceSupplied. This class contains only one basic information element, a cbc:ID. In UBL, except for cbc:Description, basic information elements (typically prefixed as cbc:) cannot be of multiple cardinality, but associated classes can. Thus the need to place the cbc:ID inside a class. This ID points at an instance of cac:Evidence present in the XML.</p>
 </div>
 <div class="paragraph">
-<p>This design is an interesting feature as, by separating the evidence object instances from inside the response, <strong>one evidence may be used for different criteria</strong>. See the component cac:Evidence below in the section "8. Evidences". See also XML examples.</p>
+<p>This design is an interesting feature as, by separating the evidence object instances from inside the response, <strong>one evidence may be used for different criteria</strong>. See the component cac:Evidence below in the section <a href="#evidences">Evidence</a>. See also XML examples.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2917,7 +2918,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_mock_ups_and_data_structures"><a class="anchor" href="#_mock_ups_and_data_structures"></a>Mock-ups and data structures</h2>
+<h2 id="response_mockups_data_structures"><a class="anchor" href="#response_mockups_data_structures"></a>Mock-ups and data structures</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The answers to QUESTION(s) are provided in the example mock-ups of the previous sections about how the buyer specify REQUIREMENT(s) and QUESTION(s), and how the economic operator adds or removes instances of elements (such as data on the economic operator, references to similar works and services, etc. Please refer to those mock-ups and compare the values shown in the fields reserved for the EO to answer and compare those values with the ones in the example XML snippets below.</p>
@@ -2928,7 +2929,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_expected_elements_4"><a class="anchor" href="#_expected_elements_4"></a>Expected Elements</h2>
+<h2 id="response_expected_elements"><a class="anchor" href="#response_expected_elements"></a>Expected Elements</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>Table 40. Elements expected in an answer to a criterion property</em></p>
@@ -3465,7 +3466,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </div>
 </div>
 <div class="sect1">
-<h2 id="_requestresponse_xml_example"><a class="anchor" href="#_requestresponse_xml_example"></a>Request/Response XML Example</h2>
+<h2 id="request_response_xml_example"><a class="anchor" href="#request_response_xml_example"></a>Request/Response XML Example</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>To start with a simple example let us re-take the last case presented in section <strong><em>Reduction of candidates</em></strong>.</p>
@@ -3517,7 +3518,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </div>
 </div>
 <div class="sect1">
-<h2 id="_xml_example_responses_to_the_questions"><a class="anchor" href="#_xml_example_responses_to_the_questions"></a>XML example (Responses to the QUESTION(s))</h2>
+<h2 id="xml_example_responses"><a class="anchor" href="#xml_example_responses"></a>XML example (Responses to the QUESTION(s))</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This other XML snippet below shows the responses to the two QUESTION(s) expressed in the ESPD-Request for this criterion (the block related to evidences is omitted for the sake of clarity and brevity):</p>
@@ -3548,16 +3549,16 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </div>
 </div>
 <div class="sect1">
-<h2 id="_evidence"><a class="anchor" href="#_evidence"></a>Evidence</h2>
+<h2 id="evidences"><a class="anchor" href="#evidences"></a>Evidence</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_related_information_requirements_3"><a class="anchor" href="#_related_information_requirements_3"></a>Related information requirements</h3>
+<h3 id="evidence_related_requirements"><a class="anchor" href="#evidence_related_requirements"></a>Related information requirements</h3>
 <div class="paragraph">
 <p>See formal requirements related to evidence on the e-Sens site: <a href="tech_br_response_reqs.html#evidence_link" class="xref page">tbr92-017</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_xsd_schema_3"><a class="anchor" href="#_xsd_schema_3"></a>XSD Schema</h3>
+<h3 id="evidence_xsd_schema"><a class="anchor" href="#evidence_xsd_schema"></a>XSD Schema</h3>
 <div class="paragraph">
 <p>Remember that pieces of evidence are indirectly linked to responses based on the identifier of the evidence: in the response, the element cac:EvidenceSupplied/cbc:ID contains the identifier set in /QualificationApplicationResponse/cac:Evidence/cbc:ID. See XML example below; see also the example XML file <a href="https://github.com/OP-TED/espd-validation-schematron/blob/v5.0.0/common/xml/ESPD-Response-BASE.xml">ESPD-Response-BASE.xml</a> for an example.</p>
 </div>
@@ -3585,7 +3586,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mock_ups_and_data_structures_2"><a class="anchor" href="#_mock_ups_and_data_structures_2"></a>Mock-ups and data structures</h3>
+<h3 id="evidence_mockups"><a class="anchor" href="#evidence_mockups"></a>Mock-ups and data structures</h3>
 <div class="paragraph">
 <p>In principle only a few elements are kept in the ESPD Response document about a piece of evidence: its Identifier, a URL from where to access its content, a Reference/Code, a Confidentiality indicator, and the Issuer.</p>
 </div>
@@ -3620,7 +3621,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_expected_and_other_elements"><a class="anchor" href="#_expected_and_other_elements"></a>Expected (and other) Elements</h3>
+<h3 id="evidence_expected_elements"><a class="anchor" href="#evidence_expected_elements"></a>Expected (and other) Elements</h3>
 <div class="paragraph">
 <p>This list below enumerates the elements of cac:Evidence that could be used in (that make sense for) an ESPD Response. Notice though that the current versions of the ESPD-EDM only use the few elements mentioned above: ID, URL, Reference/Code, Confidentiality level and Issuer.</p>
 </div>
@@ -3886,7 +3887,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </table>
 </div>
 <div class="sect2">
-<h3 id="_xml_examples"><a class="anchor" href="#_xml_examples"></a>XML Examples</h3>
+<h3 id="evidence_xml_examples"><a class="anchor" href="#evidence_xml_examples"></a>XML Examples</h3>
 <div class="paragraph">
 <p><strong>Example 1: Two different items of evidence for two criteria</strong></p>
 </div>
@@ -3895,7 +3896,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_xml_snippet_2_different_evidence_documents_per_response"><a class="anchor" href="#_xml_snippet_2_different_evidence_documents_per_response"></a>XML snippet 2 different evidence documents per response</h3>
+<h3 id="evidence_xml_snippet_2"><a class="anchor" href="#evidence_xml_snippet_2"></a>XML snippet 2 different evidence documents per response</h3>
 <div class="paragraph">
 <p><em>XML snippet 1.b) different evidence documents per response</em></p>
 </div>
@@ -3956,7 +3957,7 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 </div>
 </div>
 <div class="sect2">
-<h3 id="_handling_the_evidence_subgroup_close_to_the_related_element_in_the_data_structure"><a class="anchor" href="#_handling_the_evidence_subgroup_close_to_the_related_element_in_the_data_structure"></a>Handling the Evidence (sub)group close to the related element in the data structure</h3>
+<h3 id="evidence_handling_subgroup"><a class="anchor" href="#evidence_handling_subgroup"></a>Handling the Evidence (sub)group close to the related element in the data structure</h3>
 <div class="paragraph">
 <p>An item of evidence is provided as proof for a given QUESTION answer or QUESTION_SUBGROUP answers. The link with
 the related answer should be maintained in the data structure. For example, in the figure below,
@@ -3972,7 +3973,7 @@ the evidence is included inside the QUESTION_SUBGROUP related to a specific occu
 </div>
 </div>
 <div class="sect1">
-<h2 id="_lot_management_in_the_espd_response"><a class="anchor" href="#_lot_management_in_the_espd_response"></a>Lot Management in the ESPD Response</h2>
+<h2 id="lot_management_response"><a class="anchor" href="#lot_management_response"></a>Lot Management in the ESPD Response</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In the ESPD, a Response is provided for one Economic Operator (EO) and for one lot or group of lots. Hence, an EO will fill in as many ESPD Responses as there are lots or groups of lots he is participating in.</p>
