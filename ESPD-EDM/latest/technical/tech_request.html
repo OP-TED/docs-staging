@@ -327,7 +327,7 @@
 <h2 id="espd_request_business_requirements"><a class="anchor" href="#espd_request_business_requirements"></a>ESPD Request Business Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ESPD-EDM models the business and information requirements in alignment with the works developed by e-Sens, which uses the identifier <strong>Trdm070</strong> to refer to the business requirements regarding the ESPD Request transaction. See formal information requirements related to the ESPD Request transaction in the document <a href="tech_br_espd_profile.html" class="xref page"><em>Business Requirements: ESPD request transaction (Trdm070)</em></a>, by e-Sens.</p>
+<p>The ESPD-EDM models the business and information requirements for the ESPD Request transaction based on Directive 2014/24/EU (Article 59) and Regulation (EU) 2016/7.</p>
 </div>
 </div>
 </div>
@@ -402,7 +402,7 @@
 <p><em>A note about the Business Rules identifiers</em></p>
 </div>
 <div class="paragraph">
-<p>From this point in the document, the tables defining classes and its properties refer frequently to business rules. As stated in the <a href="tech_br_espd_profile.html" class="xref page">e-Sens BIS document</a>, "[..] business rules are sets of rules that clarify the content of instances by stating mandatory fields, fixed values (like code lists), dependency between fields in the same object, and dependency between different objects".</p>
+<p>From this point in the document, the tables defining classes and its properties refer frequently to business rules as sets of rules that clarify the content of instances by stating mandatory fields, fixed values (like code lists), dependency between fields in the same object, and dependency between different objects.</p>
 </div>
 <div class="paragraph">
 <p>Information requirement:</p>
@@ -765,15 +765,15 @@ Reference</strong></p></th>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong> <a href="tech_br_request_reqs.html#call_for_tender" class="xref page">tbr70-007</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The Buyer must be able to provide information about official journals or gazettes where the procurement procedure is announced. For procurement projects above the threshold it is compulsory to refer to the Contract Notice published in <a href="https://ted.europa.eu/TED/">TED</a>.</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>REQUIREMENT</strong> <a href="tech_br_request_reqs.html#call_for_tender" class="xref page">tbr70-007</a></th>
+<th class="tableblock halign-left valign-top"><strong>The Buyer must be able to provide information about official journals or gazettes where the procurement procedure is announced. For procurement projects above the threshold it is compulsory to refer to the Contract Notice published in <a href="https://ted.europa.eu/TED/">TED</a>.</strong></th>
 </tr>
-</tbody>
+</thead>
 </table>
 <div class="paragraph">
 <p>Software applications that conform to the ESPD will have to provide the means for the user to supply references to EU and notice publications about the procurement procedure, especially about Notices to which the ESPD is related.</p>
@@ -864,10 +864,10 @@ Reference</strong></p></th>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
-<col style="width: 20%;">
+<col style="width: 6.6666%;">
+<col style="width: 6.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3335%;">
 </colgroup>
 <thead>
 <tr>
@@ -999,20 +999,22 @@ Reference</strong></p></th>
 </table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
+<col style="width: 20%;">
+<col style="width: 6.6666%;">
+<col style="width: 6.6666%;">
 <col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 33.3335%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Components</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Card</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirements</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>Components</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Card</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Requirements</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:URI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
@@ -1101,7 +1103,7 @@ Reference</strong></p></th>
 <div class="sect2">
 <h3 id="_related_information_requirements"><a class="anchor" href="#_related_information_requirements"></a>Related information requirements</h3>
 <div class="paragraph">
-<p>See formal requirements related to the contracting authorities in the e-Sens site: <a href="tech_br_request_reqs.html#contracting_body" class="xref page">tbr70-001</a>*</p>
+<p>The contracting body must be identified, hence information about the party is required, such as party name, identification, endpoint id, buyer profile and country.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1204,20 +1206,22 @@ Reference</strong></p></th>
 </table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
+<col style="width: 20%;">
+<col style="width: 6.6666%;">
+<col style="width: 6.6666%;">
 <col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 33.3335%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Components</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Card</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirements</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>Components</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Card</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Requirements</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:BuyerProfileURI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
@@ -1264,20 +1268,22 @@ Reference</strong></p></th>
 </table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
+<col style="width: 20%;">
+<col style="width: 6.6666%;">
+<col style="width: 6.6666%;">
 <col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 33.3335%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Components</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Card</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirements</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>Components</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Card</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Requirements</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PartyIdentification/cbc:ID</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
@@ -1371,20 +1377,22 @@ cac:ContractingParty/cac:Party/cac:PostalAddress</p></td>
 </table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
+<col style="width: 20%;">
+<col style="width: 6.6666%;">
+<col style="width: 6.6666%;">
 <col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 33.3335%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Components</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Card</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirements</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>Components</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Card</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Requirements</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:StreetName</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
@@ -1484,20 +1492,22 @@ cac:ContractingParty/cac:Party/cac:Contact</p></td>
 </table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 5.2631%;">
-<col style="width: 57.8947%;">
-<col style="width: 15.7894%;">
-<col style="width: 15.7894%;">
-<col style="width: 5.2634%;">
+<col style="width: 20%;">
+<col style="width: 6.6666%;">
+<col style="width: 6.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3335%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Components</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Card</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirements</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>Components</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Type</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Card</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Requirements</strong></th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:Name</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
@@ -1556,15 +1566,15 @@ cac:ContractingParty/cac:Party/cac:Contact</p></td>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 50%;">
-<col style="width: 50%;">
+<col style="width: 20%;">
+<col style="width: 80%;">
 </colgroup>
-<tbody>
+<thead>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong> <a href="tech_br_request_reqs.html#service_provider" class="xref page">tbr70-011</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The ESPD request may contain information of identification regarding an ESPD service provider: Name, Party Identification, Endpoint ID.</strong></p></td>
+<th class="tableblock halign-left valign-top"><strong>REQUIREMENT</strong> <a href="tech_br_request_reqs.html#service_provider" class="xref page">tbr70-011</a></th>
+<th class="tableblock halign-left valign-top"><strong>The ESPD request may contain information of identification regarding an ESPD service provider: Name, Party Identification, Endpoint ID.</strong></th>
 </tr>
-</tbody>
+</thead>
 </table>
 <div class="paragraph">
 <p>Service providers are officially recognised organisations that can supply ESPD Request documents (on behalf of the contracting body) with pre-filled information about the contracting body and additional information (e.g. liability statements, see <a href="tech_br_request_reqs.html#additional_documentation" class="xref page">tbr70-012</a>)</p>
@@ -1655,11 +1665,11 @@ cac:Party</p></td>
 </table>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
-<col style="width: 11.1111%;">
+<col style="width: 20%;">
+<col style="width: 6.6666%;">
+<col style="width: 6.6666%;">
 <col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
+<col style="width: 33.3335%;">
 </colgroup>
 <thead>
 <tr>
