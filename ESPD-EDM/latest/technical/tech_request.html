@@ -91,7 +91,7 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-home/index.html">Home</a>
+    <a class="nav-link" href="../index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Release Documentation</strong></span></span>
@@ -103,7 +103,7 @@
     <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-home/demo.html">ESPD Demo Site</a>
+    <a class="nav-link" href="../demo.html">ESPD Demo Site</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Information for Business Users</strong></span></span>
@@ -124,31 +124,7 @@
     <a class="nav-link" href="index.html">Technical Information</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>General Reference</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-home/history.html">History and Planned Developments</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-home/external.html">External Resources</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-home/supporting.html">Supporting and related projects</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-home/laws.html">Laws and Directives</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Open User Community Reports</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/index.html">Upcoming Meeting Dates</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/monthly.html">Monthly Reports</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../../espd-wgm/annual.html">Annual Reports</a>
+    <a class="nav-link" href="tech_rules_reference.html">Business Rules Reference</a>
   </li>
 </ul>
   </li>
@@ -1060,37 +1036,30 @@ Reference</strong></p></th>
 <div class="paragraph">
 <p>Please generate an ESPD Request and ESPD Response documents on <a href="https://docs.ted.europa.eu/espd-demo/">ESPD Demo Site</a> to see full example and how to use the cac:AdditionalDocumentReference in the ESPDRequest XML document to refer to a Contract Notice published in TED and on a national procurement board.</p>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>For TED Notices, the Publications Office Official Journal Supplement number must be used in its original format [][][][]/S [][][]-[][][][][][], e.g. 2017/S 142-293520. Notice that the schemeAgencyID is OP (OP standing for 'Publications Office').</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>. <strong>BeThe jurisdiction scope of this document is typified in the Code List docref-content-type (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocRefContentType.gc">/codelists/DocRefContentType.gc</a> in the distribution package)ware that the name and content of this Code List has changed from the previous ESPD-EDM version 2.1.1</strong>.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The actual content is never embedded in the ESPD documents. Rather the content is always referenced from its original source (alignment with the Once-Only-Principle).</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>The title of the CN must be placed in the FileName field of the attachment. UBL does not provide a placeholder for the title of the document.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="5"></i><b>5</b></td>
-<td>If publication on TED is at the ESPD Request preparation time, and the procurer does not yet have the OJS number, they can receive a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="6"></i><b>6</b></td>
-<td>schemeAgencyID is used in this example to specify that the national Agency that created this reference to the national publication (e.g., "PLACE" to refer to the ID of the national electronic board where the CN was published). The pattern of the ID is the one created by the Spanish buyer.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="7"></i><b>7</b></td>
-<td>In this case, the code NOJCN means 'Contract Notice (CN) published on a National Government Official Journal' (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocRefContentType.gc">/codelists/DocRefContentType.gc</a> in the distribution package).</td>
-</tr>
-</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>For TED Notices, the Publications Office Official Journal Supplement number must be used in its original format [][][][]/S [][][]-[][][][][][], e.g. 2017/S 142-293520. Notice that the schemeAgencyID is OP (OP standing for 'Publications Office').</p>
+</li>
+<li>
+<p><strong>BeThe jurisdiction scope of this document is typified in the Code List docref-content-type (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocRefContentType.gc">/codelists/DocRefContentType.gc</a> in the distribution package)ware that the name and content of this Code List has changed from the previous ESPD-EDM version 2.1.1</strong>.</p>
+</li>
+<li>
+<p>The actual content is never embedded in the ESPD documents. Rather the content is always referenced from its original source (alignment with the Once-Only-Principle).</p>
+</li>
+<li>
+<p>The title of the CN must be placed in the FileName field of the attachment. UBL does not provide a placeholder for the title of the document.</p>
+</li>
+<li>
+<p>If publication on TED is at the ESPD Request preparation time, and the procurer does not yet have the OJS number, they can receive a temporary CN identifier (Received Notice Number). To save this number in the DocumentReference component, two cbc:Description elements must be created, and the second one used for the Received Notice Number. If you do not have a description for the CN then use dummy content for the first description, e.g. &lt;cbc:Description&gt;_&lt;/cbc:/Description&gt;.</p>
+</li>
+<li>
+<p>schemeAgencyID is used in this example to specify that the national Agency that created this reference to the national publication (e.g., "PLACE" to refer to the ID of the national electronic board where the CN was published). The pattern of the ID is the one created by the Spanish buyer.</p>
+</li>
+<li>
+<p>In this case, the code NOJCN means 'Contract Notice (CN) published on a National Government Official Journal' (see file <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocRefContentType.gc">/codelists/DocRefContentType.gc</a> in the distribution package).</p>
+</li>
+</ol>
 </div>
 </div>
 </div>
