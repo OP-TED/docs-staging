@@ -462,9 +462,6 @@
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Use the value "2.4". Use also "OASIS-UBL-TC" for the schemeAgencyID attribute.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-05" class="xref page">BR-OTH-05</a> <a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -474,9 +471,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identification and version of the ESPD Exchange Data Model used to create the XML instance. The identification may include the exact version of the specification.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Compulsory use of the CodeList ProfileExecutionID. Use the value "OP" for th SchemeAgencyID attribute.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#13, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -489,9 +483,6 @@
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Compulsory use of schemeAgencyID attribute. Use it to identify the organisation responsible for the document.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -524,9 +515,6 @@
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Try always to use the reference number issued by the buyer. This number in combination with a registered buyer ID (e.g. the VAT number) results in a <strong>universally unique identifier of the procurement procedure</strong>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (BR-SC-30)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -563,9 +551,6 @@
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: The leader of the group must take care of ensuring that the name of the group is identical in all the ESPDs of the tender.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (BR-LEAD-10-S10)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -623,9 +608,6 @@
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: The ESPD Response only refers to one, and only one, economic operator.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-10)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -647,9 +629,6 @@
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: The economic operator has to specify the Procurement Project Lot the ESPD refers to.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (BR-LOT-30)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -692,9 +671,6 @@
 </div>
 <div class="paragraph">
 <p>In the ESPD Response it is also compulsory to make reference to the ESPD Request document.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-COM-10)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -870,9 +846,6 @@
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:ID</strong>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -882,9 +855,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">A universally unique identifier that can be used to reference this ESPD document instance.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Use the same value that was used in the <strong>cac:QualificationApplicationRequest/cbc:UUID</strong>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (<a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -894,9 +864,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as a code.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: For the ESDP-EDM it is compulsory use of the value ESPD_REQUEST from the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocrefcontentType.gc"><em>docrefcontent-type</em></a>. See also the XML example below on how to specify the ESPD Request.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-COM-10#3, BR-OTH-01#3, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -906,8 +873,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">The type of document being referenced, expressed as text.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Optionally use the attribute languageID to indicate the language of the text. Use the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Language.gc"><em>language</em></a> for the value of the languageID attribute.
-28
-<strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#4, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
+28</p>
 </div></div></td>
 </tr>
 <tr>
@@ -935,8 +901,7 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text describing the referenced document.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rule</strong>: Use the attribute languageID to indicate the language of the text. Use the Code List LanguageCodeEU for the value of the languageID attribute.</p>
-<p class="tableblock"><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#4, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rule</strong>: Use the attribute languageID to indicate the language of the text. Use the Code List LanguageCodeEU for the value of the languageID attribute.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1023,9 +988,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Short description of the document.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: If the document being referenced is a Notice being published on TED, use two description lines. Use the second description line to place therein the temporary number received from TED. See example and comments below.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-COM-10#2, BR-COM-10-S10, BR-COM-10-S20, BR-COM-10-S30)</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1396,9 +1358,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The distinctive features or characteristics qualifying an economic operator to be a party in a tendering process (e.g., number of employees, number of operating units, type of business, technical and financial capabilities, completed projects).</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: This element is compulsory in the ESPD-EDM as it is the natural placeholder for several relevant data about the Economic Operator.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: BR-RESP-10-01</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1508,9 +1467,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">A monetary amount as a measure of this capability.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Use it to place here the general Turnover of the EO (for statistical purposes). Compulsory assignment of a value to the attribute currency. The default value should be set to 'EUR'. Compulsory use of the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Currency.gc">currency</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (BR-OTH-01#16, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1529,9 +1485,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the economic operator in an official list, register or (pre)qualification system.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The attribute schemeAgencyID must hold the value retrieved from eCertis that identifies unequivocally the (pre)qualification system. If, for any reason, that value is not available use the default schemeAgencyID "OP" and the cac:EconomicOperatorParty/&#8203;cac:QualifyingParty/&#8203;cac:Party/&#8203;cac:PartyIdentification/&#8203;cbc:ID for the value of the identifier. Additionally you can use the data structure "registered" to specify an alternative or additional name, identifier and description. The code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a> should be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (BR-RESP-80-S10, BR-RESP-80-S20), Common (BR-RESP-50, <a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1595,9 +1548,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Compulsory use of the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EoRoleType.gc">EoRoleType</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (BR-RESP-10-03, <a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#15, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1607,9 +1557,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The text describing the role of the economic operator in the bid.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Software applications should retrieve and reuse the description from the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EoRoleType.gc">EoRoleType</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-10-02)</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1666,9 +1613,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier that identifies the economic operator, such as the VAT number, the company registration number in a Business Register, other.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: When possible use the VAT identification of the contracting body (see the <a href="https://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system). When not possible a different identifier may be used. For a very complete way of identification of the Party it is highly recommended to, additionally to the cac:Party/cac:Identification/cbc:ID, use the UBL-2.4 component cac:PartyLegalEntity: this element is the perfect placeholder for the data officially registered in a Business Register (see UBL-2.4 model, and XSD diagram above).</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1678,9 +1622,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address of the contracting body.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Use it for online services (e.g. Web Services, REST services, Delivery ID, ftp, etc. For the official web site of the Party use always the cac:Party/cbc:WebsiteURI). An end-point identifier MUST have a scheme identifier attribute (e.g.eSENSParty Identifier Scheme). Should be considered for all actors (buyer, service provider, economic operator) as an eDeliveryID.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-10-08)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1803,9 +1744,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code that identifies the country.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The country of the contracting body must always be specified. Compulsory use of the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Country.gc">Country</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-10-07, <a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#5, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1976,9 +1914,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address of the service provider.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Use it for online services (e.g. Web Services, REST services, Delivery ID, ftp, etc. For the official web site of the Party use always the cac:Party/cbc:WebsiteURI). An end-point identifier MUST have a scheme identifier attribute (e.g.eSENSParty Identifier Scheme). Should be considered for all actors (buyer, service provider, economic operator) as an eDeliveryID.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-10-08)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1988,9 +1923,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The national identifier of a service provider as it is legally registered (e.g. VAT identification).</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: An identifier for the service provider must always be provided. Compulsory use of the attribute SchemeAgencyID. When possible use the VAT identification of the service provider (see the VIES platform for a EU cross-border national VAT number verification system). See XML example below.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-10-11, <a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2000,9 +1932,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of the service provider.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The name of the service provider must always be specified. Supply the official registered name of the service provider.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-10-09)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2012,9 +1941,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The code that identifies the country of the service provider.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The country of the service provider must always be specified. Compulsory use of the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Country.gc">Country</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: (BR-RESP-10-10, <a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#5, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2480,9 +2406,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: Name of the natural person is mandatory.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-20-01)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2492,9 +2415,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">Family Name of the natural person.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Family Name of the natural person is mandatory.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-20-02)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2549,9 +2469,6 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code that identifies the country.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Compulsory use of the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/Country.gc">Country</a>.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-20-03, <a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#5, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2872,9 +2789,6 @@ If the economic operator is registered on an official list of approved economic 
 </div>
 <div class="paragraph">
 <p><strong>Rule</strong>: This ID SHOULD be provided by the EO or the service provider that instantiates the ESPDResponse XML document.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-TCR-05" class="xref page">BR-TCR-05</a>, <a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2884,9 +2798,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">A cross-reference to the criterion propertys which is validated thorugh this response expressed as an identifier.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: This ID MUST point at one of the TenderingCriterionProperty/cbc:ID that were included in the Request document.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (BR-RESP-30, BR-RESP-40, BR-RESP-60, BR-RESP-60-S10, BR-RESP-60-S20, <a href="tech_busrules.html#BR-TCR-01" class="xref page">BR-TCR-01</a>, <a href="tech_busrules.html#BR-TCR-03" class="xref page">BR-TCR-03</a>, BR-LEAD-10-S20, BR-LEAD-10-S30)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2896,9 +2807,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code specifying the confidentiality level of the given response for this criterion.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: If the value is true, all the evidences associated to this response becomes also confidential.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: <a href="tech_busrules.html#BR-TCR-02" class="xref page">BR-TCR-02</a>, <a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#19, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2908,9 +2816,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">A class to describe the criterion property response value.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: This class contains the main disjoint elements used to provide the actual answer. The UBL-2.4 model provides cardinality 0..n, this allows for building up lists of, namely, identifier and code values that are all "packaged" into one cac:TenderingCriterionResponse that in turn is linked to one cac:TenderingCriterionProperty. Beware that the cardinality is flexible (0..whatever) because some responses are not simple values, like the ones but complex ones, e.g. cac:ApplicablePeriod and cac:EvidenceSupplied).</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-TCR-08" class="xref page">BR-TCR-08</a>, <a href="tech_busrules.html#BR-TCR-04" class="xref page">BR-TCR-04</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3094,9 +2999,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the referenced evidence.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The expected identifier must match the value of a cac:Evidence/cbc:ID present in the XML document.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-TCR-09" class="xref page">BR-TCR-09</a>, BR-OTH-0)</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3166,9 +3068,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier to refer to this criterion response value.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Recommendation: use a UUDI-version 4 number.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: <a href="tech_busrules.html#BR-TCR-05" class="xref page">BR-TCR-05</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -3187,9 +3086,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">An amount used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The currencyID attribute is MANDATORY (e.g. "EUR"). Compulsory use of the code list "ISO 4217 3A:2015". BEWARE that amounts can use decimal separators (e.g. 14134,95 but not hundred or thousand separators).</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>, BR-OTH-01#17, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3199,9 +3095,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Compulsory use of the attributes mentioned in the section <a href="tech_codelist.html#codes_and_identifiers" class="xref page">Codes and Identifiers</a> for codes.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3238,9 +3131,6 @@ If the economic operator is registered on an official list of approved economic 
 <td class="tableblock halign-left valign-top"><p class="tableblock">An indicator used as a reply to the criterion property.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The only possible values are False and True.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-TCR-06" class="xref page">BR-TCR-06</a>, <a href="tech_busrules.html#BR-TCR-07" class="xref page">BR-TCR-07</a>)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3506,9 +3396,6 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for a piece of supporting evidence</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: The Evidence ID MUST be unique in the ESPD Response XML instance (i.e. two items of evidence cannot have the same ID value). It is recommended to use always a UUID UUID of version 4 (random generated UUID).</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: Common (<a href="tech_busrules.html#BR-TCR-09" class="xref page">BR-TCR-09</a>, BR-OTH-0)</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3518,9 +3405,6 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code signifying the type of evidence.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: A code signifying the type of evidence. Could be used in the future in alignment to e-Certis.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: <a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -3557,9 +3441,6 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 <td class="tableblock halign-left valign-top"><p class="tableblock">A code specifying the confidentiality level of the item of evidence.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Compulsory use of the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/AccessRight.gc">AccessRight</a>. Software application should set this code to CONFIDENTIAL automatically when the confidentiality level code of at least one criterion to which the item of evidence is associated is set to CONFIDENTIAL.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: <a href="tech_busrules.html#BR-TCR-02" class="xref page">BR-TCR-02</a>, BR-OTH-01, <a href="tech_busrules.html#BR-OTH-01" class="xref page">BR-OTH-01</a>#18, xref:tech_busrules.adoc#BR-OTH-03[BR-OTH-03</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3629,9 +3510,6 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier for the referenced document.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: <strong>If the reference or verification code is provided for the evidence use this element to place it.</strong> This 'code' is used in some countries (e.g. Spain) to check that the document is authentic. If a verification code is supplied you can use an official 'end-point' to retrieve an image (or a PDF) of the document and check that the evidence is authentic.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: <a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -3650,9 +3528,6 @@ More precisely, a number, rate or percent used as a reply to the criterion requi
 <td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the party issuer of the documentary evidence.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Not currently used in ESPD, but if you decide to use it try to use the VAT number whenever possible.</p>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope</strong>: <a href="tech_busrules.html#BR-OTH-02" class="xref page">BR-OTH-02</a></p>
 </div></div></td>
 </tr>
 <tr>
