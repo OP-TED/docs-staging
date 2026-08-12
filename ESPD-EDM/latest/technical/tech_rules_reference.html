@@ -306,45 +306,38 @@
 <p>This page provides the complete catalogue of validation rules enforced by the ESPD Schematron. It is auto-generated from the <code>.sch</code> source files in the <a href="https://github.com/OP-TED/espd-validation-schematron">espd-validation-schematron</a> repository and reflects the current implementation.</p>
 </div>
 <div class="sect2">
-<h3 id="_how_to_read_this_table"><a class="anchor" href="#_how_to_read_this_table"></a>How to read this table</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Column</th>
-<th class="tableblock halign-left valign-top">Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Rule ID</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Unique identifier of the assertion in the Schematron (the <code>@id</code> attribute on <code>&lt;assert&gt;</code>).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Severity</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fatal</code> = document is invalid; <code>error</code> = significant problem; <code>warning</code> = informational, document still valid.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Scope</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Whether the rule applies to ESPD Request, ESPD Response, or both (Common).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Category</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Validation layer: Code list, Cardinality, Criterion (structure/cross-reference), Other (general), or Specific (role/domain).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The human-readable assertion message shown when validation fails. This text comes directly from the <code>&lt;assert&gt;</code> element in the Schematron source.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Source File</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>.sch</code> file where the rule is defined.</p></td>
-</tr>
-</tbody>
-</table>
+<h3 id="_how_to_read_the_rule_entries"><a class="anchor" href="#_how_to_read_the_rule_entries"></a>How to read the rule entries</h3>
+<div class="paragraph">
+<p>Each rule is rendered as a block containing the following information:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Rule ID</dt>
+<dd>
+<p>Unique identifier of the assertion in the Schematron (the <code>@id</code> attribute on <code>&lt;assert&gt;</code>).</p>
+</dd>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>🔴 <code>fatal</code> = document is invalid; 🟠 <code>error</code> = significant problem; 🟡 <code>warning</code> = informational, document still valid.</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Whether the rule applies to ESPD Request, ESPD Response, or both (Common).</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Validation layer: Code list, Cardinality, Criterion (structure/cross-reference), Other (general), or Specific (role/domain).</p>
+</dd>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>The human-readable assertion message shown when validation fails. This text comes directly from the <code>&lt;assert&gt;</code> element in the Schematron source.</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p>The <code>.sch</code> file where the rule is defined, linked directly to the GitHub repository.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_validation_layers"><a class="anchor" href="#_validation_layers"></a>Validation layers</h3>
@@ -388,1178 +381,3456 @@
 </div>
 <div class="sect2">
 <h3 id="_complete_rules_register"><a class="anchor" href="#_complete_rules_register"></a>Complete rules register</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 8.3333%;">
-<col style="width: 8.3333%;">
-<col style="width: 8.3333%;">
-<col style="width: 41.6666%;">
-<col style="width: 16.6669%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Rule ID</th>
-<th class="tableblock halign-left valign-top">Severity</th>
-<th class="tableblock halign-left valign-top">Scope</th>
-<th class="tableblock halign-left valign-top">Category</th>
-<th class="tableblock halign-left valign-top">Description</th>
-<th class="tableblock halign-left valign-top">Source File</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-COM-10-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<div id="BR-COM-10-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-COM-10-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>If the document referenced is a Contract Notice published on TED the ID must follow the scheme defined by the Publications Office: [][][][]/S [][][]-[][][][][][] (cbc:ID = '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-COM-10-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-COM-10-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-COM-10-02</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>If the document being referenced is a Notice being published on TED, use two description lines ('/cac:AdditionalDocumentReference/cac:Attachment/cac:ExternalReference/cbc:Description'). Use the second description line to place therein the temporary number received from TED (cbc:ID = '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-COM-10-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-COM-10-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-COM-10-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of document being referenced, expressed as a code ('/cac:AdditionalDocumentReference/cbc:DocumentTypeCode') is mandatory (cbc:ID = '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-LAED-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-LAED-10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-LAED-10</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-role-br.sch">ESPDResponse/sch/05-ESPD-resp-role-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Information about the other participants MUST be provided (criteria 'eo-group').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-role-br.sch" target="_blank" rel="noopener">05-ESPD-resp-role-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-LEAD-10-S10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-LEAD-10-S10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-LEAD-10-S10</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-role-br.sch">ESPDResponse/sch/05-ESPD-resp-role-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The current EO role is 'group-lead', the information about the group ('/cbc:EconomicOperatorGroupName') must be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-role-br.sch" target="_blank" rel="noopener">05-ESPD-resp-role-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-LEAD-10-S20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-LEAD-10-S20" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-LEAD-10-S20</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-role-br.sch">ESPDResponse/sch/05-ESPD-resp-role-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Information about all the entities the EO relies on MUST be provided (criteria 'relied').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-role-br.sch" target="_blank" rel="noopener">05-ESPD-resp-role-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-LEAD-10-S30</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-LEAD-10-S30" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-LEAD-10-S30</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-role-br.sch">ESPDResponse/sch/05-ESPD-resp-role-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Information about all the entities the EO relies on MUST be provided (criteria 'subco-ent').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-role-br.sch" target="_blank" rel="noopener">05-ESPD-resp-role-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-LOT-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-LOT-10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-LOT-10</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-specific-br.sch">ESPDResponse/sch/05-ESPD-resp-specific-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The lot the EO tenders for MUST be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-specific-br.sch" target="_blank" rel="noopener">05-ESPD-resp-specific-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-LOT-40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-LOT-40" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-LOT-40</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-specific-br.sch">ESPDRequest/sch/05-ESPD-req-specific-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Lots apply only to Selection Criteria. Exclusion Criteria cannot have Lot associated.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-specific-br.sch" target="_blank" rel="noopener">05-ESPD-req-specific-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-LOT-41</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-LOT-41" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-LOT-41</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-specific-br.sch">ESPDRequest/sch/05-ESPD-req-specific-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>All Selection Criteria must have associated LOT.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-specific-br.sch" target="_blank" rel="noopener">05-ESPD-req-specific-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-01-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-01-10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-01-10</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute listID is mandatory for the element: '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-01-11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-01-11" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-01-11</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute listID is mandatory for the element: '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-01-20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-01-20" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-01-20</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute listAgencyID is mandatory for the element: '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-01-21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-01-21" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-01-21</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute listAgencyID is mandatory for the element: '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-01-30</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-01-30" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-01-30</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute listVersionID is mandatory for the element: '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-01-31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-01-31" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-01-31</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute listVersionID is mandatory for the element: '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-01-40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-01-40" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-01-40</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>List version identifier '/listVersionID =' is not correct. ListVersionID should be '5.x.x'.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute schemeAgencyID is mandatory for the element: '', and it should not be empty.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-02.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-02." class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-02.</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The attribute schemeAgencyID is mandatory for the element: '', and it should not be empty.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch">ESPDRequest/sch/02-ESPD-req-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cbc:UBLVersionID' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-req-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch">ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cbc:UBLVersionID' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-resp-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch">ESPDRequest/sch/02-ESPD-req-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cbc:ID' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-req-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch">ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cbc:ID' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-resp-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-04" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-04</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch">ESPDRequest/sch/02-ESPD-req-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cbc:UUID' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-req-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-04" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-04</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch">ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cbc:UUID' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-resp-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-06</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-06" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-06</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch">ESPDRequest/sch/02-ESPD-req-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cac:TenderingCriterion' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/02-ESPD-req-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-req-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-06</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-06" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-06</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch">ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cac:TenderingCriterion' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-resp-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-04-07</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cardinality</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-04-07" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-04-07</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Cardinality</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch">ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The element '/cac:TenderingCriterionResponse' is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/02-ESPD-resp-cardinality-br.sch" target="_blank" rel="noopener">02-ESPD-resp-cardinality-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-05-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-05-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-05-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>'cbc:UBLVersionID' must use the value "2.4" (cbc:UBLVersionID = '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-05-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-05-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-05-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>'cbc:UBLVersionID/@schemeAgencyID' must use the value "OASIS-UBL-TC" (cbc:UBLVersionID/@schemeAgencyID = '').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-OTH-08</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Other</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-OTH-08" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-OTH-08</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/04-ESPD-common-other-br.sch">common/sch/04-ESPD-common-other-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>An end-point identifier MUST have a scheme identifier attribute ('/cac:ServiceProviderParty/cac:Party/cbc:EndpointID/@schemeID').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/04-ESPD-common-other-br.sch" target="_blank" rel="noopener">04-ESPD-common-other-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-20-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-20-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-20-01</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-procurer-br.sch">ESPDRequest/sch/05-ESPD-req-procurer-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The ESPD only expects data about one buyer ('/cac:ContractingParty'). There are currently '' buyers.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-procurer-br.sch" target="_blank" rel="noopener">05-ESPD-req-procurer-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-20-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-20-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-20-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-procurer-br.sch">ESPDRequest/sch/05-ESPD-req-procurer-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The use of the official name of the contracting body ('/cac:ContractingParty/cac:Party/cac:PartyName/cbc:Name') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-procurer-br.sch" target="_blank" rel="noopener">05-ESPD-req-procurer-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-20-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-20-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-20-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-procurer-br.sch">ESPDRequest/sch/05-ESPD-req-procurer-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The country of the contracting body ('/cac:ContractingParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode') must always be specified.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-procurer-br.sch" target="_blank" rel="noopener">05-ESPD-req-procurer-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-20-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-20-04" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-20-04</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-procurer-br.sch">ESPDRequest/sch/05-ESPD-req-procurer-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>At least one identifier ('cac:ContractingParty/cac:Party/cac:PartyIdentification/cbc:ID') should be specified.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-procurer-br.sch" target="_blank" rel="noopener">05-ESPD-req-procurer-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-20-05</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-20-05" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-20-05</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-procurer-br.sch">ESPDRequest/sch/05-ESPD-req-procurer-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>An identifier for the service provider ('/cac:ServiceProviderParty/cac:Party/cac:PartyIdentification/cbc:ID') must always be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-procurer-br.sch" target="_blank" rel="noopener">05-ESPD-req-procurer-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-20-06</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-20-06" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-20-06</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-procurer-br.sch">ESPDRequest/sch/05-ESPD-req-procurer-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The name of the service provider ('/cac:ServiceProviderParty/cac:Party/cac:PartyName/cbc:Name') must always be specified.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-procurer-br.sch" target="_blank" rel="noopener">05-ESPD-req-procurer-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-20-07</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-20-07" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-20-07</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-procurer-br.sch">ESPDRequest/sch/05-ESPD-req-procurer-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The country of the service provider ('/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode') must always be specified.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-procurer-br.sch" target="_blank" rel="noopener">05-ESPD-req-procurer-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-30</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-30" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-30</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/03-ESPD-req-criterion-br.sch">ESPDRequest/sch/03-ESPD-req-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Both 'Part III, A – Criminal convictions' and 'Part III and B – Payment of taxes' exclusion criterion are REQUIRED.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/03-ESPD-req-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-req-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-REQ-40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-REQ-40" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-REQ-40</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/03-ESPD-req-criterion-br.sch">ESPDRequest/sch/03-ESPD-req-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The current ESPD request does not provide selection criteria.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/03-ESPD-req-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-req-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-02</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The function of the economic operator ('/cac:EconomicOperatorParty/cac:EconomicOperatorRole') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-03</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The role of the economic operator ('/cac:EconomicOperatorParty/cac:EconomicOperatorRole/cbc:RoleCode') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-04" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-04</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>An identifier that identifies the economic operator ('/cac:EconomicOperatorParty/cac:Party/cac:PartyIdentification/cbc:ID') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-05</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-05" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-05</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The name of the economic operator ('/cac:EconomicOperatorParty/cac:Party/cac:PartyName/cbc:Name') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-06</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-06" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-06</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The size of the company ('/cac:EconomicOperatorParty/cac:Party/cbc:IndustryClassificationCode') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-07</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-07" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-07</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The country of the company ('/cac:EconomicOperatorParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-09</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-09" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-09</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The name of the service provider ('/cac:ServiceProviderParty/cac:Party/cac:PartyName/cbc:Name') must always be specified.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-10</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The country of the service provider ('/cac:ServiceProviderParty/cac:Party/cac:PostalAddress/cac:Country/cbc:IdentificationCode') must always be specified.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-10-11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-10-11" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-10-11</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>An identifier for the service provider ('/cac:ServiceProviderParty/cac:Party/cac:PartyIdentification/cbc:ID') must always be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-20-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-20-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-20-01</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Name of the natural person ('/cac:PowerOfAttorney/cac:AgentParty/cac:Person/cbc:FirstName') must always be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-20-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-20-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-20-02</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Family Name of the natural person ('/cac:PowerOfAttorney/cac:AgentParty/cac:Person/cbc:FamilyName') must always be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-20-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">error</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-20-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-20-03</strong> 🟠</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>error</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-eo-br.sch">ESPDResponse/sch/05-ESPD-resp-eo-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>A code that identifies the country ('/cac:PowerOfAttorney/cac:AgentParty/cac:Person/cac:ResidenceAddress/cac:Country/cbc:IdentificationCode') must always be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-eo-br.sch" target="_blank" rel="noopener">05-ESPD-resp-eo-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-40" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-40</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-qualification-br.sch">ESPDResponse/sch/05-ESPD-resp-qualification-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Information about compliance of selection criteria MUST be provided. The following selection criterion are not provided:,</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-qualification-br.sch" target="_blank" rel="noopener">05-ESPD-resp-qualification-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-80-S10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-80-S10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-80-S10</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-qualification-br.sch">ESPDResponse/sch/05-ESPD-resp-qualification-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>When the pre-qualification system the EO is registered on does not cover all the selection criteria, information about compliance of selection criteria MUST be provided. The following selection criterion are not provided:,</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-qualification-br.sch" target="_blank" rel="noopener">05-ESPD-resp-qualification-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-RESP-80-S20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-RESP-80-S20" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-RESP-80-S20</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-qualification-br.sch">ESPDResponse/sch/05-ESPD-resp-qualification-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>When the pre-qualification system the EO is registered on covers all the selection criteria, information about compliance of selection criteria IS NOT required.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-qualification-br.sch" target="_blank" rel="noopener">05-ESPD-resp-qualification-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-SC-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Request</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-SC-10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-SC-10</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Request</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDRequest/sch/05-ESPD-req-specific-br.sch">ESPDRequest/sch/05-ESPD-req-specific-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Information about the procurement procedure MUST be provided ('/cbc:ProcedureCode).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDRequest/sch/05-ESPD-req-specific-br.sch" target="_blank" rel="noopener">05-ESPD-req-specific-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-SUBCONT-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Specific</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-SUBCONT-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-SUBCONT-01</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Specific</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/05-ESPD-resp-role-br.sch">ESPDResponse/sch/05-ESPD-resp-role-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>If EO role is 'subcont - Subcontractor', the entity does not have to provide information about the selection criteria.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/05-ESPD-resp-role-br.sch" target="_blank" rel="noopener">05-ESPD-resp-role-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-02-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-02-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-02-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The identifier of the criterion ('/cac:TenderingCriterion/cbc:ID') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-02-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-02-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-02-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Each criterion must use the UUID supplied by e-Certis. The '/cac:TenderingCriterion/cbc:ID =' is not defined in e-Certis.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Classification code ('/cac:TenderingCriterion/cbc:CriterionTypeCode') to represent the criterion in the ESPD taxonomy of criteria is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-04" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-04</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The criterion type code should match the one from e-Certis. The code '/cac:TenderingCriterion/cbc:CriterionTypeCode =' is not defined in e-Certis.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-05</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-05" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-05</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The name of the criterion ('/cac:TenderingCriterion/cbc:Name') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-06</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-06" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-06</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>An extended description of the criterion ('/cac:TenderingCriterion/cbc:Description') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-07</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-07" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-07</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The Tendering Criterion, which 'cac:TenderingCriterion/cbc:ID =', has '' missing 'cac:TenderingCriterionPropertyGroup' element(s).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-09</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-09" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-09</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The complete title of the legislation (/cac:TenderingCriterion/cac:Legislation/cbc:Title') provided is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-10</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The description of the legislation (/cac:TenderingCriterion/cac:Legislation/cbc:Description') provided in the original legal text SHOULD be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">warning</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-11" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-11</strong> 🟡</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>warning</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Other articles where the Criterion is referred to (/cac:TenderingCriterion/cac:Legislation/cbc:Article') SHOULD also be provided.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-12" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-12</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The identifier of a group of requirements ('/cbc:ID') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-13" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-13</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Compulsory use of the UUIDs supplied by e-Certis. The('[cbc:ID = '']/[cbc:ID = '']') does not exist in e-Certis.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-14</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-14" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-14</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Code addressed to control the behavior of the group of criteria ('/cbc:PropertyGroupTypeCode') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-15-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-15-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-15-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The property group type code should match the one from e-Certis. The tendering criterion property group ('') does not exisit in the e-Certis for the following element '[cbc:ID = '']/[cbc:ID = ''].</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-15-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-15-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-15-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The property group type code should match the one from e-Certis. The subtendering criterion property group ('') does not exisit in the e-Certis for the following element '[cbc:ID = '']/[cbc:ID = ''].</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-16-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-16-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-16-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The tendering criterion property group ('[cbc:ID = '']/[cbc:ID = '']') has '' missing 'cac:TenderingCriterionProperty' element(s).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-16-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-16-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-16-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The subtendering criterion property group ('[cbc:ID = '']/[cbc:ID = '']') has '' missing 'cac:TenderingCriterionProperty' element(s).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-17-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-17-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-17-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The tendering criterion property group ('[cbc:ID = '']/[cbc:ID = '']') has '' missing 'cac:SubsidiaryTenderingCriterionPropertyGroup' element(s).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-17-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-17-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-17-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The subtendering criterion property group ('[cbc:ID = '']/[cbc:ID = '']') has '' missing 'cac:SubsidiaryTenderingCriterionPropertyGroup' element(s).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-18" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-18</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The identifier of a specific property ('/cbc:ID') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-19</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-19" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-19</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The text of the caption, requirement or question ('/cbc:Description') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-20" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-20</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of property ('/cbc:TypeCode') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-20-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-20-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-20-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The tendering criterion property group ('The tendering criterion property type code should match the one from e-Certis. The, which 'cbc:ID =', does not have a '/cac:TenderingCriterionProperty[cbc:ID =]/cbc:TypeCode =' defined in e-Certis.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-21-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-21-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-21-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority ('/cbc:ValueDataTypeCode') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TC-21-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Common</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TC-21-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TC-21-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Common</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/common/sch/03-ESPD-common-criterion-br.sch">common/sch/03-ESPD-common-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The tendering criterion property value data type should match the one from e-Certis. The, which 'cbc:ID =', does not have a '/cac:TenderingCriterionProperty[cbc:ID =]/cbc:ValueDataTypeCode =' defined in e-Certis.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/common/sch/03-ESPD-common-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-common-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-01-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-01-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-01-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>A cross-reference ('/cbc:ValidatedCriterionPropertyID') to the criterion property is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-01-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-01-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-01-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The criterion response ('cbc:ValidatedCriterionPropertyID' = '') does not have a cross-reference to a criterion property ('cac:TenderingCriterionProperty/cbc:ID').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>One and only one response element ('/cac:ResponseValue', '/cac:ApplicablePeriod' or '/cac:EvidenceSupplied') per criterion response ('/cac:TenderingCriterionResponse/cbc:ValidatedCriterionPropertyID =') is mandatory.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-04" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-04</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>Only one sub-element within '/cac:TenderingCriterionResponse/cac:ResponseValue' is admitted at the same time. The criteria response ('/cac:TenderingCriterionResponse/cbc:ValidatedCriterionPropertyID =') has '' sub-element(s).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-06-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-06-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-06-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>As the response '' is TRUE and the property group is codified as ONTRUE, 'cbc:ID =' must be answered as well.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-06-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-06-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-06-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>As the response '' is FALSE but the property group is codified as ONTRUE, 'cbc:ID =' must not be answered.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-07-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-07-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-07-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>As the response '' is FALSE and the property group is codified as ONFALSE, 'cbc:ID =' must be answered as well.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-07-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-07-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-07-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>As the response '' is TRUE but the property group is codified as ONFALSE, 'cbc:ID =' must not be answered.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-01</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-01" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-01</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'AMOUNT' ('cac:ResponseValue/cbc:ResponseAmount' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-02</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-02" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-02</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'CODE' ('cac:ResponseValue/cbc:ResponseCode' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-03</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-03" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-03</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'CODE_COUNTRY' ('cac:ResponseValue/cbc:ResponseCode' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-04" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-04</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'DATE' ('cac:ResponseValue/cbc:ResponseDate' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-05</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-05" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-05</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'DESCRIPTION' ('cac:ResponseValue/cbc:Description' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-06</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-06" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-06</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'EVIDENCE_IDENTIFIER' ('cac:EvidenceSupplied/cbc:ID' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-07</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-07" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-07</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'INDICATOR' ('cac:ResponseValue/cbc:ResponseIndicator' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-08</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-08" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-08</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'PERCENTAGE' ('cac:ResponseValue/cbc:ResponseNumeric' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-09</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-09" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-09</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'PERIOD' ('cac:ApplicablePeriod' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-10" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-10</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'QUANTITY_INTEGER' ('cac:ResponseValue/cbc:ResponseQuantity' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-11" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-11</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'QUANTITY_YEAR' ('cac:ResponseValue/cbc:ResponseQuantity' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-12" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-12</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'QUANTITY' ('cac:ResponseValue/cbc:ResponseQuantity' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-13" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-13</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'IDENTIFIER' ('ac:ResponseValue/cbc:ResponseID' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-14</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-14" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-14</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'URL' ('cac:ResponseValue/cbc:ResponseURI' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-15</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-15" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-15</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'MAXIMUM_AMOUNT' ('cac:ResponseValue/cbc:ResponseAmount' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-16</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-16" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-16</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'MINIMUM_AMOUNT' ('cac:ResponseValue/cbc:ResponseAmount' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-17</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-17" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-17</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'MAXIMUM_VALUE_NUMERIC' ('cac:ResponseValue/cbc:ResponseNumeric' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-18" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-18</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'TRANSLATION_TYPE_CODE' ('cac:ResponseValue/cbc:ResponseCode' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-19</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-19" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-19</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'CERTIFICATION_LEVEL_DESCRIPTION' ('cac:ResponseValue/cbc:Description' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-20" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-20</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'COPY_QUALITY_TYPE_CODE' ('cac:ResponseValue/cbc:ResponseCode' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-21" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-21</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'TIME' ('cac:ResponseValue/cbc:ResponseTime' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-22</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-22" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-22</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'ECONOMIC_OPERATOR_IDENTIFIER' ('cac:ResponseValue/cbc:ResponseID' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-25</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-25" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-25</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'QUAL_IDENTIFIER' ('ac:ResponseValue/cbc:ResponseID' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-08-26</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-08-26" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-08-26</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The type of answer expected by the contracting authority is 'CODE_BOOLEAN' ('cac:ResponseValue/cbc:ResponseCode' element) - ('cbc:ID' is).</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BR-TCR-09</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fatal</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+</div>
+</div>
+</div>
+<div id="BR-TCR-09" class="exampleblock rule">
+<div class="content">
+<div class="paragraph">
+<p><strong>BR-TCR-09</strong> 🔴</p>
+</div>
+<div class="dlist rule-meta">
+<dl>
+<dt class="hdlist1">Severity</dt>
+<dd>
+<p>fatal</p>
+</dd>
+<dt class="hdlist1">Scope</dt>
+<dd>
+<p>Response</p>
+</dd>
+<dt class="hdlist1">Category</dt>
+<dd>
+<p>Criterion</p>
+</dd>
+<dt class="hdlist1">Source</dt>
+<dd>
+<p><a href="https://github.com/OP-TED/espd-validation-schematron/blob/feature/testing_and_doc/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch">ESPDResponse/sch/03-ESPD-resp-criterion-br.sch</a></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The evidence response ('cac:EvidenceSupplied/cbc:ID' = '') does not have a corss-reference to the evidence identifier ('cac:Evidence/cbc:ID').</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-validation-schematron/blob/v4.1.0/ESPDResponse/sch/03-ESPD-resp-criterion-br.sch" target="_blank" rel="noopener">03-ESPD-resp-criterion-br.sch</a></p></td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
