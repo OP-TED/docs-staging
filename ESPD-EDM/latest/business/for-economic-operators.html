@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>For Economic Operators :: TED Developer Docs</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/business/for-economic-operators.html">
+    <meta name="generator" content="Antora 3.1.7">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../../_/css/custom.css">
+    <link rel="stylesheet" href="../../../_/css/vendor/docsearch-2.6.3.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../_/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../_/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../_/img/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="../../../_/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="../../../_/img/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="../../../_/img/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../../../_/css/custom.css">
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta name="google-site-verification" content="google8bce9cd167a02a39.html" />
+<script>var uiRootPath = '../../../_'</script>
+<script defer src="https://webtools.europa.eu/load.js" type="text/javascript"></script>  </head>
+  <body class="article">
+ <!-- Piwik PRO Tracking Code -->
+ <!-- followed the istructions bellow -->
+<!-- citnet.tech.ec.europa.eu/CITnet/jira/secure/attachment/3485014/OP_PiwikPRO_TED-docs-installation-CCK-web-analytics_v1.txt -->
+  <script type="text/javascript">
+    (function (window, document, dataLayerName, id) {
+      window[dataLayerName] = window[dataLayerName] || [], window[dataLayerName].push({start: (new Date).getTime(), event: "stg.start"});
+      var scripts = document.getElementsByTagName('script')[0], tags = document.createElement('script');
+      function stgCreateCookie(a, b, c) {var d = ""; if (c) {var e = new Date; e.setTime(e.getTime() + 24 * c * 60 * 60 * 1e3), d = "; expires=" + e.toUTCString(); f = "; SameSite=Strict"} document.cookie = a + "=" + b + d + f + "; path=/"}
+      var isStgDebug = (window.location.href.match("stg_debug") || document.cookie.match("stg_debug")) && !window.location.href.match("stg_disable_debug"); stgCreateCookie("stg_debug", isStgDebug ? 1 : "", isStgDebug ? 14 : -1);
+      var qP = []; dataLayerName !== "dataLayer" && qP.push("data_layer_name=" + dataLayerName), isStgDebug && qP.push("stg_debug"); var qPString = qP.length > 0 ? ("?" + qP.join("&")) : "";
+      tags.async = !0, tags.src = "https://analytics.webanalytics.op.europa.eu/containers/" + id + ".js" + qPString, scripts.parentNode.insertBefore(tags, scripts);
+      !function (a, n, i) {a[n] = a[n] || {}; for (var c = 0; c < i.length; c++)!function (i) {a[n][i] = a[n][i] || {}, a[n][i].api = a[n][i].api || function () {var a = [].slice.call(arguments, 0); "string" == typeof a[0] && window[dataLayerName].push({event: n + "." + i + ":" + a[0], parameters: [].slice.call(arguments, 1)})}}(i[c])}(window, "ppms", ["tm", "cm"]);
+    })(window, document, 'dataLayer', '363c8269-fce7-42d6-88eb-0abc9e22ea96');
+  </script><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" crossorigin="anonymous"></script>
+<script defer src="https://europa.eu/webtools/load.js?globan=1110" type="text/javascript"></script>
+<div class="eu-flag">
+    <nav class="navbar-scrollable">
+        <div class="navbar-brand">
+
+            <div class="eu-emblem" style="display: inline-block;">
+                <!-- flag and logo-->
+                <a href="https://european-union.europa.eu/index_en" target="_blank">
+                    <div class="eu-emblem-std-en"><span></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="sep-frame">
+            <div class="rect-grey"></div>
+        </div>
+    </nav>
+
+</div>
+
+<div class="eu-tenders">
+    <nav class="navbar">
+        <div class="text-eu-tenders">
+            <a href="https://ted.europa.eu/en/" target="_blank">EU tenders</a>
+        </div>
+        <div id="topbar-nav" class="navbar-menu">
+
+            <div class="text-eu-subtext-text">
+                <a href="https://docs.ted.europa.eu">TED Developer Docs</a>
+            </div>
+            <div class="text-eu-subtext-label">
+                <a href="https://docs.ted.europa.eu">Documentation for TED developers and eSenders</a>
+            </div>
+            <div class="navbar-end">
+                <div class="navbar-item search">
+                    <input id="search-input" type="text" placeholder="Search docs">
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="ESPD-EDM" data-version="5.0.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">ESPD EDM</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Release Documentation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release_notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../demo.html">ESPD Demo Site</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Information for Business Users</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Business Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="implementation.html">An ESPD Implementation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="using.html">The Structure of an ESPD Implementation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../technical/index.html">Technical Information</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../technical/tech_rules_reference.html">Business Rules Reference</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+      <div class="context">
+          <span class="title">ESPD EDM</span>
+          <span class="version">5.0.0</span>
+      </div>
+  <ul class="components">
+      <li class="component">
+        <a class="title" href="../../../eforms/latest/index.html">eForms SDK</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../eforms/latest/index.html">1.12</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.11/index.html">1.11</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.10/index.html">1.10</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.9/index.html">1.9</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.8/index.html">1.8</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.7/index.html">1.7</a>
+            </li>
+            <li class="version">
+              <a href="../../../eforms/1.6/index.html">1.6</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../EPO/latest/index.html">eProcurement Ontology</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../EPO/latest/index.html">5.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/5.1/index.html">5.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/5/index.html">5.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/4.2/index.html">4.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/4.1/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/4/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/3.1/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/2.0.1/index.html">2.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/2.0.0/index.html">2.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../EPO/1.0.0/index.html">1.0.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component is-current">
+        <a class="title" href="../index.html">ESPD EDM</a>
+        <ul class="versions">
+            <li class="version is-current is-latest">
+              <a href="../index.html">5.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../4.1.0/index.html">4.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../4.0.0/index.html">4.0.0</a>
+            </li>
+            <li class="version">
+              <a href="../../3.3.0/index.html">3.3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../3.2.0/index.html">3.2.0</a>
+            </li>
+            <li class="version">
+              <a href="../../3.1.0/index.html">3.1.0</a>
+            </li>
+            <li class="version">
+              <a href="../../3.0.1/index.html">3.0.1</a>
+            </li>
+            <li class="version">
+              <a href="../../2.1.1/index.html">2.1.1</a>
+            </li>
+            <li class="version">
+              <a href="../../2.0.2/index.html">2.0.2</a>
+            </li>
+            <li class="version">
+              <a href="../../1.0.2/index.html">1.0.2</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../M2O/latest/index.html">Model2Owl Documentation</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../M2O/latest/index.html">3.1.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../api/latest/index.html">TED API</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../api/latest/index.html">3.0</a>
+            </li>
+            <li class="version">
+              <a href="../../../api/2.0/index.html">2.0</a>
+            </li>
+        </ul>
+      </li>
+      <li class="component">
+        <a class="title" href="../../../ODS/latest/index.html">TED Open Data</a>
+        <ul class="versions">
+            <li class="version is-latest">
+              <a href="../../../ODS/latest/index.html">1.0</a>
+            </li>
+        </ul>
+      </li>
+  </ul>
+</div>    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../home/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">ESPD EDM</a></li>
+    <li><a href="for-economic-operators.html">For Economic Operators</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
+  <div class="version-menu">
+    <a class="version is-current" href="for-economic-operators.html">5.0.0</a>
+    <a class="version is-missing" href="../../4.1.0/index.html">4.1.0</a>
+    <a class="version is-missing" href="../../4.0.0/index.html">4.0.0</a>
+    <a class="version is-missing" href="../../3.3.0/index.html">3.3.0</a>
+    <a class="version is-missing" href="../../3.2.0/index.html">3.2.0</a>
+    <a class="version is-missing" href="../../3.1.0/index.html">3.1.0</a>
+    <a class="version is-missing" href="../../3.0.1/index.html">3.0.1</a>
+    <a class="version is-missing" href="../../2.1.1/index.html">2.1.1</a>
+    <a class="version is-missing" href="../../2.0.2/index.html">2.0.2</a>
+    <a class="version is-missing" href="../../1.0.2/index.html">1.0.2</a>
+  </div>
+</div>
+</div>
+  <div class="content">
+    <aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+    <article class="doc">
+<h1 class="page">For Economic Operators</h1>
+<div class="sect1">
+<h2 id="_completing_the_espd_response"><a class="anchor" href="#_completing_the_espd_response"></a>Completing the ESPD Response</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Economic Operators (offering parties) use the ESPD Response to demonstrate that they are eligible and capable of participating in a procurement procedure by responding to the exclusion grounds and selection criteria set by the Contracting Authority in the ESPD Request.</p>
+</div>
+<div class="paragraph">
+<p>The ESPD process from the offering party perspective:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/espd_bus_supplier.png" alt="espd bus supplier">
+</div>
+</div>
+<div class="paragraph">
+<p>The Economic Operator retrieves the ESPD Request published alongside the Contract Notice, fills in the ESPD Response on an ESPD service platform, and submits it as part of their tender.</p>
+</div>
+<div class="sect2">
+<h3 id="_roles_of_the_economic_operator"><a class="anchor" href="#_roles_of_the_economic_operator"></a>Roles of the Economic Operator</h3>
+<div class="paragraph">
+<p>Economic Operators can participate in a procurement procedure in different roles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sole Tenderer:</strong> sole economic operator participating by itself;</p>
+</li>
+<li>
+<p><strong>Group Leader:</strong> the leader of a Consortium, Joint Venture or other type of group. The Group Leader is the point of contact with the buyer and speaks on behalf of the group;</p>
+</li>
+<li>
+<p><strong>Group Member (not leader):</strong> a group member that supplies a percentage of the contract;</p>
+</li>
+<li>
+<p><strong>Other entity (relied upon):</strong> an entity upon which the main contractor, the group, or another subcontractor relies in order to meet the selection criteria;</p>
+</li>
+<li>
+<p><strong>Subcontractor:</strong> an entity upon which the main contractor, the group, or another subcontractor does not rely in order to meet the selection criteria, and which is not a group member.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Each participating party must fill in and sign their own ESPD Response. It is the Group Leader&#8217;s responsibility to collect the completed ESPD Response documents from all parties and submit them in the tender.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_what_the_offering_party_fills_in"><a class="anchor" href="#_what_the_offering_party_fills_in"></a>What the offering party fills in</h3>
+<div class="sect3">
+<h4 id="_part_1_procedure_information"><a class="anchor" href="#_part_1_procedure_information"></a>Part 1: Procedure information</h4>
+<div class="paragraph">
+<p>The Economic Operator identifies the ESPD Request to which it is responding, by providing information about the publication, the identity of the procurer, and the procurement procedure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of1.png" alt="of1">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Progress tracking: the form shows completed and remaining sections</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_part_2_economic_operator_information"><a class="anchor" href="#_part_2_economic_operator_information"></a>Part 2: Economic Operator information</h4>
+<div class="paragraph">
+<p>The Economic Operator provides information about itself, including whether it is a Micro, Small or Medium-Sized Enterprise, whether it is registered on an official list of approved operators, and whether it participates together with others.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of5.png" alt="of5">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Information about the economic operator</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of6.png" alt="of6">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Information about representatives of the economic operator</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of7.png" alt="of7">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Information about reliance on the capacities of other entities</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of8.png" alt="of8">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Information concerning subcontractors on whose capacity the EO does not rely</em></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Part 2 applies only to the ESPD Response document.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_part_3_exclusion_grounds"><a class="anchor" href="#_part_3_exclusion_grounds"></a>Part 3: Exclusion grounds</h4>
+<div class="paragraph">
+<p>The Economic Operator responds to the exclusion grounds defined by the Contracting Authority, declaring whether any grounds apply and providing explanations where relevant.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of10.png" alt="of10">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 3A: Response to criminal conviction grounds</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of12.png" alt="of12">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 3B: Response to payment of taxes or social security contributions</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of14.png" alt="of14">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 3C: Response to insolvency, conflicts of interests or professional misconduct</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of16.png" alt="of16">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 3D: Response to purely national exclusion grounds</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_part_4_selection_criteria"><a class="anchor" href="#_part_4_selection_criteria"></a>Part 4: Selection criteria</h4>
+<div class="paragraph">
+<p>The Economic Operator responds to the selection criteria set by the buyer, providing the required information and evidence references.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of18.png" alt="of18">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 4A: Suitability response</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of20.png" alt="of20">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 4B: Economic and financial standing response</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of22.png" alt="of22">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 4C: Technical and professional ability response</em></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of24.png" alt="of24">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 4D: Quality assurance schemes and environmental management standards response</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_part_5_reduction_of_qualified_candidates"><a class="anchor" href="#_part_5_reduction_of_qualified_candidates"></a>Part 5: Reduction of qualified candidates</h4>
+<div class="paragraph">
+<p>The Economic Operator provides information where the buyer has specified objective criteria to limit the number of candidates invited to tender in a two-phased procedure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of26.png" alt="of26">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 5: Reduction of the number of qualified candidates</em></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Part 5 does not apply when the Economic Operator is a subcontractor that the lead entity does not rely on in order to meet the selection criteria.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_part_6_concluding_statements"><a class="anchor" href="#_part_6_concluding_statements"></a>Part 6: Concluding statements</h4>
+<div class="paragraph">
+<p>The Economic Operator declares that the information submitted is accurate, that it is able to provide certificates and documentary evidence, and consents to grant the buyer access to supporting documentation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of27.png" alt="of27">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Part 6: Concluding statements</em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_completing_and_downloading"><a class="anchor" href="#_completing_and_downloading"></a>Completing and downloading</h3>
+<div class="paragraph">
+<p>Once the form is filled in, the Economic Operator can review all information provided via the "Overview" option and download the completed ESPD Response:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/form/of29.png" alt="of29">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Overview and download of the completed ESPD Response</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lots"><a class="anchor" href="#_lots"></a>Lots</h3>
+<div class="paragraph">
+<p>Important considerations for Economic Operators regarding lots:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each Economic Operator must submit a <strong>separate ESPD Response per lot</strong> (or group of lots) they tender for.</p>
+</li>
+<li>
+<p>Different EO parties might have different roles in different lots (e.g. a relied-on entity in some lots, a subcontractor in others).</p>
+</li>
+<li>
+<p>The exclusion grounds apply to all lots; selection criteria may differ per lot.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reuse_of_espd_responses"><a class="anchor" href="#_reuse_of_espd_responses"></a>Reuse of ESPD Responses</h3>
+<div class="paragraph">
+<p>It is not necessary to create an ESPD Response from scratch for each procedure. Completed ESPD documents can be downloaded, saved locally, and uploaded in subsequent procedures. Only the information that differs from the previous procedure needs to be changed, making the process more efficient over time.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_further_information"><a class="anchor" href="#_further_information"></a>Further information</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>For details on the ESPD parts and what each role fills in, see <a href="espd-parts.html" class="xref page">ESPD Parts</a>.</p>
+</li>
+<li>
+<p>For technical implementation details, see the <a href="../technical/tech_response.html" class="xref page">ESPD Response</a> technical guide.</p>
+</li>
+<li>
+<p>A list of current ESPD Service providers can be found at <a href="https://single-market-economy.ec.europa.eu/single-market/public-procurement/digital-procurement/european-single-procurement-document-and-ecertis_en">the European Commission&#8217;s ESPD page</a>.</p>
+</li>
+</ul>
+</div>
+<hr>
+<div class="paragraph">
+<p>Any comments on the documentation?</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+    <div id="widgetContainer">
+      <article class="widget">
+<div class="widget-title">
+    <p>Access other sites in the TED family</p>
+  </div>
+  <div class="links">
+    <a href="https://enotices2.ted.europa.eu/" target="_blank">eNotices2</a>
+    <a href="https://developer.ted.europa.eu/" target="_blank">TED Developer Portal</a>
+    <a href="https://ted.europa.eu/" target="_blank">TED Website</a>
+  </div>
+</article>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Get the current URL
+  var url = window.location.href;
+
+  // Check if the URL ends with 'home/index.html'
+  if (!url.endsWith('/home/index.html')) {
+    // If it doesn't, hide the widget
+    document.getElementById('widgetContainer').style.display = 'none';
+  }
+</script></div>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script src="../../../_/js/vendor/docsearch-2.6.3.js"></script>
+<script src="../../../_/js/vendor/search-algolia.js" id="search-script" data-api-key="7bd6f4bbe2cb3188cd99f1625cb00f75" data-api-id="BE8MR7O2G7" data-index-name="ted-docs-idx"></script>
+<!-- Cookie Consent Kit -->
+  <script type="application/json">
+    {
+      "utility" : "cck",
+      "url": {
+        "en": "https://ted.europa.eu/en/cookie-choice",
+        "fr": "https://ted.europa.eu/fr/cookie-choice"
+      },
+      "appendix": {
+        "en": "We use cookies to improve your experience and analyze our traffic.",
+        "fr": "Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic."
+      },
+      "target": true
+    }
+    </script>
+    
+  <!-- Cookie Consent Kit -->
+  <script>
+    window.addEventListener("cck_all_accepted", function () {
+      var consentAccepted = {consents: {analytics: {status: 1}}};
+      ppms.cm.api('setComplianceSettings', consentAccepted, function (new_consent) { });
+    });
+    window.addEventListener("cck_technical_accepted", function () {
+      var consentRejected = {consents: {analytics: {status: 0}}};
+      ppms.cm.api('setComplianceSettings', consentRejected, function (new_consent) { });
+    });
+  </script>
+<div class="footer">
+    <div class="three-columns">
+
+        <div class="col-md-12 col-lg-4">
+            <div class="ls-footer-logo-DD"><a href="https://docs.ted.europa.eu/home/index.html"><img
+                        alt="TED Developer Docs" class="ls-op" src="../../../_/img/ted-logo-footer2.png"
+                        height="48" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+            <div class="ted-footer__rich-text">
+                <p>This website is managed by:
+                    <u>
+                        <a href="https://op.europa.eu/en/home" target="_blank">Publications Office of the European
+                            Union</a>
+                    </u>
+                </p>
+
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">Need Help?</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/help-page">Help</a></li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/contact">Contact the TED Helpdesk</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Follow us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer">
+                    <a href="https://x.com/EUPublications"> <img src="../../../_/img/twitter.svg"
+                            class="icon-footer" /><span>X/Twitter</span></a>
+                    <a href="https://www.youtube.com/playlist?list=PLT5rARDev_rkQdFimoHlpv2Och1H0uBLs"><img
+                            src="../../../_/img/youtube.svg" class="icon-footer-2nd" /><span>YouTube</span></a>
+                </li>
+            </ul>
+
+            <h3 class="ted-footer__title">Legal</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/en/legal-notice" target="_blank">Legal Notice</a>
+                </li>
+                <li class="li-footer"><a href="https://ted.europa.eu/en/cookie-choice" target="_blank">Cookies</a>
+                </li>
+                <li class="li-footer"><a
+                        href="https://ted.europa.eu/en/accessibility"
+                        target="_blank">Accessibility</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+            <h3 class="ted-footer__title">About us</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/">About TED</a></li>
+            </ul>
+
+            <h3 class="ted-footer__title">Other services</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="https://ted.europa.eu/TED/main/HomePage.do">EU tenders</a></li>
+                <li class="li-footer"><a href="https://data.europa.eu/en">European data</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/eu-vocabularies">EU vocabularies</a></li>
+                <li class="li-footer"><a href="https://cordis.europa.eu/">EU research results</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/who-is-who">EU Whoiswho</a></li>
+                <li class="li-footer"><a href="https://op.europa.eu/en/web/librarians-corner">EU publications</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="three-columns">
+        <div class="col-md-12 col-lg-4">
+            <!--<h2 class="sr-only" id="section-title-op">Publications Office of the European Union</h2> -->
+
+            <div class="ls-footer-logo"><a aria-labelledby="section-title-op" href="/"><img alt="European Union"
+                        class="ls-op" /></a></div>
+            <span class="ted-footer__title ted-footer__title--main"></span>
+           
+            <div class="ted-footer__rich-text">
+                <p class="byline-footer">Discover more on <a class="ls-underline" href="https://europa.eu/en/home"><span
+                            style="word-break: keep-all; white-space: nowrap; text-decoration: underline!important">europa.eu</span></a>
+                </p>
+
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <h3 class="ted-footer__title">Contact the EU</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer"><a href="tel:0080067891011">Call us 00 800 6 7 8 9 10 11</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/call-us_en">Use other
+                        Telephone options</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/write-us_en">Write to us via
+                        our contact forms</a></li>
+                <li class="li-footer"><a href="https://european-union.europa.eu/contact-eu/meet-us_en">Meet us at one of
+                        the EU centres</a></li>
+
+            </ul>
+
+        </div>
+        <div class="col-md-12 col-lg-4">
+             <h3 class="ted-footer__title">Social Media</h3>
+            <ul class="ul-footer">
+                <li class="li-footer"><a
+                        href="https://european-union.europa.eu/contact-eu/social-media-channels_en#/search"><i
+                            aria-hidden="true" class="gs-icon-twitter"></i>Search of EU social media channels</a></li>
+
+            </ul>
+            <h3 class="ted-footer__title">EU institutions and bodies</h3>
+
+            <ul class="ul-footer">
+                <li class="li-footer institutions"><a href="https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies_en">Search all EU institutions and bodies</a></li>
+               
+            </ul>
+        </div>
+    </div>
+</div>  </body>
+</html>

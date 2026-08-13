@@ -362,7 +362,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>Codes are normally maintained in "code lists". The ESPD-EDM keeps and distributes these code lists in Genericode 1.0 (<a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/">GC</a>) files (one *.gc file per code list).</p>
+<p>Codes are normally maintained in "code lists". The ESPD-EDM keeps and distributes these code lists in Genericode 1.0 (<a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/">GC</a>) files (one *.gc file per code list).</p>
 </div>
 <div class="paragraph">
 <p>The ESPD reuses code lists from EU Vocabularies. This is to facilitate alignment between the ESPD and eForms models, ensuring maximum interoperability. The excel and code list files themselves are not provided, their metadata and their location in EU Vocabularies is given.</p>
@@ -436,7 +436,7 @@ For Genericodes it is different. In this version ESPD provides the genericode (g
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For identifiers, this ESPD specification requires at least (and always) the mandatory attribute </strong>schemeAgencyID. When identifying parties, like the Economic Operator, the Buyer, etc., the attribute schemeID SHOULD also be used (for this use the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc">EOIDType</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For identifiers, this ESPD specification requires at least (and always) the mandatory attribute </strong>schemeAgencyID. When identifying parties, like the Economic Operator, the Buyer, etc., the attribute schemeID SHOULD also be used (for this use the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a>).</p></td>
 </tr>
 </tbody>
 </table>
@@ -652,7 +652,7 @@ cbc:ContractFolderID&gt;
 <p>Code lists contain the code identifiers that are expected as "values" for a data element of type CODE (i.e. a UBL-2.4 cbc:CodeType element). This is case of code lists such as <em>eo-role-type</em>, or <em>docref-content-type</em>, etc.</p>
 </div>
 <div class="paragraph">
-<p>However, this ESPD-EDM specification also uses the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc">EOIDType</a> with a different purpose, "the identification of the type of scheme used to identify parties, namely Economic Operators" (but should also used to identify the schemes used to identify Buyers, Service Providers, etc.).</p>
+<p>However, this ESPD-EDM specification also uses the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a> with a different purpose, "the identification of the type of scheme used to identify parties, namely Economic Operators" (but should also used to identify the schemes used to identify Buyers, Service Providers, etc.).</p>
 </div>
 <div class="paragraph">
 <p>The link below takes you to the folder on Github containing the codelist file where, in the "EOIDType" sheet, you will be able to see the possible values of this code list. These codes are to be used as values of the schemeID attribute (attribute of the UBL-2.4 element cbc:Identifier):</p>
@@ -772,7 +772,7 @@ The source code can be copied from the code block below the callout section
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The element cbc:ResponseID is of type Identifier (as defined in the Core Component Type Specification library). The value ''VAT'' assigned to the attribute schemeID, taken from the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc">EOIDType</a>, is used to indicate that the type of identifier used is the Value Added Tax identifier issued by the Spanish Tax Agency (ES-AEAT).</td>
+<td>The element cbc:ResponseID is of type Identifier (as defined in the Core Component Type Specification library). The value ''VAT'' assigned to the attribute schemeID, taken from the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a>, is used to indicate that the type of identifier used is the Value Added Tax identifier issued by the Spanish Tax Agency (ES-AEAT).</td>
 </tr>
 </table>
 </div>
@@ -1108,7 +1108,7 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/BooleanGUIControlType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/BooleanGUIControlType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/BooleanGUIControlType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/BooleanGUIControlType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -1270,7 +1270,7 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/CriterionElementType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/CriterionElementType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/CriterionElementType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/CriterionElementType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -1606,7 +1606,7 @@ Contains values to be use by software implementations to display graphic control
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -1853,7 +1853,7 @@ This code list is maintained by the ESPD Team and codes are collected from Banqu
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/FinancialRatioType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/FinancialRatioType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/FinancialRatioType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/FinancialRatioType.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
@@ -2109,7 +2109,7 @@ Content is collected from the ESCO classification. The data type expected for th
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ProfileExecutionID.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ProfileExecutionID.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ProfileExecutionID.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ProfileExecutionID.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -2181,7 +2181,7 @@ Content is collected from the ESCO classification. The data type expected for th
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/PropertyGroupType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/PropertyGroupType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/PropertyGroupType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/PropertyGroupType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
@@ -2253,7 +2253,7 @@ Content is collected from the ESCO classification. The data type expected for th
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ResponseDataType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ResponseDataType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ResponseDataType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ResponseDataType.gc</a></p></td>
 </tr>
 </tbody>
 </table></div></td>
