@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Technical Implementation (New) :: TED Developer Docs</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/index-new.html">
+    <title>Exclusion Grounds :: TED Developer Docs</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/exclusion-grounds.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -283,13 +283,13 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ESPD EDM</a></li>
-    <li><a href="index-new.html">Technical Implementation (New)</a></li>
+    <li><a href="exclusion-grounds.html">Exclusion Grounds</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="index-new.html">5.0.0</a>
+    <a class="version is-current" href="exclusion-grounds.html">5.0.0</a>
     <a class="version is-missing" href="../../4.1.0/index.html">4.1.0</a>
     <a class="version is-missing" href="../../4.0.0/index.html">4.0.0</a>
     <a class="version is-missing" href="../../3.3.0/index.html">3.3.0</a>
@@ -307,161 +307,91 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Technical Implementation (New)</h1>
+<h1 class="page">Exclusion Grounds</h1>
 <div class="sect1">
-<h2 id="_technical_implementation"><a class="anchor" href="#_technical_implementation"></a>Technical Implementation</h2>
+<h2 id="_exclusion_grounds"><a class="anchor" href="#_exclusion_grounds"></a>Exclusion Grounds</h2>
 <div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>The contracting body shall provide the exclusion grounds and selection criteria for its tendering process as structured information — via ESPD template or structured list of criteria set out in a call for tender.</strong></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The ESPD request must contain information about the criteria that set the exclusion grounds as stated in Directive 2014/24/EU Art. 57 and referred to in Directive 2014/25/EU Art. 80 and/or according to national legislation. These should be retrieved from e-Certis.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>This section provides technical documentation for developers implementing ESPD Services based on the ESPD-EDM v5.0.0 model.</p>
+<p>Criteria are grouped under different categories. The figure below identifies and lists these categories for the exclusion criteria (branches in text boxes), and specific subgroups within each category (leaves in text without boxes).</p>
 </div>
+<div class="paragraph">
+<p>Each branch in this 'criteria classification' corresponds to one data structure that is identical for all the leaves under that branch.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNq9lV1v2jAUhu_zKyzEpH00VUgICKRdtIxWSAykBiZujWOKRbAz20D67-ckhHjEpB2TuIgUn5ycj-e1fZocfAfOvUuoFRGKOQyzddf_2uSZ5UByi-tb1nAxGM-D0XTSB0uWgNTZjxOAWMQ4cBIf9pahD1ZEWiGT-Wfn09lna-H0QQSFvMfgG_js3DlfLMg5O1TCcLbNHEEaTDKwcKwt22PAyetaAu--p2qWOJGgcaqrcQyyjCDaACjB6YtlTpLHavI828IBco2pSnigoKUI5MvCyRo-t_qA7WEEGoPp5NdoMFORg4YJQJ7NM_SvgsCcXwjFGoeggZNXG3GytWPI5R04LRHjPNYNKw53obaWWGXhmiGCO_qXA4erFUEbU4ngCM_QSYnvuXX0ul2NenL477J5JtlcTbbZy-hxfmw3xXAmT57P7ZmEcw3CxVtpLzm2JUzypgqDEMi4M07U9UIqrbsa94-k0H-9gppvouYV1ILpYPQwrsHluyZcngHXloisdEz3aicc8n4Ko2CoaozgMjXWsCzKq5DwNIj_nViPewXhrolwuyD8qC6pyTCo25Jt413SNjAWRFJ7CenmeOyyNaGCRXtM0ZtmRByHtgoPqWZkqkr9z4j8tmG4JboPFLbYibhGlLKjCr62Jsvta9ULuULHnklHv9Dx5yhQJ_vHfDCrUdI8FfwLp0U9iNFwh2S5PUMiJOOSMFqjgF5LpXX_7Gh8LIse4Ap2LeNM7WiX89NYjSJ7-mSPJrPhyzCow2i8ojsXKKZjiyA1rugqKjuMOY7PbQJSlPZcWtSj_DgWmGp0dpTjyBb4nVve0FGFZedMjBsUq2e_RknjmO0WSk4e0rlWOzLM11nXIB-FMsouZPXyziQo81a67GqML0XU3eEfcvGg7A==" alt="Exclusion criteria classification" width="950" height="450">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 1. Exclusion criteria classification</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_convictions"><a class="anchor" href="#_convictions"></a>Convictions</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting Started</h3>
+<h3 id="_related_information_requirements"><a class="anchor" href="#_related_information_requirements"></a>Related information requirements</h3>
+<div class="paragraph">
+<p>The exclusion grounds relating to criminal convictions are based on Article 57(1) of Directive 2014/24/EU. They are mandatory — the buyer cannot remove them.</p>
+</div>
+<div class="paragraph">
+<p>The criteria in this category are:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="getting-started.html" class="xref page">Getting Started</a><br>
-Architecture overview, distribution package contents, repository structure, and first steps for implementers.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_espd_documents"><a class="anchor" href="#_espd_documents"></a>ESPD Documents</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_request.html" class="xref page">ESPD Request</a><br>
-Technical guide to the ESPD Request document: schema, cardinality constraints, root elements, contracting party, and service provider.</p>
+<p>Participation in a criminal organisation</p>
 </li>
 <li>
-<p><a href="tech_response.html" class="xref page">ESPD Response</a><br>
-Technical guide to the ESPD Response document: schema, economic operator party, criterion responses, and evidence.</p>
+<p>Corruption</p>
 </li>
 <li>
-<p><a href="lots-management.html" class="xref page">Lots Management</a><br>
-How lots are handled in both Request and Response, eForms alignment, and multi-lot response patterns.</p>
+<p>Fraud</p>
 </li>
 <li>
-<p><a href="common-concepts.html" class="xref page">Common Concepts</a><br>
-Shared technical patterns: Schematron architecture, validation life-cycle, and execution process.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_criteria"><a class="anchor" href="#_criteria"></a>Criteria</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_common_aspects_for_criteria.html" class="xref page">How Criteria Work</a><br>
-The criterion-property-response chain, property group types (ONTRUE/ONFALSE), and response linking patterns.</p>
+<p>Terrorist offences or offences linked to terrorist activities</p>
 </li>
 <li>
-<p><a href="exclusion-grounds.html" class="xref page">Exclusion Grounds</a><br>
-All exclusion criteria categories with data structures and response patterns.</p>
+<p>Money laundering or terrorist financing</p>
 </li>
 <li>
-<p><a href="selection-criteria.html" class="xref page">Selection Criteria</a><br>
-All selection criteria categories with data structures and response patterns.</p>
-</li>
-<li>
-<p><a href="validation-conformance.html" class="xref page">Validation and Conformance</a><br>
-Criteria-specific validation: UUID checks, CVA constraints, conformance testing patterns.</p>
-</li>
-<li>
-<p><a href="distribution-tooling.html" class="xref page">Distribution and Tooling</a><br>
-Distribution package criterion artefacts, JSON data model, and integration guidance.</p>
+<p>Child labour and other forms of trafficking in human beings</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_model_reference"><a class="anchor" href="#_model_reference"></a>Model Reference</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="code-lists.html" class="xref page">Code Lists</a><br>
-All ESPD code lists with metadata, versions, usage contexts, and XML examples.</p>
-</li>
-<li>
-<p><a href="business-rules.html" class="xref page">Business Rules</a><br>
-Complete catalogue of Schematron business rules with severity, element constraints, and validation layers overview.</p>
-</li>
-<li>
-<p><a href="glossary.html" class="xref page">Glossary</a><br>
-Definitions of key technical terms.</p>
-</li>
-<li>
-<p><a href="_attachments/ESPD_CM_html/index.html">Conceptual Model (HTML)</a></p>
-</li>
-</ul>
+<h3 id="_xml_example"><a class="anchor" href="#_xml_example"></a>XML Example</h3>
+<div class="paragraph">
+<p><em>'Participation in a criminal organisation' conviction</em></p>
 </div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_legacy_pages_to_be_removed_after_review"><a class="anchor" href="#_legacy_pages_to_be_removed_after_review"></a>Legacy pages (to be removed after review)</h3>
-<div class="sect3">
-<h4 id="_documents_old"><a class="anchor" href="#_documents_old"></a>Documents (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_architecture.html" class="xref page">Technical Architecture</a> (content moved to Getting Started)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_criteria_old"><a class="anchor" href="#_criteria_old"></a>Criteria (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_exclusion_criteria.html" class="xref page">Exclusion Criteria</a> (replaced by exclusion-grounds.adoc)</p>
-</li>
-<li>
-<p><a href="tech_selection_criteria.html" class="xref page">Selection Criteria</a> (replaced by selection-criteria.adoc)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_validation_and_rules_old"><a class="anchor" href="#_validation_and_rules_old"></a>Validation and Rules (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_validation.html" class="xref page">Validation</a> (split into common-concepts.adoc + validation-conformance.adoc)</p>
-</li>
-<li>
-<p><a href="tech_rules_reference.html" class="xref page">Business Rules Reference</a> (merged into business-rules.adoc)</p>
-</li>
-<li>
-<p><a href="tech_busrules.html" class="xref page">Business Rules Guide</a> (merged into business-rules.adoc)</p>
-</li>
-<li>
-<p><a href="tech_br_espd_profile.html" class="xref page">BIS 41 ESPD Profile</a> (TBD — may be removed or merged)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_reference_old"><a class="anchor" href="#_reference_old"></a>Reference (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_codelist.html" class="xref page">Code Lists Catalogue</a> (replaced by code-lists.adoc)</p>
-</li>
-<li>
-<p><a href="tech_dist_pack.html" class="xref page">Distribution Package</a> (replaced by distribution-tooling.adoc)</p>
-</li>
-<li>
-<p><a href="tech_glossary.html" class="xref page">Technical Glossary</a> (replaced by glossary.adoc)</p>
-</li>
-<li>
-<p><a href="tech_br_request_reqs.html" class="xref page">Request Requirements</a> (to be merged into Request Model Reference)</p>
-</li>
-<li>
-<p><a href="tech_br_response_reqs.html" class="xref page">Response Requirements</a> (to be merged into Response Model Reference)</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Please generate an ESPD Request and ESPD Response documents on the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/xml-examples">ESPD-EDM XML examples</a> to see a full example.</p>
 </div>
 <hr>
 <div class="paragraph">
@@ -469,7 +399,6 @@ Definitions of key technical terms.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
 </div>
 </div>
 </div>
