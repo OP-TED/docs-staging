@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Code Lists :: TED Developer Docs</title>
+    <title>Code List Catalogue :: TED Developer Docs</title>
     <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/code-lists.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -367,19 +367,2587 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Code Lists</h1>
+<h1 class="page">Code List Catalogue</h1>
 <div class="sect1">
-<h2 id="_xml_examples"><a class="anchor" href="#_xml_examples"></a>1. XML Examples</h2>
+<h2 id="_general_information"><a class="anchor" href="#_general_information"></a>1. General Information</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="codes_and_identifiers"><a class="anchor" href="#codes_and_identifiers"></a>1.1. Codes and Identifiers</h3>
+<div class="paragraph">
+<p>A code is a shortened way (a number, or a short abbreviated text), leading to the definition of a 'concept'. The code represents the concept and is used by software applications to retrieve the definition of the concept or make automatic decisions.</p>
+</div>
+<div class="paragraph">
+<p>An Identifier, in turn, can be defined as "a value (represented as a short text, a number or a combination of both) used to establish the identity of, and distinguish uniquely, one occurrence of an object following a pattern".</p>
+</div>
+<div class="paragraph">
+<p>The essential distinctive features between identifiers and codes are:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Identifiers point at specific occurrences of objects (instances); codes replace concepts;</p>
+</li>
+<li>
+<p>Identifiers are virtually limitless while codes are finite. In other words, identifier lists are "open" (the lists may grow) and code list are "closed" (practically never updated once consolidated). Hence codes are maintained in 'Codelists' whilst identifiers are usually kept in databases.</p>
+</li>
+<li>
+<p>Identifiers are in principle maintained in the business domain, e.g. buyer identifiers, economic operator identifiers, exclusion or selection criteria identifiers, etc.</p>
+</li>
+<li>
+<p>Codes may belong to three different domains:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>they can be somehow 'business-agnostic' and be used cross-domain (e.g. country codes, currency codes, language codes, etc.);</p>
+</li>
+<li>
+<p>business-specific domain (i.e. procurement specific, like codes representing contract types, procurement procedure types, criteria types, etc.); and</p>
+</li>
+<li>
+<p>business process-specific, i.e. ESPD-specific, such as the data type expected in the response to a criterion, or the type of a criterion property, etc.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_codes_and_code_lists"><a class="anchor" href="#_codes_and_code_lists"></a>1.2. Codes and code lists</h3>
+<div class="paragraph">
+<p>The ESPD Exchange Data Model tries to reuse as the codes that are already used for e-Procurement much as possible. In any project, like the ESPD-EDM, there are at least three types (or layers) of codes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Cross-sector</strong>, common, codes, like the ones defined and maintained by the ISO for currencies, languages, countries, etc.; or the ones defined by the European Commission that can be used in multiple business domains, e.g. the NUTS defined by EUROSTAT; the ones defined by BACH (Banque de France), etc.;</p>
+</li>
+<li>
+<p><strong>Business domain-related</strong>, maintained by international or European authorities, e.g. the ones defined by UNECE (as unit codes), or by the Publications Office of the European Union (OP), e.g. types of procurement procedures (based on the EU Directives);</p>
+</li>
+<li>
+<p><strong>Project-specific</strong> (or application-specific), i.e. those codes that are particular of the project. Types (taxonomy) of exclusion and selection criteria, types of evaluation method, etc. in the case of the ESPD-EDM.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Codes are normally maintained in "code lists". The ESPD-EDM keeps and distributes these code lists in Genericode 1.0 (<a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/">GC</a>) files (one *.gc file per code list).</p>
+</div>
+<div class="paragraph">
+<p>The ESPD reuses code lists from EU Vocabularies. This is to facilitate alignment between the ESPD and eForms models, ensuring maximum interoperability. The excel and code list files themselves are not provided, their metadata and their location in EU Vocabularies is given.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For Genericodes it is different. In this version ESPD provides the genericode (gc) files from EU Vocabularies to ensure its use and validation. In future versions of the ESPD, only the GC of the code lists used and maintained by ESPD will be provided.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>ESPD-EDM Code list contains the following elements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Metadata</strong>: information about the code list, e.g. its identifier, the identifier and name of the agency responsible for defining and maintaining the list, the version of the list, etc.</p>
+</li>
+<li>
+<p><strong>Code identifier</strong>: the literal (a label composed of characters, numbers and symbols like '_');</p>
+</li>
+<li>
+<p><strong>Concept description</strong>: the definition of the concept represented by the code;</p>
+</li>
+<li>
+<p><strong>Multilingual descriptions</strong>: the translations of the English definitions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The link below takes you to the folder on Github containing the codelist file where you will see how the codelist elements are organised:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists">Codelists on GitHub</a></p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/codelists.json">codelists.json</a> file provides a machine-readable reference of all code lists used by the ESPD-EDM, including their identifiers, versions, and the agency responsible for their maintenance.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_compulsory_attributes"><a class="anchor" href="#_compulsory_attributes"></a>1.3. Compulsory attributes</h3>
+<div class="paragraph">
+<p><em>Table 1. ESPD Requirement regarding codes</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For codes, this ESPD specification requires always three mandatory attributes: </strong>listID<strong>, </strong>listAgencyID<strong>, and </strong>listVersionID.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Table 2. ESPD Requirement regarding identifiers</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong>:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For identifiers, this ESPD specification requires at least (and always) the mandatory attribute </strong>schemeAgencyID. When identifying parties, like the Economic Operator, the Buyer, etc., the attribute schemeID SHOULD also be used (for this use the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc">EOIDType</a>).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In UBL Codes and identifiers are based on ebXML Core components (UBL conforms to <a href="https://docs.oasis-open.org/ubl/UBL-conformance-to-CCTS/v1.0/UBL-conformance-to-CCTS-v1.0.html">ebXML CCTS ISO/TS 15000-5:2005</a> currently maintained by UN/CEFACT).</p>
+</div>
+<div class="paragraph">
+<p>One convenient characteristic of these two CCT elements (Codes and Identifiers) is that they use a rich set of attributes that allow to identify their pattern, the name of the list, the URI from where to obtain the list, the Agency that maintains the list, the version of the list, and other.</p>
+</div>
+<div class="paragraph">
+<p>UBL-2.4 CCT are defined in the file CCTS_CCT_SchemaModule-2.4.xsd (see folders xsd/common or xsdrt/common in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0">distribution package</a>).</p>
+</div>
+<div class="paragraph">
+<p>The figure below shows the complete list of attributes for the CCT CodeType component.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/blockdiag/svg/eNrFUstOwzAQPNdfsTIXkEIfgKBSBVLVEqkXhChwQVXkxtvE1LGj2IGWqv-OnRBSOHDFB2s9M_bujncpdbzmgiWwI70e3LMEoWcxTpWImayiKNYcpTC2m9pMwiz7pYmER0xv4mQRs7YQy9Ki6b7mCRyHIikLhKsueBpa-sSnm6MFkzMFGTp8QwCqY_QuuE3hGi6Go28sRZGk1oGDswrkuGKltNFKK2vEB3rmomJIUugyhw8sdFSHO0JiLXXhNPTodhhOb8_piBDqa3rc5kjh9Aao73E2pUEdjRNU8fb3-Y5l2CCH8TMWRmhVy1VDMJWUzpv2kaeHWRPO4xQz9AC8cOFLU1rhgnxVvxKFsd_ld2jrnNOblOW-YccqjnypNwE0ng2u-oGxW-l5zkyKPIC2-Wk_HE8u6WJEOh1o8aVk8ZrWoMWNbS-EYd8tWhn7tZrsUij8gf_IWj9Wbf_mLOnsyb4ZtNogq53PHE3QDBC8MVkiCOMGa3gwEsF_DsRfH3w26Lvv238C1ZUpOg==" alt="Code attributes" width="450" height="450">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 1. Code attributes</em></p>
+</div>
+<div class="paragraph">
+<p>And its corresponding definitions, as provided by OASIS UBL (ISO/IEC 19845):</p>
+</div>
+<div class="paragraph">
+<p><em>Table 3. UBL attributes for codes</em></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>listID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identification of a list of codes (<strong>MANDATORY in this version of ESPD</strong>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>listAgencyID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An agency that maintains one or more lists of codes (<strong>MANDATORY in this version of ESPD</strong>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>listAgencyName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the agency that maintains the list of codes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>listName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of a list of codes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>listVersionID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the list of codes (<strong>MANDATORY in this version of ESPD</strong>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The textual equivalent of the code content component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>languageID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identifier of the language used in the code name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>listURI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Uniform Resource Identifier that identifies where the code list is located.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>listSchemeURI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Uniform Resource Identifier that identifies where the code list scheme is located.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This other figure shows the attributes for the CCT <code>IdentifierType</code> component.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/blockdiag/svg/eNq9Ut9r2zAQfo7-ikN92cDNjy50gdBCaWrIyxjrtpdSjGJdbDWyZKzzlrTkf59sx1WyQh-rB3H33Sfd6dO30jbdSCUyeGGjEXwXGcKIMM2NSoVuoyS1ErVyNMyp0LAs_uMkqkHcaCnRkForrBJBVKlVTeiGT2UGn2KV1RXCbAiBBIH0uWl9jwSuFAYK9PiWAbRp8ldJyuEKprP5K5ajynLy4OSiBSWuRa0pWVtDTj1jU5m2FZZVti7hGSubdOELY6nVtvIcfnY3ixd3X_icMR4m-7krkcP5NXCX5ljgcsGjPv4mCgzZTYYm3R3XO-SU9Rsrp6w5pi0EiV8_lgFoEniQqhnLWIOP7DD5WlWOXkcf8KCa57tclM1jfdVIlCu7jaDXa_J1HDna6aYuhctRRhAevhjHN7eX_HHOBgMI-EqLdMM7kHBL4UAcj_3iraiH1XfXyuAJftK1u6zdPlhPNtizfW-tThayXl2JLuotA3-ErhGU81aavTFB9PEWeO9LLyZj_2H7f2UPLEE=" alt="Identifier attributes" width="450" height="350">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 2. Identifier attributes</em></p>
+</div>
+<div class="paragraph">
+<p><em>Table 4. UBL attributes for identifiers and corresponding definitions, as provided by OASIS UBL (ISO/IEC 19845)</em>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Attribute</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemeID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identification of the identification scheme.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemeName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the identification scheme.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemeAgencyID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The identification of the agency that maintains the identification scheme (<strong>MANDATORY in this version of ESPD</strong>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemeAgencyName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the agency that maintains the identification scheme.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemeVersionID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The version of the identification scheme.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemeDataURI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Uniform Resource Identifier that identifies where the identification scheme data is located.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>schemeURI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Uniform Resource Identifier that identifies where the identification scheme is located.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_xml_example"><a class="anchor" href="#_xml_example"></a>1.4. XML Example</h3>
+<div class="paragraph">
+<p>This fragment of XML shows how the compulsory attributes are used for the some of the root elements of an ESPD Request document.</p>
+</div>
+<div class="sect3">
+<h4 id="_code_with_callouts"><a class="anchor" href="#_code_with_callouts"></a>1.4.1. Code with callouts</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The source code can be copied from the code block below the callout section
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre><i class="conum" data-value="1"></i><b>(1)</b>
+&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.4&lt;/cbc:UBLVersionID&gt;
+<i class="conum" data-value="2"></i><b>(2)</b>
+&lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
+&lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP"
+<i class="conum" data-value="3"></i><b>(3)</b>
+          schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
+<i class="conum" data-value="4"></i><b>(4)</b>
+&lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/
+cbc:ContractFolderID&gt;
+<i class="conum" data-value="5"></i><b>(5)</b>
+&lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1.0&lt;/cbc:VersionID&gt;</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The Agency responsible for the maintenance of the UBL versioning is the OASIS UBL Technical Committee</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The identifier for this document was issued by the a Spanish Central Government Directorate identified as 'DGPE'</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The UUID follows the ISO/IEC Scheme 9834-8:2008 Version 4 and was generated by the European Commission&#8217;s Directorate General GROWTH (DG GROW)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The reference number used to identify to which procurement procedure this ESPD document belongs (PP.20170419.1024-9) has been supplied by the Spanish Directorate DGPE</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Generic information, such as the content version ID, use always by default the "OP" Agency ID. Notice that the other additional attributes may be also used, as in this example.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder /codelists of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0">distribution package</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_copy_the_code_block"><a class="anchor" href="#_copy_the_code_block"></a>1.4.2. Copy the code block</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.4&lt;/cbc:UBLVersionID&gt;
+&lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
+&lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP"
+          schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
+&lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/cbc:ContractFolderID&gt;
+&lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1.0&lt;/cbc:VersionID&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code_list_that_is_not_used_for_code_values"><a class="anchor" href="#_code_list_that_is_not_used_for_code_values"></a>1.5. Code list that IS NOT used for CODE values</h3>
+<div class="paragraph">
+<p>Code lists contain the code identifiers that are expected as "values" for a data element of type CODE (i.e. a UBL-2.4 cbc:CodeType element). This is case of code lists such as <em>eo-role-type</em>, or <em>docref-content-type</em>, etc.</p>
+</div>
+<div class="paragraph">
+<p>However, this ESPD-EDM specification also uses the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc">EOIDType</a> with a different purpose, "the identification of the type of scheme used to identify parties, namely Economic Operators" (but should also used to identify the schemes used to identify Buyers, Service Providers, etc.).</p>
+</div>
+<div class="paragraph">
+<p>The link below takes you to the folder on Github containing the codelist file where, in the "EOIDType" sheet, you will be able to see the possible values of this code list. These codes are to be used as values of the schemeID attribute (attribute of the UBL-2.4 element cbc:Identifier):</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists">Codelists on GitHub</a></p>
+</div>
+<div class="paragraph">
+<p>The next fragment of XML shows how this is used in the particular case of the Criterion "Relied on entities" ("Does the economic operator rely on the capacities of other entities in order to meet the selection criteria&#8230;&#8203;?").:</p>
+</div>
+<div class="paragraph">
+<p><em>TenderingCriterionProperty (a QUESTION) asking for the identifier of the Economic Operator</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_xml_example_2"><a class="anchor" href="#_xml_example_2"></a>1.6. XML Example</h3>
+<div class="sect3">
+<h4 id="_code_with_callouts_2"><a class="anchor" href="#_code_with_callouts_2"></a>1.6.1. Code with callouts</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The source code can be copied from the code block below the callout section
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:TenderingCriterionProperty&gt;
+  &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+     1fa05728-308f-43b0-b547-c903ffb0a8af
+  <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;/cbc:ID&gt;
+  &lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
+  &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+  &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;
+    ECONOMIC_OPERATOR_IDENTIFIER
+  <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;/cbc:ValueDataTypeCode&gt;
+&lt;/cac:TenderingCriterionProperty&gt;</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The identifier of the property will be used in the response to map link the response to this QUESTION.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The ECONOMIC_OPERATOR_IDENTIFIER is mapped to an element cbc:ResponseID in the response (which is based on the UBL-2.4 element cbc:Identifier).</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_copy_the_code_block_2"><a class="anchor" href="#_copy_the_code_block_2"></a>1.6.2. Copy the code block</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
+  &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+     1fa05728-308f-43b0-b547-c903ffb0a8af
+  &lt;/cbc:ID&gt;
+  &lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
+  &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+  &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;
+    ECONOMIC_OPERATOR_IDENTIFIER
+  &lt;/cbc:ValueDataTypeCode&gt;
+&lt;/cac:TenderingCriterionProperty&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><em>TenderingCriterionResponse (the answer to the previous QUESTION)</em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_xml_example_3"><a class="anchor" href="#_xml_example_3"></a>1.7. XML Example</h3>
+<div class="sect3">
+<h4 id="_code_with_callouts_3"><a class="anchor" href="#_code_with_callouts_3"></a>1.7.1. Code with callouts</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The source code can be copied from the code block below the callout section
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;cac:TenderingCriterionResponse&gt;
+  &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
+  &lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+    1fa05728-308f-43b0-b547-c903ffb0a8af
+  <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;/cbc:ValidatedCriterionPropertyID&gt;
+  &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;
+    B82387770
+  <i class="conum" data-value="2"></i><b>(2)</b>
+  &lt;/cbc:ResponseID&gt;
+&lt;/cac:TenderingCriterionResponse&gt;</pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Notice that this UUID is identical to the QUESTION UUID, which is the mechanism used in UBL to link the answer to the very specific QUESTION it is responding.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The element cbc:ResponseID is of type Identifier (as defined in the Core Component Type Specification library). The value ''VAT'' assigned to the attribute schemeID, taken from the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc">EOIDType</a>, is used to indicate that the type of identifier used is the Value Added Tax identifier issued by the Spanish Tax Agency (ES-AEAT).</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_copy_the_code_block_3"><a class="anchor" href="#_copy_the_code_block_3"></a>1.7.2. Copy the code block</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionResponse&gt;
+  &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
+  &lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
+    1fa05728-308f-43b0-b547-c903ffb0a8af
+  &lt;/cbc:ValidatedCriterionPropertyID&gt;
+  &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;
+    B82387770
+  &lt;/cbc:ResponseID&gt;
+&lt;/cac:TenderingCriterionResponse&gt;</code></pre>
+</div>
+</div>
+<div id="code-list-catalogue" class="paragraph">
+<p>This section collects all code lists used in <strong>ESPD-EDM</strong> with its classification, description and meta-data.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="code-list-summary"><a class="anchor" href="#code-list-summary"></a>1.8. Quick Reference</h3>
+<div class="paragraph">
+<p>The table below provides a summary of all code lists used in ESPD documents and the XSD elements where they are applied. Detailed metadata for each code list follows in the sections below.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In ESPD-EDM v5.0.0, the old <em>Criterion</em> code list was replaced by two separate code lists: <em>ExclusionGround</em> and <em>SelectionCriterion</em>, aligning with eForms and EU Vocabularies. For more details on changes in the code lists, consult the Release Notes.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In ESPD documents, codes can be used in different contexts:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Outside the criteria, in UBL components of type "Code Type";</p>
+</li>
+<li>
+<p>Inside the definition of a Criterion, in the ESPD Request, for the element Expected Code (<code>cac:TenderingCriterion/&#8203;cac:TenderingCriterionPropertyGroup/&#8203;cac:TenderingCriterionProperty/&#8203;cbc:ExpectedCode</code>);</p>
+</li>
+<li>
+<p>Inside the Response Value (<code>cac:TenderingCriterionResponse/&#8203;cac:ResponseValue/&#8203;cbc:ResponseCode</code>), where the Economic Operator supplies a valid code picked from the list specified in the ESPD Request.</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Code lists used in ESPD-EDM v5.0.0</caption>
+<colgroup>
+<col style="width: 27.2727%;">
+<col style="width: 18.1818%;">
+<col style="width: 9.0909%;">
+<col style="width: 45.4546%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code List</th>
+<th class="tableblock halign-left valign-top">Maintainer</th>
+<th class="tableblock halign-left valign-top">Source</th>
+<th class="tableblock halign-left valign-top">Used In</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#access-right-table">AccessRight</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Evidence/cbc:ConfidentialityLevelCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#boolean-gui-control-type-table">BooleanGUIControlType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">espd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion <em>finan-requ</em>: GUI control element (radio buttons / check boxes)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#country-table">Country</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:PostalAddress/cac:Country/cbc:IdentificationCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#criterion-element-type-table">CriterionElementType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">espd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty/cbc:TypeCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#currency-table">Currency</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All UBL-2.4 elements of type <code>cbc:Amount</code> (attribute <code>@currencyID</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#docrefcontent-type-table">DocrefcontentType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:AdditionalDocumentReference/cbc:DocumentTypeCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#economic-operator-size-table">EconomicOperatorSize</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:EconomicOperatorParty/&#8203;cac:QualifyingParty/cbc:IndustryClassificationCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#eoid-type-table">EOIDType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">espd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute <code>cac:PartyIdentification/cbc:ID@schemeID</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#eo-role-type-table">EoRoleType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:EconomicOperatorRole/cbc:RoleCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#exclusion-ground-table">ExclusionGround</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion/cbc:CriterionTypeCode</code> (exclusion criteria)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#financial-ratio-type-table">FinancialRatioType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">espd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT "Ratio Type" of Criterion <em>finan-rat</em> (via <code>cbc:ExpectedCode</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#language-table">Language</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Legislation/cac:Language/cbc:LocaleCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#occupation-table">Occupation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESCO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">esco</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty/cbc:ExpectedCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#profile-execution-id-table">ProfileExecutionID</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">espd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ProfileExecutionID</code> (root element of QualificationApplicationRequest / Response)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#property-group-type-table">PropertyGroupType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">espd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup/cbc:PropertyGroupTypeCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#response-data-type-table">ResponseDataType</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Team</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">espd</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty/cbc:ValueDataTypeCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#selection-criterion-table">SelectionCriterion</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EU Vocabularies</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">at-voc</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion/cbc:CriterionTypeCode</code> (selection criteria)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="access-right-table"><a class="anchor" href="#access-right-table"></a>2. access-right</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#access-right-xml-example">access-right xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>AccessRight</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Business-agnostic</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains controlled vocabulary listing the access rights or restrictions to resources. It is designed for but not limited to DCAT descriptions of datasets.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AccessRight</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">access-right</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/access-right" class="bare">http://publications.europa.eu/resource/authority/access-right</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20240612-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/access-right" class="bare">http://publications.europa.eu/resource/dataset/access-right</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/access-right/20240612-0" class="bare">http://publications.europa.eu/resource/dataset/access-right/20240612-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/access-right/20240612-0/xml/gc/AccessRight.gc" class="bare">http://publications.europa.eu/resource/distribution/access-right/20240612-0/xml/gc/AccessRight.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="boolean-gui-control-type-table"><a class="anchor" href="#boolean-gui-control-type-table"></a>3. boolean-gui-control-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#boolean-gui-control-type-xml-example">boolean-gui-control-type xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>BooleanGUIControlType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Technical</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESPD Team</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>This code list is only used in criterion 'Other economic or financial requirements' (<strong><em>finan-requ</em></strong>).
+Contains values to be use by software implementations to display graphic control elements: radio buttons and check boxes. Code allows to represent values: true, false and not selected.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BooleanGUIControlType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boolean-gui-control-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM" class="bare">https://github.com/OP-TED/ESPD-EDM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/BooleanGUIControlType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/BooleanGUIControlType.gc</a></p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="country-table"><a class="anchor" href="#country-table"></a>4. country</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#country-xml-example">country xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>Country</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Business-agnostic</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains controlled vocabulary that lists concepts associated with names of countries and territories with a three-letter coding.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Country</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">country</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/country" class="bare">http://publications.europa.eu/resource/authority/country</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250618-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/country" class="bare">http://publications.europa.eu/resource/dataset/country</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/country/20250618-0" class="bare">http://publications.europa.eu/resource/dataset/country/20250618-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/country/20250618-0/xml/gc/Country.gc" class="bare">http://publications.europa.eu/resource/distribution/country/20250618-0/xml/gc/Country.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="criterion-element-type-table"><a class="anchor" href="#criterion-element-type-table"></a>5. criterion-element-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#criterion-element-type-xml-example">criterion-element-type xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>CriterionElementType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Technical</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESPD Team</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains coding for each type of structural element to render the ESPDRequest and ESPDResponse.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CriterionElementType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">criterion-element-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM" class="bare">https://github.com/OP-TED/ESPD-EDM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/CriterionElementType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/CriterionElementType.gc</a></p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="currency-table"><a class="anchor" href="#currency-table"></a>6. currency</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#currency-xml-example">currency xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>Currency</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Business-agnostic</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains controlled vocabulary that lists concepts associated with currencies and currency subunits. The concepts included are correlated with the ISO 4217 international standard.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Currency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">currency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/currency" class="bare">http://publications.europa.eu/resource/authority/currency</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250618-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/currency" class="bare">http://publications.europa.eu/resource/dataset/currency</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/currency/20250618-0" class="bare">http://publications.europa.eu/resource/dataset/currency/20250618-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/currency/20250618-0/xml/gc/Currency.gc" class="bare">http://publications.europa.eu/resource/distribution/currency/20250618-0/xml/gc/Currency.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docrefcontent-type-table"><a class="anchor" href="#docrefcontent-type-table"></a>7. docrefcontent-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#docrefcontent-type-xml-example">docrefcontent-type xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>DocrefcontentType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Procurement Specific</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains coded possible document types referenced from the actual document.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DocrefcontentType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">docrefcontent-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/docrefcontent-type" class="bare">http://publications.europa.eu/resource/authority/docrefcontent-type</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250319-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/docrefcontent-type" class="bare">http://publications.europa.eu/resource/dataset/docrefcontent-type</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/docrefcontent-type/20250319-0" class="bare">http://publications.europa.eu/resource/dataset/docrefcontent-type/20250319-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/docrefcontent-type/20250319-0/xml/gc/DocrefcontentType.gc" class="bare">http://publications.europa.eu/resource/distribution/docrefcontent-type/20250319-0/xml/gc/DocrefcontentType.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="economic-operator-size-table"><a class="anchor" href="#economic-operator-size-table"></a>8. economic-operator-size</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#economic-operator-size-xml-example">economic-operator-size xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>EconomicOperatorSize</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Business-agnostic</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains different categories in which the operators are classified, according to their size (using as criteria the number of employees).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EconomicOperatorSize</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">economic-operator-size</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/economic-operator-size" class="bare">http://publications.europa.eu/resource/authority/economic-operator-size</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20240612-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/economic-operator-size" class="bare">http://publications.europa.eu/resource/dataset/economic-operator-size</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/economic-operator-size/20240612-0" class="bare">http://publications.europa.eu/resource/dataset/economic-operator-size/20240612-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/economic-operator-size/20240612-0/xml/gc/EconomicOperatorSize.gc" class="bare">http://publications.europa.eu/resource/distribution/economic-operator-size/20240612-0/xml/gc/EconomicOperatorSize.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eoid-type-table"><a class="anchor" href="#eoid-type-table"></a>9. eoid-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#eoid-type-xml-example">eoid-type xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>EOIDType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Technical</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESPD Team</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains coded parts identification type used in <strong><em>cac:PartyIdentification</em></strong>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EOIDType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eoid-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM" class="bare">https://github.com/OP-TED/ESPD-EDM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/EOIDType.gc</a></p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eo-role-type-table"><a class="anchor" href="#eo-role-type-table"></a>10. eo-role-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#eo-role-type-xml-example">eo-role-type xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>EoRoleType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Procurement specific</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains codes identifying the role of the economic operator in each procurement procedure.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EoRoleType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eo-role-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/eo-role-type" class="bare">http://publications.europa.eu/resource/authority/eo-role-type</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20211208-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/eo-role-type" class="bare">http://publications.europa.eu/resource/dataset/eo-role-type</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/eo-role-type/20211208-0" class="bare">http://publications.europa.eu/resource/dataset/eo-role-type/20211208-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/eo-role-type/20211208-0/xml/gc/EoRoleType.gc" class="bare">http://publications.europa.eu/resource/distribution/eo-role-type/20211208-0/xml/gc/EoRoleType.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="exclusion-ground-table"><a class="anchor" href="#exclusion-ground-table"></a>11. exclusion-ground</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>ExclusionGround</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Procurement specific</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains coded exclusion ground criteria used for public procurement procedures. This code list replaces the exclusion criteria part of the former <em>Criterion</em> code list (deprecated in v5.0.0).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExclusionGround</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exclusion-ground</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/exclusion-ground" class="bare">http://publications.europa.eu/resource/authority/exclusion-ground</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250618-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/exclusion-ground" class="bare">http://publications.europa.eu/resource/dataset/exclusion-ground</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/exclusion-ground/20250618-0" class="bare">http://publications.europa.eu/resource/dataset/exclusion-ground/20250618-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/exclusion-ground/20250618-0/xml/gc/ExclusionGround.gc" class="bare">http://publications.europa.eu/resource/distribution/exclusion-ground/20250618-0/xml/gc/ExclusionGround.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="financial-ratio-type-table"><a class="anchor" href="#financial-ratio-type-table"></a>12. financial-ratio-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#financial-ratio-type-xml-example">financial-ratio-type xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>FinancialRatioType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Technical</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESPD Team</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains codes of the possible financial ratios to declare in selection criteria <strong><em>finan-rat</em></strong>.
+This code list is maintained by the ESPD Team and codes are collected from Banque de France.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FinancialRatioType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">financial-ratio-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM" class="bare">https://github.com/OP-TED/ESPD-EDM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/FinancialRatioType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/FinancialRatioType.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BACH Banque de France</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BACH</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="language-table"><a class="anchor" href="#language-table"></a>13. language</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#language-xml-example">language xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>Language</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Business-agnostic</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains controlled vocabulary that lists concepts associated with languages.
+The concepts included are correlated with the ISO 639 international standard.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Language</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/language" class="bare">http://publications.europa.eu/resource/authority/language</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250618-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/language" class="bare">http://publications.europa.eu/resource/dataset/language</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/language/20250618-0" class="bare">http://publications.europa.eu/resource/dataset/language/20250618-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/language/20250618-0/xml/gc/Language.gc" class="bare">http://publications.europa.eu/resource/distribution/language/20250618-0/xml/gc/Language.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="occupation-table"><a class="anchor" href="#occupation-table"></a>14. occupation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An example of how to use this code list can be found in <a href="#occupation-xml-example">occupation xml Example</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>Occupation</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Procurement specific</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESCO (European Skills, Competences, Qualifications and Occupations)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains codes for professional enrolment areas in which the Economic Operator must be registered in.
+Content is collected from the ESCO classification. The data type expected for this code is URL following the ESCO taxonomy identification that uses a URI as the key value.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Occupation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">occupation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/occupation" class="bare">http://publications.europa.eu/resource/authority/occupation</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20221214-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/occupation" class="bare">http://publications.europa.eu/resource/dataset/occupation</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/occupation/20221214-0" class="bare">http://publications.europa.eu/resource/dataset/occupation/20221214-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/occupation/20221214-0/xml/gc/Occupation.gc" class="bare">http://publications.europa.eu/resource/distribution/occupation/20221214-0/xml/gc/Occupation.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Directorate-General for Employment, Social Affairs and Inclusion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EMPL</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="profile-execution-id-table"><a class="anchor" href="#profile-execution-id-table"></a>15. profile-execution-id</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>ProfileExecutionID</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Technical</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESPD Team</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains coded identification and version the ESPD-EDM used to create the XML instance. The identification may include the exact version of the specification.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ProfileExecutionID</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profile-execution-id</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM" class="bare">https://github.com/OP-TED/ESPD-EDM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ProfileExecutionID.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ProfileExecutionID.gc</a></p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="property-group-type-table"><a class="anchor" href="#property-group-type-table"></a>16. property-group-type</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>PropertyGroupType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Technical</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESPD Team</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains coded types to be used by software implementations to control which elements to be rendered in the displayed user interface.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PropertyGroupType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">property-group-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM" class="bare">https://github.com/OP-TED/ESPD-EDM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/PropertyGroupType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/PropertyGroupType.gc</a></p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="response-data-type-table"><a class="anchor" href="#response-data-type-table"></a>17. response-data-type</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>ResponseDataType</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Technical</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ESPD Team</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains identifiers used to describe data type expected in criteria elements.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ResponseDataType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">response-data-type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.0.0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM" class="bare">https://github.com/OP-TED/ESPD-EDM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ResponseDataType.gc" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ResponseDataType.gc</a></p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="selection-criterion-table"><a class="anchor" href="#selection-criterion-table"></a>18. selection-criterion</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><em>SelectionCriterion</em></strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list type</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Procurement specific</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Maintainer</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>EU Vocabularies</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Contains coded selection criteria used for public procurement procedures. This code list replaces the selection criteria part of the former <em>Criterion</em> code list (deprecated in v5.0.0).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Metadata</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ShortName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SelectionCriterion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selection-criterion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ListID</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/authority/selection-criterion" class="bare">http://publications.europa.eu/resource/authority/selection-criterion</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Version</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20250319-0</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/selection-criterion" class="bare">http://publications.europa.eu/resource/dataset/selection-criterion</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CanonicalVersionUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/dataset/selection-criterion/20250319-0" class="bare">http://publications.europa.eu/resource/dataset/selection-criterion/20250319-0</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LocationUri</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://publications.europa.eu/resource/distribution/selection-criterion/20250319-0/xml/gc/SelectionCriterion.gc" class="bare">http://publications.europa.eu/resource/distribution/selection-criterion/20250319-0/xml/gc/SelectionCriterion.gc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyLongName</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publications Office of the European Union</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AgencyIdentifier</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OP</p></td>
+</tr>
+</tbody>
+</table></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_xml_examples"><a class="anchor" href="#_xml_examples"></a>19. XML Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section provides XML examples showing how each code list is used in ESPD documents.</p>
 </div>
-<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="access-right-xml-example"><a class="anchor" href="#access-right-xml-example"></a>20. access-right</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Any comments on the documentation?</p>
+<p>The following xml code is an example of use of code list <a href="#access-right-table">access-right</a> in a <em>cac:Evidence</em> element of ESPDRequest.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:Evidence&gt;
+    &lt;cbc:ID schemeAgencyID="OP"&gt;EVIDENCE-00001&lt;/cbc:ID&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+<i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cbc:ConfidentialityLevelCode listID="http://publications.europa.eu/resource/authority/access-right" listAgencyID="OP" listVersionID="20220316-0"&gt;CONFIDENTIAL&lt;/cbc:ConfidentialityLevelCode&gt;
+    &lt;cac:DocumentReference&gt;
+        &lt;cbc:ID schemeAgencyID="OP"&gt;SAT-11121233&lt;/cbc:ID&gt;
+        &lt;cac:Attachment&gt;
+            &lt;cac:ExternalReference&gt;
+                &lt;cbc:URI&gt;http:dod.gov.usa/sat/it/soft/prk?id=11121233&lt;/cbc:URI&gt;
+            &lt;/cac:ExternalReference&gt;
+        &lt;/cac:Attachment&gt;
+        &lt;cac:IssuerParty&gt;
+            &lt;cac:PartyName&gt;
+                &lt;cbc:Name&gt;USA DoD&lt;/cbc:Name&gt;
+            &lt;/cac:PartyName&gt;
+        &lt;/cac:IssuerParty&gt;
+    &lt;/cac:DocumentReference&gt;
+&lt;/cac:Evidence&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The elementÂ <em>cbc:ConfidentialityLevelCode_Â is of typeÂ code with the following attribute values: _listID</em>=<strong>"access-right"</strong>. Informing this code is provided in  the code list <a href="#access-right-table">access-right</a>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>value <strong><em>CONFIDENTIAL</em></strong> is one of the valid codes defined in the code list <a href="#access-right-table">access-right</a>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="boolean-gui-control-type-xml-example"><a class="anchor" href="#boolean-gui-control-type-xml-example"></a>21. boolean-gui-control-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following is an example of use of code list <a href="#boolean-gui-control-type-table">boolean-gui-control-type</a> in 'Other economic or financial requirements' (<strong><em>finan-requ</em></strong>).</p>
 </div>
 <div class="paragraph">
-<p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
+<p>The xml code implemented for this criterion in the ESPDRequest is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
+        &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;977149e9-9a91-4aa6-acb6-6928a0dd6609&lt;/cbc:ID&gt;
+        &lt;cbc:Description&gt;Select the type of requirement&lt;/cbc:Description&gt;
+        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;CODE_BOOLEAN&lt;/cbc:ValueDataTypeCode&gt;
+        &lt;!-- No answer is expected
+here from the economic operator, as this is a REQUIREMENT issued by the contracting
+authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+the requirement issued by the contracting authority --&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;cbc:ExpectedCode listID="boolean-gui-control-type" listVersionID="5.0.0"&gt;RADIO_BUTTON_TRUE&lt;/cbc:ExpectedCode&gt;
+&lt;/cac:TenderingCriterionProperty&gt;
+&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
+    &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210929-0"&gt;ca15c15f-110e-4a10-8d6e-5e41cf5f9098&lt;/cbc:ID&gt;
+<i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ONTRUE&lt;/cbc:PropertyGroupTypeCode&gt;
+    &lt;cac:TenderingCriterionProperty&gt;
+            &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210929-0"&gt;4d879427-f3e8-431b-a516-1c0f22edd56a&lt;/cbc:ID&gt;
+            &lt;cbc:Description&gt;Description of the economic or financial requirement&lt;/cbc:Description&gt;
+            &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+            &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;DESCRIPTION&lt;/cbc:ValueDataTypeCode&gt;
+            &lt;!-- No answer is expected
+here from the economic operator, as this is a REQUIREMENT issued by the contracting
+authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+the requirement issued by the contracting authority --&gt;
+            &lt;cbc:ExpectedDescription&gt;[Description]&lt;/cbc:ExpectedDescription&gt;
+    &lt;/cac:TenderingCriterionProperty&gt;
+&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
+
+&lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
+        &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;cc96aa19-a0be-4409-af58-ff3f3812741b&lt;/cbc:ID&gt;
+        &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ONFALSE&lt;/cbc:PropertyGroupTypeCode&gt;
+        &lt;cac:TenderingCriterionProperty&gt;
+                &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;d996223a-3f54-4803-bf05-39019c843e94&lt;/cbc:ID&gt;
+                &lt;cbc:Description&gt;Minimum rating&lt;/cbc:Description&gt;
+                &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+                &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;QUANTITY&lt;/cbc:ValueDataTypeCode&gt;
+                &lt;!-- No answer is expected
+here from the economic operator, as this is a REQUIREMENT issued by the contracting
+authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+the requirement issued by the contracting authority --&gt;
+                &lt;cbc:ExpectedValueNumeric&gt;0.33&lt;/cbc:ExpectedValueNumeric&gt;
+        &lt;/cac:TenderingCriterionProperty&gt;
+&lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This case of use has to be interpreted by the software application that displays the ESPD Request document so the <a href="#eo">[eo]</a> can select which <em>REQUIREMENT_SUBGROUP</em> is shown and provide an answer to it. The value of <em>boolean-gui-control</em> will be used by the application software to display either the REQUIREMENT for "Description of the economic or financial requirement" or the REQUIREMENT for "Minimum rating".</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>In this case the value for <em>boolean-gui-control</em> is <em>RADIO_BUTTON_TRUE</em>. This will display REQUIREMENT for "Description of the economic or financial requirement" as defaul since the following <em>cac:SubsidiaryTenderingCriterionPropertyGroup</em> is defined with <em>cbc:PropertyGroupTypeCode</em> value=<strong>ONTRUE</strong>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="country-xml-example"><a class="anchor" href="#country-xml-example"></a>22. country</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#country-table">country</a> in a <em>cac:ContractingParty</em> element of ESPDRequest.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:Party&gt;
+&lt;cac:PostalAddress&gt;
+        &lt;cbc:StreetName&gt;DummyValue&lt;/cbc:StreetName&gt;
+        &lt;cbc:CityName&gt;DummyValue&lt;/cbc:CityName&gt;
+        &lt;cbc:PostalZone&gt;DummyValue&lt;/cbc:PostalZone&gt;
+        &lt;cac:Country&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;cbc:IdentificationCode listID="http://publications.europa.eu/resource/authority/country" listAgencyID="OP" listVersionID="20220928-0"&gt;AND&lt;/cbc:IdentificationCode&gt;
+        &lt;/cac:Country&gt;
+&lt;/cac:PostalAddress&gt;
+&lt;/cac:Party&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The code list <a href="#country-table">country</a> is used to define the value of elementÂ cbc:IdentificationCode in class cac:Country.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="criterion-element-type-xml-example"><a class="anchor" href="#criterion-element-type-xml-example"></a>23. criterion-element-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is an example of use of code list <a href="#criterion-element-type-table">criterion-element-type</a> in criterion 'Participation in a criminal organisation' (<strong><em>crim-org</em></strong>) <em>cac:TenderingCriterion</em> element of <strong>ESPDRequest</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The xml code implemented for this criterion in the ESPDRequest is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Criterion:Participation in a criminal organisation --&gt;
+&lt;cac:TenderingCriterion&gt;
+        (...)
+        &lt;cbc:CriterionTypeCode listID="http://publications.europa.eu/resource/authority/criterion" schemeAgencyID="OP" schemeVersionID="20230315-0"&gt;crime-org&lt;/cbc:CriterionTypeCode&gt;
+        (...)
+        &lt;cac:SubTenderingCriterion&gt;
+        (...)
+                &lt;cac:TenderingCriterionPropertyGroup&gt;
+                (...)
+                &lt;cac:TenderingCriterionProperty&gt;
+                        &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;ae5e864a-f3ba-489b-ba17-b87af8b10138&lt;/cbc:ID&gt;
+                        &lt;cbc:Description&gt;[Additional information; e.g. no evidences online]&lt;/cbc:Description&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                        &lt;cbc:TypeCode listID="criterion-element-type"  listVersionID="5.0.0"&gt;CAPTION&lt;/cbc:TypeCode&gt;
+                        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;NONE&lt;/cbc:ValueDataTypeCode&gt;
+                &lt;/cac:TenderingCriterionProperty&gt;
+                (...)
+                &lt;/cac:TenderingCriterionPropertyGroup&gt;
+        &lt;/cac:SubTenderingCriterion&gt;
+        (...)
+        &lt;cac:TenderingCriterionPropertyGroup&gt;
+                (...)
+                &lt;cac:TenderingCriterionProperty&gt;
+                        &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;c31b6447-bf88-4172-901a-f9b105205391&lt;/cbc:ID&gt;
+                        &lt;cbc:Description&gt;Your answer&lt;/cbc:Description&gt;
+                        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+                        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;INDICATOR&lt;/cbc:ValueDataTypeCode&gt;
+                &lt;/cac:TenderingCriterionProperty&gt;
+                (...)
+        &lt;/cac:TenderingCriterionPropertyGroup&gt;
+        (...)
+&lt;/cac:TenderingCriterion&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Code list <em>criterion-element-type</em> is used to specify the value of class <em>cbc:TypeCode</em> of element <em>cac:TenderingCriterionProperty</em>. <em>cbc:TypeCode</em> corresponds to values in columns 3 to 5 in the schema shown in <a href="#img-criterion_criterion-element-type">[img-criterion_criterion-element-type]</a>:
+<div class="ulist">
+<ul>
+<li>
+<p><em>cac:TenderingCriterionProperty</em> with <em>cbc:ID</em>=ae5e864a-f3ba-489b-ba17-b87af8b10138 is defined as <em>cbc:TypeCode</em>=<strong>CAPTION</strong></p>
+</li>
+<li>
+<p><em>cac:TenderingCriterionProperty</em> with <em>cbc:ID</em>=c31b6447-bf88-4172-901a-f9b105205391 is defined as <em>cbc:TypeCode</em>=<strong>QUESTION</strong></p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="currency-xml-example"><a class="anchor" href="#currency-xml-example"></a>24. currency</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code are examples of use of code list <a href="#currency-table">currency</a> in an ESPDRequest.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
+        (...)
+        &lt;cbc:Description&gt;Additional Information&lt;/cbc:Description&gt;
+        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;DESCRIPTION&lt;/cbc:ValueDataTypeCode&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;cbc:ValueCurrencyCode listID="http://publications.europa.eu/resource/authority/currency" listAgencyID="OP" listVersionID="20220928-0"&gt;EUR&lt;/cbc:ValueCurrencyCode&gt;
+        (...)
+&lt;/cac:TenderingCriterionProperty&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Code list <a href="#currency-table">currency</a> can be used to specify the code for class <em>cbc:ValueCurrencyCode</em> inside an element <em>cac:TenderingCriterionProperty</em> as shown below:</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Code list <a href="#currency-table">currency</a> also can be used to specify the currency of a quantity amount in a <strong>REQUIREMENT</strong> for as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
+        (...)
+        &lt;cbc:Description&gt;Minimum requirement&lt;/cbc:Description&gt;
+        &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+        &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;AMOUNT&lt;/cbc:ValueDataTypeCode&gt;
+        &lt;!-- No answer is expected
+        here from the economic operator, as this is a REQUIREMENT issued by the contracting
+        authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+        the requirement issued by the contracting authority --&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;cbc:ExpectedAmount currencyID="EUR"&gt;100000&lt;/cbc:ExpectedAmount&gt;
+&lt;/cac:TenderingCriterionProperty&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Code list is used to define attribute <em>currencyID</em> of element <em>cbc:ExpectedAmount</em> inside <em>cac:TenderingCriterionProperty</em> corresponding to a <strong>REQUIREMENT</strong> expressed as a monetary amount in currency "EUR".</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docrefcontent-type-xml-example"><a class="anchor" href="#docrefcontent-type-xml-example"></a>25. docrefcontent-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#docrefcontent-type-table">docrefcontent-type</a> in a <em>cac:AdditionalDocumentReference</em> specifing its <em>cbc:DocumentTypeCode</em> value in a ESPDRequest.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:AdditionalDocumentReference&gt;
+        &lt;cbc:ID schemeAgencyID="OP"&gt;2017/S 142-293520&lt;/cbc:ID&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+        &lt;cbc:DocumentTypeCode listID="http://publications.europa.eu/resource/authority/docrefcontent-type"
+        listVersionID="20220928-0"&gt;TED_CN&lt;/cbc:DocumentTypeCode&gt;
+        &lt;cac:Attachment&gt;
+        &lt;cac:ExternalReference&gt;
+        &lt;!-- Beware XML URI fields may require encoded URLs --&gt;
+        &lt;cbc:URI schemeAgencyID="OP"&gt;http://ted.europa.eu/udl?uri%3DTED:NOTICE:293520-
+        2017:TEXT:EN:HTML%026src%3D0&lt;/cbc:URI&gt;
+        &lt;cbc:FileName&gt;Spain-Zamora: Repair and maintenance services&lt;/cbc:FileName&gt;
+        &lt;cbc:Description&gt;Repair and maintenance services. Real estate
+        services.&lt;/cbc:Description&gt;
+        &lt;cbc:Description&gt;293520-2017&lt;/cbc:Description&gt;
+        &lt;/cac:ExternalReference&gt;
+        &lt;/cac:Attachment&gt;
+&lt;/cac:AdditionalDocumentReference&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This <em>cac:AdditionalDocumentReference</em> specifies a <a href="#ted">[ted]</a> Notice as it is declared in element <em>cbc:DocumentTypeCode</em> with code "TED_CN".</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="economic-operator-size-xml-example"><a class="anchor" href="#economic-operator-size-xml-example"></a>26. economic-operator-size</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#economic-operator-size-table">economic-operator-size</a> in a <em>cac:EconomicOperatorParty</em> specifing its <em>cbc:IndustryClassificationCode</em> value in a ESPDResponse.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:EconomicOperatorParty&gt;
+        (...)
+        &lt;cac:Party&gt;
+                &lt;cbc:WebsiteURI&gt;www.Procurer.com&lt;/cbc:WebsiteURI&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;cbc:IndustryClassificationCode listID="http://publications.europa.eu/resource/authority/economic-operator-size" listAgencyID="OP" listVersionID="20220316-0"&gt;sme&lt;/cbc:IndustryClassificationCode&gt;
+                &lt;cac:PartyIdentification&gt;
+                        &lt;cbc:ID schemeAgencyID="OP"&gt;AD123456789&lt;/cbc:ID&gt;
+                &lt;/cac:PartyIdentification&gt;
+                &lt;cac:PartyName&gt;
+                        &lt;cbc:Name&gt;__ProcurerName&lt;/cbc:Name&gt;
+                &lt;/cac:PartyName&gt;
+                (...)
+        &lt;/cac:Party&gt;
+&lt;/cac:EconomicOperatorParty&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <a href="#eo">[eo]</a> in this example has a size classification of 'Micro, small, or medium' (<em>sme</em>) as it is specified in attribute <em>cbc:IndustryClassificationCode</em> of class <em>cac:Party</em>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eoid-type-xml-example"><a class="anchor" href="#eoid-type-xml-example"></a>27. eoid-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#eoid-type-table">eoid-type</a> in a <em>cac:TenderingCriterionResponse</em> element of ESPDResponse.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionResponse&gt;
+    &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
+    &lt;cbc:ValidatedCriterionPropertyID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ValidatedCriterionPropertyID&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;B82387770&lt;/cbc:ResponseID&gt;
+&lt;/cac:TenderingCriterionResponse&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The elementÂ <em>cbc:ResponseID_Â is of typeÂ _Identifier</em> with the following attribute values:
+<div class="ulist">
+<ul>
+<li>
+<p><em>schemeID</em>=<strong>"VAT"</strong>. Informing this identifier follows the <em>Value Added Tax identifier</em> format. This is a valid value defined in the code list <a href="#eoid-type-table">eoid-type</a>.</p>
+</li>
+<li>
+<p><em>schemeAgencyID</em>=<strong>"ES-AEAT"</strong>. Informing this identifier is issued by the <strong>Spanish Tax Agency (ES-AEAT)</strong>.</p>
+</li>
+</ul>
+</div></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="eo-role-type-xml-example"><a class="anchor" href="#eo-role-type-xml-example"></a>28. eo-role-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#eo-role-type-table">eo-role-type</a> in a <em>cac:EconomicOperatorParty</em> element of ESPDResponse.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">(...)
+&lt;cac:EconomicOperatorParty&gt;
+        &lt;cac:EconomicOperatorRole&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;cbc:RoleCode listID="http://publications.europa.eu/resource/authority/eo-role-type" listAgencyID="OP" listVersionID="20211208-0"&gt;group-mem&lt;/cbc:RoleCode&gt;
+        &lt;/cac:EconomicOperatorRole&gt;
+        &lt;cac:Party&gt;
+                (...)
+        &lt;/cac:Party&gt;
+&lt;/cac:EconomicOperatorParty&gt;
+(...)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The example <a href="#eo">[eo]</a> is declared with element <em>cac:EconomicOperatorParty_Â and its role specified in element _cbc:RoleCode</em> as 'Group member' with code list value <em>group-mem</em>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="financial-ratio-type-xml-example"><a class="anchor" href="#financial-ratio-type-xml-example"></a>29. financial-ratio-type</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#financial-ratio-type-table">financial-ratio-type</a> in a <em>cac:TenderingCriterion</em> element of ESPDRequest for criterion <em>finan-rat</em>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterion&gt;
+        (...)
+        &lt;cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
+                &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP"
+                        schemeVersionID="20210616-0"&gt;ee486082-93fa-4c17-8920-fdf01b890bd1&lt;/cbc:ID&gt;
+                &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
+                &lt;cac:TenderingCriterionProperty&gt;
+                        &lt;cbc:ID schemeID="criterion" schemeAgencyID=
+                        "OP" schemeVersionID="20210616-0"&gt;96df5f9f-f458-40cf-818f-a2beade58b1a&lt;/cbc:ID&gt;
+                        &lt;cbc:Description&gt;Ratio Type&lt;/cbc:Description&gt;
+                        &lt;cbc:TypeCode listID="criterion-element-type"
+                        listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+                        &lt;cbc:ValueDataTypeCode listID=
+                        "response-data-type" listVersionID="5.0.0"&gt;
+                        CODE&lt;/cbc:ValueDataTypeCode&gt;
+                        &lt;!-- No answer is expected here from the
+                economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element
+                'cbc:ValueDataTypeCode' contains the type of value of the requirement issued by the
+                buyer --&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                        &lt;cbc:ExpectedCode listID=
+                        "financial-ratio-type" listVersionID="5.0.0"&gt;R11&lt;/cbc:ExpectedCode&gt;
+                &lt;/cac:TenderingCriterionProperty&gt;
+                (...)
+        &lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
+        (...)
+&lt;/cac:TenderingCriterion&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>In criterion <em>finan-rat</em>, value for <em>REQUIREMENT</em> with description 'Ratio Type' (<em>96df5f9f-f458-40cf-818f-a2beade58b1a</em>) is provided in <em>cbc:ExpectedCode</em> with code <strong>R11</strong> from code list <em>financial-ratio-type</em>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="language-xml-example"><a class="anchor" href="#language-xml-example"></a>30. language</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#language-table">language</a> in a <em>cac:TenderingCriterion</em> element of ESPDRequest for criterion <em>finan-rat</em>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:Legislation&gt;
+        &lt;cbc:ID schemeID="http://publications.europa.eu/resource/authority/criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;32f66226-56f3-48e1-87c0-3d8917957fea&lt;/cbc:ID&gt;
+        &lt;cbc:Title&gt;[Legislation title]&lt;/cbc:Title&gt;
+        &lt;cbc:Description&gt;[Legislation description]&lt;/cbc:Description&gt;
+        &lt;cbc:JurisdictionLevel&gt;EU&lt;/cbc:JurisdictionLevel&gt;
+        &lt;cbc:Article&gt;[Article, e.g. Article 2.I.a]&lt;/cbc:Article&gt;
+        &lt;cbc:URI&gt;http://eur-lex.europa.eu/&lt;/cbc:URI&gt;
+        &lt;cac:Language&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;cbc:LocaleCode listID="http://publications.europa.eu/resource/authority/language" listAgencyName="OP" listVersionID="20220928-0"&gt;ENG&lt;/cbc:LocaleCode&gt;
+        &lt;/cac:Language&gt;
+&lt;/cac:Legislation&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Language used in class <em>cac:Legislation</em> is defined in element <em>cac:Language</em> assigning <em>cbc:LocaleCode</em> with value <strong>"ENG"</strong> from code list <em>language</em>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="occupation-xml-example"><a class="anchor" href="#occupation-xml-example"></a>31. occupation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following xml code is an example of use of code list <a href="#occupation-table">occupation</a> in a <em>cac:TenderingCriterion</em> element of ESPDRequest for criterion <em>prof-regist</em>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- Criterion:Enrolment in a relevant professional register --&gt;
+&lt;cac:TenderingCriterion&gt;
+ &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;6ee55a59-6adb-4c3a-b89f-e62a7ad7be7f&lt;/cbc:ID&gt;
+        &lt;cbc:CriterionTypeCode listID="http://publications.europa.eu/resource/authority/criterion" listAgencyID="OP" listVersionID="20230315-0"&gt;prof-regist&lt;/cbc:CriterionTypeCode&gt;
+        &lt;cbc:Name&gt;Enrolment in a relevant professional register&lt;/cbc:Name&gt;
+        &lt;cbc:Description&gt;It is enrolled in relevant professional registers kept in the Member State of its establishment as described in Annex XI of Directive 2014/24/EU; economic operators from certain Member States may have to comply with other requirements set out in that Annex.&lt;/cbc:Description&gt;
+        (...)
+        &lt;cac:TenderingCriterionPropertyGroup&gt;
+        &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;b01d8f8f-ceac-4b47-b7aa-88cdeb630465&lt;/cbc:ID&gt;
+        &lt;cbc:PropertyGroupTypeCode listID="property-group-type" listVersionID="5.0.0"&gt;ON*&lt;/cbc:PropertyGroupTypeCode&gt;
+        &lt;cac:TenderingCriterionProperty&gt;
+                &lt;cbc:ID schemeID="criterion" schemeAgencyID="OP" schemeVersionID="20210616-0"&gt;53fe9bf5-38c9-4281-b8a9-7250b75a9407&lt;/cbc:ID&gt;
+                &lt;cbc:Description&gt;occupation&lt;/cbc:Description&gt;
+                &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
+                &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;CODE&lt;/cbc:ValueDataTypeCode&gt;
+                &lt;!-- No answer is expected
+                here from the economic operator, as this is a REQUIREMENT issued by the contracting
+                authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+                the requirement issued by the contracting authority --&gt;
+<i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;cbc:ExpectedCode listID="http://publications.europa.eu/resource/authority/occupation" listVersionID="20221214-0"&gt;http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de&lt;/cbc:ExpectedCode&gt;
+        &lt;/cac:TenderingCriterionProperty&gt;
+        (...)
+&lt;/cac:TenderingCriterionPropertyGroup&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The expected occupation for criterion <em>prof-regist</em> is defined in element <em>cac:TenderingCriterionProperty</em> with value <em>cbc:ExpectedCode</em> <strong><a href="http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de" class="bare">http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de</a></strong> that corresponds to <em>occupation</em> label <strong>"agricultural engineer"</strong>.</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
