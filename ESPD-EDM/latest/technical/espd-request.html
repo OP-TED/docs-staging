@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Technical Implementation (New) :: TED Developer Docs</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/index-new.html">
+    <title>ESPD Request :: TED Developer Docs</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/espd-request.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -283,13 +283,13 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ESPD EDM</a></li>
-    <li><a href="index-new.html">Technical Implementation (New)</a></li>
+    <li><a href="espd-request.html">ESPD Request</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="index-new.html">5.0.0</a>
+    <a class="version is-current" href="espd-request.html">5.0.0</a>
     <a class="version is-missing" href="../../4.1.0/index.html">4.1.0</a>
     <a class="version is-missing" href="../../4.0.0/index.html">4.0.0</a>
     <a class="version is-missing" href="../../3.3.0/index.html">3.3.0</a>
@@ -307,180 +307,148 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Technical Implementation (New)</h1>
+<h1 class="page">ESPD Request</h1>
 <div class="sect1">
-<h2 id="_technical_implementation"><a class="anchor" href="#_technical_implementation"></a>Technical Implementation</h2>
+<h2 id="_espd_request_business_requirements"><a class="anchor" href="#_espd_request_business_requirements"></a>ESPD Request Business Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This section provides technical documentation for developers implementing ESPD Services based on the ESPD-EDM v5.0.0 model.</p>
+<p>The ESPD-EDM models the business and information requirements for the ESPD Request transaction based on Directive 2014/24/EU (Article 59) and Regulation (EU) 2016/7.</p>
 </div>
-<div class="sect2">
-<h3 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting Started</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_espd_request_xsd_schema"><a class="anchor" href="#_espd_request_xsd_schema"></a>ESPD Request XSD Schema</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ESPD-EDM uses the UBL-2.4 document named <code>QualificationApplicationRequest.xsd</code>. This schema can be found under the GitHub folder <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/schemas/maindoc">schemas/maindoc</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/blockdiag/svg/eNrtVttuEzEQfd-vGC0vILm5tJWoWoFUcpEilRJ6gYeqihx7suvitRfbW5JWfecr-Di-BHujTRPa9EaEQOrb7JmZ4_HojGeHUrMvXNAELqN6Hfo0Qag7ZKkSjMrSGhj8WqB1tdRlEnrZbyEDERBb_1hQKUYeckKrwW6ey8o-mOavrdc2amd5Ai-7IikMQrO5DQtZc0lzOZBRoQAlZqicrb0KdR6iA5tTBRk6I8YRQPk5-Ca4S-ENbG7tzLAURZI6DzbXS5DjiBbSDUba04kLDJ7N4IkSo4scLtDowdS8jCKmpTY-JH7RaXS7u6_jnSiK76n6aJJjDGtvIcax2z5-t9cZO1TWB9iYQMyGLICf0ASo166wVmGdzsRFSXUN940eCYk3gM4YWbEYOcel80lP8VCXNrNDj-cDlDOUua6WHI3H4YSLcFGlFZ4-4orzZPs0wwUiApIOUYb-NWq1n99_xI-l7llbYJs6nN0xAEciC8AUudHIvsFzoQt7i0Mz5F57Lc1nhMvKCXWUcX_Smc-l-A6ZNkIl79GlmntBJZN97VbdqelR_piVFL7qAum1SnyJfWrcZBl982n0HaaVHx_2IUcTVH_nGU-8QhCQl094ibx5hsw9vcm30u1pV-rSO49Q-cn0zWoZ4byhVeXZ5VwETirbPj9kH-AIDSqGVcihSBR1nvveBkT_0yNFbnlvyD_zUJAHzDxZNqxkbu7IkoEhdymdLJUo-Xtqi66iaj9Pd7HTXnkcLan2LpxTWSAI6_fx1gPn5cSmNA-LeqjHBKolv7HeILCwxU93ntX8rOZVvp2V8PzvoGfki_prNLzgrn4B_a3fDg==" alt="QualificationApplicationRequest-2.4" width="550" height="1000">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 1. QualificationApplicationRequest-2.4 main elements.</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_espd_request_cardinalities"><a class="anchor" href="#_espd_request_cardinalities"></a>ESPD Request Cardinalities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The UBL-2.4 Schema is flexible — except for in a few cases, all elements are optional. The ESPD-EDM model adds restrictions regarding the cardinalities of some elements.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNqNlUFP4zAQhe_5FVbEAcpi4jQpbKU9pO2uhIRWLAt7QRzcZEKNUrtrOxT-PePGLaRNgV6a2s_fex5P3ANNfpCIxkIGQTYkd4VayoDgZ6qeSXicT_Ph7ejyH2gjlLyY3LH7kFSPtbF-8kqrUlTw8xny2nZLWkOlsETIJ2E2JkthZ0QuCbfkfPFMJFElqbix1CyJ4XPwlLFavFzIQuTcKn0XUbptc3vb4T1W0mqe21-qKkB_IPiNTl3UC2NqmHAL7T10pWfxB_FXnBvRbfJW3o7JKw1PQtXmE5HKoag1jFXxLup9EIyGq5yYL8OwBabNaPN9TJLegSYzEA8znKXNQzBuFoR_al6J0tUbXbPFovKP1_C_BmNDVFWFR4480rMYTR15VRtqnPeIYn9NhqRQmDj0M7KZMRiSeVOS83y4ORQhH664ti_rvfplS78OyAk5jL659j1aHcoobmFcUbAkc5AWHx8ht6euVhMwuRYLt5dPwQMP7rfANyCxmzDdWAuLD5-CGI08KPkiKDx1gt0dXCp7DSVokDmcNm9XuN818a5py3WCUIfcgNamBTczKPbjvnvcoIX7Kx4ktxjza5iY9hsMnnrEPQlBrYZi9Kw3Yu2uirGrcMz_augeDtjMhxFN3ZGdpUeOPPVkvL2cZUjMnFfVmhXRpOfs32jOKFo54Gjz0_dv4-GG5dKFZpvQ03bod0s9tm3RGfgEo7jAbE_gDXq6g5620eugrAma4TtVCQmk1GpOJvgeursd99hnxM5AkgpKS6wirs5BFu9Rn22rY6fud6oZZdvqvlMne9Tp-ZY6ceq0Ux3TaJudOvVgjzrZVg9QHawqzFoXUMZw0dvfUpci7lBQ2muL-ruiaEeU7IqOs6IQ7jLi1a72Q1j6FcfBe9ErDZh0tg==" alt="QualificationApplicationRequest UML diagram" width="600" height="550">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 2. ESPD-EDM 'QualificationApplicationRequest', UML diagram</em></p>
+</div>
+<div class="paragraph">
+<p>The cardinality constraints added by the ESPD are not defined in the XSD Schema. To control these constraints, the ESPD-EDM uses <a href="https://schematron.com/">ISO Schematron</a> assertions. The ESPD-EDM distribution package provides Schematron schemata and CVA files for the validation of the XML instances (folder <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/validation"><em>/validation</em></a>).</p>
+</div>
+<div class="paragraph">
+<p>For the detailed element-by-element reference with all cardinalities, data types, and business rules, see <a href="request-model-reference.html" class="xref page">Request Model Reference</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lot_management"><a class="anchor" href="#_lot_management"></a>Lot Management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For details on how lots are managed in the ESPD Request, see <a href="lots-management.html" class="xref page">Lots Management</a>.</p>
+</div>
+<div class="paragraph">
+<p>Key points:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="getting-started.html" class="xref page">Getting Started</a><br>
-Architecture overview, distribution package contents, repository structure, and first steps for implementers.</p>
+<p>Exclusion grounds are general — they apply to all lots in the procedure.</p>
+</li>
+<li>
+<p>Selection criteria are lot-specific — each must reference the applicable lot(s) via <code>cac:ProcurementProjectLotReference</code>.</p>
+</li>
+<li>
+<p>On the Economic Operator&#8217;s side, there are as many ESPD Responses as lots the EO tenders for.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_espd_documents"><a class="anchor" href="#_espd_documents"></a>ESPD Documents</h3>
+</div>
+<div class="sect1">
+<h2 id="_eu_and_notice_publications"><a class="anchor" href="#_eu_and_notice_publications"></a>EU and Notice Publications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For procurement procedures above the threshold, it is compulsory to reference the Contract Notice published in <a href="https://ted.europa.eu/">TED</a>.</p>
+</div>
+<div class="paragraph">
+<p>The ESPD uses the UBL component <code>cac:AdditionalDocumentReference</code> to include references to relevant documents, including TED and national publications.</p>
+</div>
+<div class="paragraph">
+<p>Key rules:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="espd-request.html" class="xref page">ESPD Request</a><br>
-Technical guide to the ESPD Request document: schema, cardinality constraints, lot management, contracting party, and service provider.</p>
+<p>If the document referenced is a Contract Notice published on TED, the ID must follow the Publications Office format: <code>[][][][]/S [][][]-[][][][][][]</code> (e.g. <code>2017/S 142-293520</code>).</p>
 </li>
 <li>
-<p><a href="espd-response.html" class="xref page">ESPD Response</a><br>
-Technical guide to the ESPD Response document: schema, economic operator party, criterion responses, and evidence.</p>
+<p>If at the time of drafting the notice has not yet been published, use <code>0000/S 000-000000</code> and include the temporary "Received Notice Number" in a second <code>cbc:Description</code> element.</p>
 </li>
 <li>
-<p><a href="lots-management.html" class="xref page">Lots Management</a><br>
-How lots are handled in both Request and Response, eForms alignment, and multi-lot response patterns.</p>
-</li>
-<li>
-<p><a href="common-concepts.html" class="xref page">Common Concepts</a><br>
-Shared technical patterns: Schematron architecture, validation life-cycle, and execution process.</p>
+<p>Use the Code List <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocrefcontentType.gc">DocrefcontentType</a> for <code>cbc:DocumentTypeCode</code>.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>For detailed element tables, see <a href="request-model-reference.html" class="xref page">Request Model Reference</a>.</p>
 </div>
-<div class="sect2">
-<h3 id="_criteria"><a class="anchor" href="#_criteria"></a>Criteria</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contracting_party"><a class="anchor" href="#_contracting_party"></a>Contracting Party</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ESPD expects data about one buyer. In case of joint procurement, the data collected is about the leader of the joint procurement procedure.</p>
+</div>
+<div class="paragraph">
+<p>The contracting party information will come from eForms, which also uses <code>cac:ContractingParty</code>.</p>
+</div>
+<div class="paragraph">
+<p>For detailed element tables, see <a href="request-model-reference.html" class="xref page">Request Model Reference</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_service_provider"><a class="anchor" href="#_service_provider"></a>Service Provider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Buyer may use a Service Provider to manage the publication of the ESPD Request. Service Provider data is optional.</p>
+</div>
+<div class="paragraph">
+<p>For detailed element tables, see <a href="request-model-reference.html" class="xref page">Request Model Reference</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_further_information"><a class="anchor" href="#_further_information"></a>Further information</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="how-criteria-work.html" class="xref page">How Criteria Work</a><br>
-The criterion-property-response chain, property group types (ONTRUE/ONFALSE), and response linking patterns.</p>
+<p>For detailed element tables, see <a href="request-model-reference.html" class="xref page">Request Model Reference</a>.</p>
 </li>
 <li>
-<p><a href="exclusion-grounds.html" class="xref page">Exclusion Grounds</a><br>
-All exclusion criteria categories with data structures and response patterns.</p>
+<p>For lot management details, see <a href="lots-management.html" class="xref page">Lots Management</a>.</p>
 </li>
 <li>
-<p><a href="selection-criteria.html" class="xref page">Selection Criteria</a><br>
-All selection criteria categories with data structures and response patterns.</p>
+<p>For the ESPD Response, see <a href="tech_response.html" class="xref page">ESPD Response</a>.</p>
 </li>
 <li>
-<p><a href="validation-conformance.html" class="xref page">Validation and Conformance</a><br>
-Criteria-specific validation: UUID checks, CVA constraints, conformance testing patterns.</p>
-</li>
-<li>
-<p><a href="distribution-tooling.html" class="xref page">Distribution and Tooling</a><br>
-Distribution package criterion artefacts, JSON data model, and integration guidance.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_model_reference"><a class="anchor" href="#_model_reference"></a>Model Reference</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="request-model-reference.html" class="xref page">Request Model Reference</a><br>
-Detailed element tables for the ESPD Request (cardinalities, data types, business rules per element).</p>
-</li>
-<li>
-<p><a href="response-model-reference.html" class="xref page">Response Model Reference</a><br>
-Detailed element tables for the ESPD Response (cardinalities, data types, business rules per element).</p>
-</li>
-<li>
-<p><a href="criteria-catalogue.html" class="xref page">Criteria Catalogue</a><br>
-Complete reference tables for criterion, legislation, property group, and property elements.</p>
-</li>
-<li>
-<p><a href="code-lists.html" class="xref page">Code Lists</a><br>
-All ESPD code lists with metadata, versions, usage contexts, and XML examples.</p>
-</li>
-<li>
-<p><a href="business-rules.html" class="xref page">Business Rules</a><br>
-Complete catalogue of Schematron business rules with severity, element constraints, and validation layers overview.</p>
-</li>
-<li>
-<p><a href="glossary.html" class="xref page">Glossary</a><br>
-Definitions of key technical terms.</p>
-</li>
-<li>
-<p><a href="_attachments/ESPD_CM_html/index.html">Conceptual Model (HTML)</a></p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_legacy_pages_to_be_removed_after_review"><a class="anchor" href="#_legacy_pages_to_be_removed_after_review"></a>Legacy pages (to be removed after review)</h3>
-<div class="sect3">
-<h4 id="_documents_old"><a class="anchor" href="#_documents_old"></a>Documents (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_request.html" class="xref page">ESPD Request</a> (replaced by espd-request.adoc + request-model-reference.adoc)</p>
-</li>
-<li>
-<p><a href="tech_response.html" class="xref page">ESPD Response</a> (replaced by espd-response.adoc + response-model-reference.adoc)</p>
-</li>
-<li>
-<p><a href="tech_architecture.html" class="xref page">Technical Architecture</a> (content moved to Getting Started)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_criteria_old"><a class="anchor" href="#_criteria_old"></a>Criteria (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_common_aspects_for_criteria.html" class="xref page">Common Aspects for Criteria</a> (split into how-criteria-work.adoc + criteria-catalogue.adoc)</p>
-</li>
-<li>
-<p><a href="tech_exclusion_criteria.html" class="xref page">Exclusion Criteria</a> (replaced by exclusion-grounds.adoc)</p>
-</li>
-<li>
-<p><a href="tech_selection_criteria.html" class="xref page">Selection Criteria</a> (replaced by selection-criteria.adoc)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_validation_and_rules_old"><a class="anchor" href="#_validation_and_rules_old"></a>Validation and Rules (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_validation.html" class="xref page">Validation</a> (split into common-concepts.adoc + validation-conformance.adoc)</p>
-</li>
-<li>
-<p><a href="tech_rules_reference.html" class="xref page">Business Rules Reference</a> (merged into business-rules.adoc)</p>
-</li>
-<li>
-<p><a href="tech_busrules.html" class="xref page">Business Rules Guide</a> (merged into business-rules.adoc)</p>
-</li>
-<li>
-<p><a href="tech_br_espd_profile.html" class="xref page">BIS 41 ESPD Profile</a> (TBD — may be removed or merged)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_reference_old"><a class="anchor" href="#_reference_old"></a>Reference (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_codelist.html" class="xref page">Code Lists Catalogue</a> (replaced by code-lists.adoc)</p>
-</li>
-<li>
-<p><a href="tech_dist_pack.html" class="xref page">Distribution Package</a> (replaced by distribution-tooling.adoc)</p>
-</li>
-<li>
-<p><a href="tech_glossary.html" class="xref page">Technical Glossary</a> (replaced by glossary.adoc)</p>
-</li>
-<li>
-<p><a href="tech_br_request_reqs.html" class="xref page">Request Requirements</a> (merged into request-model-reference.adoc)</p>
-</li>
-<li>
-<p><a href="tech_br_response_reqs.html" class="xref page">Response Requirements</a> (merged into response-model-reference.adoc)</p>
+<p>For criteria details, see <a href="how-criteria-work.html" class="xref page">How Criteria Work</a>.</p>
 </li>
 </ul>
 </div>
@@ -490,8 +458,6 @@ Definitions of key technical terms.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
-</div>
 </div>
 </div>
 </div>
