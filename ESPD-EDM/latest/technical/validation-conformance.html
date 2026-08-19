@@ -94,6 +94,39 @@
     <a class="nav-link" href="../index-new.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Introduction</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="what-is-espd.html">What is the ESPD?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="procurement-process.html">The Procurement Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="request-response-concepts.html">Request and Response Concepts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="actors-and-roles.html">Actors and Roles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="legal-framework.html">Legal Framework</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Releases</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release_notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../migration-breaking-changes.html">Migration and Breaking Changes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../previous-versions-downloads.html">Previous Versions and Downloads</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Business Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
@@ -112,13 +145,16 @@
     <a class="nav-link" href="../business/using-espd-service.html">Using the ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Technical Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index-new.html">Technical Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="document-model-ubl.html">Document Model (UBL)</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="espd-request.html">ESPD Request</a>
@@ -139,6 +175,9 @@
     <a class="nav-link" href="how-criteria-work.html">How Criteria Work</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="criterion-data-model-json.html">Criterion Data Model (JSON)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="exclusion-grounds.html">Exclusion Grounds</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -151,13 +190,13 @@
     <a class="nav-link" href="distribution-tooling.html">Distribution and Tooling</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Model Reference</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Model Reference</a>
+    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Model Reference</a>
+    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
@@ -169,19 +208,19 @@
     <a class="nav-link" href="business-rules.html">Business Rules</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Releases</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../release_notes.html">Release Notes</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Further Information</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="standards-specifications.html">Standards and Specifications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="related-systems.html">Related Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="repositories-downloads.html">Repositories and Downloads</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Open User Community Documents</strong></span></span>
@@ -611,7 +650,7 @@
 <div class="sect2">
 <h3 id="_xml_path_like_id"><a class="anchor" href="#_xml_path_like_id"></a>XML Path Like ID</h3>
 <div class="paragraph">
-<p>Starting with ESPD v4.0.0, UUIDs for all sub-elements are replaced by XML Path Like IDs in the data structure, except for the top-level Exclusion Grounds and Selection Criteria elements. For further details, see <a href="tech_common_aspects_for_criteria.html" class="xref page">How Criteria Work</a>. The XML Path Like ID is built programmatically.</p>
+<p>Starting with ESPD v4.0.0, UUIDs for all sub-elements are replaced by XML Path Like IDs in the data structure, except for the top-level Exclusion Grounds and Selection Criteria elements. For further details, see <a href="how-criteria-work.html" class="xref page">How Criteria Work</a>. The XML Path Like ID is built programmatically.</p>
 </div>
 </div>
 </div>

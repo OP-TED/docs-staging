@@ -94,6 +94,39 @@
     <a class="nav-link" href="../index-new.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Introduction</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="what-is-espd.html">What is the ESPD?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="procurement-process.html">The Procurement Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="request-response-concepts.html">Request and Response Concepts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="actors-and-roles.html">Actors and Roles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="legal-framework.html">Legal Framework</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Releases</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release_notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../migration-breaking-changes.html">Migration and Breaking Changes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../previous-versions-downloads.html">Previous Versions and Downloads</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Business Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
@@ -112,13 +145,16 @@
     <a class="nav-link" href="../business/using-espd-service.html">Using the ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Technical Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index-new.html">Technical Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="document-model-ubl.html">Document Model (UBL)</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="espd-request.html">ESPD Request</a>
@@ -138,6 +174,9 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="how-criteria-work.html">How Criteria Work</a>
   </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="criterion-data-model-json.html">Criterion Data Model (JSON)</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="exclusion-grounds.html">Exclusion Grounds</a>
   </li>
@@ -151,13 +190,13 @@
     <a class="nav-link" href="distribution-tooling.html">Distribution and Tooling</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Model Reference</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Model Reference</a>
+    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Model Reference</a>
+    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
@@ -169,19 +208,19 @@
     <a class="nav-link" href="business-rules.html">Business Rules</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Releases</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../release_notes.html">Release Notes</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Further Information</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="standards-specifications.html">Standards and Specifications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="related-systems.html">Related Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="repositories-downloads.html">Repositories and Downloads</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Open User Community Documents</strong></span></span>
@@ -478,10 +517,10 @@
 <p>If answered as <strong>No</strong> the group of QUESTION(s) relating the online evidence should not be shown. Beware that the ESPD Response behaves totally differently as far as evidences are concerned. The data concerning the evidence in the ESPDRequest document is placed in the ESPD Response document in a component cac:Evidence in a different manner. See the section ESPD Response for more details on this. See also the XML examples.</p>
 </li>
 <li>
-<p>The URL where to access the evidence. Will be placed in an element of the object cac:Evidence. See section <a href="tech_response.html#evidences" class="xref page">Evidences</a>.</p>
+<p>The URL where to access the evidence. Will be placed in an element of the object cac:Evidence. See section <a href="espd-response.html" class="xref page">ESPD Response</a>.</p>
 </li>
 <li>
-<p>By specifying that the value of the expected data type is an evidence identifier (code EVIDENCE_IDENTIFIER of the Code List ResponseDataType`) the Response will have to contain an evidence supplied in an element of the object cac:Evidence, at the end of the XML Instance. See section <a href="tech_response.html#evidences" class="xref page">Evidences</a>.</p>
+<p>By specifying that the value of the expected data type is an evidence identifier (code EVIDENCE_IDENTIFIER of the Code List ResponseDataType`) the Response will have to contain an evidence supplied in an element of the object cac:Evidence, at the end of the XML Instance. See section <a href="espd-response.html" class="xref page">ESPD Response</a>.</p>
 </li>
 <li>
 <p>The issuer party of this evidence (e.g. a base registry). Will be placed in the element cac:Evidence/cac:DocumentReference/cac:Attachment/cac:IssuerParty. Some countries use verification codes associated to evidences. To specify these verification codes you can use the Evidence ID, as in the end the code identifies uniquely the Evidence in the issuer system (see this XML example, look for 'Verification code' inside the example, bullet number 6).</p>

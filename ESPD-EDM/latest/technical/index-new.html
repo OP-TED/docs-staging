@@ -94,6 +94,39 @@
     <a class="nav-link" href="../index-new.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Introduction</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="what-is-espd.html">What is the ESPD?</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="procurement-process.html">The Procurement Process</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="request-response-concepts.html">Request and Response Concepts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="actors-and-roles.html">Actors and Roles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="legal-framework.html">Legal Framework</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>Releases</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release_notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../migration-breaking-changes.html">Migration and Breaking Changes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../previous-versions-downloads.html">Previous Versions and Downloads</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Business Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
@@ -112,13 +145,16 @@
     <a class="nav-link" href="../business/using-espd-service.html">Using the ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Technical Implementation</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Technical Guide</strong></span></span>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="index-new.html">Technical Implementation</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="getting-started.html">Getting Started</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="document-model-ubl.html">Document Model (UBL)</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="espd-request.html">ESPD Request</a>
@@ -139,6 +175,9 @@
     <a class="nav-link" href="how-criteria-work.html">How Criteria Work</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="criterion-data-model-json.html">Criterion Data Model (JSON)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="exclusion-grounds.html">Exclusion Grounds</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -151,13 +190,13 @@
     <a class="nav-link" href="distribution-tooling.html">Distribution and Tooling</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Model Reference</strong></span></span>
+    <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Model Reference</a>
+    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Model Reference</a>
+    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
@@ -169,19 +208,19 @@
     <a class="nav-link" href="business-rules.html">Business Rules</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text"><span class="separated"><strong>Releases</strong></span></span>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../release_notes.html">Release Notes</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Further Information</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="standards-specifications.html">Standards and Specifications</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="related-systems.html">Related Systems</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="repositories-downloads.html">Repositories and Downloads</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Open User Community Documents</strong></span></span>
@@ -374,21 +413,17 @@
 <div class="paragraph">
 <p>This section provides technical documentation for developers implementing ESPD Services based on the ESPD-EDM v5.0.0 model.</p>
 </div>
+<div class="paragraph">
+<p>It covers the architecture, the ESPD Request and Response documents, lot management, and the shared validation concepts. For criteria, model reference, and code lists, see the corresponding sections in the navigation.</p>
+</div>
 <div class="sect2">
-<h3 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting Started</h3>
+<h3 id="_pages_in_this_section"><a class="anchor" href="#_pages_in_this_section"></a>Pages in this section</h3>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="getting-started.html" class="xref page">Getting Started</a><br>
 Architecture overview, distribution package contents, repository structure, and first steps for implementers.</p>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_espd_documents"><a class="anchor" href="#_espd_documents"></a>ESPD Documents</h3>
-<div class="ulist">
-<ul>
 <li>
 <p><a href="espd-request.html" class="xref page">ESPD Request</a><br>
 Technical guide to the ESPD Request document: schema, cardinality constraints, lot management, contracting party, and service provider.</p>
@@ -407,140 +442,56 @@ Shared technical patterns: Schematron architecture, validation life-cycle, and e
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_criteria"><a class="anchor" href="#_criteria"></a>Criteria</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="how-criteria-work.html" class="xref page">How Criteria Work</a><br>
-The criterion-property-response chain, property group types (ONTRUE/ONFALSE), and response linking patterns.</p>
-</li>
-<li>
-<p><a href="exclusion-grounds.html" class="xref page">Exclusion Grounds</a><br>
-All exclusion criteria categories with data structures and response patterns.</p>
-</li>
-<li>
-<p><a href="selection-criteria.html" class="xref page">Selection Criteria</a><br>
-All selection criteria categories with data structures and response patterns.</p>
-</li>
-<li>
-<p><a href="validation-conformance.html" class="xref page">Validation and Conformance</a><br>
-Criteria-specific validation: UUID checks, CVA constraints, conformance testing patterns.</p>
-</li>
-<li>
-<p><a href="distribution-tooling.html" class="xref page">Distribution and Tooling</a><br>
-Distribution package criterion artefacts, JSON data model, and integration guidance.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_model_reference"><a class="anchor" href="#_model_reference"></a>Model Reference</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="request-model-reference.html" class="xref page">Request Model Reference</a><br>
-Detailed element tables for the ESPD Request (cardinalities, data types, business rules per element).</p>
-</li>
-<li>
-<p><a href="response-model-reference.html" class="xref page">Response Model Reference</a><br>
-Detailed element tables for the ESPD Response (cardinalities, data types, business rules per element).</p>
-</li>
-<li>
-<p><a href="criteria-catalogue.html" class="xref page">Criteria Catalogue</a><br>
-Complete reference tables for criterion, legislation, property group, and property elements.</p>
-</li>
-<li>
-<p><a href="code-lists.html" class="xref page">Code Lists</a><br>
-All ESPD code lists with metadata, versions, usage contexts, and XML examples.</p>
-</li>
-<li>
-<p><a href="business-rules.html" class="xref page">Business Rules</a><br>
-Complete catalogue of Schematron business rules with severity, element constraints, and validation layers overview.</p>
-</li>
-<li>
-<p><a href="glossary.html" class="xref page">Glossary</a><br>
-Definitions of key technical terms.</p>
-</li>
-<li>
-<p><a href="_attachments/ESPD_CM_html/index.html">Conceptual Model (HTML)</a></p>
-</li>
-</ul>
-</div>
 <hr>
 </div>
 <div class="sect2">
 <h3 id="_legacy_pages_to_be_removed_after_review"><a class="anchor" href="#_legacy_pages_to_be_removed_after_review"></a>Legacy pages (to be removed after review)</h3>
-<div class="sect3">
-<h4 id="_documents_old"><a class="anchor" href="#_documents_old"></a>Documents (old)</h4>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="tech_request.html" class="xref page">ESPD Request</a> (replaced by espd-request.adoc + request-model-reference.adoc)</p>
+<p><a href="tech_request.html" class="xref page">ESPD Request (old)</a> — replaced by espd-request.adoc + request-model-reference.adoc</p>
 </li>
 <li>
-<p><a href="tech_response.html" class="xref page">ESPD Response</a> (replaced by espd-response.adoc + response-model-reference.adoc)</p>
+<p><a href="tech_response.html" class="xref page">ESPD Response (old)</a> — replaced by espd-response.adoc + response-model-reference.adoc</p>
 </li>
 <li>
-<p><a href="tech_architecture.html" class="xref page">Technical Architecture</a> (content moved to Getting Started)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_criteria_old"><a class="anchor" href="#_criteria_old"></a>Criteria (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_common_aspects_for_criteria.html" class="xref page">Common Aspects for Criteria</a> (split into how-criteria-work.adoc + criteria-catalogue.adoc)</p>
+<p><a href="tech_architecture.html" class="xref page">Technical Architecture (old)</a> — content moved to getting-started.adoc</p>
 </li>
 <li>
-<p><a href="tech_exclusion_criteria.html" class="xref page">Exclusion Criteria</a> (replaced by exclusion-grounds.adoc)</p>
+<p><a href="tech_common_aspects_for_criteria.html" class="xref page">Common Aspects for Criteria (old)</a> — split into how-criteria-work.adoc + criteria-catalogue.adoc</p>
 </li>
 <li>
-<p><a href="tech_selection_criteria.html" class="xref page">Selection Criteria</a> (replaced by selection-criteria.adoc)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_validation_and_rules_old"><a class="anchor" href="#_validation_and_rules_old"></a>Validation and Rules (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_validation.html" class="xref page">Validation</a> (split into common-concepts.adoc + validation-conformance.adoc)</p>
+<p><a href="tech_validation.html" class="xref page">Validation (old)</a> — split into common-concepts.adoc + validation-conformance.adoc</p>
 </li>
 <li>
-<p><a href="tech_rules_reference.html" class="xref page">Business Rules Reference</a> (merged into business-rules.adoc)</p>
+<p><a href="tech_rules_reference.html" class="xref page">Business Rules Reference (old)</a> — merged into business-rules.adoc</p>
 </li>
 <li>
-<p><a href="tech_busrules.html" class="xref page">Business Rules Guide</a> (merged into business-rules.adoc)</p>
+<p><a href="tech_busrules.html" class="xref page">Business Rules Guide (old)</a> — merged into business-rules.adoc</p>
 </li>
 <li>
-<p><a href="tech_br_espd_profile.html" class="xref page">BIS 41 ESPD Profile</a> (TBD — may be removed or merged)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_reference_old"><a class="anchor" href="#_reference_old"></a>Reference (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tech_codelist.html" class="xref page">Code Lists Catalogue</a> (replaced by code-lists.adoc)</p>
+<p><a href="tech_codelist.html" class="xref page">Code Lists Catalogue (old)</a> — replaced by code-lists.adoc</p>
 </li>
 <li>
-<p><a href="tech_dist_pack.html" class="xref page">Distribution Package</a> (replaced by distribution-tooling.adoc)</p>
+<p><a href="tech_dist_pack.html" class="xref page">Distribution Package (old)</a> — replaced by distribution-tooling.adoc</p>
 </li>
 <li>
-<p><a href="tech_glossary.html" class="xref page">Technical Glossary</a> (replaced by glossary.adoc)</p>
+<p><a href="tech_glossary.html" class="xref page">Technical Glossary (old)</a> — replaced by glossary.adoc</p>
 </li>
 <li>
-<p><a href="tech_br_request_reqs.html" class="xref page">Request Requirements</a> (merged into request-model-reference.adoc)</p>
+<p><a href="tech_exclusion_criteria.html" class="xref page">Exclusion Criteria (old)</a> — replaced by exclusion-grounds.adoc</p>
 </li>
 <li>
-<p><a href="tech_br_response_reqs.html" class="xref page">Response Requirements</a> (merged into response-model-reference.adoc)</p>
+<p><a href="tech_selection_criteria.html" class="xref page">Selection Criteria (old)</a> — replaced by selection-criteria.adoc</p>
+</li>
+<li>
+<p><a href="tech_br_espd_profile.html" class="xref page">BIS 41 ESPD Profile (old)</a> — TBD</p>
+</li>
+<li>
+<p><a href="tech_br_request_reqs.html" class="xref page">Request Requirements (old)</a> — deprecated</p>
+</li>
+<li>
+<p><a href="tech_br_response_reqs.html" class="xref page">Response Requirements (old)</a> — deprecated</p>
 </li>
 </ul>
 </div>
@@ -550,7 +501,6 @@ Definitions of key technical terms.</p>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
 </div>
 </div>
 </div>
