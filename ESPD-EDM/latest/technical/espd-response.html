@@ -453,7 +453,18 @@ This section does not cover elements already described in the <a href="espd-requ
 <h2 id="_espd_response_cardinalities"><a class="anchor" href="#_espd_response_cardinalities"></a>ESPD Response Cardinalities</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The UBL-2.4 Schema is flexible — most elements are optional. The ESPD-EDM adds cardinality restrictions enforced via ISO Schematron assertions.</p>
+<p>The UBL-2.4 Schema is flexible&#8201;&#8212;&#8201;most elements are optional. The ESPD-EDM adds cardinality restrictions enforced via ISO Schematron assertions. These can be seen in the diagram below which presents the ESPD-EDM structure for the ESPD Response with its own cardinality restrictions.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/pikchr/svg/eNqNlU1v4jAQhu_5FRbqoYXWGyeEANIeAnRXlardbrfdS9WDSUxxFewoNqXtr99xMB8JSYELjt34ndczGecsR9-Riz0uHCcaoqdEroSD4DeV76jViafx8HF0-4_liktxM3kizy2Uvi6VtotjGMoF_6S6fv0ulzOeMlhxMW5YvH5n8bJhf2lqxjXi4o2rrcMV13MkVohq1M_ekUByhlKqNFYrpOiCbVzK7ONGJDymWuZ1Th4f684mhc5prH_INGF5nTmllmxCNSt7rHPnf-GukHngC1bn7DqWAhIc_85Ybtz_zOUy-0Xr4V2darPN3rhcqiOQjFmyzNlYJnvHenac0bA4E5wlgoMlcLIIr_87KGif5WjO-MscVrEddOC9Cs2KM15vbf1Z0pTPTBUgfpRlqR3eM5VJoVgLsDSx6iOrbtUILoIUKcXK2BhheGcnQ5RIMN-yK2K9osAvsVFRTOPhtphcvNzRXH9sjm23rew-hq7QuXtpWuKiqOXIK8lUy3GaVs9q-SUtk2vI9IIJDcNXFutvpgQTpuKcZyYxR4QJdq1w94jwrdRHtbpWKyhpPTABLz9kbZxzDYMTTPWtUO-I0K7sXwp621KE5VK88YSJeLs9oWrOkmaVTRH6JZUJpMok6p7NWH66nL9N_aAk95e_CKoh-afK2KzD6-pSqwRCpU4gOGyPSLkdPGgHmLNPa3UrzqDzzl0cXBb9d2GUp1YZrnLY2W0htaBputFycbdtwu_UTCC3iACz60fbeOsYZlqsjGmyNT0tm97bamXLIWoNX4EVY5g0GN5KTw-kp2XpjVGyNhrBZZBywdAslws0gQvEfOjgjD5Bes4EStlMIy2RybMTeQ10WKU9Q_u1NMGkSvuG7jbQQZXuGjpooAdVOjB0r5b2sO9W6J6hwwY6rNKhofu1tI9Jle4betBAB1V6ALRT1JqU7vCIwKbdB7-O8I4S_lGiW0Ng3C5DwSlQ7xByD6DwEOpEScLNZU_T1v7nLerDv2mMS-gKAlfgl8L9U6IP9qH_PtMTjQ==" alt="Qualification Application Response UML Diagram" width="600" height="650">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 2. ESPD-EDM 'QualificationApplicationResponse', UML diagram</em></p>
+</div>
+<div class="paragraph">
+<p>For detailed element tables with all cardinalities, data types, and business rules, see <a href="response-model-reference.html" class="xref page">Response Model Reference</a>. â€” most elements are optional. The ESPD-EDM adds cardinality restrictions enforced via ISO Schematron assertions.</p>
 </div>
 <div class="paragraph">
 <p>For detailed element tables with all cardinalities, data types, and business rules, see <a href="response-model-reference.html" class="xref page">Response Model Reference</a>.</p>
@@ -481,13 +492,13 @@ This section does not cover elements already described in the <a href="espd-requ
 <div class="ulist">
 <ul>
 <li>
-<p><strong>One ESPD Response per economic operator</strong> — every participant in a tender must provide its own ESPD Response.</p>
+<p><strong>One ESPD Response per economic operator</strong> â€” every participant in a tender must provide its own ESPD Response.</p>
 </li>
 <li>
-<p><strong>One ESPD Response per lot</strong> — each EO submits a separate response per lot (or group of lots) they tender for.</p>
+<p><strong>One ESPD Response per lot</strong> â€” each EO submits a separate response per lot (or group of lots) they tender for.</p>
 </li>
 <li>
-<p><strong>Group name consistency</strong> — all economic operators in a group must use the exact same group name spelling.</p>
+<p><strong>Group name consistency</strong> â€” all economic operators in a group must use the exact same group name spelling.</p>
 </li>
 </ul>
 </div>
@@ -557,9 +568,9 @@ This section does not cover elements already described in the <a href="espd-requ
 </div>
 <div class="paragraph">
 <p>Key elements:
-* <code>cac:Evidence/cbc:ID</code> — unique identifier for the evidence
-* <code>cac:Evidence/cbc:ConfidentialityLevelCode</code> — access right (PUBLIC, CONFIDENTIAL)
-* <code>cac:Evidence/cac:DocumentReference</code> — contains the URI, verification code, and issuer</p>
+* <code>cac:Evidence/cbc:ID</code> â€” unique identifier for the evidence
+* <code>cac:Evidence/cbc:ConfidentialityLevelCode</code> â€” access right (PUBLIC, CONFIDENTIAL)
+* <code>cac:Evidence/cac:DocumentReference</code> â€” contains the URI, verification code, and issuer</p>
 </div>
 <div class="paragraph">
 <p>For detailed element tables, see <a href="response-model-reference.html" class="xref page">Response Model Reference</a>.</p>
@@ -571,6 +582,22 @@ This section does not cover elements already described in the <a href="espd-requ
 <div class="sectionbody">
 <div class="paragraph">
 <p>In the ESPD Response, <code>cac:ProcurementProjectLot</code> under the root element defines which lot(s) the EO is answering for. See <a href="lots-management.html" class="xref page">Lots Management</a> for full details.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reference_to_the_espd_request"><a class="anchor" href="#_reference_to_the_espd_request"></a>Reference to the ESPD Request</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The ESPD Response must include a reference to the ESPD Request that is being responded. The XSD diagram below shows (in blue) which elements are expected for this reference.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://kroki.io/blockdiag/svg/eNrtVdtu1DAQfV5_xSi8gBR2t6WoN4FEya60UiVWvQkJVZE3niSmjh1sB3Zb9Z2v4OP4Euxks5cCBaqFJ_IQOWdmjmfsM5OJUMkV4zSDG9LrwZhmCD2LSS55QkW9ijWaUkmD3dwWAkbFHZ-Ye8T0TjBFjTLBeHA6juIT_FChsd33ZQaPhzyrNMLW_vMuDAQWKK0BnJaYWGRgFeg2GGyO4AlgTgCpVsUq2iTzxKd7ihZMSSUUaDWfEoD6M_7Emc3hBezsHS6wHHmWWwdubdcgw5RWwsapcrnwa_SWndpCMq2qEq5Rq7hZ3hCSKKG08wkeDXYH_eFWcEhIEMDTlxAkNDl4xRi3XEkqIpVUvr7FcQTwjnEfKpXEEASdoPBE_W736-cvwSX5NUG9yyQ5GEVrZH8S-lqVs5Fk7sas0kHYgOfnjnG-HhlTYUQtrgFnvFgALfvZrMTXiv0Qf3B-b8fU5hs8qmMqs8rpclngsXJqXUv8ArVxPEuXlu_UUluZ2vWh9bSmCE2ieen9N1Wdd7KWJrk31qk75IIK7gJnY9RcsRat71CPqbazFnIN5GT_JnXF89TL4W5ml2TeACnXxi46oBN8l8_8wk1OS98-zlEyZBM1DaHtwO3dfmjsTHg7oyZHFsKylaKj6NngKLg8JJ0OLPGJoMlV0IAWp3YZMBz23RPUbTp_2t0Fl7iGr-3akNWvtpPCf9sY4arOw82KNPy55sK_IxjSuSW3pJ3BzW27MS5dNiZsZyt8pKJC4MbN3D0_LRdScX-cQkm2opN-CIsJvd13iviNsXqv8PZXGXcaxv8Xv4FJce-p1wd9-w0N3LqA" alt="Elements expected to reference the ESPD Request from the ESPD Response" width="600" height="750">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Figure 3. Elements expected to reference the ESPD Request from the ESPD Response</em></p>
 </div>
 </div>
 </div>
