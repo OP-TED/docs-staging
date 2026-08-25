@@ -530,6 +530,167 @@ The <code>conceptual-model</code> folder and <code>ubl-2.3</code> folder from pr
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>For detailed documentation of the JSON format, field semantics, and traversal patterns, see <a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tooling_pipeline"><a class="anchor" href="#_tooling_pipeline"></a>Tooling Pipeline</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_eatojson_enterprise_architect_to_json"><a class="anchor" href="#_eatojson_enterprise_architect_to_json"></a>EAtoJSON: Enterprise Architect to JSON</h3>
+<div class="paragraph">
+<p>The <code>espd-edm.json</code> file is generated from the ESPD Conceptual Model maintained in Enterprise Architect (EA). The generation pipeline (<code>EAtoJSON</code>) extracts the criterion tree from the EA model and produces the canonical JSON representation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pipeline steps:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Maintain criterion definitions in Enterprise Architect (ESPD Conceptual Model)</p>
+</li>
+<li>
+<p>Run the EAtoJSON export pipeline (<code>espd-tools/EAtoJSON/</code>)</p>
+</li>
+<li>
+<p>Validate the output JSON against the JSON schema</p>
+</li>
+<li>
+<p>Commit the resulting <code>espd-edm.json</code> to the <code>ESPD-EDM/criterion/</code> folder</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only the ESPD Team runs this pipeline. Implementers consume the output (<code>espd-edm.json</code>) — they do not need to run the generation pipeline themselves.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validation_schematron_pipeline"><a class="anchor" href="#_validation_schematron_pipeline"></a>Validation Schematron Pipeline</h3>
+<div class="paragraph">
+<p>The ESPD validation artefacts (Schematron rules compiled to XSL) are produced in the <a href="https://github.com/OP-TED/espd-validation-schematron">espd-validation-schematron</a> repository.</p>
+</div>
+<div class="paragraph">
+<p><strong>Pipeline steps:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Clone the <code>espd-validation-schematron</code> repository</p>
+</li>
+<li>
+<p>Copy external data from <code>ESPD-EDM</code> into the schematron repository:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>codelists/gc</code> &#8594; <code>gc/</code> (code list files)</p>
+</li>
+<li>
+<p><code>criterion/espd-edm.json</code> &#8594; criterion input</p>
+</li>
+<li>
+<p><code>schemas/</code> &#8594; <code>common/xsdrt/</code> (UBL XSD schemas)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Run <code>espd-schematron-gc.bat</code> (Windows) to:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Transform Schematron (<code>.sch</code>) files into XSLT (<code>.xsl</code>) validators</p>
+</li>
+<li>
+<p>Validate code lists against CVA rules</p>
+</li>
+<li>
+<p>Produce validation reports in the <code>logs/</code> folder</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The resulting XSL files are copied back to <code>ESPD-EDM/validation/</code> for distribution</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Prerequisites:</strong> Java JDK 1.8+, Git client.</p>
+</div>
+<div class="paragraph">
+<p><strong>Output:</strong> XSL files for Request validation (<code>ESPDRequest/xsl/</code>), Response validation (<code>ESPDResponse/xsl/</code>), and common validation (<code>common/</code>).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_integration_guidance"><a class="anchor" href="#_integration_guidance"></a>Integration Guidance</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_consuming_the_distribution_package"><a class="anchor" href="#_consuming_the_distribution_package"></a>Consuming the Distribution Package</h3>
+<div class="paragraph">
+<p>Implementers building an ESPD Service should:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Download the distribution package</strong> from the <a href="https://github.com/OP-TED/ESPD-EDM/releases">ESPD-EDM GitHub Releases</a> page (or clone the repository at the appropriate version tag).</p>
+</li>
+<li>
+<p><strong>Parse <code>criterion/espd-edm.json</code></strong> to build the criterion catalogue for your service — render forms, generate XML criterion sections, and map property data types.</p>
+</li>
+<li>
+<p><strong>Reference <code>codelists/</code></strong> for all code list values used in ESPD documents (genericode <code>.gc</code> files). The <code>codelists.json</code> metadata file provides code list identifiers, versions, and agency information.</p>
+</li>
+<li>
+<p><strong>Use <code>schemas/maindoc/</code></strong> for XSD validation of generated ESPD Request and Response XML instances.</p>
+</li>
+<li>
+<p><strong>Apply <code>validation/</code> XSL files</strong> for Schematron-based business rule validation (either locally or via the <a href="https://www.itb.ec.europa.eu/espd/upload">Interoperability Testbed</a>).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_validation_options"><a class="anchor" href="#_validation_options"></a>Validation Options</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Option</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Online (Testbed)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upload ESPD XML instances to the <a href="https://www.itb.ec.europa.eu/espd/upload">Interoperability Testbed</a> for validation. No local setup needed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Local (Saxon)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use the <a href="http://saxon.sourceforge.net/">Saxon XSLT Processor</a> (or equivalent) to execute the XSL validation files against your XML instances locally. Requires Java.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Integrated</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Embed the XSL validation step in your service pipeline — apply the Request or Response XSL to each generated document before publishing/submitting.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
