@@ -621,6 +621,138 @@
 </div>
 </div>
 <div class="sect2">
+<h3 id="_traversal_patterns"><a class="anchor" href="#_traversal_patterns"></a>Traversal Patterns</h3>
+<div class="paragraph">
+<p>To render an ESPD form or generate XML, walk the JSON tree recursively:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">for each part in espd-edm.json:
+  for each section in part.sections:
+    for each criterion in section.criteria:
+      render_criterion(criterion)
+
+function render_criterion(element):
+  // Use element.type to determine what to render
+  switch element.type:
+    case "CRITERION":       render criterion header (name, description)
+    case "QUESTION":        render form input based on element's data type
+    case "REQUIREMENT":     render read-only value set by the buyer
+    case "CAPTION":         render label text (no input)
+    case "CONTRACTING_PARTY", "PARTY", etc.: render structured party fields
+
+  // Recurse into child components
+  if element.components:
+    for each child in element.components:
+      render_criterion(child)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For ONTRUE/ONFALSE conditional logic (used in exclusion/selection criteria), check the <code>PropertyGroupTypeCode</code> of each group. Show ONTRUE groups when the parent INDICATOR question is <code>true</code>; show ONFALSE groups when <code>false</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_response_data_type_mapping"><a class="anchor" href="#_response_data_type_mapping"></a>Response Data Type Mapping</h3>
+<div class="paragraph">
+<p>When the element type is <code>QUESTION</code>, the expected answer data type is determined by the <code>ValueDataTypeCode</code> (from code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ResponseDataType.gc">ResponseDataType.gc</a>):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Data Type</th>
+<th class="tableblock halign-left valign-top">Expected Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>INDICATOR</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean (true/false) — typically a radio button or checkbox</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DESCRIPTION</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Free text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AMOUNT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Numeric value + currency code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QUANTITY</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Numeric value + unit code</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DATE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date value (ISO format)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>URL</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web address (URI)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IDENTIFIER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier string (with optional scheme)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CODE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code value from a specific code list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EVIDENCE_IDENTIFIER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reference to an evidence document (by ID)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>NONE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No response expected (used for CAPTION and REQUIREMENT)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_generating_espd_xml_from_json"><a class="anchor" href="#_generating_espd_xml_from_json"></a>Generating ESPD XML from JSON</h3>
+<div class="paragraph">
+<p>To produce a valid ESPD Request or Response XML:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Walk the JSON tree following <code>requestpath</code> (for Request) or <code>responsepath</code> (for Response)</p>
+</li>
+<li>
+<p>Map each element <code>type</code> to the corresponding UBL XML element:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CRITERION</code> &#8594; <code>cac:TenderingCriterion</code></p>
+</li>
+<li>
+<p><code>QUESTION</code> / <code>REQUIREMENT</code> / <code>CAPTION</code> &#8594; <code>cac:TenderingCriterionProperty</code></p>
+</li>
+<li>
+<p><code>ADDITIONAL_DOCUMENT_REFERENCE</code> &#8594; <code>cac:AdditionalDocumentReference</code></p>
+</li>
+<li>
+<p><code>CONTRACTING_PARTY</code> &#8594; <code>cac:ContractingParty</code></p>
+</li>
+<li>
+<p>etc.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Apply <code>cardinality</code> rules to enforce mandatory elements</p>
+</li>
+<li>
+<p>For the Response: add <code>cac:TenderingCriterionResponse</code> elements linking each answer to its QUESTION property via <code>cbc:ValidatedCriterionPropertyID</code></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_json_schema"><a class="anchor" href="#_json_schema"></a>JSON Schema</h3>
 <div class="paragraph">
 <p>A JSON schema file is provided alongside <code>espd-edm.json</code> to validate the structural consistency of the data model.</p>

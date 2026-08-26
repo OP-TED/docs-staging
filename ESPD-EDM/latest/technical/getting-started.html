@@ -407,6 +407,60 @@
 <div class="paragraph">
 <p>The ESPD Exchange Data Model (ESPD-EDM) assists developers in building ESPD Services. It provides a model that ensures the ESPD Request and ESPD Response XML files produced across all services are consistent and comply with EU procurement legislation.</p>
 </div>
+<div class="sect2">
+<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>To implement an ESPD Service based on ESPD-EDM v5.0.0, you need:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A development environment with <strong>Java JDK 1.8+</strong> (for XSD/Schematron validation via Saxon)</p>
+</li>
+<li>
+<p>An <strong>XML editor or IDE</strong> capable of working with XSD schemas and XSLT (e.g. VS Code, IntelliJ, Oxygen XML)</p>
+</li>
+<li>
+<p><strong>Git client</strong> to clone the ESPD-EDM repository</p>
+</li>
+<li>
+<p>Familiarity with <strong>UBL 2.4 XML</strong> document structures</p>
+</li>
+<li>
+<p>Optionally: <strong>Node.js 18+</strong> (only if you plan to work with the criterion generation tooling)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quick_start"><a class="anchor" href="#_quick_start"></a>Quick Start</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Clone the repository</strong>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone https://github.com/OP-TED/ESPD-EDM.git
+cd ESPD-EDM
+git checkout v5.0.0</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong>Explore the structure</strong>: review <code>criterion/espd-edm.json</code> (criterion definitions), <code>codelists/</code> (code lists), and <code>schemas/</code> (UBL XSD schemas).</p>
+</li>
+<li>
+<p><strong>Validate an example</strong>: submit one of the sample XML files from <code>validation/</code> to the <a href="https://www.itb.ec.europa.eu/espd/upload">Interoperability Testbed</a> to see the validation in action.</p>
+</li>
+<li>
+<p><strong>Understand the schemas</strong>: open <code>schemas/maindoc/UBL-QualificationApplicationRequest-2.4.xsd</code> and <code>UBL-QualificationApplicationResponse-2.4.xsd</code> to see the document structures your service must produce.</p>
+</li>
+<li>
+<p><strong>Read the criterion JSON</strong>: parse <code>criterion/espd-edm.json</code> to understand the criterion tree your service needs to render as a form and serialise as XML.</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">

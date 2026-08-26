@@ -508,6 +508,144 @@
 </div>
 </div>
 <div class="sect2">
+<h3 id="_new_features_requiring_implementation_updates"><a class="anchor" href="#_new_features_requiring_implementation_updates"></a>New features requiring implementation updates</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Impact on Implementers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JSON criterion data model</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Services must consume <code>espd-edm.json</code> instead of the Excel file. The JSON provides a hierarchical part/section/criteria/components tree. See <a href="technical/criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>eForms lot identifiers</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lot identifiers now follow the eForms pattern: <code>LOT-0001</code>, <code>LOT-0002</code>, <code>GLO-0001</code>. Services generating lot references must use this format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Code list metadata (codelists.json)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A new <code>codelists.json</code> file provides machine-readable metadata for all code lists (identifiers, versions, agencies). Services managing code lists dynamically should consume this file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Criterion UUID changes</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Some criterion UUIDs changed due to e-Certis harmonisation. Services that hard-code UUIDs must update them. Deprecated criteria C27/C28 are replaced by C66.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_deprecated_features"><a class="anchor" href="#_deprecated_features"></a>Deprecated features</h3>
+<div class="paragraph">
+<p>The following features are deprecated in v5.0.0 and should no longer be used:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Feature</th>
+<th class="tableblock halign-left valign-top">Replacement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ESPD-criterion.xlsx</code> (Excel criterion file)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>criterion/espd-edm.json</code> (JSON format)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ubl-2.3/</code> folder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>schemas/</code> folder (UBL 2.4)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conceptual-model/</code> folder in ESPD-EDM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Separate <a href="https://github.com/OP-TED/espd-conceptual-model">espd-conceptual-model</a> repository</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD Demo Site (<code>docs.ted.europa.eu/espd-demo/</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/espd-service-sandbox">ESPD Service Reference Implementation</a> (in development)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single <code>Criterion</code> code list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Split into <code>ExclusionGround</code> + <code>SelectionCriterion</code> (EU Vocabularies)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_migration_checklist"><a class="anchor" href="#_migration_checklist"></a>Migration checklist</h3>
+<div class="paragraph">
+<p>Use this checklist to verify your migration is complete:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-square-o"></i> XSD schemas updated to UBL 2.4 (<code>schemas/maindoc/</code>)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> <code>cbc:UBLVersionID</code> set to <code>"2.4"</code> in generated documents</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> <code>cbc:CustomizationID</code> updated to reference ESPD-EDM v5.0.0</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> All <code>listVersionID</code> attributes updated to <code>"5.0.0"</code> for ESPD-managed code lists</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Criterion data sourced from <code>espd-edm.json</code> (not Excel)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Code list references split: <code>ExclusionGround</code> + <code>SelectionCriterion</code> (not single <code>Criterion</code> list)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Lot identifiers use eForms format (<code>LOT-0001</code>)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Criterion UUIDs verified against e-Certis (check C27, C28 &#8594; C66 migration)</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Schematron validation passes against v5.0.0 XSL rules</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> ESPD Request and Response validated on <a href="https://www.itb.ec.europa.eu/espd/upload">Interoperability Testbed</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verifying_the_migration"><a class="anchor" href="#_verifying_the_migration"></a>Verifying the migration</h3>
+<div class="paragraph">
+<p>After completing the migration steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Generate a sample ESPD Request and Response with your updated service</p>
+</li>
+<li>
+<p>Validate both documents against the v5.0.0 Schematron XSL files (locally or via the Testbed)</p>
+</li>
+<li>
+<p>Verify that no <code>BR-OTH-01-40</code> errors appear (code list version mismatch)</p>
+</li>
+<li>
+<p>Verify that no <code>BR-OTH-05-01</code> errors appear (UBL version mismatch)</p>
+</li>
+<li>
+<p>Cross-check criterion UUIDs in your documents against <code>espd-edm.json</code></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_further_information"><a class="anchor" href="#_further_information"></a>Further information</h3>
 <div class="ulist">
 <ul>
