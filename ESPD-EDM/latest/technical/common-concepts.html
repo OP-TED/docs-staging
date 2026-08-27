@@ -187,13 +187,16 @@
     <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
+    <a class="nav-link" href="request-reference-model.html">Request Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
+    <a class="nav-link" href="response-reference-model.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conceptual-model.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="code-lists.html">Code Lists</a>
@@ -401,6 +404,138 @@
 </aside>
     <article class="doc">
 <h1 class="page">Common Concepts</h1>
+<div class="sect1">
+<h2 id="_shared_technical_patterns"><a class="anchor" href="#_shared_technical_patterns"></a>Shared Technical Patterns</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes patterns that are common to both the ESPD Request and Response documents. Understanding these patterns helps avoid duplication when reading the Request and Response reference pages.</p>
+</div>
+<div class="sect2">
+<h3 id="_identifier_schemes"><a class="anchor" href="#_identifier_schemes"></a>Identifier Schemes</h3>
+<div class="paragraph">
+<p>All ESPD documents use standardised identifier patterns:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Element</th>
+<th class="tableblock halign-left valign-top">Scheme</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ID</code> (document)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issuing organisation&#8217;s scheme (<code>schemeAgencyID</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>schemeAgencyID="OP"</code> for Publications Office identifiers</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:UUID</code> (document)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UUID v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Globally unique; copies share the same UUID, new documents get a new one</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ID</code> (criterion)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">e-Certis UUID</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each criterion has a UUID assigned by e-Certis (e.g. <code>005eb9ed-1347-&#8230;&#8203;</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ID</code> (property group)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UUID v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each property group has a unique UUID from e-Certis</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ID</code> (property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UUID v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generated per property instance; used by the Response to link answers via <code>cbc:ValidatedCriterionPropertyID</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ID</code> (lot)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eForms pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LOT-0001</code>, <code>LOT-0002</code>, <code>GLO-0001</code> (groups of lots)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Key rules for identifiers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>schemeAgencyID</code> is mandatory on all <code>cbc:ID</code> elements — it identifies who issued the identifier</p>
+</li>
+<li>
+<p><code>cbc:UUID</code> is mandatory on both Request and Response root elements — the Response UUID links back to the Request</p>
+</li>
+<li>
+<p>Criterion UUIDs must match e-Certis values (enforced by rule <code>BR-TC-02</code>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_party_structure_pattern"><a class="anchor" href="#_party_structure_pattern"></a>Party Structure Pattern</h3>
+<div class="paragraph">
+<p>Both Request and Response documents share the same UBL party structure for identifying organisations:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">cac:ContractingParty / cac:EconomicOperatorParty / cac:ServiceProviderParty
+  └── cac:Party
+        ├── cac:PartyIdentification/cbc:ID    (national ID, VAT number)
+        ├── cbc:WebsiteURI                     (official website)
+        ├── cbc:EndpointID                     (electronic address for eDelivery)
+        ├── cac:PartyName/cbc:Name             (official registered name)
+        ├── cac:PostalAddress                  (address, city, postal zone, country)
+        └── cac:Contact                        (name, phone, fax, email)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>cac:Party</code> component is reused identically for the buyer (inside <code>cac:ContractingParty</code>), the economic operator (inside <code>cac:EconomicOperatorParty</code>), and the service provider (inside <code>cac:ServiceProviderParty</code>). Only the wrapper element and cardinalities differ.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_document_reference_pattern"><a class="anchor" href="#_document_reference_pattern"></a>Document Reference Pattern</h3>
+<div class="paragraph">
+<p>The <code>cac:AdditionalDocumentReference</code> component is used in both Request and Response to reference external documents:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>In the Request</strong>: references the Contract Notice (TED publication and/or national journal publication)</p>
+</li>
+<li>
+<p><strong>In the Response</strong>: references the ESPD Request that is being answered, plus optionally other supporting documents</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Key elements:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">cac:AdditionalDocumentReference
+  ├── cbc:ID                          (publication number, e.g. OJS number)
+  ├── cbc:UUID                        (optional unique identifier)
+  ├── cbc:DocumentTypeCode            (from DocRefContentType code list)
+  ├── cac:Attachment
+  │     └── cac:ExternalReference
+  │           ├── cbc:URI             (URL to the document)
+  │           └── cbc:FileName        (title of the referenced document)
+  └── cac:IssuerParty                 (who issued the reference)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>cbc:DocumentTypeCode</code> uses the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/DocRefContentType.gc">DocRefContentType</a> to distinguish between TED notices, national notices, ESPD Requests, and other document types.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_iso_schematron"><a class="anchor" href="#_iso_schematron"></a>ISO Schematron</h2>
 <div class="sectionbody">

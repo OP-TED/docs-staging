@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Distribution and Tooling :: TED Developer Docs</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/distribution-tooling.html">
+    <title>Conceptual Model :: TED Developer Docs</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/conceptual-model.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -180,7 +180,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="validation-conformance.html">Validation and Conformance</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="distribution-tooling.html">Distribution and Tooling</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -195,7 +195,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="conceptual-model.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -379,13 +379,13 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ESPD EDM</a></li>
-    <li><a href="distribution-tooling.html">Distribution and Tooling</a></li>
+    <li><a href="conceptual-model.html">Conceptual Model</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="distribution-tooling.html">5.0.0</a>
+    <a class="version is-current" href="conceptual-model.html">5.0.0</a>
     <a class="version is-missing" href="../../4.1.0/index.html">4.1.0</a>
     <a class="version is-missing" href="../../4.0.0/index.html">4.0.0</a>
     <a class="version is-missing" href="../../3.3.0/index.html">3.3.0</a>
@@ -403,20 +403,159 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">Distribution and Tooling</h1>
+<h1 class="page">Conceptual Model</h1>
 <div class="sect1">
-<h2 id="_distribution_package"><a class="anchor" href="#_distribution_package"></a>Distribution Package</h2>
+<h2 id="_espd_conceptual_model"><a class="anchor" href="#_espd_conceptual_model"></a>ESPD Conceptual Model</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ESPD-EDM distribution package is available at <a href="https://github.com/OP-TED/ESPD-EDM">OP-TED/ESPD-EDM on GitHub</a>.</p>
-</div>
-<div class="sect2">
-<h3 id="_repository_structure"><a class="anchor" href="#_repository_structure"></a>Repository Structure</h3>
-<div class="paragraph">
-<p>The <strong>main</strong> branch contains the latest released version. Only a main branch is maintained with different version tags.</p>
+<p>The ESPD Conceptual Model is the authoritative source for the ESPD-EDM data structure. It is maintained as an Enterprise Architect (EA) project file (<code>ESPD_CM.eapx</code>) in the <a href="https://github.com/OP-TED/espd-conceptual-model" target="_blank" rel="noopener">espd-conceptual-model</a> repository.</p>
 </div>
 <div class="paragraph">
-<p>The repository has the following folder structure:</p>
+<p>Starting with ESPD-EDM v5.0.0, the conceptual model follows a <strong>Model-Driven Architecture</strong> — all artefacts (criterion JSON, code lists, validation rules) are derived from this single source of truth.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_core_concepts"><a class="anchor" href="#_core_concepts"></a>Core Concepts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The conceptual model defines the following core entities and their relationships:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Concept</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Criterion</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A fact or condition used by the buyer to evaluate tenders. Maps to <code>cac:TenderingCriterion</code> in UBL. Each criterion has a UUID from e-Certis, a type code, name, and description.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirement Group</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A first-level grouping of properties within a criterion. Maps to <code>cac:TenderingCriterionPropertyGroup</code>. Controls conditional display via <code>PropertyGroupTypeCode</code> (ON*, ONTRUE, ONFALSE).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirement Subgroup</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A nested grouping within a group. Maps to <code>cac:SubsidiaryTenderingCriterionPropertyGroup</code>. Same structure as a group — groups can be nested to arbitrary depth.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A leaf element within a group: a CAPTION (label), REQUIREMENT (buyer-set condition), or QUESTION (EO must answer). Maps to <code>cac:TenderingCriterionProperty</code>. Each property has a <code>ValueDataTypeCode</code> defining the expected response type.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Response</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The economic operator&#8217;s answer to a QUESTION property. Maps to <code>cac:TenderingCriterionResponse</code>. Linked to the property via <code>cbc:ValidatedCriterionPropertyID</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Evidence</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A document proving compliance. Maps to <code>cac:Evidence</code>. Linked to responses via <code>cac:EvidenceSupplied</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Legislation</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A reference to the legal basis for a criterion. Maps to <code>cac:Legislation</code>. Contains title, article, jurisdiction level, and URI.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_entity_relationships"><a class="anchor" href="#_entity_relationships"></a>Entity Relationships</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The core entities form a hierarchical tree:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">Criterion
+  ├── Legislation (0..n)
+  ├── SubCriterion (0..n) — national criteria specialising EU criteria
+  ├── ProcurementProjectLotReference (0..n) — lot associations
+  └── RequirementGroup (1..n)
+        ├── Property (1..n) — CAPTION, REQUIREMENT, or QUESTION
+        └── RequirementSubgroup (0..n)
+              ├── Property (1..n)
+              └── RequirementSubgroup (0..n) — recursive nesting</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the ESPD Response, an additional layer links answers to questions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">TenderingCriterionResponse
+  ├── ValidatedCriterionPropertyID — links to the QUESTION property UUID
+  └── ResponseValue (1..n) — the actual answer (amount, date, indicator, etc.)
+        linked to → Evidence (0..n) — supporting documents</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mapping_to_ubl_2_4"><a class="anchor" href="#_mapping_to_ubl_2_4"></a>Mapping to UBL 2.4</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The conceptual model maps to two UBL 2.4 document types:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Conceptual Entity</th>
+<th class="tableblock halign-left valign-top">UBL Request Element</th>
+<th class="tableblock halign-left valign-top">UBL Response Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion</code> (copied from Request)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirement Group</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Response</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>(not present in Request)</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionResponse</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Evidence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>(not present in Request)</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Evidence</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Legislation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Legislation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Legislation</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_repository_structure"><a class="anchor" href="#_repository_structure"></a>Repository Structure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="https://github.com/OP-TED/espd-conceptual-model" target="_blank" rel="noopener">espd-conceptual-model</a> repository contains:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -431,301 +570,52 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>codelists/</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code list files in Genericode (<code>.gc</code>) format + <code>codelists.json</code> metadata reference. Used in conjunction with the UBL XML structure and the ESPD Model to generate and validate ESPD documents.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conceptual-model/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Enterprise Architect project file (<code>ESPD_CM.eapx</code>) — the source of truth</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>criterion/</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion structure definition. The file <code>espd-edm.json</code> contains the data structure of all ESPD-EDM Exclusion Grounds and Selection Criteria in JSON format.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>documentation-integration/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTML export of the conceptual model diagrams for integration into documentation</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>schemas/</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">OASIS UBL 2.4 distribution package:<br>
-- <code>common/</code>: common elements and structures.<br>
-- <code>maindoc/</code>: XSD schemas for the ESPD Request and Response.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>external-sources/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source data for external code lists (EU Vocabularies)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validation/</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ESPD-EDM validation files (Schematron and XSL). Created following the procedure in the <a href="https://github.com/OP-TED/espd-validation-schematron">ESPD Validation Schematron repository</a>.<br>
-Sub-folders:<br>
-- <code>common/cva/</code>: CVA file for code lists<br>
-- <code>common/sch/</code>: Schematron files for common validation<br>
-- <code>ESPDRequest/sch/</code>: Schematron for ESPD Request<br>
-- <code>ESPDRequest/xsl/</code>: Compiled XSL for ESPD Request<br>
-- <code>ESPDResponse/sch/</code>: Schematron for ESPD Response<br>
-- <code>ESPDResponse/xsl/</code>: Compiled XSL for ESPD Response</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>conceptual-model</code> folder and <code>ubl-2.3</code> folder from previous versions have been removed. The UBL 2.4 schema is now in the <code>schemas</code> folder. The Conceptual Model is accessible via the documentation site.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_criterion_data_model_json"><a class="anchor" href="#_criterion_data_model_json"></a>Criterion Data Model (JSON)</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Starting with ESPD-EDM v5.0.0, the canonical source for criterion definitions is the JSON file <code>espd-edm.json</code>, replacing the deprecated Excel-based <code>ESPD-criterion.xlsx</code> workflow.</p>
-</div>
-<div class="sect2">
-<h3 id="_location"><a class="anchor" href="#_location"></a>Location</h3>
-<div class="paragraph">
-<p><code><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json" class="bare">https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json</a></code></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_what_it_contains"><a class="anchor" href="#_what_it_contains"></a>What it contains</h3>
-<div class="paragraph">
-<p>The <code>espd-edm.json</code> file defines:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>All Exclusion Ground criteria (with their UUIDs, type codes, names, descriptions)</p>
-</li>
-<li>
-<p>All Selection Criteria (same structure)</p>
-</li>
-<li>
-<p>The property group tree for each criterion (QUESTION_GROUP, REQUIREMENT_GROUP, QUESTION_SUBGROUP, etc.)</p>
-</li>
-<li>
-<p>Individual properties (QUESTION, REQUIREMENT, CAPTION) with their expected data types</p>
-</li>
-<li>
-<p>UUIDs harmonised with e-Certis</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_json_schema"><a class="anchor" href="#_json_schema"></a>JSON Schema</h3>
-<div class="paragraph">
-<p>A JSON schema file is provided alongside <code>espd-edm.json</code> to validate exports from Enterprise Architect and ensure structural consistency.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_migration_from_excel"><a class="anchor" href="#_migration_from_excel"></a>Migration from Excel</h3>
-<div class="paragraph">
-<p>In previous versions, criterion structures were maintained in <code>ESPD-criterion.xlsx</code> (one tab per criterion). In v5.0.0:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The Excel file is deprecated (it may still exist for reference but is not the source of truth)</p>
-</li>
-<li>
-<p>All tooling should consume <code>espd-edm.json</code> instead</p>
-</li>
-<li>
-<p>XSLT transformations generate ESPD UBL XML from the JSON data</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For detailed documentation of the JSON format, field semantics, and traversal patterns, see <a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a>.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_tooling_pipeline"><a class="anchor" href="#_tooling_pipeline"></a>Tooling Pipeline</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_eatojson_enterprise_architect_to_json"><a class="anchor" href="#_eatojson_enterprise_architect_to_json"></a>EAtoJSON: Enterprise Architect to JSON</h3>
-<div class="paragraph">
-<p>The <code>espd-edm.json</code> file is generated from the ESPD Conceptual Model maintained in Enterprise Architect (EA). The generation pipeline (<code>EAtoJSON</code>) extracts the criterion tree from the EA model and produces the canonical JSON representation.</p>
-</div>
-<div class="paragraph">
-<p><strong>Pipeline steps:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Maintain criterion definitions in Enterprise Architect (ESPD Conceptual Model)</p>
-</li>
-<li>
-<p>Run the EAtoJSON export pipeline (<code>espd-tools/EAtoJSON/</code>)</p>
-</li>
-<li>
-<p>Validate the output JSON against the JSON schema</p>
-</li>
-<li>
-<p>Commit the resulting <code>espd-edm.json</code> to the <code>ESPD-EDM/criterion/</code> folder</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Only the ESPD Team runs this pipeline. Implementers consume the output (<code>espd-edm.json</code>) — they do not need to run the generation pipeline themselves.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_validation_schematron_pipeline"><a class="anchor" href="#_validation_schematron_pipeline"></a>Validation Schematron Pipeline</h3>
-<div class="paragraph">
-<p>The ESPD validation artefacts (Schematron rules compiled to XSL) are produced in the <a href="https://github.com/OP-TED/espd-validation-schematron">espd-validation-schematron</a> repository.</p>
-</div>
-<div class="paragraph">
-<p><strong>Pipeline steps:</strong></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Clone the <code>espd-validation-schematron</code> repository</p>
-</li>
-<li>
-<p>Copy external data from <code>ESPD-EDM</code> into the schematron repository:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>codelists/</code> &#8594; <code>gc</code> (code list files in genericode format)</p>
-</li>
-<li>
-<p><code>criterion/espd-edm.json</code> &#8594; criterion input</p>
-</li>
-<li>
-<p><code>schemas/</code> &#8594; <code>common/xsdrt/</code> (UBL XSD schemas)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Run <code>espd-schematron-gc.bat</code> (Windows) to:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Transform Schematron (<code>.sch</code>) files into XSLT (<code>.xsl</code>) validators</p>
-</li>
-<li>
-<p>Validate code lists against CVA rules</p>
-</li>
-<li>
-<p>Produce validation reports in the <code>logs/</code> folder</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>The resulting XSL files are copied back to <code>ESPD-EDM/validation/</code> for distribution</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>Prerequisites:</strong> Java JDK 1.8+, Git client.</p>
-</div>
-<div class="paragraph">
-<p><strong>Output:</strong> XSL files for Request validation (<code>ESPDRequest/xsl/</code>), Response validation (<code>ESPDResponse/xsl/</code>), and common validation (<code>common/</code>).</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_integration_guidance"><a class="anchor" href="#_integration_guidance"></a>Integration Guidance</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_consuming_the_distribution_package"><a class="anchor" href="#_consuming_the_distribution_package"></a>Consuming the Distribution Package</h3>
-<div class="paragraph">
-<p>Implementers building an ESPD Service should:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><strong>Download the distribution package</strong> from the <a href="https://github.com/OP-TED/ESPD-EDM/releases">ESPD-EDM GitHub Releases</a> page (or clone the repository at the appropriate version tag).</p>
-</li>
-<li>
-<p><strong>Parse <code>criterion/espd-edm.json</code></strong> to build the criterion catalogue for your service — render forms, generate XML criterion sections, and map property data types.</p>
-</li>
-<li>
-<p><strong>Reference <code>codelists/</code></strong> for all code list values used in ESPD documents (genericode <code>.gc</code> files). The <code>codelists.json</code> metadata file provides code list identifiers, versions, and agency information.</p>
-</li>
-<li>
-<p><strong>Use <code>schemas/maindoc/</code></strong> for XSD validation of generated ESPD Request and Response XML instances.</p>
-</li>
-<li>
-<p><strong>Apply <code>validation/</code> XSL files</strong> for Schematron-based business rule validation (either locally or via the <a href="https://www.itb.ec.europa.eu/espd/upload">Interoperability Testbed</a>).</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_validation_options"><a class="anchor" href="#_validation_options"></a>Validation Options</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Option</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Online (Testbed)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Upload ESPD XML instances to the <a href="https://www.itb.ec.europa.eu/espd/upload">Interoperability Testbed</a> for validation. No local setup needed.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Local (Saxon)</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Use the <a href="http://saxon.sourceforge.net/">Saxon XSLT Processor</a> (or equivalent) to execute the XSL validation files against your XML instances locally. Requires Java.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Integrated</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Embed the XSL validation step in your service pipeline — apply the Request or Response XSL to each generated document before publishing/submitting.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mock-ups/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microsoft Visio UI mock-ups of ESPD criterion forms (archival, not actively maintained)</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="_release_notes"><a class="anchor" href="#_release_notes"></a>Release Notes</h2>
+<h2 id="_generation_pipeline"><a class="anchor" href="#_generation_pipeline"></a>Generation Pipeline</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Release notes for each release are available on <a href="https://github.com/OP-TED/ESPD-EDM/releases">GitHub Releases</a>. The distribution package for each release is attached to the corresponding release and the source code is tagged in the GitHub repository.</p>
+<p>The conceptual model feeds into the <a href="https://github.com/OP-TED/espd-tools" target="_blank" rel="noopener">espd-tools</a> pipeline:</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_issues_and_community"><a class="anchor" href="#_issues_and_community"></a>Issues and Community</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The <a href="https://github.com/OP-TED/ESPD-EDM/issues">Issues tab</a> on GitHub contains all questions and issues submitted to the ESPD Team by the Open User Community:</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>Document requests</p>
+<p><strong>Enterprise Architect</strong> model is maintained by the ESPD Team</p>
 </li>
 <li>
-<p>Clarification on the distribution package or implementation issues</p>
+<p><strong>espd-tools</strong> extracts criteria and code lists from the EA model</p>
 </li>
 <li>
-<p>Feature requests proposing changes to the model</p>
+<p><strong>espd-edm.json</strong> is generated as the criterion definition file</p>
 </li>
-</ul>
+<li>
+<p><strong>Genericode (.gc)</strong> files are generated for code lists</p>
+</li>
+<li>
+<p>These artefacts are committed to the <strong>ESPD-EDM</strong> distribution package</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>The ESPD Team also raises issues to inform the community of decisions and to open discussion for topics that cannot wait for a monthly meeting.</p>
+<p>For details on the tooling pipeline, see <a href="distribution-tooling.html" class="xref page">Distribution and Tooling</a>.</p>
 </div>
 </div>
 </div>
@@ -735,13 +625,16 @@ Only the ESPD Team runs this pipeline. Implementers consume the output (<code>es
 <div class="ulist">
 <ul>
 <li>
-<p>For code list details, see <a href="code-lists.html" class="xref page">Code Lists</a>.</p>
+<p><a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a> — the JSON output of the conceptual model</p>
 </li>
 <li>
-<p>For validation details, see <a href="common-concepts.html" class="xref page">Common Concepts</a>.</p>
+<p><a href="how-criteria-work.html" class="xref page">How Criteria Work</a> — how criteria structure works in practice</p>
 </li>
 <li>
-<p>For the complete Schematron rules catalogue, see <a href="business-rules.html" class="xref page">Business Rules</a>.</p>
+<p><a href="document-model-ubl.html" class="xref page">Document Model (UBL)</a> — the UBL foundation</p>
+</li>
+<li>
+<p><a href="distribution-tooling.html" class="xref page">Distribution and Tooling</a> — the generation pipeline</p>
 </li>
 </ul>
 </div>

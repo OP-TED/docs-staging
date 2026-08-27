@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Response Model Reference :: TED Developer Docs</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/response-model-reference.html">
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/response-reference-model.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -187,13 +187,16 @@
     <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
+    <a class="nav-link" href="request-reference-model.html">Request Reference Model</a>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
+    <a class="nav-link" href="response-reference-model.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conceptual-model.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="code-lists.html">Code Lists</a>
@@ -376,13 +379,13 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ESPD EDM</a></li>
-    <li><a href="response-model-reference.html">Response Reference Model</a></li>
+    <li><a href="response-reference-model.html">Response Reference Model</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="response-model-reference.html">5.0.0</a>
+    <a class="version is-current" href="response-reference-model.html">5.0.0</a>
     <a class="version is-missing" href="../../4.1.0/index.html">4.1.0</a>
     <a class="version is-missing" href="../../4.0.0/index.html">4.0.0</a>
     <a class="version is-missing" href="../../3.3.0/index.html">3.3.0</a>
@@ -599,7 +602,7 @@ For the complete business rules catalogue, see <a href="business-rules.html" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:ContractingParty</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Associated class</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The buyer who is buying supplies, services or public works using a tendering procedure as described in the applicable directive (Directives 2014/24/EU, 2014/25/EU). See section <a href="request-model-reference.html" class="xref page">Request Model Reference</a> for more specification details.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The buyer who is buying supplies, services or public works using a tendering procedure as described in the applicable directive (Directives 2014/24/EU, 2014/25/EU). See section <a href="request-reference-model.html" class="xref page">Request Reference Model</a> for more specification details.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: The buyer must be identified, hence information about the party are required, such as party name, country, identification, endpoint id.</p>
 </div>
@@ -644,7 +647,7 @@ For the complete business rules catalogue, see <a href="business-rules.html" cla
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:TenderingCriterion</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Associated class</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A tendering criterion describes a rule or a condition that is used by the contracting body to evaluate and compare tenders by economic operators and which will be used for the exclusion and the selection of candidates to the award decision.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A tendering criterion describes a rule or a condition that is used by the buyer to evaluate and compare tenders by economic operators and which will be used for the exclusion and the selection of candidates to the award decision.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: The ESPD must contain corresponding information about the (non)existence of exclusion grounds as set out in the call for tender or ESPD template. The information shall contain a legal reference (EU level, buyer national level, economic operator national level). Furthermore it must contain the name of criterion and criterion group to which it belongs (according to names of Art. 57 of 2014/24/EC and referred to in Art. 80 of 2014/25/EC) as well as indications of (non)existence of each single exclusion ground contained and details and explanations as requested according to Art. 57 of directive 2014/25/EU and the ESPD form agreed among the Member State. Where demanded and if available electronically, the ESPD shall provide the following information to relevant documentation: the web address, issuing body, and precise reference of the documentation. The ESPD shall also accommodate information of self-cleaning measures and reliability explanations in cases, where an exclusion ground exists.</p>
 </div>
@@ -734,7 +737,7 @@ For the complete business rules catalogue, see <a href="business-rules.html" cla
 </tbody>
 </table>
 <div class="paragraph">
-<p>For EU and notice publications that need to be included in the ESPD Response see the section <a href="request-model-reference.html" class="xref page">Request Model Reference</a> where this information is presented in detail and illustrated with examples.</p>
+<p>For EU and notice publications that need to be included in the ESPD Response see the section <a href="request-reference-model.html" class="xref page">Request Reference Model</a> where this information is presented in detail and illustrated with examples.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1620,14 +1623,14 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">An identifier that identifies the economic operator, such as the VAT number, the company registration number in a Business Register, other.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>Rule</strong>: When possible use the VAT identification of the contracting body (see the <a href="https://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system). When not possible a different identifier may be used. For a very complete way of identification of the Party it is highly recommended to, additionally to the cac:Party/cac:Identification/cbc:ID, use the UBL-2.4 component cac:PartyLegalEntity: this element is the perfect placeholder for the data officially registered in a Business Register (see UBL-2.4 model, and XSD diagram above).</p>
+<p><strong>Rule</strong>: When possible use the VAT identification of the buyer (see the <a href="https://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system). When not possible a different identifier may be used. For a very complete way of identification of the Party it is highly recommended to, additionally to the cac:Party/cac:Identification/cbc:ID, use the UBL-2.4 component cac:PartyLegalEntity: this element is the perfect placeholder for the data officially registered in a Business Register (see UBL-2.4 model, and XSD diagram above).</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:EndPointID</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address of the contracting body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address of the buyer.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Rule</strong>: Use it for online services (e.g. Web Services, REST services, Delivery ID, ftp, etc. For the official web site of the Party use always the cac:Party/cbc:WebsiteURI). An end-point identifier MUST have a scheme identifier attribute (e.g.eSENSParty Identifier Scheme). Should be considered for all actors (buyer, service provider, economic operator) as an eDeliveryID.</p>
 </div></div></td>

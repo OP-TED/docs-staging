@@ -187,13 +187,16 @@
     <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
+    <a class="nav-link" href="request-reference-model.html">Request Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
+    <a class="nav-link" href="response-reference-model.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conceptual-model.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="code-lists.html">Code Lists</a>
@@ -496,6 +499,53 @@ Economic Operator → creates ESPD Response
                               ↓
 Buyer → evaluates Responses → selects candidates</code></pre>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_self_contained_vs_regulated_espd"><a class="anchor" href="#_self_contained_vs_regulated_espd"></a>Self-contained vs regulated ESPD</h3>
+<div class="paragraph">
+<p>The ESPD-EDM supports two usage patterns depending on the procurement context:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Variant</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Regulated (above threshold)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For procurement procedures above the EU thresholds defined in Article 4 of Directive 2014/24/EU. The ESPD Request <strong>must</strong> reference a Contract Notice published on TED. Exclusion grounds from Article 57(1) and (2) are mandatory. The full set of ESPD-EDM business rules applies, including lot management via eForms-aligned identifiers.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Self-contained (below threshold)</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For procedures below the threshold or where Member State legislation permits simplified use. The buyer may include all necessary procedure information directly in the ESPD Request without a TED publication reference. The ESPD document is "self-contained" — it carries the procedure context within itself.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In both variants the XML structure is the same (<code>QualificationApplicationRequest</code> / <code>QualificationApplicationResponse</code>). The difference lies in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Whether <code>cac:AdditionalDocumentReference</code> references an external TED publication or not</p>
+</li>
+<li>
+<p>Which exclusion grounds are mandatory vs optional</p>
+</li>
+<li>
+<p>Whether lot identifiers follow the eForms format</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>cbc:ProfileExecutionID</code> element in the root of the document identifies which profile is in use.</p>
 </div>
 </div>
 <div class="sect2">

@@ -187,13 +187,16 @@
     <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
+    <a class="nav-link" href="request-reference-model.html">Request Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
+    <a class="nav-link" href="response-reference-model.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conceptual-model.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="code-lists.html">Code Lists</a>
@@ -522,6 +525,95 @@
 </div>
 <div class="paragraph">
 <p>For full details on attributes and their usage, see <a href="code-lists.html" class="xref page">Code Lists</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_namespace_prefixes"><a class="anchor" href="#_namespace_prefixes"></a>Namespace prefixes</h3>
+<div class="paragraph">
+<p>The following namespace prefixes are used throughout the ESPD-EDM documentation and XML instances:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Prefix</th>
+<th class="tableblock halign-left valign-top">Namespace</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Complex elements composed of other elements (e.g. <code>cac:TenderingCriterion</code>, <code>cac:ContractingParty</code>, <code>cac:EconomicOperatorParty</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple leaf elements with data values (e.g. <code>cbc:ID</code>, <code>cbc:Name</code>, <code>cbc:Description</code>, <code>cbc:TypeCode</code>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ext:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UBL extension components (<code>ext:UBLExtensions</code>)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_how_to_read_the_element_reference_tables"><a class="anchor" href="#_how_to_read_the_element_reference_tables"></a>How to read the element reference tables</h3>
+<div class="paragraph">
+<p>The <a href="request-reference-model.html" class="xref page">Request Reference Model</a> and <a href="response-reference-model.html" class="xref page">Response Reference Model</a> pages contain detailed element tables. Here is how to read them:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Components</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The element name with its namespace prefix (e.g. <code>cbc:ID</code>, <code>cac:Party</code>). Nested elements are listed under their parent.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Type</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data type: <code>Identifier</code>, <code>Code</code>, <code>Text</code>, <code>Amount</code>, <code>Date</code>, <code>Indicator</code>, or <code>Associated class</code> (for complex <code>cac:</code> elements).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Card</strong> (Cardinality)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">How many times the element may appear: <code>1</code> (mandatory, exactly once), <code>0..1</code> (optional, at most once), <code>1..n</code> (mandatory, one or more), <code>0..n</code> (optional, zero or more).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">What the element represents in the ESPD context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Requirements</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business rules (BR-*) that apply, code list references, and implementation notes.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Cardinalities shown in the element tables are ESPD-EDM constraints, which may be stricter than the underlying UBL schema. The UBL schema itself is more permissive — the ESPD-specific cardinalities are enforced via Schematron validation.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Request Model Reference :: TED Developer Docs</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/request-model-reference.html">
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/technical/request-reference-model.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <link rel="stylesheet" href="../../../_/css/custom.css">
@@ -187,13 +187,16 @@
     <span class="nav-text"><span class="separated"><strong>Implementation Reference Model</strong></span></span>
   </li>
   <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="request-model-reference.html">Request Reference Model</a>
+    <a class="nav-link" href="request-reference-model.html">Request Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="response-model-reference.html">Response Reference Model</a>
+    <a class="nav-link" href="response-reference-model.html">Response Reference Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="criteria-catalogue.html">Criteria Catalogue</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="conceptual-model.html">Conceptual Model</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="code-lists.html">Code Lists</a>
@@ -376,13 +379,13 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">ESPD EDM</a></li>
-    <li><a href="request-model-reference.html">Request Reference Model</a></li>
+    <li><a href="request-reference-model.html">Request Reference Model</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="request-model-reference.html">5.0.0</a>
+    <a class="version is-current" href="request-reference-model.html">5.0.0</a>
     <a class="version is-missing" href="../../4.1.0/index.html">4.1.0</a>
     <a class="version is-missing" href="../../4.0.0/index.html">4.0.0</a>
     <a class="version is-missing" href="../../3.3.0/index.html">3.3.0</a>
@@ -621,7 +624,7 @@ Additional comments: copies of an ESPD document should be identified with same U
 <th class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:TenderingCriterion</strong></p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">Associated class</p></th>
 <th class="tableblock halign-left valign-top"><p class="tableblock">1..n</p></th>
-<th class="tableblock halign-left valign-top"><p class="tableblock">A tendering criterion describes a rule or a condition that is used by the contracting body to evaluate and compare tenders by economic operators and which will be used for the exclusion and the selection of candidates to the award decision.</p></th>
+<th class="tableblock halign-left valign-top"><p class="tableblock">A tendering criterion describes a rule or a condition that is used by the buyer to evaluate and compare tenders by economic operators and which will be used for the exclusion and the selection of candidates to the award decision.</p></th>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>: ,</p>
 </div>
@@ -653,7 +656,7 @@ Reference</strong></p></th>
 <p><strong>Information Requirement</strong>:</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: <strong>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED</strong>. See section <a href="response-model-reference.html" class="xref page">Response Model Reference</a> for a complete example.</p>
+<p><strong>Rule</strong>: <strong>For procurement procedures above the threshold it is compulsory to make reference to the Contract Notice of the procedure published in TED</strong>. See section <a href="response-reference-model.html" class="xref page">Response Reference Model</a> for a complete example.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1058,18 +1061,18 @@ Reference</strong></p></th>
 </div>
 </div>
 <div class="sect1">
-<h2 id="contracting_body"><a class="anchor" href="#contracting_body"></a>Contracting Body</h2>
+<h2 id="contracting_body"><a class="anchor" href="#contracting_body"></a>Buyer (Contracting Body)</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_related_information_requirements"><a class="anchor" href="#_related_information_requirements"></a>Related information requirements</h3>
 <div class="paragraph">
-<p>The contracting body must be identified, hence information about the party is required, such as party name, identification, endpoint id, buyer profile and country.</p>
+<p>The buyer must be identified, hence information about the party is required, such as party name, identification, endpoint id, buyer profile and country.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_mock_up_2"><a class="anchor" href="#_mock_up_2"></a>Mock-up</h3>
 <div class="paragraph">
-<p>In principle, the ESPD-EDM asks for a few data about the procurer (i.e. the buyer, body or entity). The essential (compulsory) data for the contracting body are namely the one aimed to identify it, i.e. its official name and the country. The figure below represents a possible GUI interface for these two data. However the UBL specification provides many other data elements some of which may be interesting to include in the ESPD, notably data about the means to contact the contracting body (see below the list of elements possible in the ESPD).</p>
+<p>In principle, the ESPD-EDM asks for a few data about the procurer (i.e. the buyer, body or entity). The essential (compulsory) data for the buyer are namely the one aimed to identify it, i.e. its official name and the country. The figure below represents a possible GUI interface for these two data. However the UBL specification provides many other data elements some of which may be interesting to include in the ESPD, notably data about the means to contact the buyer (see below the list of elements possible in the ESPD).</p>
 </div>
 <div class="paragraph">
 <p>Therefore software applications may make use of the richness of UBL-2.4 to collect data about the buyer contact, end-point, and other possible data in the ESPD.</p>
@@ -1117,7 +1120,7 @@ Reference</strong></p></th>
 <p><em>Figure 11. cac:PostalAddress, XSD Schema</em></p>
 </div>
 <div class="paragraph">
-<p>Notice also that the class associated to cac:Party to place the data about how to contact the contracting body:</p>
+<p>Notice also that the class associated to cac:Party to place the data about how to contact the buyer:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1134,7 +1137,7 @@ Reference</strong></p></th>
 <p>The mapping between the business requirements, the logic layer of the ESPD-EDM and the UBL-2.4 physical layer:</p>
 </div>
 <div class="paragraph">
-<p><em>Table 8. Contracting body, expected elements</em></p>
+<p><em>Table 8. Buyer (Contracting Party), expected elements</em></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1186,7 +1189,7 @@ Reference</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:BuyerProfileURI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">URL of the web section, in the contracting body web site, that contains information about the contracting body, the norms applied when contracting, published calls for tenders, Prior Information Notices and Contract Notices as well as the related procurement documents, contract award notices, etc.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URL of the web section, in the buyer&#8217;s web site, that contains information about the buyer, the norms applied when contracting, published calls for tenders, Prior Information Notices and Contract Notices as well as the related procurement documents, contract award notices, etc.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>:</p>
 </div>
@@ -1200,7 +1203,7 @@ Reference</strong></p></th>
 <p>The mapping between the business requirements, the logic layer of the ESPD-EDM and the UBL-2.4 physical layer:</p>
 </div>
 <div class="paragraph">
-<p><em>Table 9. Contracting body party, expected elements</em></p>
+<p><em>Table 9. Buyer (Contracting Party), expected elements</em></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1214,7 +1217,7 @@ Reference</strong></p></th>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Main data placeholder structure for, in this case, the contracting body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Main data placeholder structure for, in this case, the buyer.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>File</strong>:</p></td>
@@ -1248,19 +1251,19 @@ Reference</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PartyIdentification/cbc:ID</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The national identifier of a contracting body as it is legally registered (e.g. VAT identification).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The national identifier of a buyer as it is legally registered (e.g. VAT identification).</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>:</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: When possible, use the VAT identification of the contracting body (see the <a href="https://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system). When not possible, a different identifier may be used. The code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a> may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
+<p><strong>Rule</strong>: When possible, use the VAT identification of the buyer (see the <a href="https://ec.europa.eu/taxation_customs/vies/">VIES</a> platform for a EU cross-border national VAT number verification system). When not possible, a different identifier may be used. The code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a> may be used to indicate the type of identifier used as a value of the schemeID attribute, e.g. schemeID="VAT").</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:WebsiteURI</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The website of the contracting body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The website of the buyer.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>:</p>
 </div>
@@ -1272,7 +1275,7 @@ Reference</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cbc:EndPointID</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">0..1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address of the contracting body.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Electronic address of the buyer.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>:</p>
 </div>
@@ -1284,12 +1287,12 @@ Reference</strong></p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cac:PartyName/cbc:Name</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the contracting body as it is registered.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the buyer as it is registered.</p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p><strong>Information Requirement</strong>:</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: Mandatory. Use the official name of the contracting body. The PartyName class has an associated basic element "cbc:Name". See XML example below.</p>
+<p><strong>Rule</strong>: Mandatory. Use the official name of the buyer. The PartyName class has an associated basic element "cbc:Name". See XML example below.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1298,7 +1301,7 @@ Reference</strong></p></th>
 <p>The mapping between the business requirements, the logic layer of the ESPD-EDM and the UBL-2.4 physical layer:</p>
 </div>
 <div class="paragraph">
-<p><em>Table 10. Contracting body postal address, expected elements</em></p>
+<p><em>Table 10. Buyer (Contracting Party) postal address, expected elements</em></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1312,7 +1315,7 @@ Reference</strong></p></th>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Contractinng body address information.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Buyer address information.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Business rule(s)</strong>:</p></td>
@@ -1393,7 +1396,7 @@ IdentificationCode</strong></p></td>
 <p><strong>Information Requirement</strong>:</p>
 </div>
 <div class="paragraph">
-<p><strong>Rule</strong>: The country of the contracting body must always be specified. Compulsory use of the code list Country from EU Vocabularies).</p>
+<p><strong>Rule</strong>: The country of the buyer must always be specified. Compulsory use of the code list Country from EU Vocabularies).</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1414,7 +1417,7 @@ IdentificationCode</strong></p></td>
 <p>The mapping between the business requirements, the logic layer of the ESPD-EDM and the UBL-2.4 physical layer:</p>
 </div>
 <div class="paragraph">
-<p><em>Table 11. Contact of the contracting body, expected elements</em></p>
+<p><em>Table 11. Contact of the buyer (contracting party), expected elements</em></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1528,7 +1531,7 @@ cac:ContractingParty/cac:Party/cac:Contact</p></td>
 </thead>
 </table>
 <div class="paragraph">
-<p>Service providers are officially recognised organisations that can supply ESPD Request documents (on behalf of the contracting body) with pre-filled information about the contracting body and additional information (e.g. liability statements, see )</p>
+<p>Service providers are officially recognised organisations that can supply ESPD Request documents (on behalf of the buyer) with pre-filled information about the buyer and additional information (e.g. liability statements, see )</p>
 </div>
 <div class="paragraph">
 <p>The ESPD allows the provision of data about the service provider who produced the ESPD Request document (and equally for the ESPD Response document, on behalf of the economic operator).</p>
