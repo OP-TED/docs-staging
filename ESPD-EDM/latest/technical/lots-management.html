@@ -493,18 +493,47 @@
 <h2 id="_lot_identifiers"><a class="anchor" href="#_lot_identifiers"></a>Lot Identifiers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This version of the ESPD uses the eForms lot identifier format. Lot identifiers follow the pattern:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="https://kroki.io/pikchr/svg/eNqNkMFOwzAQRO_5ilFOcHESSITokbQgLigSH2BtjessdezKdSH8PU5KpSonbrO7M29XWxToyGgUUavesSI7K0lB9ZxUPAUt-jhYvA4Ln-Spcyw2791aPp1-dJCdJSc-DwY3z2xSElUpSWAeYho6duY2y6IeI_K5vcqhvPUBW0tqnw3-SyOw6SNK0bDLNi_VCls_ItAHmsOI_MK5BMuxerxr6xY7tjZVdf1w3zapite0SpRnGi1wbz6y0sd_0M5XL9d_T38CRST2n2WBvHbQLwuieKs=" alt="Lot Identifiers" width="540" height="130">
-</div>
+<p>To keep the ESPD aligned with the notice it belongs to, this version of the ESPD adopts the eForms lot identifier format instead of defining its own. The same identifiers used in the eForms Contract Notice are reused, unchanged, in the ESPD Request and ESPD Response. This guarantees that a selection criterion associated with <code>LOT-0002</code> in the ESPD refers to exactly the same lot as <code>LOT-0002</code> in the notice.</p>
 </div>
 <div class="paragraph">
-<p><em>Figure 2. Lot Identifiers according to eForms schema</em></p>
+<p>Identifiers follow a fixed prefix + zero-padded sequence number pattern:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Identifier</th>
+<th class="tableblock halign-left valign-top">Pattern</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single lot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LOT-nnnn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An individual lot in the procedure (e.g. <code>LOT-0001</code>, <code>LOT-0002</code>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Group of lots</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>GLO-nnnn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A group of lots that are tendered for and awarded together (e.g. <code>GLO-0001</code>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whole procedure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LOT-0000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used when the procedure is not divided into lots — a single, procedure-wide lot.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The four-digit sequence is zero-padded (<code>0001</code>, not <code>1</code>) and numbering starts at <code>0001</code> for lots and groups. A procedure that is not split into lots still carries one lot, conventionally <code>LOT-0000</code>.</p>
 </div>
 <div class="paragraph">
-<p>Examples: <code>LOT-0001</code>, <code>LOT-0002</code>, <code>GLO-0001</code> (for groups of lots).</p>
+<p>These identifiers are the values carried by <code>cac:ProcurementProjectLotReference/cbc:ID</code> in both ESPD documents. Because the format is defined by eForms rather than the ESPD-EDM, the authoritative rules for allowed values live in the eForms specification; the ESPD simply consumes them.</p>
 </div>
 </div>
 </div>
