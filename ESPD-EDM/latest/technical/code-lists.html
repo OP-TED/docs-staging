@@ -430,7 +430,7 @@
 <p>Identifiers point at specific occurrences of objects (instances); codes replace concepts;</p>
 </li>
 <li>
-<p>Identifiers are virtually limitless while codes are finite. In other words, identifier lists are "open" (the lists may grow) and code list are "closed" (practically never updated once consolidated). Hence codes are maintained in 'Codelists' whilst identifiers are usually kept in databases.</p>
+<p>Identifiers are virtually limitless while codes are finite. In other words, identifier lists are "open" (the lists may grow) and code lists are "closed" (practically never updated once consolidated). Hence codes are maintained in 'Codelists' whilst identifiers are usually kept in databases.</p>
 </li>
 <li>
 <p>Identifiers are in principle maintained in the business domain, e.g. buyer identifiers, economic operator identifiers, exclusion or selection criteria identifiers, etc.</p>
@@ -457,7 +457,7 @@
 <div class="sect2">
 <h3 id="_codes_and_code_lists"><a class="anchor" href="#_codes_and_code_lists"></a>1.2. Codes and code lists</h3>
 <div class="paragraph">
-<p>The ESPD Exchange Data Model tries to reuse as the codes that are already used for e-Procurement much as possible. In any project, like the ESPD-EDM, there are at least three types (or layers) of codes:</p>
+<p>The ESPD Exchange Data Model tries to reuse as much as possible the codes already used for e-Procurement. In any project, like the ESPD-EDM, there are at least three types (or layers) of codes:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -532,7 +532,7 @@ For Genericodes it is different. In this version ESPD provides the genericode (g
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For codes, this ESPD specification requires always three mandatory attributes: </strong>listID<strong>, </strong>listAgencyID<strong>, and </strong>listVersionID.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For codes, this ESPD specification always requires three mandatory attributes: <code>listID</code>, <code>listAgencyID</code>, and <code>listVersionID</code>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -547,7 +547,7 @@ For Genericodes it is different. In this version ESPD provides the genericode (g
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REQUIREMENT</strong>:</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>For identifiers, this ESPD specification requires at least (and always) the mandatory attribute </strong>schemeAgencyID. When identifying parties, like the Economic Operator, the Buyer, etc., the attribute schemeID SHOULD also be used (for this use the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">For identifiers, this ESPD specification requires at least (and always) the mandatory attribute <code>schemeAgencyID</code>. When identifying parties, like the Economic Operator, the Buyer, etc., the attribute <code>schemeID</code> SHOULD also be used (for this use the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/EOIDType.gc">EOIDType</a>).</p></td>
 </tr>
 </tbody>
 </table>
@@ -681,80 +681,46 @@ For Genericodes it is different. In this version ESPD provides the genericode (g
 </table>
 </div>
 <div class="sect2">
-<h3 id="_xml_example"><a class="anchor" href="#_xml_example"></a>1.4. XML Example</h3>
+<h3 id="_xml_example_root_element_attributes"><a class="anchor" href="#_xml_example_root_element_attributes"></a>1.4. XML Example — root element attributes</h3>
 <div class="paragraph">
-<p>This fragment of XML shows how the compulsory attributes are used for the some of the root elements of an ESPD Request document.</p>
-</div>
-<div class="sect3">
-<h4 id="_code_with_callouts"><a class="anchor" href="#_code_with_callouts"></a>1.4.1. Code with callouts</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The source code can be copied from the code block below the callout section
-</td>
-</tr>
-</table>
+<p>This fragment of XML shows how the compulsory attributes are used for some of the root elements of an ESPD Request document.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre><i class="conum" data-value="1"></i><b>(1)</b>
-&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.4&lt;/cbc:UBLVersionID&gt;
-<i class="conum" data-value="2"></i><b>(2)</b>
-&lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.4&lt;/cbc:UBLVersionID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+&lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
 &lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP"
-<i class="conum" data-value="3"></i><b>(3)</b>
-          schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
-<i class="conum" data-value="4"></i><b>(4)</b>
-&lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/
-cbc:ContractFolderID&gt;
-<i class="conum" data-value="5"></i><b>(5)</b>
-&lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1.0&lt;/cbc:VersionID&gt;</pre>
+          schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt; <i class="conum" data-value="3"></i><b>(3)</b>
+&lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/cbc:ContractFolderID&gt; <i class="conum" data-value="4"></i><b>(4)</b>
+&lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;1.0&lt;/cbc:VersionID&gt; <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The Agency responsible for the maintenance of the UBL versioning is the OASIS UBL Technical Committee</td>
+<td>The Agency responsible for the maintenance of the UBL versioning is the OASIS UBL Technical Committee.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The identifier for this document was issued by the a Spanish Central Government Directorate identified as 'DGPE'</td>
+<td>The identifier for this document was issued by a Spanish Central Government Directorate identified as 'DGPE'.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>The UUID follows the ISO/IEC Scheme 9834-8:2008 Version 4 and was generated by the European Commission&#8217;s Directorate General GROWTH (DG GROW)</td>
+<td>The UUID follows ISO/IEC 9834-8:2008 (version 4). The <code>schemeAgencyID</code> records the agency that generated this identifier value (here, <code>OP</code>); it does not imply that any agency "owns" or maintains the UUID scheme, which is a self-generating global standard.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
-<td>The reference number used to identify to which procurement procedure this ESPD document belongs (PP.20170419.1024-9) has been supplied by the Spanish Directorate DGPE</td>
+<td>The reference number used to identify to which procurement procedure this ESPD document belongs (PP.20170419.1024-9) has been supplied by the Spanish Directorate DGPE.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
-<td>Generic information, such as the content version ID, use always by default the "OP" Agency ID. Notice that the other additional attributes may be also used, as in this example.</td>
+<td>Generic information, such as the content version ID, uses the "OP" Agency ID by default. Other additional attributes may also be used, as in this example.</td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones that are specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder /codelists of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0">distribution package</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_copy_the_code_block"><a class="anchor" href="#_copy_the_code_block"></a>1.4.2. Copy the code block</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cbc:UBLVersionID schemeAgencyID="OASIS-UBL-TC"&gt;2.4&lt;/cbc:UBLVersionID&gt;
-&lt;cbc:ID schemeAgencyID="DGPE"&gt;ESPDREQ-DGPE-3b5755dfb8&lt;/cbc:ID&gt;
-&lt;cbc:UUID schemeID="ISO/IEC 9834-8:2008" schemeAgencyID="OP"
-          schemeVersionID="4"&gt;0fddbf2d-1e33-4267-b04f-52b59b72ccb6&lt;/cbc:UUID&gt;
-&lt;cbc:ContractFolderID schemeAgencyID="DGPE"&gt;PP.20170419.1024-9&lt;/cbc:ContractFolderID&gt;
-&lt;cbc:VersionID schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;1.0&lt;/cbc:VersionID&gt;</code></pre>
-</div>
-</div>
+<p>Beware that the codes may be numbers, text or combinations of both. These code labels are the ones specified in the codelist spreadsheets and XML Genericode files distributed jointly with this specification (in the folder /codelists of the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0">distribution package</a>).</p>
 </div>
 </div>
 <div class="sect2">
@@ -779,42 +745,22 @@ cbc:ContractFolderID&gt;
 </div>
 </div>
 <div class="sect2">
-<h3 id="_xml_example_2"><a class="anchor" href="#_xml_example_2"></a>1.6. XML Example</h3>
-<div class="sect3">
-<h4 id="_code_with_callouts_2"><a class="anchor" href="#_code_with_callouts_2"></a>1.6.1. Code with callouts</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The source code can be copied from the code block below the callout section
-</td>
-</tr>
-</table>
-</div>
+<h3 id="_xml_example_question_property_identifier_scheme"><a class="anchor" href="#_xml_example_question_property_identifier_scheme"></a>1.6. XML Example — QUESTION property (identifier scheme)</h3>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;cac:TenderingCriterionProperty&gt;
-  &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
-     1fa05728-308f-43b0-b547-c903ffb0a8af
-  <i class="conum" data-value="1"></i><b>(1)</b>
-  &lt;/cbc:ID&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
+  &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
   &lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
-  &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
-  &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;
-    ECONOMIC_OPERATOR_IDENTIFIER
-  <i class="conum" data-value="2"></i><b>(2)</b>
-  &lt;/cbc:ValueDataTypeCode&gt;
-&lt;/cac:TenderingCriterionProperty&gt;</pre>
+  &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="5.0.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
+  &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="5.0.0"&gt;ECONOMIC_OPERATOR_IDENTIFIER&lt;/cbc:ValueDataTypeCode&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;/cac:TenderingCriterionProperty&gt;</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The identifier of the property will be used in the response to map link the response to this QUESTION.</td>
+<td>The identifier of the property will be used in the response to link the response to this QUESTION.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -822,57 +768,19 @@ The source code can be copied from the code block below the callout section
 </tr>
 </table>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_copy_the_code_block_2"><a class="anchor" href="#_copy_the_code_block_2"></a>1.6.2. Copy the code block</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionProperty&gt;
-  &lt;cbc:ID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
-     1fa05728-308f-43b0-b547-c903ffb0a8af
-  &lt;/cbc:ID&gt;
-  &lt;cbc:Description&gt;ID of the economic operator&lt;/cbc:Description&gt;
-  &lt;cbc:TypeCode listID="criterion-element-type" listAgencyID="OP" listVersionID="3.3.0"&gt;QUESTION&lt;/cbc:TypeCode&gt;
-  &lt;cbc:ValueDataTypeCode listID="response-data-type" listAgencyID="OP" listVersionID="3.3.0"&gt;
-    ECONOMIC_OPERATOR_IDENTIFIER
-  &lt;/cbc:ValueDataTypeCode&gt;
-&lt;/cac:TenderingCriterionProperty&gt;</code></pre>
-</div>
-</div>
 <div class="paragraph">
 <p><em>TenderingCriterionResponse (the answer to the previous QUESTION)</em></p>
 </div>
 </div>
-</div>
 <div class="sect2">
-<h3 id="_xml_example_3"><a class="anchor" href="#_xml_example_3"></a>1.7. XML Example</h3>
-<div class="sect3">
-<h4 id="_code_with_callouts_3"><a class="anchor" href="#_code_with_callouts_3"></a>1.7.1. Code with callouts</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The source code can be copied from the code block below the callout section
-</td>
-</tr>
-</table>
-</div>
+<h3 id="_xml_example_response_identifier_scheme"><a class="anchor" href="#_xml_example_response_identifier_scheme"></a>1.7. XML Example — Response (identifier scheme)</h3>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;cac:TenderingCriterionResponse&gt;
-  &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
-  &lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
-    1fa05728-308f-43b0-b547-c903ffb0a8af
-  <i class="conum" data-value="1"></i><b>(1)</b>
-  &lt;/cbc:ValidatedCriterionPropertyID&gt;
-  &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;
-    B82387770
-  <i class="conum" data-value="2"></i><b>(2)</b>
-  &lt;/cbc:ResponseID&gt;
-&lt;/cac:TenderingCriterionResponse&gt;</pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionResponse&gt;
+  &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
+  &lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="5.0.0"&gt;1fa05728-308f-43b0-b547-c903ffb0a8af&lt;/cbc:ValidatedCriterionPropertyID&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+  &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;B82387770&lt;/cbc:ResponseID&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+&lt;/cac:TenderingCriterionResponse&gt;</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -888,28 +796,16 @@ The source code can be copied from the code block below the callout section
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_copy_the_code_block_3"><a class="anchor" href="#_copy_the_code_block_3"></a>1.7.2. Copy the code block</h4>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;cac:TenderingCriterionResponse&gt;
-  &lt;cbc:ID schemeID="ISO/IEC 9834-8:2008 - 4UUID" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;acb58f0e-0fe4-4372-aa08-60d0c36bfcfe&lt;/cbc:ID&gt;
-  &lt;cbc:ValidatedCriterionPropertyID schemeID="Criterion" schemeAgencyID="OP" schemeVersionID="3.3.0"&gt;
-    1fa05728-308f-43b0-b547-c903ffb0a8af
-  &lt;/cbc:ValidatedCriterionPropertyID&gt;
-  &lt;cbc:ResponseID schemeID="VAT" schemeAgencyID="ES-AEAT"&gt;
-    B82387770
-  &lt;/cbc:ResponseID&gt;
-&lt;/cac:TenderingCriterionResponse&gt;</code></pre>
 </div>
 </div>
-<div id="code-list-catalogue" class="paragraph">
+<div class="sect1">
+<h2 id="code-list-catalogue"><a class="anchor" href="#code-list-catalogue"></a>2. Code List Catalogue</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>This section collects all code lists used in <strong>ESPD-EDM</strong> with its classification, description and meta-data.</p>
 </div>
-</div>
-</div>
 <div class="sect2">
-<h3 id="code-list-summary"><a class="anchor" href="#code-list-summary"></a>1.8. Quick Reference</h3>
+<h3 id="code-list-summary"><a class="anchor" href="#code-list-summary"></a>2.1. Quick Reference</h3>
 <div class="paragraph">
 <p>The table below provides a summary of all code lists used in ESPD documents and the XSD elements where they are applied. Detailed metadata for each code list follows in the sections below.</p>
 </div>
@@ -1063,11 +959,8 @@ In ESPD-EDM v5.0.0, the old <em>Criterion</em> code list was replaced by two sep
 </tbody>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="access-right-table"><a class="anchor" href="#access-right-table"></a>2. access-right</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="access-right-table"><a class="anchor" href="#access-right-table"></a>2.2. access-right</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#access-right-xml-example">access-right xml Example</a>.</p>
 </div>
@@ -1151,10 +1044,8 @@ In ESPD-EDM v5.0.0, the old <em>Criterion</em> code list was replaced by two sep
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="boolean-gui-control-type-table"><a class="anchor" href="#boolean-gui-control-type-table"></a>3. boolean-gui-control-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="boolean-gui-control-type-table"><a class="anchor" href="#boolean-gui-control-type-table"></a>2.3. boolean-gui-control-type</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#boolean-gui-control-type-xml-example">boolean-gui-control-type xml Example</a>.</p>
 </div>
@@ -1227,10 +1118,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="country-table"><a class="anchor" href="#country-table"></a>4. country</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="country-table"><a class="anchor" href="#country-table"></a>2.4. country</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#country-xml-example">country xml Example</a>.</p>
 </div>
@@ -1314,10 +1203,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="criterion-element-type-table"><a class="anchor" href="#criterion-element-type-table"></a>5. criterion-element-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="criterion-element-type-table"><a class="anchor" href="#criterion-element-type-table"></a>2.5. criterion-element-type</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#criterion-element-type-xml-example">criterion-element-type xml Example</a>.</p>
 </div>
@@ -1389,10 +1276,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="currency-table"><a class="anchor" href="#currency-table"></a>6. currency</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="currency-table"><a class="anchor" href="#currency-table"></a>2.6. currency</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#currency-xml-example">currency xml Example</a>.</p>
 </div>
@@ -1476,10 +1361,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="docrefcontent-type-table"><a class="anchor" href="#docrefcontent-type-table"></a>7. docrefcontent-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="docrefcontent-type-table"><a class="anchor" href="#docrefcontent-type-table"></a>2.7. docrefcontent-type</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#docrefcontent-type-xml-example">docrefcontent-type xml Example</a>.</p>
 </div>
@@ -1563,10 +1446,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="economic-operator-size-table"><a class="anchor" href="#economic-operator-size-table"></a>8. economic-operator-size</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="economic-operator-size-table"><a class="anchor" href="#economic-operator-size-table"></a>2.8. economic-operator-size</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#economic-operator-size-xml-example">economic-operator-size xml Example</a>.</p>
 </div>
@@ -1650,10 +1531,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="eoid-type-table"><a class="anchor" href="#eoid-type-table"></a>9. eoid-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="eoid-type-table"><a class="anchor" href="#eoid-type-table"></a>2.9. eoid-type</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#eoid-type-xml-example">eoid-type xml Example</a>.</p>
 </div>
@@ -1684,7 +1563,7 @@ Contains values to be use by software implementations to display graphic control
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Contains coded parts identification type used in <strong><em>cac:PartyIdentification</em></strong>.</p>
+<p>Contains coded party identification types used in <strong><em>cac:PartyIdentification</em></strong>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1725,10 +1604,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="eo-role-type-table"><a class="anchor" href="#eo-role-type-table"></a>10. eo-role-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="eo-role-type-table"><a class="anchor" href="#eo-role-type-table"></a>2.10. eo-role-type</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#eo-role-type-xml-example">eo-role-type xml Example</a>.</p>
 </div>
@@ -1812,10 +1689,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="exclusion-ground-table"><a class="anchor" href="#exclusion-ground-table"></a>11. exclusion-ground</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="exclusion-ground-table"><a class="anchor" href="#exclusion-ground-table"></a>2.11. exclusion-ground</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -1896,10 +1771,8 @@ Contains values to be use by software implementations to display graphic control
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="financial-ratio-type-table"><a class="anchor" href="#financial-ratio-type-table"></a>12. financial-ratio-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="financial-ratio-type-table"><a class="anchor" href="#financial-ratio-type-table"></a>2.12. financial-ratio-type</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#financial-ratio-type-xml-example">financial-ratio-type xml Example</a>.</p>
 </div>
@@ -1980,10 +1853,8 @@ This code list is maintained by the ESPD Team and codes are collected from Banqu
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="language-table"><a class="anchor" href="#language-table"></a>13. language</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="language-table"><a class="anchor" href="#language-table"></a>2.13. language</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#language-xml-example">language xml Example</a>.</p>
 </div>
@@ -2068,10 +1939,8 @@ The concepts included are correlated with the ISO 639 international standard.</p
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="occupation-table"><a class="anchor" href="#occupation-table"></a>14. occupation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="occupation-table"><a class="anchor" href="#occupation-table"></a>2.14. occupation</h3>
 <div class="paragraph">
 <p>An example of how to use this code list can be found in <a href="#occupation-xml-example">occupation xml Example</a>.</p>
 </div>
@@ -2156,10 +2025,8 @@ Content is collected from the ESCO classification. The data type expected for th
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="profile-execution-id-table"><a class="anchor" href="#profile-execution-id-table"></a>15. profile-execution-id</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="profile-execution-id-table"><a class="anchor" href="#profile-execution-id-table"></a>2.15. profile-execution-id</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -2228,10 +2095,8 @@ Content is collected from the ESCO classification. The data type expected for th
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="property-group-type-table"><a class="anchor" href="#property-group-type-table"></a>16. property-group-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="property-group-type-table"><a class="anchor" href="#property-group-type-table"></a>2.16. property-group-type</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -2300,10 +2165,8 @@ Content is collected from the ESCO classification. The data type expected for th
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="response-data-type-table"><a class="anchor" href="#response-data-type-table"></a>17. response-data-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="response-data-type-table"><a class="anchor" href="#response-data-type-table"></a>2.17. response-data-type</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -2372,10 +2235,8 @@ Content is collected from the ESCO classification. The data type expected for th
 </tbody>
 </table>
 </div>
-</div>
-<div class="sect1">
-<h2 id="selection-criterion-table"><a class="anchor" href="#selection-criterion-table"></a>18. selection-criterion</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="selection-criterion-table"><a class="anchor" href="#selection-criterion-table"></a>2.18. selection-criterion</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -2457,17 +2318,15 @@ Content is collected from the ESCO classification. The data type expected for th
 </table>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_xml_examples"><a class="anchor" href="#_xml_examples"></a>19. XML Examples</h2>
+<h2 id="_xml_examples"><a class="anchor" href="#_xml_examples"></a>3. XML Examples</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section provides XML examples showing how each code list is used in ESPD documents.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="access-right-xml-example"><a class="anchor" href="#access-right-xml-example"></a>20. access-right</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="access-right-xml-example"><a class="anchor" href="#access-right-xml-example"></a>3.1. access-right</h3>
 <div class="paragraph">
 <p>The following xml code is an example of use of code list <a href="#access-right-table">access-right</a> in a <em>cac:Evidence</em> element of ESPDRequest.</p>
 </div>
@@ -2498,7 +2357,7 @@ Content is collected from the ESCO classification. The data type expected for th
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The elementÂ <em>cbc:ConfidentialityLevelCode_Â is of typeÂ code with the following attribute values: _listID</em>=<strong>"access-right"</strong>. Informing this code is provided in  the code list <a href="#access-right-table">access-right</a>.</td>
+<td>The element <em>cbc:ConfidentialityLevelCode</em> is of type code with the following attribute values: <em>listID</em>=<strong>"access-right"</strong>. Informing this code is provided in  the code list <a href="#access-right-table">access-right</a>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
@@ -2507,10 +2366,8 @@ Content is collected from the ESCO classification. The data type expected for th
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="boolean-gui-control-type-xml-example"><a class="anchor" href="#boolean-gui-control-type-xml-example"></a>21. boolean-gui-control-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="boolean-gui-control-type-xml-example"><a class="anchor" href="#boolean-gui-control-type-xml-example"></a>3.2. boolean-gui-control-type</h3>
 <div class="paragraph">
 <p>The following is an example of use of code list <a href="#boolean-gui-control-type-table">boolean-gui-control-type</a> in 'Other economic or financial requirements' (<strong><em>finan-requ</em></strong>).</p>
 </div>
@@ -2525,9 +2382,8 @@ Content is collected from the ESCO classification. The data type expected for th
         &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
         &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;CODE_BOOLEAN&lt;/cbc:ValueDataTypeCode&gt;
         &lt;!-- No answer is expected
-here from the economic operator, as this is a REQUIREMENT issued by the contracting
-authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
-the requirement issued by the contracting authority --&gt;
+here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+the requirement issued by the buyer --&gt;
 <i class="conum" data-value="1"></i><b>(1)</b>
         &lt;cbc:ExpectedCode listID="boolean-gui-control-type" listVersionID="5.0.0"&gt;RADIO_BUTTON_TRUE&lt;/cbc:ExpectedCode&gt;
 &lt;/cac:TenderingCriterionProperty&gt;
@@ -2541,9 +2397,8 @@ the requirement issued by the contracting authority --&gt;
             &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
             &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;DESCRIPTION&lt;/cbc:ValueDataTypeCode&gt;
             &lt;!-- No answer is expected
-here from the economic operator, as this is a REQUIREMENT issued by the contracting
-authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
-the requirement issued by the contracting authority --&gt;
+here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+the requirement issued by the buyer --&gt;
             &lt;cbc:ExpectedDescription&gt;[Description]&lt;/cbc:ExpectedDescription&gt;
     &lt;/cac:TenderingCriterionProperty&gt;
 &lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;
@@ -2557,9 +2412,8 @@ the requirement issued by the contracting authority --&gt;
                 &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
                 &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;QUANTITY&lt;/cbc:ValueDataTypeCode&gt;
                 &lt;!-- No answer is expected
-here from the economic operator, as this is a REQUIREMENT issued by the contracting
-authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
-the requirement issued by the contracting authority --&gt;
+here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+the requirement issued by the buyer --&gt;
                 &lt;cbc:ExpectedValueNumeric&gt;0.33&lt;/cbc:ExpectedValueNumeric&gt;
         &lt;/cac:TenderingCriterionProperty&gt;
 &lt;/cac:SubsidiaryTenderingCriterionPropertyGroup&gt;</code></pre>
@@ -2573,15 +2427,13 @@ the requirement issued by the contracting authority --&gt;
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>In this case the value for <em>boolean-gui-control</em> is <em>RADIO_BUTTON_TRUE</em>. This will display REQUIREMENT for "Description of the economic or financial requirement" as defaul since the following <em>cac:SubsidiaryTenderingCriterionPropertyGroup</em> is defined with <em>cbc:PropertyGroupTypeCode</em> value=<strong>ONTRUE</strong>.</td>
+<td>In this case the value for <em>boolean-gui-control</em> is <em>RADIO_BUTTON_TRUE</em>. This will display REQUIREMENT for "Description of the economic or financial requirement" as default since the following <em>cac:SubsidiaryTenderingCriterionPropertyGroup</em> is defined with <em>cbc:PropertyGroupTypeCode</em> value=<strong>ONTRUE</strong>.</td>
 </tr>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="country-xml-example"><a class="anchor" href="#country-xml-example"></a>22. country</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="country-xml-example"><a class="anchor" href="#country-xml-example"></a>3.3. country</h3>
 <div class="paragraph">
 <p>The following xml code is an example of use of code list <a href="#country-table">country</a> in a <em>cac:ContractingParty</em> element of ESPDRequest.</p>
 </div>
@@ -2604,15 +2456,13 @@ the requirement issued by the contracting authority --&gt;
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The code list <a href="#country-table">country</a> is used to define the value of elementÂ cbc:IdentificationCode in class cac:Country.</td>
+<td>The code list <a href="#country-table">country</a> is used to define the value of element cbc:IdentificationCode in class cac:Country.</td>
 </tr>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="criterion-element-type-xml-example"><a class="anchor" href="#criterion-element-type-xml-example"></a>23. criterion-element-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="criterion-element-type-xml-example"><a class="anchor" href="#criterion-element-type-xml-example"></a>3.4. criterion-element-type</h3>
 <div class="paragraph">
 <p>This is an example of use of code list <a href="#criterion-element-type-table">criterion-element-type</a> in criterion 'Participation in a criminal organisation' (<strong><em>crim-org</em></strong>) <em>cac:TenderingCriterion</em> element of <strong>ESPDRequest</strong>.</p>
 </div>
@@ -2674,10 +2524,8 @@ the requirement issued by the contracting authority --&gt;
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="currency-xml-example"><a class="anchor" href="#currency-xml-example"></a>24. currency</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="currency-xml-example"><a class="anchor" href="#currency-xml-example"></a>3.5. currency</h3>
 <div class="paragraph">
 <p>The following xml code are examples of use of code list <a href="#currency-table">currency</a> in an ESPDRequest.</p>
 </div>
@@ -2713,9 +2561,8 @@ the requirement issued by the contracting authority --&gt;
         &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
         &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;AMOUNT&lt;/cbc:ValueDataTypeCode&gt;
         &lt;!-- No answer is expected
-        here from the economic operator, as this is a REQUIREMENT issued by the contracting
-        authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
-        the requirement issued by the contracting authority --&gt;
+        here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+        the requirement issued by the buyer --&gt;
 <i class="conum" data-value="1"></i><b>(1)</b>
         &lt;cbc:ExpectedAmount currencyID="EUR"&gt;100000&lt;/cbc:ExpectedAmount&gt;
 &lt;/cac:TenderingCriterionProperty&gt;</code></pre>
@@ -2730,12 +2577,10 @@ the requirement issued by the contracting authority --&gt;
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="docrefcontent-type-xml-example"><a class="anchor" href="#docrefcontent-type-xml-example"></a>25. docrefcontent-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="docrefcontent-type-xml-example"><a class="anchor" href="#docrefcontent-type-xml-example"></a>3.6. docrefcontent-type</h3>
 <div class="paragraph">
-<p>The following xml code is an example of use of code list <a href="#docrefcontent-type-table">docrefcontent-type</a> in a <em>cac:AdditionalDocumentReference</em> specifing its <em>cbc:DocumentTypeCode</em> value in a ESPDRequest.</p>
+<p>The following xml code is an example of use of code list <a href="#docrefcontent-type-table">docrefcontent-type</a> in a <em>cac:AdditionalDocumentReference</em> specifying its <em>cbc:DocumentTypeCode</em> value in a ESPDRequest.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2767,12 +2612,10 @@ the requirement issued by the contracting authority --&gt;
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="economic-operator-size-xml-example"><a class="anchor" href="#economic-operator-size-xml-example"></a>26. economic-operator-size</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="economic-operator-size-xml-example"><a class="anchor" href="#economic-operator-size-xml-example"></a>3.7. economic-operator-size</h3>
 <div class="paragraph">
-<p>The following xml code is an example of use of code list <a href="#economic-operator-size-table">economic-operator-size</a> in a <em>cac:EconomicOperatorParty</em> specifing its <em>cbc:IndustryClassificationCode</em> value in a ESPDResponse.</p>
+<p>The following xml code is an example of use of code list <a href="#economic-operator-size-table">economic-operator-size</a> in a <em>cac:EconomicOperatorParty</em> specifying its <em>cbc:IndustryClassificationCode</em> value in a ESPDResponse.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -2802,10 +2645,8 @@ the requirement issued by the contracting authority --&gt;
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="eoid-type-xml-example"><a class="anchor" href="#eoid-type-xml-example"></a>27. eoid-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="eoid-type-xml-example"><a class="anchor" href="#eoid-type-xml-example"></a>3.8. eoid-type</h3>
 <div class="paragraph">
 <p>The following xml code is an example of use of code list <a href="#eoid-type-table">eoid-type</a> in a <em>cac:TenderingCriterionResponse</em> element of ESPDResponse.</p>
 </div>
@@ -2823,7 +2664,7 @@ the requirement issued by the contracting authority --&gt;
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The elementÂ <em>cbc:ResponseID_Â is of typeÂ _Identifier</em> with the following attribute values:
+<td>The element <em>cbc:ResponseID</em> is of type <em>Identifier</em> with the following attribute values:
 <div class="ulist">
 <ul>
 <li>
@@ -2838,10 +2679,8 @@ the requirement issued by the contracting authority --&gt;
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="eo-role-type-xml-example"><a class="anchor" href="#eo-role-type-xml-example"></a>28. eo-role-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="eo-role-type-xml-example"><a class="anchor" href="#eo-role-type-xml-example"></a>3.9. eo-role-type</h3>
 <div class="paragraph">
 <p>The following xml code is an example of use of code list <a href="#eo-role-type-table">eo-role-type</a> in a <em>cac:EconomicOperatorParty</em> element of ESPDResponse.</p>
 </div>
@@ -2864,15 +2703,13 @@ the requirement issued by the contracting authority --&gt;
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The example <a href="#eo">[eo]</a> is declared with element <em>cac:EconomicOperatorParty_Â and its role specified in element _cbc:RoleCode</em> as 'Group member' with code list value <em>group-mem</em>.</td>
+<td>The example <a href="#eo">[eo]</a> is declared with element <em>cac:EconomicOperatorParty</em> and its role specified in element <em>cbc:RoleCode</em> as 'Group member' with code list value <em>group-mem</em>.</td>
 </tr>
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="financial-ratio-type-xml-example"><a class="anchor" href="#financial-ratio-type-xml-example"></a>29. financial-ratio-type</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="financial-ratio-type-xml-example"><a class="anchor" href="#financial-ratio-type-xml-example"></a>3.10. financial-ratio-type</h3>
 <div class="paragraph">
 <p>The following xml code is an example of use of code list <a href="#financial-ratio-type-table">financial-ratio-type</a> in a <em>cac:TenderingCriterion</em> element of ESPDRequest for criterion <em>finan-rat</em>.</p>
 </div>
@@ -2916,10 +2753,8 @@ the requirement issued by the contracting authority --&gt;
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="language-xml-example"><a class="anchor" href="#language-xml-example"></a>30. language</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="language-xml-example"><a class="anchor" href="#language-xml-example"></a>3.11. language</h3>
 <div class="paragraph">
 <p>The following xml code is an example of use of code list <a href="#language-table">language</a> in a <em>cac:TenderingCriterion</em> element of ESPDRequest for criterion <em>finan-rat</em>.</p>
 </div>
@@ -2948,10 +2783,8 @@ the requirement issued by the contracting authority --&gt;
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="occupation-xml-example"><a class="anchor" href="#occupation-xml-example"></a>31. occupation</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="occupation-xml-example"><a class="anchor" href="#occupation-xml-example"></a>3.12. occupation</h3>
 <div class="paragraph">
 <p>The following xml code is an example of use of code list <a href="#occupation-table">occupation</a> in a <em>cac:TenderingCriterion</em> element of ESPDRequest for criterion <em>prof-regist</em>.</p>
 </div>
@@ -2973,9 +2806,8 @@ the requirement issued by the contracting authority --&gt;
                 &lt;cbc:TypeCode listID="criterion-element-type" listVersionID="5.0.0"&gt;REQUIREMENT&lt;/cbc:TypeCode&gt;
                 &lt;cbc:ValueDataTypeCode listID="response-data-type" listVersionID="5.0.0"&gt;CODE&lt;/cbc:ValueDataTypeCode&gt;
                 &lt;!-- No answer is expected
-                here from the economic operator, as this is a REQUIREMENT issued by the contracting
-                authority. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
-                the requirement issued by the contracting authority --&gt;
+                here from the economic operator, as this is a REQUIREMENT issued by the buyer. Hence the element 'cbc:ValueDataTypeCode' contains the type of value of
+                the requirement issued by the buyer --&gt;
 <i class="conum" data-value="1"></i><b>(1)</b>
                 &lt;cbc:ExpectedCode listID="http://publications.europa.eu/resource/authority/occupation" listVersionID="20221214-0"&gt;http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de&lt;/cbc:ExpectedCode&gt;
         &lt;/cac:TenderingCriterionProperty&gt;
@@ -2990,6 +2822,7 @@ the requirement issued by the contracting authority --&gt;
 <td>The expected occupation for criterion <em>prof-regist</em> is defined in element <em>cac:TenderingCriterionProperty</em> with value <em>cbc:ExpectedCode</em> <strong><a href="http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de" class="bare">http://data.europa.eu/esco/occupation/4d5bd738-9202-4fd7-bd8c-7dbe914048de</a></strong> that corresponds to <em>occupation</em> label <strong>"agricultural engineer"</strong>.</td>
 </tr>
 </table>
+</div>
 </div>
 </div>
 </div>
