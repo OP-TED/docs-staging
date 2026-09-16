@@ -837,86 +837,17 @@
 <h2 id="_data_structure_vocabulary"><a class="anchor" href="#_data_structure_vocabulary"></a>Data Structure Vocabulary</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The ESPD-EDM data structure vocabulary maps to UBL-2.4 elements as follows:</p>
+<p>The ESPD-EDM data structure vocabulary maps each criterion element to its UBL-2.4 element and to a <strong>short tag</strong> — an abbreviation built from the capital letters of the element&#8217;s full name. The short tags are the building blocks of the XML Path-like identifiers that link an ESPD Response back to its ESPD Request (for example <code>C1_EG_crime-org/QG1/QSG1/Q1</code>; see <a href="how-criteria-work.html" class="xref page">How Criteria Work</a>).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
+<col style="width: 33.3333%;">
+<col style="width: 50%;">
+<col style="width: 16.6667%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">ESPD-EDM Vocabulary</th>
-<th class="tableblock halign-left valign-top">UBL-2.4 Element</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CRITERION</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">SUBCRITERION</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubTenderingCriterion</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT_GROUP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">QUESTION_GROUP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT_SUBGROUP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubsidiaryTenderingCriterionPropertyGroup</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">QUESTION_SUBGROUP</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubsidiaryTenderingCriterionPropertyGroup</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">CAPTION</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code> (TypeCode=CAPTION)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code> (TypeCode=REQUIREMENT)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">QUESTION</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code> (TypeCode=QUESTION)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ADDITIONAL_DESCRIPTION_LINE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:Description</code> (in <code>cac:TenderingCriterion</code>)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LEGISLATION</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Legislation</code></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The vocabulary is defined in the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/CriterionElementType.gc">CriterionElementType</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_short_tag_name_reference"><a class="anchor" href="#_short_tag_name_reference"></a>Short Tag Name Reference</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Each criterion structural element has a short tag name — an abbreviation built from the capital letters of its full name. Short tags are used as building blocks of the XML Path-like identifiers that link an ESPD Response back to its ESPD Request (see <a href="how-criteria-work.html" class="xref page">How Criteria Work</a>).</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 42.8571%;">
-<col style="width: 42.8571%;">
-<col style="width: 14.2858%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">ESPD-EDM Criterion Element</th>
 <th class="tableblock halign-left valign-top">UBL-2.4 Element</th>
 <th class="tableblock halign-left valign-top">Short Tag</th>
 </tr>
@@ -928,14 +859,14 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>C</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ADDITIONAL_DESCRIPTION_LINE</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:Description</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ADL</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SUBCRITERION</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubTenderingCriterion</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SBC</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADDITIONAL_DESCRIPTION_LINE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:Description</code> (in <code>cac:TenderingCriterion</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ADL</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">LEGISLATION</p></td>
@@ -964,17 +895,17 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">CAPTION</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code> (TypeCode=CAPTION)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CA</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code> (TypeCode=REQUIREMENT)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>RQ</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">QUESTION</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code> (TypeCode=QUESTION)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Q</code></p></td>
 </tr>
 <tr>
@@ -999,6 +930,9 @@
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>The vocabulary (the <code>TypeCode</code> values used for properties) is defined in the code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/CriterionElementType.gc">CriterionElementType</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
