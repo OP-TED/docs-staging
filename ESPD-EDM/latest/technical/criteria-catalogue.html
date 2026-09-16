@@ -903,6 +903,213 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_short_tag_name_reference"><a class="anchor" href="#_short_tag_name_reference"></a>Short Tag Name Reference</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each criterion structural element has a short tag name — an abbreviation built from the capital letters of its full name. Short tags are used as building blocks of the XML Path-like identifiers that link an ESPD Response back to its ESPD Request (see <a href="how-criteria-work.html" class="xref page">How Criteria Work</a>).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 42.8571%;">
+<col style="width: 42.8571%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ESPD-EDM Criterion Element</th>
+<th class="tableblock halign-left valign-top">UBL-2.4 Element</th>
+<th class="tableblock halign-left valign-top">Short Tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CRITERION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>C</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ADDITIONAL_DESCRIPTION_LINE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:Description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ADL</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SUBCRITERION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubTenderingCriterion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SBC</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LEGISLATION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:Legislation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>L</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT_GROUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RG</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUESTION_GROUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QG</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT_SUBGROUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubsidiaryTenderingCriterionPropertyGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RSG</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUESTION_SUBGROUP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubsidiaryTenderingCriterionPropertyGroup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QSG</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CAPTION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">REQUIREMENT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RQ</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">QUESTION</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Q</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RESPONSE (occurrence)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionResponse</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>R</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RESPONSE VALUE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:ResponseValue</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RV</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(RESPONSE) EVIDENCE SUPPLIED</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:EvidenceSupplied</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RES</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(RESPONSE) APPLICABLE PERIOD</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:ApplicablePeriod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RAP</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_criteria_catalogue"><a class="anchor" href="#_criteria_catalogue"></a>Criteria Catalogue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An ESPD criterion is identified by the code carried in <code>cac:TenderingCriterion/cbc:CriterionTypeCode</code>. In ESPD-EDM v5.0.0 these codes are drawn from two EU Vocabularies code lists, replacing the deprecated single <em>Criterion</em> list:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ExclusionGround.gc">ExclusionGround</a> — exclusion grounds (Part III), derived from Directive 2014/24/EU Article 57;</p>
+</li>
+<li>
+<p><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/SelectionCriterion.gc">SelectionCriterion</a> — selection criteria (Part IV), derived from Directive 2014/24/EU Articles 58-64.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both code lists are maintained by the Publications Office (EU Vocabularies) so that the ESPD, eForms and TED stay aligned. The authoritative code values, English names, multilingual labels and definitions live in EU Vocabularies; this page does not reproduce them, because they evolve with the EU Vocabularies release cycle rather than with the ESPD-EDM. For the metadata (list identifiers, versions and locations) see <a href="code-lists.html" class="xref page">Code Lists</a>; for the full value tables consult the genericode files linked above.</p>
+</div>
+<div class="sect2">
+<h3 id="_taxonomy"><a class="anchor" href="#_taxonomy"></a>Taxonomy</h3>
+<div class="paragraph">
+<p>The criterion codes are organised as a two-level taxonomy: each leaf criterion sits under a broader category concept.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. ExclusionGround categories</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Category concept</th>
+<th class="tableblock halign-left valign-top">Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exg-crim</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Criminal convictions (participation in a criminal organisation, corruption, fraud, terrorist offences, money laundering, human trafficking)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exg-pmt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Breach of obligations relating to the payment of taxes or social security contributions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exg-mis</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environmental, social and labour law breaches, competition-distorting agreements, conflicts of interest, professional misconduct, misrepresentation and comparable situations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exg-sitn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insolvency and business-situation grounds (bankruptcy, insolvency, arrangement with creditors, administration by a liquidator, suspension of activities)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exg-natl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Purely national exclusion grounds</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. SelectionCriterion categories</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Category concept</th>
+<th class="tableblock halign-left valign-top">Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sui-act</code> (<code>slc-suit</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Suitability to pursue the professional activity (enrolment in professional or trade registers, authorisations, memberships)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ef-stand</code> (<code>slc-stand</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Economic and financial standing (turnover figures, financial ratios, professional risk indemnity insurance, other requirements)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tp-abil</code> (<code>slc-abil</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technical and professional ability (references, technical staff and facilities, qualifications, environmental management, tools and equipment, quality/environmental certificates)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>slc-sec</code> / <code>slc-sche</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reduction of the number of qualified candidates and related scheme information</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The category concepts and their leaf codes are the authoritative source of the taxonomy. The exact code strings (for example the <code>exg-crim-*</code> leaves under <code>exg-crim</code>) and their labels are published and versioned in EU Vocabularies — always resolve them against the linked genericode files rather than transcribing them here.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For the structure behind each criterion (its property groups, requirements and questions), see <a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a>, which documents the canonical <code>espd-edm.json</code> source. For the response patterns, see <a href="exclusion-grounds.html" class="xref page">Exclusion Grounds</a> and <a href="selection-criteria.html" class="xref page">Selection Criteria</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_criterion_data_source"><a class="anchor" href="#_criterion_data_source"></a>Criterion Data Source</h2>
 <div class="sectionbody">
 <div class="paragraph">
