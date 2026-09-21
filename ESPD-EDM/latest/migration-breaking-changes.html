@@ -429,39 +429,31 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">UBL version</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Upgraded from UBL 2.3 to <strong>UBL 2.4</strong>. Schema folder renamed from <code>ubl-2.3/</code> to <code>schemas/</code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upgraded from UBL 2.3 to <strong>UBL 2.4</strong>. <code>cbc:UBLVersionID</code> must be <code>"2.4"</code> (was <code>"2.3"</code>).</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion code lists</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The single <code>Criterion</code> code list is <strong>replaced</strong> by two separate lists: <code>ExclusionGround</code> and <code>SelectionCriterion</code> (from EU Vocabularies).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Repository structure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ubl-2.3/</code> and <code>conceptual-model/</code> folders removed. UBL 2.4 schema now in <code>schemas/</code>. Added <code>codelists.json</code> metadata file. The conceptual model moved to the separate <a href="https://github.com/OP-TED/espd-conceptual-model">espd-conceptual-model</a> repository.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Criterion data format</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Excel-based <code>ESPD-criterion.xlsx</code> is <strong>deprecated</strong>. The canonical source is now <code>espd-edm.json</code> (JSON format).</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion code lists</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The single <code>Criterion</code> code list is <strong>replaced</strong> by two separate lists: <code>ExclusionGround</code> and <code>SelectionCriterion</code> (from EU Vocabularies).</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Code list versions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">All ESPD-managed code lists updated from version <code>4.0.0</code> to <code>5.0.0</code>. EU Vocabularies code lists updated to latest published versions.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All ESPD-managed code lists updated from version <code>4.0.0</code> to <code>5.0.0</code>. EU Vocabularies code lists updated to their latest published versions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Criteria content (e-Certis)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion UUIDs harmonised with e-Certis (some UUIDs changed). Criteria C27 (authorisation) and C28 (membership) deprecated and replaced by C66 (<code>slc-suit-auth-mbrshp</code>); new criterion C67 (<code>exg-mis-unrel-sec</code>) added.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Schematron validation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listVersionID</code> validation now checks for prefix <code>5.</code> (was <code>3.</code> or <code>4.</code>). Rule <code>BR-OTH-01-40</code> enforces this.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UBLVersionID value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must be <code>"2.4"</code> (was <code>"2.3"</code>). Rule <code>BR-OTH-05-01</code> enforces this.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Repository structure</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conceptual-model/</code> and <code>ubl-2.3/</code> folders removed. UBL 2.4 schema in <code>schemas/</code>. Added <code>codelists.json</code> metadata file.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">e-Certis harmonisation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion UUIDs harmonised with e-Certis. Some UUIDs changed. Deprecated criteria: C27 (authorisation) and C28 (membership) replaced by C66 (<code>slc-suit-auth-mbrshp</code>).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">New criteria</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Added EG C67 (<code>exg-mis-unrel-sec</code>) and SC C66 (<code>slc-suit-auth-mbrshp</code>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validation rules updated for v5.0.0: <code>listVersionID</code> for ESPD-managed code lists must use the <code>5.</code> prefix, and <code>cbc:UBLVersionID</code> must be <code>"2.4"</code>.</p></td>
 </tr>
 </tbody>
 </table>
