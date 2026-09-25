@@ -504,7 +504,7 @@
 <div class="sect2">
 <h3 id="_xslt_3_0"><a class="anchor" href="#_xslt_3_0"></a>XSLT 3.0</h3>
 <div class="paragraph">
-<p>XSLT (Extensible Stylesheet Language Transformations) is used in the ESPD-EDM to compile Schematron into executable XSL and to generate ESPD XML from criterion data.</p>
+<p>XSLT (Extensible Stylesheet Language Transformations) is used in the ESPD-EDM validation pipeline to compile Schematron rules (and the Schematron generated from CVA files) into the executable XSL that validates ESPD Request and Response instances.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -522,6 +522,54 @@
 </tr>
 </tbody>
 </table>
+</div>
+<div class="sect2">
+<h3 id="_data_format_foundations_xsd_xpath_json"><a class="anchor" href="#_data_format_foundations_xsd_xpath_json"></a>Data Format Foundations (XSD, XPath, JSON)</h3>
+<div class="paragraph">
+<p>Beyond the procurement-specific standards above, the ESPD-EDM relies on several general-purpose data-format and query technologies:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>XML Schema (XSD)</strong> — the schema language that defines the structure and data types of the UBL 2.4 ESPD documents. The UBL 2.4 schemas are authored against XSD 1.0. XSD provides the first validation layer; Schematron adds the business rules that XSD cannot express (such as ESPD-specific cardinalities).</p>
+</li>
+<li>
+<p><strong>XPath</strong> — the expression language used to address parts of an XML document. Schematron assertions and XSLT transformations in the ESPD validation pipeline are written in XPath.</p>
+</li>
+<li>
+<p><strong>JSON</strong> — the format of the criterion data model. From ESPD-EDM v5.0.0, the criterion and document-structure definitions are distributed as <code>espd-edm.json</code>, and code-list metadata as <code>codelists.json</code>, replacing the deprecated Excel-based workflow.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Technology</th>
+<th class="tableblock halign-left valign-top">Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML Schema (XSD)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/xmlschema-1/">W3C XML Schema 1.0</a> (used by the UBL 2.4 schemas)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/xpath-31/">W3C XPath 3.1</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JSON</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.rfc-editor.org/rfc/rfc8259">RFC 8259</a> / <a href="https://ecma-international.org/publications-and-standards/standards/ecma-404/">ECMA-404</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For the criterion data model itself, see <a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_eu_directives_and_regulations"><a class="anchor" href="#_eu_directives_and_regulations"></a>EU Directives and Regulations</h3>
@@ -584,7 +632,7 @@
 <div class="sect2">
 <h3 id="_ebxml_ccts"><a class="anchor" href="#_ebxml_ccts"></a>ebXML CCTS</h3>
 <div class="paragraph">
-<p>The Core Component Technical Specification (ISO/TS 15000-5) provides the data typing foundation for UBL elements (codes and identifiers with their attributes like <code>listID</code>, <code>schemeAgencyID</code>, etc.).</p>
+<p>The ebXML Core Components Specification (ISO 15000-5:2014, which supersedes the earlier ISO/TS 15000-5:2005) provides the data typing foundation for UBL elements (codes and identifiers with their attributes like <code>listID</code>, <code>schemeAgencyID</code>, etc.).</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>

@@ -422,72 +422,65 @@
 <div class="sect2">
 <h3 id="_what_it_defines"><a class="anchor" href="#_what_it_defines"></a>What it defines</h3>
 <div class="paragraph">
-<p>The <code>espd-edm.json</code> file provides the complete structural definition of the ESPD document content, organised by ESPD parts and sections:</p>
+<p>The <code>espd-edm.json</code> file provides the structural definition of the ESPD criteria and their content trees — each criterion with its property groups, sub-groups, requirements and questions.</p>
+</div>
+<div class="paragraph">
+<p>The file is <strong>not</strong> organised by ESPD Part and Section. There are no <code>part</code> or <code>section</code> wrappers; ESPD Part membership is implied by the criterion <code>code</code> / <code>tag</code> prefix:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Part I</strong> — Procedure information (publications, buyer, procedure data)</p>
+<p><code>OT…</code> (code <code>OT</code>) — "Other"/procedure-level criteria used in Part II;</p>
 </li>
 <li>
-<p><strong>Part II</strong> — Economic operator information</p>
+<p><code>exg-…</code> (criteria <code>C01</code>–<code>C24</code>, <code>C67</code>) — exclusion grounds (Part III);</p>
 </li>
 <li>
-<p><strong>Part III</strong> — Exclusion grounds criteria</p>
-</li>
-<li>
-<p><strong>Part IV</strong> — Selection criteria</p>
-</li>
-<li>
-<p><strong>Part V</strong> — Reduction of candidates</p>
-</li>
-<li>
-<p><strong>Part VI</strong> — Concluding statements</p>
+<p><code>slc-…</code> (criteria <code>C25</code>–<code>C56</code>, <code>C66</code>) — selection criteria (Part IV).</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Each part contains sections, and each section contains one or more criteria with their component trees.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_json_structure_overview"><a class="anchor" href="#_json_structure_overview"></a>JSON structure overview</h3>
 <div class="paragraph">
-<p>The top-level structure is an array of parts, each containing sections and criteria:</p>
+<p>The top-level structure is a flat <strong>array of criterion objects</strong>. Each criterion carries its own metadata and a recursive <code>components</code> tree:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">[
   {
-    "part": "partI",
-    "sections": [
-      {
-        "section": "A",
-        "criteria": [
-          {
-            "tag": "I68",
-            "type": "INFORMATION",
-            "uuid": "5B3E9A4C-...",
-            "code": "info-pub",
-            "cardinality": "1",
-            "name": "I68_info-pub",
-            "description": "...",
-            "requestpath": "I68_info-pub",
-            "responsepath": "I68_info-pub",
-            "components": [...]
-          }
-        ]
-      }
-    ]
+    "tag": "OT65",
+    "type": "CRITERION",
+    "uuid": "ede30cb7-70c2-4ead-ba11-22d0cac5ab7a",
+    "code": "OT",
+    "cardinality": "1",
+    "components": [ ... ],
+    "name": "Economic Operator Micro, Small or Medium-sized Enterprise",
+    "description": "Is the economic operator a Micro, a Small or Medium-sized Enterprise?",
+    "requestpath": "OT65_OT",
+    "responsepath": "OT65_OT"
+  },
+  {
+    "tag": "C01",
+    "type": "CRITERION",
+    "uuid": "005eb9ed-1347-4ca3-bb29-9bc0db64e1ab",
+    "code": "exg-crim-part",
+    "cardinality": "1",
+    "components": [ ... ],
+    "name": "Participation in a criminal organisation",
+    "description": "...",
+    "requestpath": "C01_exg-crim-part",
+    "responsepath": "C01_exg-crim-part"
   }
 ]</code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_criterion_element_properties"><a class="anchor" href="#_criterion_element_properties"></a>Criterion element properties</h3>
+<h3 id="_element_properties"><a class="anchor" href="#_element_properties"></a>Element properties</h3>
 <div class="paragraph">
-<p>Each criterion or component element has the following properties:</p>
+<p>Each element in the tree (a criterion or one of its components) may carry the following properties. Not every property appears on every node — the set depends on the node&#8217;s <code>type</code>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -503,77 +496,118 @@
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>tag</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Short identifier tag for the element (e.g. <code>I68</code>, <code>ADR1</code>, <code>CP1</code>, <code>PAR1</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Short identifier tag for the element within its criterion (e.g. <code>C01</code>, <code>OT65</code>, <code>QG1</code>, <code>QSG1</code>, <code>Q1</code>, <code>RG1</code>, <code>SBC1</code>, <code>L1</code>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The type of the element: <code>INFORMATION</code>, <code>CRITERION</code>, <code>ADDITIONAL_DOCUMENT_REFERENCE</code>, <code>CONTRACTING_PARTY</code>, <code>PARTY</code>, <code>PARTY_IDENTIFICATION</code>, <code>PARTY_NAME</code>, <code>POSTAL_ADDRESS</code>, <code>COUNTRY</code>, <code>CONTACT</code>, <code>ATTACHMENT</code>, <code>QUESTION</code>, <code>REQUIREMENT</code>, <code>CAPTION</code>, etc.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uuid</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Universally unique identifier (for top-level criteria, from e-Certis)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The structural type of the element. Values used: <code>CRITERION</code>, <code>SUBCRITERION</code>, <code>LEGISLATION</code>, <code>QUESTION_GROUP</code>, <code>QUESTION_SUBGROUP</code>, <code>REQUIREMENT_GROUP</code>, <code>REQUIREMENT_SUBGROUP</code>, <code>QUESTION</code>, <code>REQUIREMENT</code>, <code>CAPTION</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Criterion type code (e.g. <code>info-pub</code>, <code>info-buyer</code>, <code>crime-org</code>, <code>prof-regist</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Meaning depends on the node. On a <code>CRITERION</code> it is the criterion type code (e.g. <code>OT</code>, <code>exg-crim-part</code>, <code>slc-suit-reg-prof</code>). On a group it is the group-behaviour code (<code>ON*</code>, <code>ONTRUE</code>, <code>ONFALSE</code>). On a property (<code>QUESTION</code> / <code>REQUIREMENT</code> / <code>CAPTION</code>) it repeats the element role.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uuid</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Universally unique identifier. Present on top-level criteria (harmonised with e-Certis).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cardinality</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Expected cardinality (<code>1</code>, <code>0..1</code>, <code>1..n</code>, <code>0..n</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expected cardinality (<code>1</code>, <code>0..1</code>, <code>1..n</code>, <code>0..n</code>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Element name combining tag and code (e.g. <code>I68_info-pub</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Human-readable criterion name (present on top-level criteria, e.g. "Participation in a criminal organisation"). Note: it is the <code>requestpath</code> / <code>responsepath</code> values, not <code>name</code>, that combine tag and code (e.g. <code>C01_exg-crim-part</code>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Human-readable description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Human-readable description or question/requirement text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>propertydatatype</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">On <code>QUESTION</code> / <code>REQUIREMENT</code> nodes, the expected data type of the value (e.g. <code>INDICATOR</code>, <code>DESCRIPTION</code>, <code>AMOUNT</code>, <code>QUANTITY_INTEGER</code>, <code>EVIDENCE_IDENTIFIER</code>, <code>NONE</code>). See <a href="#_data_type_values">Data type values</a> below.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Present on <code>LEGISLATION</code> nodes.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>requestpath</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XML path-like identifier for the ESPD Request context</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML Path-like identifier locating the element in the ESPD Request context.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>responsepath</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XML path-like identifier for the ESPD Response context</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML Path-like identifier locating the element in the ESPD Response context.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentpath</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Present on response-bearing nodes (<code>QUESTION</code> / <code>REQUIREMENT</code>); the path to the response value, ending in <code>/RV</code> (e.g. <code>OT65_OT/QG1/Q1/R1/RV</code>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>components</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of nested child elements (recursive tree structure)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of nested child elements (recursive tree structure).</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The generated file is not perfectly uniform — a few nodes deviate (for example a group missing its <code>code</code>, or a <code>QUESTION</code> node carrying <code>code</code> = <code>CAPTION</code>). Consuming code should be defensive rather than assuming every node of a given type has an identical property set.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_component_tree"><a class="anchor" href="#_component_tree"></a>Component tree</h3>
 <div class="paragraph">
-<p>Each criterion contains a <code>components</code> array that defines the nested structure of sub-elements. Components can contain further components, forming a recursive tree that maps to the UBL XML structure:</p>
+<p>Each criterion contains a <code>components</code> array that defines the nested structure of sub-elements. Groups can contain sub-groups and properties, forming a recursive tree. The fragment below (from criterion <code>OT65</code>) shows a <code>QUESTION_GROUP</code> holding a <code>QUESTION</code> and a conditional <code>QUESTION_SUBGROUP</code>:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "tag": "ADR1",
-  "type": "ADDITIONAL_DOCUMENT_REFERENCE",
-  "cardinality": "1..n",
-  "requestpath": "I68_info-pub/ADR1",
-  "responsepath": "I68_info-pub/ADR1",
+  "tag": "QG1",
+  "type": "QUESTION_GROUP",
+  "cardinality": "1",
+  "code": "ON*",
+  "requestpath": "OT65_OT/QG1",
+  "responsepath": "OT65_OT/QG1",
   "components": [
     {
-      "tag": "ATT1",
-      "type": "ATTACHMENT",
+      "tag": "Q1",
+      "type": "QUESTION",
       "cardinality": "1",
-      "requestpath": "I68_info-pub/ADR1/ATT1",
-      "responsepath": "I68_info-pub/ADR1/ATT1"
+      "code": "QUESTION",
+      "description": "Your answer?",
+      "propertydatatype": "INDICATOR",
+      "requestpath": "OT65_OT/QG1/Q1",
+      "responsepath": "OT65_OT/QG1/Q1/R1",
+      "contentpath": "OT65_OT/QG1/Q1/R1/RV"
+    },
+    {
+      "tag": "QSG1",
+      "type": "QUESTION_SUBGROUP",
+      "cardinality": "1",
+      "code": "ONTRUE",
+      "requestpath": "OT65_OT/QG1/QSG1",
+      "responsepath": "OT65_OT/QG1/QSG1",
+      "components": [ ... ]
     }
   ]
 }</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>The group&#8217;s <code>code</code> (<code>ON*</code> / <code>ONTRUE</code> / <code>ONFALSE</code>) carries the conditional-display behaviour; there is no separate <code>PropertyGroupTypeCode</code> field in the JSON.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_path_identifiers"><a class="anchor" href="#_path_identifiers"></a>Path identifiers</h3>
 <div class="paragraph">
-<p>The <code>requestpath</code> and <code>responsepath</code> properties provide XML Path-like identifiers that uniquely locate each element within the ESPD document structure. These paths are constructed by concatenating parent tags from root to leaf (e.g. <code>I69_info-buyer/CP1/PAR1/PA1/CTR1</code>).</p>
+<p>The <code>requestpath</code> and <code>responsepath</code> properties provide XML Path-like identifiers that uniquely locate each element within the ESPD document structure. These paths are built by concatenating parent tags from the criterion root to the leaf. The root segment combines the criterion tag and code (e.g. <code>C01_exg-crim-part</code>), and each descendant appends its own tag (e.g. <code>C01_exg-crim-part/QG1/Q1</code>). The <code>responsepath</code> extends this with a response occurrence (<code>/R1</code>), and <code>contentpath</code> with the response value (<code>/R1/RV</code>).</p>
 </div>
 <div class="paragraph">
 <p>These path IDs replace the UUID-based identification for sub-elements (since v4.0.0), while top-level criterion UUIDs are preserved from e-Certis.</p>
@@ -593,10 +627,10 @@
 <p>All tooling should consume <code>espd-edm.json</code> instead</p>
 </li>
 <li>
-<p>The JSON is extracted from the Enterprise Architect UML model</p>
+<p>The JSON is generated from the ESPD Conceptual Model (Enterprise Architect)</p>
 </li>
 <li>
-<p>XSLT transformations generate ESPD UBL XML from the JSON data</p>
+<p>An ESPD service builds the ESPD Request and Response UBL XML from the <code>espd-edm.json</code> criterion data</p>
 </li>
 </ul>
 </div>
@@ -606,19 +640,22 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Parse <code>espd-edm.json</code> to obtain the complete ESPD document structure</p>
+<p>Parse <code>espd-edm.json</code> to obtain the array of criteria</p>
 </li>
 <li>
-<p>Navigate the part/section/criteria/components tree</p>
+<p>Walk each criterion&#8217;s <code>components</code> tree recursively</p>
 </li>
 <li>
-<p>Use <code>type</code> to determine the UBL element to generate</p>
+<p>Use <code>type</code> to determine the UBL element to generate and how to render the node</p>
+</li>
+<li>
+<p>Use <code>code</code> on groups (<code>ON*</code> / <code>ONTRUE</code> / <code>ONFALSE</code>) to apply conditional-display logic</p>
 </li>
 <li>
 <p>Use <code>cardinality</code> to enforce mandatory/optional rules</p>
 </li>
 <li>
-<p>Use <code>requestpath</code> / <code>responsepath</code> to build and validate XML instances</p>
+<p>Use <code>requestpath</code> / <code>responsepath</code> / <code>contentpath</code> to build and validate XML instances</p>
 </li>
 <li>
 <p>Use <code>uuid</code> and <code>code</code> for top-level criterion identification</p>
@@ -633,34 +670,35 @@
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">for each part in espd-edm.json:
-  for each section in part.sections:
-    for each criterion in section.criteria:
-      render_criterion(criterion)
+<pre class="highlightjs highlight"><code class="language-pseudocode hljs" data-lang="pseudocode">for each criterion in espd-edm.json:   // the file is a flat array of criteria
+  render_element(criterion)
 
-function render_criterion(element):
+function render_element(element):
   // Use element.type to determine what to render
   switch element.type:
-    case "CRITERION":       render criterion header (name, description)
-    case "QUESTION":        render form input based on element's data type
-    case "REQUIREMENT":     render read-only value set by the buyer
-    case "CAPTION":         render label text (no input)
-    case "CONTRACTING_PARTY", "PARTY", etc.: render structured party fields
+    case "CRITERION", "SUBCRITERION": render criterion header (name, description)
+    case "LEGISLATION":               render the legislation reference
+    case "QUESTION":                  render form input based on element.propertydatatype
+    case "REQUIREMENT":               render read-only value set by the buyer
+    case "CAPTION":                   render label text (no input)
+    case "QUESTION_GROUP", "QUESTION_SUBGROUP",
+         "REQUIREMENT_GROUP", "REQUIREMENT_SUBGROUP":
+                                      apply element.code display logic, then recurse
 
   // Recurse into child components
   if element.components:
     for each child in element.components:
-      render_criterion(child)</code></pre>
+      render_element(child)</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For ONTRUE/ONFALSE conditional logic (used in exclusion/selection criteria), check the <code>PropertyGroupTypeCode</code> of each group. Show ONTRUE groups when the parent INDICATOR question is <code>true</code>; show ONFALSE groups when <code>false</code>.</p>
+<p>For conditional display, read the group&#8217;s <code>code</code>: show <code>ONTRUE</code> groups when the closest parent INDICATOR question is <code>true</code>, show <code>ONFALSE</code> groups when <code>false</code>, and always process <code>ON*</code> groups.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_response_data_type_mapping"><a class="anchor" href="#_response_data_type_mapping"></a>Response Data Type Mapping</h3>
+<h3 id="_data_type_values"><a class="anchor" href="#_data_type_values"></a>Data type values</h3>
 <div class="paragraph">
-<p>When the element type is <code>QUESTION</code>, the expected answer data type is determined by the <code>ValueDataTypeCode</code> (from code list <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ResponseDataType.gc">ResponseDataType.gc</a>):</p>
+<p>On a <code>QUESTION</code> (and on a <code>REQUIREMENT</code>, where the buyer states an expected value), the <code>propertydatatype</code> field gives the expected data type. The values map to the ESPD <code>ResponseDataType</code> code list (<a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ResponseDataType.gc">ResponseDataType.gc</a>); the JSON uses a more granular set than the base code list. The values found in <code>espd-edm.json</code> are:</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -669,8 +707,8 @@ function render_criterion(element):
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Data Type</th>
-<th class="tableblock halign-left valign-top">Expected Input</th>
+<th class="tableblock halign-left valign-top"><code>propertydatatype</code></th>
+<th class="tableblock halign-left valign-top">Expected input</th>
 </tr>
 </thead>
 <tbody>
@@ -683,12 +721,24 @@ function render_criterion(element):
 <td class="tableblock halign-left valign-top"><p class="tableblock">Free text</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AMOUNT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AMOUNT</code> / <code>MINIMUM_AMOUNT</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Numeric value + currency code</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QUANTITY</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Numeric value + unit code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QUANTITY</code> / <code>QUANTITY_INTEGER</code> / <code>QUANTITY_YEAR</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Numeric value (+ unit code); integer or year variants</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MINIMUM_QUANTITY</code> / <code>MINIMUM_QUANTITY_INTEGER</code> / <code>MINIMUM_QUANTITY_YEAR</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Minimum-value variants of the quantity types</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PERCENTAGE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percentage value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PERIOD</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A period (start / end)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>DATE</code></p></td>
@@ -699,23 +749,35 @@ function render_criterion(element):
 <td class="tableblock halign-left valign-top"><p class="tableblock">Web address (URI)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>IDENTIFIER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier string (with optional scheme)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CODE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Code value from a specific code list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CODE</code> / <code>CODE_COUNTRY</code> / <code>CODE_BOOLEAN</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code value from a specific code list (country / boolean variants)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>EVIDENCE_IDENTIFIER</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Reference to an evidence document (by ID)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ECONOMIC_OPERATOR_IDENTIFIER</code> / <code>LOT_IDENTIFIER</code> / <code>QUAL_IDENTIFIER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier of the economic operator / a lot / a qualification</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>NONE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">No response expected (used for CAPTION and REQUIREMENT)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No response expected (used for <code>CAPTION</code> and for <code>REQUIREMENT</code>)</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This granular set (for example <code>QUANTITY_INTEGER</code>, <code>CODE_COUNTRY</code>, <code>MINIMUM_AMOUNT</code>) is what the criterion model uses to drive form rendering; it maps onto the base <code>ResponseDataType</code> code values used in the UBL XML <code>cbc:ValueDataTypeCode</code>.
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_generating_espd_xml_from_json"><a class="anchor" href="#_generating_espd_xml_from_json"></a>Generating ESPD XML from JSON</h3>
@@ -725,26 +787,26 @@ function render_criterion(element):
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Walk the JSON tree following <code>requestpath</code> (for Request) or <code>responsepath</code> (for Response)</p>
+<p>Walk each criterion&#8217;s <code>components</code> tree, following <code>requestpath</code> (for the Request) or <code>responsepath</code> / <code>contentpath</code> (for the Response)</p>
 </li>
 <li>
 <p>Map each element <code>type</code> to the corresponding UBL XML element:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>CRITERION</code> &#8594; <code>cac:TenderingCriterion</code></p>
+<p><code>CRITERION</code> / <code>SUBCRITERION</code> &#8594; <code>cac:TenderingCriterion</code> / <code>cac:SubTenderingCriterion</code></p>
+</li>
+<li>
+<p><code>LEGISLATION</code> &#8594; <code>cac:Legislation</code></p>
+</li>
+<li>
+<p><code>QUESTION_GROUP</code> / <code>REQUIREMENT_GROUP</code> &#8594; <code>cac:TenderingCriterionPropertyGroup</code></p>
+</li>
+<li>
+<p><code>QUESTION_SUBGROUP</code> / <code>REQUIREMENT_SUBGROUP</code> &#8594; <code>cac:SubsidiaryTenderingCriterionPropertyGroup</code></p>
 </li>
 <li>
 <p><code>QUESTION</code> / <code>REQUIREMENT</code> / <code>CAPTION</code> &#8594; <code>cac:TenderingCriterionProperty</code></p>
-</li>
-<li>
-<p><code>ADDITIONAL_DOCUMENT_REFERENCE</code> &#8594; <code>cac:AdditionalDocumentReference</code></p>
-</li>
-<li>
-<p><code>CONTRACTING_PARTY</code> &#8594; <code>cac:ContractingParty</code></p>
-</li>
-<li>
-<p>etc.</p>
 </li>
 </ul>
 </div>
@@ -753,15 +815,15 @@ function render_criterion(element):
 <p>Apply <code>cardinality</code> rules to enforce mandatory elements</p>
 </li>
 <li>
-<p>For the Response: add <code>cac:TenderingCriterionResponse</code> elements linking each answer to its QUESTION property via <code>cbc:ValidatedCriterionPropertyID</code></p>
+<p>For the Response: add a <code>cac:TenderingCriterionResponse</code> for each answered question. In the UBL XML the response is linked to its question via <code>cbc:ValidatedCriterionPropertyID</code> (which carries the question property&#8217;s ID). Note this UBL linking element is not itself a field in <code>espd-edm.json</code> — the JSON expresses the linkage through the <code>responsepath</code> / <code>contentpath</code> values.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_json_schema"><a class="anchor" href="#_json_schema"></a>JSON Schema</h3>
+<h3 id="_validation_of_the_generated_json"><a class="anchor" href="#_validation_of_the_generated_json"></a>Validation of the generated JSON</h3>
 <div class="paragraph">
-<p>A JSON schema file is provided alongside <code>espd-edm.json</code> to validate the structural consistency of the data model.</p>
+<p>A JSON schema is used internally by the ESPD Team to validate the export from the Conceptual Model for structural consistency before <code>espd-edm.json</code> is committed to the distribution package. The schema is part of the generation tooling and is not currently shipped in the <code>criterion/</code> folder alongside <code>espd-edm.json</code>.</p>
 </div>
 </div>
 <div class="sect2">

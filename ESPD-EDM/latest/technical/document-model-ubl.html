@@ -440,21 +440,40 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="sect2">
-<h3 id="_ubl_libraries"><a class="anchor" href="#_ubl_libraries"></a>UBL libraries</h3>
 <div class="paragraph">
-<p>UBL 2.4 distributes XSD schemas in two formats:</p>
+<p>Each document type is defined by one main-document schema in <code>schemas/maindoc/</code>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>xsd/</code> — fully documented schemas (with definitions, examples)</p>
+<p><code>UBL-QualificationApplicationRequest-2.4.xsd</code></p>
 </li>
 <li>
-<p><code>xsdrt/</code> — runtime schemas (lightweight, for production use)</p>
+<p><code>UBL-QualificationApplicationResponse-2.4.xsd</code></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Both import the shared UBL libraries from <code>schemas/common/</code>. At the top level, a <code>QualificationApplicationRequest</code> carries the root identifiers (<code>cbc:UBLVersionID</code>, <code>cbc:ID</code>, <code>cbc:UUID</code>, <code>cbc:ContractFolderID</code>, <code>cbc:VersionID</code>, <code>cbc:ProfileExecutionID</code>), the <code>cac:ContractingParty</code>, an optional <code>cac:ProcurementProject</code> and <code>cac:ProcurementProjectLot</code> (<code>0..n</code>), the <code>cac:TenderingCriterion</code> elements (<code>0..n</code>), and <code>cac:AdditionalDocumentReference</code> (<code>0..n</code>, used to reference the Contract Notice). The <code>QualificationApplicationResponse</code> mirrors these and adds <code>cac:EconomicOperatorParty</code> and <code>cac:TenderingCriterionResponse</code> elements. The full element tables are in the <a href="request-reference-model.html" class="xref page">Request Reference Model</a> and <a href="response-reference-model.html" class="xref page">Response Reference Model</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ubl_libraries"><a class="anchor" href="#_ubl_libraries"></a>UBL libraries</h3>
+<div class="paragraph">
+<p>The upstream OASIS UBL 2.4 distribution provides its XSD schemas in two forms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>xsd/</code> — the <strong>normative</strong>, annotated schemas (carrying the CCTS documentation of each element)</p>
+</li>
+<li>
+<p><code>xsdrt/</code> — non-normative "runtime" copies with the annotations stripped out, provided for implementation convenience</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>(The ESPD-EDM distribution carries the schemas under <code>schemas/common/</code> and <code>schemas/maindoc/</code> — see <a href="#_distribution">Distribution</a> below.)</p>
 </div>
 <div class="paragraph">
 <p>The ESPD-EDM uses components from two main libraries:</p>
@@ -473,50 +492,41 @@
 <div class="sect2">
 <h3 id="_how_espd_edm_extends_ubl"><a class="anchor" href="#_how_espd_edm_extends_ubl"></a>How ESPD-EDM extends UBL</h3>
 <div class="paragraph">
-<p>The ESPD-EDM does <strong>not</strong> modify the UBL schema. Instead it adds constraints on top:</p>
+<p>The ESPD-EDM does <strong>not</strong> modify or subset the UBL schema — it uses the unaltered UBL 2.4 XSDs. All ESPD-specific tightening is layered <strong>on top</strong> of the schema:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Cardinality restrictions</strong> — elements that UBL defines as optional are made mandatory by the ESPD (enforced via Schematron)</p>
+<p><strong>Cardinality restrictions</strong> — the UBL XSD is deliberately permissive: nearly every element is optional (<code>0..1</code> / <code>0..n</code>), including document-root children such as <code>cac:TenderingCriterion</code> and <code>cac:ContractingParty</code>. The ESPD makes the elements it needs mandatory (for example a Request must carry at least one <code>cac:TenderingCriterion</code>; a criterion must carry a <code>cbc:ID</code> and at least one property group). These stricter cardinalities are expressed as Schematron assertions, not in the XSD.</p>
 </li>
 <li>
-<p><strong>Business rules</strong> — additional semantic validation (e.g. criterion UUIDs must match e-Certis)</p>
+<p><strong>Business rules</strong> — additional semantic checks that XSD cannot express, e.g. a criterion <code>cbc:ID</code> must be a UUID harmonised with eCertis, a selection criterion must reference the lots it applies to, and code values must belong to the expected code list. These are the <code>BR-*</code> rules.</p>
 </li>
 <li>
-<p><strong>Code lists</strong> — specific code list values required for ESPD-specific elements</p>
+<p><strong>Code-list constraints</strong> — the allowed values for ESPD code elements are constrained via a CVA file compiled into the Schematron validation.</p>
 </li>
 </ul>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A consequence for implementers: <strong>XSD-valid is not the same as ESPD-valid</strong>. An instance can satisfy the UBL 2.4 schema and still be rejected by the ESPD business rules. A conforming ESPD Service must validate against <strong>both</strong> layers — the UBL XSD and the ESPD Schematron (which includes the compiled CVA code-list checks). See <a href="validation-conformance.html" class="xref page">Validation and Conformance</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_key_standards_in_the_ubl_ecosystem"><a class="anchor" href="#_key_standards_in_the_ubl_ecosystem"></a>Key standards in the UBL ecosystem</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Standard</th>
-<th class="tableblock halign-left valign-top">Role</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://docs.oasis-open.org/codelist/approved/genericode/oasis-code-list-representation-genericode.html">Genericode 1.0</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Format for code list files (<code>.gc</code>)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.schematron.com/">ISO Schematron</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Rule-based XML validation beyond XSD</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.oasis-open.org/ubl/UBL-conformance-to-CCTS/v1.0/UBL-conformance-to-CCTS-v1.0.html">ebXML CCTS</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Core Component types (CodeType, IdentifierType with their attributes)</p></td>
-</tr>
-</tbody>
-</table>
+<h3 id="_related_standards"><a class="anchor" href="#_related_standards"></a>Related standards</h3>
+<div class="paragraph">
+<p>UBL sits alongside several other standards in the ESPD-EDM stack — Genericode (code lists), ISO Schematron (business-rule validation), and ebXML CCTS (the Code and Identifier type foundation). These are catalogued, with their specifications and roles, in <a href="standards-specifications.html" class="xref page">Standards and Specifications</a>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_attributes_for_codes_and_identifiers"><a class="anchor" href="#_attributes_for_codes_and_identifiers"></a>Attributes for codes and identifiers</h3>
@@ -622,17 +632,20 @@ Cardinalities shown in the element tables are ESPD-EDM constraints, which may be
 <div class="sect2">
 <h3 id="_distribution"><a class="anchor" href="#_distribution"></a>Distribution</h3>
 <div class="paragraph">
-<p>The UBL 2.4 schema files are included in the ESPD-EDM distribution package under the <code>schemas/</code> folder:</p>
+<p>The UBL 2.4 schema files are included in the ESPD-EDM distribution package under the <code>schemas/</code> folder (the ESPD-EDM ships the normative schema set; there is no separate <code>xsdrt/</code> copy):</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>schemas/common/</code> — common elements and structures</p>
+<p><code>schemas/maindoc/</code> — the two main document schemas to validate an instance against (<code>UBL-QualificationApplicationRequest-2.4.xsd</code>, <code>UBL-QualificationApplicationResponse-2.4.xsd</code>)</p>
 </li>
 <li>
-<p><code>schemas/maindoc/</code> — main document XSD schemas</p>
+<p><code>schemas/common/</code> — the shared UBL libraries these import (<code>UBL-CommonAggregateComponents-2.4.xsd</code>, <code>UBL-CommonBasicComponents-2.4.xsd</code>, <code>UBL-CommonExtensionComponents-2.4.xsd</code>, plus datatype and signature modules)</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>To validate an ESPD instance: first validate against the matching <code>maindoc</code> XSD (structural/type checks), then run the ESPD Schematron from the <code>validation/</code> folder for the business rules and code-list checks.</p>
 </div>
 <div class="paragraph">
 <p>Source: <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/schemas">ESPD-EDM schemas on GitHub</a></p>
@@ -650,6 +663,9 @@ Cardinalities shown in the element tables are ESPD-EDM constraints, which may be
 </li>
 <li>
 <p><a href="espd-response.html" class="xref page">ESPD Response</a></p>
+</li>
+<li>
+<p><a href="validation-conformance.html" class="xref page">Validation and Conformance</a></p>
 </li>
 <li>
 <p><a href="standards-specifications.html" class="xref page">Standards and Specifications</a></p>

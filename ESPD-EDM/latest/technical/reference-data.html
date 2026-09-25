@@ -435,7 +435,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>All code lists are distributed as Genericode (<code>.gc</code>) files in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc">gc</a> folder of the distribution package.</p>
+<p>All code lists are distributed as Genericode (<code>.gc</code>) files in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists">codelists</a> folder of the distribution package.</p>
 </div>
 </div>
 <div class="sect2">
@@ -466,7 +466,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ExclusionGround.gc">ExclusionGround.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ExclusionGround.gc">ExclusionGround.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used in</p></td>
@@ -513,7 +513,7 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/SelectionCriterion.gc">SelectionCriterion.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/SelectionCriterion.gc">SelectionCriterion.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used in</p></td>
@@ -522,7 +522,7 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tbody>
 </table>
 <div class="paragraph">
-<p>Categorises selection criteria by type: suitability to pursue the professional activity, economic and financial standing, technical and professional ability, and quality assurance standards.</p>
+<p>Categorises selection criteria by type: suitability to pursue the professional activity (<code>slc-suit</code>), economic and financial standing (<code>slc-stand</code>), technical and professional ability (<code>slc-abil</code>), quality assurance schemes and environmental management standards (<code>slc-sche</code>), and ability to secure information, processes and deliveries (<code>slc-sec</code>).</p>
 </div>
 </div>
 </div>
@@ -554,7 +554,7 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/CriterionElementType.gc">CriterionElementType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/CriterionElementType.gc">CriterionElementType.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used in</p></td>
@@ -579,12 +579,28 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 <td class="tableblock halign-left valign-top"><p class="tableblock">Top-level criterion element.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT_GROUP</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A group of requirements/questions (controls conditional logic via PropertyGroupTypeCode).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SUBCRITERION</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A descendant criterion that specialises a criterion (e.g. a national sub-criterion).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LEGISLATION</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A reference to the legislation related to the criterion.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ADDITIONAL_DESCRIPTION_LINE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An extra line of criterion description. (Not used in the current model.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT_GROUP</code> / <code>QUESTION_GROUP</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A first-level group of properties.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT_SUBGROUP</code> / <code>QUESTION_SUBGROUP</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A subsidiary (nested) group of properties. Its conditional behaviour is governed by the group&#8217;s <code>PropertyGroupTypeCode</code> (see <a href="#_propertygrouptype">PropertyGroupType</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>REQUIREMENT</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">A value set by the buyer in the ESPD Request (e.g. a threshold amount). No response expected from the economic operator.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A value set by the buyer in the ESPD Request (e.g. a threshold amount). No response is expected from the economic operator.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>QUESTION</code></p></td>
@@ -596,6 +612,18 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<code>CriterionElementType</code> is the single code list covering every structural element of the criterion tree (criterion, sub-criterion, legislation, groups, sub-groups, and the property types). In the UBL XML it is applied to <code>cac:TenderingCriterionProperty/cbc:TypeCode</code>; the group/criterion/legislation distinctions correspond to the respective UBL elements (<code>cac:TenderingCriterionPropertyGroup</code>, <code>cac:SubTenderingCriterion</code>, <code>cac:Legislation</code>).
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_propertygrouptype"><a class="anchor" href="#_propertygrouptype"></a>PropertyGroupType</h4>
@@ -620,11 +648,11 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/PropertyGroupType.gc">PropertyGroupType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/PropertyGroupType.gc">PropertyGroupType.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used in</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:SubsidiaryTenderingCriterionPropertyGroup/cbc:PropertyGroupTypeCode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup/cbc:PropertyGroupTypeCode</code> and <code>cac:SubsidiaryTenderingCriterionPropertyGroup/cbc:PropertyGroupTypeCode</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -687,7 +715,7 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/ResponseDataType.gc">ResponseDataType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/ResponseDataType.gc">ResponseDataType.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used in</p></td>
@@ -750,11 +778,6 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:ApplicablePeriod</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DATE</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Single date value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseDate</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>CODE</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Code value from a specific code list</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseCode</code></p></td>
@@ -765,23 +788,18 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseCode</code></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CODE_BOOLEAN</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean expressed as a code (used with GUI-control criteria)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseCode</code></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>IDENTIFIER</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier value</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseID</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>URL</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Web address</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseURI</code></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EVIDENCE_IDENTIFIER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reference to evidence</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:EvidenceSupplied</code></p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ECONOMIC_OPERATOR_IDENTIFIER</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Reference to another economic operator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reference to an economic operator</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseID</code></p></td>
 </tr>
 <tr>
@@ -790,9 +808,24 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseID</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WEIGHT_INDICATOR</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Weighted indicator for reduction of candidates</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseIndicator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>QUAL_IDENTIFIER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reference to a qualification</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseID</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>URL</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web address</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseURI</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DATE</code> / <code>TIME</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date or time value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ResponseDate</code> / <code>cbc:ResponseTime</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EVIDENCE_IDENTIFIER</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reference to evidence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:EvidenceSupplied</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>NONE</code></p></td>
@@ -801,8 +834,20 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>ResponseDataType</code> code list also defines the buyer-side expected-value and bound variants used in the ESPD Request — <code>MINIMUM_AMOUNT</code>, <code>MAXIMUM_AMOUNT</code>, <code>MINIMUM_VALUE_NUMERIC</code>, <code>MAXIMUM_VALUE_NUMERIC</code>, <code>MINIMUM_QUANTITY</code> (with <code>_INTEGER</code> / <code>_YEAR</code> variants), <code>CERTIFICATION_LEVEL_DESCRIPTION</code>, <code>TRANSLATION_TYPE_CODE</code> and <code>COPY_QUALITY_TYPE_CODE</code> — beyond the response types listed above. Always resolve the authoritative set against the genericode file.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>For response mapping guidance, see <a href="criterion-data-model-json.html#_response_data_type_mapping" class="xref page">Response Data Type Mapping</a> in the Criterion Data Model page.</p>
+<p>For response mapping guidance, see <a href="criterion-data-model-json.html#_data_type_values" class="xref page">Data type values</a> in the Criterion Data Model page.</p>
 </div>
 </div>
 </div>
@@ -831,7 +876,7 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/gc/BooleanGUIControlType.gc">BooleanGUIControlType.gc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/codelists/BooleanGUIControlType.gc">BooleanGUIControlType.gc</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Used in</p></td>
@@ -858,6 +903,22 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>RADIO_BUTTON_FALSE</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Render as a radio button representing the <code>false</code> option.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RADIO_BUTTON_UNSELECTED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Render as a radio button with no option selected.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CHECK_BOX_TRUE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Render as a checked check box (<code>true</code>).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CHECK_BOX_FALSE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Render as an unchecked check box representing the <code>false</code> option.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CHECK_BOX_UNCHECKED</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Render as a check box in the unselected state.</p></td>
 </tr>
 </tbody>
 </table>
@@ -908,7 +969,7 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ResponseDataType</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">ESPD-EDM team</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Updated per release when new response types are needed (e.g. <code>WEIGHT_INDICATOR</code> added in v4.0.0).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updated per release when new response types are needed (for example the granular quantity and minimum/maximum bound variants in v5.0.0).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">BooleanGUIControlType</p></td>
@@ -921,24 +982,44 @@ In ESPD-EDM v5.0.0, this code list replaces the former single <code>Criterion</c
 <div class="sect2">
 <h3 id="_relationship_to_espd_edm_json"><a class="anchor" href="#_relationship_to_espd_edm_json"></a>Relationship to espd-edm.json</h3>
 <div class="paragraph">
-<p>The criterion definitions in <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a> reference these code lists by their code values:</p>
+<p>The criterion definitions in <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a> carry values drawn from these code lists. The mapping between the JSON fields, the code lists, and the resulting UBL XML elements is:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>CriterionTypeCode</code> → ExclusionGround or SelectionCriterion</p>
-</li>
-<li>
-<p><code>TypeCode</code> on each property → CriterionElementType</p>
-</li>
-<li>
-<p><code>PropertyGroupTypeCode</code> on each group → PropertyGroupType</p>
-</li>
-<li>
-<p><code>ValueDataTypeCode</code> on each property → ResponseDataType</p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>espd-edm.json</code> field</th>
+<th class="tableblock halign-left valign-top">Code list</th>
+<th class="tableblock halign-left valign-top">UBL XML element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code> on a criterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ExclusionGround / SelectionCriterion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion/cbc:CriterionTypeCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code> on each node</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CriterionElementType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty/cbc:TypeCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>code</code> on each group (<code>ON*</code>/<code>ONTRUE</code>/<code>ONFALSE</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PropertyGroupType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>…PropertyGroup/cbc:PropertyGroupTypeCode</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>propertydatatype</code> on each property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ResponseDataType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty/cbc:ValueDataTypeCode</code></p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>When building an ESPD Service, implementers should load both the JSON criterion data and the Genericode files to resolve code values to their display labels and descriptions. See <a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a> for traversal guidance.</p>
 </div>
