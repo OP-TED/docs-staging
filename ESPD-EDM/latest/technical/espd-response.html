@@ -130,7 +130,7 @@
     <span class="nav-text"><span class="separated"><strong>Business Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../business/for-buyers.html">For Buyers (Contracting Authorities)</a>
+    <a class="nav-link" href="../business/for-buyers.html">For Buyers</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../business/for-economic-operators.html">For Economic Operators</a>
@@ -486,9 +486,21 @@ This section does not cover elements already described in the <a href="espd-requ
 <p>The UBL-2.4 <strong>cac:EconomicOperatorParty</strong> component (identification, role, party data);</p>
 </li>
 <li>
-<p><strong>Criteria data structures</strong> classified as <code>CRITERION.OTHER.EO_DATA.*</code> (e.g. sheltered workshop, together with others, relied-on entities, subcontractors).</p>
+<p><strong>Criteria data structures</strong> — the "Other" (<code>code</code> <code>OT</code>) criteria (<code>type</code> <code>CRITERION</code>) that carry economic-operator information, such as SME status (<code>OT65</code>) and sheltered workshop (<code>OT57</code>), together with the questions on group participation, reliance on the capacities of other entities, and subcontracting.</p>
 </li>
 </ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The economic operator&#8217;s party data is modelled by the <code>info-eo</code> <strong>INFORMATION</strong> structure (<code>ECONOMIC_OPERATOR_PARTY</code>), which maps to the UBL <code>cac:EconomicOperatorParty</code> component described above.
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_key_requirements"><a class="anchor" href="#_key_requirements"></a>Key requirements</h3>
@@ -545,7 +557,7 @@ This section does not cover elements already described in the <a href="espd-requ
 <div class="ulist">
 <ul>
 <li>
-<p>Each response is linked to one, and only one, criterion property via <code>cbc:ValidatedCriterionPropertyID</code> (matching the UUID from the Request).</p>
+<p>Each response is linked to one, and only one, criterion property via <code>cbc:ValidatedCriterionPropertyID</code>, which carries the ID of that property from the Request. (In <code>espd-edm.json</code> the same linkage is expressed through the <code>responsepath</code> / <code>contentpath</code> values; top-level criterion UUIDs — harmonised with e-Certis — identify the criterion, not the individual property.)</p>
 </li>
 <li>
 <p>One response may contain a list of <code>cac:ResponseValue</code> elements of the same type.</p>

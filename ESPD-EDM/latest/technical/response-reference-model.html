@@ -130,7 +130,7 @@
     <span class="nav-text"><span class="separated"><strong>Business Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../business/for-buyers.html">For Buyers (Contracting Authorities)</a>
+    <a class="nav-link" href="../business/for-buyers.html">For Buyers</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../business/for-economic-operators.html">For Economic Operators</a>
@@ -1124,10 +1124,10 @@ Moreover, each EO should submit an ESPD Response per lot or group of Lots which 
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The UBL-2.4 <strong>cac:EconomicOperatorParty</strong> component; and</p>
+<p>The UBL-2.4 <strong>cac:EconomicOperatorParty</strong> component (the economic operator&#8217;s party data is modelled by the <code>info-eo</code> <code>INFORMATION</code> structure, <code>ECONOMIC_OPERATOR_PARTY</code>); and</p>
 </li>
 <li>
-<p>In <strong>criteria data structures</strong>: following the solution adopted for Version ESPD-EDM, the ESPD-EDM defines several criteria classified as CRITERION.OTHER.EO_DATA.* (where the * refers to different branches and leaves of a different structures about the economic operator (e.g. SHELTERED_WORKSHOP, TOGETHER_WITH_OTHERS, etc.). The XML instances use criteria components (UBL-2.4 cac:TenderingCriterion) to structure these data. The sub-sections below cover both.</p>
+<p>In <strong>criteria data structures</strong>: the ESPD-EDM defines several "Other" criteria (<code>code</code> <code>OT</code>, <code>type</code> <code>CRITERION</code>) that carry economic-operator information (e.g. SME status <code>OT65</code>, sheltered workshop <code>OT57</code>, and the questions on group participation, reliance on the capacities of other entities, and subcontracting). The XML instances use criteria components (UBL-2.4 <code>cac:TenderingCriterion</code>) to structure these data. The sub-sections below cover both.</p>
 </li>
 </ol>
 </div>
