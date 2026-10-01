@@ -436,7 +436,10 @@
 <p>Validation of the code list values: <code>01-ESPD-codelist-values.cva</code></p>
 </li>
 <li>
-<p>Validation of the identification of the code list: <code>01-ESPD-Common-CL-Attributes.sch</code></p>
+<p>Validation of the identification of the code list: <code>01-ESPD-common-cl-attributes.sch</code></p>
+</li>
+<li>
+<p>Restrictions on code list attribute values: <code>01-ESPD-common-cl-values-restrictions.sch</code></p>
 </li>
 </ol>
 </div>
@@ -494,7 +497,10 @@
 <p>Validation of the code list values: <code>01-ESPD-codelist-values.cva</code></p>
 </li>
 <li>
-<p>Validation of the identification of the code list: <code>01-ESPD-Common-CL-Attributes.sch</code></p>
+<p>Validation of the identification of the code list: <code>01-ESPD-common-cl-attributes.sch</code></p>
+</li>
+<li>
+<p>Restrictions on code list attribute values: <code>01-ESPD-common-cl-values-restrictions.sch</code></p>
 </li>
 </ol>
 </div>
@@ -546,15 +552,15 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_uuid_criterion_validation"><a class="anchor" href="#_uuid_criterion_validation"></a>UUID Criterion Validation</h2>
+<h2 id="_criterion_identifier_validation"><a class="anchor" href="#_criterion_identifier_validation"></a>Criterion Identifier Validation</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each criterion is defined in eCertis and has a <strong>Universally Unique Identifier (UUID)</strong> supplied by eCertis:</p>
+<p>Each top-level criterion is defined in eCertis and has a <strong>Universally Unique Identifier (UUID)</strong> supplied by eCertis:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>These UUIDs are mandatory and are maintained by the Publications Office.</p>
+<p>The criterion UUID is mandatory and is maintained by the Publications Office.</p>
 </li>
 <li>
 <p>The criterion UUIDs can be found in the <a href="https://github.com/OP-TED/ESPD-EDM/tree/v5.0.0/criterion/espd-edm.json">espd-edm.json</a> file.</p>
@@ -562,7 +568,7 @@
 </ol>
 </div>
 <div class="paragraph">
-<p>The UUIDs defined in the ESPDRequest or ESPDResponse are validated for the following elements:</p>
+<p>The <code>cbc:ID</code> of each of the following elements is validated against the eCertis reference data (matched by identifier, and checked for the expected structure):</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -572,24 +578,44 @@
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Element</th>
-<th class="tableblock halign-left valign-top">XSD Path</th>
+<th class="tableblock halign-left valign-top">Path</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier form</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Criterion</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterion/cbc:ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eCertis <strong>UUID</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Property Group</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionPropertyGroup/cbc:ID</code></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML Path Like ID</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cac:TenderingCriterionProperty/cbc:ID</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XML Path Like ID</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Only the top-level criterion <code>cbc:ID</code> is a UUID. The property groups and properties nested below it carry <strong>XML Path Like IDs</strong> (see <a href="#_xml_path_like_id">XML Path Like ID</a> below), not UUIDs — although their <code>cbc:ID</code> values are still validated against the eCertis reference structure.
+</td>
+</tr>
+</table>
+</div>
 <div class="sect2">
 <h3 id="_tendering_criterion_validation"><a class="anchor" href="#_tendering_criterion_validation"></a>Tendering Criterion Validation</h3>
 <div class="paragraph">
