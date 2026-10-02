@@ -439,8 +439,8 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:UUID</code> (document)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">UUID v4</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Globally unique; copies share the same UUID, new documents get a new one</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ISO/IEC 9834-8 UUID (<code>schemeID="ISO/IEC 9834-8:2008 - 4UUID"</code>)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Globally unique, e.g. <code>ab731d5a-f07e-48e6-96b9-7f04471e0c27</code>; each document instance gets its own UUID</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cbc:ID</code> (criterion)</p></td>
@@ -476,7 +476,7 @@
 <p><code>cbc:UUID</code> is mandatory on both Request and Response root elements — the Response UUID links back to the Request</p>
 </li>
 <li>
-<p>Within a criterion, only the criterion&#8217;s own <code>cbc:ID</code> is a UUID — its eCertis identifier, used to retrieve the criterion&#8217;s <code>cbc:Name</code> and <code>cbc:Description</code> from eCertis (matched by rule <code>BR-TC-02</code>). Property groups and properties below it use XPath-like IDs, not UUIDs (see <a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a>)</p>
+<p>Within a criterion, only the criterion&#8217;s own <code>cbc:ID</code> is a UUID — its eCertis identifier, used to retrieve the criterion&#8217;s <code>cbc:Name</code> and <code>cbc:Description</code> from eCertis. Property groups and properties below it use XPath-like IDs, not UUIDs (see <a href="criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a>)</p>
 </li>
 </ul>
 </div>

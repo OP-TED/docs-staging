@@ -479,9 +479,6 @@
 <li>
 <p>This element is not necessary for exclusion grounds because exclusion grounds apply to all lots automatically.</p>
 </li>
-<li>
-<p>Rule scope: BR-LOT-40 (Lots apply only to Selection Criteria; Exclusion Criteria cannot have Lot associated), BR-LOT-41 (All Selection Criteria must have associated LOT).</p>
-</li>
 </ul>
 </div>
 </div>
@@ -527,10 +524,22 @@
 </tbody>
 </table>
 <div class="paragraph">
-<p>The four-digit sequence is zero-padded (<code>0001</code>, not <code>1</code>) and numbering starts at <code>0001</code> for lots and groups. A procedure that is not split into lots still carries one lot, conventionally <code>LOT-0000</code>.</p>
+<p>The four-digit sequence is zero-padded (<code>0001</code>, not <code>1</code>) and numbering starts at <code>0001</code> for lots and groups. A procedure that is not divided into lots is still treated as having exactly one "technical" lot, whose identifier is <code>LOT-0000</code>.</p>
 </div>
 <div class="paragraph">
-<p>These identifiers are the values carried by <code>cac:ProcurementProjectLotReference/cbc:ID</code> in both ESPD documents. Because the format is defined by eForms rather than the ESPD-EDM, the authoritative rules for allowed values live in the eForms specification; the ESPD simply consumes them.</p>
+<p>These identifiers are the values carried by <code>cac:ProcurementProjectLotReference/cbc:ID</code> in both ESPD documents. In line with the ESPD-EDM&#8217;s alignment with eForms, these identifiers follow the eForms format, and the authoritative rules for allowed values live in the eForms specification; the ESPD reuses them unchanged.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In line with the ESPD-EDM&#8217;s alignment with eForms, the lot, group-of-lots and <code>LOT-0000</code> identifier rules follow the eForms specification. See the eForms documentation on <a href="https://docs.ted.europa.eu/eforms/latest/schema/procedure-lot-part-information.html" target="_blank" rel="noopener">Procedure, Group of Lots, Lot &amp; Part related information</a> for the authoritative rules (including the use of <code>LOT-0000</code> for a procedure without lots).
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -555,9 +564,6 @@
 <p>The EO must respond to the <strong>selection criteria applicable to the specific lot</strong>.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p><strong>Rule scope:</strong> BR-LOT-10 (The lot the EO tenders for MUST be provided).</p>
 </div>
 </div>
 </div>
