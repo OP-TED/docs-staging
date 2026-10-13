@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ESPD-EDM Documentation :: TED Developer Docs</title>
-    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/index-new.html">
+    <title>ESPD Exchange Data Model (ESPD-EDM) :: TED Developer Docs</title>
+    <link rel="canonical" href="https://docs.ted.europa.eu/ESPD-EDM/latest/index-old.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../_/css/site.css">
     <link rel="stylesheet" href="../../_/css/custom.css">
@@ -90,8 +90,8 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="index-new.html">Home</a>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">Home</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Introduction</strong></span></span>
@@ -145,9 +145,6 @@
     <a class="nav-link" href="business/using-espd-service.html">Using the ESPD Service</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="business/reference-implementation-guide.html">ESPD Demo Site</a>
-  </li>
-  <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Technical Guide</strong></span></span>
   </li>
   <li class="nav-item" data-depth="1">
@@ -167,9 +164,6 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="technical/common-concepts.html">Common Concepts</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="demo.html">ESPD Demo Site tools</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Criteria</strong></span></span>
@@ -215,6 +209,15 @@
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="technical/business-rules.html">Business Rules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text"><span class="separated"><strong>ESPD Demo Site</strong></span></span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="https://docs.ted.europa.eu/espd-demo/">Open the Demo Site</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="demo.html">About the Demo Site</a>
   </li>
   <li class="nav-item" data-depth="1">
     <span class="nav-text"><span class="separated"><strong>Further Information</strong></span></span>
@@ -388,13 +391,13 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">ESPD EDM</a></li>
-    <li><a href="index-new.html">Home</a></li>
+    <li><a href="index-old.html">ESPD Exchange Data Model (ESPD-EDM)</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">5.0.0</button>
   <div class="version-menu">
-    <a class="version is-current" href="index-new.html">5.0.0</a>
+    <a class="version is-current" href="index-old.html">5.0.0</a>
     <a class="version is-missing" href="../4.1.0/index.html">4.1.0</a>
     <a class="version is-missing" href="../4.0.0/index.html">4.0.0</a>
     <a class="version is-missing" href="../3.3.0/index.html">3.3.0</a>
@@ -412,207 +415,80 @@
   <div class="toc-menu"></div>
 </aside>
     <article class="doc">
-<h1 class="page">ESPD-EDM Documentation</h1>
-<div class="sect1">
-<h2 id="_espd_edm_documentation"><a class="anchor" href="#_espd_edm_documentation"></a>ESPD-EDM Documentation</h2>
+<h1 class="page">ESPD Exchange Data Model (ESPD-EDM)</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>The European Single Procurement Document (ESPD) is a self-declaration by an economic operator, used as preliminary evidence in a public procurement procedure that it is not in a situation of exclusion and that it meets the buyer&#8217;s selection criteria.</p>
+<p>The European Single Procurement Document (ESPD) is a mandatory electronic form, in two parts, used by buyers to assess the suitability of suppliers tendering in a public procurement procedure.</p>
 </div>
 <div class="paragraph">
-<p>This site documents the <strong>ESPD Exchange Data Model (ESPD-EDM) v5.0.0</strong> — the technical model, based on UBL 2.4, that defines how the ESPD Request and ESPD Response are structured, exchanged electronically, and validated.</p>
+<p>The documentation provided here explains the ESPD Exchange Data Model (ESPD-EDM) and covers the resources provided by the Publications Office, to help member states and commercial entities create an ESPD service. The service is the electronic online form which enables both parties in a procurement procedure to manage eligibility of a supplier in a procurement process.</p>
 </div>
-<div class="sect2">
-<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h3>
 <div class="paragraph">
-<p>General overview of the ESPD, its role in the procurement process, and the legal framework.</p>
+<p>The following information is provided for both business users (an overview of the ESPD), and technical users (resources for technical implementation of an ESPD Service).</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_release_documentation"><a class="anchor" href="#_release_documentation"></a>Release Documentation</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="what-is-espd.html" class="xref page">What is the ESPD?</a></p>
+<p><a href="release_notes.html" class="xref page">Release Notes</a><br>
+The release notes for this version.</p>
 </li>
 <li>
-<p><a href="procurement-process.html" class="xref page">The Procurement Process</a></p>
-</li>
-<li>
-<p><a href="request-response-concepts.html" class="xref page">Request and Response Concepts</a></p>
-</li>
-<li>
-<p><a href="actors-and-roles.html" class="xref page">Actors and Roles</a></p>
-</li>
-<li>
-<p><a href="legal-framework.html" class="xref page">Legal Framework</a></p>
+<p><a href="_attachments/ESPD_CM_html/index.html">Conceptual Model</a><br>
+The conceptual model for this version</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_releases"><a class="anchor" href="#_releases"></a>Releases</h3>
-<div class="paragraph">
-<p>Release notes, migration guidance, and links to previous versions.</p>
 </div>
+<div class="sect1">
+<h2 id="_information_for_business_users"><a class="anchor" href="#_information_for_business_users"></a>Information for Business Users</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="release_notes.html" class="xref page">Release Notes</a></p>
+<p><a href="business/index-old.html" class="xref page">Business Information</a><br>
+An overview of the ESPD for business users</p>
 </li>
 <li>
-<p><a href="migration-breaking-changes.html" class="xref page">Migration and Breaking Changes</a></p>
+<p><a href="business/implementation.html" class="xref page">An ESPD Implementation</a><br>
+This section explains elements of an ESPD Implementation</p>
 </li>
 <li>
-<p><a href="previous-versions-downloads.html" class="xref page">Previous Versions and Downloads</a></p>
-</li>
-<li>
-<p><a href="_attachments/ESPD_CM_html/index.html">Conceptual Model (HTML)</a></p>
+<p><a href="business/using.html" class="xref page">The ESPD Online Form</a><br>
+Using an online ESPD form from both buyer and supplier perspectives</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_business_guide"><a class="anchor" href="#_business_guide"></a>Business Guide</h3>
-<div class="paragraph">
-<p>Guidance for buyers and economic operators on using the ESPD in public procurement procedures.</p>
 </div>
+<div class="sect1">
+<h2 id="_technical_implementation_of_an_espd_service"><a class="anchor" href="#_technical_implementation_of_an_espd_service"></a>Technical Implementation of an ESPD Service</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="business/for-buyers.html" class="xref page">For Buyers</a></p>
-</li>
-<li>
-<p><a href="business/for-economic-operators.html" class="xref page">For Economic Operators</a></p>
-</li>
-<li>
-<p><a href="business/espd-parts.html" class="xref page">ESPD Parts</a></p>
-</li>
-<li>
-<p><a href="business/lots-overview.html" class="xref page">Lots in Public Procurement</a></p>
-</li>
-<li>
-<p><a href="business/using-espd-service.html" class="xref page">Using the ESPD Service</a></p>
+<p><a href="technical/index.html" class="xref page">Technical Information</a><br>
+Information for technical implementation</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_technical_guide"><a class="anchor" href="#_technical_guide"></a>Technical Guide</h3>
-<div class="paragraph">
-<p>Technical documentation for developers implementing ESPD Services based on the ESPD-EDM v5.0.0 model. Covers the architecture, document model, ESPD Request and Response, lot management, and validation concepts.</p>
 </div>
+<div class="sect1">
+<h2 id="_legacy_pages_to_be_removed"><a class="anchor" href="#_legacy_pages_to_be_removed"></a>Legacy pages (to be removed)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_business_old"><a class="anchor" href="#_business_old"></a>Business (old)</h3>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="technical/getting-started.html" class="xref page">Getting Started</a></p>
-</li>
-<li>
-<p><a href="technical/document-model-ubl.html" class="xref page">Document Model (UBL)</a></p>
-</li>
-<li>
-<p><a href="technical/espd-request.html" class="xref page">ESPD Request</a></p>
-</li>
-<li>
-<p><a href="technical/espd-response.html" class="xref page">ESPD Response</a></p>
-</li>
-<li>
-<p><a href="technical/lots-management.html" class="xref page">Lots Management</a></p>
-</li>
-<li>
-<p><a href="technical/common-concepts.html" class="xref page">Common Concepts</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_criteria"><a class="anchor" href="#_criteria"></a>Criteria</h3>
-<div class="paragraph">
-<p>How criteria are structured, defined, and validated in the ESPD-EDM. Covers the criterion-property-response chain, JSON data model, exclusion grounds, selection criteria, and conformance testing.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="technical/how-criteria-work.html" class="xref page">How Criteria Work</a></p>
-</li>
-<li>
-<p><a href="technical/criterion-data-model-json.html" class="xref page">Criterion Data Model (JSON)</a></p>
-</li>
-<li>
-<p><a href="technical/reference-data.html" class="xref page">Criteria Reference Data</a></p>
-</li>
-<li>
-<p><a href="technical/exclusion-grounds.html" class="xref page">Exclusion Grounds</a></p>
-</li>
-<li>
-<p><a href="technical/selection-criteria.html" class="xref page">Selection Criteria</a></p>
-</li>
-<li>
-<p><a href="technical/validation-conformance.html" class="xref page">Validation and Conformance</a></p>
-</li>
-<li>
-<p><a href="technical/distribution-tooling.html" class="xref page">Distribution and Tooling</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_implementation_reference_model"><a class="anchor" href="#_implementation_reference_model"></a>Implementation Reference Model</h3>
-<div class="paragraph">
-<p>Detailed look-up reference for data model elements, code lists, and business rules.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="technical/request-reference-model.html" class="xref page">Request Reference Model</a></p>
-</li>
-<li>
-<p><a href="technical/response-reference-model.html" class="xref page">Response Reference Model</a></p>
-</li>
-<li>
-<p><a href="technical/criteria-catalogue.html" class="xref page">Criteria Catalogue</a></p>
-</li>
-<li>
-<p><a href="technical/code-lists.html" class="xref page">Code Lists</a></p>
-</li>
-<li>
-<p><a href="technical/business-rules.html" class="xref page">Business Rules</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_further_information"><a class="anchor" href="#_further_information"></a>Further Information</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="technical/standards-specifications.html" class="xref page">Standards and Specifications</a></p>
-</li>
-<li>
-<p><a href="technical/related-systems.html" class="xref page">Related Systems</a></p>
-</li>
-<li>
-<p><a href="technical/repositories-downloads.html" class="xref page">Repositories and Downloads</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_open_user_community_documents"><a class="anchor" href="#_open_user_community_documents"></a>Open User Community Documents</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="../../espd-wgm/index.html" class="xref page">Open User Community Meetings</a></p>
-</li>
-</ul>
-</div>
-<hr>
-</div>
-<div class="sect2">
-<h3 id="_legacy_pages_to_be_removed"><a class="anchor" href="#_legacy_pages_to_be_removed"></a>Legacy pages (to be removed)</h3>
-<div class="sect3">
-<h4 id="_business_old"><a class="anchor" href="#_business_old"></a>Business (old)</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="business/index.html" class="xref page">Business Information</a></p>
+<p><a href="business/index-old.html" class="xref page">Business Information</a></p>
 </li>
 <li>
 <p><a href="business/business_info.html" class="xref page">Information for Business Users</a></p>
@@ -629,8 +505,8 @@
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_technical_old"><a class="anchor" href="#_technical_old"></a>Technical (old)</h4>
+<div class="sect2">
+<h3 id="_technical_old"><a class="anchor" href="#_technical_old"></a>Technical (old)</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -689,7 +565,6 @@
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/OP-TED/espd-docs/issues/new/choose">Click here to let us know</a></p>
-</div>
 </div>
 </div>
 </div>
