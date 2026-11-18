@@ -19365,51 +19365,9 @@ technical identifier.</p>
 <div class="sect1">
 <h2 id="withheldPublicationOfInformationSection"><a class="anchor" href="#withheldPublicationOfInformationSection"></a>13. Withheld publication of information</h2>
 <div class="sectionbody">
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>From SDK 1.16, the information that may be withheld from publication, and the markup used to achieve this, has completely changed.</p>
-</div>
-<div class="paragraph">
-<p>Summary of changes</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Information to be withheld from publication is now arranged in 14 groups of similar Fields</p>
-</li>
-<li>
-<p>All Fields in an information group to be withheld from publication will be withheld</p>
-</li>
-<li>
-<p>Individual instances of Fields can no longer be withheld</p>
-</li>
-<li>
-<p>Some Fields can no longer be withheld from publication</p>
-</li>
-<li>
-<p>One group of Fields includes all information related to Tenderers</p>
-</li>
-<li>
-<p>There can be only one Justification Code, Justification Additional Information and Disclosure Date per notice. These will apply to all withheld information in the notice</p>
-</li>
-<li>
-<p>The terminology used has changed</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Some information required by eForms may remain non-public
-("undisclosed") indefinitely or for a defined period<sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup>.
+("undisclosed") indefinitely or for a defined period.
 This feature may be used for Result, Contract Modification and Contract
 Completion notices only.</p>
 </div>
@@ -19460,10 +19418,20 @@ and optionally a description.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The information to be withheld should use the extension mechanism at notice level (element ContractAwardNotice). This single structure replaces the implementation in previous versions of the SDK where unpublished information fields were located at the same level as the fields to be withheld.</p>
+<p>The information to be withheld should use the extension mechanism at
+notice level (element ContractAwardNotice). This single structure
+replaces the implementation in previous versions of the SDK where
+unpublished information fields were located at the same level as the
+fields to be withheld.</p>
 </div>
 <div class="paragraph">
-<p>The groups of fields to be withheld should be indicated using one or more codes from the codelist <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/undisclosed-data-group">undisclosed-data-group</a> in the repeatable field Undisclosed Information Group (BT-195-notice).</p>
+<p>The groups of fields to be withheld should be indicated using one
+or more codes from the codelist <a href="https://op.europa.eu/web/eu-vocabularies/at-dataset/-/resource/dataset/undisclosed-data-group">undisclosed-data-group</a>
+in the repeatable field Undisclosed Information Group (BT-195-notice).</p>
+</div>
+<div class="paragraph">
+<p>Further information about undisclosed fields is available
+<a href="https://docs.acceptance.ted.europa.eu/eforms/latest/schema/withheld-publication.html">on the TED website</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="withholdableGroupsSection"><a class="anchor" href="#withholdableGroupsSection"></a>13.1. Withholdable Groups</h3>
@@ -19710,7 +19678,10 @@ and optionally a description.</p>
 <td class="tableblock halign-center valign-middle" colspan="2"><p class="tableblock"><strong>Withheld information about economic operators</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-middle" colspan="2"><p class="tableblock"><strong>Note: For the Organisation Fields included in this group, only those instances that are related to economic operators are withheld. The instances of Organisation Fields related to the Buyer may not be withheld</strong></p></td>
+<td class="tableblock halign-center valign-middle" colspan="2"><p class="tableblock"><strong>Note: For the Organisation Fields included in this group, only
+those instances that are related to economic operators are withheld.
+The instances of Organisation Fields related to the Buyer may not
+be withheld</strong></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock"><strong><em>eop-info</em></strong></p></td>
@@ -19825,97 +19796,10 @@ and optionally a description.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="noLongerWithholdableSection"><a class="anchor" href="#noLongerWithholdableSection"></a>13.2. Fields that are no longer withholdable</h3>
+<h3 id="withholdableMarkupSection"><a class="anchor" href="#withholdableMarkupSection"></a>13.2. Markup of withholdable groups</h3>
 <div class="paragraph">
-<p>The following fields are no longer withholdable from SDK 1.16</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>BT-09(a)-Procedure (Cross Border Law)</p>
-</li>
-<li>
-<p>BT-09(b)-Procedure (Cross Border Law Description)</p>
-</li>
-<li>
-<p>BT-88-Procedure (Procedure Features)</p>
-</li>
-<li>
-<p>BT-105-Procedure (Procedure Type)</p>
-</li>
-<li>
-<p>BT-106-Procedure (Procedure Accelerated)</p>
-</li>
-<li>
-<p>BT-135-Procedure (Direct Award Justification Text)</p>
-</li>
-<li>
-<p>BT-136-Procedure (Direct Award Justification Code)</p>
-</li>
-<li>
-<p>BT-1252-Procedure (Direct Award Justification Previous Procedure Identifier)</p>
-</li>
-<li>
-<p>BT-1351-Procedure (Procedure Accelerated Justification)</p>
-</li>
-<li>
-<p>BT-142-LotResult (Winner Chosen)</p>
-</li>
-<li>
-<p>BT-144-LotResult (Not Awarded Reason)</p>
-</li>
-<li>
-<p>BT-539-LotsGroup (Award Criterion Type)</p>
-</li>
-<li>
-<p>BT-540-LotsGroup (Award Criterion Description)</p>
-</li>
-<li>
-<p>BT-541-LotsGroup (Award Criterion Number)</p>
-</li>
-<li>
-<p>BT-541-LotsGroup-FixedNumber (Award Criterion Fixed Number)</p>
-</li>
-<li>
-<p>BT-541-LotsGroup-ThresholdNumber (Award Criterion Threshold Number)</p>
-</li>
-<li>
-<p>BT-541-LotsGroup-WeightNumber (Award Criterion Weight Number)</p>
-</li>
-<li>
-<p>BT-5421-LotsGroup (Award Criterion Number Weight)</p>
-</li>
-<li>
-<p>BT-5422-LotsGroup (Award Criterion Number Fixed)</p>
-</li>
-<li>
-<p>BT-5423-LotsGroup (Award Criterion Number Threshold)</p>
-</li>
-<li>
-<p>BT-543-LotsGroup (Award Criteria Complicated)</p>
-</li>
-<li>
-<p>BT-733-LotsGroup (Award Criteria Order Justification)</p>
-</li>
-<li>
-<p>BT-734-LotsGroup (Award Criterion Name)</p>
-</li>
-<li>
-<p>BT-556-NoticeResult (Group Framework Value Lot Identifier)</p>
-</li>
-<li>
-<p>BT-156-NoticeResult (Group Framework Maximum Value)</p>
-</li>
-<li>
-<p>BT-1561-NoticeResult (Group Framework Re-estimated Value)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="withholdableMarkupSection"><a class="anchor" href="#withholdableMarkupSection"></a>13.3. Markup of withholdable groups</h3>
-<div class="paragraph">
-<p>A markup sample is provided below to illustrate the use of the Undisclosed Information Group (BT-195-notice).</p>
+<p>A markup sample is provided below to illustrate the use of the
+Undisclosed Information Group (BT-195-notice).</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -21942,9 +21826,6 @@ Law Insider, Dictionary, Tenderer definition
 </div>
 <div class="footnote" id="_footnotedef_33">
 <a href="#_footnoteref_33">33</a>. This role, not referenced in eForms, is needed to understand and deal with situations where economic operators tender together (e.g. consortium)
-</div>
-<div class="footnote" id="_footnotedef_34">
-<a href="#_footnoteref_34">34</a>. as reminded in the "eForms Implementation Handbook" p. 27. Also see Dir 24 Art. 50(4), Dir 25 Art. 70(3),
 </div>
 </div>
 </article>
