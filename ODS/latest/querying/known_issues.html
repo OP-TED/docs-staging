@@ -404,7 +404,10 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Known Issues &amp; Limitations documents the currently known issues, limitations, and workarounds when working with TED Open Data service.</p>
+<p>This page lists known issues, limitations and workarounds when working with the TED Open Data Service.</p>
+</div>
+<div class="paragraph">
+<p>The SPARQL snippets on this page are partial patterns. They use the <code>epo:</code> prefix, which is declared as <code>PREFIX epo: <a href="http://data.europa.eu/a4g/ontology#" class="bare">http://data.europa.eu/a4g/ontology#</a></code>.</p>
 </div>
 </div>
 </div>
@@ -412,44 +415,31 @@
 <h2 id="_notices"><a class="anchor" href="#_notices"></a>Notices</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_notice_count_do_not_use_notice_count"><a class="anchor" href="#_notice_count_do_not_use_notice_count"></a>Notice count: Do not use ?notice count</h3>
+<h3 id="_notice_count_count_publication_numbers_not_notice"><a class="anchor" href="#_notice_count_count_publication_numbers_not_notice"></a>Notice count: count publication numbers, not <code>?notice</code></h3>
 <div class="paragraph">
-<p>There is a mismatch between the count of distinct notices based on the notice id and distinct count of notices based on notice publication numbers. It is because of the current logic used for identifying a notice (UUID without version number). That is, the notice UUID (without the version number) can be used by more than one published notice. This issue will be fixed in the future. Currently, when we count the number of distinct notices using notice object it could be less than the distinct count of notices based on notice publication numbers.</p>
+<p>Counting distinct notices using <code>?notice</code> can give a lower number than counting distinct notice publication numbers. This is because a notice is currently identified by its UUID without the version number, and the same UUID can be used by more than one published notice. This issue will be fixed in the future.</p>
 </div>
 <div class="paragraph">
-<p>For example, for the notice - <a href="https://ted.europa.eu/en/notice/-/detail/00176184-2026" class="bare">https://ted.europa.eu/en/notice/-/detail/00176184-2026</a> , 00176184-2026 is the publication number and a2add710-2c39-45f3-ae16-4edf2f5c191c is the notice UUID without the version number.</p>
+<p>For example, the notice with publication number <a href="https://ted.europa.eu/en/notice/-/detail/00176184-2026">00176184-2026</a> has the notice UUID <code>a2add710-2c39-45f3-ae16-4edf2f5c191c</code> (without the version number).</p>
 </div>
 <div class="paragraph">
-<p><strong>Workaround:</strong> Use distinct count of publication numbers to count the number of distinct notices.</p>
+<p><strong>Workaround:</strong> Count distinct publication numbers to get the number of distinct notices.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql"># Use this
-(COUNT(DISTINCT ?noticePublicationNumber) AS ?NoticeCount) .
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql"># Assuming your query pattern is as below
+GRAPH ?g {
+  ?notice a epo:Notice ;
+          epo:hasNoticePublicationNumber ?noticePublicationNumber ;
+          epo:hasPublicationDate ?pubDate .
+}
+
+# Use this
+(COUNT(DISTINCT ?noticePublicationNumber) AS ?noticeCount)
 
 # NOT this
-(COUNT(DISTINCT ?notice) AS ?NoticeCount) .
-
-# Assuming your query pattern is as below
- GRAPH ?g {
-    ?notice a epo:Notice ;
-            epo:hasNoticePublicationNumber ?noticePublicationNumber ;
-             epo:hasPublicationDate ?pubDate .
-  }</code></pre>
+(COUNT(DISTINCT ?notice) AS ?noticeCount)</code></pre>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_standard_forms_or_non_eforms_data_not_available"><a class="anchor" href="#_standard_forms_or_non_eforms_data_not_available"></a>Standard forms (or non-eForms) data not available</h3>
-<div class="paragraph">
-<p>Though it is mentioned that the start date of the data is from 1st of March 2023, it is to be noted that the standard forms data is not available within the named graphs.
-Also, all of the queries provided in the explore (query library) tab works only for eForms. To fetch standard forms data, additional logic is required. Publication date is in string (STR) format for standard forms whereas it is in date format for eForms data.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_unable_to_inspect_standard_forms_or_non_eforms"><a class="anchor" href="#_unable_to_inspect_standard_forms_or_non_eforms"></a>Unable to inspect standard forms (or non-eForms)</h3>
-<div class="paragraph">
-<p>Currently it is not possible to inspect standard forms. For example, publication number 516873-2023 though available in the repository, is not available for inspection.</p>
 </div>
 </div>
 </div>
@@ -458,37 +448,62 @@ Also, all of the queries provided in the explore (query library) tab works only 
 <h2 id="_epo"><a class="anchor" href="#_epo"></a>ePO</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_version_of_epo_used_is_4_2"><a class="anchor" href="#_version_of_epo_used_is_4_2"></a>Version of ePO used is 4.2</h3>
+<h3 id="_versions_of_epo_used_4_2_eforms_and_3_1_standard_forms"><a class="anchor" href="#_versions_of_epo_used_4_2_eforms_and_3_1_standard_forms"></a>Versions of ePO used: 4.2 (eForms) and 3.1 (standard forms)</h3>
 <div class="paragraph">
-<p>The current data (triples) in open data service are processed as per version 4.2 of ePO (eProcurement Ontology). The latest version of ePO is 5.2. In the future, data will be reprocessed to match the latest version of ePO.</p>
+<p>The current eForms data (triples) in the TED Open Data Service is processed according to version 4.2 of ePO (the eProcurement Ontology), and the standard forms data according to version 3.1. The latest version of ePO is 5.2. Work is in progress to reprocess the data to match it.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_some_relationships_are_not_available_in_the_data"><a class="anchor" href="#_some_relationships_are_not_available_in_the_data"></a>Some relationships are not available in the data</h3>
 <div class="paragraph">
-<p>Not all of the relationships provided in the ePO are available in the data in open data service. It is best to view the available relationships / triples using the inspect option to verify the available relationships in the data.</p>
+<p>Not all of the relationships defined in ePO are available in the data in the TED Open Data Service. To check which relationships are available, inspect a notice and look at its triples.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_org_vs_org_group_spelling"><a class="anchor" href="#_org_vs_org_group_spelling"></a>Org vs Org group spelling</h3>
+<h3 id="_missing_direct_relationship_between_contract_and_notice_or_buyer"><a class="anchor" href="#_missing_direct_relationship_between_contract_and_notice_or_buyer"></a>Missing direct relationship between contract and notice or buyer</h3>
 <div class="paragraph">
-<p>Note that there is a difference in spelling between Organization and Organisation group. This is because Organization is from the org schema and Organisation group is from ePO.</p>
+<p>There is no direct relationship in the triples between a contract (<code>epo:Contract</code>) and its notice or buyer. The indirect relationship is through the lot.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_typo_in_property_name_issubmitedby"><a class="anchor" href="#_typo_in_property_name_issubmitedby"></a>Typo in property name: <code>isSubmitedBy</code></h3>
+<h3 id="_winning_tender"><a class="anchor" href="#_winning_tender"></a>Winning tender</h3>
 <div class="paragraph">
-<p>The property <code>epo:isSubmitedBy</code> is misspelled in the current data (single 't' instead of <code>isSubmittedBy</code>). This affects queries that traverse from a Tender to a Tenderer.</p>
+<p>There is no indicator of whether a tender is a winning tender. A tender linked to a contract (<code>epo:Contract</code>) is considered the winning tender.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_class_name_spelling_organization_vs_organisationgroup"><a class="anchor" href="#_class_name_spelling_organization_vs_organisationgroup"></a>Class name spelling: <code>Organization</code> vs <code>OrganisationGroup</code></h3>
+<div class="paragraph">
+<p>Class names use different spellings depending on the vocabulary they come from:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org:Organization</code> (US spelling) comes from the W3C Organization Ontology (<code><a href="http://www.w3.org/ns/org#" class="bare">http://www.w3.org/ns/org#</a></code>).</p>
+</li>
+<li>
+<p><code>epo:OrganisationGroup</code> (UK spelling) comes from ePO. It is a subclass of <code>org:Organization</code>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p><strong>Workaround:</strong> Use <code>epo:isSubmitedBy</code> (with single 't') in your queries until the data is reprocessed.</p>
+<p>Use the exact spelling of each class in your queries.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_property_name_spelling_issubmitedby"><a class="anchor" href="#_property_name_spelling_issubmitedby"></a>Property name spelling: <code>isSubmitedBy</code></h3>
+<div class="paragraph">
+<p>In ePO 4.2, the property linking a tender to its tenderer is spelled <code>epo:isSubmitedBy</code> (single 't'). Queries that use <code>isSubmittedBy</code> will not match the data.</p>
+</div>
+<div class="paragraph">
+<p><strong>Workaround:</strong> Use <code>epo:isSubmitedBy</code> (with single 't') in your queries.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql"># Use this (current data)
+<pre class="highlightjs highlight"><code class="language-sparql hljs" data-lang="sparql"># Use this
 ?tender epo:isSubmitedBy ?tenderer .
 
-# NOT this (correct spelling, but won't match current data)
+# NOT this (won't match the data)
 # ?tender epo:isSubmittedBy ?tenderer .</code></pre>
 </div>
 </div>
@@ -496,48 +511,63 @@ Also, all of the queries provided in the explore (query library) tab works only 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_query_performance_limitations"><a class="anchor" href="#_query_performance_limitations"></a>Query Performance Limitations</h2>
+<h2 id="_query_performance_limitations"><a class="anchor" href="#_query_performance_limitations"></a>Query performance limitations</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_timeout_on_large_date_ranges"><a class="anchor" href="#_timeout_on_large_date_ranges"></a>Timeout on large date ranges</h3>
 <div class="paragraph">
-<p>Queries spanning more than 6 months of data may time out, especially when combined with multiple joins (e.g., notice → lot → contract → tender → tenderer).</p>
+<p>Queries spanning more than 6 months of data may time out, especially when combined with multiple joins (for example, notice → lot → contract → tender → tenderer).</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_no_caching_of_results"><a class="anchor" href="#_no_caching_of_results"></a>No caching of results</h3>
 <div class="paragraph">
-<p>The results of the executed SPARQL queries are not cached. So, everytime a query is run, even if the same query is run repeatedly, the data is fetched from the triplestore.</p>
+<p>The results of executed SPARQL queries are not cached. Every time a query is run, even if it is the same query, the data is fetched from the triplestore.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_data_and_data_quality"><a class="anchor" href="#_data_and_data_quality"></a>Data and data quality</h2>
+<h2 id="_data_availability_and_quality"><a class="anchor" href="#_data_availability_and_quality"></a>Data availability and quality</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_standard_forms_or_non_eforms_data_not_fully_available"><a class="anchor" href="#_standard_forms_or_non_eforms_data_not_fully_available"></a>Standard forms (or non-eForms) data not fully available</h3>
+<div class="paragraph">
+<p>Not all of the standard forms data is available within the named graphs. For the period covered, see <a href="../data_availability.html" class="xref page">Current data availability</a>. Work is in progress to map and load the remaining standard forms data.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Querying:</strong> the queries in the <strong>Explore</strong> (Query Library) tab work only for eForms. To fetch standard forms data, additional logic is required. For example, the publication date is a string for standard forms, but a date for eForms.</p>
+</li>
+<li>
+<p><strong>Inspecting:</strong> standard forms notices can be inspected. For example, try publication number 516873-2023.</p>
+</li>
+</ul>
+</div>
+</div>
 <div class="sect2">
 <h3 id="_currencies"><a class="anchor" href="#_currencies"></a>Currencies</h3>
 <div class="paragraph">
-<p>Currently, financial values are only available in original currencies (as it is present in the eForms). This limitation prevents the users to compare financial values across notices.
-In the future, open data service may provide financial values in euros in addition to the original currency.</p>
+<p>Financial values are only available in their original currencies, as published in the notices. This prevents users from comparing financial values across notices.</p>
+</div>
+<div class="paragraph">
+<p><strong>Workaround:</strong> Use the currency-conversion snippet, which provides exchange rates: type <code>currency</code> in the query editor to insert it. The snippet uses the latest exchange rates, not the rates on the publication date of the notice. For more details, refer to the help page of the <a href="https://data.ted.europa.eu/">TED Open Data Service</a>.</p>
+</div>
+<div class="paragraph">
+<p>In the future, the TED Open Data Service may provide financial values in euros in addition to the original currency.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_data_quality_issues"><a class="anchor" href="#_data_quality_issues"></a>Data quality issues</h3>
 <div class="paragraph">
-<p>Data quality issues present in source / original XML files are also present in the triples in the open data service. No data cleansing is done when transforming from XML to RDF triples.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_winning_tender"><a class="anchor" href="#_winning_tender"></a>Winning tender</h3>
-<div class="paragraph">
-<p>Currently, there is no indicator to indicate whether a tender is a winning tender. A tender linked to the settled contract is considered as the winning tender.</p>
+<p>Data quality issues in the source XML files are carried over to the triples in the TED Open Data Service. No data cleansing is done when transforming XML into RDF triples.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_missing_winner_information_in_some_notices"><a class="anchor" href="#_missing_winner_information_in_some_notices"></a>Missing winner information in some notices</h3>
 <div class="paragraph">
-<p>Some result notices do not include winner (tenderer) information. This means queries that require winner details may return fewer results than expected.</p>
+<p>Some result notices do not include information about the winning tenderer. This means queries that require winner details may return fewer results than expected.</p>
 </div>
 <div class="paragraph">
 <p><strong>Workaround:</strong> Use <code>OPTIONAL</code> when fetching winner information to avoid losing the entire notice from results.</p>
@@ -550,12 +580,6 @@ In the future, open data service may provide financial values in euros in additi
   ?org epo:hasLegalName ?winnerName .
 }</code></pre>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_missing_direct_relationship_between_contract_and_notice"><a class="anchor" href="#_missing_direct_relationship_between_contract_and_notice"></a>Missing direct relationship between contract and notice</h3>
-<div class="paragraph">
-<p>Currently, there is no direct relationship between settled contract section and notice or buyer in the tripes. The indirect relationship is through the lot.</p>
 </div>
 <hr>
 <div class="paragraph">
